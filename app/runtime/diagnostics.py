@@ -25,6 +25,7 @@ class DiagnosticsReport:
     dependency_graph: dict[str, Any]
     broker: dict[str, Any] = field(default_factory=dict)
     persistence: dict[str, Any] = field(default_factory=dict)
+    connectivity: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         """Return a serializable diagnostics payload."""
@@ -37,6 +38,7 @@ class DiagnosticsReport:
             "dependency_graph": self.dependency_graph,
             "broker": self.broker,
             "persistence": self.persistence,
+            "connectivity": self.connectivity,
         }
 
 
@@ -56,6 +58,13 @@ class DiagnosticsBuilder:
         """Build diagnostics from resolved config and service graph."""
         broker = config.section("broker")
         storage = config.section("storage")
+        connectivity = config.section("connectivity")
+        connectivity_runtime = None
+        if container is not None and "connectivity_runtime" in container.names():
+            connectivity_runtime = container.get("connectivity_runtime")
+        connectivity_health = (
+            connectivity_runtime.diagnostics().__dict__ if connectivity_runtime else {}
+        )
         return DiagnosticsReport(
             generated_at=datetime.now(tz=UTC),
             environment=config.environment.name.value,
@@ -66,6 +75,7 @@ class DiagnosticsBuilder:
                 "risk_config": config.environment.risk_config,
                 "broker_config": config.environment.broker_config,
                 "storage_config": config.environment.storage_config,
+                "connectivity_config": config.environment.connectivity_config,
             },
             startup={
                 "passed": startup.passed,
@@ -81,6 +91,13 @@ class DiagnosticsBuilder:
             persistence={
                 "enabled": storage.get("enabled", True),
                 "database_path": storage.get("database_path"),
+            },
+            connectivity={
+                "read_only": connectivity.get("read_only", True),
+                "default_connector": connectivity.get("default_connector"),
+                "connectors": connectivity.get("connectors", {}),
+                "execution_enabled": connectivity.get("execution_enabled", False),
+                "health": connectivity_health,
             },
         )
 

@@ -5,6 +5,10 @@ from pathlib import Path
 
 from app.config.config_manager import AppConfig
 from app.config.strategy_config import StrategyConfigLoader
+from app.connectivity.csv_market_connector import CsvMarketDataConnector
+from app.connectivity.registry import ConnectorRegistry
+from app.connectivity.simulated_market_connector import SimulatedMarketConnector
+from app.runtime.connectivity_runtime import ConnectivityRuntime
 from app.runtime.container import ServiceContainer
 from app.runtime.runtime_manager import RuntimeConfig, RuntimeManager
 from app.strategies.registry import default_strategy_registry
@@ -36,6 +40,26 @@ class RuntimeComposer:
         strategy_registry = default_strategy_registry()
         strategy = strategy_registry.create_from_config(strategy_config)
         runtime_manager = RuntimeManager(config=runtime_config, strategy=strategy)
+        connector_registry = ConnectorRegistry()
+        connector_registry.register(
+            "csv_market_connector",
+            lambda: CsvMarketDataConnector.from_yaml(
+                self.project_root / "configs/connectivity/csv_connector.yaml"
+            ),
+        )
+        connector_registry.register(
+            "simulated_market_connector",
+            lambda: SimulatedMarketConnector.from_yaml(
+                self.project_root / "configs/connectivity/simulated_connector.yaml"
+            ),
+        )
+        connector = connector_registry.create(
+            str(config.get("connectivity.default_connector", "csv_market_connector"))
+        )
+        connectivity_runtime = ConnectivityRuntime(
+            connector,
+            stale_after_minutes=int(config.get("connectivity.stale_after_minutes", 1440)),
+        )
 
         container.register_instance("config", config)
         container.register_instance("runtime_config", runtime_config)
@@ -46,4 +70,6 @@ class RuntimeComposer:
         container.register_instance("broker_runtime", runtime_manager.broker_runtime)
         container.register_instance("analytics", runtime_manager.trade_journal)
         container.register_instance("persistence", runtime_manager.persistence)
+        container.register_instance("connector_registry", connector_registry)
+        container.register_instance("connectivity_runtime", connectivity_runtime)
         return RuntimeComposition(container=container, runtime_manager=runtime_manager)

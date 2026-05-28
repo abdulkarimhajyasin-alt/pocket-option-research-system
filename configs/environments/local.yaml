@@ -5,6 +5,7 @@ strategy_config: configs/strategies/sample_strategy.yaml
 risk_config: configs/risk/base_risk.yaml
 broker_config: configs/brokers/demo_broker.yaml
 storage_config: configs/storage/persistence.yaml
+connectivity_config: configs/connectivity/demo_research.yaml
 settings:
   log_level: INFO
   diagnostics_enabled: true

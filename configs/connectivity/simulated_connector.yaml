@@ -1,0 +1,21 @@
+name: simulated_market_connector
+connector_type: simulated
+read_only: true
+symbols:
+  - EURUSD
+  - GBPUSD
+timeframes:
+  - 1m
+  - 5m
+data_modes:
+  - historical
+  - latest
+  - simulated
+market_data_read: true
+historical_data_read: true
+account_info_read: false
+trade_execution_enabled: false
+latency_ms: 10
+heartbeat_interval_seconds: 30
+stale_after_minutes: 30
+seed: 42

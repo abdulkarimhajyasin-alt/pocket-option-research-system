@@ -34,6 +34,7 @@ def main() -> None:
             "dependency_graph": graph,
             "broker": diagnostics.broker,
             "persistence": diagnostics.persistence,
+            "connectivity": diagnostics.connectivity,
         }
     )
     orchestrator.shutdown()

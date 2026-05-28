@@ -166,6 +166,23 @@ Phase 9 adds configuration, orchestration, and environment management:
 
 The orchestration layer manages composition only. Strategies still generate signals, risk keeps final approval authority, storage remains infrastructure, and brokers remain isolated adapters.
 
+## Phase 10 Scope
+
+Phase 10 adds a controlled demo connectivity research layer:
+
+- read-only connector contracts under `app/connectivity/`
+- connector capabilities, health snapshots, registry, and error hierarchy
+- local CSV market-data connector that wraps the existing CSV loader
+- simulated external market connector with local-only latency and heartbeat behavior
+- ingestion validation for ordering, gaps, OHLC structure, freshness, and timeframe consistency
+- connectivity runtime for safe connector lifecycle, heartbeat, fetch, validation, and shutdown
+- read-only connector configs under `configs/connectivity/`
+- orchestration integration through service registration, startup checks, and diagnostics
+- dedicated rotating `logs/connectivity.log`
+- diagnostics runner at `scripts/check_connectivity.py`
+
+All connectors are read-only. They expose no trade execution capability, no credential handling, no browser automation, and no external broker communication.
+
 ## Setup
 
 Use Python 3.11.
@@ -210,6 +227,12 @@ Run environment diagnostics:
 
 ```bash
 python scripts/check_environment.py
+```
+
+Run connectivity diagnostics:
+
+```bash
+python scripts/check_connectivity.py
 ```
 
 ## Validation

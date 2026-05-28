@@ -48,13 +48,26 @@ class ConfigValidator:
     def validate(self, config: dict[str, Any]) -> ConfigValidationResult:
         """Validate key operational configuration sections."""
         result = ConfigValidationResult()
-        for section in ("environment", "runtime", "strategy", "risk", "broker", "storage"):
+        for section in (
+            "environment",
+            "runtime",
+            "strategy",
+            "risk",
+            "broker",
+            "storage",
+            "connectivity",
+        ):
             if section not in config:
                 result.add(f"Missing config section: {section}", critical=True)
         broker = config.get("broker", {})
         mode = str(broker.get("mode", "demo")).lower()
         if mode == "live":
             result.add("Live broker mode is not allowed in this platform phase", critical=True)
+        connectivity = config.get("connectivity", {})
+        if not bool(connectivity.get("read_only", True)):
+            result.add("Connectivity configuration must be read-only", critical=True)
+        if bool(connectivity.get("execution_enabled", False)):
+            result.add("Connectivity execution must remain disabled", critical=True)
         runtime = config.get("runtime", {})
         data_path = runtime.get("data_path")
         if data_path and not (self.project_root / str(data_path)).exists():

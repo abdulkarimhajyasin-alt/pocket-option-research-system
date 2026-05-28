@@ -1,0 +1,15 @@
+name: demo_research_connectivity
+read_only: true
+default_connector: csv_market_connector
+connectors:
+  csv_market_connector: configs/connectivity/csv_connector.yaml
+  simulated_market_connector: configs/connectivity/simulated_connector.yaml
+symbol_whitelist:
+  - EURUSD
+  - GBPUSD
+timeframe_whitelist:
+  - 1m
+  - 5m
+heartbeat_interval_seconds: 30
+stale_after_minutes: 1440
+execution_enabled: false

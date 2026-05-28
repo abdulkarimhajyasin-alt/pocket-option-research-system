@@ -58,6 +58,7 @@ class ConfigManager:
             {"risk": self.loader.load_yaml(profile.risk_config)},
             {"broker": self.loader.load_yaml(profile.broker_config)},
             {"storage": self.loader.load_yaml(profile.storage_config)},
+            {"connectivity": self.loader.load_yaml(profile.connectivity_config)},
             {"settings": profile.settings},
         ]
         resolved = self.resolver.resolve(layers)

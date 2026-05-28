@@ -104,4 +104,19 @@ class StartupValidator:
             f"Strategy configured: {strategy_name}",
             critical=True,
         )
+        read_only = bool(config.get("connectivity.read_only", True))
+        execution_enabled = bool(config.get("connectivity.execution_enabled", False))
+        result.add(
+            "connectivity_safety",
+            read_only and not execution_enabled,
+            "Connectivity configuration is read-only",
+            critical=True,
+        )
+        connectors = config.get("connectivity.connectors", {})
+        result.add(
+            "connectivity_configs",
+            isinstance(connectors, dict) and bool(connectors),
+            "Connectivity connector configs available",
+            critical=False,
+        )
         return result

@@ -1,0 +1,17 @@
+name: csv_market_connector
+connector_type: csv
+read_only: true
+data_path: data/sample_eurusd_m1.csv
+symbols:
+  - EURUSD
+timeframes:
+  - 1m
+data_modes:
+  - historical
+  - latest
+market_data_read: true
+historical_data_read: true
+account_info_read: false
+trade_execution_enabled: false
+heartbeat_interval_seconds: 30
+stale_after_minutes: 525600

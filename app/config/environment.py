@@ -25,6 +25,7 @@ class EnvironmentProfile:
     risk_config: str = "configs/risk/base_risk.yaml"
     broker_config: str = "configs/brokers/demo_broker.yaml"
     storage_config: str = "configs/storage/persistence.yaml"
+    connectivity_config: str = "configs/connectivity/demo_research.yaml"
     mode: str = "paper"
     settings: dict[str, Any] = field(default_factory=dict)
 
@@ -39,6 +40,7 @@ class EnvironmentProfile:
             risk_config=str(raw.get("risk_config", cls.risk_config)),
             broker_config=str(raw.get("broker_config", cls.broker_config)),
             storage_config=str(raw.get("storage_config", cls.storage_config)),
+            connectivity_config=str(raw.get("connectivity_config", cls.connectivity_config)),
             mode=str(raw.get("mode", "paper")),
             settings=dict(raw.get("settings", {})),
         )
