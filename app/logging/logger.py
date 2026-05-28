@@ -45,3 +45,15 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
         compression="zip",
         enqueue=True,
     )
+    logger.add(
+        log_path.parent / "runtime.log",
+        level=log_level,
+        format=(
+            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
+            "{name}:{function}:{line} | {message}"
+        ),
+        rotation="10 MB",
+        retention="14 days",
+        compression="zip",
+        enqueue=True,
+    )

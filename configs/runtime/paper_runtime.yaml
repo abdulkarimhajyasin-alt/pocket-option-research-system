@@ -1,0 +1,15 @@
+runtime_mode: paper
+polling_interval_seconds: 0.0
+paper_balance: 10000.0
+payout_percentage: 0.80
+stake: 1.0
+expiry_candles: 1
+max_runtime_errors: 5
+stop_on_health_failure: true
+stop_on_risk_shutdown: true
+max_candles: 120
+symbols:
+  - EURUSD
+timeframe: 1m
+data_path: data/sample_eurusd_m1.csv
+risk_profile: configs/risk/base_risk.yaml

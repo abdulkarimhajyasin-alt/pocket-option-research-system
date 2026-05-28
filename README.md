@@ -89,6 +89,21 @@ Phase 4 hardens the Risk Engine into the platform safety core:
 
 The Risk Engine has final approval authority. Strategies only generate signals.
 
+## Phase 5 Scope
+
+Phase 5 adds a local execution runtime and paper trading system:
+
+- runtime lifecycle manager, event loop, health monitor, shutdown manager, and kill switch
+- runtime state and metrics tracking
+- local `PaperBroker` with simulated balance, positions, and binary-option settlements
+- queue-based execution manager with trade lifecycle states
+- position tracking for open and closed paper trades
+- runtime YAML configs under `configs/runtime/`
+- local runner at `scripts/run_runtime.py`
+- rotating `logs/runtime.log`
+
+The runtime remains broker-agnostic and risk-first. It performs no real broker communication.
+
 ## Setup
 
 Use Python 3.11.
@@ -109,6 +124,12 @@ Run the sample backtest:
 
 ```bash
 python scripts/run_backtest.py
+```
+
+Run the local paper runtime:
+
+```bash
+python scripts/run_runtime.py
 ```
 
 ## Validation
