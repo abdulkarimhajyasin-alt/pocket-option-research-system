@@ -29,7 +29,8 @@ def main() -> None:
     candles = loader.load(data_path, symbol="EURUSD", timeframe="1m")
 
     strategy = SampleCandleDirectionStrategy()
-    risk_engine = RiskEngine(min_confidence=settings.min_signal_confidence)
+    risk_profile = PROJECT_ROOT / "configs" / "risk" / "base_risk.yaml"
+    risk_engine = RiskEngine.from_profile(risk_profile)
     simulator = BinaryOptionSimulator(payout_percentage=0.80, expiry_candles=1, stake=1.0)
     engine = BacktestEngine(risk_engine=risk_engine, simulator=simulator)
 

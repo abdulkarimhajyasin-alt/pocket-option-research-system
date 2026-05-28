@@ -54,7 +54,12 @@ class BacktestEngine:
                 EquityPoint(timestamp=candle.timestamp, equity=equity, pnl=trade.pnl)
             )
 
-        metrics = self.metrics_calculator.calculate(result.trades, result.equity_curve)
+        result.risk_summary = self._build_risk_summary(result.trades)
+        metrics = self.metrics_calculator.calculate(
+            result.trades,
+            result.equity_curve,
+            result.risk_summary,
+        )
         result.metrics = metrics.to_dict()
         logger.info("Backtest completed: {}", result.summary())
         return result
@@ -73,9 +78,15 @@ class BacktestEngine:
         candles: CandleSeries,
         index: int,
     ) -> BacktestTrade:
-        if not self.risk_engine.validate_signal(signal):
+        risk_result = self.risk_engine.assess_signal(signal)
+        if not risk_result.approved:
             candle = candles[index]
-            logger.info("Backtest signal skipped by risk engine at {}", candle.timestamp)
+            reason = risk_result.reason.value if risk_result.reason else "risk_rejected"
+            logger.info(
+                "Backtest signal blocked by risk engine at {}: {}",
+                candle.timestamp,
+                reason,
+            )
             return BacktestTrade(
                 symbol=signal.symbol,
                 timeframe=signal.timeframe,
@@ -86,9 +97,36 @@ class BacktestEngine:
                 entry_price=candle.close,
                 exit_timestamp=None,
                 exit_price=None,
-                outcome=TradeOutcome.SKIPPED,
+                outcome=TradeOutcome.BLOCKED,
                 pnl=0.0,
-                reason="risk_rejected",
+                reason=reason,
+                risk_rule=risk_result.rule_name,
             )
 
-        return self.simulator.simulate(signal, candles, index)
+        trade = self.simulator.simulate(signal, candles, index)
+        outcome_timestamp = trade.exit_timestamp or trade.entry_timestamp
+        self.risk_engine.record_trade_result(
+            outcome=trade.outcome,
+            pnl=trade.pnl,
+            timestamp=outcome_timestamp,
+            strategy_name=trade.strategy_name,
+        )
+        return trade
+
+    def _build_risk_summary(self, trades: list[BacktestTrade]) -> dict[str, object]:
+        blocked = [trade for trade in trades if trade.outcome == TradeOutcome.BLOCKED]
+        rejection_counts: dict[str, int] = {}
+        for trade in blocked:
+            reason = trade.reason or "unknown"
+            rejection_counts[reason] = rejection_counts.get(reason, 0) + 1
+
+        state_snapshot = self.risk_engine.state_snapshot()
+        summary = {
+            "blocked_trades": len(blocked),
+            "rejection_reason_counts": rejection_counts,
+            "risk_state": state_snapshot,
+            "risk_shutdown_events": state_snapshot.get("risk_shutdown_events", []),
+            "cooldown_event_count": state_snapshot.get("cooldown_events", 0),
+        }
+        logger.info("Generated risk summary: {}", summary)
+        return summary

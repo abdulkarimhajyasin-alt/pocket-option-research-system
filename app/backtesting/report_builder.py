@@ -35,6 +35,7 @@ class BacktestReportBuilder:
         payload = {
             "summary": result.summary(),
             "metrics": result.metrics,
+            "risk_summary": result.risk_summary,
             "trades": [self._serialize_trade(trade) for trade in result.trades],
             "equity_curve": [self._serialize_equity(point) for point in result.equity_curve],
         }
@@ -80,4 +81,5 @@ class BacktestReportBuilder:
             "outcome",
             "pnl",
             "reason",
+            "risk_rule",
         ]

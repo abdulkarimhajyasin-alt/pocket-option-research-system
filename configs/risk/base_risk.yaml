@@ -1,0 +1,28 @@
+starting_balance: 10000.0
+max_trades_per_day: 50
+max_consecutive_losses: 5
+max_daily_loss_amount: 250.0
+max_daily_loss_percent: 0.03
+max_daily_profit_target: 500.0
+loss_cooldown_minutes: 0
+consecutive_loss_cooldown_minutes: 0
+consecutive_loss_cooldown_trigger: 3
+max_simultaneous_positions: 1
+min_confidence: 0.60
+allowed_sessions: []
+allowed_symbols:
+  - EURUSD
+allowed_timeframes:
+  - 1m
+enabled_rules:
+  - max_trades_per_day
+  - max_consecutive_losses
+  - max_daily_loss_amount
+  - max_daily_loss_percent
+  - max_daily_profit_target
+  - cooldown_after_loss
+  - max_simultaneous_positions
+  - minimum_confidence
+  - session_restriction
+  - symbol_whitelist
+  - timeframe_whitelist

@@ -74,6 +74,21 @@ Phase 3 adds professional strategy infrastructure:
 
 Strategies remain isolated signal generators. They do not execute trades or call brokers.
 
+## Phase 4 Scope
+
+Phase 4 hardens the Risk Engine into the platform safety core:
+
+- structured risk validation responses and rejection reasons
+- isolated daily state tracking and UTC-safe resets
+- reusable risk rules for trade limits, loss limits, confidence, sessions, symbols, and timeframes
+- cooldown controls after losses and loss streaks
+- exposure tracking by active trade, symbol, strategy, and direction
+- YAML risk profiles under `configs/risk/`
+- risk-aware backtesting with blocked trade tracking and rejection summaries
+- dedicated rotating `logs/risk_events.log`
+
+The Risk Engine has final approval authority. Strategies only generate signals.
+
 ## Setup
 
 Use Python 3.11.

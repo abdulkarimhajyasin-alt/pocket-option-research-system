@@ -11,6 +11,7 @@ class TradeOutcome(StrEnum):
     WIN = "win"
     LOSS = "loss"
     SKIPPED = "skipped"
+    BLOCKED = "blocked"
 
 
 @dataclass(frozen=True)
@@ -29,6 +30,7 @@ class BacktestTrade:
     outcome: TradeOutcome
     pnl: float
     reason: str | None = None
+    risk_rule: str | None = None
 
 
 @dataclass(frozen=True)
@@ -50,6 +52,7 @@ class BacktestResult:
     trades: list[BacktestTrade] = field(default_factory=list)
     equity_curve: list[EquityPoint] = field(default_factory=list)
     metrics: dict[str, float | int] = field(default_factory=dict)
+    risk_summary: dict[str, object] = field(default_factory=dict)
 
     def summary(self) -> dict[str, float | int | str]:
         """Return a compact structured summary for display and reports."""
