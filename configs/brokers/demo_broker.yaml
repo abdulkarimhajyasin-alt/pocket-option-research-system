@@ -1,0 +1,24 @@
+name: demo_broker
+mode: demo
+latency_ms: 0
+max_reconnect_attempts: 3
+paper_broker:
+  initial_balance: 10000
+  payout_percentage: 0.8
+  stake: 1
+  expiry_candles: 1
+capabilities:
+  demo_supported: true
+  live_supported: false
+  supported_symbols:
+    - EURUSD
+    - GBPUSD
+    - USDJPY
+  supported_timeframes:
+    - 1m
+    - 5m
+    - 15m
+  payout_supported: true
+  trade_types:
+    - binary_option
+  historical_data_supported: false

@@ -119,6 +119,22 @@ Phase 6 adds analytics and research infrastructure:
 
 Analytics remains decoupled from execution decisions. It observes lifecycle events and exports structured research artifacts.
 
+## Phase 7 Scope
+
+Phase 7 adds broker adapter architecture and demo integration planning:
+
+- typed broker capabilities, health snapshots, runtime status, and error hierarchy
+- upgraded `BaseBroker` contract for lifecycle, health, environment validation, and support lookup
+- dynamic broker registry for future plugin-style adapter loading
+- `DemoBrokerAdapter` that wraps local paper trading while simulating adapter lifecycle and latency
+- broker runtime coordinator for initialization, heartbeat, diagnostics, and safe shutdown
+- broker YAML configs under `configs/brokers/`
+- explicit demo-only enforcement that rejects live mode and live-capable adapters
+- dedicated rotating `logs/broker.log`
+- diagnostics runner at `scripts/check_broker_runtime.py`
+
+Broker adapters remain isolated from strategies, risk, analytics, and runtime internals. No external broker communication is implemented.
+
 ## Setup
 
 Use Python 3.11.
@@ -145,6 +161,12 @@ Run the local paper runtime:
 
 ```bash
 python scripts/run_runtime.py
+```
+
+Run broker diagnostics:
+
+```bash
+python scripts/check_broker_runtime.py
 ```
 
 ## Validation

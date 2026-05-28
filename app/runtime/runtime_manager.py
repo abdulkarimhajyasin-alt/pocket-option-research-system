@@ -9,11 +9,15 @@ from loguru import logger
 
 from app.analytics.equity_curve import EquityCurveTracker
 from app.analytics.trade_journal import TradeJournal
+from app.brokers.capabilities import BrokerCapabilities
+from app.brokers.demo_adapter import DemoBrokerAdapter
+from app.brokers.models import BrokerMode
 from app.brokers.paper_broker import PaperBroker
 from app.data.csv_loader import CsvCandleLoader
 from app.execution.execution_manager import ExecutionManager
 from app.risk.risk_engine import RiskEngine
 from app.runtime.event_loop import RuntimeEventLoop
+from app.runtime.broker_runtime import BrokerRuntime
 from app.runtime.health import HealthMonitor
 from app.runtime.kill_switch import KillSwitch, KillSwitchConfig
 from app.runtime.runtime_state import RuntimeMode, RuntimeState
@@ -80,12 +84,25 @@ class RuntimeManager:
             )
         )
         self.shutdown_manager = ShutdownManager()
-        self.broker = PaperBroker(
-            initial_balance=config.paper_balance,
-            payout_percentage=config.payout_percentage,
-            stake=config.stake,
-            expiry_candles=config.expiry_candles,
+        self.broker = DemoBrokerAdapter(
+            paper_broker=PaperBroker(
+                initial_balance=config.paper_balance,
+                payout_percentage=config.payout_percentage,
+                stake=config.stake,
+                expiry_candles=config.expiry_candles,
+            ),
+            capabilities=BrokerCapabilities(
+                demo_supported=True,
+                live_supported=False,
+                supported_symbols=tuple(config.symbols),
+                supported_timeframes=(config.timeframe,),
+                payout_supported=True,
+                trade_types=("binary_option",),
+                historical_data_supported=False,
+            ),
+            mode=BrokerMode.DEMO,
         )
+        self.broker_runtime = BrokerRuntime(self.broker)
         self.risk_engine = RiskEngine.from_profile(config.risk_profile)
         self.trade_journal = TradeJournal()
         self.equity_curve = EquityCurveTracker(initial_equity=config.paper_balance)
@@ -101,8 +118,9 @@ class RuntimeManager:
         """Run the configured local paper runtime."""
         logger.info("Runtime starting mode={}", self.config.runtime_mode.value)
         self.state.start()
-        self.broker.connect()
+        self.broker_runtime.initialize()
         try:
+            self.broker_runtime.heartbeat()
             symbol = self.config.symbols[0]
             candles = CsvCandleLoader().load(
                 self.config.data_path,
@@ -121,7 +139,7 @@ class RuntimeManager:
             )
             loop.run()
         finally:
-            self.broker.disconnect()
+            self.broker_runtime.shutdown()
             reason = self.kill_switch.reason or "completed"
             self.shutdown_manager.shutdown(self.state, reason=reason)
         return self.state
