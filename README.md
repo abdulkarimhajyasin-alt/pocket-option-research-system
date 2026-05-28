@@ -43,6 +43,21 @@ Out of scope for this phase:
 - dashboard
 - database integration
 
+## Phase 2 Scope
+
+Phase 2 adds the market data and backtesting foundation:
+
+- validated `Candle` and `CandleSeries` market data models
+- CSV historical data loading with safe invalid-row handling
+- market data normalization for timestamps, timeframe aliases, duplicates, and ordering
+- a sequential candle replay backtesting engine
+- binary-option style simulation with configurable payout, stake, and expiry candles
+- structured backtest trades, equity points, results, and metrics
+- JSON and CSV report exports into `reports/`
+- a sample candle-direction strategy used only for pipeline validation
+
+The backtesting engine reuses the same `BaseStrategy` interface used by demo execution. Strategy logic is not duplicated for backtesting.
+
 ## Setup
 
 Use Python 3.11.
@@ -57,6 +72,12 @@ Run the demo flow:
 
 ```bash
 python -m app.main
+```
+
+Run the sample backtest:
+
+```bash
+python scripts/run_backtest.py
 ```
 
 ## Validation
