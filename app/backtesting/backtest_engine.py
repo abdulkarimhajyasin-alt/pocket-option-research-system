@@ -42,7 +42,7 @@ class BacktestEngine:
 
         for index, candle in enumerate(candles):
             context = self._build_context(candles, index)
-            signal = strategy.generate_signal(context)
+            signal = strategy.on_candle(context)
             if signal is None:
                 continue
 

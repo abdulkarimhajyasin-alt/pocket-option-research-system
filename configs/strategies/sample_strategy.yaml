@@ -1,0 +1,9 @@
+name: sample_candle_direction_strategy
+enabled: true
+parameters: {}
+confidence_threshold: 0.60
+session_filters: []
+symbols:
+  - EURUSD
+timeframes:
+  - 1m

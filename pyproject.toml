@@ -9,7 +9,7 @@ description = "Architecture-first experimental trading research platform for bac
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "Research Platform Team" }]
-dependencies = ["loguru>=0.7.2"]
+dependencies = ["loguru>=0.7.2", "PyYAML>=6.0.0"]
 
 [tool.black]
 line-length = 100

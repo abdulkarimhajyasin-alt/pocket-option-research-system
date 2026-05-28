@@ -58,6 +58,22 @@ Phase 2 adds the market data and backtesting foundation:
 
 The backtesting engine reuses the same `BaseStrategy` interface used by demo execution. Strategy logic is not duplicated for backtesting.
 
+## Phase 3 Scope
+
+Phase 3 adds professional strategy infrastructure:
+
+- reusable indicator architecture for SMA, EMA, RSI, and ATR
+- indicator and strategy registries for dynamic loading
+- strategy metadata, lifecycle hooks, parameters, session restrictions, and confidence thresholds
+- YAML-backed strategy configuration
+- UTC-aware London, New York, and Asian session filtering
+- weighted confidence scoring helpers
+- reusable candle pattern detection
+- timeframe conversion and comparison helpers
+- an architecture-first CISD/FVG strategy skeleton
+
+Strategies remain isolated signal generators. They do not execute trades or call brokers.
+
 ## Setup
 
 Use Python 3.11.

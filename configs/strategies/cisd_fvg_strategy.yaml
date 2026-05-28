@@ -1,0 +1,14 @@
+name: cisd_fvg_strategy
+enabled: true
+parameters:
+  fast_period: 9
+  slow_period: 21
+  rsi_period: 14
+confidence_threshold: 0.62
+session_filters:
+  - london
+  - new_york
+symbols:
+  - EURUSD
+timeframes:
+  - 1m

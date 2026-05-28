@@ -6,16 +6,17 @@ from loguru import logger
 
 from app.data.models import Candle
 from app.signals.signal import SignalDirection, TradeSignal
-from app.strategies.base_strategy import BaseStrategy
+from app.strategies.base_strategy import BaseStrategy, StrategyMetadata
 
 
 class SampleCandleDirectionStrategy(BaseStrategy):
     """Generates CALL on bullish candles and PUT on bearish candles."""
 
-    @property
-    def name(self) -> str:
-        """Return the stable strategy name."""
-        return "sample_candle_direction_strategy"
+    metadata = StrategyMetadata(
+        name="sample_candle_direction_strategy",
+        description="Validation strategy that follows single-candle direction.",
+        version="0.2.0",
+    )
 
     def generate_signal(self, market_data: Any) -> TradeSignal | None:
         """Generate a simple signal from the current candle."""
