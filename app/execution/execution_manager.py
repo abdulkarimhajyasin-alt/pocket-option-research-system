@@ -8,6 +8,9 @@ from typing import Any
 
 from loguru import logger
 
+from app.analytics.equity_curve import EquityCurveTracker
+from app.analytics.models import TradeJournalEntry
+from app.analytics.trade_journal import TradeJournal
 from app.backtesting.models import TradeOutcome
 from app.brokers.base_broker import BaseBroker
 from app.data.models import Candle
@@ -40,9 +43,19 @@ class ExecutionRecord:
 class ExecutionManager:
     """Coordinates risk validation, broker execution, and settlement."""
 
-    def __init__(self, risk_engine: RiskEngine, broker: BaseBroker) -> None:
+    def __init__(
+        self,
+        risk_engine: RiskEngine,
+        broker: BaseBroker,
+        trade_journal: TradeJournal | None = None,
+        equity_curve: EquityCurveTracker | None = None,
+        runtime_mode: str | None = None,
+    ) -> None:
         self.risk_engine = risk_engine
         self.broker = broker
+        self.trade_journal = trade_journal
+        self.equity_curve = equity_curve
+        self.runtime_mode = runtime_mode
         self.execution_queue: deque[tuple[TradeSignal, Candle | None]] = deque()
         self.records: dict[str, ExecutionRecord] = {}
         self.pending_trade_ids: set[str] = set()
@@ -113,6 +126,7 @@ class ExecutionManager:
         if not risk_result.approved:
             record.state = TradeLifecycleState.BLOCKED
             record.reason = risk_result.reason.value if risk_result.reason else "risk_rejected"
+            self._record_blocked(record, risk_result.rule_name)
             logger.warning("Execution blocked by risk engine: {}", record.reason)
             return record
 
@@ -127,6 +141,7 @@ class ExecutionManager:
             record.state = TradeLifecycleState.EXECUTED
             if record.trade_id:
                 self.pending_trade_ids.add(record.trade_id)
+            self._record_execution(record)
             logger.info("Execution completed: {}", result)
         except Exception as exc:
             record.state = TradeLifecycleState.FAILED
@@ -139,6 +154,7 @@ class ExecutionManager:
             if record.trade_id == trade_id:
                 record.state = TradeLifecycleState.SETTLED
                 record.result = settlement
+                self._record_settlement(record, settlement)
                 return
 
     def _signal_key(self, signal: TradeSignal) -> str:
@@ -146,3 +162,70 @@ class ExecutionManager:
             f"{signal.strategy_name}:{signal.symbol}:{signal.timeframe}:"
             f"{signal.direction.value}:{signal.timestamp.isoformat()}"
         )
+
+    def _record_execution(self, record: ExecutionRecord) -> None:
+        if self.trade_journal is None or record.trade_id is None:
+            return
+        result = record.result or {}
+        self.trade_journal.append(
+            TradeJournalEntry(
+                trade_id=record.trade_id,
+                lifecycle_state=record.state.value,
+                strategy_name=record.signal.strategy_name,
+                symbol=record.signal.symbol,
+                timeframe=record.signal.timeframe,
+                direction=record.signal.direction.value,
+                confidence=record.signal.confidence,
+                timestamp=record.signal.timestamp,
+                entry_price=result.get("entry_price"),
+                runtime_mode=self.runtime_mode,
+                metadata={"status": result.get("status")},
+            )
+        )
+
+    def _record_blocked(self, record: ExecutionRecord, risk_rule: str | None) -> None:
+        if self.trade_journal is None:
+            return
+        self.trade_journal.append(
+            TradeJournalEntry(
+                trade_id=self._signal_key(record.signal),
+                lifecycle_state=record.state.value,
+                strategy_name=record.signal.strategy_name,
+                symbol=record.signal.symbol,
+                timeframe=record.signal.timeframe,
+                direction=record.signal.direction.value,
+                confidence=record.signal.confidence,
+                timestamp=record.signal.timestamp,
+                rejection_reason=record.reason,
+                risk_rule=risk_rule,
+                runtime_mode=self.runtime_mode,
+            )
+        )
+
+    def _record_settlement(self, record: ExecutionRecord, settlement: dict[str, Any]) -> None:
+        if self.trade_journal is not None and record.trade_id is not None:
+            self.trade_journal.append(
+                TradeJournalEntry(
+                    trade_id=record.trade_id,
+                    lifecycle_state=record.state.value,
+                    strategy_name=record.signal.strategy_name,
+                    symbol=record.signal.symbol,
+                    timeframe=record.signal.timeframe,
+                    direction=record.signal.direction.value,
+                    confidence=record.signal.confidence,
+                    timestamp=datetime.fromisoformat(settlement["settled_at"]),
+                    pnl=float(settlement["pnl"]),
+                    balance=settlement.get("balance"),
+                    outcome=settlement.get("outcome"),
+                    entry_price=settlement.get("entry_price"),
+                    exit_price=settlement.get("exit_price"),
+                    runtime_mode=self.runtime_mode,
+                    metadata={"status": settlement.get("status")},
+                )
+            )
+        if self.equity_curve is not None and settlement.get("balance") is not None:
+            self.equity_curve.update(
+                timestamp=datetime.fromisoformat(settlement["settled_at"]),
+                equity=float(settlement["balance"]),
+                pnl=float(settlement["pnl"]),
+            )

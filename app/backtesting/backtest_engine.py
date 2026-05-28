@@ -4,6 +4,10 @@ from typing import Any
 
 from loguru import logger
 
+from app.analytics.equity_curve import EquityCurveTracker
+from app.analytics.models import TradeJournalEntry
+from app.analytics.performance_analyzer import PerformanceAnalyzer
+from app.analytics.trade_journal import TradeJournal
 from app.backtesting.metrics import MetricsCalculator
 from app.backtesting.models import BacktestResult, BacktestTrade, EquityPoint, TradeOutcome
 from app.backtesting.simulator import BinaryOptionSimulator
@@ -25,6 +29,9 @@ class BacktestEngine:
         self.risk_engine = risk_engine
         self.simulator = simulator or BinaryOptionSimulator()
         self.metrics_calculator = metrics_calculator or MetricsCalculator()
+        self.trade_journal = TradeJournal()
+        self.equity_tracker = EquityCurveTracker(initial_equity=0.0)
+        self.performance_analyzer = PerformanceAnalyzer()
 
     def run(self, strategy: BaseStrategy, candles: CandleSeries) -> BacktestResult:
         """Run a backtest using the shared strategy interface."""
@@ -33,6 +40,8 @@ class BacktestEngine:
             strategy.name,
             len(candles),
         )
+        self.trade_journal = TradeJournal()
+        self.equity_tracker = EquityCurveTracker(initial_equity=0.0)
         result = BacktestResult(
             symbol=candles.symbol,
             timeframe=candles.timeframe,
@@ -53,6 +62,7 @@ class BacktestEngine:
             result.equity_curve.append(
                 EquityPoint(timestamp=candle.timestamp, equity=equity, pnl=trade.pnl)
             )
+            self.equity_tracker.update(candle.timestamp, equity=equity, pnl=trade.pnl)
 
         result.risk_summary = self._build_risk_summary(result.trades)
         metrics = self.metrics_calculator.calculate(
@@ -61,6 +71,10 @@ class BacktestEngine:
             result.risk_summary,
         )
         result.metrics = metrics.to_dict()
+        result.analytics_snapshot = self.performance_analyzer.analyze(
+            self.trade_journal.entries(),
+            self.equity_tracker,
+        ).to_dict()
         logger.info("Backtest completed: {}", result.summary())
         return result
 
@@ -87,7 +101,7 @@ class BacktestEngine:
                 candle.timestamp,
                 reason,
             )
-            return BacktestTrade(
+            blocked_trade = BacktestTrade(
                 symbol=signal.symbol,
                 timeframe=signal.timeframe,
                 direction=signal.direction.value,
@@ -102,6 +116,8 @@ class BacktestEngine:
                 reason=reason,
                 risk_rule=risk_result.rule_name,
             )
+            self._record_backtest_trade(blocked_trade)
+            return blocked_trade
 
         trade = self.simulator.simulate(signal, candles, index)
         outcome_timestamp = trade.exit_timestamp or trade.entry_timestamp
@@ -111,6 +127,7 @@ class BacktestEngine:
             timestamp=outcome_timestamp,
             strategy_name=trade.strategy_name,
         )
+        self._record_backtest_trade(trade)
         return trade
 
     def _build_risk_summary(self, trades: list[BacktestTrade]) -> dict[str, object]:
@@ -130,3 +147,28 @@ class BacktestEngine:
         }
         logger.info("Generated risk summary: {}", summary)
         return summary
+
+    def _record_backtest_trade(self, trade: BacktestTrade) -> None:
+        lifecycle_state = "blocked" if trade.outcome == TradeOutcome.BLOCKED else "settled"
+        self.trade_journal.append(
+            TradeJournalEntry(
+                trade_id=(
+                    f"backtest:{trade.strategy_name}:{trade.symbol}:"
+                    f"{trade.entry_timestamp.isoformat()}"
+                ),
+                lifecycle_state=lifecycle_state,
+                strategy_name=trade.strategy_name,
+                symbol=trade.symbol,
+                timeframe=trade.timeframe,
+                direction=trade.direction,
+                confidence=trade.confidence,
+                timestamp=trade.exit_timestamp or trade.entry_timestamp,
+                pnl=trade.pnl,
+                outcome=trade.outcome.value if trade.outcome != TradeOutcome.BLOCKED else None,
+                rejection_reason=trade.reason,
+                risk_rule=trade.risk_rule,
+                entry_price=trade.entry_price,
+                exit_price=trade.exit_price,
+                runtime_mode="backtest",
+            )
+        )

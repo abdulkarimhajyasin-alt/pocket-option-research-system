@@ -7,6 +7,8 @@ from typing import Any
 import yaml
 from loguru import logger
 
+from app.analytics.equity_curve import EquityCurveTracker
+from app.analytics.trade_journal import TradeJournal
 from app.brokers.paper_broker import PaperBroker
 from app.data.csv_loader import CsvCandleLoader
 from app.execution.execution_manager import ExecutionManager
@@ -85,7 +87,15 @@ class RuntimeManager:
             expiry_candles=config.expiry_candles,
         )
         self.risk_engine = RiskEngine.from_profile(config.risk_profile)
-        self.execution_manager = ExecutionManager(self.risk_engine, self.broker)
+        self.trade_journal = TradeJournal()
+        self.equity_curve = EquityCurveTracker(initial_equity=config.paper_balance)
+        self.execution_manager = ExecutionManager(
+            self.risk_engine,
+            self.broker,
+            trade_journal=self.trade_journal,
+            equity_curve=self.equity_curve,
+            runtime_mode=config.runtime_mode.value,
+        )
 
     def run(self) -> RuntimeState:
         """Run the configured local paper runtime."""

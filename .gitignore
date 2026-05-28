@@ -15,3 +15,5 @@ logs/*.zip
 reports/*.html
 reports/*.json
 reports/*.csv
+reports/analytics/*.json
+reports/analytics/*.csv

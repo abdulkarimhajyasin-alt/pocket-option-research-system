@@ -36,6 +36,7 @@ class BacktestReportBuilder:
             "summary": result.summary(),
             "metrics": result.metrics,
             "risk_summary": result.risk_summary,
+            "analytics_snapshot": result.analytics_snapshot,
             "trades": [self._serialize_trade(trade) for trade in result.trades],
             "equity_curve": [self._serialize_equity(point) for point in result.equity_curve],
         }

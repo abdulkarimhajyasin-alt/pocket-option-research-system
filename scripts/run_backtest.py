@@ -9,6 +9,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from loguru import logger  # noqa: E402
 
+from app.analytics.dataset_builder import ResearchDatasetBuilder  # noqa: E402
+from app.analytics.exporter import AnalyticsExporter  # noqa: E402
 from app.backtesting.backtest_engine import BacktestEngine  # noqa: E402
 from app.backtesting.report_builder import BacktestReportBuilder  # noqa: E402
 from app.backtesting.simulator import BinaryOptionSimulator  # noqa: E402
@@ -38,6 +40,17 @@ def main() -> None:
     report_paths = BacktestReportBuilder(PROJECT_ROOT / "reports").export(
         result,
         run_name="sample_eurusd_m1",
+    )
+    analytics_exporter = AnalyticsExporter(PROJECT_ROOT / "reports" / "analytics")
+    analytics_exporter.export_snapshot(
+        engine.performance_analyzer.analyze(engine.trade_journal.entries(), engine.equity_tracker),
+        "sample_eurusd_m1",
+    )
+    analytics_exporter.export_journal(engine.trade_journal.entries(), "sample_eurusd_m1")
+    analytics_exporter.export_equity_curve(engine.equity_tracker.points(), "sample_eurusd_m1")
+    ResearchDatasetBuilder().build_trade_dataset(
+        engine.trade_journal.entries(),
+        PROJECT_ROOT / "reports" / "analytics" / "sample_eurusd_m1_dataset.csv",
     )
 
     logger.info("Backtest metrics: {}", result.metrics)

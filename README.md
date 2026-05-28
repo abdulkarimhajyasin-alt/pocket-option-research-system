@@ -16,6 +16,7 @@ The platform is organized around clean, modular boundaries:
 - `app/risk/` validates signals before execution.
 - `app/execution/` coordinates validated execution workflows.
 - `app/brokers/` defines broker interfaces and demo adapters.
+- `app/analytics/` builds research journals, equity curves, exports, and snapshots.
 - `app/logging/` configures professional application logging.
 - `tests/`, `configs/`, `logs/`, and `reports/` support validation and research operations.
 
@@ -103,6 +104,20 @@ Phase 5 adds a local execution runtime and paper trading system:
 - rotating `logs/runtime.log`
 
 The runtime remains broker-agnostic and risk-first. It performs no real broker communication.
+
+## Phase 6 Scope
+
+Phase 6 adds analytics and research infrastructure:
+
+- append-only trade journaling shared by backtesting and paper runtime
+- equity curve tracking with drawdown, peaks, troughs, and cumulative PnL
+- strategy, symbol, session, hourly, streak, rejection, and exposure analytics
+- runtime analytics snapshots for throughput, blocked signals, errors, and latency placeholders
+- JSON and CSV analytics exports under `reports/analytics/`
+- normalized research dataset generation for future ML and optimization work
+- dedicated rotating `logs/analytics.log`
+
+Analytics remains decoupled from execution decisions. It observes lifecycle events and exports structured research artifacts.
 
 ## Setup
 

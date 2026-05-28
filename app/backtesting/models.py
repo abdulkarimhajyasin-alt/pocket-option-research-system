@@ -3,6 +3,7 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import StrEnum
+from typing import Any
 
 
 class TradeOutcome(StrEnum):
@@ -53,6 +54,7 @@ class BacktestResult:
     equity_curve: list[EquityPoint] = field(default_factory=list)
     metrics: dict[str, float | int] = field(default_factory=dict)
     risk_summary: dict[str, object] = field(default_factory=dict)
+    analytics_snapshot: dict[str, Any] = field(default_factory=dict)
 
     def summary(self) -> dict[str, float | int | str]:
         """Return a compact structured summary for display and reports."""
