@@ -1,0 +1,10 @@
+name: local
+mode: paper
+runtime_config: configs/runtime/paper_runtime.yaml
+strategy_config: configs/strategies/sample_strategy.yaml
+risk_config: configs/risk/base_risk.yaml
+broker_config: configs/brokers/demo_broker.yaml
+storage_config: configs/storage/persistence.yaml
+settings:
+  log_level: INFO
+  diagnostics_enabled: true

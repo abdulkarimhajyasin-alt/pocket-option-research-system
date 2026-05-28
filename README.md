@@ -150,6 +150,22 @@ Phase 8 adds persistence, storage, and replay infrastructure:
 
 Storage remains infrastructure only. It is decoupled from strategy logic, broker adapters, and analytics calculations, while preparing the platform for future PostgreSQL-compatible persistence.
 
+## Phase 9 Scope
+
+Phase 9 adds configuration, orchestration, and environment management:
+
+- centralized layered configuration loading and resolution
+- environment profiles for local, research, paper, and debug modes
+- environment variable overrides using nested `TRADING_...` keys
+- lightweight service container and dependency graph diagnostics
+- startup checks for configs, directories, database access, broker safety, strategies, and operational mode
+- runtime composition and orchestrator-driven startup
+- diagnostics exports under `reports/diagnostics/`
+- dedicated rotating `logs/orchestrator.log`
+- environment diagnostics runner at `scripts/check_environment.py`
+
+The orchestration layer manages composition only. Strategies still generate signals, risk keeps final approval authority, storage remains infrastructure, and brokers remain isolated adapters.
+
 ## Setup
 
 Use Python 3.11.
@@ -188,6 +204,12 @@ Run storage diagnostics:
 
 ```bash
 python scripts/check_storage.py
+```
+
+Run environment diagnostics:
+
+```bash
+python scripts/check_environment.py
 ```
 
 ## Validation

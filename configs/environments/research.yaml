@@ -1,0 +1,8 @@
+name: research
+inherits: local
+mode: research
+runtime_config: configs/runtime/safe_runtime.yaml
+settings:
+  log_level: INFO
+  diagnostics_enabled: true
+  persist_backtests: true

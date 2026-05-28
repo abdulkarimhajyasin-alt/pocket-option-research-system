@@ -1,0 +1,7 @@
+name: debug
+inherits: local
+mode: debug
+settings:
+  log_level: DEBUG
+  diagnostics_enabled: true
+  verbose_startup: true

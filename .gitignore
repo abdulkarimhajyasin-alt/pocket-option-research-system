@@ -17,5 +17,6 @@ reports/*.json
 reports/*.csv
 reports/analytics/*.json
 reports/analytics/*.csv
+reports/diagnostics/*.json
 storage/*.db
 storage/*.db-*

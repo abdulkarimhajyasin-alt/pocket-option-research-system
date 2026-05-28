@@ -1,0 +1,6 @@
+name: paper
+inherits: local
+mode: paper
+settings:
+  log_level: INFO
+  diagnostics_enabled: true
