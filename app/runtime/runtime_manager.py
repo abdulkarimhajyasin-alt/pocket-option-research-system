@@ -22,6 +22,7 @@ from app.runtime.health import HealthMonitor
 from app.runtime.kill_switch import KillSwitch, KillSwitchConfig
 from app.runtime.runtime_state import RuntimeMode, RuntimeState
 from app.runtime.shutdown import ShutdownManager
+from app.storage.persistence import PersistenceService
 from app.strategies.base_strategy import BaseStrategy
 
 
@@ -43,6 +44,8 @@ class RuntimeConfig:
     timeframe: str = "1m"
     data_path: str = "data/sample_eurusd_m1.csv"
     risk_profile: str = "configs/risk/base_risk.yaml"
+    persistence_enabled: bool = True
+    database_path: str = "storage/trading_system.db"
 
     @classmethod
     def from_yaml(cls, path: Path | str) -> "RuntimeConfig":
@@ -65,6 +68,8 @@ class RuntimeConfig:
             timeframe=str(raw.get("timeframe", "1m")),
             data_path=str(raw.get("data_path", "data/sample_eurusd_m1.csv")),
             risk_profile=str(raw.get("risk_profile", "configs/risk/base_risk.yaml")),
+            persistence_enabled=bool(raw.get("persistence_enabled", True)),
+            database_path=str(raw.get("database_path", "storage/trading_system.db")),
         )
 
 
@@ -113,6 +118,10 @@ class RuntimeManager:
             equity_curve=self.equity_curve,
             runtime_mode=config.runtime_mode.value,
         )
+        self.persistence = PersistenceService(
+            database_path=config.database_path,
+            enabled=config.persistence_enabled,
+        )
 
     def run(self) -> RuntimeState:
         """Run the configured local paper runtime."""
@@ -120,7 +129,8 @@ class RuntimeManager:
         self.state.start()
         self.broker_runtime.initialize()
         try:
-            self.broker_runtime.heartbeat()
+            broker_health = self.broker_runtime.heartbeat()
+            self.persistence.persist_broker_health(self.broker.name, broker_health)
             symbol = self.config.symbols[0]
             candles = CsvCandleLoader().load(
                 self.config.data_path,
@@ -142,4 +152,13 @@ class RuntimeManager:
             self.broker_runtime.shutdown()
             reason = self.kill_switch.reason or "completed"
             self.shutdown_manager.shutdown(self.state, reason=reason)
+            self.persistence.persist_runtime_state(self.state)
+            self.persistence.persist_trade_journal(self.trade_journal.entries())
+            self.persistence.persist_risk_events(self.risk_engine.events)
+            self.persistence.snapshots.create_snapshot(
+                self.persistence.session_id,
+                self.state,
+                self.risk_engine,
+                self.broker.get_open_positions(),
+            )
         return self.state

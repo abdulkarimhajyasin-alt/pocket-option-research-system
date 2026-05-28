@@ -13,3 +13,5 @@ symbols:
 timeframe: 1m
 data_path: data/sample_eurusd_m1.csv
 risk_profile: configs/risk/conservative.yaml
+persistence_enabled: true
+database_path: storage/trading_system.db

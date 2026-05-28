@@ -135,6 +135,21 @@ Phase 7 adds broker adapter architecture and demo integration planning:
 
 Broker adapters remain isolated from strategies, risk, analytics, and runtime internals. No external broker communication is implemented.
 
+## Phase 8 Scope
+
+Phase 8 adds persistence, storage, and replay infrastructure:
+
+- local SQLite storage under `storage/trading_system.db`
+- schema initialization and migration helpers
+- repository-based persistence for trades, signals, runtime events, risk events, analytics snapshots, broker health, and execution lifecycle events
+- append-only event storage with replay support
+- runtime snapshot creation and recovery helpers
+- optional persistence integration for paper runtime and backtesting flows
+- storage diagnostics runner at `scripts/check_storage.py`
+- dedicated rotating `logs/storage.log`
+
+Storage remains infrastructure only. It is decoupled from strategy logic, broker adapters, and analytics calculations, while preparing the platform for future PostgreSQL-compatible persistence.
+
 ## Setup
 
 Use Python 3.11.
@@ -167,6 +182,12 @@ Run broker diagnostics:
 
 ```bash
 python scripts/check_broker_runtime.py
+```
+
+Run storage diagnostics:
+
+```bash
+python scripts/check_storage.py
 ```
 
 ## Validation

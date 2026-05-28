@@ -1,0 +1,3 @@
+database_path: storage/trading_system.db
+journal_mode: wal
+foreign_keys: true

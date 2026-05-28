@@ -37,6 +37,7 @@ def main() -> None:
         manager.equity_curve,
         runtime_performance=runtime_performance,
     )
+    manager.persistence.persist_analytics_snapshot(analytics_snapshot, "runtime")
     analytics_exporter = AnalyticsExporter(PROJECT_ROOT / "reports" / "analytics")
     analytics_exporter.export_snapshot(analytics_snapshot, "runtime_paper")
     analytics_exporter.export_journal(manager.trade_journal.entries(), "runtime_paper")
@@ -50,6 +51,7 @@ def main() -> None:
     logger.info("Runtime metrics: {}", metrics)
     logger.info("Runtime analytics: {}", analytics_snapshot.to_dict())
     logger.info("Paper balance: {}", manager.broker.get_balance())
+    manager.persistence.close()
     print(
         {
             "state": state.snapshot(),

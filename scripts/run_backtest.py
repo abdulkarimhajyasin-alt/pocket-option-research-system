@@ -18,6 +18,7 @@ from app.config.settings import Settings  # noqa: E402
 from app.data.csv_loader import CsvCandleLoader  # noqa: E402
 from app.logging.logger import configure_logging  # noqa: E402
 from app.risk.risk_engine import RiskEngine  # noqa: E402
+from app.storage.persistence import PersistenceService  # noqa: E402
 from app.strategies.sample_strategy import SampleCandleDirectionStrategy  # noqa: E402
 
 
@@ -37,15 +38,23 @@ def main() -> None:
     engine = BacktestEngine(risk_engine=risk_engine, simulator=simulator)
 
     result = engine.run(strategy=strategy, candles=candles)
+    persistence = PersistenceService(
+        PROJECT_ROOT / "storage" / "trading_system.db",
+        session_id="sample_backtest",
+    )
+    persistence.persist_trade_journal(engine.trade_journal.entries())
+    persistence.persist_risk_events(risk_engine.events)
     report_paths = BacktestReportBuilder(PROJECT_ROOT / "reports").export(
         result,
         run_name="sample_eurusd_m1",
     )
-    analytics_exporter = AnalyticsExporter(PROJECT_ROOT / "reports" / "analytics")
-    analytics_exporter.export_snapshot(
-        engine.performance_analyzer.analyze(engine.trade_journal.entries(), engine.equity_tracker),
-        "sample_eurusd_m1",
+    snapshot = engine.performance_analyzer.analyze(
+        engine.trade_journal.entries(),
+        engine.equity_tracker,
     )
+    persistence.persist_analytics_snapshot(snapshot, "backtest")
+    analytics_exporter = AnalyticsExporter(PROJECT_ROOT / "reports" / "analytics")
+    analytics_exporter.export_snapshot(snapshot, "sample_eurusd_m1")
     analytics_exporter.export_journal(engine.trade_journal.entries(), "sample_eurusd_m1")
     analytics_exporter.export_equity_curve(engine.equity_tracker.points(), "sample_eurusd_m1")
     ResearchDatasetBuilder().build_trade_dataset(
@@ -55,6 +64,7 @@ def main() -> None:
 
     logger.info("Backtest metrics: {}", result.metrics)
     logger.info("Report files: {}", report_paths)
+    persistence.close()
     print(result.summary())
 
 

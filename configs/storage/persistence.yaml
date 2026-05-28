@@ -1,0 +1,5 @@
+enabled: true
+database_path: storage/trading_system.db
+snapshot_interval_candles: 25
+replay_retention_days: 365
+cleanup_enabled: false
