@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocket-option-research-system"
+version = "0.1.0"
+description = "Architecture-first experimental trading research platform for backtesting, analytics, risk, and demo execution."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Research Platform Team" }]
+dependencies = ["loguru>=0.7.2"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]
+exclude = [".git", ".venv", "__pycache__", "build", "dist"]
