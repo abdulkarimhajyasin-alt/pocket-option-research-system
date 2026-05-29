@@ -1,0 +1,22 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Dataset Detail - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">Dataset detail</p><h1>{{ dataset.name }}</h1></div></section>
+<article class="panel">
+  <div class="detail-grid">
+    <div><span>ID</span><strong>{{ dataset.dataset_id }}</strong></div>
+    <div><span>Symbol</span><strong>{{ dataset.symbol }}</strong></div>
+    <div><span>Timeframe</span><strong>{{ dataset.timeframe }}</strong></div>
+    <div><span>Version</span><strong>{{ dataset.version }}</strong></div>
+    <div><span>Rows</span><strong>{{ dataset.row_count }}</strong></div>
+    <div><span>Quality</span><strong>{{ dataset.quality_score if dataset.quality_score is not none else "n/a" }}</strong></div>
+    <div><span>Start</span><strong>{{ dataset.start_time or "n/a" }}</strong></div>
+    <div><span>End</span><strong>{{ dataset.end_time or "n/a" }}</strong></div>
+    <div><span>Checksum</span><strong class="mono">{{ dataset.checksum or "n/a" }}</strong></div>
+    <div><span>Fingerprint</span><strong class="mono">{{ dataset.fingerprint or "n/a" }}</strong></div>
+  </div>
+  {% if dataset.latest_report %}
+    <p><a class="button-link" href="/reports/{{ dataset.latest_report.report_id }}">View latest dataset report</a></p>
+  {% endif %}
+</article>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Report - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">{{ report.file.report_type }}</p><h1>{{ report.title }}</h1></div></section>
+{% if report.error %}
+  <p class="error">{{ report.error }}</p>
+{% endif %}
+{% if report.file.report_type == "csv" %}
+  <section class="table-wrap">
+    <table>
+      <thead><tr>{% for header in report.csv_headers %}<th>{{ header }}</th>{% endfor %}</tr></thead>
+      <tbody>
+        {% for row in report.csv_rows %}
+          <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% elif report.file.report_type == "json" and report.json_data %}
+  <article class="panel">
+    <h2>Structured JSON</h2>
+    {% for key, value in report.json_data.items() %}
+      <details {% if loop.index <= 4 %}open{% endif %}>
+        <summary>{{ key }}</summary>
+        <pre>{{ value }}</pre>
+      </details>
+    {% endfor %}
+  </article>
+  <article class="panel"><h2>Raw JSON</h2><pre>{{ report.raw_text }}</pre></article>
+{% else %}
+  <article class="panel"><pre>{{ report.raw_text }}</pre></article>
+{% endif %}
+{% endblock %}

@@ -366,12 +366,51 @@ Run dataset quality diagnostics:
 python scripts/check_data_layer.py
 ```
 
+## Local Research Dashboard
+
+Phase 16 adds a local FastAPI dashboard for browsing research state from a browser.
+It is local-only and does not execute live trades, connect to real-money accounts, or automate
+broker actions.
+
+Start the dashboard:
+
+```bash
+python scripts/run_dashboard.py
+```
+
+Open:
+
+```text
+http://localhost:8000
+```
+
+Run non-blocking dashboard diagnostics:
+
+```bash
+python scripts/check_dashboard.py
+python scripts/run_dashboard.py --check
+```
+
+Dashboard pages:
+
+- Overview
+- Strategies
+- Datasets
+- Validation
+- Reports
+- Run Center
+
+The Run Center executes only fixed allowlisted research scripts. It does not accept arbitrary
+shell input.
+
 ## Validation
 
 ```bash
 python -m compileall app
 pytest
 flake8 app
+python scripts/check_dashboard.py
+python scripts/run_dashboard.py --check
 python scripts/check_dataset_quality.py
 python scripts/generate_synthetic_dataset.py
 python scripts/run_dataset_statistics.py

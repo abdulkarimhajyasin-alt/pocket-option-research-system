@@ -1,0 +1,81 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Overview - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">Phase 16 MVP</p>
+    <h1>Research Overview</h1>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card">
+    <span>Strategies</span>
+    <strong>{{ overview.strategies|length }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>Datasets</span>
+    <strong>{{ overview.datasets|length }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>Validation Runs</span>
+    <strong>{{ overview.validations|length }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>Reports</span>
+    <strong>{{ overview.reports|length }}</strong>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title">
+      <h2>Robustness</h2>
+      <span>{{ overview.latest_robustness_score if overview.latest_robustness_score is not none else "No score" }}</span>
+    </div>
+    {% set robust = overview.latest_robustness_score or 0 %}
+    <div class="score-bar"><span style="width: {{ robust }}%"></span></div>
+    {% if overview.validations %}
+      <p class="muted">{{ overview.validations[0].robustness_category }} on {{ overview.validations[0].dataset_name }}</p>
+    {% else %}
+      <p class="empty">No validation report found.</p>
+    {% endif %}
+  </article>
+  <article class="panel">
+    <div class="panel-title">
+      <h2>Dataset Quality</h2>
+      <span>{{ overview.latest_dataset_quality_score if overview.latest_dataset_quality_score is not none else "No score" }}</span>
+    </div>
+    {% set quality = overview.latest_dataset_quality_score or 0 %}
+    <div class="score-bar quality"><span style="width: {{ quality }}%"></span></div>
+    {% if overview.datasets %}
+      <p class="muted">{{ overview.datasets[0].name }} integrity: {{ overview.datasets[0].integrity_status }}</p>
+    {% else %}
+      <p class="empty">No dataset quality report found.</p>
+    {% endif %}
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <h2>Warning Counts</h2>
+    <div class="severity-list">
+      {% for label, count in overview.warning_counts.items() %}
+        <div><span>{{ label }}</span><strong>{{ count }}</strong></div>
+      {% endfor %}
+    </div>
+  </article>
+  <article class="panel">
+    <h2>Latest Reports</h2>
+    {% if overview.reports %}
+      <ul class="file-list">
+        {% for report in overview.reports %}
+          <li><a href="/reports/{{ report.report_id }}">{{ report.relative_path }}</a><small>{{ report.report_type }}</small></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="empty">No local reports discovered.</p>
+    {% endif %}
+  </article>
+</section>
+{% endblock %}

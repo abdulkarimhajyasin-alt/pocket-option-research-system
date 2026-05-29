@@ -1,0 +1,22 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Validation Detail - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">Validation detail</p><h1>{{ validation.strategy_name }}</h1></div></section>
+<article class="panel">
+  <div class="detail-grid">
+    <div><span>Dataset</span><strong>{{ validation.dataset_name }}</strong></div>
+    <div><span>Robustness</span><strong>{{ validation.robustness_score if validation.robustness_score is not none else "n/a" }}</strong></div>
+    <div><span>Category</span><strong>{{ validation.robustness_category }}</strong></div>
+    <div><span>Warnings</span><strong>{{ validation.overfitting_warnings|length }}</strong></div>
+  </div>
+  <h3>Out-of-sample</h3>
+  <pre>{{ validation.out_of_sample_summary }}</pre>
+  <h3>Walk-forward</h3>
+  <pre>{{ validation.walk_forward_summary }}</pre>
+  <h3>Parameter Sweep</h3>
+  <pre>{{ validation.parameter_sweep_summary }}</pre>
+  {% if validation.latest_report %}
+    <p><a class="button-link" href="/reports/{{ validation.latest_report.report_id }}">View raw report</a></p>
+  {% endif %}
+</article>
+{% endblock %}

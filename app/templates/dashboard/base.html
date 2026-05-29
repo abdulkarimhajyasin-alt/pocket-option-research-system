@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Research Dashboard{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='dashboard/dashboard.css') }}">
+    <script defer src="{{ url_for('static', path='dashboard/dashboard.js') }}"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <div>
+          <strong>Research System</strong>
+          <small>Local dashboard</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="{{ 'active' if page == 'overview' else '' }}" href="/">Overview</a>
+        <a class="{{ 'active' if page == 'strategies' else '' }}" href="/strategies">Strategies</a>
+        <a class="{{ 'active' if page == 'datasets' else '' }}" href="/datasets">Datasets</a>
+        <a class="{{ 'active' if page == 'validation' else '' }}" href="/validation">Validation</a>
+        <a class="{{ 'active' if page == 'reports' else '' }}" href="/reports">Reports</a>
+        <a class="{{ 'active' if page == 'actions' else '' }}" href="/actions">Run Center</a>
+      </nav>
+      <div class="local-pill">127.0.0.1:{{ config.port }}</div>
+    </aside>
+    <main class="main">
+      <div class="safety">{{ safety_note }}</div>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

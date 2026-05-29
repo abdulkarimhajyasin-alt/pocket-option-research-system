@@ -1,0 +1,38 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Strategies - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">Research only</p><h1>Strategy Explorer</h1></div></section>
+{% if strategies %}
+  <section class="stack">
+    {% for strategy in strategies %}
+      <article class="panel">
+        <div class="panel-title">
+          <h2>{{ strategy.name }}</h2>
+          <span>{{ strategy.version }}</span>
+        </div>
+        <p>{{ strategy.description }}</p>
+        <div class="detail-grid">
+          <div><span>ID</span><strong>{{ strategy.strategy_id }}</strong></div>
+          <div><span>Multi-timeframe</span><strong>{{ strategy.metadata.supports_multi_timeframe }}</strong></div>
+          <div><span>Indicators</span><strong>{{ strategy.metadata.required_indicators|join(", ") or "None" }}</strong></div>
+        </div>
+        <h3>Default Configuration</h3>
+        <pre>{{ strategy.default_configuration }}</pre>
+        {% if strategy.latest_signal_summary %}
+          <h3>Latest Signal Summary</h3>
+          <div class="detail-grid">
+            <div><span>Signals</span><strong>{{ strategy.latest_signal_summary.generated_signals }}</strong></div>
+            <div><span>Rejected</span><strong>{{ strategy.latest_signal_summary.decision_distribution.rejected }}</strong></div>
+            <div><span>Bullish</span><strong>{{ strategy.latest_signal_summary.bullish_signals }}</strong></div>
+            <div><span>Bearish</span><strong>{{ strategy.latest_signal_summary.bearish_signals }}</strong></div>
+          </div>
+        {% else %}
+          <p class="empty">No signal summary found for this strategy.</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </section>
+{% else %}
+  <p class="empty">No registered strategies found.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Run Center - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">Allowlisted workflows</p><h1>Run Center</h1></div></section>
+{% if not config.allow_actions %}
+  <p class="empty">Dashboard actions are disabled by configuration.</p>
+{% endif %}
+<section class="action-grid">
+  {% for action in actions %}
+    <form class="panel action-card" method="post" action="/actions/run/{{ action.name }}">
+      <h2>{{ action.label }}</h2>
+      <p>{{ action.description }}</p>
+      <code>python {{ action.command|join(" ") }}</code>
+      <button type="submit" {% if not config.allow_actions %}disabled{% endif %}>Run</button>
+    </form>
+  {% endfor %}
+</section>
+{% if result %}
+  <article class="panel result-panel">
+    <div class="panel-title">
+      <h2>{{ result.label }}</h2>
+      <span>Exit {{ result.exit_code }}</span>
+    </div>
+    <p><code>{{ result.command_display }}</code></p>
+    {% if result.error %}<p class="error">{{ result.error }}</p>{% endif %}
+    <h3>stdout</h3>
+    <pre>{{ result.stdout or "No stdout" }}</pre>
+    <h3>stderr</h3>
+    <pre>{{ result.stderr or "No stderr" }}</pre>
+  </article>
+{% endif %}
+{% endblock %}

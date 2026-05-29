@@ -1,0 +1,33 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Datasets - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">Data quality</p><h1>Dataset Explorer</h1></div></section>
+{% if datasets %}
+  <section class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th><th>Symbol</th><th>TF</th><th>Version</th><th>Rows</th><th>Quality</th><th>Gaps</th><th>Duplicates</th><th>Integrity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for dataset in datasets %}
+          <tr>
+            <td><a href="/datasets/{{ dataset.dataset_id }}">{{ dataset.name }}</a></td>
+            <td>{{ dataset.symbol }}</td>
+            <td>{{ dataset.timeframe }}</td>
+            <td>{{ dataset.version }}</td>
+            <td>{{ dataset.row_count }}</td>
+            <td>{{ dataset.quality_score if dataset.quality_score is not none else "n/a" }}</td>
+            <td>{{ dataset.gap_count }}</td>
+            <td>{{ dataset.duplicate_count }}</td>
+            <td><span class="status">{{ dataset.integrity_status }}</span></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% else %}
+  <p class="empty">No dataset registry entries or reports found.</p>
+{% endif %}
+{% endblock %}

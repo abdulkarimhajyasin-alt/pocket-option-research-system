@@ -1,0 +1,6 @@
+dashboard:
+  enabled: true
+  host: "127.0.0.1"
+  port: 8000
+  reports_dir: "reports"
+  allow_actions: true

@@ -1,0 +1,29 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Validation - Research Dashboard{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">Robustness</p><h1>Validation Explorer</h1></div></section>
+{% if validations %}
+  <section class="stack">
+    {% for validation in validations %}
+      <article class="panel">
+        <div class="panel-title">
+          <h2>{{ validation.strategy_name }}</h2>
+          <span>{{ validation.robustness_category }}</span>
+        </div>
+        {% set score = validation.robustness_score or 0 %}
+        <div class="score-bar"><span style="width: {{ score }}%"></span></div>
+        <div class="detail-grid">
+          <div><span>Dataset</span><strong>{{ validation.dataset_name }}</strong></div>
+          <div><span>Robustness</span><strong>{{ validation.robustness_score if validation.robustness_score is not none else "n/a" }}</strong></div>
+          <div><span>Warnings</span><strong>{{ validation.overfitting_warnings|length }}</strong></div>
+          <div><span>Walk-forward windows</span><strong>{{ validation.walk_forward_summary.windows or "n/a" }}</strong></div>
+          <div><span>Sweep results</span><strong>{{ validation.parameter_sweep_summary.results or "n/a" }}</strong></div>
+        </div>
+        <p><a class="button-link" href="/validation/{{ validation.report_id }}">Open validation detail</a></p>
+      </article>
+    {% endfor %}
+  </section>
+{% else %}
+  <p class="empty">No validation reports found.</p>
+{% endif %}
+{% endblock %}
