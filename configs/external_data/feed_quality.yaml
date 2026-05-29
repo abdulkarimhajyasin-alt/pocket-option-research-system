@@ -1,0 +1,8 @@
+stale_after_seconds: 120
+latency_warning_ms: 1000
+expected_interval_seconds: 60
+minimum_quality_score: 80
+comparison:
+  timestamp_tolerance_ms: 250
+  price_tolerance: 0.0001
+

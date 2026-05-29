@@ -1,0 +1,10 @@
+source: simulated_external
+symbol: EURUSD
+timeframe: 1m
+latency_ms: 75
+seed: 12
+missing_every: 0
+duplicate_every: 0
+stale_every: 0
+reconnect_every: 0
+

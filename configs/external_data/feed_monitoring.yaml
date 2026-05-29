@@ -1,0 +1,9 @@
+latency_warning_ms: 1000
+quality_threshold: 80
+stale_after_seconds: 120
+reconnect:
+  max_attempts: 3
+  backoff_seconds: 5
+source_priorities:
+  - simulated_external
+

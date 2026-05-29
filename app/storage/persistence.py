@@ -210,6 +210,22 @@ class PersistenceService:
         """Persist a stream validation failure without storing raw ticks by default."""
         self.persist_stream_event("stream.validation_failure", source, payload)
 
+    def persist_external_feed_snapshot(self, source: str, payload: dict[str, object]) -> None:
+        """Persist an external feed health snapshot."""
+        self.persist_stream_event("external_data.feed_snapshot", source, payload)
+
+    def persist_external_quality_report(self, source: str, payload: dict[str, object]) -> None:
+        """Persist an external feed quality report."""
+        self.persist_stream_event("external_data.quality_report", source, payload)
+
+    def persist_external_latency_metrics(self, source: str, payload: dict[str, object]) -> None:
+        """Persist external feed latency metrics."""
+        self.persist_stream_event("external_data.latency_metrics", source, payload)
+
+    def persist_external_feed_incident(self, source: str, payload: dict[str, object]) -> None:
+        """Persist an external feed incident."""
+        self.persist_stream_event("external_data.incident", source, payload)
+
     def close(self) -> None:
         """Close persistence resources."""
         logger.bind(component="storage").info("Persistence service closed")
