@@ -246,6 +246,70 @@ class PersistenceService:
         """Persist research strategy metadata."""
         self.persist_stream_event("strategy_research.metadata", strategy_name, payload)
 
+    def persist_validation_run(self, strategy_name: str, payload: dict[str, object]) -> None:
+        """Persist a complete strategy validation run."""
+        self.persist_stream_event("strategy_validation.run", strategy_name, payload)
+
+    def persist_walk_forward_result(
+        self,
+        strategy_name: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist walk-forward validation output."""
+        self.persist_stream_event("strategy_validation.walk_forward", strategy_name, payload)
+
+    def persist_parameter_sweep(
+        self,
+        strategy_name: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist parameter sensitivity analysis."""
+        self.persist_stream_event("strategy_validation.parameter_sweep", strategy_name, payload)
+
+    def persist_robustness_score(
+        self,
+        strategy_name: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist explainable robustness score output."""
+        self.persist_stream_event("strategy_validation.robustness", strategy_name, payload)
+
+    def persist_overfitting_diagnostics(
+        self,
+        strategy_name: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist overfitting diagnostics."""
+        self.persist_stream_event("strategy_validation.overfitting", strategy_name, payload)
+
+    def persist_dataset_metadata(self, dataset_name: str, payload: dict[str, object]) -> None:
+        """Persist dataset descriptor metadata without raw candle payloads."""
+        self.persist_stream_event("strategy_validation.dataset", dataset_name, payload)
+
+    def persist_dataset_registry_metadata(
+        self,
+        dataset_id: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist registered dataset metadata."""
+        self.persist_stream_event("dataset.metadata", dataset_id, payload)
+
+    def persist_dataset_version(self, dataset_id: str, payload: dict[str, object]) -> None:
+        """Persist dataset version metadata."""
+        self.persist_stream_event("dataset.version", dataset_id, payload)
+
+    def persist_dataset_quality_report(self, dataset_id: str, payload: dict[str, object]) -> None:
+        """Persist dataset quality report."""
+        self.persist_stream_event("dataset.quality", dataset_id, payload)
+
+    def persist_dataset_integrity_report(self, dataset_id: str, payload: dict[str, object]) -> None:
+        """Persist dataset integrity verification report."""
+        self.persist_stream_event("dataset.integrity", dataset_id, payload)
+
+    def persist_dataset_statistics(self, dataset_id: str, payload: dict[str, object]) -> None:
+        """Persist dataset statistics."""
+        self.persist_stream_event("dataset.statistics", dataset_id, payload)
+
     def close(self) -> None:
         """Close persistence resources."""
         logger.bind(component="storage").info("Persistence service closed")

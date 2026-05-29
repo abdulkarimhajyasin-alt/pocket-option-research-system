@@ -24,8 +24,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
         log_path,
         level=log_level,
         format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{name}:{function}:{line} | {message}"
+            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{name}:{function}:{line} | {message}"
         ),
         rotation="10 MB",
         retention="14 days",
@@ -35,10 +34,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "risk_events.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "risk",
         rotation="10 MB",
         retention="30 days",
@@ -49,8 +45,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
         log_path.parent / "runtime.log",
         level=log_level,
         format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{name}:{function}:{line} | {message}"
+            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{name}:{function}:{line} | {message}"
         ),
         rotation="10 MB",
         retention="14 days",
@@ -60,10 +55,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "analytics.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "analytics",
         rotation="10 MB",
         retention="30 days",
@@ -73,10 +65,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "broker.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "broker",
         rotation="10 MB",
         retention="30 days",
@@ -86,10 +75,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "storage.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "storage",
         rotation="10 MB",
         retention="30 days",
@@ -99,10 +85,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "orchestrator.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "orchestrator",
         rotation="10 MB",
         retention="30 days",
@@ -112,10 +95,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "connectivity.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "connectivity",
         rotation="10 MB",
         retention="30 days",
@@ -125,10 +105,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "streaming.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "streaming",
         rotation="10 MB",
         retention="30 days",
@@ -138,10 +115,7 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "external_data.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "external_data",
         rotation="10 MB",
         retention="30 days",
@@ -151,11 +125,28 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
     logger.add(
         log_path.parent / "strategy_research.log",
         level=log_level,
-        format=(
-            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
-            "{extra[component]} | {message}"
-        ),
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
         filter=lambda record: record["extra"].get("component") == "strategy_research",
+        rotation="10 MB",
+        retention="30 days",
+        compression="zip",
+        enqueue=True,
+    )
+    logger.add(
+        log_path.parent / "strategy_validation.log",
+        level=log_level,
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
+        filter=lambda record: record["extra"].get("component") == "strategy_validation",
+        rotation="10 MB",
+        retention="30 days",
+        compression="zip",
+        enqueue=True,
+    )
+    logger.add(
+        log_path.parent / "dataset_quality.log",
+        level=log_level,
+        format=("{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | " "{extra[component]} | {message}"),
+        filter=lambda record: record["extra"].get("component") == "dataset_quality",
         rotation="10 MB",
         retention="30 days",
         compression="zip",

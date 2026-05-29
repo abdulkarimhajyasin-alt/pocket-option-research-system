@@ -21,5 +21,12 @@ reports/analytics/*.csv
 reports/diagnostics/*.json
 reports/strategy_research/*.json
 reports/strategy_research/*.csv
+reports/validation/*.json
+reports/validation/*.csv
+reports/validation/*.txt
+reports/datasets/*.json
+reports/datasets/*.csv
+reports/datasets/*.txt
+data/synthetic_*.csv
 storage/*.db
 storage/*.db-*

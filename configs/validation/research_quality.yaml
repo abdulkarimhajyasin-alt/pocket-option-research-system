@@ -1,0 +1,40 @@
+validation:
+  enabled: true
+
+dataset_name: sample_eurusd_m1
+dataset_path: data/sample_eurusd_m1.csv
+strategy_config_path: configs/strategies/research_cisd_fvg_strategy.yaml
+risk_profile_path: configs/risk/base_risk.yaml
+reports_dir: reports/validation
+
+walk_forward:
+  enabled: true
+  mode: rolling
+  train_size: 120
+  validation_size: 40
+  test_size: 40
+  step_size: 40
+  minimum_samples: 160
+
+out_of_sample:
+  enabled: true
+  in_sample_ratio: 0.7
+  minimum_samples: 100
+
+parameter_sweeps:
+  enabled: true
+  max_combinations: 12
+  grid:
+    confidence_threshold:
+      - 0.56
+      - 0.58
+      - 0.62
+    minimum_body_ratio:
+      - 0.30
+      - 0.35
+    cisd_body_ratio:
+      - 0.30
+      - 0.35
+
+robustness_scoring:
+  enabled: true

@@ -1,0 +1,35 @@
+dataset_registry:
+  enabled: true
+
+quality_checks:
+  enabled: true
+
+integrity_verification:
+  enabled: true
+
+normalization:
+  enabled: true
+
+synthetic_data:
+  enabled: true
+
+comparison:
+  enabled: true
+
+dataset_name: sample_eurusd_m1
+dataset_path: data/sample_eurusd_m1.csv
+symbol: EURUSD
+timeframe: 1m
+version: v1
+tags:
+  - sample
+  - research
+  - validation-ready
+reports_dir: reports/datasets
+
+synthetic_rows: 200
+synthetic_seed: 42
+synthetic_profiles:
+  - trending
+  - ranging
+  - volatile

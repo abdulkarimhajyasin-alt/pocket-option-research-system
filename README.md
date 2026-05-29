@@ -229,6 +229,67 @@ Inspect generated strategy research reports:
 reports/strategy_research/
 ```
 
+## Phase 14 Scope
+
+Phase 14 adds strategy validation and research-quality tooling:
+
+- walk-forward validation with rolling and expanding train/validation/test windows
+- out-of-sample evaluation with separate in-sample and out-of-sample metrics
+- parameter sensitivity sweeps for configurable research parameters
+- explainable robustness scoring from consistency, stability, sensitivity, and signal reliability
+- overfitting diagnostics for train/test divergence, window instability, and parameter sensitivity
+- research comparison helpers that do not rank solely by profitability
+- dataset descriptors so reports identify data source, time range, symbol, timeframe, and sample count
+- reproducible JSON, CSV, and text reports under `reports/validation/`
+- persistence hooks for validation runs, walk-forward results, sweeps, robustness, overfitting diagnostics, and dataset metadata
+- dedicated rotating `logs/strategy_validation.log`
+
+This layer evaluates whether a strategy looks robust enough for further research. It does not execute trades, connect to live brokers, automate Pocket Option, add real-money functionality, or bypass risk controls.
+
+Run the full validation workflow:
+
+```bash
+python scripts/run_validation.py
+```
+
+Run focused research-quality tools:
+
+```bash
+python scripts/run_walk_forward.py
+python scripts/run_parameter_sweep.py
+python scripts/run_research_report.py
+python scripts/check_research_quality.py
+```
+
+## Phase 15 Scope
+
+Phase 15 adds a research-grade dataset management and data-quality layer:
+
+- centralized dataset registry with deterministic IDs, metadata, checksums, versions, and tags
+- immutable dataset version records and version comparison helpers
+- quality scoring for empty data, missing intervals, duplicates, timestamp ordering, OHLC validity, zero-volume anomalies, and timeframe consistency
+- gap detection with expected, suspicious, and severe classifications
+- checksum and fingerprint-based integrity verification
+- dataset normalization for timestamps, symbols, timeframes, and common OHLCV column aliases
+- dataset statistics for row count, date range, candle size, volatility, gaps, duplicates, and quality score
+- deterministic synthetic datasets for trending, ranging, volatile, low-volatility, and noisy market profiles
+- dataset comparison reports that rank by quality, coverage, gaps, duplicates, and volatility
+- validation quality gates so Phase 14 validation reports include dataset ID, version, checksum, quality, integrity, and statistics
+- dataset reports under `reports/datasets/` and dedicated `logs/dataset_quality.log`
+
+This layer validates data before research usage. It does not execute trades, connect to live brokers, automate Pocket Option, alter risk controls, or add real-money functionality.
+
+Run dataset diagnostics:
+
+```bash
+python scripts/check_dataset_quality.py
+python scripts/generate_synthetic_dataset.py
+python scripts/run_dataset_statistics.py
+python scripts/run_dataset_comparison.py
+python scripts/verify_dataset_integrity.py
+python scripts/check_data_layer.py
+```
+
 ## Setup
 
 Use Python 3.11.
@@ -293,13 +354,36 @@ Run strategy research diagnostics:
 python scripts/run_strategy_research.py
 ```
 
+Run strategy validation diagnostics:
+
+```bash
+python scripts/check_research_quality.py
+```
+
+Run dataset quality diagnostics:
+
+```bash
+python scripts/check_data_layer.py
+```
+
 ## Validation
 
 ```bash
 python -m compileall app
 pytest
 flake8 app
+python scripts/check_dataset_quality.py
+python scripts/generate_synthetic_dataset.py
+python scripts/run_dataset_statistics.py
+python scripts/run_dataset_comparison.py
+python scripts/verify_dataset_integrity.py
+python scripts/check_data_layer.py
 python scripts/run_strategy_research.py
+python scripts/run_validation.py
+python scripts/run_walk_forward.py
+python scripts/run_parameter_sweep.py
+python scripts/run_research_report.py
+python scripts/check_research_quality.py
 python scripts/check_streaming.py
 ```
 
