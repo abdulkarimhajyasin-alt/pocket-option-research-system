@@ -148,3 +148,16 @@ def configure_logging(log_level: str = "INFO", log_file_path: Path | str = "logs
         compression="zip",
         enqueue=True,
     )
+    logger.add(
+        log_path.parent / "strategy_research.log",
+        level=log_level,
+        format=(
+            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | "
+            "{extra[component]} | {message}"
+        ),
+        filter=lambda record: record["extra"].get("component") == "strategy_research",
+        rotation="10 MB",
+        retention="30 days",
+        compression="zip",
+        enqueue=True,
+    )

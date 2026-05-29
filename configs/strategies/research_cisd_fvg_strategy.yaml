@@ -1,0 +1,36 @@
+name: research_cisd_fvg_strategy
+enabled: true
+symbols:
+  - EURUSD
+timeframes:
+  - 1m
+session_filters:
+  - asian
+confidence_threshold: 0.58
+parameters:
+  minimum_history: 20
+  sessions:
+    - asian
+  atr_period: 14
+  atr_minimum: 0.00003
+  atr_maximum: 0.002
+  minimum_body_ratio: 0.35
+  minimum_range: 0.00003
+  maximum_wick_ratio: 0.85
+  minimum_evidence: 3
+  structure_lookback: 2
+  fvg_minimum_size: 0.00001
+  cisd_lookback: 5
+  cisd_body_ratio: 0.35
+  cisd_range_multiple: 0.8
+  sweep_lookback: 5
+  sweep_tolerance: 0.0
+  scoring_weights:
+    trend_alignment: 1.0
+    fvg_presence: 0.9
+    cisd_displacement: 1.2
+    liquidity_sweep: 1.1
+    session_allowed: 0.5
+    volatility_acceptable: 0.6
+    candle_confirmation: 0.9
+

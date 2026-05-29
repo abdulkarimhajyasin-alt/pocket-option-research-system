@@ -226,6 +226,26 @@ class PersistenceService:
         """Persist an external feed incident."""
         self.persist_stream_event("external_data.incident", source, payload)
 
+    def persist_strategy_decision(self, strategy_name: str, payload: dict[str, object]) -> None:
+        """Persist an explainable strategy decision without raw candle history."""
+        self.persist_stream_event("strategy_research.decision", strategy_name, payload)
+
+    def persist_signal_evidence_summary(
+        self,
+        strategy_name: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist signal evidence summary analytics."""
+        self.persist_stream_event("strategy_research.evidence_summary", strategy_name, payload)
+
+    def persist_research_strategy_metadata(
+        self,
+        strategy_name: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist research strategy metadata."""
+        self.persist_stream_event("strategy_research.metadata", strategy_name, payload)
+
     def close(self) -> None:
         """Close persistence resources."""
         logger.bind(component="storage").info("Persistence service closed")

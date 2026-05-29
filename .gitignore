@@ -5,6 +5,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.codex_tmp/
 .coverage
 htmlcov/
 build/
@@ -18,5 +19,7 @@ reports/*.csv
 reports/analytics/*.json
 reports/analytics/*.csv
 reports/diagnostics/*.json
+reports/strategy_research/*.json
+reports/strategy_research/*.csv
 storage/*.db
 storage/*.db-*

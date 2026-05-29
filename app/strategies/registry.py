@@ -11,6 +11,7 @@ from app.strategies.base_strategy import (
     StrategySessionRestriction,
 )
 from app.strategies.cisd_fvg_strategy import CisdFvgStrategy
+from app.strategies.research_cisd_fvg_strategy import ResearchCisdFvgStrategy
 from app.strategies.sample_strategy import SampleCandleDirectionStrategy
 
 StrategyFactory = Callable[..., BaseStrategy]
@@ -66,4 +67,5 @@ def default_strategy_registry() -> StrategyRegistry:
     registry = StrategyRegistry()
     registry.register("sample_candle_direction_strategy", SampleCandleDirectionStrategy)
     registry.register("cisd_fvg_strategy", CisdFvgStrategy)
+    registry.register("research_cisd_fvg_strategy", ResearchCisdFvgStrategy)
     return registry

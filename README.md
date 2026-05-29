@@ -202,6 +202,33 @@ Streaming does not add live trading, Pocket Option execution, broker automation,
 
 This phase prepares future demo market-data integration while keeping external data flow read-only and local-first.
 
+## Phase 13 Scope
+
+Phase 13 adds the first serious strategy-development research layer:
+
+- reusable strategy research models for market context, evidence, decisions, and rejections
+- explainable evidence scoring with separate bullish and bearish confidence paths
+- research filters for ATR thresholds, sessions, candle body strength, low range, and wick risk
+- price-action utilities for swing structure, fair value gaps, liquidity sweeps, and CISD-like displacement
+- `research_cisd_fvg_strategy`, a configurable research candidate that only generates `TradeSignal` objects
+- strategy research analytics under `reports/strategy_research/`
+- persistence hooks for compact decision, evidence, and metadata events
+- dedicated rotating `logs/strategy_research.log`
+
+The research CISD/FVG strategy is a candidate for experimentation, not a profitable system guarantee. It does not execute trades, place Pocket Option orders, automate browsers, handle credentials, or bypass the Risk Engine. Risk approval remains the final authority in backtests and runtime flows.
+
+Run the strategy research backtest:
+
+```bash
+python scripts/run_strategy_research.py
+```
+
+Inspect generated strategy research reports:
+
+```text
+reports/strategy_research/
+```
+
 ## Setup
 
 Use Python 3.11.
@@ -260,12 +287,19 @@ Run streaming diagnostics:
 python scripts/check_streaming.py
 ```
 
+Run strategy research diagnostics:
+
+```bash
+python scripts/run_strategy_research.py
+```
+
 ## Validation
 
 ```bash
 python -m compileall app
 pytest
 flake8 app
+python scripts/run_strategy_research.py
 python scripts/check_streaming.py
 ```
 
