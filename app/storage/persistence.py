@@ -179,6 +179,37 @@ class PersistenceService:
             )
         )
 
+    def persist_stream_event(
+        self,
+        event_type: str,
+        aggregate_id: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist a stream lifecycle or replay metadata event."""
+        if not self.enabled:
+            return
+        self.events.append(
+            StoredEvent(
+                session_id=self.session_id,
+                event_type=event_type,
+                aggregate_id=aggregate_id,
+                timestamp=utc_now(),
+                payload=payload,
+            )
+        )
+
+    def persist_stream_health(self, source: str, payload: dict[str, object]) -> None:
+        """Persist a stream health snapshot."""
+        self.persist_stream_event("stream.health", source, payload)
+
+    def persist_stream_validation_failure(
+        self,
+        source: str,
+        payload: dict[str, object],
+    ) -> None:
+        """Persist a stream validation failure without storing raw ticks by default."""
+        self.persist_stream_event("stream.validation_failure", source, payload)
+
     def close(self) -> None:
         """Close persistence resources."""
         logger.bind(component="storage").info("Persistence service closed")

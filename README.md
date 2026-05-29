@@ -183,6 +183,25 @@ Phase 10 adds a controlled demo connectivity research layer:
 
 All connectors are read-only. They expose no trade execution capability, no credential handling, no browser automation, and no external broker communication.
 
+## Phase 11 Scope
+
+Phase 11 adds market stream processing and real-time data pipeline foundations:
+
+- read-only stream models for ticks, candle updates, batches, state, and metrics
+- broker-agnostic `BaseMarketStream` lifecycle and subscription interface
+- deterministic local `SimulatedMarketStream` for EURUSD M1/M5 research
+- CSV replay stream that emits historical candles as sequential stream events
+- tick-to-candle aggregation for M1/M5 with late tick and gap tracking
+- rolling stream buffers, validation, health monitoring, and stream diagnostics
+- optional streaming runtime adapter that feeds closed candles into the existing Strategy → Risk → paper/demo-safe execution path
+- streaming configs under `configs/streaming/`
+- diagnostics runner at `scripts/check_streaming.py`
+- dedicated rotating `logs/streaming.log`
+
+Streaming does not add live trading, Pocket Option execution, broker automation, websocket reverse engineering, credential handling, AI models, or dashboard UI. Tick persistence is disabled by default; persistence hooks record stream lifecycle, health, validation failures, and replay metadata unless explicitly configured otherwise.
+
+This phase prepares future demo market-data integration while keeping external data flow read-only and local-first.
+
 ## Setup
 
 Use Python 3.11.
@@ -235,12 +254,19 @@ Run connectivity diagnostics:
 python scripts/check_connectivity.py
 ```
 
+Run streaming diagnostics:
+
+```bash
+python scripts/check_streaming.py
+```
+
 ## Validation
 
 ```bash
 python -m compileall app
 pytest
 flake8 app
+python scripts/check_streaming.py
 ```
 
 ## Initial Git Commands

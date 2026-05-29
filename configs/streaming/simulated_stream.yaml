@@ -1,0 +1,15 @@
+stream_type: simulated
+symbols:
+  - EURUSD
+timeframes:
+  - 1m
+  - 5m
+update_interval_seconds: 1.0
+latency_ms: 25.0
+buffer_size: 500
+candle_buffer_size: 200
+stale_data_threshold_seconds: 120
+speed_multiplier: 1.0
+validation_strict: false
+seed: 11
+persist_ticks: false

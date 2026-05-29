@@ -1,0 +1,14 @@
+stream_type: csv_replay
+symbols:
+  - EURUSD
+timeframes:
+  - 1m
+update_interval_seconds: 0.0
+latency_ms: 0.0
+buffer_size: 500
+candle_buffer_size: 200
+stale_data_threshold_seconds: 52560000
+speed_multiplier: 100.0
+validation_strict: false
+csv_path: data/sample_eurusd_m1.csv
+persist_ticks: false

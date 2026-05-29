@@ -1,5 +1,6 @@
 """Candle-by-candle local runtime event loop."""
 
+from collections.abc import Iterable
 from time import sleep
 
 from loguru import logger
@@ -37,6 +38,10 @@ class RuntimeEventLoop:
 
     def run(self) -> None:
         """Run the local candle event loop."""
+        self.run_batch()
+
+    def run_batch(self) -> None:
+        """Run the compatible candle-by-candle batch loop."""
         logger.info("Runtime event loop started candles={}", len(self.candles))
         for index, candle in enumerate(self.candles):
             if self.max_candles is not None and index >= self.max_candles:
@@ -82,3 +87,13 @@ class RuntimeEventLoop:
             if self.polling_interval_seconds > 0:
                 sleep(self.polling_interval_seconds)
         logger.info("Runtime event loop completed")
+
+    def run_stream_mode(self, candle_updates: Iterable[object]) -> None:
+        """Process stream-driven candle-like updates while preserving the runtime path."""
+        logger.info("Runtime stream mode started")
+        for update in candle_updates:
+            candle = update.to_candle() if hasattr(update, "to_candle") else update
+            candles = CandleSeries(candle.symbol, candle.timeframe, [candle])
+            self.candles = candles
+            self.run_batch()
+        logger.info("Runtime stream mode completed")

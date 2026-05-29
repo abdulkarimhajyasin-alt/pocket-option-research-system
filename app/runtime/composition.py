@@ -11,7 +11,10 @@ from app.connectivity.simulated_market_connector import SimulatedMarketConnector
 from app.runtime.connectivity_runtime import ConnectivityRuntime
 from app.runtime.container import ServiceContainer
 from app.runtime.runtime_manager import RuntimeConfig, RuntimeManager
+from app.runtime.streaming_runtime import StreamingRuntime
 from app.strategies.registry import default_strategy_registry
+from app.streaming.config import StreamingConfig
+from app.streaming.simulated_stream import SimulatedMarketStream
 
 
 @dataclass
@@ -60,6 +63,18 @@ class RuntimeComposer:
             connector,
             stale_after_minutes=int(config.get("connectivity.stale_after_minutes", 1440)),
         )
+        streaming_config = StreamingConfig.from_yaml(
+            self.project_root / "configs/streaming/stream_research.yaml"
+        )
+        streaming_runtime = StreamingRuntime(
+            SimulatedMarketStream(
+                symbol=streaming_config.symbols[0],
+                timeframes=tuple(streaming_config.timeframes),
+                update_interval_seconds=streaming_config.update_interval_seconds,
+                latency_ms=streaming_config.latency_ms,
+                seed=streaming_config.seed,
+            )
+        )
 
         container.register_instance("config", config)
         container.register_instance("runtime_config", runtime_config)
@@ -72,4 +87,6 @@ class RuntimeComposer:
         container.register_instance("persistence", runtime_manager.persistence)
         container.register_instance("connector_registry", connector_registry)
         container.register_instance("connectivity_runtime", connectivity_runtime)
+        container.register_instance("streaming_config", streaming_config)
+        container.register_instance("streaming_runtime", streaming_runtime)
         return RuntimeComposition(container=container, runtime_manager=runtime_manager)
