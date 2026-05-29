@@ -1,7 +1,17 @@
 {% extends "dashboard/base.html" %}
-{% block title %}Validation Detail - Research Dashboard{% endblock %}
+{% block title %}{{ t.pages.validation }} - {{ t.app.title }}{% endblock %}
 {% block content %}
 <section class="page-head"><div><p class="eyebrow">Validation detail</p><h1>{{ validation.strategy_name }}</h1></div></section>
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.charts.validation }}</h2></div>
+    <div class="chart" data-chart='{{ validation_analytics.history|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>Components</h2></div>
+    <div class="chart" data-chart='{{ validation_analytics.components|tojson }}'></div>
+  </article>
+</section>
 <article class="panel">
   <div class="detail-grid">
     <div><span>Dataset</span><strong>{{ validation.dataset_name }}</strong></div>

@@ -5,12 +5,16 @@ from __future__ import annotations
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.encoders import jsonable_encoder
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from loguru import logger
 
+from app.dashboard.analytics import DashboardAnalyticsService
+from app.dashboard.metrics import DashboardMetricsService
 from app.dashboard.service import DashboardService, load_dashboard_config
+from app.i18n import DEFAULT_LANGUAGE, get_translations
 
 
 SAFETY_NOTE = (
@@ -23,6 +27,9 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     """Create the local dashboard FastAPI application."""
     root = Path(project_root).resolve()
     service = DashboardService(root)
+    analytics = DashboardAnalyticsService(root, service.config.reports_dir)
+    metrics = DashboardMetricsService(root)
+    translations = get_translations(DEFAULT_LANGUAGE)
     templates = Jinja2Templates(directory=str(root / "app" / "templates"))
     app = FastAPI(
         title="Pocket Option Research Dashboard",
@@ -36,17 +43,25 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     def context(request: Request, **values: object) -> dict[str, object]:
         return {
             "request": request,
-            "safety_note": SAFETY_NOTE,
+            "safety_note": translations["app"]["safety"],
+            "t": translations,
+            "language": DEFAULT_LANGUAGE,
             "config": service.config,
             **values,
         }
 
     @app.get("/", response_class=HTMLResponse)
     def overview(request: Request) -> HTMLResponse:
+        workbench = metrics.workbench()
         return templates.TemplateResponse(
             request,
             "dashboard/overview.html",
-            context(request, page="overview", overview=service.overview()),
+            context(
+                request,
+                page="overview",
+                overview=workbench["overview"],
+                workbench=workbench,
+            ),
         )
 
     @app.get("/strategies", response_class=HTMLResponse)
@@ -62,7 +77,12 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
         return templates.TemplateResponse(
             request,
             "dashboard/datasets.html",
-            context(request, page="datasets", datasets=service.dataset_summaries()),
+            context(
+                request,
+                page="datasets",
+                datasets=service.dataset_summaries(),
+                dataset_analytics=analytics.dataset_analytics(),
+            ),
         )
 
     @app.get("/datasets/{dataset_id}", response_class=HTMLResponse)
@@ -76,7 +96,12 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
         return templates.TemplateResponse(
             request,
             "dashboard/dataset_detail.html",
-            context(request, page="datasets", dataset=dataset),
+            context(
+                request,
+                page="datasets",
+                dataset=dataset,
+                dataset_analytics=analytics.dataset_analytics(),
+            ),
         )
 
     @app.get("/validation", response_class=HTMLResponse)
@@ -84,7 +109,12 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
         return templates.TemplateResponse(
             request,
             "dashboard/validation.html",
-            context(request, page="validation", validations=service.validation_summaries()),
+            context(
+                request,
+                page="validation",
+                validations=service.validation_summaries(),
+                validation_analytics=analytics.validation_analytics(),
+            ),
         )
 
     @app.get("/validation/{report_id}", response_class=HTMLResponse)
@@ -98,7 +128,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
         return templates.TemplateResponse(
             request,
             "dashboard/validation_detail.html",
-            context(request, page="validation", validation=validation_item),
+            context(
+                request,
+                page="validation",
+                validation=validation_item,
+                validation_analytics=analytics.validation_analytics(),
+            ),
+        )
+
+    @app.get("/signals", response_class=HTMLResponse)
+    def signals(request: Request) -> HTMLResponse:
+        return templates.TemplateResponse(
+            request,
+            "dashboard/signals.html",
+            context(request, page="signals", signal_analytics=analytics.signal_analytics()),
         )
 
     @app.get("/reports", response_class=HTMLResponse)
@@ -117,8 +160,34 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
         return templates.TemplateResponse(
             request,
             "dashboard/report_detail.html",
-            context(request, page="reports", report=report),
+            context(
+                request,
+                page="reports",
+                report=report,
+                visualization=analytics.report_visualization(report.json_data),
+            ),
         )
+
+    @app.get("/api/dashboard")
+    def api_dashboard() -> dict[str, object]:
+        return jsonable_encoder(metrics.workbench())
+
+    @app.get("/api/metrics")
+    def api_metrics() -> dict[str, object]:
+        workbench = metrics.workbench()
+        return {"health": workbench["health"], "metrics": workbench["metrics"]}
+
+    @app.get("/api/validation")
+    def api_validation() -> dict[str, object]:
+        return analytics.validation_analytics()
+
+    @app.get("/api/datasets")
+    def api_datasets() -> dict[str, object]:
+        return analytics.dataset_analytics()
+
+    @app.get("/api/signals")
+    def api_signals() -> dict[str, object]:
+        return analytics.signal_analytics()
 
     @app.get("/actions", response_class=HTMLResponse)
     def actions(request: Request) -> HTMLResponse:
@@ -160,6 +229,7 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             "local_only": True,
             "actions_enabled": config.allow_actions,
             "reports": len(service.report_loader.list_reports()),
+            "language": DEFAULT_LANGUAGE,
         }
 
     @app.get("/favicon.ico")

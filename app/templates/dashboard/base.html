@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ language }}" dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Research Dashboard{% endblock %}</title>
+    <title>{% block title %}{{ t.app.title }}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', path='dashboard/dashboard.css') }}">
     <script defer src="{{ url_for('static', path='dashboard/dashboard.js') }}"></script>
   </head>
@@ -12,17 +12,18 @@
       <div class="brand">
         <span class="brand-mark"></span>
         <div>
-          <strong>Research System</strong>
-          <small>Local dashboard</small>
+          <strong>{{ t.app.title }}</strong>
+          <small>{{ t.app.subtitle }}</small>
         </div>
       </div>
       <nav class="nav">
-        <a class="{{ 'active' if page == 'overview' else '' }}" href="/">Overview</a>
-        <a class="{{ 'active' if page == 'strategies' else '' }}" href="/strategies">Strategies</a>
-        <a class="{{ 'active' if page == 'datasets' else '' }}" href="/datasets">Datasets</a>
-        <a class="{{ 'active' if page == 'validation' else '' }}" href="/validation">Validation</a>
-        <a class="{{ 'active' if page == 'reports' else '' }}" href="/reports">Reports</a>
-        <a class="{{ 'active' if page == 'actions' else '' }}" href="/actions">Run Center</a>
+        <a class="{{ 'active' if page == 'overview' else '' }}" href="/">{{ t.nav.overview }}</a>
+        <a class="{{ 'active' if page == 'strategies' else '' }}" href="/strategies">{{ t.nav.strategies }}</a>
+        <a class="{{ 'active' if page == 'datasets' else '' }}" href="/datasets">{{ t.nav.datasets }}</a>
+        <a class="{{ 'active' if page == 'validation' else '' }}" href="/validation">{{ t.nav.validation }}</a>
+        <a class="{{ 'active' if page == 'signals' else '' }}" href="/signals">{{ t.nav.signals }}</a>
+        <a class="{{ 'active' if page == 'reports' else '' }}" href="/reports">{{ t.nav.reports }}</a>
+        <a class="{{ 'active' if page == 'actions' else '' }}" href="/actions">{{ t.nav.actions }}</a>
       </nav>
       <div class="local-pill">127.0.0.1:{{ config.port }}</div>
     </aside>

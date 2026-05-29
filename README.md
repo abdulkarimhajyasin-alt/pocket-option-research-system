@@ -369,6 +369,7 @@ python scripts/check_data_layer.py
 ## Local Research Dashboard
 
 Phase 16 adds a local FastAPI dashboard for browsing research state from a browser.
+Phase 17 upgrades it into an Arabic-first research visualization and analytics workbench.
 It is local-only and does not execute live trades, connect to real-money accounts, or automate
 broker actions.
 
@@ -387,6 +388,7 @@ http://localhost:8000
 Run non-blocking dashboard diagnostics:
 
 ```bash
+python scripts/check_visualization_layer.py
 python scripts/check_dashboard.py
 python scripts/run_dashboard.py --check
 ```
@@ -397,11 +399,23 @@ Dashboard pages:
 - Strategies
 - Datasets
 - Validation
+- Signals
 - Reports
 - Run Center
 
 The Run Center executes only fixed allowlisted research scripts. It does not accept arbitrary
 shell input.
+
+Phase 17 visualization features:
+
+- Arabic-first RTL dashboard shell with translation dictionaries under `app/i18n/`
+- executive research health cards and workflow state tracking
+- equity, balance, cumulative performance, and drawdown charts from analytics reports
+- signal analytics at `/signals`
+- validation and dataset charts on their explorer pages
+- recent activity timeline and deterministic research insights
+- local-only dashboard APIs at `/api/dashboard`, `/api/metrics`, `/api/validation`,
+  `/api/datasets`, and `/api/signals`
 
 ## Validation
 
@@ -409,6 +423,7 @@ shell input.
 python -m compileall app
 pytest
 flake8 app
+python scripts/check_visualization_layer.py
 python scripts/check_dashboard.py
 python scripts/run_dashboard.py --check
 python scripts/check_dataset_quality.py

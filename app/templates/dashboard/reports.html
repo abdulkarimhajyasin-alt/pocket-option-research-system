@@ -1,11 +1,11 @@
 {% extends "dashboard/base.html" %}
-{% block title %}Reports - Research Dashboard{% endblock %}
+{% block title %}{{ t.pages.reports }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Local artifacts</p><h1>Reports Viewer</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">Local artifacts</p><h1>{{ t.pages.reports }}</h1></div></section>
 {% if reports %}
   <section class="table-wrap">
     <table>
-      <thead><tr><th>Report</th><th>Type</th><th>Size</th><th>Modified</th></tr></thead>
+      <thead><tr><th>التقرير</th><th>النوع</th><th>الحجم</th><th>آخر تعديل</th></tr></thead>
       <tbody>
         {% for report in reports %}
           <tr>
@@ -19,6 +19,6 @@
     </table>
   </section>
 {% else %}
-  <p class="empty">No JSON, TXT, or CSV reports found under reports/.</p>
+  <p class="empty">{{ t.labels.no_data }}</p>
 {% endif %}
 {% endblock %}

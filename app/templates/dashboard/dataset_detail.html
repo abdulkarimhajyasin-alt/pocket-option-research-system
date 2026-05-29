@@ -1,7 +1,17 @@
 {% extends "dashboard/base.html" %}
-{% block title %}Dataset Detail - Research Dashboard{% endblock %}
+{% block title %}{{ t.pages.datasets }} - {{ t.app.title }}{% endblock %}
 {% block content %}
 <section class="page-head"><div><p class="eyebrow">Dataset detail</p><h1>{{ dataset.name }}</h1></div></section>
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.charts.quality }}</h2></div>
+    <div class="chart" data-chart='{{ dataset_analytics.quality|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>Gaps</h2></div>
+    <div class="chart" data-chart='{{ dataset_analytics.gaps|tojson }}'></div>
+  </article>
+</section>
 <article class="panel">
   <div class="detail-grid">
     <div><span>ID</span><strong>{{ dataset.dataset_id }}</strong></div>

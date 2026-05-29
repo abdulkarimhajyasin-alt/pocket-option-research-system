@@ -1,80 +1,84 @@
 {% extends "dashboard/base.html" %}
-{% block title %}Overview - Research Dashboard{% endblock %}
+{% block title %}{{ t.pages.overview }} - {{ t.app.title }}{% endblock %}
 {% block content %}
 <section class="page-head">
   <div>
-    <p class="eyebrow">Phase 16 MVP</p>
-    <h1>Research Overview</h1>
+    <p class="eyebrow">Phase 17</p>
+    <h1>{{ t.pages.overview }}</h1>
   </div>
+  <div class="health-pill {{ workbench.health.status }}">{{ t.labels.health }}: {{ workbench.health.label }}</div>
 </section>
 
-<section class="metric-grid">
-  <article class="metric-card">
-    <span>Strategies</span>
-    <strong>{{ overview.strategies|length }}</strong>
+<section class="metric-grid executive-grid">
+  {% for metric in workbench.metrics %}
+    <article class="metric-card status-{{ metric.status }}">
+      <span>{{ metric.label }}</span>
+      <strong>{{ metric.value }}</strong>
+    </article>
+  {% endfor %}
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.charts.equity }}</h2><span>Equity</span></div>
+    <div class="chart" data-chart='{{ workbench.equity.equity|tojson }}'></div>
   </article>
-  <article class="metric-card">
-    <span>Datasets</span>
-    <strong>{{ overview.datasets|length }}</strong>
-  </article>
-  <article class="metric-card">
-    <span>Validation Runs</span>
-    <strong>{{ overview.validations|length }}</strong>
-  </article>
-  <article class="metric-card">
-    <span>Reports</span>
-    <strong>{{ overview.reports|length }}</strong>
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.charts.drawdown }}</h2><span>{{ workbench.equity.summary.max_drawdown }}</span></div>
+    <div class="chart" data-chart='{{ workbench.equity.drawdown|tojson }}'></div>
+    <div class="detail-grid compact">
+      <div><span>Maximum</span><strong>{{ workbench.equity.summary.max_drawdown }}</strong></div>
+      <div><span>Current</span><strong>{{ workbench.equity.summary.current_drawdown }}</strong></div>
+      <div><span>Worst</span><strong>{{ workbench.equity.summary.worst_period or "n/a" }}</strong></div>
+      <div><span>Recoveries</span><strong>{{ workbench.equity.summary.recovery_periods }}</strong></div>
+    </div>
   </article>
 </section>
 
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title">
-      <h2>Robustness</h2>
-      <span>{{ overview.latest_robustness_score if overview.latest_robustness_score is not none else "No score" }}</span>
-    </div>
-    {% set robust = overview.latest_robustness_score or 0 %}
-    <div class="score-bar"><span style="width: {{ robust }}%"></span></div>
-    {% if overview.validations %}
-      <p class="muted">{{ overview.validations[0].robustness_category }} on {{ overview.validations[0].dataset_name }}</p>
-    {% else %}
-      <p class="empty">No validation report found.</p>
-    {% endif %}
-  </article>
-  <article class="panel">
-    <div class="panel-title">
-      <h2>Dataset Quality</h2>
-      <span>{{ overview.latest_dataset_quality_score if overview.latest_dataset_quality_score is not none else "No score" }}</span>
-    </div>
-    {% set quality = overview.latest_dataset_quality_score or 0 %}
-    <div class="score-bar quality"><span style="width: {{ quality }}%"></span></div>
-    {% if overview.datasets %}
-      <p class="muted">{{ overview.datasets[0].name }} integrity: {{ overview.datasets[0].integrity_status }}</p>
-    {% else %}
-      <p class="empty">No dataset quality report found.</p>
-    {% endif %}
-  </article>
-</section>
-
-<section class="two-col">
-  <article class="panel">
-    <h2>Warning Counts</h2>
-    <div class="severity-list">
-      {% for label, count in overview.warning_counts.items() %}
-        <div><span>{{ label }}</span><strong>{{ count }}</strong></div>
+    <div class="panel-title"><h2>{{ t.labels.workflow }}</h2><span>Research Pipeline</span></div>
+    <div class="workflow">
+      {% for step in workbench.workflow %}
+        <div class="workflow-step {{ step.status }}">
+          <span>{{ step.symbol }}</span>
+          <strong>{{ step.label }}</strong>
+        </div>
       {% endfor %}
     </div>
   </article>
   <article class="panel">
-    <h2>Latest Reports</h2>
-    {% if overview.reports %}
-      <ul class="file-list">
-        {% for report in overview.reports %}
-          <li><a href="/reports/{{ report.report_id }}">{{ report.relative_path }}</a><small>{{ report.report_type }}</small></li>
+    <div class="panel-title"><h2>{{ t.labels.insights }}</h2><span>{{ workbench.insights|length }}</span></div>
+    <div class="insight-list">
+      {% for insight in workbench.insights %}
+        <div class="insight {{ insight.severity }}">
+          <strong>{{ insight.title }}</strong>
+          <span>{{ insight.detail }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.charts.performance }}</h2><span>PnL</span></div>
+    <div class="chart" data-chart='{{ workbench.equity.performance|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.labels.activity }}</h2><span>{{ overview.reports|length }}</span></div>
+    {% if workbench.activity %}
+      <ol class="timeline">
+        {% for item in workbench.activity %}
+          <li>
+            <a href="/reports/{{ item.report_id }}">{{ item.label }}</a>
+            <span>{{ item.path }}</span>
+            <small>{{ item.time }}</small>
+          </li>
         {% endfor %}
-      </ul>
+      </ol>
     {% else %}
-      <p class="empty">No local reports discovered.</p>
+      <p class="empty">{{ t.labels.no_data }}</p>
     {% endif %}
   </article>
 </section>

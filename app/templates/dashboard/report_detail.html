@@ -1,5 +1,5 @@
 {% extends "dashboard/base.html" %}
-{% block title %}Report - Research Dashboard{% endblock %}
+{% block title %}{{ t.pages.reports }} - {{ t.app.title }}{% endblock %}
 {% block content %}
 <section class="page-head"><div><p class="eyebrow">{{ report.file.report_type }}</p><h1>{{ report.title }}</h1></div></section>
 {% if report.error %}
@@ -17,8 +17,28 @@
     </table>
   </section>
 {% elif report.file.report_type == "json" and report.json_data %}
+  {% if visualization.cards %}
+    <section class="metric-grid">
+      {% for card in visualization.cards %}
+        <article class="metric-card">
+          <span>{{ card.label }}</span>
+          <strong>{{ card.value }}</strong>
+        </article>
+      {% endfor %}
+    </section>
+  {% endif %}
+  {% if visualization.charts %}
+    <section class="two-col">
+      {% for chart in visualization.charts %}
+        <article class="panel">
+          <div class="panel-title"><h2>{{ chart.title }}</h2><span>{{ chart.chart_type }}</span></div>
+          <div class="chart small-chart" data-chart='{{ chart|tojson }}'></div>
+        </article>
+      {% endfor %}
+    </section>
+  {% endif %}
   <article class="panel">
-    <h2>Structured JSON</h2>
+    <h2>{{ t.labels.structured_report }}</h2>
     {% for key, value in report.json_data.items() %}
       <details {% if loop.index <= 4 %}open{% endif %}>
         <summary>{{ key }}</summary>
@@ -26,7 +46,7 @@
       </details>
     {% endfor %}
   </article>
-  <article class="panel"><h2>Raw JSON</h2><pre>{{ report.raw_text }}</pre></article>
+  <article class="panel"><h2>{{ t.labels.raw_json }}</h2><pre>{{ report.raw_text }}</pre></article>
 {% else %}
   <article class="panel"><pre>{{ report.raw_text }}</pre></article>
 {% endif %}

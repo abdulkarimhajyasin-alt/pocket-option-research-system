@@ -1,0 +1,85 @@
+"""Arabic dashboard translations.
+
+Python APIs stay English; this module owns UI copy only.
+"""
+
+from __future__ import annotations
+
+
+AR_TRANSLATIONS = {
+    "app": {
+        "title": "منصة البحث الكمي",
+        "subtitle": "لوحة محلية",
+        "safety": (
+            "هذه لوحة بحث محلية فقط. لا تنفذ صفقات حية، ولا تتصل بحسابات أموال "
+            "حقيقية، ولا تؤتمت إجراءات الوسيط."
+        ),
+    },
+    "nav": {
+        "overview": "نظرة عامة",
+        "strategies": "الاستراتيجيات",
+        "datasets": "البيانات",
+        "validation": "التحقق",
+        "signals": "الإشارات",
+        "reports": "التقارير",
+        "actions": "مركز التشغيل",
+    },
+    "status": {
+        "healthy": "سليم",
+        "warning": "تحذير",
+        "critical": "حرج",
+        "unknown": "غير معروف",
+        "passed": "ناجح",
+        "needs_review": "يحتاج مراجعة",
+    },
+    "pages": {
+        "overview": "محطة البحث",
+        "strategies": "مستكشف الاستراتيجيات",
+        "datasets": "تحليلات البيانات",
+        "validation": "تحليلات التحقق",
+        "signals": "تحليلات الإشارات",
+        "reports": "عارض التقارير",
+        "actions": "مركز التشغيل",
+    },
+    "metrics": {
+        "strategies": "عدد الاستراتيجيات",
+        "datasets": "عدد البيانات",
+        "validations": "تشغيلات التحقق",
+        "reports": "عدد التقارير",
+        "robustness": "آخر درجة متانة",
+        "dataset_quality": "جودة البيانات",
+        "warnings": "التحذيرات",
+        "last_run": "آخر تشغيل بحثي",
+        "total_signals": "إجمالي الإشارات",
+        "long_signals": "إشارات صاعدة",
+        "short_signals": "إشارات هابطة",
+    },
+    "charts": {
+        "equity": "منحنى رأس المال",
+        "balance": "منحنى الرصيد",
+        "performance": "الأداء التراكمي",
+        "drawdown": "منحنى التراجع",
+        "signals": "توزيع الإشارات",
+        "confidence": "توزيع الثقة",
+        "sessions": "توزيع الجلسات",
+        "quality": "مكونات الجودة",
+        "validation": "اتجاه التحقق",
+    },
+    "workflow": {
+        "dataset": "تحميل البيانات",
+        "quality": "فحص الجودة",
+        "strategy": "تشغيل الاستراتيجية",
+        "validation": "اكتمال التحقق",
+        "report": "توليد التقرير",
+    },
+    "labels": {
+        "health": "صحة البحث",
+        "workflow": "مسار البحث",
+        "activity": "النشاط الأخير",
+        "insights": "رؤى بحثية",
+        "raw_json": "JSON الخام",
+        "structured_report": "عرض منظم",
+        "open_report": "فتح التقرير",
+        "no_data": "لا توجد بيانات متاحة بعد.",
+    },
+}

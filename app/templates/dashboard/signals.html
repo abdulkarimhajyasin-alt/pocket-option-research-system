@@ -1,0 +1,28 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.signals }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head"><div><p class="eyebrow">Signals</p><h1>{{ t.pages.signals }}</h1></div></section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>{{ t.metrics.total_signals }}</span><strong>{{ signal_analytics.total_signals }}</strong></article>
+  <article class="metric-card"><span>{{ t.metrics.long_signals }}</span><strong>{{ signal_analytics.long_signals }}</strong></article>
+  <article class="metric-card"><span>{{ t.metrics.short_signals }}</span><strong>{{ signal_analytics.short_signals }}</strong></article>
+  <article class="metric-card status-warning"><span>قرارات مرفوضة</span><strong>{{ signal_analytics.rejected_decisions }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.charts.signals }}</h2><span>Distribution</span></div>
+    <div class="chart" data-chart='{{ signal_analytics.distribution|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>{{ t.charts.confidence }}</h2><span>Evidence</span></div>
+    <div class="chart" data-chart='{{ signal_analytics.confidence|tojson }}'></div>
+  </article>
+</section>
+
+<section class="panel">
+  <div class="panel-title"><h2>{{ t.charts.sessions }}</h2><span>Sessions</span></div>
+  <div class="chart" data-chart='{{ signal_analytics.sessions|tojson }}'></div>
+</section>
+{% endblock %}

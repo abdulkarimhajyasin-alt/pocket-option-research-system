@@ -1,9 +1,9 @@
 {% extends "dashboard/base.html" %}
-{% block title %}Run Center - Research Dashboard{% endblock %}
+{% block title %}{{ t.pages.actions }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Allowlisted workflows</p><h1>Run Center</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">Allowlisted workflows</p><h1>{{ t.pages.actions }}</h1></div></section>
 {% if not config.allow_actions %}
-  <p class="empty">Dashboard actions are disabled by configuration.</p>
+  <p class="empty">إجراءات اللوحة معطلة من الإعدادات.</p>
 {% endif %}
 <section class="action-grid">
   {% for action in actions %}
@@ -11,7 +11,7 @@
       <h2>{{ action.label }}</h2>
       <p>{{ action.description }}</p>
       <code>python {{ action.command|join(" ") }}</code>
-      <button type="submit" {% if not config.allow_actions %}disabled{% endif %}>Run</button>
+      <button type="submit" {% if not config.allow_actions %}disabled{% endif %}>تشغيل</button>
     </form>
   {% endfor %}
 </section>
@@ -24,9 +24,9 @@
     <p><code>{{ result.command_display }}</code></p>
     {% if result.error %}<p class="error">{{ result.error }}</p>{% endif %}
     <h3>stdout</h3>
-    <pre>{{ result.stdout or "No stdout" }}</pre>
+    <pre>{{ result.stdout or "لا يوجد stdout" }}</pre>
     <h3>stderr</h3>
-    <pre>{{ result.stderr or "No stderr" }}</pre>
+    <pre>{{ result.stderr or "لا يوجد stderr" }}</pre>
   </article>
 {% endif %}
 {% endblock %}

@@ -19,7 +19,15 @@ def main() -> None:
     service = DashboardService(PROJECT_ROOT)
     app = create_dashboard_app(PROJECT_ROOT)
     route_paths = {route.path for route in app.routes}
-    required_routes = {"/", "/strategies", "/datasets", "/validation", "/reports", "/actions"}
+    required_routes = {
+        "/",
+        "/strategies",
+        "/datasets",
+        "/validation",
+        "/signals",
+        "/reports",
+        "/actions",
+    }
     missing_routes = sorted(required_routes - route_paths)
     templates = [
         PROJECT_ROOT / "app/templates/dashboard/base.html",
