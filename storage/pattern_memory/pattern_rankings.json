@@ -1,0 +1,155 @@
+[
+  {
+    "category": "أفضل الجلسات",
+    "name": "الجلسة الآسيوية",
+    "rank": 1,
+    "score": 35.67,
+    "occurrences": 194,
+    "success_ratio": 1.03,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل الأصول",
+    "name": "EURUSD",
+    "rank": 1,
+    "score": 35.67,
+    "occurrences": 194,
+    "success_ratio": 1.03,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل الهياكل",
+    "name": "هيكل هابط",
+    "rank": 1,
+    "score": 36.81,
+    "occurrences": 72,
+    "success_ratio": 2.78,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل الهياكل",
+    "name": "هيكل انتقالي",
+    "rank": 2,
+    "score": 35.0,
+    "occurrences": 12,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل الهياكل",
+    "name": "هيكل عرضي",
+    "rank": 3,
+    "score": 35.0,
+    "occurrences": 16,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل الهياكل",
+    "name": "هيكل صاعد",
+    "rank": 4,
+    "score": 35.0,
+    "occurrences": 94,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل أنواع FVG",
+    "name": "FVG غير موجود",
+    "rank": 1,
+    "score": 35.67,
+    "occurrences": 194,
+    "success_ratio": 1.03,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل أنواع CISD",
+    "name": "CISD هابط مؤكد",
+    "rank": 1,
+    "score": 36.97,
+    "occurrences": 33,
+    "success_ratio": 3.03,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل أنواع CISD",
+    "name": "CISD صاعد مؤكد",
+    "rank": 2,
+    "score": 36.91,
+    "occurrences": 34,
+    "success_ratio": 2.94,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل أنواع CISD",
+    "name": "CISD محايد غير مؤكد",
+    "rank": 3,
+    "score": 35.0,
+    "occurrences": 119,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل أنواع CISD",
+    "name": "CISD صاعد غير مؤكد",
+    "rank": 4,
+    "score": 17.5,
+    "occurrences": 5,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل أنواع CISD",
+    "name": "CISD هابط غير مؤكد",
+    "rank": 5,
+    "score": 10.5,
+    "occurrences": 3,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل حالات السيولة",
+    "name": "سحب سيولة سفلية",
+    "rank": 1,
+    "score": 39.06,
+    "occurrences": 32,
+    "success_ratio": 6.25,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل حالات السيولة",
+    "name": "سحب سيولة علوية",
+    "rank": 2,
+    "score": 35.0,
+    "occurrences": 47,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل حالات السيولة",
+    "name": "لا يوجد سحب",
+    "rank": 3,
+    "score": 35.0,
+    "occurrences": 115,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل ملفات التوافق",
+    "name": "توافق متوسط",
+    "rank": 1,
+    "score": 46.5,
+    "occurrences": 4,
+    "success_ratio": 50.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  },
+  {
+    "category": "أفضل ملفات التوافق",
+    "name": "توافق ضعيف",
+    "rank": 2,
+    "score": 35.0,
+    "occurrences": 190,
+    "success_ratio": 0.0,
+    "reason": "ترتيب بحثي مبني على التكرار ونسبة النجاح التاريخية."
+  }
+]

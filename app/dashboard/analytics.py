@@ -1455,6 +1455,110 @@ class DashboardAnalyticsService:
             "recommendations": recommendations,
         }
 
+    def pattern_memory_analytics(self) -> dict[str, Any]:
+        """Return latest adaptive pattern memory analytics."""
+        summary_payload = self._latest_json_dict("pattern_memory", "summary")
+        summary = summary_payload.get("summary", {}) if summary_payload else {}
+        best = summary_payload.get("best_pattern", {}) if summary_payload else {}
+        pattern_rankings = (
+            summary_payload.get("pattern_rankings", {}) if summary_payload else {}
+        )
+        session_rankings = (
+            summary_payload.get("session_rankings", {}) if summary_payload else {}
+        )
+        asset_rankings = (
+            summary_payload.get("asset_rankings", {}) if summary_payload else {}
+        )
+        structure_rankings = (
+            summary_payload.get("structure_rankings", {}) if summary_payload else {}
+        )
+        fvg_rankings = summary_payload.get("fvg_rankings", {}) if summary_payload else {}
+        cisd_rankings = (
+            summary_payload.get("cisd_rankings", {}) if summary_payload else {}
+        )
+        reliability_timeline = (
+            summary_payload.get("reliability_timeline", {}) if summary_payload else {}
+        )
+        similarity = self._latest_json_dict("pattern_memory", "similarity")
+        learning = self._latest_json_dict("pattern_memory", "learning")
+        quality = self._latest_json_dict("pattern_memory", "quality")
+        reliability = self._latest_json_dict("pattern_memory", "reliability")
+        if not summary:
+            summary = {
+                "pattern_count": 0,
+                "successful_patterns": 0,
+                "failed_patterns": 0,
+                "reliability_score": 0.0,
+                "stability_score": 0.0,
+                "learning_score": 0.0,
+                "adaptation_score": 0.0,
+                "best_pattern": "غير متاح",
+            }
+        return {
+            "summary": summary,
+            "best": best,
+            "pattern_rankings": bar_chart(
+                "ترتيب الأنماط",
+                *self._dict_chart_values(pattern_rankings),
+                label="الدرجة",
+                color="green",
+            ).to_dict(),
+            "session_rankings": bar_chart(
+                "ترتيب الجلسات",
+                *self._dict_chart_values(session_rankings),
+                label="الجودة",
+                color="blue",
+            ).to_dict(),
+            "asset_rankings": bar_chart(
+                "ترتيب الأصول",
+                *self._dict_chart_values(asset_rankings),
+                label="الجودة",
+                color="accent",
+            ).to_dict(),
+            "structure_rankings": bar_chart(
+                "ترتيب الهياكل",
+                *self._dict_chart_values(structure_rankings),
+                label="الجودة",
+                color="warning",
+            ).to_dict(),
+            "fvg_rankings": bar_chart(
+                "ترتيب FVG",
+                *self._dict_chart_values(fvg_rankings),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "cisd_rankings": bar_chart(
+                "ترتيب CISD",
+                *self._dict_chart_values(cisd_rankings),
+                label="الجودة",
+                color="blue",
+            ).to_dict(),
+            "similarity": bar_chart(
+                "توزيع التشابه",
+                *self._dict_chart_values(similarity),
+                label="التشابه",
+                color="accent",
+            ).to_dict(),
+            "learning": bar_chart(
+                "تقدم التعلم",
+                *self._dict_chart_values(learning),
+                label="التعلم",
+                color="green",
+            ).to_dict(),
+            "quality": bar_chart(
+                "جودة الأنماط",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="warning",
+            ).to_dict(),
+            "reliability": line_chart(
+                "خط موثوقية الأنماط",
+                *self._dict_chart_values(reliability or reliability_timeline),
+                label="الموثوقية",
+                color="blue",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

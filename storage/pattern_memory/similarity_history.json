@@ -1,0 +1,1554 @@
+[
+  {
+    "record_id": "pattern-memory-0001",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل هابط | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 100.0,
+    "confidence_adjustment": 50.0
+  },
+  {
+    "record_id": "pattern-memory-0002",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 100.0,
+    "confidence_adjustment": 50.0
+  },
+  {
+    "record_id": "pattern-memory-0003",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل انتقالي | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0004",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل عرضي | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0005",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0006",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0007",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0008",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0009",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0010",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0011",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0012",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0013",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0014",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0015",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0016",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0017",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0018",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0019",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0020",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0021",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0022",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0023",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0024",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0025",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0026",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0027",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0028",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0029",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0030",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0031",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0032",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0033",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0034",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0035",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0036",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0037",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0038",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0039",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0040",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0041",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0042",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0043",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0044",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0045",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0046",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0047",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0048",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0049",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0050",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0051",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0052",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0053",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0054",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0055",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0056",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0057",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0058",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0059",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0060",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0061",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0062",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0063",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0064",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0065",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0066",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0067",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0068",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0069",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0070",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0071",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0072",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0073",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0074",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0075",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0076",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة سفلية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0077",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0078",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0079",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | سحب سيولة علوية",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0080",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0081",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0082",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0083",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0084",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0085",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0086",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0087",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0088",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0089",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0090",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0091",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0092",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0093",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0094",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0095",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0096",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0097",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0098",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0099",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0100",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0101",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0102",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0103",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0104",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0105",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0106",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0107",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0108",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0109",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0110",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0111",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0112",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0113",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0114",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0115",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0116",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0117",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0118",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0119",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0120",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0121",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0122",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0123",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0124",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0125",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0126",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0127",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0128",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0129",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0130",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0131",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0132",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0133",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0134",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0135",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0136",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0137",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0138",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0139",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل انتقالي | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0140",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل انتقالي | CISD صاعد مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0141",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل انتقالي | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0142",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل عرضي | CISD هابط مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0143",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0144",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0145",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0146",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0147",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0148",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0149",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | صاعد | هيكل صاعد | CISD صاعد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0150",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | هابط | هيكل هابط | CISD هابط غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0151",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0152",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0153",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0154",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0155",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0156",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0157",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0158",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0159",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0160",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0161",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0162",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0163",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0164",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0165",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0166",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0167",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0168",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0169",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0170",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0171",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0172",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0173",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0174",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0175",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0176",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0177",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل هابط | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0178",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل صاعد | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0179",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0180",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0181",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0182",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل انتقالي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0183",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0184",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0185",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0186",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0187",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0188",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0189",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0190",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0191",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0192",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0193",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  },
+  {
+    "record_id": "pattern-memory-0194",
+    "similarity_score": 100.0,
+    "category": "متشابه جدا",
+    "nearest_pattern": "EURUSD | الجلسة الآسيوية | محايد | هيكل عرضي | CISD محايد غير مؤكد | FVG غير موجود | IFVG غير موجود | لا يوجد سحب",
+    "historical_success_ratio": 0.0,
+    "confidence_adjustment": -50.0
+  }
+]

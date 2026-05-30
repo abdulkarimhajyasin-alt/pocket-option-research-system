@@ -140,6 +140,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل مقارنة الملفات البحثية دون تنفيذ أو توصيات تداول.",
         command=("scripts/run_strategy_benchmark.py",),
     ),
+    "pattern_memory": ActionDefinition(
+        name="pattern_memory",
+        label="تحديث ذاكرة الأنماط",
+        description="تشغيل محرك التعلم والأنماط للبحث فقط دون تنفيذ أو أتمتة.",
+        command=("scripts/run_pattern_memory.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

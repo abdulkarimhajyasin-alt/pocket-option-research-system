@@ -1,0 +1,52 @@
+[
+  {
+    "pattern_id": "pattern-memory-0001",
+    "asset": "EURUSD",
+    "session": "الجلسة الآسيوية",
+    "direction": "صاعد",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "CISD صاعد مؤكد",
+    "fvg_state": "FVG غير موجود",
+    "ifvg_state": "IFVG غير موجود",
+    "liquidity_state": "سحب سيولة سفلية",
+    "confluence_score": 69.08,
+    "timeframe_alignment": 82.87,
+    "opportunity_score": 76.56,
+    "confidence_score": 64.3,
+    "lifecycle_result": "WIN",
+    "performance_result": "اكتملت عوامل الجودة البحثية بدرجة مرتفعة",
+    "outcome_bucket": "successful",
+    "timestamp": "2026-01-01T03:36:00+00:00",
+    "metadata": {
+      "opportunity_id": "EURUSD:2026-01-01T03:36:00+00:00",
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "pattern_id": "pattern-memory-0002",
+    "asset": "EURUSD",
+    "session": "الجلسة الآسيوية",
+    "direction": "هابط",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "CISD هابط مؤكد",
+    "fvg_state": "FVG غير موجود",
+    "ifvg_state": "IFVG غير موجود",
+    "liquidity_state": "سحب سيولة سفلية",
+    "confluence_score": 69.08,
+    "timeframe_alignment": 82.87,
+    "opportunity_score": 76.56,
+    "confidence_score": 64.3,
+    "lifecycle_result": "WIN",
+    "performance_result": "اكتملت عوامل الجودة البحثية بدرجة مرتفعة",
+    "outcome_bucket": "successful",
+    "timestamp": "2026-01-01T02:08:00+00:00",
+    "metadata": {
+      "opportunity_id": "EURUSD:2026-01-01T02:08:00+00:00",
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  }
+]

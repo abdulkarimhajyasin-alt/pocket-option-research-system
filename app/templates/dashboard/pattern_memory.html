@@ -1,0 +1,60 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.pattern_memory }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.pattern_memory }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث ذاكرة الأنماط</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>أفضل نمط مكتشف</span>
+    <strong>{{ pattern_memory.summary.best_pattern|default('غير متاح') }}</strong>
+    <p>{{ pattern_memory.best.description|default('لا توجد ذاكرة أنماط محفوظة بعد.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>الموثوقية</span>
+    <strong>{{ pattern_memory.summary.reliability_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>التعلم</span>
+    <strong>{{ pattern_memory.summary.learning_score|default(0)|number_ar }}</strong>
+    <small>الاستقرار {{ pattern_memory.summary.stability_score|default(0)|number_ar }}</small>
+    <small>التكيف {{ pattern_memory.summary.adaptation_score|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>إجمالي الأنماط</span><strong>{{ pattern_memory.summary.pattern_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الأنماط الناجحة</span><strong>{{ pattern_memory.summary.successful_patterns|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الأنماط الفاشلة</span><strong>{{ pattern_memory.summary.failed_patterns|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الموثوقية</span><strong>{{ pattern_memory.summary.reliability_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الاستقرار</span><strong>{{ pattern_memory.summary.stability_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التعلم</span><strong>{{ pattern_memory.summary.learning_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التكيف</span><strong>{{ pattern_memory.summary.adaptation_score|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>ترتيب الأنماط</h2><span>الذاكرة</span></div><div class="chart" data-chart='{{ pattern_memory.pattern_rankings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ترتيب الجلسات</h2><span>السلوك</span></div><div class="chart" data-chart='{{ pattern_memory.session_rankings|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>ترتيب الأصول</h2><span>الأصول</span></div><div class="chart" data-chart='{{ pattern_memory.asset_rankings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ترتيب الهياكل</h2><span>السوق</span></div><div class="chart" data-chart='{{ pattern_memory.structure_rankings|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>ترتيب FVG</h2><span>الفجوات</span></div><div class="chart" data-chart='{{ pattern_memory.fvg_rankings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ترتيب CISD</h2><span>التحول</span></div><div class="chart" data-chart='{{ pattern_memory.cisd_rankings|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع التشابه</h2><span>الذاكرة</span></div><div class="chart" data-chart='{{ pattern_memory.similarity|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تقدم التعلم</h2><span>التكيف</span></div><div class="chart" data-chart='{{ pattern_memory.learning|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>جودة الأنماط</h2><span>التقييم</span></div><div class="chart" data-chart='{{ pattern_memory.quality|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>خط موثوقية الأنماط</h2><span>التاريخ</span></div><div class="chart" data-chart='{{ pattern_memory.reliability|tojson }}'></div></article>
+</section>
+{% endblock %}

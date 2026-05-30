@@ -404,6 +404,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/pattern-memory", response_class=HTMLResponse)
+    def pattern_memory(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/pattern_memory.html",
+            context(
+                request,
+                dashboard,
+                page="pattern_memory",
+                pattern_memory=dashboard.analytics.pattern_memory_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -488,6 +502,10 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/strategy-benchmark")
     def api_strategy_benchmark() -> dict[str, object]:
         return dashboard_context().analytics.strategy_benchmark_analytics()
+
+    @app.get("/api/pattern-memory")
+    def api_pattern_memory() -> dict[str, object]:
+        return dashboard_context().analytics.pattern_memory_analytics()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:
