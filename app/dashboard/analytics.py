@@ -1097,6 +1097,145 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def trade_lifecycle_analytics(self) -> dict[str, Any]:
+        """Return latest trade lifecycle research analytics."""
+        summary_payload = self._latest_json_dict("trade_lifecycle", "summary")
+        summary = summary_payload.get("summary", {}) if summary_payload else {}
+        states = summary_payload.get("state_distribution", {}) if summary_payload else {}
+        timeline = summary_payload.get("timeline", {}) if summary_payload else {}
+        best = summary_payload.get("best_lifecycle", {}) if summary_payload else {}
+        outcomes = self._latest_json_dict("trade_lifecycle", "outcome")
+        quality = self._latest_json_dict("trade_lifecycle", "quality")
+        success = self._latest_json_dict("trade_lifecycle", "success")
+        failure = self._latest_json_dict("trade_lifecycle", "failure")
+        assets = self._latest_json_dict("trade_lifecycle", "asset")
+        sessions = self._latest_json_dict("trade_lifecycle", "session")
+        confluence = self._latest_json_dict("trade_lifecycle", "confluence")
+        confidence = self._latest_json_dict("trade_lifecycle", "confidence")
+        if not confidence:
+            confidence = quality
+        if not summary:
+            summary = {
+                "total_lifecycles": 0,
+                "wins": 0,
+                "losses": 0,
+                "breakeven": 0,
+                "average_quality": 0.0,
+                "best_asset": "غير متاح",
+                "best_session": "غير متاح",
+            }
+        outcome_labels, outcome_values = self._dict_chart_values(outcomes)
+        state_labels, state_values = self._dict_chart_values(states)
+        entry = self._entry_quality(best)
+        expiry = self._expiry_quality(best)
+        entry_labels, entry_values = self._dict_chart_values(entry)
+        expiry_labels, expiry_values = self._dict_chart_values(expiry)
+        asset_labels, asset_values = self._dict_chart_values(assets)
+        session_labels, session_values = self._dict_chart_values(sessions)
+        confluence_labels, confluence_values = self._dict_chart_values(confluence)
+        confidence_labels, confidence_values = self._dict_chart_values(confidence)
+        failure_labels, failure_values = self._dict_chart_values(failure)
+        success_labels, success_values = self._dict_chart_values(success)
+        timeline_labels, timeline_values = self._dict_chart_values(timeline)
+        return {
+            "summary": summary,
+            "best": best,
+            "outcomes": bar_chart(
+                "توزيع النتائج",
+                outcome_labels,
+                outcome_values,
+                label="النتائج",
+                color="green",
+            ).to_dict(),
+            "states": bar_chart(
+                "توزيع الحالات",
+                state_labels,
+                state_values,
+                label="الحالات",
+                color="blue",
+            ).to_dict(),
+            "entry": bar_chart(
+                "جودة الدخول",
+                entry_labels,
+                entry_values,
+                label="الدخول",
+                color="accent",
+            ).to_dict(),
+            "expiry": bar_chart(
+                "جودة الانتهاء",
+                expiry_labels,
+                expiry_values,
+                label="الانتهاء",
+                color="warning",
+            ).to_dict(),
+            "assets": bar_chart(
+                "أداء الأصول",
+                asset_labels,
+                asset_values,
+                label="الأصول",
+                color="green",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "أداء الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="blue",
+            ).to_dict(),
+            "confluence": bar_chart(
+                "أداء التوافق",
+                confluence_labels,
+                confluence_values,
+                label="التوافق",
+                color="accent",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "أداء الثقة",
+                confidence_labels,
+                confidence_values,
+                label="الثقة",
+                color="green",
+            ).to_dict(),
+            "failure": bar_chart(
+                "أسباب الفشل",
+                failure_labels,
+                failure_values,
+                label="الفشل",
+                color="warning",
+            ).to_dict(),
+            "success": bar_chart(
+                "أسباب النجاح",
+                success_labels,
+                success_values,
+                label="النجاح",
+                color="blue",
+            ).to_dict(),
+            "timeline": line_chart(
+                "تطور الجودة بمرور الوقت",
+                timeline_labels,
+                timeline_values,
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+        }
+
+    def _entry_quality(self, row: dict[str, Any]) -> dict[str, float]:
+        entry = row.get("entry", {}) if isinstance(row, dict) else {}
+        return {
+            "توقيت الدخول": self._float(entry.get("timing_quality")),
+            "جودة التأكيد": self._float(entry.get("confirmation_quality")),
+            "توافق الدخول": self._float(entry.get("entry_alignment")),
+            "جاهزية الدخول": self._float(entry.get("readiness_score")),
+        }
+
+    def _expiry_quality(self, row: dict[str, Any]) -> dict[str, float]:
+        expiry = row.get("expiry", {}) if isinstance(row, dict) else {}
+        return {
+            "ملاءمة الانتهاء": self._float(expiry.get("suitability")),
+            "حساسية النتيجة": self._float(expiry.get("outcome_sensitivity")),
+            "جودة الانتهاء": self._float(expiry.get("expiry_quality")),
+        }
+
     def _best_confirmation(self, rows: list[dict[str, Any]]) -> dict[str, Any]:
         if not rows:
             return {}

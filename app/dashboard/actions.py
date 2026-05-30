@@ -122,6 +122,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل التوافق البحثي الموحد دون توصيات أو تنفيذ.",
         command=("scripts/run_confluence.py",),
     ),
+    "trade_lifecycle": ActionDefinition(
+        name="trade_lifecycle",
+        label="تحديث دورة حياة الفرص",
+        description="تشغيل محاكاة دورة الحياة بحثيا فقط دون تنفيذ أو أوامر.",
+        command=("scripts/run_trade_lifecycle.py",),
+    ),
 }
 
 

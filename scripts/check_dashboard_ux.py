@@ -35,6 +35,7 @@ def main() -> None:
         PROJECT_ROOT / "app/templates/dashboard/opportunities.html",
         PROJECT_ROOT / "app/templates/dashboard/multi_timeframe.html",
         PROJECT_ROOT / "app/templates/dashboard/confluence.html",
+        PROJECT_ROOT / "app/templates/dashboard/trade_lifecycle.html",
     ]
     css = (PROJECT_ROOT / "app/static/dashboard/dashboard.css").read_text(encoding="utf-8")
     overview_template = templates[0].read_text(encoding="utf-8")
@@ -73,6 +74,7 @@ def main() -> None:
             "/opportunities",
             "/multi-timeframe",
             "/confluence",
+            "/trade-lifecycle",
         }.issubset(route_paths),
         "overview_panel": "درجة الجاهزية البحثية" in overview_template,
         "no_overview_iso_literal": "T00:00:00" not in overview_template,

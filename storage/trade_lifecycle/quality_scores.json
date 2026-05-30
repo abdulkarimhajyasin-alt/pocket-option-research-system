@@ -1,0 +1,1360 @@
+[
+  {
+    "lifecycle_id": "lifecycle-0001",
+    "score": 73.72,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0002",
+    "score": 73.72,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0003",
+    "score": 70.18,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0004",
+    "score": 67.52,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0005",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0006",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0007",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0008",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0009",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0010",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0011",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0012",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0013",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0014",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0015",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0016",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0017",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0018",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0019",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0020",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0021",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0022",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0023",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0024",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0025",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0026",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0027",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0028",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0029",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0030",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0031",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0032",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0033",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0034",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0035",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0036",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0037",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0038",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0039",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0040",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0041",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0042",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0043",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0044",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0045",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0046",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0047",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0048",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0049",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0050",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0051",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0052",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0053",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0054",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0055",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0056",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0057",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0058",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0059",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0060",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0061",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0062",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0063",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0064",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0065",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0066",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0067",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0068",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0069",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0070",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0071",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0072",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0073",
+    "score": 64.73,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0074",
+    "score": 60.56,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0075",
+    "score": 60.56,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0076",
+    "score": 60.56,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0077",
+    "score": 60.56,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0078",
+    "score": 61.21,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0079",
+    "score": 61.21,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0080",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0081",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0082",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0083",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0084",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0085",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0086",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0087",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0088",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0089",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0090",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0091",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0092",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0093",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0094",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0095",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0096",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0097",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0098",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0099",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0100",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0101",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0102",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0103",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0104",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0105",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0106",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0107",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0108",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0109",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0110",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0111",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0112",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0113",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0114",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0115",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0116",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0117",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0118",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0119",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0120",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0121",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0122",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0123",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0124",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0125",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0126",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0127",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0128",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0129",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0130",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0131",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0132",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0133",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0134",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0135",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0136",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0137",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0138",
+    "score": 62.34,
+    "classification": "متوسطة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0139",
+    "score": 58.15,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0140",
+    "score": 58.15,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0141",
+    "score": 58.15,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0142",
+    "score": 57.64,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0143",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0144",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0145",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0146",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0147",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0148",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0149",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0150",
+    "score": 57.31,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0151",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0152",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0153",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0154",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0155",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0156",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0157",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0158",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0159",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0160",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0161",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0162",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0163",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0164",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0165",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0166",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0167",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0168",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0169",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0170",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0171",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0172",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0173",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0174",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0175",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0176",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0177",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0178",
+    "score": 57.74,
+    "classification": "ضعيفة",
+    "readiness": "تحتاج مزيدا من التحليل",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0179",
+    "score": 48.51,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0180",
+    "score": 48.51,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0181",
+    "score": 48.51,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0182",
+    "score": 48.51,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0183",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0184",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0185",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0186",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0187",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0188",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0189",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0190",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0191",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0192",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0193",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  },
+  {
+    "lifecycle_id": "lifecycle-0194",
+    "score": 48.03,
+    "classification": "ضعيفة",
+    "readiness": "غير مؤهلة",
+    "explanation": "درجة جودة بحثية لدورة حياة الفرصة وليست توصية تداول."
+  }
+]

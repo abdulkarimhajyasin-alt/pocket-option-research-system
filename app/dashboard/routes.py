@@ -362,6 +362,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/trade-lifecycle", response_class=HTMLResponse)
+    def trade_lifecycle(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/trade_lifecycle.html",
+            context(
+                request,
+                dashboard,
+                page="trade_lifecycle",
+                trade_lifecycle=dashboard.analytics.trade_lifecycle_analytics(),
+            ),
+        )
+
     @app.get("/api/dashboard")
     def api_dashboard() -> dict[str, object]:
         dashboard = dashboard_context()
@@ -420,6 +434,10 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/confluence")
     def api_confluence() -> dict[str, object]:
         return dashboard_context().analytics.confluence_analytics()
+
+    @app.get("/api/trade-lifecycle")
+    def api_trade_lifecycle() -> dict[str, object]:
+        return dashboard_context().analytics.trade_lifecycle_analytics()
 
     @app.get("/actions", response_class=HTMLResponse)
     def actions(request: Request) -> HTMLResponse:

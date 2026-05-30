@@ -1,0 +1,74 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.trade_lifecycle }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.trade_lifecycle }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث دورة الحياة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>أفضل فرصة مكتملة</span>
+    <strong>{{ trade_lifecycle.best.asset|default('غير متاح') }}</strong>
+    <p>{{ trade_lifecycle.best.get('outcome', {}).get('evaluation_reason', 'لا توجد دورات مكتملة محفوظة بعد.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجودة</span>
+    <strong>{{ trade_lifecycle.best.get('quality', {}).get('score', 0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>النتيجة</span>
+    <strong>{{ trade_lifecycle.best.get('outcome', {}).get('outcome', 'غير متاح') }}</strong>
+    <small>درجة التوافق {{ trade_lifecycle.best.confluence_score|default(0)|number_ar }}</small>
+    <small>جودة الدخول {{ trade_lifecycle.best.get('entry', {}).get('readiness_score', 0)|number_ar }}</small>
+    <small>جودة الانتهاء {{ trade_lifecycle.best.get('expiry', {}).get('expiry_quality', 0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>إجمالي الدورات</span><strong>{{ trade_lifecycle.summary.total_lifecycles|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الناجحة</span><strong>{{ trade_lifecycle.summary.wins|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الخاسرة</span><strong>{{ trade_lifecycle.summary.losses|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>المحايدة</span><strong>{{ trade_lifecycle.summary.breakeven|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>متوسط الجودة</span><strong>{{ trade_lifecycle.summary.average_quality|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أفضل أصل</span><strong>{{ trade_lifecycle.summary.best_asset|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>أفضل جلسة</span><strong>{{ trade_lifecycle.summary.best_session|default('غير متاح') }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع النتائج</h2><span>المخرجات</span></div><div class="chart" data-chart='{{ trade_lifecycle.outcomes|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الحالات</h2><span>دورة الحياة</span></div><div class="chart" data-chart='{{ trade_lifecycle.states|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>جودة الدخول</h2><span>الجاهزية</span></div><div class="chart" data-chart='{{ trade_lifecycle.entry|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جودة الانتهاء</h2><span>النافذة</span></div><div class="chart" data-chart='{{ trade_lifecycle.expiry|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أداء الأصول</h2><span>الأصول</span></div><div class="chart" data-chart='{{ trade_lifecycle.assets|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أداء الجلسات</h2><span>الجلسات</span></div><div class="chart" data-chart='{{ trade_lifecycle.sessions|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أداء التوافق</h2><span>التوافق</span></div><div class="chart" data-chart='{{ trade_lifecycle.confluence|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أداء الثقة</h2><span>الثقة</span></div><div class="chart" data-chart='{{ trade_lifecycle.confidence|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أسباب الفشل</h2><span>تحليل بعدي</span></div><div class="chart" data-chart='{{ trade_lifecycle.failure|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أسباب النجاح</h2><span>تحليل بعدي</span></div><div class="chart" data-chart='{{ trade_lifecycle.success|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تطور الجودة بمرور الوقت</h2><span>الزمن</span></div><div class="chart" data-chart='{{ trade_lifecycle.timeline|tojson }}'></div></article>
+  <article class="panel">
+    <div class="panel-title"><h2>أبرز الملاحظات</h2><span>بحث فقط</span></div>
+    <ul class="compact-list">
+      {% for item in trade_lifecycle.best.get('post_trade', {}).get('recurring_patterns', []) %}
+      <li>{{ item }}</li>
+      {% else %}
+      <li>غير متاح</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+{% endblock %}
