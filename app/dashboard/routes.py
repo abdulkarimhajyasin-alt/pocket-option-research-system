@@ -292,6 +292,62 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/signals-intelligence", response_class=HTMLResponse)
+    def signals_intelligence(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/signals_intelligence.html",
+            context(
+                request,
+                dashboard,
+                page="signals_intelligence",
+                signals_intelligence=dashboard.analytics.signals_intelligence_analytics(),
+            ),
+        )
+
+    @app.get("/signal-performance", response_class=HTMLResponse)
+    def signal_performance(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/signal_performance.html",
+            context(
+                request,
+                dashboard,
+                page="signal_performance",
+                signal_performance=dashboard.analytics.signal_performance_analytics(),
+            ),
+        )
+
+    @app.get("/opportunities", response_class=HTMLResponse)
+    def opportunities(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/opportunities.html",
+            context(
+                request,
+                dashboard,
+                page="opportunities",
+                opportunities=dashboard.analytics.opportunities_analytics(),
+            ),
+        )
+
+    @app.get("/multi-timeframe", response_class=HTMLResponse)
+    def multi_timeframe(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/multi_timeframe.html",
+            context(
+                request,
+                dashboard,
+                page="multi_timeframe",
+                multi_timeframe=dashboard.analytics.multi_timeframe_analytics(),
+            ),
+        )
+
     @app.get("/api/dashboard")
     def api_dashboard() -> dict[str, object]:
         dashboard = dashboard_context()
@@ -330,6 +386,22 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/market-data")
     def api_market_data() -> dict[str, object]:
         return dashboard_context().analytics.market_data_analytics()
+
+    @app.get("/api/signals-intelligence")
+    def api_signals_intelligence() -> dict[str, object]:
+        return dashboard_context().analytics.signals_intelligence_analytics()
+
+    @app.get("/api/signal-performance")
+    def api_signal_performance() -> dict[str, object]:
+        return dashboard_context().analytics.signal_performance_analytics()
+
+    @app.get("/api/opportunities")
+    def api_opportunities() -> dict[str, object]:
+        return dashboard_context().analytics.opportunities_analytics()
+
+    @app.get("/api/multi-timeframe")
+    def api_multi_timeframe() -> dict[str, object]:
+        return dashboard_context().analytics.multi_timeframe_analytics()
 
     @app.get("/actions", response_class=HTMLResponse)
     def actions(request: Request) -> HTMLResponse:

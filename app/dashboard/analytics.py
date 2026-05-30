@@ -509,6 +509,87 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def signals_intelligence_analytics(self) -> dict[str, Any]:
+        """Return latest signal intelligence analytics."""
+        summary = self._latest_json_dict("signals", "summary")
+        distribution = self._latest_json_dict("signals", "distribution")
+        confidence = self._latest_json_dict("signals", "confidence")
+        structure = self._latest_json_dict("signals", "structure")
+        fvg = self._latest_json_dict("signals", "fvg")
+        cisd = self._latest_json_dict("signals", "cisd")
+        liquidity = self._latest_json_dict("signals", "liquidity")
+        quality = self._latest_json_dict("signals", "quality")
+        if not summary:
+            summary = {
+                "signal_count": 0,
+                "average_confidence": 0.0,
+                "highest_confidence": 0.0,
+                "signal_quality": "غير متاح",
+            }
+        latest = self._latest_json_list("signals", "latest")
+        best = self._best_signal(latest) or summary.get("best_signal", {})
+        distribution_labels, distribution_values = self._dict_chart_values(distribution)
+        structure_labels, structure_values = self._dict_chart_values(structure)
+        cisd_labels, cisd_values = self._dict_chart_values(cisd)
+        fvg_labels, fvg_values = self._dict_chart_values(fvg)
+        liquidity_labels, liquidity_values = self._dict_chart_values(liquidity)
+        sessions = quality.get("session_performance", {}) if quality else {}
+        session_labels, session_values = self._dict_chart_values(sessions)
+        confidence_labels, confidence_values = self._dict_chart_values(confidence)
+        return {
+            "summary": summary,
+            "best": best,
+            "distribution": bar_chart(
+                "توزيع الإشارات",
+                distribution_labels,
+                distribution_values,
+                label="الإشارات",
+                color="green",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "توزيع الثقة",
+                confidence_labels,
+                confidence_values,
+                label="الثقة",
+                color="blue",
+            ).to_dict(),
+            "structure": bar_chart(
+                "توزيع الهيكل السعري",
+                structure_labels,
+                structure_values,
+                label="الهيكل",
+                color="warning",
+            ).to_dict(),
+            "cisd": bar_chart(
+                "توزيع CISD",
+                cisd_labels,
+                cisd_values,
+                label="CISD",
+                color="accent",
+            ).to_dict(),
+            "fvg": bar_chart(
+                "توزيع FVG",
+                fvg_labels,
+                fvg_values,
+                label="FVG",
+                color="green",
+            ).to_dict(),
+            "liquidity": bar_chart(
+                "توزيع السيولة",
+                liquidity_labels,
+                liquidity_values,
+                label="السيولة",
+                color="blue",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "جودة الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="warning",
+            ).to_dict(),
+        }
+
     def report_visualization(self, payload: Any) -> dict[str, Any]:
         """Build generic cards and charts for a JSON report."""
         if not isinstance(payload, dict):
@@ -626,3 +707,335 @@ class DashboardAnalyticsService:
             return float(value)
         except (TypeError, ValueError):
             return 0.0
+
+    def _best_signal(self, rows: list[dict[str, Any]]) -> dict[str, Any]:
+        if not rows:
+            return {}
+        return max(rows, key=lambda row: self._float(row.get("confidence", {}).get("score")))
+
+    def signal_performance_analytics(self) -> dict[str, Any]:
+        """Return latest signal performance analytics."""
+        summary = self._latest_json_dict("signal_performance", "summary")
+        outcomes = self._latest_json_dict("signal_performance", "win_rate")
+        assets = self._latest_json_dict("signal_performance", "assets")
+        sessions = self._latest_json_dict("signal_performance", "sessions")
+        confidence_payload = self._latest_json_dict("signal_performance", "confidence")
+        structure = self._latest_json_dict("signal_performance", "structure")
+        quality = self._latest_json_dict("signal_performance", "quality")
+        timeline = self._latest_json_dict("signal_performance", "stability")
+        if not summary:
+            summary = {
+                "total_signals": 0,
+                "wins": 0,
+                "losses": 0,
+                "breakeven": 0,
+                "unresolved": 0,
+                "win_rate": 0.0,
+                "average_confidence": 0.0,
+                "best_asset": "غير متاح",
+                "worst_asset": "غير متاح",
+                "best_session": "غير متاح",
+                "worst_session": "غير متاح",
+                "validation_readiness_score": 0.0,
+                "readiness_label": "غير متاح",
+            }
+        summary = {**summary, **quality}
+        confidence = confidence_payload.get("buckets", {}) if confidence_payload else {}
+        confidence_rates = {
+            key: self._float(value.get("win_rate")) if isinstance(value, dict) else 0.0
+            for key, value in confidence.items()
+        }
+        outcome_labels, outcome_values = self._dict_chart_values(outcomes)
+        asset_labels, asset_values = self._dict_chart_values(assets)
+        session_labels, session_values = self._dict_chart_values(sessions)
+        confidence_labels, confidence_values = self._dict_chart_values(confidence_rates)
+        structure_labels, structure_values = self._dict_chart_values(structure)
+        timeline_labels, timeline_values = self._dict_chart_values(timeline)
+        return {
+            "summary": summary,
+            "outcomes": bar_chart(
+                "توزيع النتائج",
+                outcome_labels,
+                outcome_values,
+                label="النتائج",
+                color="green",
+            ).to_dict(),
+            "win_rate": bar_chart(
+                "نسبة النجاح",
+                ["نسبة النجاح", "نسبة الخسارة"],
+                [
+                    self._float(summary.get("win_rate")) * 100,
+                    self._float(summary.get("loss_rate")) * 100,
+                ],
+                label="النسبة",
+                color="blue",
+            ).to_dict(),
+            "assets": bar_chart(
+                "أداء الأصول",
+                asset_labels,
+                asset_values,
+                label="الأصول",
+                color="accent",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "أداء الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="warning",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "أداء مستويات الثقة",
+                confidence_labels,
+                confidence_values,
+                label="الثقة",
+                color="green",
+            ).to_dict(),
+            "structure": bar_chart(
+                "أداء الهيكل السعري",
+                structure_labels,
+                structure_values,
+                label="الهيكل",
+                color="blue",
+            ).to_dict(),
+            "timeline": line_chart(
+                "تطور الأداء الزمني",
+                timeline_labels,
+                timeline_values,
+                label="التقييمات",
+                color="warning",
+            ).to_dict(),
+        }
+
+    def opportunities_analytics(self) -> dict[str, Any]:
+        """Return latest opportunity qualification analytics."""
+        summary = self._latest_json_dict("opportunities", "summary")
+        rankings = self._latest_json_list("opportunities", "rankings")
+        qualification = self._latest_json_dict("opportunities", "qualification")
+        assets = self._latest_json_dict("opportunities", "assets")
+        sessions = self._latest_json_dict("opportunities", "sessions")
+        structures = self._latest_json_dict("opportunities", "structures")
+        rejections = self._latest_json_dict("opportunities", "rejections")
+        ranked_opportunities = [
+            row.get("opportunity", {})
+            for row in rankings
+            if isinstance(row.get("opportunity"), dict)
+        ]
+        if not summary:
+            summary = {
+                "opportunity_count": 0,
+                "average_score": 0.0,
+                "highest_score": 0.0,
+                "average_confidence": 0.0,
+                "highly_qualified_count": 0,
+                "rejected_count": 0,
+            }
+        best = rankings[0] if rankings else {"opportunity": {}}
+        fvg = self._fvg_from_opportunities(ranked_opportunities)
+        timeline = self._timeline_from_opportunities(ranked_opportunities)
+        qualification_labels, qualification_values = self._dict_chart_values(qualification)
+        asset_labels, asset_values = self._dict_chart_values(assets)
+        session_labels, session_values = self._dict_chart_values(sessions)
+        structure_labels, structure_values = self._dict_chart_values(structures)
+        fvg_labels, fvg_values = self._dict_chart_values(fvg)
+        rejection_labels, rejection_values = self._dict_chart_values(rejections)
+        timeline_labels, timeline_values = self._dict_chart_values(timeline)
+        return {
+            "summary": summary,
+            "best": best,
+            "qualification": bar_chart(
+                "توزيع حالات التأهيل",
+                qualification_labels,
+                qualification_values,
+                label="الحالات",
+                color="green",
+            ).to_dict(),
+            "assets": bar_chart(
+                "أفضل الأصول",
+                asset_labels,
+                asset_values,
+                label="الأصول",
+                color="blue",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "أفضل الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="warning",
+            ).to_dict(),
+            "structures": bar_chart(
+                "أفضل الهياكل",
+                structure_labels,
+                structure_values,
+                label="الهياكل",
+                color="accent",
+            ).to_dict(),
+            "fvg": bar_chart(
+                "أفضل أنواع FVG",
+                fvg_labels,
+                fvg_values,
+                label="FVG",
+                color="green",
+            ).to_dict(),
+            "rejections": bar_chart(
+                "أسباب الرفض",
+                rejection_labels,
+                rejection_values,
+                label="الأسباب",
+                color="warning",
+            ).to_dict(),
+            "timeline": line_chart(
+                "جودة الفرص بمرور الوقت",
+                timeline_labels,
+                timeline_values,
+                label="الجودة",
+                color="blue",
+            ).to_dict(),
+        }
+
+    def multi_timeframe_analytics(self) -> dict[str, Any]:
+        """Return latest multi-timeframe confirmation analytics."""
+        alignment_payload = self._latest_json_dict("multi_timeframe", "alignment")
+        summary = alignment_payload.get("summary", {}) if alignment_payload else {}
+        alignment = (
+            alignment_payload.get("distribution", {}) if alignment_payload else {}
+        )
+        confirmation = self._latest_json_dict("multi_timeframe", "confirmation")
+        if isinstance(confirmation.get("distribution"), dict):
+            confirmation = confirmation["distribution"]
+        conflicts = self._latest_json_dict("multi_timeframe", "conflicts")
+        assets = self._latest_json_dict("multi_timeframe", "assets")
+        sessions = self._latest_json_dict("multi_timeframe", "sessions")
+        timeframes = self._latest_json_dict("multi_timeframe", "timeframes")
+        latest = alignment_payload.get("latest", []) if alignment_payload else []
+        if not isinstance(latest, list):
+            latest = self._latest_json_list("multi_timeframe", "confirmation_results")
+        if not summary:
+            summary = {
+                "confirmed_count": 0,
+                "conflicting_count": 0,
+                "average_alignment": 0.0,
+                "highest_alignment": 0.0,
+                "lowest_alignment": 0.0,
+            }
+        best = (
+            alignment_payload.get("best_confirmation", {})
+            if alignment_payload
+            else {}
+        )
+        if not best:
+            best = self._best_confirmation(latest)
+        states = self._state_map(best)
+        timeline = alignment_payload.get("timeline", {}) if alignment_payload else {}
+        if not timeline:
+            timeline = self._timeline_from_confirmations(latest)
+        alignment_labels, alignment_values = self._dict_chart_values(alignment)
+        confirmation_labels, confirmation_values = self._dict_chart_values(confirmation)
+        conflict_labels, conflict_values = self._dict_chart_values(conflicts)
+        asset_labels, asset_values = self._dict_chart_values(assets)
+        session_labels, session_values = self._dict_chart_values(sessions)
+        timeframe_labels, timeframe_values = self._dict_chart_values(timeframes)
+        timeline_labels, timeline_values = self._dict_chart_values(timeline)
+        return {
+            "summary": summary,
+            "best": best,
+            "states": states,
+            "alignment": bar_chart(
+                "توزيع التوافق",
+                alignment_labels,
+                alignment_values,
+                label="التوافق",
+                color="green",
+            ).to_dict(),
+            "confirmation": bar_chart(
+                "توزيع التأكيد",
+                confirmation_labels,
+                confirmation_values,
+                label="التأكيد",
+                color="blue",
+            ).to_dict(),
+            "conflicts": bar_chart(
+                "حالات التعارض",
+                conflict_labels,
+                conflict_values,
+                label="التعارض",
+                color="warning",
+            ).to_dict(),
+            "assets": bar_chart(
+                "أفضل الأصول توافقا",
+                asset_labels,
+                asset_values,
+                label="الأصول",
+                color="accent",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "توافق الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="green",
+            ).to_dict(),
+            "timeframes": bar_chart(
+                "توافق الأطر الزمنية",
+                timeframe_labels,
+                timeframe_values,
+                label="الأطر",
+                color="blue",
+            ).to_dict(),
+            "timeline": line_chart(
+                "تطور التوافق الزمني",
+                timeline_labels,
+                timeline_values,
+                label="التوافق",
+                color="warning",
+            ).to_dict(),
+        }
+
+    def _best_confirmation(self, rows: list[dict[str, Any]]) -> dict[str, Any]:
+        if not rows:
+            return {}
+        return max(rows, key=lambda row: self._float(row.get("confirmation_score")))
+
+    def _state_map(self, row: dict[str, Any]) -> dict[str, str]:
+        states = {"M1": "غير متاح", "M5": "غير متاح", "M15": "غير متاح", "H1": "غير متاح"}
+        for item in row.get("timeframe_states", []) if isinstance(row, dict) else []:
+            if isinstance(item, dict):
+                states[str(item.get("timeframe"))] = str(item.get("state"))
+        return states
+
+    def _timeline_from_confirmations(self, rows: list[dict[str, Any]]) -> dict[str, float]:
+        values: dict[str, list[float]] = {}
+        for row in rows:
+            label = self._short_time(row.get("timestamp"))
+            values.setdefault(label, []).append(self._float(row.get("confirmation_score")))
+        return {
+            key: round(sum(items) / len(items), 2)
+            for key, items in values.items()
+            if items
+        }
+
+    def _fvg_from_opportunities(self, rows: list[dict[str, Any]]) -> dict[str, float]:
+        values: dict[str, list[float]] = {}
+        for row in rows:
+            factors = row.get("supporting_factors", [])
+            label = "لا يوجد"
+            if isinstance(factors, list):
+                label = next((str(item) for item in factors if "FVG" in str(item)), label)
+            values.setdefault(label, []).append(self._float(row.get("fvg_score")))
+        return {
+            key: round(sum(items) / len(items), 2)
+            for key, items in values.items()
+            if items
+        }
+
+    def _timeline_from_opportunities(self, rows: list[dict[str, Any]]) -> dict[str, float]:
+        values: dict[str, list[float]] = {}
+        for row in rows:
+            label = self._short_time(row.get("timestamp"))
+            values.setdefault(label, []).append(self._float(row.get("qualification_score")))
+        return {
+            key: round(sum(items) / len(items), 2)
+            for key, items in values.items()
+            if items
+        }

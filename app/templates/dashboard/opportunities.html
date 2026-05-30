@@ -1,0 +1,77 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.opportunities }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تأهيل بحثي فقط</p>
+    <h1>{{ t.pages.opportunities }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث الفرص المؤهلة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>أفضل فرصة حالية</span>
+    <strong>{{ opportunities.best.opportunity.classification|default('غير متاح') }}</strong>
+    <p>{{ opportunities.best.reasoning|default('لا توجد فرصة مؤهلة محفوظة بعد.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الفرصة</span>
+    <strong>{{ opportunities.best.score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>الأصل</span>
+    <strong>{{ opportunities.best.opportunity.asset|default('غير متاح') }}</strong>
+    <small>درجة الثقة: {{ opportunities.best.opportunity.confidence|default(0)|number_ar }}</small>
+    <small>حالة التأهيل: {{ opportunities.best.opportunity.qualification_state|default('غير متاح') }}</small>
+  </div>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>الأسباب</h2><span>نقاط قوة</span></div>
+    <ul class="timeline">
+      {% for item in opportunities.best.opportunity.supporting_factors|default([]) %}
+        <li><span>{{ item }}</span></li>
+      {% else %}
+        <li><span>لا توجد أسباب محفوظة.</span></li>
+      {% endfor %}
+    </ul>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>التحذيرات</h2><span>نقاط ضعف</span></div>
+    <ul class="timeline">
+      {% for item in opportunities.best.opportunity.rejection_factors|default([]) %}
+        <li><span>{{ item }}</span></li>
+      {% else %}
+        <li><span>لا توجد تحذيرات محفوظة.</span></li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد الفرص</span><strong>{{ opportunities.summary.opportunity_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أعلى درجة</span><strong>{{ opportunities.summary.highest_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>متوسط الجودة</span><strong>{{ opportunities.summary.average_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الفرص المؤهلة جدا</span><strong>{{ opportunities.summary.highly_qualified_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الفرص المرفوضة</span><strong>{{ opportunities.summary.rejected_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع درجات الفرص</h2><span>حالات التأهيل</span></div><div class="chart" data-chart='{{ opportunities.qualification|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أفضل الأصول</h2><span>متوسط الجودة</span></div><div class="chart" data-chart='{{ opportunities.assets|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أفضل الجلسات</h2><span>جودة الجلسة</span></div><div class="chart" data-chart='{{ opportunities.sessions|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أفضل الهياكل</h2><span>جودة الهيكل</span></div><div class="chart" data-chart='{{ opportunities.structures|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أفضل أنواع FVG</h2><span>جودة الفجوة</span></div><div class="chart" data-chart='{{ opportunities.fvg|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أسباب الرفض</h2><span>نقاط الضعف</span></div><div class="chart" data-chart='{{ opportunities.rejections|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>جودة الفرص بمرور الوقت</h2><span>النشاط الزمني</span></div><div class="chart" data-chart='{{ opportunities.timeline|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع حالات التأهيل</h2><span>قرار بحثي</span></div><div class="chart" data-chart='{{ opportunities.qualification|tojson }}'></div></article>
+</section>
+{% endblock %}

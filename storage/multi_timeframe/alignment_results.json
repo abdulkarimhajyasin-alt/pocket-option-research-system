@@ -1,0 +1,2136 @@
+[
+  {
+    "state": "mostly_aligned",
+    "state_ar": "متوافق غالبا",
+    "pair_scores": {
+      "M1-M5": 79.56,
+      "M5-M15": 84.56,
+      "M15-H1": 79.56
+    },
+    "full_alignment_score": 81.23,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23."
+  },
+  {
+    "state": "mostly_aligned",
+    "state_ar": "متوافق غالبا",
+    "pair_scores": {
+      "M1-M5": 79.56,
+      "M5-M15": 84.56,
+      "M15-H1": 79.56
+    },
+    "full_alignment_score": 81.23,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23."
+  },
+  {
+    "state": "mostly_aligned",
+    "state_ar": "متوافق غالبا",
+    "pair_scores": {
+      "M1-M5": 71.81,
+      "M5-M15": 76.81,
+      "M15-H1": 71.81
+    },
+    "full_alignment_score": 73.48,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 73.48."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 67.61,
+      "M5-M15": 72.61,
+      "M15-H1": 67.61
+    },
+    "full_alignment_score": 69.28,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 69.28."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 66.88,
+      "M5-M15": 71.88,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 64.59,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 64.81,
+      "M5-M15": 69.81,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 63.21,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 63.21."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 64.13,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 58.04,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 58.04."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 64.13,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 58.04,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 58.04."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 64.13,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 58.04,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 58.04."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 62.06,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 57.35,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 57.35."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 62.06,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 57.35,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 57.35."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 62.06,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 57.35,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 57.35."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 62.06,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 57.35,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 57.35."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.93,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.98,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.98."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 54.13,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 54.71,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.71."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.87,
+      "M5-M15": 57.87,
+      "M15-H1": 52.87
+    },
+    "full_alignment_score": 54.54,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.54."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.87,
+      "M5-M15": 57.87,
+      "M15-H1": 52.87
+    },
+    "full_alignment_score": 54.54,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 54.54."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 52.13,
+      "M5-M15": 57.13,
+      "M15-H1": 52.13
+    },
+    "full_alignment_score": 53.8,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.80."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 49.38,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 53.13,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.13."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 49.38,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 53.13,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.13."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 49.38,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 53.13,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.13."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 55.0,
+      "M5-M15": 49.38,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 53.13,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 53.13."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  },
+  {
+    "state": "mixed",
+    "state_ar": "مختلط",
+    "pair_scores": {
+      "M1-M5": 40.18,
+      "M5-M15": 55.0,
+      "M15-H1": 55.0
+    },
+    "full_alignment_score": 50.06,
+    "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 50.06."
+  }
+]

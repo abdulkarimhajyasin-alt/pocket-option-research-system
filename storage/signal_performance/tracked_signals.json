@@ -1,0 +1,3494 @@
+[
+  {
+    "signal_id": "EURUSD:2026-01-01T01:06:00+00:00:0",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:06:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:07:00+00:00:1",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:07:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:08:00+00:00:2",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:08:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:09:00+00:00:3",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:09:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:10:00+00:00:4",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:10:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:11:00+00:00:5",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:11:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:12:00+00:00:6",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:12:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:13:00+00:00:7",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:13:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:14:00+00:00:8",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:14:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:15:00+00:00:9",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:15:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:16:00+00:00:10",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:16:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:17:00+00:00:11",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:17:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:18:00+00:00:12",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:18:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:19:00+00:00:13",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:19:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:20:00+00:00:14",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T01:20:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:21:00+00:00:15",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T01:21:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:22:00+00:00:16",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:22:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:23:00+00:00:17",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 40.3,
+    "timestamp": "2026-01-01T01:23:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:24:00+00:00:18",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 40.3,
+    "timestamp": "2026-01-01T01:24:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:25:00+00:00:19",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T01:25:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:26:00+00:00:20",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 51.3,
+    "timestamp": "2026-01-01T01:26:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:27:00+00:00:21",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 36.3,
+    "timestamp": "2026-01-01T01:27:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:28:00+00:00:22",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 44.05,
+    "timestamp": "2026-01-01T01:28:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:29:00+00:00:23",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:29:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:30:00+00:00:24",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:30:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:31:00+00:00:25",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:31:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:32:00+00:00:26",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:32:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:33:00+00:00:27",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:33:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:34:00+00:00:28",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:34:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:35:00+00:00:29",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:35:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:36:00+00:00:30",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:36:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:37:00+00:00:31",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:37:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:38:00+00:00:32",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:38:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:39:00+00:00:33",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:39:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:40:00+00:00:34",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:40:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:41:00+00:00:35",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T01:41:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:42:00+00:00:36",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T01:42:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:43:00+00:00:37",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:43:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:44:00+00:00:38",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 29.05,
+    "timestamp": "2026-01-01T01:44:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:45:00+00:00:39",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:45:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:46:00+00:00:40",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T01:46:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:47:00+00:00:41",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:47:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:48:00+00:00:42",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 36.3,
+    "timestamp": "2026-01-01T01:48:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:49:00+00:00:43",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:49:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:50:00+00:00:44",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:50:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:51:00+00:00:45",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:51:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:52:00+00:00:46",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:52:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:53:00+00:00:47",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 44.05,
+    "timestamp": "2026-01-01T01:53:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:54:00+00:00:48",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:54:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:55:00+00:00:49",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T01:55:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:56:00+00:00:50",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:56:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:57:00+00:00:51",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T01:57:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:58:00+00:00:52",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:58:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T01:59:00+00:00:53",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T01:59:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:00:00+00:00:54",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:00:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:01:00+00:00:55",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:01:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:02:00+00:00:56",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:02:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:03:00+00:00:57",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:03:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:04:00+00:00:58",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:04:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:05:00+00:00:59",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:05:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:06:00+00:00:60",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:06:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:07:00+00:00:61",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:07:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:08:00+00:00:62",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 64.3,
+    "timestamp": "2026-01-01T02:08:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:09:00+00:00:63",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:09:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:10:00+00:00:64",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:10:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:11:00+00:00:65",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:11:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:12:00+00:00:66",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:12:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:13:00+00:00:67",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:13:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:14:00+00:00:68",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:14:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:15:00+00:00:69",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:15:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:16:00+00:00:70",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:16:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:17:00+00:00:71",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:17:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:18:00+00:00:72",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:18:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:19:00+00:00:73",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:19:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:20:00+00:00:74",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T02:20:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:21:00+00:00:75",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:21:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:22:00+00:00:76",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:22:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:23:00+00:00:77",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:23:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:24:00+00:00:78",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:24:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:25:00+00:00:79",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:25:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:26:00+00:00:80",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:26:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:27:00+00:00:81",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:27:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:28:00+00:00:82",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:28:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:29:00+00:00:83",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T02:29:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:30:00+00:00:84",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:30:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:31:00+00:00:85",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:31:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:32:00+00:00:86",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:32:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:33:00+00:00:87",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:33:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:34:00+00:00:88",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:34:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:35:00+00:00:89",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:35:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:36:00+00:00:90",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:36:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:37:00+00:00:91",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:37:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:38:00+00:00:92",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:38:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:39:00+00:00:93",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:39:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:40:00+00:00:94",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:40:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:41:00+00:00:95",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:41:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:42:00+00:00:96",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:42:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:43:00+00:00:97",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:43:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:44:00+00:00:98",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 55.3,
+    "timestamp": "2026-01-01T02:44:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:45:00+00:00:99",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:45:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:46:00+00:00:100",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T02:46:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:47:00+00:00:101",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:47:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:48:00+00:00:102",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:48:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:49:00+00:00:103",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:49:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:50:00+00:00:104",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T02:50:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:51:00+00:00:105",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T02:51:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:52:00+00:00:106",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:52:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:53:00+00:00:107",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:53:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:54:00+00:00:108",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:54:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:55:00+00:00:109",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:55:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:56:00+00:00:110",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:56:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:57:00+00:00:111",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T02:57:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:58:00+00:00:112",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 40.3,
+    "timestamp": "2026-01-01T02:58:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T02:59:00+00:00:113",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 44.05,
+    "timestamp": "2026-01-01T02:59:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:00:00+00:00:114",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:00:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:01:00+00:00:115",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:01:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:02:00+00:00:116",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:02:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:03:00+00:00:117",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:03:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:04:00+00:00:118",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:04:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:05:00+00:00:119",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:05:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:06:00+00:00:120",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:06:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:07:00+00:00:121",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:07:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:08:00+00:00:122",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:08:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:09:00+00:00:123",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:09:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:10:00+00:00:124",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:10:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:11:00+00:00:125",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T03:11:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:12:00+00:00:126",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:12:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:13:00+00:00:127",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:13:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:14:00+00:00:128",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:14:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:15:00+00:00:129",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:15:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:16:00+00:00:130",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 40.05,
+    "timestamp": "2026-01-01T03:16:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:17:00+00:00:131",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:17:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:18:00+00:00:132",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 29.05,
+    "timestamp": "2026-01-01T03:18:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:19:00+00:00:133",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:19:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:20:00+00:00:134",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:20:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:21:00+00:00:135",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:21:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:22:00+00:00:136",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:22:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:23:00+00:00:137",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:23:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:24:00+00:00:138",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:24:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:25:00+00:00:139",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:25:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:26:00+00:00:140",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:26:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:27:00+00:00:141",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:27:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:28:00+00:00:142",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:28:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:29:00+00:00:143",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:29:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:30:00+00:00:144",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:30:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:31:00+00:00:145",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:31:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:32:00+00:00:146",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:32:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:33:00+00:00:147",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:33:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:34:00+00:00:148",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 29.05,
+    "timestamp": "2026-01-01T03:34:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:35:00+00:00:149",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:35:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:36:00+00:00:150",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 64.3,
+    "timestamp": "2026-01-01T03:36:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:37:00+00:00:151",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 29.05,
+    "timestamp": "2026-01-01T03:37:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:38:00+00:00:152",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:38:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:39:00+00:00:153",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:39:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:40:00+00:00:154",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:40:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:41:00+00:00:155",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:41:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:42:00+00:00:156",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:42:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:43:00+00:00:157",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:43:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:44:00+00:00:158",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:44:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:45:00+00:00:159",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:45:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:46:00+00:00:160",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:46:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:47:00+00:00:161",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:47:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:48:00+00:00:162",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:48:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:49:00+00:00:163",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:49:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:50:00+00:00:164",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:50:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:51:00+00:00:165",
+    "asset": "EURUSD",
+    "classification": "تصنيف هبوطي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T03:51:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:52:00+00:00:166",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:52:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "هابط",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:53:00+00:00:167",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:53:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:54:00+00:00:168",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:54:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة سفلية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:55:00+00:00:169",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T03:55:00+00:00",
+    "structure_state": "هيكل هابط",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:56:00+00:00:170",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T03:56:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:57:00+00:00:171",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 25.05,
+    "timestamp": "2026-01-01T03:57:00+00:00",
+    "structure_state": "هيكل عرضي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:58:00+00:00:172",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:58:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T03:59:00+00:00:173",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T03:59:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:00:00+00:00:174",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T04:00:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:01:00+00:00:175",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:01:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:02:00+00:00:176",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T04:02:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:03:00+00:00:177",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T04:03:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:04:00+00:00:178",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T04:04:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:05:00+00:00:179",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T04:05:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:06:00+00:00:180",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T04:06:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:07:00+00:00:181",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:07:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:08:00+00:00:182",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:08:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:09:00+00:00:183",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 40.3,
+    "timestamp": "2026-01-01T04:09:00+00:00",
+    "structure_state": "هيكل انتقالي",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:10:00+00:00:184",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:10:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:11:00+00:00:185",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T04:11:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:12:00+00:00:186",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:12:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:13:00+00:00:187",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:13:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:14:00+00:00:188",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:14:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:15:00+00:00:189",
+    "asset": "EURUSD",
+    "classification": "تصنيف صعودي",
+    "confidence": 53.05,
+    "timestamp": "2026-01-01T04:15:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "صاعد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:16:00+00:00:190",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:16:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:17:00+00:00:191",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:17:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:18:00+00:00:192",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 49.3,
+    "timestamp": "2026-01-01T04:18:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "سحب سيولة علوية",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  },
+  {
+    "signal_id": "EURUSD:2026-01-01T04:19:00+00:00:193",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "confidence": 38.05,
+    "timestamp": "2026-01-01T04:19:00+00:00",
+    "structure_state": "هيكل صاعد",
+    "cisd_state": "محايد",
+    "fvg_state": "لا يوجد",
+    "ifvg_state": "غير مؤكد",
+    "liquidity_state": "لا يوجد سحب",
+    "session_state": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_execution": true
+    },
+    "research_only": true
+  }
+]

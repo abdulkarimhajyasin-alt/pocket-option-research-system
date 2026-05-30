@@ -1,0 +1,871 @@
+[
+  {
+    "timestamp": "2026-01-01T04:10:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 49.3,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 15.0,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية",
+      "سحب سيولة علوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:10:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08657,
+        "previous_low": 1.08603,
+        "current_high": 1.08677,
+        "current_low": 1.08626
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:10:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:10:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08669,
+      "local_low": 1.08603,
+      "sweep_direction": "سحب سيولة علوية",
+      "sweep_confirmed": true,
+      "confidence_contribution": 1.0
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:10:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:11:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 38.05,
+      "classification": "ضعيفة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 3.75,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة",
+      "السيولة القريبة غير مؤكدة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:11:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08669,
+        "previous_low": 1.08603,
+        "current_high": 1.0869,
+        "current_low": 1.08641
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:11:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:11:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08677,
+      "local_low": 1.08603,
+      "sweep_direction": "لا يوجد سحب",
+      "sweep_confirmed": false,
+      "confidence_contribution": 0.25
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:11:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:12:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 49.3,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 15.0,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية",
+      "سحب سيولة علوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:12:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08677,
+        "previous_low": 1.08626,
+        "current_high": 1.08703,
+        "current_low": 1.08652
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:12:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:12:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.0869,
+      "local_low": 1.08603,
+      "sweep_direction": "سحب سيولة علوية",
+      "sweep_confirmed": true,
+      "confidence_contribution": 1.0
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:12:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:13:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 49.3,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 15.0,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية",
+      "سحب سيولة علوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:13:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.0869,
+        "previous_low": 1.08641,
+        "current_high": 1.08716,
+        "current_low": 1.08663
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:13:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:13:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08703,
+      "local_low": 1.08626,
+      "sweep_direction": "سحب سيولة علوية",
+      "sweep_confirmed": true,
+      "confidence_contribution": 1.0
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:13:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:14:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 49.3,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 15.0,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية",
+      "سحب سيولة علوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:14:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08703,
+        "previous_low": 1.08652,
+        "current_high": 1.08728,
+        "current_low": 1.08674
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:14:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:14:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08716,
+      "local_low": 1.08641,
+      "sweep_direction": "سحب سيولة علوية",
+      "sweep_confirmed": true,
+      "confidence_contribution": 1.0
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:14:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:15:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "call",
+    "classification_ar": "تصنيف صعودي",
+    "confidence": {
+      "score": 53.05,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 3.75,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "إغلاق صاعد تجاوز القمة السابقة",
+      "الجلسة الآسيوية"
+    ],
+    "rejection_factors": [
+      "لا توجد فجوة قيمة عادلة حديثة",
+      "السيولة القريبة غير مؤكدة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:15:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08716,
+        "previous_low": 1.08663,
+        "current_high": 1.08744,
+        "current_low": 1.08685
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:15:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "صاعد",
+      "validated": true,
+      "confidence_contribution": 1.0,
+      "explanation": "إغلاق صاعد تجاوز القمة السابقة"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:15:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08728,
+      "local_low": 1.08652,
+      "sweep_direction": "لا يوجد سحب",
+      "sweep_confirmed": false,
+      "confidence_contribution": 0.25
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:15:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:16:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 49.3,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 15.0,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية",
+      "سحب سيولة علوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:16:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08728,
+        "previous_low": 1.08674,
+        "current_high": 1.08754,
+        "current_low": 1.087
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:16:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:16:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08744,
+      "local_low": 1.08663,
+      "sweep_direction": "سحب سيولة علوية",
+      "sweep_confirmed": true,
+      "confidence_contribution": 1.0
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:16:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:17:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 49.3,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 15.0,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية",
+      "سحب سيولة علوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:17:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08744,
+        "previous_low": 1.08685,
+        "current_high": 1.08763,
+        "current_low": 1.08719
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:17:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:17:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08754,
+      "local_low": 1.08674,
+      "sweep_direction": "سحب سيولة علوية",
+      "sweep_confirmed": true,
+      "confidence_contribution": 1.0
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:17:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:18:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 49.3,
+      "classification": "متوسطة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 15.0,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية",
+      "سحب سيولة علوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:18:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08754,
+        "previous_low": 1.087,
+        "current_high": 1.08764,
+        "current_low": 1.08727
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:18:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:18:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08763,
+      "local_low": 1.08685,
+      "sweep_direction": "سحب سيولة علوية",
+      "sweep_confirmed": true,
+      "confidence_contribution": 1.0
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:18:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  },
+  {
+    "timestamp": "2026-01-01T04:19:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "classification": "no_trade",
+    "classification_ar": "لا توجد فرصة بحثية",
+    "confidence": {
+      "score": 38.05,
+      "classification": "ضعيفة",
+      "weights": {
+        "market_structure": 20.0,
+        "cisd": 20.0,
+        "fvg": 20.0,
+        "ifvg": 10.0,
+        "liquidity": 15.0,
+        "session_quality": 15.0
+      },
+      "contributions": {
+        "market_structure": 20.0,
+        "cisd": 5.0,
+        "fvg": 0.0,
+        "ifvg": 0.0,
+        "liquidity": 3.75,
+        "session_quality": 9.3
+      }
+    },
+    "explanation": "تصنيف بحثي مبني على الهيكل السعري ومكونات حركة السعر.",
+    "supporting_factors": [
+      "هيكل صاعد",
+      "لا يوجد تغير حالة مؤكد",
+      "الجلسة الآسيوية"
+    ],
+    "rejection_factors": [
+      "تغير الحالة غير مؤكد",
+      "لا توجد فجوة قيمة عادلة حديثة",
+      "السيولة القريبة غير مؤكدة"
+    ],
+    "structure": {
+      "timestamp": "2026-01-01T04:19:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "pattern": "HH/HL",
+      "state": "هيكل صاعد",
+      "points": {
+        "previous_high": 1.08763,
+        "previous_low": 1.08719,
+        "current_high": 1.08764,
+        "current_low": 1.0872
+      },
+      "confidence_contribution": 1.0
+    },
+    "cisd": {
+      "timestamp": "2026-01-01T04:19:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "direction": "محايد",
+      "validated": false,
+      "confidence_contribution": 0.25,
+      "explanation": "لا يوجد تغير حالة مؤكد"
+    },
+    "fvg": null,
+    "ifvg": null,
+    "liquidity": {
+      "timestamp": "2026-01-01T04:19:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "local_high": 1.08764,
+      "local_low": 1.087,
+      "sweep_direction": "لا يوجد سحب",
+      "sweep_confirmed": false,
+      "confidence_contribution": 0.25
+    },
+    "session": {
+      "timestamp": "2026-01-01T04:19:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "session_name": "الجلسة الآسيوية",
+      "quality_score": 62.0,
+      "activity_score": 55.0
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true
+    },
+    "research_only": true
+  }
+]

@@ -1,0 +1,64 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.multi_timeframe }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تأكيد بحثي فقط</p>
+    <h1>{{ t.pages.multi_timeframe }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث التأكيد</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>تأكيد الأطر الزمنية</span>
+    <strong>{{ multi_timeframe.best.confirmation_state|default('غير متاح') }}</strong>
+    <p>{{ multi_timeframe.best.alignment_explanation|default('لا توجد نتائج تأكيد محفوظة بعد.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة التوافق</span>
+    <strong>{{ multi_timeframe.best.confirmation_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>حالات التعارض</span>
+    <strong>{{ multi_timeframe.best.conflict.severity|default('غير متاح') }}</strong>
+    <small>M1: {{ multi_timeframe.states.M1|default('غير متاح') }}</small>
+    <small>M5: {{ multi_timeframe.states.M5|default('غير متاح') }}</small>
+    <small>M15: {{ multi_timeframe.states.M15|default('غير متاح') }}</small>
+    <small>H1: {{ multi_timeframe.states.H1|default('غير متاح') }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد الفرص المؤكدة</span><strong>{{ multi_timeframe.summary.confirmed_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الفرص المتضاربة</span><strong>{{ multi_timeframe.summary.conflicting_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>متوسط التوافق</span><strong>{{ multi_timeframe.summary.average_alignment|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أعلى توافق</span><strong>{{ multi_timeframe.summary.highest_alignment|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أقل توافق</span><strong>{{ multi_timeframe.summary.lowest_alignment|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع التوافق</h2><span>الهيكل</span></div><div class="chart" data-chart='{{ multi_timeframe.alignment|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع التأكيد</h2><span>الحالات</span></div><div class="chart" data-chart='{{ multi_timeframe.confirmation|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توافق الأطر الزمنية</h2><span>M1 / M5 / M15 / H1</span></div><div class="chart" data-chart='{{ multi_timeframe.timeframes|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>حالات التعارض</h2><span>الشدة</span></div><div class="chart" data-chart='{{ multi_timeframe.conflicts|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أفضل الأصول توافقا</h2><span>حسب الأصل</span></div><div class="chart" data-chart='{{ multi_timeframe.assets|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توافق الجلسات</h2><span>حسب الجلسة</span></div><div class="chart" data-chart='{{ multi_timeframe.sessions|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تطور التوافق الزمني</h2><span>مرور الوقت</span></div><div class="chart" data-chart='{{ multi_timeframe.timeline|tojson }}'></div></article>
+  <article class="panel">
+    <div class="panel-title"><h2>عوامل التأكيد</h2><span>بحث فقط</span></div>
+    <div class="detail-grid">
+      <div><span>الحالة</span><strong>{{ multi_timeframe.best.confirmation_state|default('غير متاح') }}</strong></div>
+      <div><span>التفسير</span><strong>{{ multi_timeframe.best.score.reasoning|default('غير متاح') }}</strong></div>
+      <div><span>الأصل</span><strong>{{ multi_timeframe.best.asset|default('غير متاح') }}</strong></div>
+      <div><span>التصنيف</span><strong>{{ multi_timeframe.best.classification|default('غير متاح') }}</strong></div>
+    </div>
+  </article>
+</section>
+{% endblock %}

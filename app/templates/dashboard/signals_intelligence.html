@@ -1,0 +1,104 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.signals_intelligence }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تصنيف بحثي فقط</p>
+    <h1>{{ t.pages.signals_intelligence }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث ذكاء الإشارات</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>أفضل فرصة حالية</span>
+    <strong>{{ signals_intelligence.best.classification_ar|default('لا توجد فرصة بحثية') }}</strong>
+    <p>{{ signals_intelligence.best.explanation|default('لا توجد بيانات كافية للعرض.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>الثقة</span>
+    <strong>{{ signals_intelligence.best.confidence.score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>الأصل</span>
+    <strong>{{ signals_intelligence.best.asset|default('غير متاح') }}</strong>
+    <small>حالة الهيكل: {{ signals_intelligence.best.structure.state|default('غير متاح') }}</small>
+    <small>جودة الجلسة: {{ signals_intelligence.best.session.quality_score|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>الأسباب</h2><span>عوامل داعمة</span></div>
+    <ul class="timeline">
+      {% for item in signals_intelligence.best.supporting_factors|default([]) %}
+        <li><span>{{ item }}</span></li>
+      {% else %}
+        <li><span>لا توجد أسباب داعمة محفوظة.</span></li>
+      {% endfor %}
+    </ul>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>التحذيرات</h2><span>عوامل رفض</span></div>
+    <ul class="timeline">
+      {% for item in signals_intelligence.best.rejection_factors|default([]) %}
+        <li><span>{{ item }}</span></li>
+      {% else %}
+        <li><span>لا توجد تحذيرات محفوظة.</span></li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card">
+    <span>عدد الإشارات</span>
+    <strong>{{ signals_intelligence.summary.signal_count|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>متوسط الثقة</span>
+    <strong>{{ signals_intelligence.summary.average_confidence|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>أعلى ثقة</span>
+    <strong>{{ signals_intelligence.summary.highest_confidence|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>جودة الإشارات</span>
+    <strong>{{ signals_intelligence.summary.signal_quality|default('غير متاح') }}</strong>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع الإشارات</h2><span>تصنيفات بحثية</span></div>
+    <div class="chart" data-chart='{{ signals_intelligence.distribution|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع الهيكل السعري</h2><span>حالة السوق</span></div>
+    <div class="chart" data-chart='{{ signals_intelligence.structure|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع CISD</h2><span>تغير الحالة</span></div>
+    <div class="chart" data-chart='{{ signals_intelligence.cisd|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع FVG</h2><span>فجوات القيمة</span></div>
+    <div class="chart" data-chart='{{ signals_intelligence.fvg|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع السيولة</h2><span>السحب والتأكيد</span></div>
+    <div class="chart" data-chart='{{ signals_intelligence.liquidity|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>جودة الجلسات</h2><span>نشاط زمني</span></div>
+    <div class="chart" data-chart='{{ signals_intelligence.sessions|tojson }}'></div>
+  </article>
+</section>
+{% endblock %}

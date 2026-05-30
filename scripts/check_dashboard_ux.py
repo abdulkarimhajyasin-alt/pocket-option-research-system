@@ -30,6 +30,10 @@ def main() -> None:
         PROJECT_ROOT / "app/templates/dashboard/observation.html",
         PROJECT_ROOT / "app/templates/dashboard/live_feed.html",
         PROJECT_ROOT / "app/templates/dashboard/market_data.html",
+        PROJECT_ROOT / "app/templates/dashboard/signals_intelligence.html",
+        PROJECT_ROOT / "app/templates/dashboard/signal_performance.html",
+        PROJECT_ROOT / "app/templates/dashboard/opportunities.html",
+        PROJECT_ROOT / "app/templates/dashboard/multi_timeframe.html",
     ]
     css = (PROJECT_ROOT / "app/static/dashboard/dashboard.css").read_text(encoding="utf-8")
     overview_template = templates[0].read_text(encoding="utf-8")
@@ -63,6 +67,10 @@ def main() -> None:
             "/observation",
             "/live-feed",
             "/market-data",
+            "/signals-intelligence",
+            "/signal-performance",
+            "/opportunities",
+            "/multi-timeframe",
         }.issubset(route_paths),
         "overview_panel": "درجة الجاهزية البحثية" in overview_template,
         "no_overview_iso_literal": "T00:00:00" not in overview_template,

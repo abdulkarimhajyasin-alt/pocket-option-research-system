@@ -92,6 +92,30 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل تكامل بيانات سوق بحثي فقط دون تنفيذ أو تحكم وسيط.",
         command=("scripts/run_market_data.py",),
     ),
+    "signal_intelligence": ActionDefinition(
+        name="signal_intelligence",
+        label="تحديث ذكاء الإشارات",
+        description="تشغيل تصنيف إشارات بحثي فقط دون تنفيذ أو توصيات استثمارية.",
+        command=("scripts/run_signal_intelligence.py",),
+    ),
+    "signal_performance": ActionDefinition(
+        name="signal_performance",
+        label="تحديث أداء الإشارات",
+        description="تشغيل تقييم أداء الإشارات بحثيا فقط دون تنفيذ أو إدارة أموال.",
+        command=("scripts/run_signal_performance.py",),
+    ),
+    "opportunity_engine": ActionDefinition(
+        name="opportunity_engine",
+        label="تحديث الفرص المؤهلة",
+        description="تشغيل تأهيل وترتيب الفرص بحثيا فقط دون توصيات أو تنفيذ.",
+        command=("scripts/run_opportunity_engine.py",),
+    ),
+    "multi_timeframe": ActionDefinition(
+        name="multi_timeframe",
+        label="تحديث تأكيد الأطر الزمنية",
+        description="تشغيل تأكيد متعدد الأطر الزمنية بحثيا فقط دون توصيات أو تنفيذ.",
+        command=("scripts/run_multi_timeframe.py",),
+    ),
 }
 
 

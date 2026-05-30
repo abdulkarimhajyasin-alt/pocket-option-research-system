@@ -1,0 +1,88 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.signal_performance }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تقييم بحثي فقط</p>
+    <h1>{{ t.pages.signal_performance }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث أداء الإشارات</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>ملخص الأداء البحثي</span>
+    <strong>{{ signal_performance.summary.readiness_label|default('غير متاح') }}</strong>
+    <p>تقييم تاريخي لجودة التصنيفات البحثية دون تنفيذ أو توصيات استثمارية.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجاهزية البحثية</span>
+    <strong>{{ signal_performance.summary.validation_readiness_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>نسبة النجاح</span>
+    <strong>{{ (signal_performance.summary.win_rate|default(0) * 100)|percent_ar }}</strong>
+    <small>متوسط الثقة: {{ signal_performance.summary.average_confidence|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>إجمالي الإشارات</span><strong>{{ signal_performance.summary.total_signals|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الرابحة</span><strong>{{ signal_performance.summary.wins|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الخاسرة</span><strong>{{ signal_performance.summary.losses|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>نسبة النجاح</span><strong>{{ (signal_performance.summary.win_rate|default(0) * 100)|percent_ar }}</strong></article>
+  <article class="metric-card"><span>أفضل أصل</span><strong>{{ signal_performance.summary.best_asset|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>أسوأ أصل</span><strong>{{ signal_performance.summary.worst_asset|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>أفضل جلسة</span><strong>{{ signal_performance.summary.best_session|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>أسوأ جلسة</span><strong>{{ signal_performance.summary.worst_session|default('غير متاح') }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع النتائج</h2><span>رابحة / خاسرة</span></div>
+    <div class="chart" data-chart='{{ signal_performance.outcomes|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>نسبة النجاح</h2><span>الأداء العام</span></div>
+    <div class="chart" data-chart='{{ signal_performance.win_rate|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>أداء الأصول</h2><span>حسب الأصل</span></div>
+    <div class="chart" data-chart='{{ signal_performance.assets|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>أداء الجلسات</h2><span>حسب الجلسة</span></div>
+    <div class="chart" data-chart='{{ signal_performance.sessions|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>أداء مستويات الثقة</h2><span>تحقق الثقة</span></div>
+    <div class="chart" data-chart='{{ signal_performance.confidence|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>أداء الهيكل السعري</h2><span>حسب الهيكل</span></div>
+    <div class="chart" data-chart='{{ signal_performance.structure|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>تطور الأداء الزمني</h2><span>عدد التقييمات</span></div>
+    <div class="chart" data-chart='{{ signal_performance.timeline|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>دقة نموذج الثقة</h2><span>جودة البحث</span></div>
+    <div class="detail-grid">
+      <div><span>جودة الإشارة</span><strong>{{ signal_performance.summary.signal_quality_score|default(0)|number_ar }}</strong></div>
+      <div><span>الاتساق</span><strong>{{ signal_performance.summary.consistency_score|default(0)|number_ar }}</strong></div>
+      <div><span>الاستقرار</span><strong>{{ signal_performance.summary.stability_score|default(0)|number_ar }}</strong></div>
+      <div><span>دقة الثقة</span><strong>{{ signal_performance.summary.confidence_accuracy_score|default(0)|number_ar }}</strong></div>
+    </div>
+  </article>
+</section>
+{% endblock %}

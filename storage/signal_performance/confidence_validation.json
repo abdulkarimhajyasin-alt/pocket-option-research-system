@@ -1,0 +1,29 @@
+{
+  "buckets": {
+    "80-100": {
+      "count": 0.0,
+      "wins": 0.0,
+      "win_rate": 0.0
+    },
+    "60-79": {
+      "count": 2.0,
+      "wins": 1.0,
+      "win_rate": 0.5
+    },
+    "40-59": {
+      "count": 138.0,
+      "wins": 54.0,
+      "win_rate": 0.3913
+    },
+    "0-39": {
+      "count": 54.0,
+      "wins": 0.0,
+      "win_rate": 0.0
+    }
+  },
+  "assessment": "ثقة متوازنة",
+  "overconfidence": false,
+  "underconfidence": false,
+  "balanced": true,
+  "research_only": true
+}

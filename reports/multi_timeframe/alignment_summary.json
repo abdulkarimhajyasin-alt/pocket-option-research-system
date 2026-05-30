@@ -1,0 +1,1893 @@
+{
+  "summary": {
+    "confirmed_count": 3,
+    "conflicting_count": 16,
+    "average_alignment": 62.92,
+    "highest_alignment": 82.87,
+    "lowest_alignment": 40.47,
+    "research_only": true
+  },
+  "distribution": {
+    "متوافق غالبا": 3,
+    "مختلط": 191
+  },
+  "timeline": {
+    "01:06": 67.7,
+    "01:07": 67.7,
+    "01:08": 67.7,
+    "01:09": 66.06,
+    "01:10": 66.06,
+    "01:11": 67.7,
+    "01:12": 67.7,
+    "01:13": 67.7,
+    "01:14": 67.7,
+    "01:15": 67.7,
+    "01:16": 67.7,
+    "01:17": 66.06,
+    "01:18": 59.21,
+    "01:19": 59.21,
+    "01:20": 40.51,
+    "01:21": 40.51,
+    "01:22": 66.06,
+    "01:23": 56.31,
+    "01:24": 56.31,
+    "01:25": 40.51,
+    "01:26": 72.56,
+    "01:27": 59.85,
+    "01:28": 57.82,
+    "01:29": 67.7,
+    "01:30": 67.7,
+    "01:31": 67.7,
+    "01:32": 67.7,
+    "01:33": 57.28,
+    "01:34": 67.7,
+    "01:35": 66.06,
+    "01:36": 67.7,
+    "01:37": 67.7,
+    "01:38": 67.7,
+    "01:39": 66.06,
+    "01:40": 59.21,
+    "01:41": 40.51,
+    "01:42": 40.51,
+    "01:43": 59.21,
+    "01:44": 40.47,
+    "01:45": 59.21,
+    "01:46": 40.51,
+    "01:47": 66.06,
+    "01:48": 59.85,
+    "01:49": 66.06,
+    "01:50": 66.06,
+    "01:51": 66.06,
+    "01:52": 59.21,
+    "01:53": 57.82,
+    "01:54": 66.06,
+    "01:55": 66.06,
+    "01:56": 67.7,
+    "01:57": 67.7,
+    "01:58": 57.28,
+    "01:59": 57.28,
+    "02:00": 67.7,
+    "02:01": 67.7,
+    "02:02": 67.7,
+    "02:03": 66.06,
+    "02:04": 66.06,
+    "02:05": 67.7,
+    "02:06": 66.06,
+    "02:07": 59.21,
+    "02:08": 82.87,
+    "02:09": 66.06,
+    "02:10": 66.06,
+    "02:11": 66.06,
+    "02:12": 67.7,
+    "02:13": 67.7,
+    "02:14": 67.7,
+    "02:15": 67.7,
+    "02:16": 67.7,
+    "02:17": 67.7,
+    "02:18": 66.06,
+    "02:19": 59.21,
+    "02:20": 40.51,
+    "02:21": 67.7,
+    "02:22": 67.7,
+    "02:23": 57.28,
+    "02:24": 66.06,
+    "02:25": 67.7,
+    "02:26": 66.06,
+    "02:27": 66.06,
+    "02:28": 59.21,
+    "02:29": 40.51,
+    "02:30": 59.21,
+    "02:31": 67.7,
+    "02:32": 66.06,
+    "02:33": 66.06,
+    "02:34": 66.06,
+    "02:35": 67.7,
+    "02:36": 67.7,
+    "02:37": 67.7,
+    "02:38": 67.7,
+    "02:39": 66.06,
+    "02:40": 66.06,
+    "02:41": 67.7,
+    "02:42": 66.06,
+    "02:43": 59.21,
+    "02:44": 76.18,
+    "02:45": 66.06,
+    "02:46": 67.7,
+    "02:47": 59.21,
+    "02:48": 66.06,
+    "02:49": 59.21,
+    "02:50": 40.51,
+    "02:51": 59.21,
+    "02:52": 66.06,
+    "02:53": 66.06,
+    "02:54": 66.06,
+    "02:55": 66.06,
+    "02:56": 66.06,
+    "02:57": 66.06,
+    "02:58": 56.31,
+    "02:59": 57.82,
+    "03:00": 67.7,
+    "03:01": 67.7,
+    "03:02": 67.7,
+    "03:03": 59.21,
+    "03:04": 66.06,
+    "03:05": 66.06,
+    "03:06": 67.7,
+    "03:07": 67.7,
+    "03:08": 66.06,
+    "03:09": 66.06,
+    "03:10": 59.21,
+    "03:11": 40.51,
+    "03:12": 59.21,
+    "03:13": 66.06,
+    "03:14": 66.06,
+    "03:15": 59.21,
+    "03:16": 57.87,
+    "03:17": 66.06,
+    "03:18": 40.47,
+    "03:19": 59.21,
+    "03:20": 67.7,
+    "03:21": 67.7,
+    "03:22": 67.7,
+    "03:23": 67.7,
+    "03:24": 66.06,
+    "03:25": 66.06,
+    "03:26": 57.28,
+    "03:27": 57.28,
+    "03:28": 59.21,
+    "03:29": 66.06,
+    "03:30": 66.06,
+    "03:31": 59.21,
+    "03:32": 66.06,
+    "03:33": 66.06,
+    "03:34": 40.47,
+    "03:35": 66.06,
+    "03:36": 82.87,
+    "03:37": 40.47,
+    "03:38": 59.21,
+    "03:39": 66.06,
+    "03:40": 66.06,
+    "03:41": 66.06,
+    "03:42": 67.7,
+    "03:43": 67.7,
+    "03:44": 67.7,
+    "03:45": 67.7,
+    "03:46": 67.7,
+    "03:47": 67.7,
+    "03:48": 66.06,
+    "03:49": 66.06,
+    "03:50": 59.21,
+    "03:51": 67.7,
+    "03:52": 57.28,
+    "03:53": 66.06,
+    "03:54": 66.06,
+    "03:55": 59.21,
+    "03:56": 40.51,
+    "03:57": 40.51,
+    "03:58": 66.06,
+    "03:59": 66.06,
+    "04:00": 59.21,
+    "04:01": 66.06,
+    "04:02": 67.7,
+    "04:03": 59.21,
+    "04:04": 57.28,
+    "04:05": 67.7,
+    "04:06": 67.7,
+    "04:07": 66.06,
+    "04:08": 66.06,
+    "04:09": 56.31,
+    "04:10": 66.06,
+    "04:11": 59.21,
+    "04:12": 66.06,
+    "04:13": 66.06,
+    "04:14": 66.06,
+    "04:15": 67.7,
+    "04:16": 66.06,
+    "04:17": 66.06,
+    "04:18": 66.06,
+    "04:19": 59.21
+  },
+  "latest": [
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:36:00+00:00",
+      "asset": "EURUSD",
+      "classification": "لا توجد فرصة بحثية",
+      "timestamp": "2026-01-01T03:36:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "محايد",
+          "confidence": 76.56,
+          "timestamp": "2026-01-01T03:36:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "محايد",
+          "confidence": 82.56,
+          "timestamp": "2026-01-01T03:36:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "محايد",
+          "confidence": 86.56,
+          "timestamp": "2026-01-01T03:36:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "محايد",
+          "confidence": 72.56,
+          "timestamp": "2026-01-01T03:36:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mostly_aligned",
+        "state_ar": "متوافق غالبا",
+        "pair_scores": {
+          "M1-M5": 79.56,
+          "M5-M15": 84.56,
+          "M15-H1": 79.56
+        },
+        "full_alignment_score": 81.23,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23."
+      },
+      "trend": {
+        "score": 90.8,
+        "directional_agreement": 100.0,
+        "trend_strength": 79.56,
+        "trend_consistency": 92.85,
+        "explanation": "اتفاق الاتجاه 100.00 مع قوة 79.56."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 79.86,
+        "reasoning": "درجة توافق الأطر الزمنية 79.86.",
+        "strengths": [
+          "M1 محايد",
+          "M5 محايد",
+          "M15 محايد",
+          "H1 محايد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 82.87,
+      "confirmation_state": "مؤكد",
+      "supporting_factors": [
+        "M1 محايد",
+        "M5 محايد",
+        "M15 محايد",
+        "H1 محايد",
+        "متوافق غالبا"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T02:08:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T02:08:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 76.56,
+          "timestamp": "2026-01-01T02:08:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 82.56,
+          "timestamp": "2026-01-01T02:08:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 86.56,
+          "timestamp": "2026-01-01T02:08:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "هابط",
+          "confidence": 72.56,
+          "timestamp": "2026-01-01T02:08:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mostly_aligned",
+        "state_ar": "متوافق غالبا",
+        "pair_scores": {
+          "M1-M5": 79.56,
+          "M5-M15": 84.56,
+          "M15-H1": 79.56
+        },
+        "full_alignment_score": 81.23,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23."
+      },
+      "trend": {
+        "score": 90.8,
+        "directional_agreement": 100.0,
+        "trend_strength": 79.56,
+        "trend_consistency": 92.85,
+        "explanation": "اتفاق الاتجاه 100.00 مع قوة 79.56."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 79.86,
+        "reasoning": "درجة توافق الأطر الزمنية 79.86.",
+        "strengths": [
+          "M1 هابط",
+          "M5 هابط",
+          "M15 هابط",
+          "H1 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 82.87,
+      "confirmation_state": "مؤكد",
+      "supporting_factors": [
+        "M1 هابط",
+        "M5 هابط",
+        "M15 هابط",
+        "H1 هابط",
+        "متوافق غالبا"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T02:44:00+00:00",
+      "asset": "EURUSD",
+      "classification": "لا توجد فرصة بحثية",
+      "timestamp": "2026-01-01T02:44:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "محايد",
+          "confidence": 68.81,
+          "timestamp": "2026-01-01T02:44:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "محايد",
+          "confidence": 74.81,
+          "timestamp": "2026-01-01T02:44:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "محايد",
+          "confidence": 78.81,
+          "timestamp": "2026-01-01T02:44:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "محايد",
+          "confidence": 64.81,
+          "timestamp": "2026-01-01T02:44:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mostly_aligned",
+        "state_ar": "متوافق غالبا",
+        "pair_scores": {
+          "M1-M5": 71.81,
+          "M5-M15": 76.81,
+          "M15-H1": 71.81
+        },
+        "full_alignment_score": 73.48,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 73.48."
+      },
+      "trend": {
+        "score": 87.31,
+        "directional_agreement": 100.0,
+        "trend_strength": 71.81,
+        "trend_consistency": 90.13,
+        "explanation": "اتفاق الاتجاه 100.00 مع قوة 71.81."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 72.11,
+        "reasoning": "درجة توافق الأطر الزمنية 72.11.",
+        "strengths": [
+          "M5 محايد",
+          "M15 محايد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 76.18,
+      "confirmation_state": "مؤكد",
+      "supporting_factors": [
+        "M5 محايد",
+        "M15 محايد",
+        "متوافق غالبا"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 73.48.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T01:26:00+00:00",
+      "asset": "EURUSD",
+      "classification": "لا توجد فرصة بحثية",
+      "timestamp": "2026-01-01T01:26:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "محايد",
+          "confidence": 64.61,
+          "timestamp": "2026-01-01T01:26:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "محايد",
+          "confidence": 70.61,
+          "timestamp": "2026-01-01T01:26:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "محايد",
+          "confidence": 74.61,
+          "timestamp": "2026-01-01T01:26:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "محايد",
+          "confidence": 60.61,
+          "timestamp": "2026-01-01T01:26:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 67.61,
+          "M5-M15": 72.61,
+          "M15-H1": 67.61
+        },
+        "full_alignment_score": 69.28,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 69.28."
+      },
+      "trend": {
+        "score": 85.42,
+        "directional_agreement": 100.0,
+        "trend_strength": 67.61,
+        "trend_consistency": 88.66,
+        "explanation": "اتفاق الاتجاه 100.00 مع قوة 67.61."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.91,
+        "reasoning": "درجة توافق الأطر الزمنية 67.91.",
+        "strengths": [
+          "M5 محايد",
+          "M15 محايد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 72.56,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M5 محايد",
+        "M15 محايد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 69.28.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T04:15:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T04:15:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T04:15:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T04:15:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T04:15:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T04:15:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T04:06:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T04:06:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T04:06:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T04:06:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T04:06:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T04:06:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T04:05:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T04:05:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T04:05:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T04:05:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T04:05:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T04:05:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T04:02:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T04:02:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T04:02:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T04:02:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T04:02:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T04:02:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:51:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:51:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:51:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:51:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:51:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:51:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:47:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:47:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:47:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:47:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:47:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:47:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:46:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:46:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:46:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:46:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:46:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:46:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:45:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:45:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:45:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:45:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:45:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:45:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:44:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:44:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:44:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:44:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:44:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:44:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:43:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:43:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:43:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:43:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:43:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:43:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:42:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:42:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:42:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:42:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:42:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:42:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:23:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T03:23:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:23:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:23:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:23:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:23:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:22:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T03:22:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:22:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:22:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:22:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:22:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:21:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T03:21:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:21:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:21:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:21:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:21:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:20:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف صعودي",
+      "timestamp": "2026-01-01T03:20:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "صاعد",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:20:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "صاعد",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:20:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "صاعد",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:20:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:20:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 صاعد"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 صاعد",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    },
+    {
+      "opportunity_id": "EURUSD:2026-01-01T03:07:00+00:00",
+      "asset": "EURUSD",
+      "classification": "تصنيف هبوطي",
+      "timestamp": "2026-01-01T03:07:00+00:00",
+      "timeframe_states": [
+        {
+          "timeframe": "M1",
+          "state": "هابط",
+          "confidence": 63.88,
+          "timestamp": "2026-01-01T03:07:00+00:00"
+        },
+        {
+          "timeframe": "M5",
+          "state": "هابط",
+          "confidence": 69.88,
+          "timestamp": "2026-01-01T03:07:00+00:00"
+        },
+        {
+          "timeframe": "M15",
+          "state": "هابط",
+          "confidence": 73.88,
+          "timestamp": "2026-01-01T03:07:00+00:00"
+        },
+        {
+          "timeframe": "H1",
+          "state": "انتقالي",
+          "confidence": 59.88,
+          "timestamp": "2026-01-01T03:07:00+00:00"
+        }
+      ],
+      "alignment": {
+        "state": "mixed",
+        "state_ar": "مختلط",
+        "pair_scores": {
+          "M1-M5": 66.88,
+          "M5-M15": 71.88,
+          "M15-H1": 55.0
+        },
+        "full_alignment_score": 64.59,
+        "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59."
+      },
+      "trend": {
+        "score": 71.35,
+        "directional_agreement": 75.0,
+        "trend_strength": 66.88,
+        "trend_consistency": 72.16,
+        "explanation": "اتفاق الاتجاه 75.00 مع قوة 66.88."
+      },
+      "conflict": {
+        "has_conflict": false,
+        "severity": "منخفض",
+        "conflicts": [],
+        "score_penalty": 0.0
+      },
+      "score": {
+        "score": 67.18,
+        "reasoning": "درجة توافق الأطر الزمنية 67.18.",
+        "strengths": [
+          "M15 هابط"
+        ],
+        "weaknesses": []
+      },
+      "confirmation_score": 67.7,
+      "confirmation_state": "جزئي",
+      "supporting_factors": [
+        "M15 هابط",
+        "مختلط"
+      ],
+      "conflicting_factors": [],
+      "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 64.59.",
+      "session": "الجلسة الآسيوية",
+      "metadata": {
+        "research_only": true,
+        "not_recommendation": true,
+        "not_execution": true
+      },
+      "research_only": true
+    }
+  ],
+  "best_confirmation": {
+    "opportunity_id": "EURUSD:2026-01-01T03:36:00+00:00",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "timestamp": "2026-01-01T03:36:00+00:00",
+    "timeframe_states": [
+      {
+        "timeframe": "M1",
+        "state": "محايد",
+        "confidence": 76.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      },
+      {
+        "timeframe": "M5",
+        "state": "محايد",
+        "confidence": 82.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      },
+      {
+        "timeframe": "M15",
+        "state": "محايد",
+        "confidence": 86.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      },
+      {
+        "timeframe": "H1",
+        "state": "محايد",
+        "confidence": 72.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      }
+    ],
+    "alignment": {
+      "state": "mostly_aligned",
+      "state_ar": "متوافق غالبا",
+      "pair_scores": {
+        "M1-M5": 79.56,
+        "M5-M15": 84.56,
+        "M15-H1": 79.56
+      },
+      "full_alignment_score": 81.23,
+      "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23."
+    },
+    "trend": {
+      "score": 90.8,
+      "directional_agreement": 100.0,
+      "trend_strength": 79.56,
+      "trend_consistency": 92.85,
+      "explanation": "اتفاق الاتجاه 100.00 مع قوة 79.56."
+    },
+    "conflict": {
+      "has_conflict": false,
+      "severity": "منخفض",
+      "conflicts": [],
+      "score_penalty": 0.0
+    },
+    "score": {
+      "score": 79.86,
+      "reasoning": "درجة توافق الأطر الزمنية 79.86.",
+      "strengths": [
+        "M1 محايد",
+        "M5 محايد",
+        "M15 محايد",
+        "H1 محايد"
+      ],
+      "weaknesses": []
+    },
+    "confirmation_score": 82.87,
+    "confirmation_state": "مؤكد",
+    "supporting_factors": [
+      "M1 محايد",
+      "M5 محايد",
+      "M15 محايد",
+      "H1 محايد",
+      "متوافق غالبا"
+    ],
+    "conflicting_factors": [],
+    "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23.",
+    "session": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_recommendation": true,
+      "not_execution": true
+    },
+    "research_only": true
+  }
+}

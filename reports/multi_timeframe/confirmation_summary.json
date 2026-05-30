@@ -1,0 +1,92 @@
+{
+  "distribution": {
+    "مؤكد": 3,
+    "جزئي": 175,
+    "متضارب": 16
+  },
+  "best_confirmation": {
+    "opportunity_id": "EURUSD:2026-01-01T03:36:00+00:00",
+    "asset": "EURUSD",
+    "classification": "لا توجد فرصة بحثية",
+    "timestamp": "2026-01-01T03:36:00+00:00",
+    "timeframe_states": [
+      {
+        "timeframe": "M1",
+        "state": "محايد",
+        "confidence": 76.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      },
+      {
+        "timeframe": "M5",
+        "state": "محايد",
+        "confidence": 82.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      },
+      {
+        "timeframe": "M15",
+        "state": "محايد",
+        "confidence": 86.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      },
+      {
+        "timeframe": "H1",
+        "state": "محايد",
+        "confidence": 72.56,
+        "timestamp": "2026-01-01T03:36:00+00:00"
+      }
+    ],
+    "alignment": {
+      "state": "mostly_aligned",
+      "state_ar": "متوافق غالبا",
+      "pair_scores": {
+        "M1-M5": 79.56,
+        "M5-M15": 84.56,
+        "M15-H1": 79.56
+      },
+      "full_alignment_score": 81.23,
+      "explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23."
+    },
+    "trend": {
+      "score": 90.8,
+      "directional_agreement": 100.0,
+      "trend_strength": 79.56,
+      "trend_consistency": 92.85,
+      "explanation": "اتفاق الاتجاه 100.00 مع قوة 79.56."
+    },
+    "conflict": {
+      "has_conflict": false,
+      "severity": "منخفض",
+      "conflicts": [],
+      "score_penalty": 0.0
+    },
+    "score": {
+      "score": 79.86,
+      "reasoning": "درجة توافق الأطر الزمنية 79.86.",
+      "strengths": [
+        "M1 محايد",
+        "M5 محايد",
+        "M15 محايد",
+        "H1 محايد"
+      ],
+      "weaknesses": []
+    },
+    "confirmation_score": 82.87,
+    "confirmation_state": "مؤكد",
+    "supporting_factors": [
+      "M1 محايد",
+      "M5 محايد",
+      "M15 محايد",
+      "H1 محايد",
+      "متوافق غالبا"
+    ],
+    "conflicting_factors": [],
+    "alignment_explanation": "درجة توافق الهيكل عبر الأطر الزمنية 81.23.",
+    "session": "الجلسة الآسيوية",
+    "metadata": {
+      "research_only": true,
+      "not_recommendation": true,
+      "not_execution": true
+    },
+    "research_only": true
+  }
+}
