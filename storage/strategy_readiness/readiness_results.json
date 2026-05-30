@@ -1,0 +1,164 @@
+{
+  "strategy_id": "research-strategy-readiness",
+  "timestamp": "2026-05-30T20:11:10.260434",
+  "readiness": {
+    "score": 64.06,
+    "state": "تحتاج تحسين كبير",
+    "explanation": "تقييم نضج بحثي شامل وليس موافقة نشر أو تنفيذ.",
+    "components": {
+      "جودة الإشارة": 46.18,
+      "اتساق الإشارة": 93.54,
+      "دقة الثقة": 85.0,
+      "جودة الفرصة": 58.01,
+      "جودة الأطر الزمنية": 62.92,
+      "جودة التوافق": 52.73,
+      "جودة دورة الحياة": 61.2,
+      "استقرار البحث": 52.88
+    },
+    "research_only": true,
+    "not_deployment_approval": true
+  },
+  "gates": [
+    {
+      "name": "بوابة الإشارة",
+      "status": "WARNING",
+      "status_ar": "تحذير",
+      "score": 46.18,
+      "explanation": "البوابة تحتاج متابعة بحثية."
+    },
+    {
+      "name": "بوابة الأداء",
+      "status": "PASS",
+      "status_ar": "ناجحة",
+      "score": 85.0,
+      "explanation": "البوابة مستوفاة بحثيا."
+    },
+    {
+      "name": "بوابة الفرصة",
+      "status": "WARNING",
+      "status_ar": "تحذير",
+      "score": 58.01,
+      "explanation": "البوابة تحتاج متابعة بحثية."
+    },
+    {
+      "name": "بوابة الأطر الزمنية",
+      "status": "WARNING",
+      "status_ar": "تحذير",
+      "score": 62.92,
+      "explanation": "البوابة تحتاج متابعة بحثية."
+    },
+    {
+      "name": "بوابة التوافق",
+      "status": "WARNING",
+      "status_ar": "تحذير",
+      "score": 52.73,
+      "explanation": "البوابة تحتاج متابعة بحثية."
+    },
+    {
+      "name": "بوابة دورة الحياة",
+      "status": "WARNING",
+      "status_ar": "تحذير",
+      "score": 61.2,
+      "explanation": "البوابة تحتاج متابعة بحثية."
+    },
+    {
+      "name": "بوابة الاستقرار",
+      "status": "WARNING",
+      "status_ar": "تحذير",
+      "score": 52.88,
+      "explanation": "البوابة تحتاج متابعة بحثية."
+    }
+  ],
+  "requirements": {
+    "minimum_signal_count": 25,
+    "minimum_validation_count": 20,
+    "minimum_confidence_accuracy": 60.0,
+    "minimum_consistency_score": 45.0,
+    "minimum_readiness_score": 50.0,
+    "passed": false,
+    "warnings": [
+      "حجم الإشارات أقل من الحد الأدنى"
+    ]
+  },
+  "stability": {
+    "score": 52.88,
+    "consistency": 93.54,
+    "variance": 1600.79,
+    "repeatability": 97.0,
+    "confidence_reliability": 85.0,
+    "signal_reliability": 0.0
+  },
+  "diagnostics": {
+    "items": [
+      {
+        "name": "ضعف توليد الإشارات",
+        "severity": "متوسط",
+        "detail": "القيمة البحثية الحالية 46.18."
+      },
+      {
+        "name": "ضعف تأهيل الفرص",
+        "severity": "متوسط",
+        "detail": "القيمة البحثية الحالية 58.01."
+      },
+      {
+        "name": "تعارض الأطر الزمنية",
+        "severity": "منخفض",
+        "detail": "القيمة البحثية الحالية 62.92."
+      },
+      {
+        "name": "ضعف التوافق",
+        "severity": "متوسط",
+        "detail": "القيمة البحثية الحالية 52.73."
+      },
+      {
+        "name": "عدم استقرار دورة الحياة",
+        "severity": "منخفض",
+        "detail": "القيمة البحثية الحالية 61.20."
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "title": "تحسين جودة CISD",
+      "priority": "متوسط",
+      "reason": "رفع جودة توليد الإشارات"
+    },
+    {
+      "title": "تحسين توافق الأطر الزمنية",
+      "priority": "منخفض",
+      "reason": "تقليل التعارض الزمني"
+    },
+    {
+      "title": "تحسين جودة السيولة",
+      "priority": "متوسط",
+      "reason": "رفع جودة تأهيل الفرص"
+    },
+    {
+      "title": "زيادة حجم العينة",
+      "priority": "منخفض",
+      "reason": "تحسين استقرار دورة الحياة"
+    }
+  ],
+  "strengths": [
+    "اتساق الإشارة",
+    "دقة الثقة"
+  ],
+  "weaknesses": [
+    "جودة الإشارة",
+    "جودة الفرصة",
+    "جودة الأطر الزمنية",
+    "جودة التوافق",
+    "جودة دورة الحياة",
+    "استقرار البحث"
+  ],
+  "metadata": {
+    "research_only": true,
+    "not_execution": true,
+    "not_deployment_approval": true,
+    "not_investment_advice": true
+  },
+  "research_only": true,
+  "not_execution": true,
+  "not_deployment_approval": true,
+  "not_investment_advice": true
+}

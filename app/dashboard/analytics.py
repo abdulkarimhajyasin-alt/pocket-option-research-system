@@ -1236,6 +1236,116 @@ class DashboardAnalyticsService:
             "جودة الانتهاء": self._float(expiry.get("expiry_quality")),
         }
 
+    def strategy_readiness_analytics(self) -> dict[str, Any]:
+        """Return latest strategy readiness analytics."""
+        summary_payload = self._latest_json_dict("strategy_readiness", "summary")
+        summary = summary_payload.get("summary", {}) if summary_payload else {}
+        readiness = (
+            summary_payload.get("readiness_distribution", {})
+            if summary_payload
+            else {}
+        )
+        strengths = summary_payload.get("strengths", {}) if summary_payload else {}
+        weaknesses = summary_payload.get("weaknesses", {}) if summary_payload else {}
+        timeline = summary_payload.get("timeline", {}) if summary_payload else {}
+        latest = summary_payload.get("latest", {}) if summary_payload else {}
+        gates = self._latest_json_dict("strategy_readiness", "gate")
+        diagnostics = self._latest_json_dict("strategy_readiness", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "strategy_readiness",
+            "recommendations",
+        )
+        stability = self._latest_json_dict("strategy_readiness", "stability")
+        failures = self._latest_json_dict("strategy_readiness", "failure")
+        if not summary:
+            summary = {
+                "readiness_score": 0.0,
+                "readiness_state": "غير متاح",
+                "passed_gates": 0,
+                "warnings": 0,
+                "failures": 0,
+                "stability_score": 0.0,
+                "recommendation_count": 0,
+            }
+        gate_labels, gate_values = self._dict_chart_values(gates)
+        readiness_labels, readiness_values = self._dict_chart_values(readiness)
+        stability_labels, stability_values = self._dict_chart_values(stability)
+        strength_labels, strength_values = self._dict_chart_values(strengths)
+        weakness_labels, weakness_values = self._dict_chart_values(weaknesses)
+        failure_labels, failure_values = self._dict_chart_values(failures)
+        recommendation_labels, recommendation_values = self._dict_chart_values(
+            recommendations
+        )
+        diagnostic_labels, diagnostic_values = self._dict_chart_values(diagnostics)
+        timeline_labels, timeline_values = self._dict_chart_values(timeline)
+        return {
+            "summary": summary,
+            "latest": latest,
+            "gates": bar_chart(
+                "توزيع البوابات",
+                gate_labels,
+                gate_values,
+                label="البوابات",
+                color="green",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "توزيع الجاهزية",
+                readiness_labels,
+                readiness_values,
+                label="الجاهزية",
+                color="blue",
+            ).to_dict(),
+            "stability": bar_chart(
+                "توزيع الاستقرار",
+                stability_labels,
+                stability_values,
+                label="الاستقرار",
+                color="accent",
+            ).to_dict(),
+            "strengths": bar_chart(
+                "نقاط القوة",
+                strength_labels,
+                strength_values,
+                label="القوة",
+                color="green",
+            ).to_dict(),
+            "weaknesses": bar_chart(
+                "نقاط الضعف",
+                weakness_labels,
+                weakness_values,
+                label="الضعف",
+                color="warning",
+            ).to_dict(),
+            "failures": bar_chart(
+                "أسباب الفشل",
+                failure_labels,
+                failure_values,
+                label="الفشل",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                recommendation_labels,
+                recommendation_values,
+                label="التوصيات",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التشخيص",
+                diagnostic_labels,
+                diagnostic_values,
+                label="التشخيص",
+                color="accent",
+            ).to_dict(),
+            "timeline": line_chart(
+                "تطور الجاهزية بمرور الوقت",
+                timeline_labels,
+                timeline_values,
+                label="الجاهزية",
+                color="green",
+            ).to_dict(),
+        }
+
     def _best_confirmation(self, rows: list[dict[str, Any]]) -> dict[str, Any]:
         if not rows:
             return {}

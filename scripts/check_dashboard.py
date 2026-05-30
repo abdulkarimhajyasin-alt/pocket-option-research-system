@@ -36,6 +36,7 @@ def main() -> None:
         "/multi-timeframe",
         "/confluence",
         "/trade-lifecycle",
+        "/strategy-readiness",
         "/actions",
     }
     missing_routes = sorted(required_routes - route_paths)
@@ -52,6 +53,7 @@ def main() -> None:
         PROJECT_ROOT / "app/templates/dashboard/multi_timeframe.html",
         PROJECT_ROOT / "app/templates/dashboard/confluence.html",
         PROJECT_ROOT / "app/templates/dashboard/trade_lifecycle.html",
+        PROJECT_ROOT / "app/templates/dashboard/strategy_readiness.html",
         PROJECT_ROOT / "app/templates/dashboard/actions.html",
     ]
     static_assets = [

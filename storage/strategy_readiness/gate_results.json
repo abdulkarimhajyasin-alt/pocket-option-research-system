@@ -1,0 +1,51 @@
+[
+  {
+    "name": "بوابة الإشارة",
+    "status": "WARNING",
+    "status_ar": "تحذير",
+    "score": 46.18,
+    "explanation": "البوابة تحتاج متابعة بحثية."
+  },
+  {
+    "name": "بوابة الأداء",
+    "status": "PASS",
+    "status_ar": "ناجحة",
+    "score": 85.0,
+    "explanation": "البوابة مستوفاة بحثيا."
+  },
+  {
+    "name": "بوابة الفرصة",
+    "status": "WARNING",
+    "status_ar": "تحذير",
+    "score": 58.01,
+    "explanation": "البوابة تحتاج متابعة بحثية."
+  },
+  {
+    "name": "بوابة الأطر الزمنية",
+    "status": "WARNING",
+    "status_ar": "تحذير",
+    "score": 62.92,
+    "explanation": "البوابة تحتاج متابعة بحثية."
+  },
+  {
+    "name": "بوابة التوافق",
+    "status": "WARNING",
+    "status_ar": "تحذير",
+    "score": 52.73,
+    "explanation": "البوابة تحتاج متابعة بحثية."
+  },
+  {
+    "name": "بوابة دورة الحياة",
+    "status": "WARNING",
+    "status_ar": "تحذير",
+    "score": 61.2,
+    "explanation": "البوابة تحتاج متابعة بحثية."
+  },
+  {
+    "name": "بوابة الاستقرار",
+    "status": "WARNING",
+    "status_ar": "تحذير",
+    "score": 52.88,
+    "explanation": "البوابة تحتاج متابعة بحثية."
+  }
+]

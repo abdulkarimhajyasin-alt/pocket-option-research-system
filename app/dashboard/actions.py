@@ -128,6 +128,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل محاكاة دورة الحياة بحثيا فقط دون تنفيذ أو أوامر.",
         command=("scripts/run_trade_lifecycle.py",),
     ),
+    "strategy_readiness": ActionDefinition(
+        name="strategy_readiness",
+        label="تحديث جاهزية الاستراتيجية",
+        description="تشغيل تقييم الجاهزية البحثية دون موافقة نشر أو تنفيذ.",
+        command=("scripts/run_strategy_readiness.py",),
+    ),
 }
 
 
