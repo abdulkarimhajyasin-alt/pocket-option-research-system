@@ -1,0 +1,50 @@
+[
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "ALL",
+    "timeframe": "session",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock"
+    },
+    "session_name": "الجلسة الآسيوية",
+    "is_active": false,
+    "activity_score": 56.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "ALL",
+    "timeframe": "session",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock"
+    },
+    "session_name": "جلسة التداخل",
+    "is_active": true,
+    "activity_score": 74.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "ALL",
+    "timeframe": "session",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock"
+    },
+    "session_name": "جلسة لندن",
+    "is_active": true,
+    "activity_score": 83.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "ALL",
+    "timeframe": "session",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock"
+    },
+    "session_name": "جلسة نيويورك",
+    "is_active": true,
+    "activity_score": 68.0
+  }
+]

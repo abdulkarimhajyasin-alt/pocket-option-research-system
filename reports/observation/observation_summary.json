@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-01-01T12:00:00+00:00",
+  "source": "mock_observation_provider",
+  "research_only": true,
+  "observation_only": true,
+  "active_assets": 4,
+  "average_payout": 74.2,
+  "payout_distribution": {
+    "أقل من 70%": 1,
+    "70% إلى 79%": 3,
+    "80% فأعلى": 1
+  },
+  "market_activity_score": 67.0,
+  "observation_count": 43,
+  "session_activity": {
+    "الجلسة الآسيوية": 56.0,
+    "جلسة التداخل": 74.0,
+    "جلسة لندن": 83.0,
+    "جلسة نيويورك": 68.0
+  },
+  "asset_activity": {
+    "EURUSD": 86.0,
+    "GBPUSD": 76.5,
+    "USDJPY": 67.0,
+    "AUDUSD": 57.5,
+    "EURJPY": 48.0
+  },
+  "assessment": {
+    "activity": "نشاط متوسط",
+    "readiness": "مراقبة إضافية مطلوبة",
+    "severity": "warning"
+  }
+}

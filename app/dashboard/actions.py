@@ -74,6 +74,18 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل مختبر تنفيذ محلي على بيانات تاريخية فقط دون أي اتصال خارجي.",
         command=("scripts/run_execution_simulation.py",),
     ),
+    "observation_layer": ActionDefinition(
+        name="observation_layer",
+        label="تشغيل مراقبة السوق",
+        description="جمع ملاحظات سوق محلية وهمية للبحث فقط دون اتصال وسيط أو تنفيذ.",
+        command=("scripts/run_observation_layer.py",),
+    ),
+    "live_feed": ActionDefinition(
+        name="live_feed",
+        label="تشغيل البث المباشر",
+        description="تشغيل خط بث سوق وهمي للمراقبة والبحث فقط دون اتصال وسيط أو تنفيذ.",
+        command=("scripts/run_live_feed.py",),
+    ),
 }
 
 

@@ -1,0 +1,57 @@
+[
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "AUDUSD",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "rank": 4
+    },
+    "payout_percent": 71.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "EURJPY",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "rank": 5
+    },
+    "payout_percent": 66.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "rank": 1
+    },
+    "payout_percent": 82.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "rank": 2
+    },
+    "payout_percent": 78.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "rank": 3
+    },
+    "payout_percent": 74.0
+  }
+]

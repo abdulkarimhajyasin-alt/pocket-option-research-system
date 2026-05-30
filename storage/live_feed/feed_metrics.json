@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-01-01T12:00:00+00:00",
+  "source": "mock_live_feed_provider",
+  "research_only": true,
+  "observation_only": true,
+  "update_count": 69,
+  "update_frequency": 0.6857,
+  "average_latency_ms": 41.3,
+  "active_assets": 3,
+  "stream_uptime_seconds": 240.0,
+  "missing_updates": 0,
+  "health_score": 94.02,
+  "health_label": "ممتاز",
+  "readiness": "جاهز"
+}

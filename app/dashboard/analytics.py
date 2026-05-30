@@ -285,6 +285,143 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def observation_analytics(self) -> dict[str, Any]:
+        """Return latest broker observation analytics."""
+        summary = self._latest_json_dict("observation", "summary")
+        asset_activity = self._latest_json_dict("observation", "asset_activity")
+        payout_distribution = self._latest_json_dict(
+            "observation",
+            "payout_distribution",
+        )
+        session_activity = self._latest_json_dict("observation", "session_activity")
+        if not summary:
+            summary = {
+                "timestamp": None,
+                "source": None,
+                "active_assets": 0,
+                "average_payout": 0.0,
+                "market_activity_score": 0.0,
+                "observation_count": 0,
+                "assessment": {
+                    "activity": "نشاط منخفض",
+                    "readiness": "بيانات غير كافية",
+                    "severity": "warning",
+                },
+            }
+        if not asset_activity:
+            asset_activity = summary.get("asset_activity", {})
+        if not payout_distribution:
+            payout_distribution = summary.get("payout_distribution", {})
+        if not session_activity:
+            session_activity = summary.get("session_activity", {})
+        active_sessions = (
+            sum(1 for value in session_activity.values() if self._float(value) >= 60)
+            if isinstance(session_activity, dict)
+            else 0
+        )
+        summary = {**summary, "active_sessions": active_sessions}
+        asset_labels, asset_values = self._dict_chart_values(asset_activity)
+        payout_labels, payout_values = self._dict_chart_values(payout_distribution)
+        session_labels, session_values = self._dict_chart_values(session_activity)
+        return {
+            "summary": summary,
+            "asset_activity": bar_chart(
+                "مراقبة الأصول",
+                asset_labels,
+                asset_values,
+                label="الأصول",
+                color="green",
+            ).to_dict(),
+            "payout_distribution": bar_chart(
+                "توزيع العوائد",
+                payout_labels,
+                payout_values,
+                label="العوائد",
+                color="blue",
+            ).to_dict(),
+            "session_activity": bar_chart(
+                "نشاط الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="warning",
+            ).to_dict(),
+        }
+
+    def live_feed_analytics(self) -> dict[str, Any]:
+        """Return latest live-feed analytics."""
+        summary = self._latest_json_dict("live_feed", "summary")
+        health = self._latest_json_dict("live_feed", "health")
+        activity_payload = self._latest_json_dict("live_feed", "activity")
+        latency_rows = self._latest_json_list("live_feed", "latency")
+        if not summary:
+            summary = {
+                "timestamp": None,
+                "update_count": 0,
+                "update_frequency": 0.0,
+                "average_latency_ms": 0.0,
+                "active_assets": 0,
+                "stream_uptime_seconds": 0.0,
+                "missing_updates": 0,
+                "health_score": 0.0,
+                "health_label": "ضعيف",
+                "readiness": "غير مستقر",
+            }
+        severity = "healthy" if self._float(summary.get("health_score")) >= 75 else "warning"
+        summary = {**summary, "severity": severity}
+        activity = activity_payload.get("activity", {}) if activity_payload else {}
+        frequency = activity_payload.get("frequency", {}) if activity_payload else {}
+        session_activity = (
+            activity_payload.get("session_activity", {}) if activity_payload else {}
+        )
+        health_timeline = (
+            activity_payload.get("health_timeline", {}) if activity_payload else {}
+        )
+        latency_labels = [self._short_time(row.get("timestamp")) for row in latency_rows]
+        latency_values = [self._float(row.get("latency_ms")) for row in latency_rows]
+        activity_labels, activity_values = self._dict_chart_values(activity)
+        frequency_labels, frequency_values = self._dict_chart_values(frequency)
+        session_labels, session_values = self._dict_chart_values(session_activity)
+        health_labels, health_values = self._dict_chart_values(health_timeline)
+        return {
+            "summary": {**health, **summary},
+            "frequency": bar_chart(
+                "معدل التحديث",
+                frequency_labels,
+                frequency_values,
+                label="التحديثات",
+                color="green",
+            ).to_dict(),
+            "latency": line_chart(
+                "زمن الاستجابة",
+                latency_labels,
+                latency_values,
+                label="التأخير",
+                color="blue",
+            ).to_dict(),
+            "activity": bar_chart(
+                "الأصول النشطة",
+                activity_labels,
+                activity_values,
+                label="الأصول",
+                color="accent",
+            ).to_dict(),
+            "health_timeline": line_chart(
+                "صحة البث",
+                health_labels,
+                health_values,
+                label="الصحة",
+                color="warning",
+            ).to_dict(),
+            "session_activity": bar_chart(
+                "نشاط الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="green",
+            ).to_dict(),
+        }
+
     def report_visualization(self, payload: Any) -> dict[str, Any]:
         """Build generic cards and charts for a JSON report."""
         if not isinstance(payload, dict):

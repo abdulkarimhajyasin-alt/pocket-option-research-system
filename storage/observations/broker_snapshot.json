@@ -1,0 +1,586 @@
+{
+  "timestamp": "2026-01-01T12:00:00+00:00",
+  "asset": "ALL",
+  "timeframe": "snapshot",
+  "source": "mock_observation_provider",
+  "metadata": {
+    "provider_mode": "mock",
+    "research_only": true,
+    "no_broker_interaction": true,
+    "normalized": true
+  },
+  "assets": [
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "research_only": true
+      },
+      "is_active": true,
+      "activity_score": 57.5,
+      "display_name": "AUDUSD"
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "research_only": true
+      },
+      "is_active": false,
+      "activity_score": 48.0,
+      "display_name": "EURJPY"
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "research_only": true
+      },
+      "is_active": true,
+      "activity_score": 86.0,
+      "display_name": "EURUSD"
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "research_only": true
+      },
+      "is_active": true,
+      "activity_score": 76.5,
+      "display_name": "GBPUSD"
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "research_only": true
+      },
+      "is_active": true,
+      "activity_score": 67.0,
+      "display_name": "USDJPY"
+    }
+  ],
+  "markets": [
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "status": "active",
+      "spread_proxy": 1.16,
+      "volatility_score": 70.88
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "status": "watch_only",
+      "spread_proxy": 1.28,
+      "volatility_score": 66.6
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "status": "active",
+      "spread_proxy": 0.8,
+      "volatility_score": 83.7
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "status": "active",
+      "spread_proxy": 0.92,
+      "volatility_score": 79.43
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "status": "active",
+      "spread_proxy": 1.04,
+      "volatility_score": 75.15
+    }
+  ],
+  "payouts": [
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "rank": 4
+      },
+      "payout_percent": 71.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "rank": 5
+      },
+      "payout_percent": 66.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "rank": 1
+      },
+      "payout_percent": 82.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "rank": 2
+      },
+      "payout_percent": 78.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock",
+        "rank": 3
+      },
+      "payout_percent": 74.0
+    }
+  ],
+  "sessions": [
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "ALL",
+      "timeframe": "session",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "session_name": "الجلسة الآسيوية",
+      "is_active": false,
+      "activity_score": 56.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "ALL",
+      "timeframe": "session",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "session_name": "جلسة التداخل",
+      "is_active": true,
+      "activity_score": 74.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "ALL",
+      "timeframe": "session",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "session_name": "جلسة لندن",
+      "is_active": true,
+      "activity_score": 83.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "ALL",
+      "timeframe": "session",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "session_name": "جلسة نيويورك",
+      "is_active": true,
+      "activity_score": 68.0
+    }
+  ],
+  "candles": [
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.125,
+      "high": 1.12532,
+      "low": 1.1248,
+      "close": 1.12512,
+      "volume": 1450
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.12518,
+      "high": 1.12562,
+      "low": 1.12498,
+      "close": 1.12542,
+      "volume": 1475
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.12536,
+      "high": 1.12556,
+      "low": 1.12492,
+      "close": 1.12512,
+      "volume": 1500
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.12554,
+      "high": 1.12574,
+      "low": 1.12522,
+      "close": 1.12542,
+      "volume": 1525
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.12572,
+      "high": 1.12592,
+      "low": 1.12552,
+      "close": 1.12572,
+      "volume": 1550
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.1259,
+      "high": 1.12622,
+      "low": 1.1257,
+      "close": 1.12602,
+      "volume": 1575
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.08,
+      "high": 1.0802,
+      "low": 1.07956,
+      "close": 1.07976,
+      "volume": 1000
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.08018,
+      "high": 1.08038,
+      "low": 1.07986,
+      "close": 1.08006,
+      "volume": 1025
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.08036,
+      "high": 1.08056,
+      "low": 1.08016,
+      "close": 1.08036,
+      "volume": 1050
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.08054,
+      "high": 1.08086,
+      "low": 1.08034,
+      "close": 1.08066,
+      "volume": 1075
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.08072,
+      "high": 1.08116,
+      "low": 1.08052,
+      "close": 1.08096,
+      "volume": 1100
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.0809,
+      "high": 1.0811,
+      "low": 1.08046,
+      "close": 1.08066,
+      "volume": 1125
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.095,
+      "high": 1.0952,
+      "low": 1.09468,
+      "close": 1.09488,
+      "volume": 1150
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.09518,
+      "high": 1.09538,
+      "low": 1.09498,
+      "close": 1.09518,
+      "volume": 1175
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.09536,
+      "high": 1.09568,
+      "low": 1.09516,
+      "close": 1.09548,
+      "volume": 1200
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.09554,
+      "high": 1.09598,
+      "low": 1.09534,
+      "close": 1.09578,
+      "volume": 1225
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.09572,
+      "high": 1.09592,
+      "low": 1.09528,
+      "close": 1.09548,
+      "volume": 1250
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.0959,
+      "high": 1.0961,
+      "low": 1.09558,
+      "close": 1.09578,
+      "volume": 1275
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.11,
+      "high": 1.1102,
+      "low": 1.1098,
+      "close": 1.11,
+      "volume": 1300
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.11018,
+      "high": 1.1105,
+      "low": 1.10998,
+      "close": 1.1103,
+      "volume": 1325
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.11036,
+      "high": 1.1108,
+      "low": 1.11016,
+      "close": 1.1106,
+      "volume": 1350
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.11054,
+      "high": 1.11074,
+      "low": 1.1101,
+      "close": 1.1103,
+      "volume": 1375
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.11072,
+      "high": 1.11092,
+      "low": 1.1104,
+      "close": 1.1106,
+      "volume": 1400
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "source": "mock_observation_provider",
+      "metadata": {
+        "provider_mode": "mock"
+      },
+      "open": 1.1109,
+      "high": 1.1111,
+      "low": 1.1107,
+      "close": 1.1109,
+      "volume": 1425
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.live_feed }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بنية مراقبة فورية فقط</p>
+    <h1>{{ t.pages.live_feed }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث البث</a>
+</section>
+
+<section class="decision-strip severity-{{ live_feed.summary.severity|default('warning') }}">
+  <strong>{{ live_feed.summary.readiness|default('يحتاج مراقبة') }}</strong>
+  <span>حالة البث: {{ live_feed.summary.health_label|default('ضعيف') }}</span>
+  <small>تقييم جاهزية البنية فقط دون توصيات تداول أو توقعات ربحية</small>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card">
+    <span>حالة البث</span>
+    <strong>{{ live_feed.summary.readiness|default('غير مستقر') }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>زمن الاستجابة</span>
+    <strong>{{ live_feed.summary.average_latency_ms|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>الأصول النشطة</span>
+    <strong>{{ live_feed.summary.active_assets|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>عدد التحديثات</span>
+    <strong>{{ live_feed.summary.update_count|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>صحة البث</span>
+    <strong>{{ live_feed.summary.health_score|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>معدل التحديث</span>
+    <strong>{{ live_feed.summary.update_frequency|default(0)|number_ar }}</strong>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>معدل التحديث</h2><span>التحديثات الحية</span></div>
+    <div class="chart" data-chart='{{ live_feed.frequency|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>زمن الاستجابة</h2><span>قياس التأخير</span></div>
+    <div class="chart" data-chart='{{ live_feed.latency|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>الأصول النشطة</h2><span>نشاط التحديثات</span></div>
+    <div class="chart" data-chart='{{ live_feed.activity|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>صحة البث</h2><span>خط زمني</span></div>
+    <div class="chart" data-chart='{{ live_feed.health_timeline|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>نشاط الجلسات</h2><span>رؤية السوق</span></div>
+    <div class="chart" data-chart='{{ live_feed.session_activity|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>تفاصيل البث</h2><span>بحث فقط</span></div>
+    <div class="detail-grid">
+      <div><span>آخر تحديث</span><strong>{{ live_feed.summary.timestamp|default('غير متاح')|datetime_ar }}</strong></div>
+      <div><span>تحديثات مفقودة</span><strong>{{ live_feed.summary.missing_updates|default(0)|number_ar }}</strong></div>
+      <div><span>مدة التشغيل</span><strong>{{ live_feed.summary.stream_uptime_seconds|default(0)|number_ar }}</strong></div>
+      <div><span>وضع الطبقة</span><strong>مراقبة وبيانات فقط</strong></div>
+    </div>
+  </article>
+</section>
+{% endblock %}

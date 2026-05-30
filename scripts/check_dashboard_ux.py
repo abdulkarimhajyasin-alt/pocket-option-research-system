@@ -27,6 +27,8 @@ def main() -> None:
         PROJECT_ROOT / "app/templates/dashboard/validation.html",
         PROJECT_ROOT / "app/templates/dashboard/strategies.html",
         PROJECT_ROOT / "app/templates/dashboard/execution.html",
+        PROJECT_ROOT / "app/templates/dashboard/observation.html",
+        PROJECT_ROOT / "app/templates/dashboard/live_feed.html",
     ]
     css = (PROJECT_ROOT / "app/static/dashboard/dashboard.css").read_text(encoding="utf-8")
     overview_template = templates[0].read_text(encoding="utf-8")
@@ -57,6 +59,8 @@ def main() -> None:
             "/validation",
             "/strategies",
             "/execution",
+            "/observation",
+            "/live-feed",
         }.issubset(route_paths),
         "overview_panel": "درجة الجاهزية البحثية" in overview_template,
         "no_overview_iso_literal": "T00:00:00" not in overview_template,

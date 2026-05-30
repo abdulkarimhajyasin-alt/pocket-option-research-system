@@ -1,0 +1,692 @@
+[
+  {
+    "timestamp": "2026-01-01T11:59:25+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 0
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:30+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 1
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:35+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 2
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:40+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 3
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:45+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 4
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:50+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 5
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:55+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 6
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 7
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:25+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 8
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:30+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 9
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:35+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 10
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:40+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 11
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:45+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 12
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:50+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 13
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:55+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 14
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 15
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:25+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 16
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:30+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 17
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:35+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 18
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:40+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 19
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:45+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 20
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:50+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 21
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:55+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 22
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "tick",
+    "metadata": {
+      "sequence": 23
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 24
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 25
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 26
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 27
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 28
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 29
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 30
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 31
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 32
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 33
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 34
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 35
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 36
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 37
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "EURUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 38
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 39
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 40
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 41
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 42
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 43
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 44
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 45
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 46
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 47
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 48
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 49
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 50
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 51
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 52
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "GBPUSD",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 53
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 54
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 55
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 56
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 57
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "15m",
+    "metadata": {
+      "sequence": 58
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 59
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 60
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 61
+    },
+    "latency_ms": 50.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 62
+    },
+    "latency_ms": 55.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "metadata": {
+      "sequence": 63
+    },
+    "latency_ms": 28.0
+  },
+  {
+    "timestamp": "2026-01-01T11:56:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 64
+    },
+    "latency_ms": 32.5
+  },
+  {
+    "timestamp": "2026-01-01T11:57:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 65
+    },
+    "latency_ms": 37.0
+  },
+  {
+    "timestamp": "2026-01-01T11:58:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 66
+    },
+    "latency_ms": 41.5
+  },
+  {
+    "timestamp": "2026-01-01T11:59:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 67
+    },
+    "latency_ms": 46.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "source": "mock_live_feed_provider",
+    "asset": "USDJPY",
+    "timeframe": "5m",
+    "metadata": {
+      "sequence": 68
+    },
+    "latency_ms": 50.5
+  }
+]

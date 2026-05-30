@@ -1,0 +1,67 @@
+[
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "AUDUSD",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "research_only": true
+    },
+    "is_active": true,
+    "activity_score": 57.5,
+    "display_name": "AUDUSD"
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "EURJPY",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "research_only": true
+    },
+    "is_active": false,
+    "activity_score": 48.0,
+    "display_name": "EURJPY"
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "research_only": true
+    },
+    "is_active": true,
+    "activity_score": 86.0,
+    "display_name": "EURUSD"
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "research_only": true
+    },
+    "is_active": true,
+    "activity_score": 76.5,
+    "display_name": "GBPUSD"
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "source": "mock_observation_provider",
+    "metadata": {
+      "provider_mode": "mock",
+      "research_only": true
+    },
+    "is_active": true,
+    "activity_score": 67.0,
+    "display_name": "USDJPY"
+  }
+]

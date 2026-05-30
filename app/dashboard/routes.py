@@ -250,6 +250,34 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/observation", response_class=HTMLResponse)
+    def observation(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/observation.html",
+            context(
+                request,
+                dashboard,
+                page="observation",
+                observation=dashboard.analytics.observation_analytics(),
+            ),
+        )
+
+    @app.get("/live-feed", response_class=HTMLResponse)
+    def live_feed(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/live_feed.html",
+            context(
+                request,
+                dashboard,
+                page="live_feed",
+                live_feed=dashboard.analytics.live_feed_analytics(),
+            ),
+        )
+
     @app.get("/api/dashboard")
     def api_dashboard() -> dict[str, object]:
         dashboard = dashboard_context()
@@ -276,6 +304,14 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/execution")
     def api_execution() -> dict[str, object]:
         return dashboard_context().analytics.execution_analytics()
+
+    @app.get("/api/observation")
+    def api_observation() -> dict[str, object]:
+        return dashboard_context().analytics.observation_analytics()
+
+    @app.get("/api/live-feed")
+    def api_live_feed() -> dict[str, object]:
+        return dashboard_context().analytics.live_feed_analytics()
 
     @app.get("/actions", response_class=HTMLResponse)
     def actions(request: Request) -> HTMLResponse:

@@ -1,0 +1,76 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.observation }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث ومراقبة فقط</p>
+    <h1>{{ t.pages.observation }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث المراقبة</a>
+</section>
+
+<section class="decision-strip severity-{{ observation.summary.assessment.severity|default('warning') }}">
+  <strong>{{ observation.summary.assessment.activity|default('نشاط منخفض') }}</strong>
+  <span>{{ observation.summary.assessment.readiness|default('بيانات غير كافية') }}</span>
+  <small>تقييم رؤية السوق فقط دون توصيات تداول أو توقعات ربحية</small>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card">
+    <span>الأصول النشطة</span>
+    <strong>{{ observation.summary.active_assets|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>متوسط العائد</span>
+    <strong>{{ observation.summary.average_payout|default(0)|number_ar }}%</strong>
+  </article>
+  <article class="metric-card">
+    <span>نشاط السوق</span>
+    <strong>{{ observation.summary.market_activity_score|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>الجلسات النشطة</span>
+    <strong>{{ observation.summary.active_sessions|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>عدد الملاحظات</span>
+    <strong>{{ observation.summary.observation_count|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>آخر تحديث</span>
+    <strong>{{ observation.summary.timestamp|default('غير متاح')|datetime_ar }}</strong>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>مراقبة الأصول</h2><span>الأكثر نشاطا</span></div>
+    <div class="chart" data-chart='{{ observation.asset_activity|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع العوائد</h2><span>مستويات العائد</span></div>
+    <div class="chart" data-chart='{{ observation.payout_distribution|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>نشاط الجلسات</h2><span>آسيا / لندن / نيويورك / التداخل</span></div>
+    <div class="chart" data-chart='{{ observation.session_activity|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>حالة السوق</h2><span>رؤية بحثية</span></div>
+    <div class="detail-grid">
+      <div><span>نشاط السوق</span><strong>{{ observation.summary.assessment.activity|default('نشاط منخفض') }}</strong></div>
+      <div><span>جاهزية المراقبة</span><strong>{{ observation.summary.assessment.readiness|default('بيانات غير كافية') }}</strong></div>
+      <div><span>مصدر البيانات</span><strong>{{ observation.summary.source|default('غير متاح') }}</strong></div>
+      <div><span>وضع الطبقة</span><strong>قراءة ومراقبة فقط</strong></div>
+    </div>
+  </article>
+</section>
+
+{% if observation.summary.observation_count|default(0) == 0 %}
+  <p class="empty">لا توجد ملاحظات سوق محفوظة بعد.</p>
+{% endif %}
+{% endblock %}
+

@@ -27,6 +27,8 @@ def main() -> None:
         "/signals",
         "/reports",
         "/execution",
+        "/observation",
+        "/live-feed",
         "/actions",
     }
     missing_routes = sorted(required_routes - route_paths)
@@ -34,6 +36,8 @@ def main() -> None:
         PROJECT_ROOT / "app/templates/dashboard/base.html",
         PROJECT_ROOT / "app/templates/dashboard/overview.html",
         PROJECT_ROOT / "app/templates/dashboard/execution.html",
+        PROJECT_ROOT / "app/templates/dashboard/observation.html",
+        PROJECT_ROOT / "app/templates/dashboard/live_feed.html",
         PROJECT_ROOT / "app/templates/dashboard/actions.html",
     ]
     static_assets = [
