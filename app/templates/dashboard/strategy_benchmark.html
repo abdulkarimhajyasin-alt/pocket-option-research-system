@@ -1,0 +1,69 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.strategy_benchmark }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.strategy_benchmark }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث المقارنة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>أفضل ملف استراتيجي</span>
+    <strong>{{ strategy_benchmark.summary.best_profile|default('غير متاح') }}</strong>
+    <p>{{ strategy_benchmark.best.selection_reason|default('لا توجد مقارنة محفوظة بعد.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>الدرجة</span>
+    <strong>{{ strategy_benchmark.summary.highest_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>سبب الاختيار</span>
+    <strong>{{ strategy_benchmark.summary.certification_state|default('غير متاح') }}</strong>
+    <small>الجاهزية {{ strategy_benchmark.summary.highest_readiness|default(0)|number_ar }}</small>
+    <small>الاستقرار {{ strategy_benchmark.summary.highest_stability|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد الملفات</span><strong>{{ strategy_benchmark.summary.profile_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أفضل ملف</span><strong>{{ strategy_benchmark.summary.best_profile|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>أعلى درجة</span><strong>{{ strategy_benchmark.summary.highest_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>متوسط الأداء</span><strong>{{ strategy_benchmark.summary.average_performance|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أعلى استقرار</span><strong>{{ strategy_benchmark.summary.highest_stability|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أعلى جاهزية</span><strong>{{ strategy_benchmark.summary.highest_readiness|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>ترتيب الملفات</h2><span>المقارنة</span></div><div class="chart" data-chart='{{ strategy_benchmark.ranking|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الدرجات</h2><span>النتائج</span></div><div class="chart" data-chart='{{ strategy_benchmark.scores|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الجاهزية</h2><span>البحث</span></div><div class="chart" data-chart='{{ strategy_benchmark.readiness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الاستقرار</h2><span>المتانة</span></div><div class="chart" data-chart='{{ strategy_benchmark.stability|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الجودة</h2><span>العناصر</span></div><div class="chart" data-chart='{{ strategy_benchmark.quality|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>المقارنة الزمنية</h2><span>الاتجاه</span></div><div class="chart" data-chart='{{ strategy_benchmark.timeline|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحسينات</h2><span>الفوارق</span></div><div class="chart" data-chart='{{ strategy_benchmark.improvements|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التراجعات</h2><span>الفوارق</span></div><div class="chart" data-chart='{{ strategy_benchmark.degradations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>نقاط القوة</h2><span>الملفات</span></div><div class="chart" data-chart='{{ strategy_benchmark.strengths|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>نقاط الضعف</h2><span>الملفات</span></div><div class="chart" data-chart='{{ strategy_benchmark.weaknesses|tojson }}'></div></article>
+</section>
+<section class="panel">
+  <div class="panel-title"><h2>التوصيات</h2><span>بحث فقط</span></div>
+  <ul class="compact-list">
+    {% for item in strategy_benchmark.recommendations %}
+    <li>{{ item.title }} - {{ item.reason }}</li>
+    {% else %}
+    <li>غير متاح</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

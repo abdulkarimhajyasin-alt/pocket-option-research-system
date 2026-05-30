@@ -1,0 +1,47 @@
+[
+  {
+    "profile_id": "current",
+    "status": "unchanged",
+    "status_ar": "دون تغيير",
+    "score_delta": 0.0,
+    "quality_delta": 0.0,
+    "stability_delta": 0.0,
+    "readiness_delta": 0.0
+  },
+  {
+    "profile_id": "conservative",
+    "status": "unchanged",
+    "status_ar": "دون تغيير",
+    "score_delta": 1.06,
+    "quality_delta": -1.0,
+    "stability_delta": 4.0,
+    "readiness_delta": -1.0
+  },
+  {
+    "profile_id": "balanced",
+    "status": "unchanged",
+    "status_ar": "دون تغيير",
+    "score_delta": 2.16,
+    "quality_delta": 2.0,
+    "stability_delta": 2.0,
+    "readiness_delta": 2.0
+  },
+  {
+    "profile_id": "aggressive",
+    "status": "unchanged",
+    "status_ar": "دون تغيير",
+    "score_delta": -0.52,
+    "quality_delta": 2.0,
+    "stability_delta": -2.0,
+    "readiness_delta": -2.0
+  },
+  {
+    "profile_id": "experimental",
+    "status": "unchanged",
+    "status_ar": "دون تغيير",
+    "score_delta": -2.45,
+    "quality_delta": -3.0,
+    "stability_delta": -3.0,
+    "readiness_delta": -3.0
+  }
+]

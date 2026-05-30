@@ -1,0 +1,77 @@
+[
+  {
+    "rank": 1,
+    "profile_id": "balanced",
+    "profile_name": "الملف المتوازن",
+    "score": 60.09,
+    "strengths": [
+      "repeatability"
+    ],
+    "weaknesses": [
+      "quality",
+      "consistency",
+      "robustness"
+    ],
+    "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+  },
+  {
+    "rank": 2,
+    "profile_id": "conservative",
+    "profile_name": "الملف المحافظ",
+    "score": 58.99,
+    "strengths": [
+      "repeatability"
+    ],
+    "weaknesses": [
+      "quality",
+      "robustness"
+    ],
+    "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+  },
+  {
+    "rank": 3,
+    "profile_id": "current",
+    "profile_name": "الملف الحالي",
+    "score": 57.93,
+    "strengths": [
+      "repeatability"
+    ],
+    "weaknesses": [
+      "quality",
+      "consistency",
+      "robustness"
+    ],
+    "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+  },
+  {
+    "rank": 4,
+    "profile_id": "aggressive",
+    "profile_name": "الملف النشط",
+    "score": 57.41,
+    "strengths": [
+      "repeatability"
+    ],
+    "weaknesses": [
+      "quality",
+      "consistency",
+      "robustness"
+    ],
+    "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+  },
+  {
+    "rank": 5,
+    "profile_id": "experimental",
+    "profile_name": "الملف التجريبي",
+    "score": 55.48,
+    "strengths": [
+      "repeatability"
+    ],
+    "weaknesses": [
+      "quality",
+      "consistency",
+      "robustness",
+      "stability"
+    ],
+    "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+  }
+]

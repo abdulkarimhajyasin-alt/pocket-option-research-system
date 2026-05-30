@@ -1,0 +1,496 @@
+{
+  "timestamp": "2026-05-30T22:28:23.476063",
+  "comparisons": [
+    {
+      "profile": {
+        "profile_id": "current",
+        "profile_name": "الملف الحالي",
+        "profile_description": "خط الأساس الحالي للمقارنة البحثية.",
+        "weights": {
+          "readiness": 0.18,
+          "stability": 0.16,
+          "consistency": 0.14,
+          "confidence": 0.14,
+          "signal": 0.14,
+          "opportunity": 0.12,
+          "confluence": 0.12
+        },
+        "thresholds": {
+          "minimum_score": 60,
+          "minimum_stability": 55
+        },
+        "metadata": {},
+        "research_only": true
+      },
+      "readiness_score": 64.06,
+      "stability_score": 62.97,
+      "consistency_score": 56.36,
+      "confidence_accuracy": 46.18,
+      "signal_quality": 62.0,
+      "opportunity_quality": 58.01,
+      "confluence_quality": 52.73,
+      "adjusted_metrics": {
+        "readiness": 64.06,
+        "stability": 62.97,
+        "consistency": 56.36,
+        "confidence": 46.18,
+        "signal": 62.0,
+        "opportunity": 58.01,
+        "confluence": 52.73
+      },
+      "research_only": true,
+      "not_trading_recommendation": true
+    },
+    {
+      "profile": {
+        "profile_id": "conservative",
+        "profile_name": "الملف المحافظ",
+        "profile_description": "يرفع وزن الاستقرار والتكرارية ويخفض حساسية الفرص.",
+        "weights": {
+          "readiness": 0.18,
+          "stability": 0.22,
+          "consistency": 0.14,
+          "confidence": 0.14,
+          "signal": 0.14,
+          "opportunity": 0.08,
+          "confluence": 0.12
+        },
+        "thresholds": {
+          "minimum_score": 70,
+          "minimum_stability": 70
+        },
+        "metadata": {},
+        "research_only": true
+      },
+      "readiness_score": 63.06,
+      "stability_score": 66.97,
+      "consistency_score": 60.36,
+      "confidence_accuracy": 45.18,
+      "signal_quality": 61.0,
+      "opportunity_quality": 57.01,
+      "confluence_quality": 51.73,
+      "adjusted_metrics": {
+        "readiness": 63.06,
+        "stability": 66.97,
+        "consistency": 60.36,
+        "confidence": 45.18,
+        "signal": 61.0,
+        "opportunity": 57.01,
+        "confluence": 51.73
+      },
+      "research_only": true,
+      "not_trading_recommendation": true
+    },
+    {
+      "profile": {
+        "profile_id": "balanced",
+        "profile_name": "الملف المتوازن",
+        "profile_description": "يوزع الوزن بين الجاهزية والجودة والاستقرار.",
+        "weights": {
+          "readiness": 0.2,
+          "stability": 0.16,
+          "consistency": 0.14,
+          "confidence": 0.14,
+          "signal": 0.15,
+          "opportunity": 0.12,
+          "confluence": 0.12
+        },
+        "thresholds": {
+          "minimum_score": 65,
+          "minimum_stability": 60
+        },
+        "metadata": {},
+        "research_only": true
+      },
+      "readiness_score": 66.06,
+      "stability_score": 64.97,
+      "consistency_score": 58.36,
+      "confidence_accuracy": 48.18,
+      "signal_quality": 64.0,
+      "opportunity_quality": 60.01,
+      "confluence_quality": 54.73,
+      "adjusted_metrics": {
+        "readiness": 66.06,
+        "stability": 64.97,
+        "consistency": 58.36,
+        "confidence": 48.18,
+        "signal": 64.0,
+        "opportunity": 60.01,
+        "confluence": 54.73
+      },
+      "research_only": true,
+      "not_trading_recommendation": true
+    },
+    {
+      "profile": {
+        "profile_id": "aggressive",
+        "profile_name": "الملف النشط",
+        "profile_description": "يرفع وزن جودة الفرص والتوافق مع قبول تذبذب أعلى.",
+        "weights": {
+          "readiness": 0.18,
+          "stability": 0.1,
+          "consistency": 0.14,
+          "confidence": 0.14,
+          "signal": 0.14,
+          "opportunity": 0.18,
+          "confluence": 0.16
+        },
+        "thresholds": {
+          "minimum_score": 62,
+          "minimum_stability": 50
+        },
+        "metadata": {},
+        "research_only": true
+      },
+      "readiness_score": 62.06,
+      "stability_score": 60.97,
+      "consistency_score": 54.36,
+      "confidence_accuracy": 44.18,
+      "signal_quality": 60.0,
+      "opportunity_quality": 62.01,
+      "confluence_quality": 56.73,
+      "adjusted_metrics": {
+        "readiness": 62.06,
+        "stability": 60.97,
+        "consistency": 54.36,
+        "confidence": 44.18,
+        "signal": 60.0,
+        "opportunity": 62.01,
+        "confluence": 56.73
+      },
+      "research_only": true,
+      "not_trading_recommendation": true
+    },
+    {
+      "profile": {
+        "profile_id": "experimental",
+        "profile_name": "الملف التجريبي",
+        "profile_description": "يستخدم للمقارنة البحثية فقط عند اختبار فرضيات جديدة.",
+        "weights": {
+          "readiness": 0.18,
+          "stability": 0.16,
+          "consistency": 0.1,
+          "confidence": 0.2,
+          "signal": 0.14,
+          "opportunity": 0.12,
+          "confluence": 0.12
+        },
+        "thresholds": {
+          "minimum_score": 55,
+          "minimum_stability": 45
+        },
+        "metadata": {
+          "experimental": true
+        },
+        "research_only": true
+      },
+      "readiness_score": 61.06,
+      "stability_score": 59.97,
+      "consistency_score": 53.36,
+      "confidence_accuracy": 49.18,
+      "signal_quality": 59.0,
+      "opportunity_quality": 55.01,
+      "confluence_quality": 49.73,
+      "adjusted_metrics": {
+        "readiness": 61.06,
+        "stability": 59.97,
+        "consistency": 53.36,
+        "confidence": 49.18,
+        "signal": 59.0,
+        "opportunity": 55.01,
+        "confluence": 49.73
+      },
+      "research_only": true,
+      "not_trading_recommendation": true
+    }
+  ],
+  "scores": [
+    {
+      "profile_id": "current",
+      "score": 57.93,
+      "state": "ضعيفة",
+      "explanation": "درجة بحثية ضعيفة مبنية على الجودة والاستقرار والتكرارية.",
+      "components": {
+        "quality": 57.58,
+        "consistency": 56.36,
+        "robustness": 55.17,
+        "stability": 62.97,
+        "repeatability": 82.12
+      },
+      "research_only": true
+    },
+    {
+      "profile_id": "conservative",
+      "score": 58.99,
+      "state": "ضعيفة",
+      "explanation": "درجة بحثية ضعيفة مبنية على الجودة والاستقرار والتكرارية.",
+      "components": {
+        "quality": 56.58,
+        "consistency": 60.36,
+        "robustness": 57.5,
+        "stability": 66.97,
+        "repeatability": 78.21
+      },
+      "research_only": true
+    },
+    {
+      "profile_id": "balanced",
+      "score": 60.09,
+      "state": "متوسطة",
+      "explanation": "درجة بحثية متوسطة مبنية على الجودة والاستقرار والتكرارية.",
+      "components": {
+        "quality": 59.58,
+        "consistency": 58.36,
+        "robustness": 57.17,
+        "stability": 64.97,
+        "repeatability": 82.12
+      },
+      "research_only": true
+    },
+    {
+      "profile_id": "aggressive",
+      "score": 57.41,
+      "state": "ضعيفة",
+      "explanation": "درجة بحثية ضعيفة مبنية على الجودة والاستقرار والتكرارية.",
+      "components": {
+        "quality": 59.58,
+        "consistency": 54.36,
+        "robustness": 53.17,
+        "stability": 60.97,
+        "repeatability": 82.12
+      },
+      "research_only": true
+    },
+    {
+      "profile_id": "experimental",
+      "score": 55.48,
+      "state": "ضعيفة",
+      "explanation": "درجة بحثية ضعيفة مبنية على الجودة والاستقرار والتكرارية.",
+      "components": {
+        "quality": 54.58,
+        "consistency": 53.36,
+        "robustness": 54.17,
+        "stability": 59.97,
+        "repeatability": 88.12
+      },
+      "research_only": true
+    }
+  ],
+  "robustness": [
+    {
+      "profile_id": "current",
+      "score": 67.69,
+      "repeatability": 82.12,
+      "stability": 62.97,
+      "consistency": 56.36,
+      "variance": 17.88
+    },
+    {
+      "profile_id": "conservative",
+      "score": 68.92,
+      "repeatability": 78.21,
+      "stability": 66.97,
+      "consistency": 60.36,
+      "variance": 21.79
+    },
+    {
+      "profile_id": "balanced",
+      "score": 68.99,
+      "repeatability": 82.12,
+      "stability": 64.97,
+      "consistency": 58.36,
+      "variance": 17.88
+    },
+    {
+      "profile_id": "aggressive",
+      "score": 66.39,
+      "repeatability": 82.12,
+      "stability": 60.97,
+      "consistency": 54.36,
+      "variance": 17.88
+    },
+    {
+      "profile_id": "experimental",
+      "score": 67.84,
+      "repeatability": 88.12,
+      "stability": 59.97,
+      "consistency": 53.36,
+      "variance": 11.88
+    }
+  ],
+  "improvements": [
+    {
+      "profile_id": "current",
+      "status": "unchanged",
+      "status_ar": "دون تغيير",
+      "score_delta": 0.0,
+      "quality_delta": 0.0,
+      "stability_delta": 0.0,
+      "readiness_delta": 0.0
+    },
+    {
+      "profile_id": "conservative",
+      "status": "unchanged",
+      "status_ar": "دون تغيير",
+      "score_delta": 1.06,
+      "quality_delta": -1.0,
+      "stability_delta": 4.0,
+      "readiness_delta": -1.0
+    },
+    {
+      "profile_id": "balanced",
+      "status": "unchanged",
+      "status_ar": "دون تغيير",
+      "score_delta": 2.16,
+      "quality_delta": 2.0,
+      "stability_delta": 2.0,
+      "readiness_delta": 2.0
+    },
+    {
+      "profile_id": "aggressive",
+      "status": "unchanged",
+      "status_ar": "دون تغيير",
+      "score_delta": -0.52,
+      "quality_delta": 2.0,
+      "stability_delta": -2.0,
+      "readiness_delta": -2.0
+    },
+    {
+      "profile_id": "experimental",
+      "status": "unchanged",
+      "status_ar": "دون تغيير",
+      "score_delta": -2.45,
+      "quality_delta": -3.0,
+      "stability_delta": -3.0,
+      "readiness_delta": -3.0
+    }
+  ],
+  "rankings": [
+    {
+      "rank": 1,
+      "profile_id": "balanced",
+      "profile_name": "الملف المتوازن",
+      "score": 60.09,
+      "strengths": [
+        "repeatability"
+      ],
+      "weaknesses": [
+        "quality",
+        "consistency",
+        "robustness"
+      ],
+      "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+    },
+    {
+      "rank": 2,
+      "profile_id": "conservative",
+      "profile_name": "الملف المحافظ",
+      "score": 58.99,
+      "strengths": [
+        "repeatability"
+      ],
+      "weaknesses": [
+        "quality",
+        "robustness"
+      ],
+      "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+    },
+    {
+      "rank": 3,
+      "profile_id": "current",
+      "profile_name": "الملف الحالي",
+      "score": 57.93,
+      "strengths": [
+        "repeatability"
+      ],
+      "weaknesses": [
+        "quality",
+        "consistency",
+        "robustness"
+      ],
+      "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+    },
+    {
+      "rank": 4,
+      "profile_id": "aggressive",
+      "profile_name": "الملف النشط",
+      "score": 57.41,
+      "strengths": [
+        "repeatability"
+      ],
+      "weaknesses": [
+        "quality",
+        "consistency",
+        "robustness"
+      ],
+      "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+    },
+    {
+      "rank": 5,
+      "profile_id": "experimental",
+      "profile_name": "الملف التجريبي",
+      "score": 55.48,
+      "strengths": [
+        "repeatability"
+      ],
+      "weaknesses": [
+        "quality",
+        "consistency",
+        "robustness",
+        "stability"
+      ],
+      "selection_reason": "تم ترتيبه وفق تفوقه في repeatability"
+    }
+  ],
+  "recommendations": [
+    {
+      "title": "اعتماد الملف المتوازن للمقارنة البحثية",
+      "priority": "عالية",
+      "reason": "تم ترتيبه وفق تفوقه في repeatability",
+      "profile_id": "balanced"
+    },
+    {
+      "title": "تحسين الاستقرار",
+      "priority": "عالية",
+      "reason": "بعض الملفات تظهر متانة أقل من المستوى البحثي المطلوب.",
+      "profile_id": null
+    },
+    {
+      "title": "تحسين جودة الفرص",
+      "priority": "متوسطة",
+      "reason": "رفع جودة التأهيل يساعد المقارنة بين الملفات.",
+      "profile_id": null
+    },
+    {
+      "title": "تحسين الثقة",
+      "priority": "متوسطة",
+      "reason": "تحتاج دقة الثقة إلى متابعة مستمرة عبر العينات.",
+      "profile_id": null
+    },
+    {
+      "title": "زيادة البيانات",
+      "priority": "منخفضة",
+      "reason": "العينات الأوسع تقلل التباين وتدعم التكرارية.",
+      "profile_id": null
+    }
+  ],
+  "certification": {
+    "state": "تحتاج تحسين",
+    "explanation": "يلزم تحسين الجودة أو الاستقرار قبل المقارنة المتقدمة.",
+    "not_deployment_approval": true,
+    "not_trading_recommendation": true
+  },
+  "metadata": {
+    "research_only": true,
+    "not_execution": true,
+    "not_broker_control": true,
+    "not_account_interaction": true,
+    "not_investment_advice": true,
+    "not_profitability_claim": true
+  },
+  "research_only": true,
+  "not_execution": true,
+  "not_broker_control": true,
+  "not_investment_advice": true,
+  "not_profitability_claim": true
+}

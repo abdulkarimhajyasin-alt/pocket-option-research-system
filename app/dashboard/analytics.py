@@ -1346,6 +1346,115 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def strategy_benchmark_analytics(self) -> dict[str, Any]:
+        """Return latest strategy benchmark analytics."""
+        summary_payload = self._latest_json_dict("strategy_benchmark", "summary")
+        summary = summary_payload.get("summary", {}) if summary_payload else {}
+        best = summary_payload.get("best_profile", {}) if summary_payload else {}
+        benchmark = (
+            summary_payload.get("benchmark_distribution", {}) if summary_payload else {}
+        )
+        readiness = (
+            summary_payload.get("readiness_distribution", {}) if summary_payload else {}
+        )
+        stability = (
+            summary_payload.get("stability_distribution", {}) if summary_payload else {}
+        )
+        quality = (
+            summary_payload.get("quality_distribution", {}) if summary_payload else {}
+        )
+        timeline = summary_payload.get("timeline", {}) if summary_payload else {}
+        strengths = summary_payload.get("strengths", {}) if summary_payload else {}
+        weaknesses = summary_payload.get("weaknesses", {}) if summary_payload else {}
+        rankings = self._latest_json_dict("strategy_benchmark", "profile_rankings")
+        improvements = self._latest_json_dict("strategy_benchmark", "improvement")
+        robustness = self._latest_json_dict("strategy_benchmark", "robustness")
+        recommendations = self._latest_json_dict(
+            "strategy_benchmark",
+            "recommendations",
+        )
+        degradations = {
+            key: value
+            for key, value in improvements.items()
+            if self._float(value) < 0
+        } if isinstance(improvements, dict) else {}
+        if not summary:
+            summary = {
+                "profile_count": 0,
+                "best_profile": "غير متاح",
+                "highest_score": 0.0,
+                "average_performance": 0.0,
+                "highest_stability": 0.0,
+                "highest_readiness": 0.0,
+                "certification_state": "غير متاح",
+            }
+        return {
+            "summary": summary,
+            "best": best,
+            "ranking": bar_chart(
+                "ترتيب الملفات",
+                *self._dict_chart_values(rankings or benchmark),
+                label="الدرجة",
+                color="green",
+            ).to_dict(),
+            "scores": bar_chart(
+                "توزيع الدرجات",
+                *self._dict_chart_values(benchmark),
+                label="الدرجة",
+                color="blue",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "توزيع الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="accent",
+            ).to_dict(),
+            "stability": bar_chart(
+                "توزيع الاستقرار",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="warning",
+            ).to_dict(),
+            "quality": bar_chart(
+                "توزيع الجودة",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "timeline": line_chart(
+                "المقارنة الزمنية",
+                *self._dict_chart_values(timeline),
+                label="الأداء",
+                color="blue",
+            ).to_dict(),
+            "improvements": bar_chart(
+                "التحسينات",
+                *self._dict_chart_values(improvements),
+                label="الفارق",
+                color="green",
+            ).to_dict(),
+            "degradations": bar_chart(
+                "التراجعات",
+                *self._dict_chart_values(degradations),
+                label="الفارق",
+                color="warning",
+            ).to_dict(),
+            "strengths": bar_chart(
+                "نقاط القوة",
+                *self._dict_chart_values(strengths),
+                label="القوة",
+                color="green",
+            ).to_dict(),
+            "weaknesses": bar_chart(
+                "نقاط الضعف",
+                *self._dict_chart_values(weaknesses),
+                label="الضعف",
+                color="warning",
+            ).to_dict(),
+            "robustness": robustness,
+            "recommendations": recommendations,
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")
