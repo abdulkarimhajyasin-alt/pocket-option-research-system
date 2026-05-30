@@ -26,6 +26,7 @@ def main() -> None:
         PROJECT_ROOT / "app/templates/dashboard/datasets.html",
         PROJECT_ROOT / "app/templates/dashboard/validation.html",
         PROJECT_ROOT / "app/templates/dashboard/strategies.html",
+        PROJECT_ROOT / "app/templates/dashboard/execution.html",
     ]
     css = (PROJECT_ROOT / "app/static/dashboard/dashboard.css").read_text(encoding="utf-8")
     overview_template = templates[0].read_text(encoding="utf-8")
@@ -50,7 +51,13 @@ def main() -> None:
         "decision_engine": decision.status in decision_labels,
         "health_score": 0 <= health.score <= 100 and bool(health.label),
         "templates_present": all(path.exists() for path in templates),
-        "routes_present": {"/", "/datasets", "/validation", "/strategies"}.issubset(route_paths),
+        "routes_present": {
+            "/",
+            "/datasets",
+            "/validation",
+            "/strategies",
+            "/execution",
+        }.issubset(route_paths),
         "overview_panel": "درجة الجاهزية البحثية" in overview_template,
         "no_overview_iso_literal": "T00:00:00" not in overview_template,
         "overflow_guards": all(

@@ -1,0 +1,10 @@
+{
+  "run_name": "diagnostic_execution_simulation",
+  "research_only": true,
+  "simulation_only": true,
+  "total_trades": 199,
+  "executed_trades": 50,
+  "blocked_trades": 149,
+  "win_rate": 0.76,
+  "profit_loss": 19.4
+}

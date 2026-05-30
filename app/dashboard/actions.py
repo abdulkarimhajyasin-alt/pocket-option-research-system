@@ -68,6 +68,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="التحقق من مخطط البيانات والبصمة والمجموع الاختباري.",
         command=("scripts/verify_dataset_integrity.py",),
     ),
+    "execution_simulation": ActionDefinition(
+        name="execution_simulation",
+        label="تشغيل محاكاة التنفيذ",
+        description="تشغيل مختبر تنفيذ محلي على بيانات تاريخية فقط دون أي اتصال خارجي.",
+        command=("scripts/run_execution_simulation.py",),
+    ),
 }
 
 

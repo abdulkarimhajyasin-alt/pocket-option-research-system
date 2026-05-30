@@ -236,6 +236,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/execution", response_class=HTMLResponse)
+    def execution(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/execution.html",
+            context(
+                request,
+                dashboard,
+                page="execution",
+                execution=dashboard.analytics.execution_analytics(),
+            ),
+        )
+
     @app.get("/api/dashboard")
     def api_dashboard() -> dict[str, object]:
         dashboard = dashboard_context()
@@ -258,6 +272,10 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/signals")
     def api_signals() -> dict[str, object]:
         return dashboard_context().analytics.signal_analytics()
+
+    @app.get("/api/execution")
+    def api_execution() -> dict[str, object]:
+        return dashboard_context().analytics.execution_analytics()
 
     @app.get("/actions", response_class=HTMLResponse)
     def actions(request: Request) -> HTMLResponse:

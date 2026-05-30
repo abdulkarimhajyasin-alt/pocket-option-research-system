@@ -1,0 +1,69 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.execution }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">مختبر محلي فقط</p>
+    <h1>{{ t.pages.execution }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تشغيل محاكاة جديدة</a>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card">
+    <span>إجمالي الصفقات</span>
+    <strong>{{ execution.summary.total_trades|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>الصفقات الرابحة</span>
+    <strong>{{ execution.summary.wins|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>الصفقات الخاسرة</span>
+    <strong>{{ execution.summary.losses|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>نسبة الربح</span>
+    <strong>{{ (execution.summary.win_rate|default(0) * 100)|percent_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>محاكاة الربح والخسارة</span>
+    <strong>{{ execution.summary.profit_loss|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>صفقات منعتها قواعد السلامة</span>
+    <strong>{{ execution.summary.blocked_trades|default(0)|number_ar }}</strong>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>نتائج التنفيذ</h2><span>رابحة / خاسرة</span></div>
+    <div class="chart" data-chart='{{ execution.outcomes|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>الصفقات الممنوعة</h2><span>قواعد السلامة</span></div>
+    <div class="chart" data-chart='{{ execution.blocked|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>إحصائيات التنفيذ</h2><span>بحث فقط</span></div>
+    <div class="detail-grid">
+      <div><span>التوقع لكل صفقة</span><strong>{{ execution.summary.expectancy|default(0)|number_ar }}</strong></div>
+      <div><span>متوسط العائد</span><strong>{{ execution.summary.average_return|default(0)|number_ar }}</strong></div>
+      <div><span>متوسط الثقة</span><strong>{{ (execution.summary.average_confidence|default(0) * 100)|percent_ar }}</strong></div>
+      <div><span>الصفقات المنفذة</span><strong>{{ execution.summary.executed_trades|default(0)|number_ar }}</strong></div>
+    </div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع الثقة</h2><span>الإشارات</span></div>
+    <div class="chart" data-chart='{{ execution.confidence|tojson }}'></div>
+  </article>
+</section>
+
+{% if execution.summary.total_trades|default(0) == 0 %}
+  <p class="empty">لا توجد نتائج محاكاة تنفيذ محفوظة بعد.</p>
+{% endif %}
+{% endblock %}

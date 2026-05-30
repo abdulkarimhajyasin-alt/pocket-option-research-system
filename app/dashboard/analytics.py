@@ -229,6 +229,62 @@ class DashboardAnalyticsService:
             },
         }
 
+    def execution_analytics(self) -> dict[str, Any]:
+        """Return latest execution simulation analytics."""
+        analytics = self._latest_json_dict("execution", "analytics")
+        summary = self._latest_json_dict("execution", "summary")
+        if not analytics:
+            analytics = {
+                "total_trades": 0,
+                "executed_trades": 0,
+                "wins": 0,
+                "losses": 0,
+                "draws": 0,
+                "blocked_trades": 0,
+                "win_rate": 0.0,
+                "loss_rate": 0.0,
+                "profit_loss": 0.0,
+                "expectancy": 0.0,
+                "average_return": 0.0,
+                "average_confidence": 0.0,
+                "blocked_by_rule": {},
+                "confidence_distribution": {},
+            }
+        blocked_labels, blocked_values = self._dict_chart_values(
+            analytics.get("blocked_by_rule", {})
+        )
+        confidence_labels, confidence_values = self._dict_chart_values(
+            analytics.get("confidence_distribution", {})
+        )
+        return {
+            "summary": {**summary, **analytics},
+            "outcomes": bar_chart(
+                "نتائج التنفيذ",
+                ["رابحة", "خاسرة", "تعادل"],
+                [
+                    self._float(analytics.get("wins")),
+                    self._float(analytics.get("losses")),
+                    self._float(analytics.get("draws")),
+                ],
+                label="Outcomes",
+                color="green",
+            ).to_dict(),
+            "blocked": bar_chart(
+                "الصفقات الممنوعة",
+                blocked_labels,
+                blocked_values,
+                label="Blocked",
+                color="warning",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "توزيع الثقة",
+                confidence_labels,
+                confidence_values,
+                label="Confidence",
+                color="blue",
+            ).to_dict(),
+        }
+
     def report_visualization(self, payload: Any) -> dict[str, Any]:
         """Build generic cards and charts for a JSON report."""
         if not isinstance(payload, dict):
