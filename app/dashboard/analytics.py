@@ -897,6 +897,11 @@ class DashboardAnalyticsService:
     def multi_timeframe_analytics(self) -> dict[str, Any]:
         """Return latest multi-timeframe confirmation analytics."""
         alignment_payload = self._latest_json_dict("multi_timeframe", "alignment")
+        if "summary" not in alignment_payload:
+            alignment_payload = self._latest_json_dict(
+                "multi_timeframe",
+                "alignment_summary",
+            )
         summary = alignment_payload.get("summary", {}) if alignment_payload else {}
         alignment = (
             alignment_payload.get("distribution", {}) if alignment_payload else {}
@@ -989,6 +994,106 @@ class DashboardAnalyticsService:
                 timeline_values,
                 label="التوافق",
                 color="warning",
+            ).to_dict(),
+        }
+
+    def confluence_analytics(self) -> dict[str, Any]:
+        """Return latest confluence research analytics."""
+        summary_payload = self._latest_json_dict("confluence", "summary")
+        summary = summary_payload.get("summary", {}) if summary_payload else {}
+        distribution = (
+            summary_payload.get("distribution", {}) if summary_payload else {}
+        )
+        quality = summary_payload.get("quality", {}) if summary_payload else {}
+        timeline = summary_payload.get("timeline", {}) if summary_payload else {}
+        best = summary_payload.get("best_decision", {}) if summary_payload else {}
+        factors = self._latest_json_dict("confluence", "factor")
+        assets = self._latest_json_dict("confluence", "asset")
+        sessions = self._latest_json_dict("confluence", "session")
+        timeframes = self._latest_json_dict("confluence", "timeframe")
+        rejections = self._latest_json_dict("confluence", "rejection")
+        if not summary:
+            summary = {
+                "confluent_count": 0,
+                "average_confluence": 0.0,
+                "highest_confluence": 0.0,
+                "lowest_confluence": 0.0,
+                "strong_count": 0,
+                "rejected_count": 0,
+            }
+        factor_labels, factor_values = self._dict_chart_values(factors)
+        quality_labels, quality_values = self._dict_chart_values(quality)
+        distribution_labels, distribution_values = self._dict_chart_values(distribution)
+        asset_labels, asset_values = self._dict_chart_values(assets)
+        session_labels, session_values = self._dict_chart_values(sessions)
+        timeframe_labels, timeframe_values = self._dict_chart_values(timeframes)
+        rejection_labels, rejection_values = self._dict_chart_values(rejections)
+        timeline_labels, timeline_values = self._dict_chart_values(timeline)
+        return {
+            "summary": summary,
+            "best": best,
+            "distribution": bar_chart(
+                "توزيع درجات التوافق",
+                distribution_labels,
+                distribution_values,
+                label="التوافق",
+                color="green",
+            ).to_dict(),
+            "factors": bar_chart(
+                "عوامل التوافق",
+                factor_labels,
+                factor_values,
+                label="العوامل",
+                color="blue",
+            ).to_dict(),
+            "quality": bar_chart(
+                "أداء التوافق",
+                quality_labels,
+                quality_values,
+                label="الجودة",
+                color="accent",
+            ).to_dict(),
+            "states": bar_chart(
+                "توزيع الحالات",
+                distribution_labels,
+                distribution_values,
+                label="الحالات",
+                color="warning",
+            ).to_dict(),
+            "assets": bar_chart(
+                "التوافق حسب الأصل",
+                asset_labels,
+                asset_values,
+                label="الأصول",
+                color="green",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "التوافق حسب الجلسة",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="blue",
+            ).to_dict(),
+            "timeframes": bar_chart(
+                "التوافق حسب الإطار الزمني",
+                timeframe_labels,
+                timeframe_values,
+                label="الأطر",
+                color="accent",
+            ).to_dict(),
+            "rejections": bar_chart(
+                "أسباب الرفض",
+                rejection_labels,
+                rejection_values,
+                label="الأسباب",
+                color="warning",
+            ).to_dict(),
+            "timeline": line_chart(
+                "تطور التوافق بمرور الوقت",
+                timeline_labels,
+                timeline_values,
+                label="التوافق",
+                color="green",
             ).to_dict(),
         }
 

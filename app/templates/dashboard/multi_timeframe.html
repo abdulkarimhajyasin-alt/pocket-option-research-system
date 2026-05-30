@@ -21,7 +21,7 @@
   </div>
   <div>
     <span>حالات التعارض</span>
-    <strong>{{ multi_timeframe.best.conflict.severity|default('غير متاح') }}</strong>
+    <strong>{{ multi_timeframe.best.get('conflict', {}).get('severity', 'غير متاح') }}</strong>
     <small>M1: {{ multi_timeframe.states.M1|default('غير متاح') }}</small>
     <small>M5: {{ multi_timeframe.states.M5|default('غير متاح') }}</small>
     <small>M15: {{ multi_timeframe.states.M15|default('غير متاح') }}</small>
@@ -55,7 +55,7 @@
     <div class="panel-title"><h2>عوامل التأكيد</h2><span>بحث فقط</span></div>
     <div class="detail-grid">
       <div><span>الحالة</span><strong>{{ multi_timeframe.best.confirmation_state|default('غير متاح') }}</strong></div>
-      <div><span>التفسير</span><strong>{{ multi_timeframe.best.score.reasoning|default('غير متاح') }}</strong></div>
+      <div><span>التفسير</span><strong>{{ multi_timeframe.best.get('score', {}).get('reasoning', 'غير متاح') }}</strong></div>
       <div><span>الأصل</span><strong>{{ multi_timeframe.best.asset|default('غير متاح') }}</strong></div>
       <div><span>التصنيف</span><strong>{{ multi_timeframe.best.classification|default('غير متاح') }}</strong></div>
     </div>

@@ -116,6 +116,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل تأكيد متعدد الأطر الزمنية بحثيا فقط دون توصيات أو تنفيذ.",
         command=("scripts/run_multi_timeframe.py",),
     ),
+    "confluence": ActionDefinition(
+        name="confluence",
+        label="تحديث محرك التوافق",
+        description="تشغيل التوافق البحثي الموحد دون توصيات أو تنفيذ.",
+        command=("scripts/run_confluence.py",),
+    ),
 }
 
 

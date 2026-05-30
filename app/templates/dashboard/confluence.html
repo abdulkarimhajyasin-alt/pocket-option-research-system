@@ -1,0 +1,77 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.confluence }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.confluence }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث التوافق</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>أفضل فرصة متوافقة</span>
+    <strong>{{ confluence.best.asset|default('غير متاح') }}</strong>
+    <p>{{ confluence.best.final_decision|default('لا توجد قرارات توافق محفوظة بعد.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة التوافق</span>
+    <strong>{{ confluence.best.confluence_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>الحالة</span>
+    <strong>{{ confluence.best.get('confluence', {}).get('state', 'غير متاح') }}</strong>
+    <small>{{ confluence.best.readiness|default('غير متاح') }}</small>
+    <small>{{ confluence.best.confidence_level|default('غير متاح') }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد الفرص المتوافقة</span><strong>{{ confluence.summary.confluent_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>متوسط التوافق</span><strong>{{ confluence.summary.average_confluence|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أعلى توافق</span><strong>{{ confluence.summary.highest_confluence|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أقل توافق</span><strong>{{ confluence.summary.lowest_confluence|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الفرص القوية</span><strong>{{ confluence.summary.strong_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الفرص المرفوضة</span><strong>{{ confluence.summary.rejected_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع درجات التوافق</h2><span>الحالات</span></div><div class="chart" data-chart='{{ confluence.distribution|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>عوامل التوافق</h2><span>العوامل</span></div><div class="chart" data-chart='{{ confluence.factors|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أداء التوافق</h2><span>الجودة</span></div><div class="chart" data-chart='{{ confluence.quality|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الحالات</h2><span>بحث فقط</span></div><div class="chart" data-chart='{{ confluence.states|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوافق حسب الأصل</h2><span>الأصول</span></div><div class="chart" data-chart='{{ confluence.assets|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوافق حسب الجلسة</h2><span>الجلسات</span></div><div class="chart" data-chart='{{ confluence.sessions|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوافق حسب الإطار الزمني</h2><span>الأطر</span></div><div class="chart" data-chart='{{ confluence.timeframes|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تطور التوافق بمرور الوقت</h2><span>الزمن</span></div><div class="chart" data-chart='{{ confluence.timeline|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>نقاط القوة</h2><span>قبول بحثي</span></div>
+    <ul class="compact-list">
+      {% for item in confluence.best.acceptance_reasons|default([]) %}
+      <li>{{ item }}</li>
+      {% else %}
+      <li>غير متاح</li>
+      {% endfor %}
+    </ul>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>نقاط الضعف والتحذير</h2><span>مراجعة بحثية</span></div>
+    <ul class="compact-list">
+      {% for item in confluence.best.risk_factors|default([]) %}
+      <li>{{ item }}</li>
+      {% else %}
+      <li>غير متاح</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+{% endblock %}

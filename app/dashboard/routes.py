@@ -348,6 +348,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/confluence", response_class=HTMLResponse)
+    def confluence(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/confluence.html",
+            context(
+                request,
+                dashboard,
+                page="confluence",
+                confluence=dashboard.analytics.confluence_analytics(),
+            ),
+        )
+
     @app.get("/api/dashboard")
     def api_dashboard() -> dict[str, object]:
         dashboard = dashboard_context()
@@ -402,6 +416,10 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/multi-timeframe")
     def api_multi_timeframe() -> dict[str, object]:
         return dashboard_context().analytics.multi_timeframe_analytics()
+
+    @app.get("/api/confluence")
+    def api_confluence() -> dict[str, object]:
+        return dashboard_context().analytics.confluence_analytics()
 
     @app.get("/actions", response_class=HTMLResponse)
     def actions(request: Request) -> HTMLResponse:
