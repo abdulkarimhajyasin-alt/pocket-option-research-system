@@ -418,6 +418,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/market-regime", response_class=HTMLResponse)
+    def market_regime(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/market_regime.html",
+            context(
+                request,
+                dashboard,
+                page="market_regime",
+                market_regime=dashboard.analytics.market_regime_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -506,6 +520,10 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/pattern-memory")
     def api_pattern_memory() -> dict[str, object]:
         return dashboard_context().analytics.pattern_memory_analytics()
+
+    @app.get("/api/market-regime")
+    def api_market_regime() -> dict[str, object]:
+        return dashboard_context().analytics.market_regime_analytics()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

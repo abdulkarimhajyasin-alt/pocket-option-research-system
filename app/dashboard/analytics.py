@@ -1559,6 +1559,86 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def market_regime_analytics(self) -> dict[str, Any]:
+        """Return latest market regime analytics."""
+        summary_payload = self._latest_json_dict("market_regime", "regime_summary")
+        summary = summary_payload.get("summary", {}) if summary_payload else {}
+        regime = (
+            summary_payload.get("regime_distribution", {}) if summary_payload else {}
+        )
+        historical = (
+            summary_payload.get("historical_performance", {})
+            if summary_payload
+            else {}
+        )
+        volatility = self._latest_json_dict("market_regime", "volatility")
+        trend = self._latest_json_dict("market_regime", "trend")
+        transition = self._latest_json_dict("market_regime", "transition")
+        compatibility = self._latest_json_dict("market_regime", "compatibility")
+        stability = self._latest_json_dict("market_regime", "stability")
+        quality = self._latest_json_dict("market_regime", "quality")
+        if not summary:
+            summary = {
+                "regime_state": "غير متاح",
+                "regime_score": 0.0,
+                "volatility_score": 0.0,
+                "trend_strength": 0.0,
+                "compatibility_score": 0.0,
+                "stability_score": 0.0,
+                "quality_score": 0.0,
+            }
+        return {
+            "summary": summary,
+            "regime": bar_chart(
+                "توزيع حالات السوق",
+                *self._dict_chart_values(regime),
+                label="الحالة",
+                color="green",
+            ).to_dict(),
+            "volatility": bar_chart(
+                "توزيع التقلب",
+                *self._dict_chart_values(volatility),
+                label="التقلب",
+                color="warning",
+            ).to_dict(),
+            "trend": bar_chart(
+                "توزيع الاتجاه",
+                *self._dict_chart_values(trend),
+                label="الاتجاه",
+                color="blue",
+            ).to_dict(),
+            "transition": bar_chart(
+                "تحليل الانتقال",
+                *self._dict_chart_values(transition),
+                label="الانتقال",
+                color="accent",
+            ).to_dict(),
+            "compatibility": bar_chart(
+                "تحليل التوافق",
+                *self._dict_chart_values(compatibility),
+                label="التوافق",
+                color="green",
+            ).to_dict(),
+            "stability": bar_chart(
+                "استقرار حالة السوق",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="blue",
+            ).to_dict(),
+            "quality": bar_chart(
+                "جودة حالة السوق",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="warning",
+            ).to_dict(),
+            "historical": bar_chart(
+                "الأداء التاريخي لحالات السوق",
+                *self._dict_chart_values(historical),
+                label="الأداء",
+                color="accent",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

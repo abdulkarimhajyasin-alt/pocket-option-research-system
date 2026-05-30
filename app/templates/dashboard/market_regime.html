@@ -1,0 +1,55 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.market_regime }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.market_regime }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث حالة السوق</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>الوضع الحالي للسوق</span>
+    <strong>{{ market_regime.summary.regime_state|default('غير متاح') }}</strong>
+    <p>تصنيف بحثي محلي لبيئة السوق دون تنفيذ أو توصية تداول.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الحالة</span>
+    <strong>{{ market_regime.summary.regime_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>التوافق</span>
+    <strong>{{ market_regime.summary.compatibility_score|default(0)|number_ar }}</strong>
+    <small>التقلب {{ market_regime.summary.volatility_score|default(0)|number_ar }}</small>
+    <small>قوة الاتجاه {{ market_regime.summary.trend_strength|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>حالة السوق</span><strong>{{ market_regime.summary.regime_state|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>درجة الحالة</span><strong>{{ market_regime.summary.regime_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التقلب</span><strong>{{ market_regime.summary.volatility_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>قوة الاتجاه</span><strong>{{ market_regime.summary.trend_strength|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التوافق</span><strong>{{ market_regime.summary.compatibility_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الاستقرار</span><strong>{{ market_regime.summary.stability_score|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع حالات السوق</h2><span>الحالة</span></div><div class="chart" data-chart='{{ market_regime.regime|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع التقلب</h2><span>التقلب</span></div><div class="chart" data-chart='{{ market_regime.volatility|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الاتجاه</h2><span>الاتجاه</span></div><div class="chart" data-chart='{{ market_regime.trend|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تحليل الانتقال</h2><span>التحول</span></div><div class="chart" data-chart='{{ market_regime.transition|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تحليل التوافق</h2><span>الأبحاث</span></div><div class="chart" data-chart='{{ market_regime.compatibility|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>استقرار حالة السوق</h2><span>الاستقرار</span></div><div class="chart" data-chart='{{ market_regime.stability|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>جودة حالة السوق</h2><span>الجودة</span></div><div class="chart" data-chart='{{ market_regime.quality|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>الأداء التاريخي لحالات السوق</h2><span>التاريخ</span></div><div class="chart" data-chart='{{ market_regime.historical|tojson }}'></div></article>
+</section>
+{% endblock %}

@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "regime_state": "سوق عرضي",
+    "regime_score": 48.92,
+    "volatility_score": 39.41,
+    "trend_strength": 37.85,
+    "compatibility_score": 45.17,
+    "compatibility_category": "ضعيف",
+    "stability_score": 54.39,
+    "quality_score": 51.08,
+    "research_only": true
+  },
+  "regime_distribution": {
+    "سوق عرضي": 48.92
+  },
+  "volatility_distribution": {
+    "منخفض": 39.41,
+    "تمدد الشموع": 31.46,
+    "متوسط الحركة": 37.66,
+    "استقرار التقلب": 29.01
+  },
+  "trend_distribution": {
+    "صاعد": 37.85,
+    "اتساق الاتجاه": 53.77,
+    "استمرار الاتجاه": 54.04,
+    "ثقة الاتجاه": 39.31
+  },
+  "transition_frequency": {
+    "مستقر": 4.15,
+    "ضعف الاتجاه": 4.05,
+    "تقوية الاتجاه": 0.0,
+    "توسع التقلب": 0.1,
+    "انكماش التقلب": 0.0
+  },
+  "compatibility_analysis": {
+    "الإشارات": 46.18,
+    "الفرص": 46.18,
+    "الأطر الزمنية": 60.0,
+    "التوافق": 52.73,
+    "ذاكرة الأنماط": 1.03
+  },
+  "regime_quality": {
+    "سوق عرضي": 48.92,
+    "التوافق": 45.17,
+    "الاستقرار": 54.39,
+    "الجودة": 51.08
+  },
+  "regime_stability": {
+    "سوق عرضي": 54.39,
+    "الجودة": 51.08,
+    "التوافق": 45.17
+  },
+  "historical_performance": {
+    "سوق عرضي": 48.92,
+    "التوافق": 45.17,
+    "الاستقرار": 54.39,
+    "الجودة": 51.08
+  },
+  "latest": {
+    "timestamp": "2026-05-30T22:57:16.748579",
+    "regime": {
+      "regime_state": "سوق عرضي",
+      "regime_score": 48.92,
+      "volatility": {
+        "score": 39.41,
+        "category": "منخفض",
+        "candle_expansion": 31.46,
+        "average_movement": 37.66,
+        "session_volatility": 49.78,
+        "volatility_stability": 29.01,
+        "volatility_trend": 50.2
+      },
+      "trend": {
+        "score": 37.85,
+        "direction": "صاعد",
+        "structure_alignment": 10.13,
+        "trend_persistence": 54.04,
+        "directional_consistency": 53.77,
+        "trend_confidence": 39.31
+      },
+      "transition": {
+        "state": "مستقر",
+        "frequency": 4.15,
+        "trend_weakening": 4.05,
+        "trend_strengthening": 0.0,
+        "ranging_to_trending": 0.0,
+        "trending_to_ranging": 0.0,
+        "volatility_expansion": 0.1,
+        "volatility_contraction": 0.0
+      },
+      "stability_score": 54.39,
+      "quality_score": 51.08,
+      "research_only": true
+    },
+    "compatibility": {
+      "score": 45.17,
+      "category": "ضعيف",
+      "signal_score": 46.18,
+      "opportunity_score": 46.18,
+      "timeframe_score": 60.0,
+      "confluence_score": 52.73,
+      "pattern_score": 1.03,
+      "research_only": true,
+      "not_recommendation": true
+    },
+    "pattern_analysis": {
+      "best_signals": "الاستقرار",
+      "best_opportunities": "الاستقرار",
+      "strongest_confluence": "ضعيف",
+      "highest_stability": "سوق عرضي",
+      "highest_quality_patterns": "الاستقرار",
+      "distribution": {
+        "سوق عرضي": 48.92,
+        "التوافق": 45.17,
+        "الاستقرار": 54.39,
+        "الجودة": 51.08
+      }
+    },
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_broker_control": true,
+      "not_account_interaction": true,
+      "not_investment_advice": true,
+      "not_profitability_claim": true
+    },
+    "research_only": true,
+    "not_execution": true,
+    "not_broker_control": true,
+    "not_account_interaction": true,
+    "not_investment_advice": true,
+    "not_profitability_claim": true
+  }
+}

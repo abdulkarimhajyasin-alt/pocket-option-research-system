@@ -146,6 +146,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل محرك التعلم والأنماط للبحث فقط دون تنفيذ أو أتمتة.",
         command=("scripts/run_pattern_memory.py",),
     ),
+    "market_regime": ActionDefinition(
+        name="market_regime",
+        label="تحديث حالة السوق",
+        description="تشغيل محرك حالة السوق للبحث فقط دون اتصال وسيط أو تنفيذ.",
+        command=("scripts/run_market_regime.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",
