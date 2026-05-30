@@ -1,0 +1,80 @@
+[
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "AUDUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "display_name": "AUDUSD",
+    "asset_class": "forex",
+    "is_active": true,
+    "quality_score": 77.5
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "EURJPY",
+    "timeframe": "1m",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "display_name": "EURJPY",
+    "asset_class": "forex",
+    "is_active": true,
+    "quality_score": 72.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "EURUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "display_name": "EURUSD",
+    "asset_class": "forex",
+    "is_active": true,
+    "quality_score": 94.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "GBPUSD",
+    "timeframe": "1m",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "display_name": "GBPUSD",
+    "asset_class": "forex",
+    "is_active": true,
+    "quality_score": 88.5
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "USDCAD",
+    "timeframe": "1m",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "display_name": "USDCAD",
+    "asset_class": "forex",
+    "is_active": false,
+    "quality_score": 66.5
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "USDJPY",
+    "timeframe": "1m",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "display_name": "USDJPY",
+    "asset_class": "forex",
+    "is_active": true,
+    "quality_score": 83.0
+  }
+]

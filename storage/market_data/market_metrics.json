@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-01-01T12:00:00+00:00",
+  "provider": "static_research_provider",
+  "research_only": true,
+  "active_assets": 5,
+  "asset_count": 6,
+  "market_status": "مفتوح",
+  "market_coverage": 78.25,
+  "update_frequency": 1.5,
+  "average_latency_ms": 39.5,
+  "asset_quality_score": 80.25,
+  "feed_quality_score": 79.05,
+  "readiness_score": 78.22,
+  "readiness_label": "مستقر للبحث",
+  "provider_health": "جيد",
+  "provider_health_score": 78.22
+}

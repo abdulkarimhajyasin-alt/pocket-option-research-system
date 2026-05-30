@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-01-01T12:00:00+00:00",
+  "provider": "static_research_provider",
+  "asset": "ALL",
+  "timeframe": "provider",
+  "metadata": {
+    "research_only": true
+  },
+  "score": 78.22,
+  "label": "جيد",
+  "readiness_score": 78.22,
+  "readiness_label": "مستقر للبحث"
+}

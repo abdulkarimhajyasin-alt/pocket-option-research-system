@@ -1,0 +1,82 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.market_data }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تكامل بحثي فقط</p>
+    <h1>{{ t.pages.market_data }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث بيانات السوق</a>
+</section>
+
+<section class="decision-strip severity-{{ market_data.summary.severity|default('warning') }}">
+  <strong>{{ market_data.summary.readiness_label|default('يحتاج مراقبة') }}</strong>
+  <span>حالة السوق: {{ market_data.summary.market_status|default('غير متاح') }}</span>
+  <small>جاهزية بنية البيانات فقط دون توصيات أو توقعات ربحية</small>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card">
+    <span>عدد الأصول</span>
+    <strong>{{ market_data.summary.asset_count|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>حالة السوق</span>
+    <strong>{{ market_data.summary.market_status|default('غير متاح') }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>جودة البيانات</span>
+    <strong>{{ market_data.summary.feed_quality_score|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>صحة المزود</span>
+    <strong>{{ market_data.summary.provider_health|default('ضعيف') }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>زمن الاستجابة</span>
+    <strong>{{ market_data.summary.average_latency_ms|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>معدل التحديث</span>
+    <strong>{{ market_data.summary.update_frequency|default(0)|number_ar }}</strong>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>توزيع الأصول</h2><span>جودة الأصول</span></div>
+    <div class="chart" data-chart='{{ market_data.assets|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>نشاط الجلسات</h2><span>رؤية زمنية</span></div>
+    <div class="chart" data-chart='{{ market_data.sessions|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>جودة البيانات</h2><span>مكونات الجودة</span></div>
+    <div class="chart" data-chart='{{ market_data.quality|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>صحة السوق</h2><span>توزيع الحالة</span></div>
+    <div class="chart" data-chart='{{ market_data.status|tojson }}'></div>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <div class="panel-title"><h2>النشاط الزمني</h2><span>تحديثات الشموع</span></div>
+    <div class="chart" data-chart='{{ market_data.time_activity|tojson }}'></div>
+  </article>
+  <article class="panel">
+    <div class="panel-title"><h2>تفاصيل المزود</h2><span>بحث فقط</span></div>
+    <div class="detail-grid">
+      <div><span>مزود البيانات</span><strong>{{ market_data.summary.provider|default('غير متاح') }}</strong></div>
+      <div><span>درجة الجاهزية</span><strong>{{ market_data.summary.readiness_score|default(0)|number_ar }}</strong></div>
+      <div><span>الأصول النشطة</span><strong>{{ market_data.summary.active_assets|default(0)|number_ar }}</strong></div>
+      <div><span>وضع الطبقة</span><strong>بحث وتحليل فقط</strong></div>
+    </div>
+  </article>
+</section>
+{% endblock %}

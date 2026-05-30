@@ -86,6 +86,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل خط بث سوق وهمي للمراقبة والبحث فقط دون اتصال وسيط أو تنفيذ.",
         command=("scripts/run_live_feed.py",),
     ),
+    "market_data": ActionDefinition(
+        name="market_data",
+        label="تحديث بيانات السوق",
+        description="تشغيل تكامل بيانات سوق بحثي فقط دون تنفيذ أو تحكم وسيط.",
+        command=("scripts/run_market_data.py",),
+    ),
 }
 
 

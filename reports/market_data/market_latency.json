@@ -1,0 +1,52 @@
+[
+  {
+    "timestamp": "2026-01-01T11:59:48+00:00",
+    "provider": "static_research_provider",
+    "asset": "AUDUSD",
+    "timeframe": "provider",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "latency_ms": 43.25
+  },
+  {
+    "timestamp": "2026-01-01T11:59:44+00:00",
+    "provider": "static_research_provider",
+    "asset": "EURJPY",
+    "timeframe": "provider",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "latency_ms": 47.0
+  },
+  {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "EURUSD",
+    "timeframe": "provider",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "latency_ms": 32.0
+  },
+  {
+    "timestamp": "2026-01-01T11:59:56+00:00",
+    "provider": "static_research_provider",
+    "asset": "GBPUSD",
+    "timeframe": "provider",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "latency_ms": 35.75
+  },
+  {
+    "timestamp": "2026-01-01T11:59:52+00:00",
+    "provider": "static_research_provider",
+    "asset": "USDJPY",
+    "timeframe": "provider",
+    "metadata": {
+      "source_mode": "static_research"
+    },
+    "latency_ms": 39.5
+  }
+]

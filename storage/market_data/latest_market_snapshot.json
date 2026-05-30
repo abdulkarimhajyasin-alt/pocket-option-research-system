@@ -1,0 +1,1196 @@
+{
+  "timestamp": "2026-01-01T12:00:00+00:00",
+  "provider": "static_research_provider",
+  "asset": "ALL",
+  "timeframe": "snapshot",
+  "metadata": {
+    "research_only": true,
+    "no_trading": true,
+    "no_execution": true,
+    "no_broker_automation": true,
+    "normalized": true
+  },
+  "provider_info": {
+    "name": "static_research_provider",
+    "provider_type": "static_research",
+    "supports_realtime": false,
+    "supports_historical": true,
+    "research_only": true,
+    "metadata": {
+      "external_ready": true,
+      "no_broker_control": true
+    }
+  },
+  "assets": [
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "display_name": "AUDUSD",
+      "asset_class": "forex",
+      "is_active": true,
+      "quality_score": 77.5
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "display_name": "EURJPY",
+      "asset_class": "forex",
+      "is_active": true,
+      "quality_score": 72.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "display_name": "EURUSD",
+      "asset_class": "forex",
+      "is_active": true,
+      "quality_score": 94.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "display_name": "GBPUSD",
+      "asset_class": "forex",
+      "is_active": true,
+      "quality_score": 88.5
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDCAD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "display_name": "USDCAD",
+      "asset_class": "forex",
+      "is_active": false,
+      "quality_score": 66.5
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "display_name": "USDJPY",
+      "asset_class": "forex",
+      "is_active": true,
+      "quality_score": 83.0
+    }
+  ],
+  "candles": [
+    {
+      "timestamp": "2026-01-01T11:49:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 0
+      },
+      "open": 1.119,
+      "high": 1.11918,
+      "low": 1.1187,
+      "close": 1.11888,
+      "volume": 1260
+    },
+    {
+      "timestamp": "2026-01-01T11:50:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 1
+      },
+      "open": 1.11909,
+      "high": 1.11927,
+      "low": 1.11887,
+      "close": 1.11905,
+      "volume": 1272
+    },
+    {
+      "timestamp": "2026-01-01T11:51:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 2
+      },
+      "open": 1.11918,
+      "high": 1.1194,
+      "low": 1.119,
+      "close": 1.11922,
+      "volume": 1284
+    },
+    {
+      "timestamp": "2026-01-01T11:52:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 3
+      },
+      "open": 1.11927,
+      "high": 1.11957,
+      "low": 1.11909,
+      "close": 1.11939,
+      "volume": 1296
+    },
+    {
+      "timestamp": "2026-01-01T11:53:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 4
+      },
+      "open": 1.11936,
+      "high": 1.11954,
+      "low": 1.11906,
+      "close": 1.11924,
+      "volume": 1308
+    },
+    {
+      "timestamp": "2026-01-01T11:54:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 5
+      },
+      "open": 1.11945,
+      "high": 1.11963,
+      "low": 1.11923,
+      "close": 1.11941,
+      "volume": 1320
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 6
+      },
+      "open": 1.11954,
+      "high": 1.11976,
+      "low": 1.11936,
+      "close": 1.11958,
+      "volume": 1332
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 7
+      },
+      "open": 1.11963,
+      "high": 1.11993,
+      "low": 1.11945,
+      "close": 1.11975,
+      "volume": 1344
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 8
+      },
+      "open": 1.11972,
+      "high": 1.1199,
+      "low": 1.11942,
+      "close": 1.1196,
+      "volume": 1356
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 9
+      },
+      "open": 1.11981,
+      "high": 1.11999,
+      "low": 1.11959,
+      "close": 1.11977,
+      "volume": 1368
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 10
+      },
+      "open": 1.1199,
+      "high": 1.12012,
+      "low": 1.11972,
+      "close": 1.11994,
+      "volume": 1380
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 11
+      },
+      "open": 1.11999,
+      "high": 1.12029,
+      "low": 1.11981,
+      "close": 1.12011,
+      "volume": 1392
+    },
+    {
+      "timestamp": "2026-01-01T11:49:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 0
+      },
+      "open": 1.132,
+      "high": 1.13218,
+      "low": 1.1317,
+      "close": 1.13188,
+      "volume": 1380
+    },
+    {
+      "timestamp": "2026-01-01T11:50:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 1
+      },
+      "open": 1.13209,
+      "high": 1.13227,
+      "low": 1.13187,
+      "close": 1.13205,
+      "volume": 1392
+    },
+    {
+      "timestamp": "2026-01-01T11:51:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 2
+      },
+      "open": 1.13218,
+      "high": 1.1324,
+      "low": 1.132,
+      "close": 1.13222,
+      "volume": 1404
+    },
+    {
+      "timestamp": "2026-01-01T11:52:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 3
+      },
+      "open": 1.13227,
+      "high": 1.13257,
+      "low": 1.13209,
+      "close": 1.13239,
+      "volume": 1416
+    },
+    {
+      "timestamp": "2026-01-01T11:53:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 4
+      },
+      "open": 1.13236,
+      "high": 1.13254,
+      "low": 1.13206,
+      "close": 1.13224,
+      "volume": 1428
+    },
+    {
+      "timestamp": "2026-01-01T11:54:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 5
+      },
+      "open": 1.13245,
+      "high": 1.13263,
+      "low": 1.13223,
+      "close": 1.13241,
+      "volume": 1440
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 6
+      },
+      "open": 1.13254,
+      "high": 1.13276,
+      "low": 1.13236,
+      "close": 1.13258,
+      "volume": 1452
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 7
+      },
+      "open": 1.13263,
+      "high": 1.13293,
+      "low": 1.13245,
+      "close": 1.13275,
+      "volume": 1464
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 8
+      },
+      "open": 1.13272,
+      "high": 1.1329,
+      "low": 1.13242,
+      "close": 1.1326,
+      "volume": 1476
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 9
+      },
+      "open": 1.13281,
+      "high": 1.13299,
+      "low": 1.13259,
+      "close": 1.13277,
+      "volume": 1488
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 10
+      },
+      "open": 1.1329,
+      "high": 1.13312,
+      "low": 1.13272,
+      "close": 1.13294,
+      "volume": 1500
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 11
+      },
+      "open": 1.13299,
+      "high": 1.13329,
+      "low": 1.13281,
+      "close": 1.13311,
+      "volume": 1512
+    },
+    {
+      "timestamp": "2026-01-01T11:49:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 0
+      },
+      "open": 1.08,
+      "high": 1.08018,
+      "low": 1.0797,
+      "close": 1.07988,
+      "volume": 900
+    },
+    {
+      "timestamp": "2026-01-01T11:50:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 1
+      },
+      "open": 1.08009,
+      "high": 1.08027,
+      "low": 1.07987,
+      "close": 1.08005,
+      "volume": 912
+    },
+    {
+      "timestamp": "2026-01-01T11:51:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 2
+      },
+      "open": 1.08018,
+      "high": 1.0804,
+      "low": 1.08,
+      "close": 1.08022,
+      "volume": 924
+    },
+    {
+      "timestamp": "2026-01-01T11:52:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 3
+      },
+      "open": 1.08027,
+      "high": 1.08057,
+      "low": 1.08009,
+      "close": 1.08039,
+      "volume": 936
+    },
+    {
+      "timestamp": "2026-01-01T11:53:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 4
+      },
+      "open": 1.08036,
+      "high": 1.08054,
+      "low": 1.08006,
+      "close": 1.08024,
+      "volume": 948
+    },
+    {
+      "timestamp": "2026-01-01T11:54:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 5
+      },
+      "open": 1.08045,
+      "high": 1.08063,
+      "low": 1.08023,
+      "close": 1.08041,
+      "volume": 960
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 6
+      },
+      "open": 1.08054,
+      "high": 1.08076,
+      "low": 1.08036,
+      "close": 1.08058,
+      "volume": 972
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 7
+      },
+      "open": 1.08063,
+      "high": 1.08093,
+      "low": 1.08045,
+      "close": 1.08075,
+      "volume": 984
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 8
+      },
+      "open": 1.08072,
+      "high": 1.0809,
+      "low": 1.08042,
+      "close": 1.0806,
+      "volume": 996
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 9
+      },
+      "open": 1.08081,
+      "high": 1.08099,
+      "low": 1.08059,
+      "close": 1.08077,
+      "volume": 1008
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 10
+      },
+      "open": 1.0809,
+      "high": 1.08112,
+      "low": 1.08072,
+      "close": 1.08094,
+      "volume": 1020
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 11
+      },
+      "open": 1.08099,
+      "high": 1.08129,
+      "low": 1.08081,
+      "close": 1.08111,
+      "volume": 1032
+    },
+    {
+      "timestamp": "2026-01-01T11:49:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 0
+      },
+      "open": 1.093,
+      "high": 1.09318,
+      "low": 1.0927,
+      "close": 1.09288,
+      "volume": 1020
+    },
+    {
+      "timestamp": "2026-01-01T11:50:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 1
+      },
+      "open": 1.09309,
+      "high": 1.09327,
+      "low": 1.09287,
+      "close": 1.09305,
+      "volume": 1032
+    },
+    {
+      "timestamp": "2026-01-01T11:51:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 2
+      },
+      "open": 1.09318,
+      "high": 1.0934,
+      "low": 1.093,
+      "close": 1.09322,
+      "volume": 1044
+    },
+    {
+      "timestamp": "2026-01-01T11:52:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 3
+      },
+      "open": 1.09327,
+      "high": 1.09357,
+      "low": 1.09309,
+      "close": 1.09339,
+      "volume": 1056
+    },
+    {
+      "timestamp": "2026-01-01T11:53:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 4
+      },
+      "open": 1.09336,
+      "high": 1.09354,
+      "low": 1.09306,
+      "close": 1.09324,
+      "volume": 1068
+    },
+    {
+      "timestamp": "2026-01-01T11:54:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 5
+      },
+      "open": 1.09345,
+      "high": 1.09363,
+      "low": 1.09323,
+      "close": 1.09341,
+      "volume": 1080
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 6
+      },
+      "open": 1.09354,
+      "high": 1.09376,
+      "low": 1.09336,
+      "close": 1.09358,
+      "volume": 1092
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 7
+      },
+      "open": 1.09363,
+      "high": 1.09393,
+      "low": 1.09345,
+      "close": 1.09375,
+      "volume": 1104
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 8
+      },
+      "open": 1.09372,
+      "high": 1.0939,
+      "low": 1.09342,
+      "close": 1.0936,
+      "volume": 1116
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 9
+      },
+      "open": 1.09381,
+      "high": 1.09399,
+      "low": 1.09359,
+      "close": 1.09377,
+      "volume": 1128
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 10
+      },
+      "open": 1.0939,
+      "high": 1.09412,
+      "low": 1.09372,
+      "close": 1.09394,
+      "volume": 1140
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 11
+      },
+      "open": 1.09399,
+      "high": 1.09429,
+      "low": 1.09381,
+      "close": 1.09411,
+      "volume": 1152
+    },
+    {
+      "timestamp": "2026-01-01T11:49:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 0
+      },
+      "open": 1.106,
+      "high": 1.10618,
+      "low": 1.1057,
+      "close": 1.10588,
+      "volume": 1140
+    },
+    {
+      "timestamp": "2026-01-01T11:50:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 1
+      },
+      "open": 1.10609,
+      "high": 1.10627,
+      "low": 1.10587,
+      "close": 1.10605,
+      "volume": 1152
+    },
+    {
+      "timestamp": "2026-01-01T11:51:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 2
+      },
+      "open": 1.10618,
+      "high": 1.1064,
+      "low": 1.106,
+      "close": 1.10622,
+      "volume": 1164
+    },
+    {
+      "timestamp": "2026-01-01T11:52:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 3
+      },
+      "open": 1.10627,
+      "high": 1.10657,
+      "low": 1.10609,
+      "close": 1.10639,
+      "volume": 1176
+    },
+    {
+      "timestamp": "2026-01-01T11:53:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 4
+      },
+      "open": 1.10636,
+      "high": 1.10654,
+      "low": 1.10606,
+      "close": 1.10624,
+      "volume": 1188
+    },
+    {
+      "timestamp": "2026-01-01T11:54:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 5
+      },
+      "open": 1.10645,
+      "high": 1.10663,
+      "low": 1.10623,
+      "close": 1.10641,
+      "volume": 1200
+    },
+    {
+      "timestamp": "2026-01-01T11:55:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 6
+      },
+      "open": 1.10654,
+      "high": 1.10676,
+      "low": 1.10636,
+      "close": 1.10658,
+      "volume": 1212
+    },
+    {
+      "timestamp": "2026-01-01T11:56:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 7
+      },
+      "open": 1.10663,
+      "high": 1.10693,
+      "low": 1.10645,
+      "close": 1.10675,
+      "volume": 1224
+    },
+    {
+      "timestamp": "2026-01-01T11:57:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 8
+      },
+      "open": 1.10672,
+      "high": 1.1069,
+      "low": 1.10642,
+      "close": 1.1066,
+      "volume": 1236
+    },
+    {
+      "timestamp": "2026-01-01T11:58:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 9
+      },
+      "open": 1.10681,
+      "high": 1.10699,
+      "low": 1.10659,
+      "close": 1.10677,
+      "volume": 1248
+    },
+    {
+      "timestamp": "2026-01-01T11:59:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 10
+      },
+      "open": 1.1069,
+      "high": 1.10712,
+      "low": 1.10672,
+      "close": 1.10694,
+      "volume": 1260
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research",
+        "sequence": 11
+      },
+      "open": 1.10699,
+      "high": 1.10729,
+      "low": 1.10681,
+      "close": 1.10711,
+      "volume": 1272
+    }
+  ],
+  "sessions": [
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "ALL",
+      "timeframe": "session",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "name": "الجلسة الآسيوية",
+      "is_active": false,
+      "activity_score": 58.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "ALL",
+      "timeframe": "session",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "name": "جلسة التداخل",
+      "is_active": true,
+      "activity_score": 79.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "ALL",
+      "timeframe": "session",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "name": "جلسة لندن",
+      "is_active": true,
+      "activity_score": 86.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "ALL",
+      "timeframe": "session",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "name": "جلسة نيويورك",
+      "is_active": true,
+      "activity_score": 72.0
+    }
+  ],
+  "statuses": [
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "status": "مفتوح",
+      "coverage_score": 75.5,
+      "update_frequency": 1.44
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "status": "مفتوح",
+      "coverage_score": 70.0,
+      "update_frequency": 1.32
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "status": "مفتوح",
+      "coverage_score": 92.0,
+      "update_frequency": 1.8
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "status": "مفتوح",
+      "coverage_score": 86.5,
+      "update_frequency": 1.68
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDCAD",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "status": "مراقبة فقط",
+      "coverage_score": 64.5,
+      "update_frequency": 1.2
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "1m",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "status": "مفتوح",
+      "coverage_score": 81.0,
+      "update_frequency": 1.56
+    }
+  ],
+  "latencies": [
+    {
+      "timestamp": "2026-01-01T11:59:48+00:00",
+      "provider": "static_research_provider",
+      "asset": "AUDUSD",
+      "timeframe": "provider",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "latency_ms": 43.25
+    },
+    {
+      "timestamp": "2026-01-01T11:59:44+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURJPY",
+      "timeframe": "provider",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "latency_ms": 47.0
+    },
+    {
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "provider": "static_research_provider",
+      "asset": "EURUSD",
+      "timeframe": "provider",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "latency_ms": 32.0
+    },
+    {
+      "timestamp": "2026-01-01T11:59:56+00:00",
+      "provider": "static_research_provider",
+      "asset": "GBPUSD",
+      "timeframe": "provider",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "latency_ms": 35.75
+    },
+    {
+      "timestamp": "2026-01-01T11:59:52+00:00",
+      "provider": "static_research_provider",
+      "asset": "USDJPY",
+      "timeframe": "provider",
+      "metadata": {
+        "source_mode": "static_research"
+      },
+      "latency_ms": 39.5
+    }
+  ],
+  "health": {
+    "timestamp": "2026-01-01T12:00:00+00:00",
+    "provider": "static_research_provider",
+    "asset": "ALL",
+    "timeframe": "provider",
+    "metadata": {
+      "source_mode": "static_research",
+      "research_only": true
+    },
+    "score": 91.0,
+    "label": "ممتاز",
+    "readiness_score": 88.5,
+    "readiness_label": "جاهز للبحث"
+  }
+}

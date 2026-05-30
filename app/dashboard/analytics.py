@@ -422,6 +422,93 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def market_data_analytics(self) -> dict[str, Any]:
+        """Return latest market data integration analytics."""
+        summary = self._latest_json_dict("market_data", "summary")
+        quality_payload = self._latest_json_dict("market_data", "quality")
+        assets_rows = self._latest_json_list("market_data", "assets")
+        sessions_rows = self._latest_json_list("market_data", "sessions")
+        if not summary:
+            summary = {
+                "timestamp": None,
+                "provider": None,
+                "asset_count": 0,
+                "active_assets": 0,
+                "market_status": "غير متاح",
+                "feed_quality_score": 0.0,
+                "provider_health": "ضعيف",
+                "average_latency_ms": 0.0,
+                "update_frequency": 0.0,
+                "readiness_score": 0.0,
+                "readiness_label": "غير جاهز",
+            }
+        severity = (
+            "healthy"
+            if self._float(summary.get("readiness_score")) >= 70
+            else "warning"
+        )
+        summary = {**summary, "severity": severity}
+        asset_quality = quality_payload.get("asset_quality", {}) if quality_payload else {}
+        feed_quality = quality_payload.get("feed_quality", {}) if quality_payload else {}
+        market_status = quality_payload.get("market_status", {}) if quality_payload else {}
+        session_activity = (
+            quality_payload.get("session_activity", {}) if quality_payload else {}
+        )
+        time_activity = quality_payload.get("time_activity", {}) if quality_payload else {}
+        if not asset_quality:
+            asset_quality = {
+                row.get("asset", ""): self._float(row.get("quality_score"))
+                for row in assets_rows
+            }
+        if not session_activity:
+            session_activity = {
+                row.get("name", ""): self._float(row.get("activity_score"))
+                for row in sessions_rows
+            }
+        asset_labels, asset_values = self._dict_chart_values(asset_quality)
+        session_labels, session_values = self._dict_chart_values(session_activity)
+        quality_labels, quality_values = self._dict_chart_values(feed_quality)
+        status_labels, status_values = self._dict_chart_values(market_status)
+        time_labels, time_values = self._dict_chart_values(time_activity)
+        return {
+            "summary": summary,
+            "assets": bar_chart(
+                "توزيع الأصول",
+                asset_labels,
+                asset_values,
+                label="الأصول",
+                color="green",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "نشاط الجلسات",
+                session_labels,
+                session_values,
+                label="الجلسات",
+                color="warning",
+            ).to_dict(),
+            "quality": bar_chart(
+                "جودة البيانات",
+                quality_labels,
+                quality_values,
+                label="الجودة",
+                color="blue",
+            ).to_dict(),
+            "status": bar_chart(
+                "صحة السوق",
+                status_labels,
+                status_values,
+                label="الحالة",
+                color="accent",
+            ).to_dict(),
+            "time_activity": line_chart(
+                "النشاط الزمني",
+                time_labels,
+                time_values,
+                label="النشاط",
+                color="green",
+            ).to_dict(),
+        }
+
     def report_visualization(self, payload: Any) -> dict[str, Any]:
         """Build generic cards and charts for a JSON report."""
         if not isinstance(payload, dict):
