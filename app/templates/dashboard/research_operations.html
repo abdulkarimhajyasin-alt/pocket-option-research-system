@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.research_operations }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.research_operations }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث العمليات</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>ملخص العمليات البحثية</span>
+    <strong>{{ research_ops.summary.health_classification|default('غير متاح') }}</strong>
+    <p>{{ research_ops.latest.get('executive_summary', {}).get('strategic_recommendation', 'لا توجد توصية استراتيجية محفوظة بعد.') }}</p>
+  </div>
+  <div class="executive-score">
+    <span>صحة النظام البحثي</span>
+    <strong>{{ research_ops.summary.health_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>الإجراء التالي</span>
+    <strong>{{ research_ops.latest.get('executive_summary', {}).get('next_action', {}).get('action', 'غير متاح') }}</strong>
+    <small>{{ research_ops.latest.get('executive_summary', {}).get('top_risk', 'غير متاح') }}</small>
+    <small>{{ research_ops.latest.get('executive_summary', {}).get('top_strength', 'غير متاح') }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>صحة الأبحاث</span><strong>{{ research_ops.summary.health_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الجاهزية</span><strong>{{ research_ops.summary.readiness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الفرص</span><strong>{{ research_ops.summary.opportunity_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التنبيهات</span><strong>{{ research_ops.summary.alert_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد المخاطر</span><strong>{{ research_ops.summary.risk_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ research_ops.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أفضل فرصة</span><strong>{{ research_ops.summary.best_opportunity|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>آخر تحديث</span><strong>{{ research_ops.summary.last_update|default('غير متاح')|datetime_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>صحة الأبحاث بمرور الوقت</h2><span>الصحة</span></div><div class="chart" data-chart='{{ research_ops.health|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تطور الجاهزية</h2><span>الجاهزية</span></div><div class="chart" data-chart='{{ research_ops.readiness|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تطور التوافق</h2><span>التوافق</span></div><div class="chart" data-chart='{{ research_ops.confluence|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تطور الأداء</h2><span>الأداء</span></div><div class="chart" data-chart='{{ research_ops.performance|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تطور جودة الفرص</h2><span>الفرص</span></div><div class="chart" data-chart='{{ research_ops.opportunity|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع المخاطر</h2><span>المخاطر</span></div><div class="chart" data-chart='{{ research_ops.risks|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع التنبيهات</h2><span>التنبيهات</span></div><div class="chart" data-chart='{{ research_ops.alerts|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع التوصيات</h2><span>التوصيات</span></div><div class="chart" data-chart='{{ research_ops.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>اتجاهات الجودة</h2><span>الجودة</span></div><div class="chart" data-chart='{{ research_ops.quality|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>اتجاهات الاستقرار</h2><span>الاستقرار</span></div><div class="chart" data-chart='{{ research_ops.stability|tojson }}'></div></article>
+</section>
+{% endblock %}

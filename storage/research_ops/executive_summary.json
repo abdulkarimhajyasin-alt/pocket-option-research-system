@@ -1,0 +1,20 @@
+{
+  "best_opportunity": "EURUSD",
+  "readiness_status": "تحتاج تحسين كبير",
+  "research_health": {
+    "score": 60.98,
+    "classification": "متوسط",
+    "explanation": "مؤشر جودة بحثية عام وليس توصية تداول أو تنفيذ.",
+    "research_only": true
+  },
+  "active_alerts": 2,
+  "strategic_recommendation": "زيادة حجم العينة",
+  "next_action": {
+    "action": "زيادة حجم العينة",
+    "reason": "تنبيه بحثي حتمي بناء على مؤشرات الجودة الحالية.",
+    "priority": "متوسط"
+  },
+  "top_risk": "عدم استقرار الجاهزية",
+  "top_strength": "وجود بوابات بحثية ناجحة",
+  "research_only": true
+}

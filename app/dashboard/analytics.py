@@ -1346,6 +1346,109 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def research_operations_analytics(self) -> dict[str, Any]:
+        """Return latest research operations analytics."""
+        summary_payload = self._latest_json_dict("research_ops", "operations")
+        summary = summary_payload.get("summary", {}) if summary_payload else {}
+        latest = summary_payload.get("latest", {}) if summary_payload else {}
+        health = summary_payload.get("health_trends", {}) if summary_payload else {}
+        readiness = (
+            summary_payload.get("readiness_trends", {}) if summary_payload else {}
+        )
+        confluence = (
+            summary_payload.get("confluence_trends", {}) if summary_payload else {}
+        )
+        performance = (
+            summary_payload.get("performance_trends", {}) if summary_payload else {}
+        )
+        opportunity = (
+            summary_payload.get("opportunity_quality_trends", {})
+            if summary_payload
+            else {}
+        )
+        quality = summary_payload.get("quality_trends", {}) if summary_payload else {}
+        stability = (
+            summary_payload.get("stability_trends", {}) if summary_payload else {}
+        )
+        alerts = self._latest_json_dict("research_ops", "alerts")
+        recommendations = self._latest_json_dict("research_ops", "recommendations")
+        risks = self._latest_json_dict("research_ops", "risk")
+        if not summary:
+            summary = {
+                "health_score": 0.0,
+                "readiness_score": 0.0,
+                "opportunity_count": 0,
+                "alert_count": 0,
+                "risk_count": 0,
+                "recommendation_count": 0,
+                "best_opportunity": "غير متاح",
+                "last_update": "غير متاح",
+            }
+        return {
+            "summary": summary,
+            "latest": latest,
+            "health": line_chart(
+                "صحة الأبحاث بمرور الوقت",
+                *self._dict_chart_values(health),
+                label="الصحة",
+                color="green",
+            ).to_dict(),
+            "readiness": line_chart(
+                "تطور الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="blue",
+            ).to_dict(),
+            "confluence": line_chart(
+                "تطور التوافق",
+                *self._dict_chart_values(confluence),
+                label="التوافق",
+                color="accent",
+            ).to_dict(),
+            "performance": line_chart(
+                "تطور الأداء",
+                *self._dict_chart_values(performance),
+                label="الأداء",
+                color="warning",
+            ).to_dict(),
+            "opportunity": line_chart(
+                "تطور جودة الفرص",
+                *self._dict_chart_values(opportunity),
+                label="الفرص",
+                color="green",
+            ).to_dict(),
+            "risks": bar_chart(
+                "توزيع المخاطر",
+                *self._dict_chart_values(risks),
+                label="المخاطر",
+                color="warning",
+            ).to_dict(),
+            "alerts": bar_chart(
+                "توزيع التنبيهات",
+                *self._dict_chart_values(alerts),
+                label="التنبيهات",
+                color="blue",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "توزيع التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="accent",
+            ).to_dict(),
+            "quality": line_chart(
+                "اتجاهات الجودة",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "stability": line_chart(
+                "اتجاهات الاستقرار",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="blue",
+            ).to_dict(),
+        }
+
     def _best_confirmation(self, rows: list[dict[str, Any]]) -> dict[str, Any]:
         if not rows:
             return {}

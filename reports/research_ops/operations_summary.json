@@ -1,0 +1,118 @@
+{
+  "summary": {
+    "health_score": 60.98,
+    "health_classification": "متوسط",
+    "readiness_score": 64.06,
+    "opportunity_count": 194,
+    "alert_count": 2,
+    "risk_count": 1,
+    "recommendation_count": 2,
+    "best_opportunity": "EURUSD",
+    "last_update": "2026-05-30T20:22:05.995335",
+    "research_only": true
+  },
+  "health_trends": {
+    "20:22": 60.98
+  },
+  "readiness_trends": {
+    "20:22": 64.06
+  },
+  "confluence_trends": {
+    "20:22": 69.08
+  },
+  "performance_trends": {
+    "20:22": 85.0
+  },
+  "opportunity_quality_trends": {
+    "20:22": 64.06
+  },
+  "quality_trends": {
+    "20:22": 61.2
+  },
+  "stability_trends": {
+    "20:22": 85.0
+  },
+  "latest": {
+    "timestamp": "2026-05-30T20:22:05.995335",
+    "executive_summary": {
+      "best_opportunity": "EURUSD",
+      "readiness_status": "تحتاج تحسين كبير",
+      "research_health": {
+        "score": 60.98,
+        "classification": "متوسط",
+        "explanation": "مؤشر جودة بحثية عام وليس توصية تداول أو تنفيذ.",
+        "research_only": true
+      },
+      "active_alerts": 2,
+      "strategic_recommendation": "زيادة حجم العينة",
+      "next_action": {
+        "action": "زيادة حجم العينة",
+        "reason": "تنبيه بحثي حتمي بناء على مؤشرات الجودة الحالية.",
+        "priority": "متوسط"
+      },
+      "top_risk": "عدم استقرار الجاهزية",
+      "top_strength": "وجود بوابات بحثية ناجحة",
+      "research_only": true
+    },
+    "strategy_status": {
+      "readiness_score": 64.06,
+      "readiness_state": "تحتاج تحسين كبير",
+      "passed_gates": 1,
+      "warnings": 6,
+      "failures": 0,
+      "research_quality": 64.06,
+      "confidence_stability": 85.0,
+      "lifecycle_quality": 61.2
+    },
+    "opportunity_status": {
+      "top_opportunity": "EURUSD",
+      "strongest_confluence": 69.08,
+      "strongest_alignment": 82.87,
+      "strongest_session": "3 دقائق",
+      "strongest_liquidity": 90.0,
+      "opportunity_count": 194
+    },
+    "risk_assessment": {
+      "severity": "منخفض",
+      "risks": [
+        "عدم استقرار الجاهزية"
+      ],
+      "score": 85.0
+    },
+    "alerts": [
+      {
+        "title": "تراجع الاستقرار",
+        "severity": "متوسط",
+        "explanation": "تنبيه بحثي حتمي بناء على مؤشرات الجودة الحالية.",
+        "recommendation": "زيادة حجم العينة"
+      },
+      {
+        "title": "ضعف التوافق",
+        "severity": "متوسط",
+        "explanation": "تنبيه بحثي حتمي بناء على مؤشرات الجودة الحالية.",
+        "recommendation": "تحسين التوافق العام"
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "زيادة حجم العينة",
+        "priority": "متوسط",
+        "reason": "تنبيه بحثي حتمي بناء على مؤشرات الجودة الحالية."
+      },
+      {
+        "title": "تحسين التوافق العام",
+        "priority": "متوسط",
+        "reason": "تنبيه بحثي حتمي بناء على مؤشرات الجودة الحالية."
+      }
+    ],
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_investment_advice": true,
+      "not_profitability_claim": true
+    },
+    "research_only": true,
+    "not_execution": true,
+    "not_investment_advice": true
+  }
+}
