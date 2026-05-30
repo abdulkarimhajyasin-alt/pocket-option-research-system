@@ -1,0 +1,226 @@
+{
+  "summary": {
+    "certification_score": 59.58,
+    "certification_state": "تحتاج تحسين كبير",
+    "maturity_score": 68.95,
+    "stability_score": 60.26,
+    "consistency_score": 65.11,
+    "robustness_score": 53.84,
+    "warning_count": 1,
+    "failure_count": 0,
+    "recommendation_count": 2,
+    "sample_size": 100,
+    "research_only": true
+  },
+  "certification_distribution": {
+    "تحتاج تحسين كبير": 59.58
+  },
+  "maturity_distribution": {
+    "score": 68.95,
+    "architecture_maturity": 85.0,
+    "validation_maturity": 62.08,
+    "data_maturity": 100.0,
+    "pattern_maturity": 38.08,
+    "certification_readiness": 59.58
+  },
+  "robustness_distribution": {
+    "score": 53.84,
+    "repeatability": 30.56,
+    "variance": 88.83,
+    "reliability": 36.14,
+    "adaptability": 62.02,
+    "regime_resilience": 51.66
+  },
+  "consistency_distribution": {
+    "score": 65.11,
+    "signal_consistency": 93.54,
+    "opportunity_consistency": 58.01,
+    "confluence_consistency": 52.73,
+    "lifecycle_consistency": 61.2,
+    "benchmark_consistency": 60.09
+  },
+  "stability_distribution": {
+    "score": 60.26,
+    "score_stability": 59.92,
+    "quality_stability": 55.13,
+    "confidence_stability": 56.36,
+    "pattern_stability": 75.5,
+    "regime_stability": 54.39
+  },
+  "diagnostics_distribution": {
+    "منخفض": 2
+  },
+  "recommendation_distribution": {
+    "تحسين الاستقرار": 1,
+    "تحسين الأداء عبر حالات السوق": 1
+  },
+  "requirements_distribution": {
+    "ناجح": 6,
+    "تحذير": 1
+  },
+  "failure_distribution": {},
+  "certification_timeline": {
+    "23:08": 59.58
+  },
+  "maturity_timeline": {
+    "23:08": 68.95
+  },
+  "latest": {
+    "timestamp": "2026-05-30T23:08:23.628263",
+    "certification": {
+      "score": 59.58,
+      "state": "تحتاج تحسين كبير",
+      "explanation": "قرار اعتماد بحثي فقط بحالة تحتاج تحسين كبير ودرجة 59.58.",
+      "components": {
+        "research_quality": 60.98,
+        "signal_quality": 46.18,
+        "stability": 60.26,
+        "consistency": 65.11,
+        "robustness": 53.84,
+        "readiness": 64.06,
+        "lifecycle_quality": 61.2,
+        "benchmark_quality": 60.09,
+        "pattern_quality": 75.13,
+        "regime_quality": 48.92
+      },
+      "research_only": true,
+      "not_deployment_approval": true
+    },
+    "requirements": {
+      "checks": [
+        {
+          "name": "حجم العينة",
+          "value": 100.0,
+          "threshold": 20,
+          "status": "PASS",
+          "status_ar": "ناجح",
+          "explanation": "حجم العينة: 100.0 مقابل حد 20."
+        },
+        {
+          "name": "الجاهزية",
+          "value": 64.06,
+          "threshold": 55,
+          "status": "PASS",
+          "status_ar": "ناجح",
+          "explanation": "الجاهزية: 64.06 مقابل حد 55."
+        },
+        {
+          "name": "الثبات",
+          "value": 60.26,
+          "threshold": 55,
+          "status": "PASS",
+          "status_ar": "ناجح",
+          "explanation": "الثبات: 60.26 مقابل حد 55."
+        },
+        {
+          "name": "الاتساق",
+          "value": 65.11,
+          "threshold": 55,
+          "status": "PASS",
+          "status_ar": "ناجح",
+          "explanation": "الاتساق: 65.11 مقابل حد 55."
+        },
+        {
+          "name": "المتانة",
+          "value": 53.84,
+          "threshold": 55,
+          "status": "WARNING",
+          "status_ar": "تحذير",
+          "explanation": "المتانة: 53.84 مقابل حد 55."
+        },
+        {
+          "name": "المعيار",
+          "value": 60.09,
+          "threshold": 55,
+          "status": "PASS",
+          "status_ar": "ناجح",
+          "explanation": "المعيار: 60.09 مقابل حد 55."
+        },
+        {
+          "name": "جودة دورة الحياة",
+          "value": 61.2,
+          "threshold": 55,
+          "status": "PASS",
+          "status_ar": "ناجح",
+          "explanation": "جودة دورة الحياة: 61.2 مقابل حد 55."
+        }
+      ],
+      "passed": true,
+      "warnings": 1,
+      "failures": 0
+    },
+    "robustness": {
+      "score": 53.84,
+      "repeatability": 30.56,
+      "variance": 88.83,
+      "reliability": 36.14,
+      "adaptability": 62.02,
+      "regime_resilience": 51.66
+    },
+    "consistency": {
+      "score": 65.11,
+      "signal_consistency": 93.54,
+      "opportunity_consistency": 58.01,
+      "confluence_consistency": 52.73,
+      "lifecycle_consistency": 61.2,
+      "benchmark_consistency": 60.09
+    },
+    "stability": {
+      "score": 60.26,
+      "score_stability": 59.92,
+      "quality_stability": 55.13,
+      "confidence_stability": 56.36,
+      "pattern_stability": 75.5,
+      "regime_stability": 54.39
+    },
+    "maturity": {
+      "score": 68.95,
+      "architecture_maturity": 85.0,
+      "validation_maturity": 62.08,
+      "data_maturity": 100.0,
+      "pattern_maturity": 38.08,
+      "certification_readiness": 59.58
+    },
+    "diagnostics": [
+      {
+        "name": "ضعف المتانة",
+        "severity": "منخفض",
+        "detail": "ضعف المتانة: القيمة 53.84 أقل من الحد 55."
+      },
+      {
+        "name": "ضعف التكيف مع حالة السوق",
+        "severity": "منخفض",
+        "detail": "ضعف التكيف مع حالة السوق: القيمة 48.92 أقل من الحد 55."
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "تحسين الاستقرار",
+        "priority": "متوسطة",
+        "reason": "ضعف المتانة: القيمة 53.84 أقل من الحد 55."
+      },
+      {
+        "title": "تحسين الأداء عبر حالات السوق",
+        "priority": "متوسطة",
+        "reason": "ضعف التكيف مع حالة السوق: القيمة 48.92 أقل من الحد 55."
+      }
+    ],
+    "sample_size": 100,
+    "metadata": {
+      "research_only": true,
+      "not_execution": true,
+      "not_deployment_approval": true,
+      "not_broker_control": true,
+      "not_account_interaction": true,
+      "not_investment_advice": true,
+      "not_profitability_claim": true
+    },
+    "research_only": true,
+    "not_execution": true,
+    "not_deployment_approval": true,
+    "not_broker_control": true,
+    "not_account_interaction": true,
+    "not_investment_advice": true,
+    "not_profitability_claim": true
+  }
+}

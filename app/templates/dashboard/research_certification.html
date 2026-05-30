@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.research_certification }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.research_certification }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث الاعتماد البحثي</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>شهادة الجاهزية البحثية</span>
+    <strong>{{ research_certification.summary.certification_state|default('غير متاح') }}</strong>
+    <p>قرار اعتماد بحثي للمراحل المتقدمة فقط وليس موافقة نشر أو توصية تداول.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الاعتماد</span>
+    <strong>{{ research_certification.summary.certification_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>أهم التوصيات</span>
+    <strong>{{ research_certification.summary.recommendation_count|default(0)|number_ar }}</strong>
+    <small>التحذيرات {{ research_certification.summary.warning_count|default(0)|number_ar }}</small>
+    <small>الإخفاقات {{ research_certification.summary.failure_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>درجة الاعتماد</span><strong>{{ research_certification.summary.certification_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة النضج</span><strong>{{ research_certification.summary.maturity_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الثبات</span><strong>{{ research_certification.summary.stability_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الاتساق</span><strong>{{ research_certification.summary.consistency_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة المتانة</span><strong>{{ research_certification.summary.robustness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ research_certification.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ research_certification.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>حجم العينة</span><strong>{{ research_certification.summary.sample_size|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الاعتماد</h2><span>الشهادة</span></div><div class="chart" data-chart='{{ research_certification.certification|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع النضج</h2><span>النضج</span></div><div class="chart" data-chart='{{ research_certification.maturity|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الثبات</h2><span>الثبات</span></div><div class="chart" data-chart='{{ research_certification.stability|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الاتساق</h2><span>الاتساق</span></div><div class="chart" data-chart='{{ research_certification.consistency|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع المتانة</h2><span>المتانة</span></div><div class="chart" data-chart='{{ research_certification.robustness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>نتائج المتطلبات</h2><span>المتطلبات</span></div><div class="chart" data-chart='{{ research_certification.requirements|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أسباب الفشل</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ research_certification.failures|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ research_certification.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تطور الاعتماد بمرور الوقت</h2><span>الزمن</span></div><div class="chart" data-chart='{{ research_certification.certification_timeline|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تطور النضج</h2><span>الزمن</span></div><div class="chart" data-chart='{{ research_certification.maturity_timeline|tojson }}'></div></article>
+</section>
+{% endblock %}

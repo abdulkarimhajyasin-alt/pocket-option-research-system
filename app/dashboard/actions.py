@@ -152,6 +152,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل محرك حالة السوق للبحث فقط دون اتصال وسيط أو تنفيذ.",
         command=("scripts/run_market_regime.py",),
     ),
+    "research_certification": ActionDefinition(
+        name="research_certification",
+        label="تحديث الاعتماد البحثي",
+        description="تشغيل قرار الاعتماد البحثي دون نشر أو تداول أو تنفيذ.",
+        command=("scripts/run_research_certification.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "name": "حجم العينة",
+      "value": 100.0,
+      "threshold": 20,
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "explanation": "حجم العينة: 100.0 مقابل حد 20."
+    },
+    {
+      "name": "الجاهزية",
+      "value": 64.06,
+      "threshold": 55,
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "explanation": "الجاهزية: 64.06 مقابل حد 55."
+    },
+    {
+      "name": "الثبات",
+      "value": 60.26,
+      "threshold": 55,
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "explanation": "الثبات: 60.26 مقابل حد 55."
+    },
+    {
+      "name": "الاتساق",
+      "value": 65.11,
+      "threshold": 55,
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "explanation": "الاتساق: 65.11 مقابل حد 55."
+    },
+    {
+      "name": "المتانة",
+      "value": 53.84,
+      "threshold": 55,
+      "status": "WARNING",
+      "status_ar": "تحذير",
+      "explanation": "المتانة: 53.84 مقابل حد 55."
+    },
+    {
+      "name": "المعيار",
+      "value": 60.09,
+      "threshold": 55,
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "explanation": "المعيار: 60.09 مقابل حد 55."
+    },
+    {
+      "name": "جودة دورة الحياة",
+      "value": 61.2,
+      "threshold": 55,
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "explanation": "جودة دورة الحياة: 61.2 مقابل حد 55."
+    }
+  ],
+  "passed": true,
+  "warnings": 1,
+  "failures": 0
+}

@@ -1639,6 +1639,100 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def research_certification_analytics(self) -> dict[str, Any]:
+        """Return latest research certification analytics."""
+        payload = self._latest_json_dict("research_certification", "certification_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        certification = payload.get("certification_distribution", {}) if payload else {}
+        certification_timeline = payload.get("certification_timeline", {}) if payload else {}
+        maturity_timeline = payload.get("maturity_timeline", {}) if payload else {}
+        maturity = self._latest_json_dict("research_certification", "maturity")
+        robustness = self._latest_json_dict("research_certification", "robustness")
+        consistency = self._latest_json_dict("research_certification", "consistency")
+        stability = self._latest_json_dict("research_certification", "stability")
+        requirements = self._latest_json_dict("research_certification", "requirements")
+        diagnostics = self._latest_json_dict("research_certification", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "research_certification",
+            "recommendations",
+        )
+        if not summary:
+            summary = {
+                "certification_score": 0.0,
+                "certification_state": "غير متاح",
+                "maturity_score": 0.0,
+                "stability_score": 0.0,
+                "consistency_score": 0.0,
+                "robustness_score": 0.0,
+                "warning_count": 0,
+                "failure_count": 0,
+                "recommendation_count": 0,
+                "sample_size": 0,
+            }
+        return {
+            "summary": summary,
+            "certification": bar_chart(
+                "توزيع الاعتماد",
+                *self._dict_chart_values(certification),
+                label="الاعتماد",
+                color="green",
+            ).to_dict(),
+            "maturity": bar_chart(
+                "توزيع النضج",
+                *self._dict_chart_values(maturity),
+                label="النضج",
+                color="blue",
+            ).to_dict(),
+            "stability": bar_chart(
+                "توزيع الثبات",
+                *self._dict_chart_values(stability),
+                label="الثبات",
+                color="accent",
+            ).to_dict(),
+            "consistency": bar_chart(
+                "توزيع الاتساق",
+                *self._dict_chart_values(consistency),
+                label="الاتساق",
+                color="green",
+            ).to_dict(),
+            "robustness": bar_chart(
+                "توزيع المتانة",
+                *self._dict_chart_values(robustness),
+                label="المتانة",
+                color="warning",
+            ).to_dict(),
+            "requirements": bar_chart(
+                "نتائج المتطلبات",
+                *self._dict_chart_values(requirements),
+                label="المتطلبات",
+                color="blue",
+            ).to_dict(),
+            "failures": bar_chart(
+                "أسباب الفشل",
+                *self._dict_chart_values(diagnostics),
+                label="الفشل",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="accent",
+            ).to_dict(),
+            "certification_timeline": line_chart(
+                "تطور الاعتماد بمرور الوقت",
+                *self._dict_chart_values(certification_timeline),
+                label="الاعتماد",
+                color="green",
+            ).to_dict(),
+            "maturity_timeline": line_chart(
+                "تطور النضج",
+                *self._dict_chart_values(maturity_timeline),
+                label="النضج",
+                color="blue",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")
