@@ -1,32 +1,42 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.datasets }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Dataset detail</p><h1>{{ dataset.name }}</h1></div></section>
+{% set decision = dataset_decision(dataset) %}
+<section class="page-head"><div><p class="eyebrow">تفاصيل البيانات</p><h1>{{ dataset.name }}</h1></div></section>
+<section class="decision-strip severity-{{ decision.severity }}">
+  <strong>{{ decision.status }}</strong>
+  <span>{{ decision.explanation }}</span>
+  <small>{{ decision.next_step }}</small>
+</section>
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.quality }}</h2></div>
+    <div class="panel-title"><h2>{{ t.charts.quality }}</h2><span>{{ dataset.quality_score|percent_ar }}</span></div>
     <div class="chart" data-chart='{{ dataset_analytics.quality|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>Gaps</h2></div>
+    <div class="panel-title"><h2>الفجوات والتكرار</h2><span>{{ dataset.gap_count|number_ar }}</span></div>
     <div class="chart" data-chart='{{ dataset_analytics.gaps|tojson }}'></div>
   </article>
 </section>
 <article class="panel">
   <div class="detail-grid">
-    <div><span>ID</span><strong>{{ dataset.dataset_id }}</strong></div>
-    <div><span>Symbol</span><strong>{{ dataset.symbol }}</strong></div>
-    <div><span>Timeframe</span><strong>{{ dataset.timeframe }}</strong></div>
-    <div><span>Version</span><strong>{{ dataset.version }}</strong></div>
-    <div><span>Rows</span><strong>{{ dataset.row_count }}</strong></div>
-    <div><span>Quality</span><strong>{{ dataset.quality_score if dataset.quality_score is not none else "n/a" }}</strong></div>
-    <div><span>Start</span><strong>{{ dataset.start_time or "n/a" }}</strong></div>
-    <div><span>End</span><strong>{{ dataset.end_time or "n/a" }}</strong></div>
-    <div><span>Checksum</span><strong class="mono">{{ dataset.checksum or "n/a" }}</strong></div>
-    <div><span>Fingerprint</span><strong class="mono">{{ dataset.fingerprint or "n/a" }}</strong></div>
+    <div><span>معرف البيانات</span><strong>{{ dataset.dataset_id }}</strong></div>
+    <div><span>الرمز</span><strong>{{ dataset.symbol }}</strong></div>
+    <div><span>الإطار الزمني</span><strong>{{ dataset.timeframe }}</strong></div>
+    <div><span>الإصدار</span><strong>{{ dataset.version }}</strong></div>
+    <div><span>عدد الشموع</span><strong>{{ dataset.row_count|number_ar }}</strong></div>
+    <div><span>جودة البيانات</span><strong>{{ dataset.quality_score|percent_ar }}</strong></div>
+    <div><span>بداية النطاق</span><strong>{{ dataset.start_time|datetime_ar(False) }}</strong></div>
+    <div><span>نهاية النطاق</span><strong>{{ dataset.end_time|datetime_ar(False) }}</strong></div>
+    <div><span>عدد الفجوات</span><strong>{{ dataset.gap_count|number_ar }}</strong></div>
+    <div><span>عدد التكرارات</span><strong>{{ dataset.duplicate_count|number_ar }}</strong></div>
+    <div><span>النزاهة</span><strong>{{ "ناجحة" if dataset.integrity_status == "passed" else "تحتاج مراجعة" }}</strong></div>
+    <div><span>قرار استخدام البيانات</span><strong>{{ decision.status }}</strong></div>
+    <div><span>Checksum</span><strong class="mono">{{ dataset.checksum or "غير متوفر" }}</strong></div>
+    <div><span>Fingerprint</span><strong class="mono">{{ dataset.fingerprint or "غير متوفر" }}</strong></div>
   </div>
   {% if dataset.latest_report %}
-    <p><a class="button-link" href="/reports/{{ dataset.latest_report.report_id }}">View latest dataset report</a></p>
+    <p><a class="button-link" href="/reports/{{ dataset.latest_report.report_id }}">فتح آخر تقرير بيانات</a></p>
   {% endif %}
 </article>
 {% endblock %}

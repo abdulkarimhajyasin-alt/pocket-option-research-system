@@ -88,13 +88,33 @@ class ArabicDashboardValidator:
             "Worst",
             "Recoveries",
             "Exit ",
+            "Research only",
+            "Dataset detail",
+            "View latest dataset report",
+            "English button",
         )
+        required_arabic = (
+            "صالح للمتابعة",
+            "يحتاج تحسين",
+            "مرفوض بحثيا",
+            "غير كاف للحكم",
+            "درجة الجاهزية البحثية",
+        )
+        all_template_text = ""
         for path in template_root.glob("*.html"):
             scanned += 1
             text = path.read_text(encoding="utf-8")
+            all_template_text += text
             for needle in english_needles:
                 if needle in text:
                     issues.append(f"template:{path.name}:{needle}")
+        for label in required_arabic:
+            decision_source = self.project_root / "app" / "dashboard" / "decision.py"
+            decision_text = (
+                decision_source.read_text(encoding="utf-8") if decision_source.exists() else ""
+            )
+            if label not in all_template_text and label not in decision_text:
+                issues.append(f"templates:missing_arabic_decision:{label}")
         return issues, scanned
 
     def _contains_arabic(self, value: str) -> bool:

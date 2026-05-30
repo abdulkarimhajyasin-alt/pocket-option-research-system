@@ -19,6 +19,17 @@ function escapeText(value) {
     .replaceAll("'", "&#39;");
 }
 
+function formatChartNumber(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) {
+    return "غير متوفر";
+  }
+  if (Number.isInteger(number)) {
+    return String(number);
+  }
+  return number.toFixed(2).replace(/\.?0+$/, "");
+}
+
 function renderChart(element) {
   const payload = JSON.parse(element.dataset.chart || "{}");
   const labels = payload.labels || [];
@@ -65,8 +76,8 @@ function renderChart(element) {
       ? `<text x="${xFor(index)}" y="${height - 14}" class="chart-label">${escapeText(label)}</text>`
       : "")
     .join("");
-  const ticks = `<text x="${padding.left - 8}" y="${padding.top + 4}" class="chart-tick">${max.toFixed(1)}</text>
-    <text x="${padding.left - 8}" y="${height - padding.bottom}" class="chart-tick">${min.toFixed(1)}</text>`;
+  const ticks = `<text x="${padding.left - 8}" y="${padding.top + 4}" class="chart-tick">${formatChartNumber(max)}</text>
+    <text x="${padding.left - 8}" y="${height - padding.bottom}" class="chart-tick">${formatChartNumber(min)}</text>`;
   element.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeText(payload.title || "chart")}">${axis}${body}${ticks}${labelMarkup}</svg>`;
 }
 

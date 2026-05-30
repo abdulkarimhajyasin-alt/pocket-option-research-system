@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Any
 
 from app.dashboard.analytics import DashboardAnalyticsService
+from app.dashboard.decision import executive_summary
+from app.dashboard.formatting import format_datetime, format_percent
 from app.dashboard.models import DashboardOverview
 from app.dashboard.service import DashboardService
 from app.jobs.manager import JobManager
@@ -64,6 +66,7 @@ class DashboardMetricsService:
         )
         return {
             "overview": overview,
+            "executive": executive_summary(overview),
             "health": health,
             "metrics": [
                 item.to_dict() for item in self.executive_metrics(overview, warning_count)
@@ -81,7 +84,11 @@ class DashboardMetricsService:
         warning_count: int,
     ) -> list[ExecutiveMetric]:
         """Build executive metric cards."""
-        last_report = overview.reports[0].modified_at if overview.reports else "n/a"
+        last_report = (
+            format_datetime(overview.reports[0].modified_at)
+            if overview.reports
+            else "غير متوفر"
+        )
         return [
             ExecutiveMetric(
                 "strategies",
@@ -164,7 +171,7 @@ class DashboardMetricsService:
                 {
                     "label": self._activity_label(report.relative_path),
                     "path": report.relative_path,
-                    "time": report.modified_at,
+                    "time": format_datetime(report.modified_at),
                     "report_id": report.report_id,
                 }
             )
@@ -181,7 +188,7 @@ class DashboardMetricsService:
         return "تقرير بحثي"
 
     def _score(self, value: float | None) -> str:
-        return "n/a" if value is None else f"{value:.1f}"
+        return format_percent(value)
 
     def _score_status(self, value: float | None) -> str:
         if value is None:

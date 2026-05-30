@@ -55,8 +55,10 @@ class DashboardContext:
 
     def diagnostics(self) -> dict[str, object]:
         """Return request and shared dashboard diagnostics."""
+        reports = self.repository.list_reports()
         return {
             **self.repository.diagnostics(),
             **self.jobs.diagnostics(),
+            "reports_indexed": len(reports),
             "dashboard_render_duration_ms": round((perf_counter() - self.started_at) * 1000, 3),
         }

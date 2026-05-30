@@ -1,29 +1,38 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.validation }} - {{ t.app.title }}{% endblock %}
 {% block content %}
+{% set decision = validation_decision(validation) %}
 <section class="page-head"><div><p class="eyebrow">تفاصيل التحقق</p><h1>{{ validation.strategy_name }}</h1></div></section>
+<section class="decision-strip severity-{{ decision.severity }}">
+  <strong>{{ decision.status }}</strong>
+  <span>{{ decision.explanation }}</span>
+  <small>{{ decision.next_step }}</small>
+</section>
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.validation }}</h2></div>
+    <div class="panel-title"><h2>{{ t.charts.validation }}</h2><span>{{ validation.robustness_score|percent_ar }}</span></div>
     <div class="chart" data-chart='{{ validation_analytics.history|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>المكونات</h2></div>
+    <div class="panel-title"><h2>مكونات المتانة</h2></div>
     <div class="chart" data-chart='{{ validation_analytics.components|tojson }}'></div>
   </article>
 </section>
 <article class="panel">
   <div class="detail-grid">
     <div><span>البيانات</span><strong>{{ validation.dataset_name }}</strong></div>
-    <div><span>المتانة</span><strong>{{ validation.robustness_score if validation.robustness_score is not none else "n/a" }}</strong></div>
+    <div><span>المتانة</span><strong>{{ validation.robustness_score|percent_ar }}</strong></div>
     <div><span>الفئة</span><strong>{{ validation.robustness_category }}</strong></div>
-    <div><span>التحذيرات</span><strong>{{ validation.overfitting_warnings|length }}</strong></div>
+    <div><span>تحذيرات فرط الملاءمة</span><strong>{{ validation.overfitting_warnings|length }}</strong></div>
+    <div><span>تغطية Walk-forward</span><strong>{{ validation.walk_forward_summary.windows|number_ar }}</strong></div>
+    <div><span>ملخص فحص المعاملات</span><strong>{{ validation.parameter_sweep_summary.results|number_ar }}</strong></div>
+    <div><span>الإجراء البحثي التالي</span><strong>{{ decision.next_step }}</strong></div>
   </div>
-  <h3>خارج العينة</h3>
+  <h3>شرح خارج العينة</h3>
   <pre>{{ validation.out_of_sample_summary }}</pre>
-  <h3>النافذة المتحركة</h3>
+  <h3>شرح Walk-forward</h3>
   <pre>{{ validation.walk_forward_summary }}</pre>
-  <h3>فحص المعاملات</h3>
+  <h3>شرح فحص المعاملات</h3>
   <pre>{{ validation.parameter_sweep_summary }}</pre>
   {% if validation.latest_report %}
     <p><a class="button-link" href="/reports/{{ validation.latest_report.report_id }}">فتح التقرير الخام</a></p>

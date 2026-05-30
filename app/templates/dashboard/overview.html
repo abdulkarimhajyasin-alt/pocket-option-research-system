@@ -3,10 +3,28 @@
 {% block content %}
 <section class="page-head">
   <div>
-    <p class="eyebrow">المرحلة 18</p>
+    <p class="eyebrow">المرحلة 19</p>
     <h1>{{ t.pages.overview }}</h1>
   </div>
   <div class="health-pill {{ workbench.health.status }}">{{ t.labels.health }}: {{ workbench.health.label }}</div>
+</section>
+
+<section class="executive-panel severity-{{ workbench.executive.decision.severity }}">
+  <div class="executive-main">
+    <span>حالة البحث</span>
+    <strong>{{ workbench.executive.state }}</strong>
+    <p>{{ workbench.executive.reason }}</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجاهزية البحثية</span>
+    <strong>{{ workbench.executive.health.score }}%</strong>
+    <small>{{ workbench.executive.health.label }}</small>
+  </div>
+  <div class="executive-next">
+    <span>الخطوة التالية المقترحة</span>
+    <strong>{{ workbench.executive.next_step }}</strong>
+    <small>آخر تحديث: {{ workbench.executive.freshness }}</small>
+  </div>
 </section>
 
 <section class="metric-grid executive-grid">
@@ -24,13 +42,13 @@
     <div class="chart" data-chart='{{ workbench.equity.equity|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.drawdown }}</h2><span>{{ workbench.equity.summary.max_drawdown }}</span></div>
+    <div class="panel-title"><h2>{{ t.charts.drawdown }}</h2><span>{{ workbench.equity.summary.max_drawdown|number_ar }}</span></div>
     <div class="chart" data-chart='{{ workbench.equity.drawdown|tojson }}'></div>
     <div class="detail-grid compact">
-      <div><span>الأقصى</span><strong>{{ workbench.equity.summary.max_drawdown }}</strong></div>
-      <div><span>الحالي</span><strong>{{ workbench.equity.summary.current_drawdown }}</strong></div>
-      <div><span>الأسوأ</span><strong>{{ workbench.equity.summary.worst_period or "n/a" }}</strong></div>
-      <div><span>التعافي</span><strong>{{ workbench.equity.summary.recovery_periods }}</strong></div>
+      <div><span>الأقصى</span><strong>{{ workbench.equity.summary.max_drawdown|number_ar }}</strong></div>
+      <div><span>الحالي</span><strong>{{ workbench.equity.summary.current_drawdown|number_ar }}</strong></div>
+      <div><span>الفترة الأضعف</span><strong>{{ workbench.equity.summary.worst_period or "غير متوفر" }}</strong></div>
+      <div><span>مرات التعافي</span><strong>{{ workbench.equity.summary.recovery_periods|number_ar }}</strong></div>
     </div>
   </article>
 </section>

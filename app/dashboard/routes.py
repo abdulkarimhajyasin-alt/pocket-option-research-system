@@ -12,6 +12,19 @@ from fastapi.templating import Jinja2Templates
 from loguru import logger
 
 from app.dashboard.context import DashboardContext
+from app.dashboard.decision import (
+    dataset_decision,
+    strategy_decision,
+    validation_decision,
+)
+from app.dashboard.formatting import (
+    format_duration,
+    format_datetime,
+    format_metric,
+    format_number,
+    format_percent,
+    format_relative_time,
+)
 from app.dashboard.service import DashboardService, load_dashboard_config
 from app.jobs.manager import JobManager
 from app.reports.repository import ReportRepository
@@ -32,6 +45,15 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     jobs = JobManager(service.actions.job_registry())
     translations = get_translations(DEFAULT_LANGUAGE)
     templates = Jinja2Templates(directory=str(root / "app" / "templates"))
+    templates.env.filters["datetime_ar"] = format_datetime
+    templates.env.filters["metric_ar"] = format_metric
+    templates.env.filters["number_ar"] = format_number
+    templates.env.filters["percent_ar"] = format_percent
+    templates.env.filters["relative_ar"] = format_relative_time
+    templates.env.globals["duration_ar"] = format_duration
+    templates.env.globals["dataset_decision"] = dataset_decision
+    templates.env.globals["strategy_decision"] = strategy_decision
+    templates.env.globals["validation_decision"] = validation_decision
     app = FastAPI(
         title="Pocket Option Research Dashboard",
         description="Local-only research dashboard. No live trading.",

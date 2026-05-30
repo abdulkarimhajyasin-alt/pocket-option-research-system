@@ -8,11 +8,29 @@
   </div>
 </section>
 <section class="metric-grid">
-  {% for key, value in diagnostics.items() %}
-    <article class="metric-card">
-      <span>{{ key }}</span>
-      <strong>{{ value }}</strong>
-    </article>
-  {% endfor %}
+  <article class="metric-card">
+    <span>حالة الفهرس</span>
+    <strong>نشط</strong>
+  </article>
+  <article class="metric-card">
+    <span>عدد التقارير المفهرسة</span>
+    <strong>{{ diagnostics.reports_indexed|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>cache hits</span>
+    <strong>{{ diagnostics.report_cache_hits|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>cache misses</span>
+    <strong>{{ diagnostics.report_cache_misses|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>المهام النشطة</span>
+    <strong>{{ diagnostics.active_jobs|default(0)|number_ar }}</strong>
+  </article>
+  <article class="metric-card">
+    <span>صحة اللوحة</span>
+    <strong>تعمل محليا</strong>
+  </article>
 </section>
 {% endblock %}

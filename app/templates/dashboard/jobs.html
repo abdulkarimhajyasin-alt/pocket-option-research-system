@@ -17,9 +17,11 @@
         </div>
         <div class="detail-grid">
           <div><span>{{ t.labels.run_id }}</span><strong>{{ job.run_id }}</strong></div>
-          <div><span>{{ t.labels.started_at }}</span><strong>{{ job.started_at or "n/a" }}</strong></div>
-          <div><span>{{ t.labels.completed_at }}</span><strong>{{ job.completed_at or "n/a" }}</strong></div>
-          <div><span>{{ t.labels.result }}</span><strong>{{ job.result.exit_code if job.result else "n/a" }}</strong></div>
+          <div><span>اسم الإجراء</span><strong>{{ job.label }}</strong></div>
+          <div><span>{{ t.labels.started_at }}</span><strong>{{ job.started_at|datetime_ar }}</strong></div>
+          <div><span>{{ t.labels.completed_at }}</span><strong>{{ job.completed_at|datetime_ar }}</strong></div>
+          <div><span>المدة</span><strong>{{ duration_ar(job.started_at, job.completed_at) if job.started_at else "غير متوفر" }}</strong></div>
+          <div><span>ملخص النتيجة</span><strong>{{ "اكتمل بنجاح" if job.result and job.result.exit_code == 0 else ("فشل التنفيذ" if job.result else "لم يكتمل بعد") }}</strong></div>
         </div>
         {% if job.result %}
           <details>
@@ -31,6 +33,6 @@
     {% endfor %}
   </section>
 {% else %}
-  <p class="empty">{{ t.labels.no_data }}</p>
+  <p class="empty">لا توجد مهام منفذة بعد.</p>
 {% endif %}
 {% endblock %}

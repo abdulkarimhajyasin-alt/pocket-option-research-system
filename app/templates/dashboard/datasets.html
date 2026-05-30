@@ -4,17 +4,17 @@
 <section class="page-head"><div><p class="eyebrow">جودة البيانات</p><h1>{{ t.pages.datasets }}</h1></div></section>
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.quality }}</h2><span>{{ dataset_analytics.summary.quality_score or "n/a" }}</span></div>
+    <div class="panel-title"><h2>ملخص جودة البيانات</h2><span>{{ dataset_analytics.summary.quality_score|percent_ar }}</span></div>
     <div class="chart" data-chart='{{ dataset_analytics.quality|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.quality }}</h2><span>التغطية</span></div>
+    <div class="panel-title"><h2>سلامة البيانات</h2><span>{{ "ناجحة" if dataset_analytics.summary.integrity_passed else "تحتاج مراجعة" }}</span></div>
     <div class="chart" data-chart='{{ dataset_analytics.gaps|tojson }}'></div>
     <div class="detail-grid compact">
-      <div><span>البداية</span><strong>{{ dataset_analytics.summary.start_time or "n/a" }}</strong></div>
-      <div><span>النهاية</span><strong>{{ dataset_analytics.summary.end_time or "n/a" }}</strong></div>
-      <div><span>الشموع</span><strong>{{ dataset_analytics.summary.row_count }}</strong></div>
-      <div><span>الفجوات</span><strong>{{ dataset_analytics.summary.gap_count }}</strong></div>
+      <div><span>بداية النطاق</span><strong>{{ dataset_analytics.summary.start_time|datetime_ar(False) }}</strong></div>
+      <div><span>نهاية النطاق</span><strong>{{ dataset_analytics.summary.end_time|datetime_ar(False) }}</strong></div>
+      <div><span>عدد الشموع</span><strong>{{ dataset_analytics.summary.row_count|number_ar }}</strong></div>
+      <div><span>عدد الفجوات</span><strong>{{ dataset_analytics.summary.gap_count|number_ar }}</strong></div>
     </div>
   </article>
 </section>
@@ -23,21 +23,23 @@
     <table>
       <thead>
         <tr>
-          <th>الاسم</th><th>الرمز</th><th>الإطار</th><th>الإصدار</th><th>الشموع</th><th>الجودة</th><th>الفجوات</th><th>التكرار</th><th>النزاهة</th>
+          <th>الاسم</th><th>الرمز</th><th>الإطار</th><th>الإصدار</th><th>الشموع</th><th>الجودة</th><th>الفجوات</th><th>التكرار</th><th>النزاهة</th><th>قرار الاستخدام</th>
         </tr>
       </thead>
       <tbody>
         {% for dataset in datasets %}
+          {% set decision = dataset_decision(dataset) %}
           <tr>
             <td><a href="/datasets/{{ dataset.dataset_id }}">{{ dataset.name }}</a></td>
             <td>{{ dataset.symbol }}</td>
             <td>{{ dataset.timeframe }}</td>
             <td>{{ dataset.version }}</td>
-            <td>{{ dataset.row_count }}</td>
-            <td>{{ dataset.quality_score if dataset.quality_score is not none else "n/a" }}</td>
-            <td>{{ dataset.gap_count }}</td>
-            <td>{{ dataset.duplicate_count }}</td>
-            <td><span class="status">{{ dataset.integrity_status }}</span></td>
+            <td>{{ dataset.row_count|number_ar }}</td>
+            <td>{{ dataset.quality_score|percent_ar }}</td>
+            <td>{{ dataset.gap_count|number_ar }}</td>
+            <td>{{ dataset.duplicate_count|number_ar }}</td>
+            <td><span class="status">{{ "ناجحة" if dataset.integrity_status == "passed" else "تحتاج مراجعة" }}</span></td>
+            <td><span class="status severity-{{ decision.severity }}">{{ decision.status }}</span></td>
           </tr>
         {% endfor %}
       </tbody>

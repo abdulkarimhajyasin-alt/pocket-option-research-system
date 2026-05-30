@@ -1,34 +1,42 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.strategies }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Research only</p><h1>{{ t.pages.strategies }}</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">بحث محلي فقط</p><h1>{{ t.pages.strategies }}</h1></div></section>
 {% if strategies %}
   <section class="stack">
     {% for strategy in strategies %}
+      {% set decision = strategy_decision(strategy.latest_signal_summary) %}
       <article class="panel">
         <div class="panel-title">
           <h2>{{ strategy.name }}</h2>
-          <span>{{ strategy.version }}</span>
+          <span class="status severity-{{ decision.severity }}">{{ decision.status }}</span>
         </div>
         <p>{{ strategy.description }}</p>
         <div class="detail-grid">
-          <div><span>ID</span><strong>{{ strategy.strategy_id }}</strong></div>
-          <div><span>متعدد الأطر</span><strong>{{ strategy.metadata.supports_multi_timeframe }}</strong></div>
-          <div><span>المؤشرات</span><strong>{{ strategy.metadata.required_indicators|join(", ") or "None" }}</strong></div>
+          <div><span>معرف الاستراتيجية</span><strong>{{ strategy.strategy_id }}</strong></div>
+          <div><span>الإصدار</span><strong>{{ strategy.version }}</strong></div>
+          <div><span>متعدد الأطر</span><strong>{{ strategy.metadata.supports_multi_timeframe|metric_ar }}</strong></div>
+          <div><span>المؤشرات</span><strong>{{ strategy.metadata.required_indicators|join(", ") or "غير متوفر" }}</strong></div>
+          <div><span>حالة البحث الخاصة بالاستراتيجية</span><strong>{{ decision.status }}</strong></div>
+          <div><span>الخطوة التالية</span><strong>{{ decision.next_step }}</strong></div>
         </div>
-        <h3>الإعداد الافتراضي</h3>
-        <pre>{{ strategy.default_configuration }}</pre>
         {% if strategy.latest_signal_summary %}
           <h3>آخر ملخص إشارات</h3>
           <div class="detail-grid">
-            <div><span>الإشارات</span><strong>{{ strategy.latest_signal_summary.generated_signals }}</strong></div>
-            <div><span>المرفوض</span><strong>{{ strategy.latest_signal_summary.decision_distribution.rejected }}</strong></div>
-            <div><span>صاعدة</span><strong>{{ strategy.latest_signal_summary.bullish_signals }}</strong></div>
-            <div><span>هابطة</span><strong>{{ strategy.latest_signal_summary.bearish_signals }}</strong></div>
+            <div><span>عدد الإشارات</span><strong>{{ strategy.latest_signal_summary.generated_signals|number_ar }}</strong></div>
+            <div><span>إشارات صعود</span><strong>{{ strategy.latest_signal_summary.bullish_signals|number_ar }}</strong></div>
+            <div><span>إشارات هبوط</span><strong>{{ strategy.latest_signal_summary.bearish_signals|number_ar }}</strong></div>
+            <div><span>المرفوض</span><strong>{{ strategy.latest_signal_summary.decision_distribution.rejected|number_ar }}</strong></div>
+            <div><span>متوسط الثقة</span><strong>{{ decision.explanation }}</strong></div>
+            <div><span>آخر تقرير</span><strong>{{ strategy.latest_report.modified_at|datetime_ar if strategy.latest_report else "غير متوفر" }}</strong></div>
           </div>
         {% else %}
-          <p class="empty">{{ t.labels.no_data }}</p>
+          <p class="empty">لا توجد نتائج بحث محفوظة لهذه الاستراتيجية بعد.</p>
         {% endif %}
+        <details>
+          <summary>الإعداد الافتراضي</summary>
+          <pre>{{ strategy.default_configuration }}</pre>
+        </details>
       </article>
     {% endfor %}
   </section>

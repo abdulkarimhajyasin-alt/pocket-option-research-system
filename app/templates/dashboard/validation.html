@@ -1,7 +1,7 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.validation }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">المتانة</p><h1>{{ t.pages.validation }}</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">المتانة والتحقق</p><h1>{{ t.pages.validation }}</h1></div></section>
 <section class="two-col">
   <article class="panel">
     <div class="panel-title"><h2>{{ t.charts.validation }}</h2><span>السجل</span></div>
@@ -14,11 +14,11 @@
 </section>
 <section class="three-col">
   <article class="panel">
-    <div class="panel-title"><h2>النافذة المتحركة</h2></div>
+    <div class="panel-title"><h2>تغطية Walk-forward</h2></div>
     <div class="chart small-chart" data-chart='{{ validation_analytics.windows|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>فحص المعاملات</h2></div>
+    <div class="panel-title"><h2>ملخص فحص المعاملات</h2></div>
     <div class="chart small-chart" data-chart='{{ validation_analytics.parameter_sweep|tojson }}'></div>
   </article>
   <article class="panel">
@@ -29,19 +29,22 @@
 {% if validations %}
   <section class="stack">
     {% for validation in validations %}
+      {% set decision = validation_decision(validation) %}
       <article class="panel">
         <div class="panel-title">
           <h2>{{ validation.strategy_name }}</h2>
-          <span>{{ validation.robustness_category }}</span>
+          <span class="status severity-{{ decision.severity }}">{{ decision.status }}</span>
         </div>
         {% set score = validation.robustness_score or 0 %}
         <div class="score-bar"><span style="width: {{ score }}%"></span></div>
+        <p class="muted">{{ decision.explanation }}</p>
         <div class="detail-grid">
           <div><span>البيانات</span><strong>{{ validation.dataset_name }}</strong></div>
-          <div><span>المتانة</span><strong>{{ validation.robustness_score if validation.robustness_score is not none else "n/a" }}</strong></div>
-          <div><span>التحذيرات</span><strong>{{ validation.overfitting_warnings|length }}</strong></div>
-          <div><span>نوافذ التحقق</span><strong>{{ validation.walk_forward_summary.windows or "n/a" }}</strong></div>
-          <div><span>نتائج الفحص</span><strong>{{ validation.parameter_sweep_summary.results or "n/a" }}</strong></div>
+          <div><span>المتانة</span><strong>{{ validation.robustness_score|percent_ar }}</strong></div>
+          <div><span>تحذيرات فرط الملاءمة</span><strong>{{ validation.overfitting_warnings|length }}</strong></div>
+          <div><span>نوافذ Walk-forward</span><strong>{{ validation.walk_forward_summary.windows|number_ar }}</strong></div>
+          <div><span>نتائج فحص المعاملات</span><strong>{{ validation.parameter_sweep_summary.results|number_ar }}</strong></div>
+          <div><span>الإجراء البحثي التالي</span><strong>{{ decision.next_step }}</strong></div>
         </div>
         <p><a class="button-link" href="/validation/{{ validation.report_id }}">فتح التفاصيل</a></p>
       </article>
