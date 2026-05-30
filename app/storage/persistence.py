@@ -5,6 +5,7 @@ from uuid import uuid4
 
 from loguru import logger
 
+from app.events import BaseEvent
 from app.analytics.models import AnalyticsSnapshot, TradeJournalEntry
 from app.brokers.health import BrokerHealthSnapshot
 from app.risk.models import RiskEvent
@@ -195,6 +196,20 @@ class PersistenceService:
                 aggregate_id=aggregate_id,
                 timestamp=utc_now(),
                 payload=payload,
+            )
+        )
+
+    def persist_event(self, event: BaseEvent) -> None:
+        """Persist a typed domain event."""
+        if not self.enabled:
+            return
+        self.events.append(
+            StoredEvent(
+                session_id=self.session_id,
+                event_type=event.event_type,
+                aggregate_id=event.aggregate_id,
+                timestamp=event.timestamp,
+                payload=event.to_dict(),
             )
         )
 

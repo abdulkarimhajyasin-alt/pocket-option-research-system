@@ -7,22 +7,10 @@ from typing import Any
 import yaml
 from loguru import logger
 
-from app.analytics.equity_curve import EquityCurveTracker
-from app.analytics.trade_journal import TradeJournal
-from app.brokers.capabilities import BrokerCapabilities
-from app.brokers.demo_adapter import DemoBrokerAdapter
-from app.brokers.models import BrokerMode
-from app.brokers.paper_broker import PaperBroker
 from app.data.csv_loader import CsvCandleLoader
-from app.execution.execution_manager import ExecutionManager
-from app.risk.risk_engine import RiskEngine
 from app.runtime.event_loop import RuntimeEventLoop
-from app.runtime.broker_runtime import BrokerRuntime
-from app.runtime.health import HealthMonitor
-from app.runtime.kill_switch import KillSwitch, KillSwitchConfig
+from app.runtime.factory import RuntimeDependencyFactory
 from app.runtime.runtime_state import RuntimeMode, RuntimeState
-from app.runtime.shutdown import ShutdownManager
-from app.storage.persistence import PersistenceService
 from app.strategies.base_strategy import BaseStrategy
 
 
@@ -76,52 +64,32 @@ class RuntimeConfig:
 class RuntimeManager:
     """Initializes and coordinates a local paper trading runtime."""
 
-    def __init__(self, config: RuntimeConfig, strategy: BaseStrategy) -> None:
+    def __init__(
+        self,
+        config: RuntimeConfig,
+        strategy: BaseStrategy,
+        factory: RuntimeDependencyFactory | None = None,
+    ) -> None:
         self.config = config
         self.strategy = strategy
-        self.state = RuntimeState(mode=config.runtime_mode)
-        self.health_monitor = HealthMonitor(max_failures=config.max_runtime_errors)
-        self.kill_switch = KillSwitch(
-            KillSwitchConfig(
-                stop_on_health_failure=config.stop_on_health_failure,
-                max_runtime_errors=config.max_runtime_errors,
-                stop_on_risk_shutdown=config.stop_on_risk_shutdown,
-            )
-        )
-        self.shutdown_manager = ShutdownManager()
-        self.broker = DemoBrokerAdapter(
-            paper_broker=PaperBroker(
-                initial_balance=config.paper_balance,
-                payout_percentage=config.payout_percentage,
-                stake=config.stake,
-                expiry_candles=config.expiry_candles,
-            ),
-            capabilities=BrokerCapabilities(
-                demo_supported=True,
-                live_supported=False,
-                supported_symbols=tuple(config.symbols),
-                supported_timeframes=(config.timeframe,),
-                payout_supported=True,
-                trade_types=("binary_option",),
-                historical_data_supported=False,
-            ),
-            mode=BrokerMode.DEMO,
-        )
-        self.broker_runtime = BrokerRuntime(self.broker)
-        self.risk_engine = RiskEngine.from_profile(config.risk_profile)
-        self.trade_journal = TradeJournal()
-        self.equity_curve = EquityCurveTracker(initial_equity=config.paper_balance)
-        self.execution_manager = ExecutionManager(
+        self.factory = factory or RuntimeDependencyFactory()
+        self.state = self.factory.create_runtime_state(config)
+        self.health_monitor = self.factory.create_health_monitor(config)
+        self.kill_switch = self.factory.create_kill_switch(config)
+        self.shutdown_manager = self.factory.create_shutdown_manager()
+        self.broker = self.factory.create_broker(config)
+        self.broker_runtime = self.factory.create_broker_runtime(self.broker)
+        self.risk_engine = self.factory.create_risk_engine(config)
+        self.trade_journal = self.factory.create_trade_journal()
+        self.equity_curve = self.factory.create_equity_curve(config)
+        self.execution_manager = self.factory.create_execution_manager(
+            config,
             self.risk_engine,
             self.broker,
-            trade_journal=self.trade_journal,
-            equity_curve=self.equity_curve,
-            runtime_mode=config.runtime_mode.value,
+            self.trade_journal,
+            self.equity_curve,
         )
-        self.persistence = PersistenceService(
-            database_path=config.database_path,
-            enabled=config.persistence_enabled,
-        )
+        self.persistence = self.factory.create_persistence(config)
 
     def run(self) -> RuntimeState:
         """Run the configured local paper runtime."""
@@ -144,6 +112,7 @@ class RuntimeManager:
                 state=self.state,
                 health_monitor=self.health_monitor,
                 kill_switch=self.kill_switch,
+                persistence=self.persistence,
                 polling_interval_seconds=self.config.polling_interval_seconds,
                 max_candles=self.config.max_candles,
             )

@@ -9,6 +9,7 @@ from typing import Any
 from app.dashboard.analytics import DashboardAnalyticsService
 from app.dashboard.models import DashboardOverview
 from app.dashboard.service import DashboardService
+from app.jobs.manager import JobManager
 
 
 @dataclass(frozen=True)
@@ -33,13 +34,20 @@ class ExecutiveMetric:
 class DashboardMetricsService:
     """Compose dashboard service data into workbench metrics."""
 
-    def __init__(self, project_root: Path | str = ".") -> None:
+    def __init__(
+        self,
+        project_root: Path | str = ".",
+        service: DashboardService | None = None,
+        analytics: DashboardAnalyticsService | None = None,
+        jobs: JobManager | None = None,
+    ) -> None:
         self.project_root = Path(project_root)
-        self.service = DashboardService(self.project_root)
-        self.analytics = DashboardAnalyticsService(
+        self.service = service or DashboardService(self.project_root)
+        self.analytics = analytics or DashboardAnalyticsService(
             self.project_root,
             self.service.config.reports_dir,
         )
+        self.jobs = jobs
 
     def workbench(self) -> dict[str, Any]:
         """Return the full overview workbench payload."""
@@ -64,6 +72,7 @@ class DashboardMetricsService:
             "workflow": workflow,
             "activity": activity,
             "insights": [item.to_dict() for item in insights],
+            "diagnostics": self.diagnostics(),
         }
 
     def executive_metrics(
@@ -182,3 +191,14 @@ class DashboardMetricsService:
         if value >= 40:
             return "warning"
         return "critical"
+
+    def diagnostics(self) -> dict[str, object]:
+        """Return dashboard performance diagnostics."""
+        repository = getattr(self.service, "report_loader", None)
+        repo_metrics = (
+            repository.diagnostics()
+            if repository is not None and hasattr(repository, "diagnostics")
+            else {}
+        )
+        job_metrics = self.jobs.diagnostics() if self.jobs is not None else {"active_jobs": 0}
+        return {**repo_metrics, **job_metrics}

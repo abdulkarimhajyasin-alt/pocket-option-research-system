@@ -10,6 +10,15 @@ document.addEventListener("submit", (event) => {
   }
 });
 
+function escapeText(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
 function renderChart(element) {
   const payload = JSON.parse(element.dataset.chart || "{}");
   const labels = payload.labels || [];
@@ -53,12 +62,12 @@ function renderChart(element) {
   const labelStep = Math.max(1, Math.ceil(labels.length / 6));
   const labelMarkup = labels
     .map((label, index) => index % labelStep === 0
-      ? `<text x="${xFor(index)}" y="${height - 14}" class="chart-label">${label}</text>`
+      ? `<text x="${xFor(index)}" y="${height - 14}" class="chart-label">${escapeText(label)}</text>`
       : "")
     .join("");
   const ticks = `<text x="${padding.left - 8}" y="${padding.top + 4}" class="chart-tick">${max.toFixed(1)}</text>
     <text x="${padding.left - 8}" y="${height - padding.bottom}" class="chart-tick">${min.toFixed(1)}</text>`;
-  element.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${payload.title || "chart"}">${axis}${body}${ticks}${labelMarkup}</svg>`;
+  element.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeText(payload.title || "chart")}">${axis}${body}${ticks}${labelMarkup}</svg>`;
 }
 
 document.querySelectorAll("[data-chart]").forEach(renderChart);

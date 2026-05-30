@@ -1,0 +1,18 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.diagnostics }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">قياسات داخلية</p>
+    <h1>{{ t.pages.diagnostics }}</h1>
+  </div>
+</section>
+<section class="metric-grid">
+  {% for key, value in diagnostics.items() %}
+    <article class="metric-card">
+      <span>{{ key }}</span>
+      <strong>{{ value }}</strong>
+    </article>
+  {% endfor %}
+</section>
+{% endblock %}

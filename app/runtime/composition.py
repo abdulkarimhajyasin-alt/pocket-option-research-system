@@ -4,17 +4,10 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.config.config_manager import AppConfig
-from app.config.strategy_config import StrategyConfigLoader
-from app.connectivity.csv_market_connector import CsvMarketDataConnector
-from app.connectivity.registry import ConnectorRegistry
-from app.connectivity.simulated_market_connector import SimulatedMarketConnector
-from app.runtime.connectivity_runtime import ConnectivityRuntime
 from app.runtime.container import ServiceContainer
+from app.runtime.factory import RuntimeDependencyFactory
 from app.runtime.runtime_manager import RuntimeConfig, RuntimeManager
 from app.runtime.streaming_runtime import StreamingRuntime
-from app.strategies.registry import default_strategy_registry
-from app.streaming.config import StreamingConfig
-from app.streaming.simulated_stream import SimulatedMarketStream
 
 
 @dataclass
@@ -30,6 +23,7 @@ class RuntimeComposer:
 
     def __init__(self, project_root: Path | str = ".") -> None:
         self.project_root = Path(project_root)
+        self.factory = RuntimeDependencyFactory(self.project_root)
 
     def compose(self, config: AppConfig) -> RuntimeComposition:
         """Compose the default paper runtime graph."""
@@ -37,43 +31,30 @@ class RuntimeComposer:
         runtime_config = RuntimeConfig.from_yaml(
             self.project_root / config.environment.runtime_config
         )
-        strategy_config = StrategyConfigLoader().load(
-            self.project_root / config.environment.strategy_config
-        )
-        strategy_registry = default_strategy_registry()
+        strategy_config = self.factory.create_strategy_config(config.environment.strategy_config)
+        strategy_registry = self.factory.create_strategy_registry()
         strategy = strategy_registry.create_from_config(strategy_config)
-        runtime_manager = RuntimeManager(config=runtime_config, strategy=strategy)
-        connector_registry = ConnectorRegistry()
-        connector_registry.register(
-            "csv_market_connector",
-            lambda: CsvMarketDataConnector.from_yaml(
-                self.project_root / "configs/connectivity/csv_connector.yaml"
-            ),
+        runtime_manager = RuntimeManager(
+            config=runtime_config,
+            strategy=strategy,
+            factory=self.factory,
         )
-        connector_registry.register(
-            "simulated_market_connector",
-            lambda: SimulatedMarketConnector.from_yaml(
-                self.project_root / "configs/connectivity/simulated_connector.yaml"
-            ),
-        )
-        connector = connector_registry.create(
-            str(config.get("connectivity.default_connector", "csv_market_connector"))
-        )
-        connectivity_runtime = ConnectivityRuntime(
-            connector,
+        connector_registry = self.factory.create_connector_registry()
+        connectivity_runtime = self.factory.create_connectivity_runtime(
+            str(config.get("connectivity.default_connector", "csv_market_connector")),
             stale_after_minutes=int(config.get("connectivity.stale_after_minutes", 1440)),
         )
-        streaming_config = StreamingConfig.from_yaml(
-            self.project_root / "configs/streaming/stream_research.yaml"
+        streaming_config = self.factory.create_streaming_config(
+            "configs/streaming/stream_research.yaml"
         )
         streaming_runtime = StreamingRuntime(
-            SimulatedMarketStream(
-                symbol=streaming_config.symbols[0],
-                timeframes=tuple(streaming_config.timeframes),
-                update_interval_seconds=streaming_config.update_interval_seconds,
-                latency_ms=streaming_config.latency_ms,
-                seed=streaming_config.seed,
-            )
+            self.factory.create_stream(streaming_config),
+            strategy=strategy,
+            execution_manager=runtime_manager.execution_manager,
+            state=runtime_manager.state,
+            health_monitor=runtime_manager.health_monitor,
+            kill_switch=runtime_manager.kill_switch,
+            persistence=runtime_manager.persistence,
         )
 
         container.register_instance("config", config)

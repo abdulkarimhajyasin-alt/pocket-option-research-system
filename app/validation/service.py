@@ -24,8 +24,8 @@ from app.validation.runner import ValidationBacktestRunner
 from app.validation.walk_forward import WalkForwardValidator
 
 
-class StrategyValidationService:
-    """Coordinates research-quality validation without execution side effects."""
+class ValidationExecutionService:
+    """Runs validation computations without export or persistence side effects."""
 
     def __init__(self, project_root: Path, config: ValidationResearchConfig) -> None:
         self.project_root = project_root
@@ -54,6 +54,7 @@ class StrategyValidationService:
             candles=self.candles,
             dataset_name=config.dataset_name,
             source=str(project_root / config.dataset_path),
+            persist=False,
         )
         if not quality.passed or not integrity.passed:
             raise ValueError(
@@ -105,8 +106,8 @@ class StrategyValidationService:
             self.config.parameter_sweeps,
         )
 
-    def run_report(self) -> tuple[ResearchValidationReport, dict[str, Path]]:
-        """Run full validation and export a reproducible research report."""
+    def run_report(self) -> ResearchValidationReport:
+        """Run full validation and build a reusable report object."""
         walk_forward = self.run_walk_forward() if self.config.walk_forward.enabled else None
         out_of_sample = self.run_out_of_sample() if self.config.out_of_sample.enabled else None
         sweep = self.run_parameter_sweep() if self.config.parameter_sweeps.enabled else None
@@ -122,17 +123,34 @@ class StrategyValidationService:
             out_of_sample=out_of_sample,
             sweep=sweep,
         )
-        paths = ResearchReportExporter(self.project_root / self.config.reports_dir).export(
-            report,
-            self.strategy_config.name,
-        )
-        self.persist(report)
         logger.bind(component="strategy_validation").info(
             "Validation report complete score={} warnings={}",
             robustness.score,
             len(warnings),
         )
-        return report, paths
+        return report
+
+
+class ValidationReportExporter:
+    """Exports validation reports explicitly."""
+
+    def __init__(self, project_root: Path, config: ValidationResearchConfig) -> None:
+        self.project_root = project_root
+        self.config = config
+
+    def export(self, report: ResearchValidationReport) -> dict[str, Path]:
+        """Export a reproducible research report."""
+        return ResearchReportExporter(self.project_root / self.config.reports_dir).export(
+            report,
+            report.strategy_name,
+        )
+
+
+class ValidationPersistenceAdapter:
+    """Persists validation reports explicitly."""
+
+    def __init__(self, project_root: Path) -> None:
+        self.project_root = project_root
 
     def persist(self, report: ResearchValidationReport) -> None:
         """Persist validation output using existing append-only events."""
@@ -157,3 +175,45 @@ class StrategyValidationService:
         )
         persistence.persist_dataset_metadata(report.dataset.name, report.dataset.to_dict())
         persistence.close()
+
+
+class StrategyValidationService:
+    """Orchestrates validation execution, export, and persistence explicitly."""
+
+    def __init__(self, project_root: Path, config: ValidationResearchConfig) -> None:
+        self.project_root = project_root
+        self.config = config
+        self.execution = ValidationExecutionService(project_root, config)
+        self.exporter = ValidationReportExporter(project_root, config)
+        self.persistence = ValidationPersistenceAdapter(project_root)
+        self.strategy_config = self.execution.strategy_config
+        self.candles = self.execution.candles
+        self.dataset = self.execution.dataset
+
+    def run_walk_forward(self) -> Any:
+        """Run configured walk-forward validation."""
+        return self.execution.run_walk_forward()
+
+    def run_out_of_sample(self) -> Any:
+        """Run configured out-of-sample validation."""
+        return self.execution.run_out_of_sample()
+
+    def run_parameter_sweep(self) -> Any:
+        """Run configured parameter sensitivity analysis."""
+        return self.execution.run_parameter_sweep()
+
+    def run_report(
+        self,
+        export: bool = True,
+        persist: bool = True,
+    ) -> tuple[ResearchValidationReport, dict[str, Path]]:
+        """Run validation and optionally export/persist for backward compatibility."""
+        report = self.execution.run_report()
+        paths = self.exporter.export(report) if export else {}
+        if persist:
+            self.persist(report)
+        return report, paths
+
+    def persist(self, report: ResearchValidationReport) -> None:
+        """Persist validation output."""
+        self.persistence.persist(report)

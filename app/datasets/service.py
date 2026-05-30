@@ -27,8 +27,8 @@ from app.datasets.versioning import DatasetVersionManager
 from app.storage.persistence import PersistenceService
 
 
-class DatasetQualityService:
-    """Coordinate dataset registry, quality, integrity, statistics, and reports."""
+class DatasetInspector:
+    """Pure dataset inspection without file export or persistence side effects."""
 
     def __init__(self, project_root: Path, config: DatasetLayerConfig) -> None:
         self.project_root = project_root
@@ -39,7 +39,6 @@ class DatasetQualityService:
         self.integrity = DatasetIntegrityVerifier()
         self.statistics_engine = DatasetStatisticsEngine()
         self.synthetic = SyntheticDatasetGenerator()
-        self.exporter = DatasetReportExporter(project_root / config.reports_dir)
 
     def load_configured_dataset(self) -> CandleSeries:
         """Load configured CSV dataset using existing data loader."""
@@ -56,7 +55,7 @@ class DatasetQualityService:
         source: str | None = None,
         version: str | None = None,
     ) -> tuple[DatasetMetadata, DatasetVersion, QualityReport, IntegrityReport, DatasetStatistics]:
-        """Run full dataset inspection without storing raw candles."""
+        """Run full dataset inspection without storing raw candles or writing side effects."""
         series = candles or self.load_configured_dataset()
         name = dataset_name or self.config.dataset_name
         source_path = source or str(self.project_root / self.config.dataset_path)
@@ -78,7 +77,6 @@ class DatasetQualityService:
         integrity = self.integrity.verify(candle_rows, metadata)
         statistics = self.statistics_engine.calculate(candle_rows, metadata, quality)
         version_record = self.versions.add_version(metadata, quality.quality_score)
-        self.persist(metadata, version_record, quality, integrity, statistics)
         return metadata, version_record, quality, integrity, statistics
 
     def generate_synthetic(self) -> list[CandleSeries]:
@@ -98,6 +96,13 @@ class DatasetQualityService:
         """Compare statistics across datasets."""
         return DatasetComparisonEngine().compare(statistics)
 
+
+class DatasetExporter:
+    """Exports dataset reports explicitly."""
+
+    def __init__(self, project_root: Path, config: DatasetLayerConfig) -> None:
+        self.exporter = DatasetReportExporter(project_root / config.reports_dir)
+
     def export(
         self,
         metadata: DatasetMetadata,
@@ -110,6 +115,13 @@ class DatasetQualityService:
         return self.exporter.export_dataset_report(
             metadata, version, quality, integrity, statistics
         )
+
+
+class DatasetPersistenceAdapter:
+    """Persists dataset inspection artifacts explicitly."""
+
+    def __init__(self, project_root: Path) -> None:
+        self.project_root = project_root
 
     def persist(
         self,
@@ -130,3 +142,68 @@ class DatasetQualityService:
         persistence.persist_dataset_integrity_report(metadata.dataset_id, integrity.to_dict())
         persistence.persist_dataset_statistics(metadata.dataset_id, statistics.to_dict())
         persistence.close()
+
+
+class DatasetQualityService:
+    """Coordinate dataset inspection, export, and persistence through explicit adapters."""
+
+    def __init__(self, project_root: Path, config: DatasetLayerConfig) -> None:
+        self.project_root = project_root
+        self.config = config
+        self.inspector = DatasetInspector(project_root, config)
+        self.exporter = DatasetExporter(project_root, config)
+        self.persistence = DatasetPersistenceAdapter(project_root)
+        self.registry = self.inspector.registry
+        self.versions = self.inspector.versions
+        self.quality_engine = self.inspector.quality_engine
+        self.integrity = self.inspector.integrity
+        self.statistics_engine = self.inspector.statistics_engine
+        self.synthetic = self.inspector.synthetic
+
+    def load_configured_dataset(self) -> CandleSeries:
+        """Load configured CSV dataset using existing data loader."""
+        return self.inspector.load_configured_dataset()
+
+    def inspect(
+        self,
+        candles: CandleSeries | None = None,
+        dataset_name: str | None = None,
+        source: str | None = None,
+        version: str | None = None,
+        persist: bool = True,
+    ) -> tuple[DatasetMetadata, DatasetVersion, QualityReport, IntegrityReport, DatasetStatistics]:
+        """Run dataset inspection and optionally persist for backward compatibility."""
+        result = self.inspector.inspect(candles, dataset_name, source, version)
+        if persist:
+            self.persist(*result)
+        return result
+
+    def generate_synthetic(self) -> list[CandleSeries]:
+        """Generate configured synthetic datasets."""
+        return self.inspector.generate_synthetic()
+
+    def compare(self, statistics: list[DatasetStatistics]) -> DatasetComparisonReport:
+        """Compare statistics across datasets."""
+        return self.inspector.compare(statistics)
+
+    def export(
+        self,
+        metadata: DatasetMetadata,
+        version: DatasetVersion,
+        quality: QualityReport,
+        integrity: IntegrityReport,
+        statistics: DatasetStatistics,
+    ) -> dict[str, Path]:
+        """Export dataset report files."""
+        return self.exporter.export(metadata, version, quality, integrity, statistics)
+
+    def persist(
+        self,
+        metadata: DatasetMetadata,
+        version: DatasetVersion,
+        quality: QualityReport,
+        integrity: IntegrityReport,
+        statistics: DatasetStatistics,
+    ) -> None:
+        """Persist dataset artifacts through the existing event store."""
+        self.persistence.persist(metadata, version, quality, integrity, statistics)

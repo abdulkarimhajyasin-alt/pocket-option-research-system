@@ -17,6 +17,7 @@ from app.dashboard.models import (
 )
 from app.dashboard.report_loader import DashboardReportLoader
 from app.strategies.registry import default_strategy_registry
+from app.reports.repository import ReportRepository
 
 
 class DashboardService:
@@ -26,10 +27,14 @@ class DashboardService:
         self,
         project_root: Path | str = ".",
         config: DashboardConfig | None = None,
+        repository: ReportRepository | None = None,
     ) -> None:
         self.project_root = Path(project_root)
         self.config = config or load_dashboard_config(self.project_root)
-        self.report_loader = DashboardReportLoader(self.project_root, self.config.reports_dir)
+        self.report_loader = repository or DashboardReportLoader(
+            self.project_root,
+            self.config.reports_dir,
+        )
         self.actions = DashboardActionRunner(self.project_root)
 
     def overview(self) -> DashboardOverview:

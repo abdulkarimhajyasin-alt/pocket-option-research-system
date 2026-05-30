@@ -3,7 +3,7 @@
 {% block content %}
 <section class="page-head">
   <div>
-    <p class="eyebrow">Phase 17</p>
+    <p class="eyebrow">المرحلة 18</p>
     <h1>{{ t.pages.overview }}</h1>
   </div>
   <div class="health-pill {{ workbench.health.status }}">{{ t.labels.health }}: {{ workbench.health.label }}</div>
@@ -20,24 +20,24 @@
 
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.equity }}</h2><span>Equity</span></div>
+    <div class="panel-title"><h2>{{ t.charts.equity }}</h2><span>رأس المال</span></div>
     <div class="chart" data-chart='{{ workbench.equity.equity|tojson }}'></div>
   </article>
   <article class="panel">
     <div class="panel-title"><h2>{{ t.charts.drawdown }}</h2><span>{{ workbench.equity.summary.max_drawdown }}</span></div>
     <div class="chart" data-chart='{{ workbench.equity.drawdown|tojson }}'></div>
     <div class="detail-grid compact">
-      <div><span>Maximum</span><strong>{{ workbench.equity.summary.max_drawdown }}</strong></div>
-      <div><span>Current</span><strong>{{ workbench.equity.summary.current_drawdown }}</strong></div>
-      <div><span>Worst</span><strong>{{ workbench.equity.summary.worst_period or "n/a" }}</strong></div>
-      <div><span>Recoveries</span><strong>{{ workbench.equity.summary.recovery_periods }}</strong></div>
+      <div><span>الأقصى</span><strong>{{ workbench.equity.summary.max_drawdown }}</strong></div>
+      <div><span>الحالي</span><strong>{{ workbench.equity.summary.current_drawdown }}</strong></div>
+      <div><span>الأسوأ</span><strong>{{ workbench.equity.summary.worst_period or "n/a" }}</strong></div>
+      <div><span>التعافي</span><strong>{{ workbench.equity.summary.recovery_periods }}</strong></div>
     </div>
   </article>
 </section>
 
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.labels.workflow }}</h2><span>Research Pipeline</span></div>
+    <div class="panel-title"><h2>{{ t.labels.workflow }}</h2><span>مسار البحث</span></div>
     <div class="workflow">
       {% for step in workbench.workflow %}
         <div class="workflow-step {{ step.status }}">
@@ -62,7 +62,7 @@
 
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.performance }}</h2><span>PnL</span></div>
+    <div class="panel-title"><h2>{{ t.charts.performance }}</h2><span>الربح والخسارة</span></div>
     <div class="chart" data-chart='{{ workbench.equity.performance|tojson }}'></div>
   </article>
   <article class="panel">

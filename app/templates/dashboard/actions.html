@@ -1,7 +1,7 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.actions }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Allowlisted workflows</p><h1>{{ t.pages.actions }}</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">مسارات بحث آمنة</p><h1>{{ t.pages.actions }}</h1></div></section>
 {% if not config.allow_actions %}
   <p class="empty">إجراءات اللوحة معطلة من الإعدادات.</p>
 {% endif %}
@@ -19,14 +19,14 @@
   <article class="panel result-panel">
     <div class="panel-title">
       <h2>{{ result.label }}</h2>
-      <span>Exit {{ result.exit_code }}</span>
+      <span>رمز الخروج {{ result.exit_code }}</span>
     </div>
     <p><code>{{ result.command_display }}</code></p>
     {% if result.error %}<p class="error">{{ result.error }}</p>{% endif %}
-    <h3>stdout</h3>
-    <pre>{{ result.stdout or "لا يوجد stdout" }}</pre>
-    <h3>stderr</h3>
-    <pre>{{ result.stderr or "لا يوجد stderr" }}</pre>
+    <h3>المخرجات</h3>
+    <pre>{{ result.stdout or "لا توجد مخرجات" }}</pre>
+    <h3>الأخطاء</h3>
+    <pre>{{ result.stderr or "لا توجد أخطاء" }}</pre>
   </article>
 {% endif %}
 {% endblock %}

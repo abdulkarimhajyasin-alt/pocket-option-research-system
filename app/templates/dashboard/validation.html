@@ -1,28 +1,28 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.validation }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Robustness</p><h1>{{ t.pages.validation }}</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">المتانة</p><h1>{{ t.pages.validation }}</h1></div></section>
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.validation }}</h2><span>History</span></div>
+    <div class="panel-title"><h2>{{ t.charts.validation }}</h2><span>السجل</span></div>
     <div class="chart" data-chart='{{ validation_analytics.history|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.validation }}</h2><span>Components</span></div>
+    <div class="panel-title"><h2>{{ t.charts.validation }}</h2><span>المكونات</span></div>
     <div class="chart" data-chart='{{ validation_analytics.components|tojson }}'></div>
   </article>
 </section>
 <section class="three-col">
   <article class="panel">
-    <div class="panel-title"><h2>Walk-forward</h2></div>
+    <div class="panel-title"><h2>النافذة المتحركة</h2></div>
     <div class="chart small-chart" data-chart='{{ validation_analytics.windows|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>Parameter Sweep</h2></div>
+    <div class="panel-title"><h2>فحص المعاملات</h2></div>
     <div class="chart small-chart" data-chart='{{ validation_analytics.parameter_sweep|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>Out-of-sample</h2></div>
+    <div class="panel-title"><h2>خارج العينة</h2></div>
     <div class="chart small-chart" data-chart='{{ validation_analytics.out_of_sample|tojson }}'></div>
   </article>
 </section>
@@ -40,8 +40,8 @@
           <div><span>البيانات</span><strong>{{ validation.dataset_name }}</strong></div>
           <div><span>المتانة</span><strong>{{ validation.robustness_score if validation.robustness_score is not none else "n/a" }}</strong></div>
           <div><span>التحذيرات</span><strong>{{ validation.overfitting_warnings|length }}</strong></div>
-          <div><span>Walk-forward windows</span><strong>{{ validation.walk_forward_summary.windows or "n/a" }}</strong></div>
-          <div><span>Sweep results</span><strong>{{ validation.parameter_sweep_summary.results or "n/a" }}</strong></div>
+          <div><span>نوافذ التحقق</span><strong>{{ validation.walk_forward_summary.windows or "n/a" }}</strong></div>
+          <div><span>نتائج الفحص</span><strong>{{ validation.parameter_sweep_summary.results or "n/a" }}</strong></div>
         </div>
         <p><a class="button-link" href="/validation/{{ validation.report_id }}">فتح التفاصيل</a></p>
       </article>

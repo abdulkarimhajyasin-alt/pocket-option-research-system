@@ -1,7 +1,7 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.signals }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Signals</p><h1>{{ t.pages.signals }}</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">الإشارات</p><h1>{{ t.pages.signals }}</h1></div></section>
 
 <section class="metric-grid">
   <article class="metric-card"><span>{{ t.metrics.total_signals }}</span><strong>{{ signal_analytics.total_signals }}</strong></article>
@@ -12,17 +12,17 @@
 
 <section class="two-col">
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.signals }}</h2><span>Distribution</span></div>
+    <div class="panel-title"><h2>{{ t.charts.signals }}</h2><span>التوزيع</span></div>
     <div class="chart" data-chart='{{ signal_analytics.distribution|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.confidence }}</h2><span>Evidence</span></div>
+    <div class="panel-title"><h2>{{ t.charts.confidence }}</h2><span>الأدلة</span></div>
     <div class="chart" data-chart='{{ signal_analytics.confidence|tojson }}'></div>
   </article>
 </section>
 
 <section class="panel">
-  <div class="panel-title"><h2>{{ t.charts.sessions }}</h2><span>Sessions</span></div>
+  <div class="panel-title"><h2>{{ t.charts.sessions }}</h2><span>الجلسات</span></div>
   <div class="chart" data-chart='{{ signal_analytics.sessions|tojson }}'></div>
 </section>
 {% endblock %}

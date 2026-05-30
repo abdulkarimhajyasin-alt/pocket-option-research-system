@@ -5,9 +5,10 @@ from __future__ import annotations
 from loguru import logger
 
 from app.data.models import CandleSeries
-from app.execution.execution_manager import ExecutionManager, TradeLifecycleState
+from app.execution.execution_manager import ExecutionManager
 from app.runtime.health import HealthMonitor
 from app.runtime.kill_switch import KillSwitch
+from app.runtime.pipeline import CandleProcessingPipeline
 from app.runtime.runtime_state import RuntimeState
 from app.storage.persistence import PersistenceService
 from app.strategies.base_strategy import BaseStrategy
@@ -40,6 +41,18 @@ class StreamingRuntime:
         self.persistence = persistence
         self.engine = engine or StreamEngine(stream)
         self.closed_candles: list[CandleUpdate] = []
+        self.pipeline = (
+            CandleProcessingPipeline(
+                strategy,
+                execution_manager,
+                state,
+                health_monitor,
+                kill_switch,
+                persistence,
+            )
+            if all([strategy, execution_manager, state, health_monitor, kill_switch])
+            else None
+        )
 
     def start(self, subscriptions: list[tuple[str, str]]) -> None:
         """Start stream services and subscriptions."""
@@ -112,27 +125,7 @@ class StreamingRuntime:
         )
         series = CandleSeries(update.symbol, update.timeframe, history)
         index = max(0, len(series) - 1)
-        assert self.state is not None
-        assert self.health_monitor is not None
-        assert self.execution_manager is not None
-        assert self.strategy is not None
-        self.health_monitor.heartbeat()
-        self.execution_manager.settle_ready_positions(candle)
-        signal = self.strategy.on_candle(
-            {
-                "current_candle": candle,
-                "history": series.history_until(index),
-                "index": index,
-                "series": series,
-                "streaming": True,
-            }
-        )
-        self.state.metrics.processed_candles += 1
-        if signal is not None:
-            self.state.metrics.generated_signals += 1
-            record = self.execution_manager.execute_signal_with_candle(signal, candle)
-            if record.state == TradeLifecycleState.EXECUTED:
-                self.state.metrics.executed_trades += 1
-            elif record.state == TradeLifecycleState.BLOCKED:
-                self.state.metrics.blocked_trades += 1
+        if self.pipeline is None:
+            return
+        self.pipeline.process(candle, series, index, metadata={"streaming": True})
         logger.bind(component="streaming").info("Processed stream candle {}", update.to_dict())

@@ -23,6 +23,8 @@ AR_TRANSLATIONS = {
         "signals": "الإشارات",
         "reports": "التقارير",
         "actions": "مركز التشغيل",
+        "jobs": "المهام",
+        "diagnostics": "التشخيص",
     },
     "status": {
         "healthy": "سليم",
@@ -40,6 +42,8 @@ AR_TRANSLATIONS = {
         "signals": "تحليلات الإشارات",
         "reports": "عارض التقارير",
         "actions": "مركز التشغيل",
+        "jobs": "مراقبة المهام",
+        "diagnostics": "تشخيص المعمارية",
     },
     "metrics": {
         "strategies": "عدد الاستراتيجيات",
@@ -81,5 +85,14 @@ AR_TRANSLATIONS = {
         "structured_report": "عرض منظم",
         "open_report": "فتح التقرير",
         "no_data": "لا توجد بيانات متاحة بعد.",
+        "queued": "قيد الانتظار",
+        "running": "قيد التنفيذ",
+        "completed": "مكتمل",
+        "failed": "فشل",
+        "run_id": "معرف التشغيل",
+        "started_at": "بدأ في",
+        "completed_at": "اكتمل في",
+        "result": "النتيجة",
+        "diagnostics": "التشخيص",
     },
 }

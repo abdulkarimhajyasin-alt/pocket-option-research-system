@@ -1,0 +1,36 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.jobs }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">متابعة التشغيل</p>
+    <h1>{{ t.pages.jobs }}</h1>
+  </div>
+</section>
+{% if jobs %}
+  <section class="stack">
+    {% for job in jobs %}
+      <article class="panel">
+        <div class="panel-title">
+          <h2>{{ job.label }}</h2>
+          <span class="status">{{ job.status_label }}</span>
+        </div>
+        <div class="detail-grid">
+          <div><span>{{ t.labels.run_id }}</span><strong>{{ job.run_id }}</strong></div>
+          <div><span>{{ t.labels.started_at }}</span><strong>{{ job.started_at or "n/a" }}</strong></div>
+          <div><span>{{ t.labels.completed_at }}</span><strong>{{ job.completed_at or "n/a" }}</strong></div>
+          <div><span>{{ t.labels.result }}</span><strong>{{ job.result.exit_code if job.result else "n/a" }}</strong></div>
+        </div>
+        {% if job.result %}
+          <details>
+            <summary>{{ t.labels.result }}</summary>
+            <pre>{{ job.result.stdout or job.result.stderr or job.result.error or "لا توجد مخرجات" }}</pre>
+          </details>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </section>
+{% else %}
+  <p class="empty">{{ t.labels.no_data }}</p>
+{% endif %}
+{% endblock %}

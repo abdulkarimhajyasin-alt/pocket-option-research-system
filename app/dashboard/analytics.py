@@ -8,6 +8,7 @@ from typing import Any
 
 from app.dashboard.charts import bar_chart, line_chart
 from app.dashboard.report_loader import DashboardReportLoader
+from app.reports.repository import ReportRepository
 
 
 @dataclass(frozen=True)
@@ -26,9 +27,14 @@ class Insight:
 class DashboardAnalyticsService:
     """Build visual analytics from local research reports."""
 
-    def __init__(self, project_root: Path | str = ".", reports_dir: Path | str = "reports") -> None:
+    def __init__(
+        self,
+        project_root: Path | str = ".",
+        reports_dir: Path | str = "reports",
+        repository: ReportRepository | None = None,
+    ) -> None:
         self.project_root = Path(project_root)
-        self.loader = DashboardReportLoader(self.project_root, reports_dir)
+        self.loader = repository or DashboardReportLoader(self.project_root, reports_dir)
 
     def equity_analytics(self) -> dict[str, Any]:
         """Return equity, balance, performance, and drawdown chart data."""

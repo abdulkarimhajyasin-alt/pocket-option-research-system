@@ -1,20 +1,20 @@
 {% extends "dashboard/base.html" %}
 {% block title %}{{ t.pages.datasets }} - {{ t.app.title }}{% endblock %}
 {% block content %}
-<section class="page-head"><div><p class="eyebrow">Data quality</p><h1>{{ t.pages.datasets }}</h1></div></section>
+<section class="page-head"><div><p class="eyebrow">جودة البيانات</p><h1>{{ t.pages.datasets }}</h1></div></section>
 <section class="two-col">
   <article class="panel">
     <div class="panel-title"><h2>{{ t.charts.quality }}</h2><span>{{ dataset_analytics.summary.quality_score or "n/a" }}</span></div>
     <div class="chart" data-chart='{{ dataset_analytics.quality|tojson }}'></div>
   </article>
   <article class="panel">
-    <div class="panel-title"><h2>{{ t.charts.quality }}</h2><span>Coverage</span></div>
+    <div class="panel-title"><h2>{{ t.charts.quality }}</h2><span>التغطية</span></div>
     <div class="chart" data-chart='{{ dataset_analytics.gaps|tojson }}'></div>
     <div class="detail-grid compact">
-      <div><span>Start</span><strong>{{ dataset_analytics.summary.start_time or "n/a" }}</strong></div>
-      <div><span>End</span><strong>{{ dataset_analytics.summary.end_time or "n/a" }}</strong></div>
-      <div><span>Candles</span><strong>{{ dataset_analytics.summary.row_count }}</strong></div>
-      <div><span>Missing intervals</span><strong>{{ dataset_analytics.summary.gap_count }}</strong></div>
+      <div><span>البداية</span><strong>{{ dataset_analytics.summary.start_time or "n/a" }}</strong></div>
+      <div><span>النهاية</span><strong>{{ dataset_analytics.summary.end_time or "n/a" }}</strong></div>
+      <div><span>الشموع</span><strong>{{ dataset_analytics.summary.row_count }}</strong></div>
+      <div><span>الفجوات</span><strong>{{ dataset_analytics.summary.gap_count }}</strong></div>
     </div>
   </article>
 </section>

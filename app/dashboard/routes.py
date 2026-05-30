@@ -11,9 +11,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from loguru import logger
 
-from app.dashboard.analytics import DashboardAnalyticsService
-from app.dashboard.metrics import DashboardMetricsService
+from app.dashboard.context import DashboardContext
 from app.dashboard.service import DashboardService, load_dashboard_config
+from app.jobs.manager import JobManager
+from app.reports.repository import ReportRepository
 from app.i18n import DEFAULT_LANGUAGE, get_translations
 
 
@@ -26,9 +27,9 @@ SAFETY_NOTE = (
 def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     """Create the local dashboard FastAPI application."""
     root = Path(project_root).resolve()
-    service = DashboardService(root)
-    analytics = DashboardAnalyticsService(root, service.config.reports_dir)
-    metrics = DashboardMetricsService(root)
+    repository = ReportRepository(root, load_dashboard_config(root).reports_dir)
+    service = DashboardService(root, repository=repository)
+    jobs = JobManager(service.actions.job_registry())
     translations = get_translations(DEFAULT_LANGUAGE)
     templates = Jinja2Templates(directory=str(root / "app" / "templates"))
     app = FastAPI(
@@ -40,24 +41,33 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     if static_dir.exists():
         app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 
-    def context(request: Request, **values: object) -> dict[str, object]:
+    def dashboard_context() -> DashboardContext:
+        return DashboardContext.create(root, repository, jobs)
+
+    def context(
+        request: Request,
+        dashboard: DashboardContext,
+        **values: object,
+    ) -> dict[str, object]:
         return {
             "request": request,
             "safety_note": translations["app"]["safety"],
             "t": translations,
             "language": DEFAULT_LANGUAGE,
-            "config": service.config,
+            "config": dashboard.service.config,
             **values,
         }
 
     @app.get("/", response_class=HTMLResponse)
     def overview(request: Request) -> HTMLResponse:
-        workbench = metrics.workbench()
+        dashboard = dashboard_context()
+        workbench = dashboard.metrics.workbench()
         return templates.TemplateResponse(
             request,
             "dashboard/overview.html",
             context(
                 request,
+                dashboard,
                 page="overview",
                 overview=workbench["overview"],
                 workbench=workbench,
@@ -66,29 +76,42 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
 
     @app.get("/strategies", response_class=HTMLResponse)
     def strategies(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
         return templates.TemplateResponse(
             request,
             "dashboard/strategies.html",
-            context(request, page="strategies", strategies=service.strategy_summaries()),
+            context(
+                request,
+                dashboard,
+                page="strategies",
+                strategies=dashboard.service.strategy_summaries(),
+            ),
         )
 
     @app.get("/datasets", response_class=HTMLResponse)
     def datasets(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
         return templates.TemplateResponse(
             request,
             "dashboard/datasets.html",
             context(
                 request,
+                dashboard,
                 page="datasets",
-                datasets=service.dataset_summaries(),
-                dataset_analytics=analytics.dataset_analytics(),
+                datasets=dashboard.service.dataset_summaries(),
+                dataset_analytics=dashboard.analytics.dataset_analytics(),
             ),
         )
 
     @app.get("/datasets/{dataset_id}", response_class=HTMLResponse)
     def dataset_detail(request: Request, dataset_id: str) -> HTMLResponse:
+        dashboard = dashboard_context()
         dataset = next(
-            (item for item in service.dataset_summaries() if item.dataset_id == dataset_id),
+            (
+                item
+                for item in dashboard.service.dataset_summaries()
+                if item.dataset_id == dataset_id
+            ),
             None,
         )
         if dataset is None:
@@ -98,29 +121,37 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             "dashboard/dataset_detail.html",
             context(
                 request,
+                dashboard,
                 page="datasets",
                 dataset=dataset,
-                dataset_analytics=analytics.dataset_analytics(),
+                dataset_analytics=dashboard.analytics.dataset_analytics(),
             ),
         )
 
     @app.get("/validation", response_class=HTMLResponse)
     def validation(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
         return templates.TemplateResponse(
             request,
             "dashboard/validation.html",
             context(
                 request,
+                dashboard,
                 page="validation",
-                validations=service.validation_summaries(),
-                validation_analytics=analytics.validation_analytics(),
+                validations=dashboard.service.validation_summaries(),
+                validation_analytics=dashboard.analytics.validation_analytics(),
             ),
         )
 
     @app.get("/validation/{report_id}", response_class=HTMLResponse)
     def validation_detail(request: Request, report_id: str) -> HTMLResponse:
+        dashboard = dashboard_context()
         validation_item = next(
-            (item for item in service.validation_summaries() if item.report_id == report_id),
+            (
+                item
+                for item in dashboard.service.validation_summaries()
+                if item.report_id == report_id
+            ),
             None,
         )
         if validation_item is None:
@@ -130,31 +161,45 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             "dashboard/validation_detail.html",
             context(
                 request,
+                dashboard,
                 page="validation",
                 validation=validation_item,
-                validation_analytics=analytics.validation_analytics(),
+                validation_analytics=dashboard.analytics.validation_analytics(),
             ),
         )
 
     @app.get("/signals", response_class=HTMLResponse)
     def signals(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
         return templates.TemplateResponse(
             request,
             "dashboard/signals.html",
-            context(request, page="signals", signal_analytics=analytics.signal_analytics()),
+            context(
+                request,
+                dashboard,
+                page="signals",
+                signal_analytics=dashboard.analytics.signal_analytics(),
+            ),
         )
 
     @app.get("/reports", response_class=HTMLResponse)
     def reports(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
         return templates.TemplateResponse(
             request,
             "dashboard/reports.html",
-            context(request, page="reports", reports=service.report_loader.list_reports()),
+            context(
+                request,
+                dashboard,
+                page="reports",
+                reports=dashboard.repository.list_reports(),
+            ),
         )
 
     @app.get("/reports/{report_id}", response_class=HTMLResponse)
     def report_detail(request: Request, report_id: str) -> HTMLResponse:
-        report = service.report_loader.get_report(report_id)
+        dashboard = dashboard_context()
+        report = dashboard.repository.get_report(report_id)
         if report is None:
             raise HTTPException(status_code=404, detail="Report not found")
         return templates.TemplateResponse(
@@ -162,64 +207,97 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             "dashboard/report_detail.html",
             context(
                 request,
+                dashboard,
                 page="reports",
                 report=report,
-                visualization=analytics.report_visualization(report.json_data),
+                visualization=dashboard.analytics.report_visualization(report.json_data),
             ),
         )
 
     @app.get("/api/dashboard")
     def api_dashboard() -> dict[str, object]:
-        return jsonable_encoder(metrics.workbench())
+        dashboard = dashboard_context()
+        return jsonable_encoder(dashboard.metrics.workbench())
 
     @app.get("/api/metrics")
     def api_metrics() -> dict[str, object]:
-        workbench = metrics.workbench()
+        dashboard = dashboard_context()
+        workbench = dashboard.metrics.workbench()
         return {"health": workbench["health"], "metrics": workbench["metrics"]}
 
     @app.get("/api/validation")
     def api_validation() -> dict[str, object]:
-        return analytics.validation_analytics()
+        return dashboard_context().analytics.validation_analytics()
 
     @app.get("/api/datasets")
     def api_datasets() -> dict[str, object]:
-        return analytics.dataset_analytics()
+        return dashboard_context().analytics.dataset_analytics()
 
     @app.get("/api/signals")
     def api_signals() -> dict[str, object]:
-        return analytics.signal_analytics()
+        return dashboard_context().analytics.signal_analytics()
 
     @app.get("/actions", response_class=HTMLResponse)
     def actions(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
         return templates.TemplateResponse(
             request,
             "dashboard/actions.html",
             context(
                 request,
+                dashboard,
                 page="actions",
-                actions=service.actions.list_actions(),
+                actions=dashboard.service.actions.list_actions(),
                 result=None,
             ),
         )
 
     @app.post("/actions/run/{action_name}", response_class=HTMLResponse)
     def run_action(request: Request, action_name: str) -> HTMLResponse:
-        if not service.config.allow_actions:
+        dashboard = dashboard_context()
+        if not dashboard.service.config.allow_actions:
             raise HTTPException(status_code=403, detail="Dashboard actions are disabled")
         try:
-            result = service.actions.run(action_name)
+            job = jobs.enqueue(action_name)
         except KeyError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
+        return RedirectResponse(url=f"/jobs?run_id={job.run_id}", status_code=303)
+
+    @app.get("/jobs", response_class=HTMLResponse)
+    def job_monitor(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
         return templates.TemplateResponse(
             request,
-            "dashboard/actions.html",
+            "dashboard/jobs.html",
             context(
                 request,
-                page="actions",
-                actions=service.actions.list_actions(),
-                result=result,
+                dashboard,
+                page="jobs",
+                jobs=dashboard.jobs.list_jobs(),
             ),
         )
+
+    @app.get("/api/jobs")
+    def api_jobs() -> dict[str, object]:
+        return {"jobs": [job.to_dict() for job in jobs.list_jobs()]}
+
+    @app.get("/diagnostics", response_class=HTMLResponse)
+    def diagnostics(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/diagnostics.html",
+            context(
+                request,
+                dashboard,
+                page="diagnostics",
+                diagnostics=dashboard.diagnostics(),
+            ),
+        )
+
+    @app.get("/api/diagnostics")
+    def api_diagnostics() -> dict[str, object]:
+        return dashboard_context().diagnostics()
 
     @app.get("/health")
     def health() -> dict[str, object]:
@@ -228,8 +306,9 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             "status": "ok",
             "local_only": True,
             "actions_enabled": config.allow_actions,
-            "reports": len(service.report_loader.list_reports()),
+            "reports": len(repository.list_reports()),
             "language": DEFAULT_LANGUAGE,
+            "active_jobs": jobs.active_count(),
         }
 
     @app.get("/favicon.ico")
