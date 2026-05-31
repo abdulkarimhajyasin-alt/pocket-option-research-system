@@ -1,0 +1,51 @@
+[
+  {
+    "name": "paper_performance_gate",
+    "arabic_label": "بوابة الأداء الورقي",
+    "status": "PASS",
+    "score": 81.49,
+    "detail": "بوابة الأداء الورقي: 81.49"
+  },
+  {
+    "name": "portfolio_stability_gate",
+    "arabic_label": "بوابة استقرار المحفظة",
+    "status": "WARNING",
+    "score": 60.85,
+    "detail": "بوابة استقرار المحفظة: 60.85"
+  },
+  {
+    "name": "governance_gate",
+    "arabic_label": "بوابة الحوكمة",
+    "status": "FAIL",
+    "score": 0.0,
+    "detail": "بوابة الحوكمة: 0.0"
+  },
+  {
+    "name": "execution_readiness_gate",
+    "arabic_label": "بوابة جاهزية التنفيذ",
+    "status": "PASS",
+    "score": 82.75,
+    "detail": "بوابة جاهزية التنفيذ: 82.75"
+  },
+  {
+    "name": "observation_readiness_gate",
+    "arabic_label": "بوابة جاهزية المراقبة",
+    "status": "PASS",
+    "score": 81.73,
+    "detail": "بوابة جاهزية المراقبة: 81.73"
+  },
+  {
+    "name": "certification_gate",
+    "arabic_label": "بوابة الاعتماد البحثي",
+    "status": "FAIL",
+    "score": 59.58,
+    "detail": "بوابة الاعتماد البحثي: 59.58"
+  },
+  {
+    "name": "safety_gate",
+    "arabic_label": "بوابة السلامة",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "بوابة السلامة: 100.0"
+  }
+]

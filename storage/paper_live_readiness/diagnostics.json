@@ -1,0 +1,276 @@
+{
+  "timestamp": "2026-05-31T16:21:08.504657+00:00",
+  "readiness": {
+    "readiness_id": "paper_live_readiness_20260531162108",
+    "generated_at": "2026-05-31T16:21:08.504441+00:00",
+    "paper_health": 81.49,
+    "paper_stability": 60.85,
+    "paper_governance": 0.0,
+    "execution_readiness": 82.75,
+    "observation_readiness": 81.73,
+    "certification_score": 59.58,
+    "safety_score": 100.0,
+    "maturity_score": 60.57,
+    "overall_score": 65.87,
+    "readiness_state": "تحتاج تحسين كبير",
+    "metadata": {
+      "readiness_only": true,
+      "paper_only": true,
+      "research_only": true,
+      "assessment_only": true,
+      "recommendation_only": true,
+      "not_execution": true,
+      "not_real_execution": true,
+      "not_order_placement": true,
+      "not_real_order_placement": true,
+      "not_buy_sell_action": true,
+      "not_live_trading": true,
+      "not_broker_access": true,
+      "not_broker_api": true,
+      "not_account_login": true,
+      "not_authentication": true,
+      "not_credential_handling": true,
+      "not_browser_automation": true,
+      "not_real_money": true,
+      "not_position_management": true,
+      "not_trading_automation": true,
+      "not_broker_control": true,
+      "not_pocket_option_integration": true
+    },
+    "readiness_only": true,
+    "paper_only": true,
+    "research_only": true,
+    "not_real_execution": true,
+    "not_live_trading": true,
+    "not_broker_access": true
+  },
+  "gates": [
+    {
+      "name": "paper_performance_gate",
+      "arabic_label": "بوابة الأداء الورقي",
+      "status": "PASS",
+      "score": 81.49,
+      "detail": "بوابة الأداء الورقي: 81.49"
+    },
+    {
+      "name": "portfolio_stability_gate",
+      "arabic_label": "بوابة استقرار المحفظة",
+      "status": "WARNING",
+      "score": 60.85,
+      "detail": "بوابة استقرار المحفظة: 60.85"
+    },
+    {
+      "name": "governance_gate",
+      "arabic_label": "بوابة الحوكمة",
+      "status": "FAIL",
+      "score": 0.0,
+      "detail": "بوابة الحوكمة: 0.0"
+    },
+    {
+      "name": "execution_readiness_gate",
+      "arabic_label": "بوابة جاهزية التنفيذ",
+      "status": "PASS",
+      "score": 82.75,
+      "detail": "بوابة جاهزية التنفيذ: 82.75"
+    },
+    {
+      "name": "observation_readiness_gate",
+      "arabic_label": "بوابة جاهزية المراقبة",
+      "status": "PASS",
+      "score": 81.73,
+      "detail": "بوابة جاهزية المراقبة: 81.73"
+    },
+    {
+      "name": "certification_gate",
+      "arabic_label": "بوابة الاعتماد البحثي",
+      "status": "FAIL",
+      "score": 59.58,
+      "detail": "بوابة الاعتماد البحثي: 59.58"
+    },
+    {
+      "name": "safety_gate",
+      "arabic_label": "بوابة السلامة",
+      "status": "PASS",
+      "score": 100.0,
+      "detail": "بوابة السلامة: 100.0"
+    }
+  ],
+  "safety": {
+    "status": "PASS",
+    "safety_score": 100.0,
+    "missing_flags": [],
+    "no_execution": true,
+    "no_live_trading": true,
+    "no_broker_access": true,
+    "no_browser_automation": true,
+    "no_authentication": true,
+    "no_credential_handling": true,
+    "no_order_placement": true,
+    "readiness_only": true,
+    "paper_only": true,
+    "research_only": true
+  },
+  "maturity": {
+    "paper_sample_maturity": 0.0,
+    "portfolio_maturity": 81.49,
+    "readiness_maturity": 82.75,
+    "certification_maturity": 59.58,
+    "observation_maturity": 79.04,
+    "maturity_score": 60.57,
+    "readiness_only": true
+  },
+  "stability": {
+    "paper_performance_stability": 36.35,
+    "drawdown_stability": 100.0,
+    "governance_stability": 0.0,
+    "readiness_stability": 82.75,
+    "signal_stream_stability": 85.15,
+    "stability_score": 60.85,
+    "readiness_only": true
+  },
+  "analytics": {
+    "readiness_distribution": {
+      "paper_health": 81.49,
+      "paper_stability": 60.85,
+      "paper_governance": 0.0,
+      "execution_readiness": 82.75,
+      "observation_readiness": 81.73,
+      "certification_score": 59.58
+    },
+    "gate_distribution": {
+      "PASS": 4,
+      "WARNING": 1,
+      "FAIL": 2
+    },
+    "stability": {
+      "paper_performance_stability": 36.35,
+      "drawdown_stability": 100.0,
+      "governance_stability": 0.0,
+      "readiness_stability": 82.75,
+      "signal_stream_stability": 85.15,
+      "stability_score": 60.85,
+      "readiness_only": true
+    },
+    "maturity": {
+      "paper_sample_maturity": 0.0,
+      "portfolio_maturity": 81.49,
+      "readiness_maturity": 82.75,
+      "certification_maturity": 59.58,
+      "observation_maturity": 79.04,
+      "maturity_score": 60.57,
+      "readiness_only": true
+    },
+    "safety": {
+      "status": "PASS",
+      "safety_score": 100.0,
+      "missing_flags": [],
+      "no_execution": true,
+      "no_live_trading": true,
+      "no_broker_access": true,
+      "no_browser_automation": true,
+      "no_authentication": true,
+      "no_credential_handling": true,
+      "no_order_placement": true,
+      "readiness_only": true,
+      "paper_only": true,
+      "research_only": true
+    },
+    "paper": {
+      "health": 81.49,
+      "stability": 60.85,
+      "governance": 0.0
+    },
+    "observation": {
+      "readiness": 81.73
+    },
+    "certification": {
+      "score": 59.58
+    },
+    "warnings": {
+      "diagnostics": 4
+    },
+    "readiness_only": true
+  },
+  "diagnostics": [
+    {
+      "name": "ضعف الاستقرار الورقي",
+      "severity": "مرتفع",
+      "detail": "تحسين استقرار المحفظة الورقية"
+    },
+    {
+      "name": "ضعف الحوكمة",
+      "severity": "مرتفع",
+      "detail": "تحسين بوابات الجاهزية"
+    },
+    {
+      "name": "ضعف الاعتماد البحثي",
+      "severity": "متوسط",
+      "detail": "تحسين الاعتماد البحثي"
+    },
+    {
+      "name": "عينة ورقية غير كافية",
+      "severity": "منخفض",
+      "detail": "زيادة عينة التنفيذ الورقي"
+    }
+  ],
+  "recommendations": [
+    {
+      "title": "تحسين استقرار المحفظة الورقية",
+      "priority": "مرتفع",
+      "reason": "ضعف الاستقرار الورقي"
+    },
+    {
+      "title": "تحسين بوابات الجاهزية",
+      "priority": "مرتفع",
+      "reason": "ضعف الحوكمة"
+    },
+    {
+      "title": "تحسين الاعتماد البحثي",
+      "priority": "متوسط",
+      "reason": "ضعف الاعتماد البحثي"
+    },
+    {
+      "title": "زيادة عينة التنفيذ الورقي",
+      "priority": "منخفض",
+      "reason": "عينة ورقية غير كافية"
+    }
+  ],
+  "metadata": {
+    "readiness_only": true,
+    "paper_only": true,
+    "research_only": true,
+    "assessment_only": true,
+    "recommendation_only": true,
+    "not_execution": true,
+    "not_real_execution": true,
+    "not_order_placement": true,
+    "not_real_order_placement": true,
+    "not_buy_sell_action": true,
+    "not_live_trading": true,
+    "not_broker_access": true,
+    "not_broker_api": true,
+    "not_account_login": true,
+    "not_authentication": true,
+    "not_credential_handling": true,
+    "not_browser_automation": true,
+    "not_real_money": true,
+    "not_position_management": true,
+    "not_trading_automation": true,
+    "not_broker_control": true,
+    "not_pocket_option_integration": true
+  },
+  "readiness_only": true,
+  "paper_only": true,
+  "research_only": true,
+  "not_execution": true,
+  "not_real_execution": true,
+  "not_order_placement": true,
+  "not_real_order_placement": true,
+  "not_live_trading": true,
+  "not_broker_access": true,
+  "not_browser_automation": true,
+  "not_authentication": true,
+  "not_credential_handling": true,
+  "not_real_money": true,
+  "not_trading_automation": true
+}

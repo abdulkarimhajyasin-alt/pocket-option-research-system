@@ -240,6 +240,15 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_paper_control_center.py",),
     ),
+    "paper_live_readiness": ActionDefinition(
+        name="paper_live_readiness",
+        label="جاهزية المرحلة التالية",
+        description=(
+            "تقييم جاهزية ورقية بحثية فقط لمرحلة مراقبة مستقبلية دون تداول حي "
+            "أو وسيط أو مصادقة أو أوامر."
+        ),
+        command=("scripts/run_paper_live_readiness.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

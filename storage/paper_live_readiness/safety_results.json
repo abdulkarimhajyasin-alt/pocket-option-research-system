@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "safety_score": 100.0,
+  "missing_flags": [],
+  "no_execution": true,
+  "no_live_trading": true,
+  "no_broker_access": true,
+  "no_browser_automation": true,
+  "no_authentication": true,
+  "no_credential_handling": true,
+  "no_order_placement": true,
+  "readiness_only": true,
+  "paper_only": true,
+  "research_only": true
+}

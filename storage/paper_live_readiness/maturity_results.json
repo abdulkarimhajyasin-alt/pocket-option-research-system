@@ -1,0 +1,9 @@
+{
+  "paper_sample_maturity": 0.0,
+  "portfolio_maturity": 81.49,
+  "readiness_maturity": 82.75,
+  "certification_maturity": 59.58,
+  "observation_maturity": 79.04,
+  "maturity_score": 60.57,
+  "readiness_only": true
+}

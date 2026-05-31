@@ -14,7 +14,7 @@
     "not_execution": true
   },
   "latest": {
-    "timestamp": "2026-05-31T16:03:13.498975+00:00",
+    "timestamp": "2026-05-31T16:19:37.180166+00:00",
     "candidates": [
       {
         "candidate_id": "execution_candidate_0001",
@@ -90,7 +90,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T15:31:40.320268",
+        "timestamp": "2026-05-31T15:41:20.004094",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -122,7 +122,7 @@
         "confluence": 74.83,
         "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T15:41:00.013293",
+        "timestamp": "2026-05-31T16:02:04.026395",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -154,7 +154,7 @@
         "confluence": 74.83,
         "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T15:41:00.013293",
+        "timestamp": "2026-05-31T16:02:04.026395",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -186,7 +186,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T15:41:00.440918",
+        "timestamp": "2026-05-31T16:02:04.553956",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -218,7 +218,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T15:41:00.440918",
+        "timestamp": "2026-05-31T16:02:04.553956",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -250,7 +250,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T15:41:06.024245",
+        "timestamp": "2026-05-31T16:02:10.297049",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -282,7 +282,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T15:41:06.024245",
+        "timestamp": "2026-05-31T16:02:10.297049",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -314,7 +314,7 @@
         "confluence": 78.8,
         "readiness": 79.56,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T15:41:08.878389",
+        "timestamp": "2026-05-31T16:02:13.235456",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -346,7 +346,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T15:41:20.004094",
+        "timestamp": "2026-05-31T16:02:25.027941",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -378,7 +378,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T15:41:20.004094",
+        "timestamp": "2026-05-31T16:02:25.027941",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -410,7 +410,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T16:02:04.553956",
+        "timestamp": "2026-05-31T16:18:23.321768",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -442,7 +442,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T16:02:10.297049",
+        "timestamp": "2026-05-31T16:18:28.587601",
         "metadata": {
           "research_only": true,
           "readiness_only": true,

@@ -3099,6 +3099,144 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def paper_live_readiness_analytics(self) -> dict[str, Any]:
+        """Return latest readiness-only paper-to-live gate analytics."""
+        payload = self._latest_json_dict(
+            "paper_live_readiness",
+            "readiness_summary",
+        )
+        gates = self._latest_json_dict("paper_live_readiness", "gate")
+        safety = self._latest_json_dict("paper_live_readiness", "safety")
+        maturity = self._latest_json_dict("paper_live_readiness", "maturity")
+        stability = self._latest_json_dict("paper_live_readiness", "stability")
+        diagnostics = self._latest_json_dict("paper_live_readiness", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "paper_live_readiness",
+            "recommendations",
+        )
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        if not summary:
+            summary = {
+                "paper_health": 0.0,
+                "paper_stability": 0.0,
+                "paper_governance": 0.0,
+                "execution_readiness": 0.0,
+                "observation_readiness": 0.0,
+                "certification_score": 0.0,
+                "safety_score": 0.0,
+                "maturity_score": 0.0,
+                "overall_score": 0.0,
+                "readiness_state": "غير مؤهلة",
+                "readiness_only": True,
+                "paper_only": True,
+                "research_only": True,
+            }
+        latest_diagnostics = latest.get("diagnostics", []) if isinstance(latest, dict) else []
+        latest_recommendations = (
+            latest.get("recommendations", []) if isinstance(latest, dict) else []
+        )
+        summary = {
+            **summary,
+            "warning_count": len(latest_diagnostics),
+            "recommendation_count": len(latest_recommendations),
+            "readiness_only": True,
+            "paper_only": True,
+            "research_only": True,
+        }
+        readiness_chart = {
+            "صحة الورقي": self._float(summary.get("paper_health")),
+            "استقرار الورقي": self._float(summary.get("paper_stability")),
+            "جودة الحوكمة": self._float(summary.get("paper_governance")),
+            "جاهزية التنفيذ": self._float(summary.get("execution_readiness")),
+            "جاهزية المراقبة": self._float(summary.get("observation_readiness")),
+            "الاعتماد": self._float(summary.get("certification_score")),
+        }
+        paper_chart = {
+            "صحة الورقي": self._float(summary.get("paper_health")),
+            "استقرار الورقي": self._float(summary.get("paper_stability")),
+            "جودة الحوكمة": self._float(summary.get("paper_governance")),
+        }
+        observation_chart = {
+            "المراقبة": self._float(summary.get("observation_readiness")),
+            "السلامة": self._float(summary.get("safety_score")),
+        }
+        certification_chart = {
+            "الاعتماد": self._float(summary.get("certification_score")),
+            "النضج": self._float(summary.get("maturity_score")),
+        }
+        safety_chart = {
+            "السلامة": self._float(safety.get("safety_score")),
+            "بدون تنفيذ": 100.0 if safety.get("no_execution") else 0.0,
+            "بدون تداول حي": 100.0 if safety.get("no_live_trading") else 0.0,
+            "بدون وسيط": 100.0 if safety.get("no_broker_access") else 0.0,
+            "بدون مصادقة": 100.0 if safety.get("no_authentication") else 0.0,
+        }
+        return {
+            "summary": summary,
+            "latest": latest,
+            "readiness": bar_chart(
+                "توزيع الجاهزية",
+                *self._dict_chart_values(readiness_chart),
+                label="توزيع الجاهزية",
+                color="green",
+            ).to_dict(),
+            "gates": bar_chart(
+                "نتائج البوابات",
+                *self._dict_chart_values(gates),
+                label="نتائج البوابات",
+                color="warning",
+            ).to_dict(),
+            "stability": bar_chart(
+                "الاستقرار",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="blue",
+            ).to_dict(),
+            "maturity": bar_chart(
+                "النضج",
+                *self._dict_chart_values(maturity),
+                label="النضج",
+                color="accent",
+            ).to_dict(),
+            "safety": bar_chart(
+                "السلامة",
+                *self._dict_chart_values(safety_chart),
+                label="السلامة",
+                color="green",
+            ).to_dict(),
+            "paper": bar_chart(
+                "الورقي",
+                *self._dict_chart_values(paper_chart),
+                label="الورقي",
+                color="blue",
+            ).to_dict(),
+            "observation": bar_chart(
+                "المراقبة",
+                *self._dict_chart_values(observation_chart),
+                label="المراقبة",
+                color="warning",
+            ).to_dict(),
+            "certification": bar_chart(
+                "الاعتماد",
+                *self._dict_chart_values(certification_chart),
+                label="الاعتماد",
+                color="accent",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")
