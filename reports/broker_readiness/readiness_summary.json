@@ -19,16 +19,16 @@
     "البيانات": 68.42
   },
   "readiness_timeline": {
-    "00:21": 81.73
+    "00:35": 81.73
   },
   "capability_timeline": {
-    "00:21": 67.41
+    "00:35": 67.41
   },
   "safety_timeline": {
-    "00:21": 100.0
+    "00:35": 100.0
   },
   "latest": {
-    "timestamp": "2026-05-31T00:21:04.366268",
+    "timestamp": "2026-05-31T00:35:26.124823",
     "capability": {
       "market_visibility": 79.05,
       "asset_visibility": 48.0,

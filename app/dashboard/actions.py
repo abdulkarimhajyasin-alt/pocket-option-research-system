@@ -170,6 +170,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل صندوق مراقبة خارجي سلبي دون اتصال أو مصادقة أو تنفيذ.",
         command=("scripts/run_external_observation.py",),
     ),
+    "browser_observation": ActionDefinition(
+        name="browser_observation",
+        label="تحديث مراقبة المتصفح",
+        description="تحليل لقطات متصفح موجودة للقراءة فقط دون فتح متصفح أو مصادقة.",
+        command=("scripts/run_browser_observation.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "artifact_count": 5,
+    "adapter_score": 86.34,
+    "adapter_state": "جاهزة بشروط",
+    "safety_score": 100.0,
+    "validation_score": 100.0,
+    "visibility_score": 86.67,
+    "monitoring_score": 98.34,
+    "warning_count": 0,
+    "recommendation_count": 1,
+    "research_only": true,
+    "observation_only": true,
+    "read_only": true
+  },
+  "artifact_distribution": {
+    "html_snapshot": 1,
+    "dom_export": 1,
+    "page_capture": 1,
+    "observation_dump": 1,
+    "static_snapshot": 1
+  },
+  "readiness_distribution": {
+    "score": 86.34,
+    "state": "جاهزة بشروط",
+    "explanation": "اللقطات صالحة مع متابعة بعض التحسينات.",
+    "observation_only": true,
+    "read_only": true,
+    "not_execution": true
+  },
+  "latest": {
+    "timestamp": "2026-05-31T00:36:39.361340",
+    "artifacts": [
+      {
+        "artifact_id": "html-summary",
+        "artifact_type": "html_snapshot",
+        "artifact_source": "D:\\pocket-option-research-system\\reports\\observation\\observation_summary.json",
+        "created_at": "1780143413153226300",
+        "validation_status": "ناجح",
+        "visibility_status": "مرئي",
+        "monitoring_status": "مستقر",
+        "metadata": {
+          "exists": true,
+          "readable": true,
+          "read_only": true,
+          "artifact_size": 836
+        },
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "artifact_id": "dom-export-summary",
+        "artifact_type": "dom_export",
+        "artifact_source": "D:\\pocket-option-research-system\\reports\\external_observation\\source_report.json",
+        "created_at": "1780187726308221100",
+        "validation_status": "ناجح",
+        "visibility_status": "مرئي",
+        "monitoring_status": "مستقر",
+        "metadata": {
+          "exists": true,
+          "readable": true,
+          "read_only": true,
+          "artifact_size": 92
+        },
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "artifact_id": "page-capture-summary",
+        "artifact_type": "page_capture",
+        "artifact_source": "D:\\pocket-option-research-system\\reports\\broker_readiness\\readiness_summary.json",
+        "created_at": "1780187726144313500",
+        "validation_status": "ناجح",
+        "visibility_status": "مرئي",
+        "monitoring_status": "مستقر",
+        "metadata": {
+          "exists": true,
+          "readable": true,
+          "read_only": true,
+          "artifact_size": 5101
+        },
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "artifact_id": "observation-dump",
+        "artifact_type": "observation_dump",
+        "artifact_source": "D:\\pocket-option-research-system\\storage\\external_observation\\diagnostics.json",
+        "created_at": "1780187726304223400",
+        "validation_status": "ناجح",
+        "visibility_status": "مرئي",
+        "monitoring_status": "مستقر",
+        "metadata": {
+          "exists": true,
+          "readable": true,
+          "read_only": true,
+          "artifact_size": 6026
+        },
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "artifact_id": "static-snapshot",
+        "artifact_type": "static_snapshot",
+        "artifact_source": "D:\\pocket-option-research-system\\data\\sample_eurusd_m1.csv",
+        "created_at": "1779982041662933800",
+        "validation_status": "ناجح",
+        "visibility_status": "مرئي",
+        "monitoring_status": "مستقر",
+        "metadata": {
+          "exists": true,
+          "readable": true,
+          "read_only": true,
+          "artifact_size": 11641
+        },
+        "research_only": true,
+        "observation_only": true
+      }
+    ],
+    "parse": {
+      "score": 46.67,
+      "visible_assets": 3,
+      "visible_payouts": 1,
+      "visible_sessions": 1,
+      "visible_symbols": 1,
+      "visible_timestamps": 2,
+      "visible_market_data": 6
+    },
+    "validation": {
+      "score": 100.0,
+      "structure": 100.0,
+      "completeness": 100.0,
+      "integrity": 100.0,
+      "consistency": 100.0
+    },
+    "visibility": {
+      "score": 86.67,
+      "observable_coverage": 100.0,
+      "field_completeness": 100.0,
+      "data_visibility": 46.67,
+      "report_visibility": 100.0
+    },
+    "monitoring": {
+      "score": 98.34,
+      "quality": 93.34,
+      "stability": 100.0,
+      "consistency": 100.0,
+      "freshness": 100.0
+    },
+    "safety": {
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "score": 100.0,
+      "no_login": true,
+      "no_authentication": true,
+      "no_browser_control": true,
+      "no_execution": true,
+      "no_order_apis": true,
+      "no_account_access": true,
+      "no_automation": true
+    },
+    "adapter": {
+      "score": 86.34,
+      "state": "جاهزة بشروط",
+      "explanation": "اللقطات صالحة مع متابعة بعض التحسينات.",
+      "observation_only": true,
+      "read_only": true,
+      "not_execution": true
+    },
+    "diagnostics": [],
+    "recommendations": [
+      {
+        "title": "متابعة المراقبة للقراءة فقط",
+        "priority": "منخفض",
+        "reason": "اللقطات صالحة ضمن حدود القراءة والتحليل فقط."
+      }
+    ],
+    "metadata": {
+      "research_only": true,
+      "observation_only": true,
+      "read_only": true,
+      "not_execution": true,
+      "not_order_placement": true,
+      "not_account_login": true,
+      "not_broker_authentication": true,
+      "not_credential_handling": true,
+      "not_browser_automation": true,
+      "not_broker_control": true
+    },
+    "research_only": true,
+    "observation_only": true,
+    "read_only": true,
+    "not_execution": true,
+    "not_order_placement": true,
+    "not_account_login": true,
+    "not_broker_authentication": true,
+    "not_credential_handling": true,
+    "not_browser_automation": true,
+    "not_broker_control": true
+  }
+}

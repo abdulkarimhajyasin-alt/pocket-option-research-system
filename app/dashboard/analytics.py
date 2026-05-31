@@ -1954,6 +1954,124 @@ class DashboardAnalyticsService:
             "analytics": analytics,
         }
 
+    def browser_observation_analytics(self) -> dict[str, Any]:
+        """Return latest read-only browser observation analytics."""
+        payload = self._latest_json_dict("browser_observation", "observation_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        artifacts = payload.get("artifact_distribution", {}) if payload else {}
+        readiness = payload.get("readiness_distribution", {}) if payload else {}
+        validation = self._latest_json_dict("browser_observation", "validation")
+        visibility = self._latest_json_dict("browser_observation", "visibility")
+        monitoring = self._latest_json_dict("browser_observation", "monitoring")
+        diagnostics = self._latest_json_dict("browser_observation", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "browser_observation",
+            "recommendations",
+        )
+        latest = payload.get("latest", {}) if payload else {}
+        safety = latest.get("safety", {}) if isinstance(latest, dict) else {}
+        safety_chart = {
+            "لا تسجيل دخول": 100.0 if safety.get("no_login") else 0.0,
+            "لا مصادقة": 100.0 if safety.get("no_authentication") else 0.0,
+            "لا تحكم متصفح": 100.0
+            if safety.get("no_browser_control")
+            else 0.0,
+            "لا تنفيذ": 100.0 if safety.get("no_execution") else 0.0,
+            "لا أوامر": 100.0 if safety.get("no_order_apis") else 0.0,
+            "لا وصول حساب": 100.0 if safety.get("no_account_access") else 0.0,
+            "لا أتمتة": 100.0 if safety.get("no_automation") else 0.0,
+        }
+        artifact_rows = latest.get("artifacts", []) if isinstance(latest, dict) else []
+        quality = {
+            item.get("artifact_id", "لقطة"): 100.0
+            if item.get("validation_status") == "ناجح"
+            else 50.0
+            for item in artifact_rows
+            if isinstance(item, dict)
+        }
+        stability = {
+            item.get("artifact_id", "لقطة"): 100.0
+            if item.get("monitoring_status") == "مستقر"
+            else 50.0
+            for item in artifact_rows
+            if isinstance(item, dict)
+        }
+        if not summary:
+            summary = {
+                "artifact_count": 0,
+                "adapter_score": 0.0,
+                "adapter_state": "غير متاح",
+                "safety_score": 0.0,
+                "validation_score": 0.0,
+                "visibility_score": 0.0,
+                "monitoring_score": 0.0,
+                "warning_count": 0,
+                "recommendation_count": 0,
+            }
+        return {
+            "summary": summary,
+            "artifacts": bar_chart(
+                "توزيع اللقطات",
+                *self._dict_chart_values(artifacts),
+                label="اللقطات",
+                color="blue",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "توزيع الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="green",
+            ).to_dict(),
+            "safety": bar_chart(
+                "توزيع السلامة",
+                *self._dict_chart_values(safety_chart),
+                label="السلامة",
+                color="warning",
+            ).to_dict(),
+            "validation": bar_chart(
+                "توزيع التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="accent",
+            ).to_dict(),
+            "visibility": bar_chart(
+                "توزيع الرؤية",
+                *self._dict_chart_values(visibility),
+                label="الرؤية",
+                color="blue",
+            ).to_dict(),
+            "monitoring": bar_chart(
+                "توزيع المراقبة",
+                *self._dict_chart_values(monitoring),
+                label="المراقبة",
+                color="green",
+            ).to_dict(),
+            "artifact_quality": bar_chart(
+                "جودة اللقطات",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "artifact_stability": bar_chart(
+                "استقرار اللقطات",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="blue",
+            ).to_dict(),
+            "failures": bar_chart(
+                "أسباب الإخفاق",
+                *self._dict_chart_values(diagnostics),
+                label="الإخفاق",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="accent",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")
