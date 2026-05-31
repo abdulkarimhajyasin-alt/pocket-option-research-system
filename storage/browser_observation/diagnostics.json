@@ -77,7 +77,7 @@
     "متابعة المراقبة للقراءة فقط": 1
   },
   "latest": {
-    "timestamp": "2026-05-31T14:35:06.754003",
+    "timestamp": "2026-05-31T14:52:54.409087",
     "artifacts": [
       {
         "artifact_id": "html-summary",
@@ -100,7 +100,7 @@
         "artifact_id": "dom-export-summary",
         "artifact_type": "dom_export",
         "artifact_source": "D:\\pocket-option-research-system\\reports\\external_observation\\source_report.json",
-        "created_at": "1780238032323499600",
+        "created_at": "1780239018581244800",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -117,7 +117,7 @@
         "artifact_id": "page-capture-summary",
         "artifact_type": "page_capture",
         "artifact_source": "D:\\pocket-option-research-system\\reports\\broker_readiness\\readiness_summary.json",
-        "created_at": "1780238026750419000",
+        "created_at": "1780239152273011200",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -134,7 +134,7 @@
         "artifact_id": "observation-dump",
         "artifact_type": "observation_dump",
         "artifact_source": "D:\\pocket-option-research-system\\storage\\external_observation\\diagnostics.json",
-        "created_at": "1780238032321500300",
+        "created_at": "1780239018578558400",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",

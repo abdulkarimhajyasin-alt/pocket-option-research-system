@@ -2616,6 +2616,127 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def execution_readiness_analytics(self) -> dict[str, Any]:
+        """Return latest research-only execution readiness analytics."""
+        payload = self._latest_json_dict("execution_readiness", "execution_summary")
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        readiness = self._latest_json_dict("execution_readiness", "readiness")
+        qualification = self._latest_json_dict("execution_readiness", "qualification")
+        gates = self._latest_json_dict("execution_readiness", "gate")
+        validation = self._latest_json_dict("execution_readiness", "validation")
+        diagnostics = self._latest_json_dict("execution_readiness", "diagnostics")
+        recommendations = self._latest_json_dict("execution_readiness", "recommendations")
+        candidates = latest.get("candidates", []) if isinstance(latest, dict) else []
+        confidence: dict[str, float] = {}
+        quality: dict[str, float] = {}
+        confluence: dict[str, float] = {}
+        rejections: dict[str, float] = {}
+        activity: dict[str, float] = {}
+        for item in candidates[:20] if isinstance(candidates, list) else []:
+            if not isinstance(item, dict):
+                continue
+            label = str(item.get("candidate_id", "مرشح"))
+            confidence[label] = self._float(item.get("confidence"))
+            quality[label] = self._float(item.get("quality"))
+            confluence[label] = self._float(item.get("confluence"))
+            day = str(item.get("timestamp", ""))[:10] or "غير محدد"
+            activity[day] = activity.get(day, 0.0) + 1.0
+            if item.get("qualification") == "مرفوض":
+                if self._float(item.get("confidence")) < 50:
+                    reason = "الثقة منخفضة"
+                elif self._float(item.get("quality")) < 50:
+                    reason = "الجودة منخفضة"
+                elif self._float(item.get("confluence")) < 50:
+                    reason = "التوافق منخفض"
+                else:
+                    reason = "الجاهزية منخفضة"
+                rejections[reason] = rejections.get(reason, 0.0) + 1.0
+        if not summary:
+            summary = {
+                "candidate_count": 0,
+                "qualified_count": 0,
+                "conditional_count": 0,
+                "rejected_count": 0,
+                "average_readiness": 0.0,
+                "average_confidence": 0.0,
+                "warning_count": 0,
+                "recommendation_count": 0,
+                "qualification_state": "غير متاح",
+                "research_only": True,
+                "readiness_only": True,
+                "not_execution": True,
+            }
+        return {
+            "summary": summary,
+            "readiness": bar_chart(
+                "توزيع الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="blue",
+            ).to_dict(),
+            "qualification": bar_chart(
+                "توزيع التأهيل",
+                *self._dict_chart_values(qualification),
+                label="التأهيل",
+                color="green",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "توزيع الثقة",
+                *self._dict_chart_values(confidence),
+                label="الثقة",
+                color="accent",
+            ).to_dict(),
+            "quality": bar_chart(
+                "توزيع الجودة",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "confluence": bar_chart(
+                "توزيع التوافق",
+                *self._dict_chart_values(confluence),
+                label="التوافق",
+                color="blue",
+            ).to_dict(),
+            "gates": bar_chart(
+                "نتائج البوابات",
+                *self._dict_chart_values(gates),
+                label="البوابات",
+                color="warning",
+            ).to_dict(),
+            "rejections": bar_chart(
+                "أسباب الرفض",
+                *self._dict_chart_values(rejections),
+                label="الأسباب",
+                color="warning",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "activity": line_chart(
+                "النشاط الزمني",
+                *self._dict_chart_values(activity),
+                label="النشاط",
+                color="blue",
+            ).to_dict(),
+            "validation": bar_chart(
+                "التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="accent",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

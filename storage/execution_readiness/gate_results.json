@@ -1,0 +1,44 @@
+[
+  {
+    "name": "confidence",
+    "arabic_label": "بوابة الثقة",
+    "state": "PASS",
+    "score": 84.45,
+    "detail": "بوابة الثقة ناجحة للبحث فقط."
+  },
+  {
+    "name": "quality",
+    "arabic_label": "بوابة الجودة",
+    "state": "PASS",
+    "score": 85.15,
+    "detail": "بوابة الجودة ناجحة للبحث فقط."
+  },
+  {
+    "name": "confluence",
+    "arabic_label": "بوابة التوافق",
+    "state": "PASS",
+    "score": 78.92,
+    "detail": "بوابة التوافق ناجحة للبحث فقط."
+  },
+  {
+    "name": "regime",
+    "arabic_label": "بوابة حالة السوق",
+    "state": "PASS",
+    "score": 75.0,
+    "detail": "بوابة حالة السوق ناجحة للبحث فقط."
+  },
+  {
+    "name": "certification",
+    "arabic_label": "بوابة الاعتماد",
+    "state": "PASS",
+    "score": 75.0,
+    "detail": "بوابة الاعتماد ناجحة للبحث فقط."
+  },
+  {
+    "name": "stability",
+    "arabic_label": "بوابة الاستقرار",
+    "state": "PASS",
+    "score": 82.67,
+    "detail": "بوابة الاستقرار ناجحة للبحث فقط."
+  }
+]

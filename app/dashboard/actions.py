@@ -211,6 +211,14 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="توليد تدفق إشارات بحثي من الملاحظات المعاد تشغيلها دون تنفيذ.",
         command=("scripts/run_signal_stream.py",),
     ),
+    "execution_readiness": ActionDefinition(
+        name="execution_readiness",
+        label="جاهزية التنفيذ",
+        description=(
+            "تقييم جاهزية الإشارات البحثية لطبقة ورقية مستقبلية دون تنفيذ أو أوامر أو وسيط."
+        ),
+        command=("scripts/run_execution_readiness.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",
