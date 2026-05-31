@@ -3920,6 +3920,140 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def release_packaging_analytics(self) -> dict[str, Any]:
+        """Return latest release packaging analytics."""
+        summary_payload = self._latest_json_dict("release_packaging", "release_summary")
+        manifest = self._latest_json_dict(
+            "release_packaging",
+            "release_manifest_report",
+        )
+        status = self._latest_json_dict(
+            "release_packaging",
+            "project_status_report",
+        )
+        audit = self._latest_json_dict(
+            "release_packaging",
+            "repository_audit_report",
+        )
+        diagnostics = self._latest_json_list("release_packaging", "diagnostics_report")
+        recommendations = self._latest_json_list(
+            "release_packaging",
+            "recommendations_report",
+        )
+        release_status = summary_payload.get(
+            "release_status",
+            manifest.get("release_status", "Not Ready"),
+        )
+        summary = {
+            "release_id": manifest.get("release_id", "research-platform-v1.0"),
+            "release_status": release_status,
+            "certification_state": manifest.get(
+                "certification_state",
+                summary_payload.get("certification_state", "Not Certified"),
+            ),
+            "test_count": self._float(manifest.get("test_count", 260)),
+            "phase_count": self._float(len(manifest.get("completed_phases", []))),
+            "dashboard_page_count": self._float(len(manifest.get("dashboard_pages", []))),
+            "api_endpoint_count": self._float(len(manifest.get("api_endpoints", []))),
+            "script_count": self._float(len(manifest.get("scripts", []))),
+            "test_file_count": self._float(len(manifest.get("tests", []))),
+            "report_count": self._float(len(manifest.get("reports", []))),
+            "storage_count": self._float(len(manifest.get("storage_outputs", []))),
+            "safety_status": "بحث فقط",
+            "diagnostics_count": self._float(len(diagnostics)),
+            "recommendation_count": self._float(len(recommendations)),
+            "recommended_next_decision": status.get(
+                "recommended_next_decision",
+                "Run targeted cleanup before release",
+            ),
+            "research_only": True,
+            "local_only": True,
+        }
+        components = {
+            "الصفحات": summary["dashboard_page_count"],
+            "واجهات API": summary["api_endpoint_count"],
+            "السكريبتات": summary["script_count"],
+            "الاختبارات": summary["test_file_count"],
+            "التقارير": summary["report_count"],
+            "التخزين": summary["storage_count"],
+        }
+        phases = {
+            "المراحل المكتملة": summary["phase_count"],
+            "النطاق": 55.0,
+        }
+        validation = {
+            "الاختبارات": summary["test_count"],
+            "التحذيرات": summary["diagnostics_count"],
+        }
+        safety = {
+            str(key): 100.0 if value else 0.0
+            for key, value in manifest.get("safety_boundary", {}).items()
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0
+            for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {str(item): 1.0 for item in recommendations}
+        readiness = {
+            "Ready For Research Release": 100.0
+            if release_status == "Ready For Research Release"
+            else 0.0,
+            "Ready With Warnings": 100.0
+            if release_status == "Ready With Warnings"
+            else 0.0,
+            "Not Ready": 100.0 if release_status == "Not Ready" else 0.0,
+        }
+        return {
+            "summary": summary,
+            "manifest": manifest,
+            "project_status": status,
+            "repository_audit": audit,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "components": bar_chart(
+                "توزيع مكونات الإصدار",
+                *self._dict_chart_values(components),
+                label="المكونات",
+                color="blue",
+            ).to_dict(),
+            "phases": bar_chart(
+                "تغطية المراحل",
+                *self._dict_chart_values(phases),
+                label="المراحل",
+                color="green",
+            ).to_dict(),
+            "validation": bar_chart(
+                "حالة التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="accent",
+            ).to_dict(),
+            "safety": bar_chart(
+                "حالة الأمان",
+                *self._dict_chart_values(safety),
+                label="الأمان",
+                color="green",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "جاهزية الإصدار",
+                *self._dict_chart_values(readiness),
+                label="الإصدار",
+                color="blue",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

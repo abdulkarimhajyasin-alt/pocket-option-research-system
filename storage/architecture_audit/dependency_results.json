@@ -5,8 +5,8 @@
     "datetime.utcnow"
   ],
   "stale_module_count": 0,
-  "service_count": 37,
-  "duplicated_logic_indicator": 67,
+  "service_count": 38,
+  "duplicated_logic_indicator": 69,
   "orphan_module_count": 0,
   "architecture_audit_only": true
 }

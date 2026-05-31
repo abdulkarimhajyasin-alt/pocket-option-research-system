@@ -1,0 +1,59 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.release_packaging }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">إصدار بحثي فقط</p>
+    <h1>تغليف الإصدار النهائي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث تغليف الإصدار</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>اسم الإصدار</span>
+    <strong>{{ release_packaging.summary.release_id|default("research-platform-v1.0") }}</strong>
+    <p>حزمة استقرار وإصدار محلية لا تضيف أي تنفيذ أو اتصال بوسيط أو تداول حي.</p>
+  </div>
+  <div class="executive-score">
+    <span>حالة الإصدار</span>
+    <strong>{{ release_packaging.summary.release_status|default("Not Ready") }}</strong>
+  </div>
+  <div>
+    <span>حالة الشهادة</span>
+    <strong>{{ release_packaging.summary.certification_state|default("غير متاح") }}</strong>
+    <small>الاختبارات {{ release_packaging.summary.test_count|default(0)|number_ar }}</small>
+    <small>{{ release_packaging.summary.safety_status|default("بحث فقط") }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد المراحل</span><strong>{{ release_packaging.summary.phase_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد صفحات الداشبورد</span><strong>{{ release_packaging.summary.dashboard_page_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد API endpoints</span><strong>{{ release_packaging.summary.api_endpoint_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد scripts</span><strong>{{ release_packaging.summary.script_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد tests</span><strong>{{ release_packaging.summary.test_file_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التقارير</span><strong>{{ release_packaging.summary.report_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد ملفات التخزين</span><strong>{{ release_packaging.summary.storage_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التحذيرات</span><strong>{{ release_packaging.summary.diagnostics_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ release_packaging.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>القرار المقترح التالي</span><strong>{{ release_packaging.summary.recommended_next_decision|default("Run targeted cleanup before release") }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع مكونات الإصدار</h2><span>الحزمة</span></div><div class="chart" data-chart='{{ release_packaging.components|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تغطية المراحل</h2><span>v1.0</span></div><div class="chart" data-chart='{{ release_packaging.phases|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>حالة التحقق</h2><span>الاختبارات</span></div><div class="chart" data-chart='{{ release_packaging.validation|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>حالة الأمان</h2><span>بحث فقط</span></div><div class="chart" data-chart='{{ release_packaging.safety|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ release_packaging.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الإغلاق</span></div><div class="chart" data-chart='{{ release_packaging.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>جاهزية الإصدار</h2><span>الحالة</span></div><div class="chart" data-chart='{{ release_packaging.readiness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>Release Manifest</h2><span>محلي</span></div><pre class="code-block">{{ release_packaging.manifest|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}

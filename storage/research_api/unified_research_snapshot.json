@@ -101,11 +101,11 @@
           "rejected": 0,
           "active": 0,
           "expired": 11,
-          "wins": 2,
+          "wins": 3,
           "losses": 0,
-          "breakeven": 1,
+          "breakeven": 0,
           "unresolved": 11,
-          "win_rate": 0.1429,
+          "win_rate": 0.2143,
           "average_confidence": 84.44,
           "average_readiness": 79.7,
           "paper_drawdown": 0.0,
@@ -116,7 +116,7 @@
           "paper_only": true,
           "research_only": true,
           "not_real_execution": true,
-          "paper_execution_score": 62.27,
+          "paper_execution_score": 64.65,
           "warning_count": 3,
           "recommendation_count": 3
         },
@@ -140,12 +140,12 @@
               0.0,
               0.0,
               0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
               1.0,
               1.0,
-              1.0,
-              2.0,
-              2.0,
-              2.0,
               2.0,
               3.0
             ],
@@ -160,20 +160,20 @@
               "مراقبة السوق": 1,
               "جاهزية المراقبة": 2,
               "مراقبة المتصفح": 2,
-              "browser_snapshot": 1,
               "المراقبة الخارجية": 2,
-              "external_source": 1,
-              "ذكاء المراقبة": 1,
               "استيراد اللقطات": 2,
-              "snapshot": 1
+              "snapshot": 1,
+              "ذكاء المراقبة": 1,
+              "browser_snapshot": 1,
+              "external_source": 1
             },
             "session_exposure": {
               "paper": 14
             },
             "direction_exposure": {
               "NO_TRADE": 11,
-              "CALL": 1,
-              "PUT": 2
+              "CALL": 2,
+              "PUT": 1
             },
             "confidence_exposure": {
               "ثقة متوسطة": 3,
@@ -199,7 +199,7 @@
           "recommendation_count": 3,
           "summary": {
             "portfolio_id": "paper_portfolio_0001",
-            "created_at": "2026-05-31T21:11:19.255859+00:00",
+            "created_at": "2026-05-31T21:38:52.061332+00:00",
             "total_orders": 14,
             "active_orders": 0,
             "wins": 3,
@@ -250,8 +250,8 @@
     "data": {
       "readiness": {
         "summary": {
-          "readiness_id": "paper_live_readiness_20260531211100",
-          "generated_at": "2026-05-31T21:11:00.276754+00:00",
+          "readiness_id": "paper_live_readiness_20260531213826",
+          "generated_at": "2026-05-31T21:38:26.827058+00:00",
           "paper_health": 81.92,
           "paper_stability": 60.85,
           "paper_governance": 0.0,
@@ -298,14 +298,14 @@
       },
       "architecture_audit": {
         "summary": {
-          "certification_id": "architecture_audit_20260531211040",
-          "generated_at": "2026-05-31T21:10:40.818351+00:00",
+          "certification_id": "architecture_audit_20260531213804",
+          "generated_at": "2026-05-31T21:38:04.636498+00:00",
           "architecture_score": 100.0,
           "consistency_score": 96.5,
           "dependency_score": 76.0,
-          "performance_score": 85.62,
+          "performance_score": 85.29,
           "safety_score": 100.0,
-          "overall_score": 91.62,
+          "overall_score": 91.56,
           "certification_state": "جاهزة بشروط",
           "metadata": {
             "architecture_audit_only": true,
@@ -377,8 +377,8 @@
     "data": {
       "knowledge_graph": {
         "summary": {
-          "graph_id": "knowledge_graph_20260531211119",
-          "generated_at": "2026-05-31T21:11:19.015960+00:00",
+          "graph_id": "knowledge_graph_20260531213851",
+          "generated_at": "2026-05-31T21:38:51.112461+00:00",
           "nodes": [
             {
               "node_id": "signal",
@@ -474,7 +474,7 @@
               "node_id": "readiness",
               "entity_type": "ReadinessEntity",
               "label": "Readiness",
-              "confidence": 36.35,
+              "confidence": 36.36,
               "metadata": {
                 "research_only": true,
                 "source": "paper_control_center"

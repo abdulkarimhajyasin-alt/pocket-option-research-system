@@ -15,12 +15,12 @@
         0.0,
         0.0,
         0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
         1.0,
         1.0,
-        1.0,
-        2.0,
-        2.0,
-        2.0,
         2.0,
         3.0
       ],
@@ -35,20 +35,20 @@
         "مراقبة السوق": 1,
         "جاهزية المراقبة": 2,
         "مراقبة المتصفح": 2,
-        "browser_snapshot": 1,
         "المراقبة الخارجية": 2,
-        "external_source": 1,
-        "ذكاء المراقبة": 1,
         "استيراد اللقطات": 2,
-        "snapshot": 1
+        "snapshot": 1,
+        "ذكاء المراقبة": 1,
+        "browser_snapshot": 1,
+        "external_source": 1
       },
       "session_exposure": {
         "paper": 14
       },
       "direction_exposure": {
         "NO_TRADE": 11,
-        "CALL": 1,
-        "PUT": 2
+        "CALL": 2,
+        "PUT": 1
       },
       "confidence_exposure": {
         "ثقة متوسطة": 3,
@@ -74,7 +74,7 @@
     "recommendation_count": 3,
     "summary": {
       "portfolio_id": "paper_portfolio_0001",
-      "created_at": "2026-05-31T21:11:19.255859+00:00",
+      "created_at": "2026-05-31T21:38:52.061332+00:00",
       "total_orders": 14,
       "active_orders": 0,
       "wins": 3,
@@ -109,10 +109,10 @@
     }
   },
   "latest": {
-    "timestamp": "2026-05-31T21:11:19.260517+00:00",
+    "timestamp": "2026-05-31T21:38:52.061700+00:00",
     "portfolio": {
       "portfolio_id": "paper_portfolio_0001",
-      "created_at": "2026-05-31T21:11:19.255859+00:00",
+      "created_at": "2026-05-31T21:38:52.061332+00:00",
       "total_orders": 14,
       "active_orders": 0,
       "wins": 3,
@@ -151,20 +151,20 @@
         "مراقبة السوق": 1,
         "جاهزية المراقبة": 2,
         "مراقبة المتصفح": 2,
-        "browser_snapshot": 1,
         "المراقبة الخارجية": 2,
-        "external_source": 1,
-        "ذكاء المراقبة": 1,
         "استيراد اللقطات": 2,
-        "snapshot": 1
+        "snapshot": 1,
+        "ذكاء المراقبة": 1,
+        "browser_snapshot": 1,
+        "external_source": 1
       },
       "session_exposure": {
         "paper": 14
       },
       "direction_exposure": {
         "NO_TRADE": 11,
-        "CALL": 1,
-        "PUT": 2
+        "CALL": 2,
+        "PUT": 1
       },
       "confidence_exposure": {
         "ثقة متوسطة": 3,
@@ -188,12 +188,12 @@
         0.0,
         0.0,
         0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
         1.0,
         1.0,
-        1.0,
-        2.0,
-        2.0,
-        2.0,
         2.0,
         3.0
       ],
@@ -296,12 +296,12 @@
           0.0,
           0.0,
           0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
           1.0,
           1.0,
-          1.0,
-          2.0,
-          2.0,
-          2.0,
           2.0,
           3.0
         ],
@@ -316,20 +316,20 @@
           "مراقبة السوق": 1,
           "جاهزية المراقبة": 2,
           "مراقبة المتصفح": 2,
-          "browser_snapshot": 1,
           "المراقبة الخارجية": 2,
-          "external_source": 1,
-          "ذكاء المراقبة": 1,
           "استيراد اللقطات": 2,
-          "snapshot": 1
+          "snapshot": 1,
+          "ذكاء المراقبة": 1,
+          "browser_snapshot": 1,
+          "external_source": 1
         },
         "session_exposure": {
           "paper": 14
         },
         "direction_exposure": {
           "NO_TRADE": 11,
-          "CALL": 1,
-          "PUT": 2
+          "CALL": 2,
+          "PUT": 1
         },
         "confidence_exposure": {
           "ثقة متوسطة": 3,
@@ -355,7 +355,7 @@
       "recommendation_count": 3,
       "summary": {
         "portfolio_id": "paper_portfolio_0001",
-        "created_at": "2026-05-31T21:11:19.255859+00:00",
+        "created_at": "2026-05-31T21:38:52.061332+00:00",
         "total_orders": 14,
         "active_orders": 0,
         "wins": 3,

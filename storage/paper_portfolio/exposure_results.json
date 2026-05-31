@@ -4,20 +4,20 @@
     "مراقبة السوق": 1,
     "جاهزية المراقبة": 2,
     "مراقبة المتصفح": 2,
-    "browser_snapshot": 1,
     "المراقبة الخارجية": 2,
-    "external_source": 1,
-    "ذكاء المراقبة": 1,
     "استيراد اللقطات": 2,
-    "snapshot": 1
+    "snapshot": 1,
+    "ذكاء المراقبة": 1,
+    "browser_snapshot": 1,
+    "external_source": 1
   },
   "session_exposure": {
     "paper": 14
   },
   "direction_exposure": {
     "NO_TRADE": 11,
-    "CALL": 1,
-    "PUT": 2
+    "CALL": 2,
+    "PUT": 1
   },
   "confidence_exposure": {
     "ثقة متوسطة": 3,

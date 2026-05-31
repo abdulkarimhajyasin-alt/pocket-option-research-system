@@ -1,0 +1,15 @@
+{
+  "research_only": true,
+  "local_only": true,
+  "archive_only": true,
+  "no_broker_access": true,
+  "no_broker_api": true,
+  "no_account_login": true,
+  "no_credentials": true,
+  "no_browser_automation": true,
+  "no_real_trade_control": true,
+  "no_order_placement": true,
+  "no_live_trading": true,
+  "no_money_handling": true,
+  "no_external_service_calls": true
+}

@@ -32,6 +32,7 @@ from app.i18n import DEFAULT_LANGUAGE, get_translations
 from app.research_api.service import UnifiedResearchAPIService
 from app.research_archive.service import ResearchArchiveService
 from app.platform_certification.service import PlatformCertificationService
+from app.release_packaging.service import ReleasePackagingService
 
 
 SAFETY_NOTE = (
@@ -751,6 +752,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/release-packaging", response_class=HTMLResponse)
+    def release_packaging(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/release_packaging.html",
+            context(
+                request,
+                dashboard,
+                page="release_packaging",
+                release_packaging=dashboard.analytics.release_packaging_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -994,6 +1009,30 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/platform-certification/recommendations")
     def api_platform_certification_recommendations() -> list[str]:
         return PlatformCertificationService(root).recommendations_view()
+
+    @app.get("/api/release-packaging")
+    def api_release_packaging() -> dict[str, object]:
+        return dashboard_context().analytics.release_packaging_analytics()
+
+    @app.get("/api/release-packaging/manifest")
+    def api_release_packaging_manifest() -> dict[str, object]:
+        return ReleasePackagingService(root).get_release_manifest()
+
+    @app.get("/api/release-packaging/status")
+    def api_release_packaging_status() -> dict[str, object]:
+        return ReleasePackagingService(root).get_project_status()
+
+    @app.get("/api/release-packaging/notes")
+    def api_release_packaging_notes() -> dict[str, object]:
+        return ReleasePackagingService(root).get_release_notes()
+
+    @app.get("/api/release-packaging/diagnostics")
+    def api_release_packaging_diagnostics() -> list[dict[str, object]]:
+        return ReleasePackagingService(root).generate_diagnostics()
+
+    @app.get("/api/release-packaging/recommendations")
+    def api_release_packaging_recommendations() -> list[str]:
+        return ReleasePackagingService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

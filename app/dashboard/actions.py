@@ -303,6 +303,15 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_platform_certification.py",),
     ),
+    "release_packaging": ActionDefinition(
+        name="release_packaging",
+        label="تغليف الإصدار",
+        description=(
+            "توليد حزمة إصدار بحثية محلية تتضمن manifest وتقارير حالة دون "
+            "إضافة تنفيذ أو وسيط أو أتمتة."
+        ),
+        command=("scripts/run_release_packaging.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

@@ -4,8 +4,8 @@
   "data": {
     "knowledge_graph": {
       "summary": {
-        "graph_id": "knowledge_graph_20260531211119",
-        "generated_at": "2026-05-31T21:11:19.015960+00:00",
+        "graph_id": "knowledge_graph_20260531213851",
+        "generated_at": "2026-05-31T21:38:51.112461+00:00",
         "nodes": [
           {
             "node_id": "signal",
@@ -101,7 +101,7 @@
             "node_id": "readiness",
             "entity_type": "ReadinessEntity",
             "label": "Readiness",
-            "confidence": 36.35,
+            "confidence": 36.36,
             "metadata": {
               "research_only": true,
               "source": "paper_control_center"

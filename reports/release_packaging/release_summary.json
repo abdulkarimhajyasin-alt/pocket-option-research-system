@@ -1,0 +1,8 @@
+{
+  "release_id": "research-platform-v1.0",
+  "release_status": "Ready For Research Release",
+  "certification_state": "Certified For Advanced Research",
+  "test_count": 260,
+  "recommended_next_decision": "Freeze as Research Platform v1.0",
+  "research_only": true
+}

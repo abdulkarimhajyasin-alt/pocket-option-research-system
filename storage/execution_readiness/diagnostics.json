@@ -22,10 +22,10 @@
     "execution_candidate_0006": 83.72,
     "execution_candidate_0007": 87.0,
     "execution_candidate_0008": 87.0,
-    "execution_candidate_0009": 79.56,
+    "execution_candidate_0009": 86.33,
     "execution_candidate_0010": 86.33,
     "execution_candidate_0011": 86.33,
-    "execution_candidate_0012": 86.33,
+    "execution_candidate_0012": 79.56,
     "execution_candidate_0013": 83.72,
     "execution_candidate_0014": 87.0
   },
@@ -43,10 +43,10 @@
     "execution_candidate_0006": 86.34,
     "execution_candidate_0007": 100.0,
     "execution_candidate_0008": 100.0,
-    "execution_candidate_0009": 89.96,
+    "execution_candidate_0009": 97.19,
     "execution_candidate_0010": 97.19,
     "execution_candidate_0011": 97.19,
-    "execution_candidate_0012": 97.19,
+    "execution_candidate_0012": 89.96,
     "execution_candidate_0013": 86.34,
     "execution_candidate_0014": 100.0
   },
@@ -59,10 +59,10 @@
     "execution_candidate_0006": 100.0,
     "execution_candidate_0007": 100.0,
     "execution_candidate_0008": 100.0,
-    "execution_candidate_0009": 79.04,
+    "execution_candidate_0009": 100.0,
     "execution_candidate_0010": 100.0,
     "execution_candidate_0011": 100.0,
-    "execution_candidate_0012": 100.0,
+    "execution_candidate_0012": 79.04,
     "execution_candidate_0013": 100.0,
     "execution_candidate_0014": 100.0
   },
@@ -75,10 +75,10 @@
     "execution_candidate_0006": 82.27,
     "execution_candidate_0007": 85.0,
     "execution_candidate_0008": 85.0,
-    "execution_candidate_0009": 78.8,
+    "execution_candidate_0009": 84.44,
     "execution_candidate_0010": 84.44,
     "execution_candidate_0011": 84.44,
-    "execution_candidate_0012": 84.44,
+    "execution_candidate_0012": 78.8,
     "execution_candidate_0013": 82.27,
     "execution_candidate_0014": 85.0
   },
@@ -99,7 +99,7 @@
     "2026-05-31": 12
   },
   "latest": {
-    "timestamp": "2026-05-31T21:10:59.188986+00:00",
+    "timestamp": "2026-05-31T21:38:27.172417+00:00",
     "candidates": [
       {
         "candidate_id": "execution_candidate_0001",
@@ -175,7 +175,7 @@
         "confluence": 74.83,
         "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T20:59:32.801629",
+        "timestamp": "2026-05-31T21:09:35.439490",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -207,7 +207,7 @@
         "confluence": 74.83,
         "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T20:59:32.801629",
+        "timestamp": "2026-05-31T21:09:35.439490",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -239,7 +239,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T20:59:33.265201",
+        "timestamp": "2026-05-31T21:09:35.928152",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -271,7 +271,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T20:59:33.265201",
+        "timestamp": "2026-05-31T21:09:35.928152",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -303,7 +303,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T20:59:39.483375",
+        "timestamp": "2026-05-31T21:09:41.884725",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -335,7 +335,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T20:59:39.483375",
+        "timestamp": "2026-05-31T21:09:41.884725",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -360,14 +360,14 @@
       {
         "candidate_id": "execution_candidate_0009",
         "signal_id": "signal_stream_0009",
-        "asset": "ذكاء المراقبة",
+        "asset": "استيراد اللقطات",
         "direction": "NO_TRADE",
-        "confidence": 89.96,
-        "quality": 79.04,
-        "confluence": 78.8,
-        "readiness": 79.56,
-        "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T20:59:43.765529",
+        "confidence": 97.19,
+        "quality": 100.0,
+        "confluence": 84.44,
+        "readiness": 86.33,
+        "qualification": "مؤهل",
+        "timestamp": "2026-05-31T21:10:01.685208",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -382,7 +382,7 @@
           "not_credential_handling": true,
           "not_browser_automation": true,
           "not_broker_control": true,
-          "source": "observation_intelligence"
+          "source": "snapshot_import"
         },
         "research_only": true,
         "readiness_only": true,
@@ -399,7 +399,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T20:59:58.695385",
+        "timestamp": "2026-05-31T21:10:01.685208",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -424,14 +424,14 @@
       {
         "candidate_id": "execution_candidate_0011",
         "signal_id": "signal_stream_0011",
-        "asset": "استيراد اللقطات",
-        "direction": "NO_TRADE",
+        "asset": "snapshot",
+        "direction": "CALL",
         "confidence": 97.19,
         "quality": 100.0,
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T20:59:58.695385",
+        "timestamp": "2026-05-31T21:10:01.685208",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -456,14 +456,14 @@
       {
         "candidate_id": "execution_candidate_0012",
         "signal_id": "signal_stream_0012",
-        "asset": "snapshot",
-        "direction": "PUT",
-        "confidence": 97.19,
-        "quality": 100.0,
-        "confluence": 84.44,
-        "readiness": 86.33,
-        "qualification": "مؤهل",
-        "timestamp": "2026-05-31T20:59:58.695385",
+        "asset": "ذكاء المراقبة",
+        "direction": "NO_TRADE",
+        "confidence": 89.96,
+        "quality": 79.04,
+        "confluence": 78.8,
+        "readiness": 79.56,
+        "qualification": "مؤهل بشروط",
+        "timestamp": "2026-05-31T21:10:59.492871",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -478,7 +478,7 @@
           "not_credential_handling": true,
           "not_browser_automation": true,
           "not_broker_control": true,
-          "source": "snapshot_import"
+          "source": "observation_intelligence"
         },
         "research_only": true,
         "readiness_only": true,
@@ -495,7 +495,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.928152",
+        "timestamp": "2026-05-31T21:36:46.870865",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -527,7 +527,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:09:41.884725",
+        "timestamp": "2026-05-31T21:36:53.097036",
         "metadata": {
           "research_only": true,
           "readiness_only": true,

@@ -1,11 +1,11 @@
 {
   "health_analysis": {
     "portfolio_health": 0.0,
-    "execution_health": 62.27,
+    "execution_health": 64.65,
     "readiness_health": 82.75,
     "governance_health": 82.24,
     "stability_health": 0.0,
-    "health_score": 45.45,
+    "health_score": 45.93,
     "paper_only": true
   },
   "readiness_analysis": {
@@ -17,7 +17,7 @@
     "PASS": 3
   },
   "execution_analysis": {
-    "execution": 62.27
+    "execution": 64.65
   },
   "portfolio_analysis": {
     "health": 0.0,
