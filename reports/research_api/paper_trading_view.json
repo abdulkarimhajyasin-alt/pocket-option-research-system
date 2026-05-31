@@ -1,0 +1,154 @@
+{
+  "view_id": "paper",
+  "label_ar": "التداول الورقي الموحد",
+  "data": {
+    "paper_execution": {
+      "summary": {
+        "total_paper_orders": 14,
+        "accepted": 14,
+        "rejected": 0,
+        "active": 0,
+        "expired": 11,
+        "wins": 2,
+        "losses": 0,
+        "breakeven": 1,
+        "unresolved": 11,
+        "win_rate": 0.1429,
+        "average_confidence": 84.44,
+        "average_readiness": 79.7,
+        "paper_drawdown": 0.0,
+        "paper_streaks": {
+          "max_paper_win_streak": 2,
+          "max_paper_loss_streak": 0
+        },
+        "paper_only": true,
+        "research_only": true,
+        "not_real_execution": true,
+        "paper_execution_score": 62.27,
+        "warning_count": 3,
+        "recommendation_count": 3
+      },
+      "latest_available": true,
+      "raw_available": true
+    },
+    "paper_portfolio": {
+      "summary": {
+        "win_rate": 0.2143,
+        "loss_rate": 0.0,
+        "drawdown_analysis": {
+          "current_drawdown": 0.0,
+          "maximum_drawdown": 0.0,
+          "drawdown_trend": "مستقر",
+          "recovery_factor": 100.0,
+          "drawdown_score": 100.0,
+          "equity_curve": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "paper_only": true
+        },
+        "stability_analysis": {
+          "stability_score": 67.0
+        },
+        "exposure_analysis": {
+          "asset_exposure": {
+            "بيانات السوق": 1,
+            "مراقبة السوق": 1,
+            "جاهزية المراقبة": 2,
+            "مراقبة المتصفح": 2,
+            "browser_snapshot": 1,
+            "المراقبة الخارجية": 2,
+            "external_source": 1,
+            "ذكاء المراقبة": 1,
+            "استيراد اللقطات": 2,
+            "snapshot": 1
+          },
+          "session_exposure": {
+            "paper": 14
+          },
+          "direction_exposure": {
+            "NO_TRADE": 11,
+            "CALL": 1,
+            "PUT": 2
+          },
+          "confidence_exposure": {
+            "ثقة متوسطة": 3,
+            "ثقة منخفضة": 1,
+            "ثقة مرتفعة": 10
+          },
+          "concentration": 0.1429,
+          "exposure_score": 92.86,
+          "paper_only": true
+        },
+        "governance_analysis": {
+          "PASS": 5,
+          "WARNING": 1
+        },
+        "risk_analysis": {
+          "PASS": 4,
+          "FAIL": 1
+        },
+        "paper_only": true,
+        "research_only": true,
+        "portfolio_score": 81.92,
+        "warning_count": 3,
+        "recommendation_count": 3,
+        "summary": {
+          "portfolio_id": "paper_portfolio_0001",
+          "created_at": "2026-05-31T21:11:19.255859+00:00",
+          "total_orders": 14,
+          "active_orders": 0,
+          "wins": 3,
+          "losses": 0,
+          "breakeven": 0,
+          "win_rate": 0.2143,
+          "drawdown": 0.0,
+          "stability_score": 67.0,
+          "health_score": 62.81,
+          "risk_score": 86.62,
+          "metadata": {
+            "paper_only": true,
+            "research_only": true,
+            "portfolio_simulation_only": true,
+            "not_real_execution": true,
+            "not_real_order_placement": true,
+            "not_broker_access": true,
+            "not_broker_api": true,
+            "not_account_login": true,
+            "not_authentication": true,
+            "not_credential_handling": true,
+            "not_browser_automation": true,
+            "not_real_money": true,
+            "not_position_management": true,
+            "not_trading_automation": true,
+            "not_broker_control": true
+          },
+          "paper_only": true,
+          "research_only": true,
+          "not_real_money": true,
+          "not_real_execution": true
+        }
+      },
+      "latest_available": true,
+      "raw_available": true
+    }
+  },
+  "available": true,
+  "metadata": {
+    "research_only": true,
+    "local_only": true,
+    "stable_schema": true
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "archive_id": "archive-research-v0001",
+    "version_id": "research-v0001",
+    "snapshot_id": "snapshot-0a8f68efe144",
+    "archive_path": "D:\\pocket-option-research-system\\storage\\research_archive\\snapshots\\research-v0001",
+    "report_path": "reports\\research_archive",
+    "source_count": 11,
+    "file_count": 4,
+    "archive_status": "stored",
+    "diagnostics_count": 2
+  },
+  {
+    "archive_id": "archive-research-v0002",
+    "version_id": "research-v0002",
+    "snapshot_id": "snapshot-f15ae7e6bbe5",
+    "archive_path": "storage\\research_archive\\snapshots\\research-v0002",
+    "report_path": "reports\\research_archive",
+    "source_count": 11,
+    "file_count": 4,
+    "archive_status": "stored",
+    "diagnostics_count": 1
+  },
+  {
+    "archive_id": "archive-research-v0003",
+    "version_id": "research-v0003",
+    "snapshot_id": "snapshot-16288478dc0b",
+    "archive_path": "D:\\pocket-option-research-system\\storage\\research_archive\\snapshots\\research-v0003",
+    "report_path": "reports\\research_archive",
+    "source_count": 11,
+    "file_count": 4,
+    "archive_status": "stored",
+    "diagnostics_count": 1
+  },
+  {
+    "archive_id": "archive-research-v0004",
+    "version_id": "research-v0004",
+    "snapshot_id": "snapshot-baf8920a90a2",
+    "archive_path": "storage\\research_archive\\snapshots\\research-v0004",
+    "report_path": "reports\\research_archive",
+    "source_count": 11,
+    "file_count": 4,
+    "archive_status": "stored",
+    "diagnostics_count": 1
+  },
+  {
+    "archive_id": "archive-research-v0005",
+    "version_id": "research-v0005",
+    "snapshot_id": "snapshot-2ae22f647960",
+    "archive_path": "D:\\pocket-option-research-system\\storage\\research_archive\\snapshots\\research-v0005",
+    "report_path": "reports\\research_archive",
+    "source_count": 11,
+    "file_count": 4,
+    "archive_status": "stored",
+    "diagnostics_count": 1
+  }
+]

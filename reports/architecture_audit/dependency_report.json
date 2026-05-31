@@ -1,0 +1,12 @@
+{
+  "dependency_score": 76.0,
+  "deprecated_pattern_hits": 12,
+  "deprecated_patterns": [
+    "datetime.utcnow"
+  ],
+  "stale_module_count": 0,
+  "service_count": 37,
+  "duplicated_logic_indicator": 67,
+  "orphan_module_count": 0,
+  "architecture_audit_only": true
+}

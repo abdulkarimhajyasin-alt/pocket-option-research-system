@@ -258,6 +258,51 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_integration_safety.py",),
     ),
+    "architecture_audit": ActionDefinition(
+        name="architecture_audit",
+        label="تدقيق المنصة",
+        description=(
+            "تشغيل تدقيق معماري وإنتاجي محلي للمنصة البحثية دون تنفيذ أو "
+            "وسيط أو متصفح أو مصادقة أو تداول حي."
+        ),
+        command=("scripts/run_architecture_audit.py",),
+    ),
+    "knowledge_graph": ActionDefinition(
+        name="knowledge_graph",
+        label="خريطة المعرفة",
+        description=(
+            "بناء خريطة علاقات بحثية محلية بين الإشارات والفرص والأنماط "
+            "والنتائج الورقية دون تنفيذ أو تداول."
+        ),
+        command=("scripts/run_knowledge_graph.py",),
+    ),
+    "research_api": ActionDefinition(
+        name="research_api",
+        label="واجهة البحث الموحدة",
+        description=(
+            "تجميع مخرجات البحث المحلية في واجهة موحدة آمنة دون وسيط أو "
+            "تنفيذ أو متصفح أو مصادقة أو أموال."
+        ),
+        command=("scripts/run_research_api.py",),
+    ),
+    "research_archive": ActionDefinition(
+        name="research_archive",
+        label="أرشيف البحث",
+        description=(
+            "إنشاء لقطة بحثية محلية وإصدار مؤرشف للمقارنة التاريخية دون "
+            "وسيط أو متصفح أو مصادقة أو تداول حي."
+        ),
+        command=("scripts/run_research_archive.py",),
+    ),
+    "platform_certification": ActionDefinition(
+        name="platform_certification",
+        label="شهادة المنصة",
+        description=(
+            "إصدار شهادة نضج بحثية محلية للمنصة دون اعتماد تداول حي أو "
+            "تنفيذ أو اتصال بوسيط."
+        ),
+        command=("scripts/run_platform_certification.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

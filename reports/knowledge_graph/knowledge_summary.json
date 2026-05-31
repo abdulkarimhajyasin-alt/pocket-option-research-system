@@ -1,0 +1,908 @@
+{
+  "summary": {
+    "graph_id": "knowledge_graph_20260531211119",
+    "generated_at": "2026-05-31T21:11:19.015960+00:00",
+    "nodes": [
+      {
+        "node_id": "signal",
+        "entity_type": "SignalEntity",
+        "label": "Signal",
+        "confidence": 35.0,
+        "metadata": {
+          "research_only": true,
+          "source": "signal_intelligence"
+        }
+      },
+      {
+        "node_id": "asset",
+        "entity_type": "AssetEntity",
+        "label": "Asset",
+        "confidence": 81.92,
+        "metadata": {
+          "research_only": true,
+          "source": "paper_portfolio"
+        }
+      },
+      {
+        "node_id": "session",
+        "entity_type": "SessionEntity",
+        "label": "Session",
+        "confidence": 35.0,
+        "metadata": {
+          "research_only": true,
+          "source": "signal_intelligence"
+        }
+      },
+      {
+        "node_id": "pattern",
+        "entity_type": "PatternEntity",
+        "label": "Pattern",
+        "confidence": 70.0,
+        "metadata": {
+          "research_only": true,
+          "source": "pattern_memory"
+        }
+      },
+      {
+        "node_id": "regime",
+        "entity_type": "RegimeEntity",
+        "label": "Regime",
+        "confidence": 51.08,
+        "metadata": {
+          "research_only": true,
+          "source": "market_regime"
+        }
+      },
+      {
+        "node_id": "opportunity",
+        "entity_type": "OpportunityEntity",
+        "label": "Opportunity",
+        "confidence": 35.0,
+        "metadata": {
+          "research_only": true,
+          "source": "opportunity_engine"
+        }
+      },
+      {
+        "node_id": "confluence",
+        "entity_type": "ConfluenceEntity",
+        "label": "Confluence",
+        "confidence": 35.0,
+        "metadata": {
+          "research_only": true,
+          "source": "confluence"
+        }
+      },
+      {
+        "node_id": "paperresult",
+        "entity_type": "PaperResultEntity",
+        "label": "PaperResult",
+        "confidence": 70.0,
+        "metadata": {
+          "research_only": true,
+          "source": "paper_execution"
+        }
+      },
+      {
+        "node_id": "portfolio",
+        "entity_type": "PortfolioEntity",
+        "label": "Portfolio",
+        "confidence": 81.92,
+        "metadata": {
+          "research_only": true,
+          "source": "paper_portfolio"
+        }
+      },
+      {
+        "node_id": "readiness",
+        "entity_type": "ReadinessEntity",
+        "label": "Readiness",
+        "confidence": 36.35,
+        "metadata": {
+          "research_only": true,
+          "source": "paper_control_center"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "edge_001",
+        "source_id": "signal",
+        "target_id": "opportunity",
+        "relationship_type": "influences",
+        "weight": 0.78,
+        "confidence": 78.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_002",
+        "source_id": "opportunity",
+        "target_id": "confluence",
+        "relationship_type": "confirms",
+        "weight": 0.82,
+        "confidence": 82.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_003",
+        "source_id": "confluence",
+        "target_id": "paperresult",
+        "relationship_type": "derived_from",
+        "weight": 0.74,
+        "confidence": 74.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_004",
+        "source_id": "paperresult",
+        "target_id": "portfolio",
+        "relationship_type": "improves",
+        "weight": 0.68,
+        "confidence": 68.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_005",
+        "source_id": "portfolio",
+        "target_id": "readiness",
+        "relationship_type": "influences",
+        "weight": 0.72,
+        "confidence": 72.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_006",
+        "source_id": "pattern",
+        "target_id": "signal",
+        "relationship_type": "correlates_with",
+        "weight": 0.7,
+        "confidence": 70.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_007",
+        "source_id": "regime",
+        "target_id": "pattern",
+        "relationship_type": "influences",
+        "weight": 0.66,
+        "confidence": 66.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_008",
+        "source_id": "session",
+        "target_id": "pattern",
+        "relationship_type": "linked_to",
+        "weight": 0.62,
+        "confidence": 62.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_009",
+        "source_id": "asset",
+        "target_id": "pattern",
+        "relationship_type": "linked_to",
+        "weight": 0.65,
+        "confidence": 65.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_010",
+        "source_id": "regime",
+        "target_id": "opportunity",
+        "relationship_type": "confirms",
+        "weight": 0.58,
+        "confidence": 58.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_011",
+        "source_id": "signal",
+        "target_id": "regime",
+        "relationship_type": "contradicts",
+        "weight": 0.42,
+        "confidence": 42.0,
+        "metadata": {
+          "research_only": true
+        }
+      },
+      {
+        "edge_id": "edge_012",
+        "source_id": "paperresult",
+        "target_id": "readiness",
+        "relationship_type": "degrades",
+        "weight": 0.36,
+        "confidence": 36.0,
+        "metadata": {
+          "research_only": true
+        }
+      }
+    ],
+    "node_count": 10,
+    "edge_count": 12,
+    "strongest_relationship": "opportunity->confluence:confirms",
+    "weakest_relationship": "paperresult->readiness:degrades",
+    "relationship_density": 0.1333,
+    "knowledge_score": 57.68,
+    "metadata": {
+      "research_only": true,
+      "relationship_intelligence_only": true,
+      "local_only": true,
+      "not_execution": true,
+      "not_real_execution": true,
+      "not_order_placement": true,
+      "not_real_order_placement": true,
+      "not_broker_access": true,
+      "not_broker_api": true,
+      "not_account_login": true,
+      "not_authentication": true,
+      "not_credential_handling": true,
+      "not_browser_automation": true,
+      "not_real_money": true,
+      "not_money_handling": true,
+      "not_position_management": true,
+      "not_live_trading": true,
+      "not_external_execution_adapter": true,
+      "not_trading_automation": true,
+      "not_broker_control": true
+    },
+    "research_only": true,
+    "not_execution": true,
+    "not_broker_access": true
+  },
+  "latest": {
+    "timestamp": "2026-05-31T21:11:19.016343+00:00",
+    "graph": {
+      "graph_id": "knowledge_graph_20260531211119",
+      "generated_at": "2026-05-31T21:11:19.015960+00:00",
+      "nodes": [
+        {
+          "node_id": "signal",
+          "entity_type": "SignalEntity",
+          "label": "Signal",
+          "confidence": 35.0,
+          "metadata": {
+            "research_only": true,
+            "source": "signal_intelligence"
+          }
+        },
+        {
+          "node_id": "asset",
+          "entity_type": "AssetEntity",
+          "label": "Asset",
+          "confidence": 81.92,
+          "metadata": {
+            "research_only": true,
+            "source": "paper_portfolio"
+          }
+        },
+        {
+          "node_id": "session",
+          "entity_type": "SessionEntity",
+          "label": "Session",
+          "confidence": 35.0,
+          "metadata": {
+            "research_only": true,
+            "source": "signal_intelligence"
+          }
+        },
+        {
+          "node_id": "pattern",
+          "entity_type": "PatternEntity",
+          "label": "Pattern",
+          "confidence": 70.0,
+          "metadata": {
+            "research_only": true,
+            "source": "pattern_memory"
+          }
+        },
+        {
+          "node_id": "regime",
+          "entity_type": "RegimeEntity",
+          "label": "Regime",
+          "confidence": 51.08,
+          "metadata": {
+            "research_only": true,
+            "source": "market_regime"
+          }
+        },
+        {
+          "node_id": "opportunity",
+          "entity_type": "OpportunityEntity",
+          "label": "Opportunity",
+          "confidence": 35.0,
+          "metadata": {
+            "research_only": true,
+            "source": "opportunity_engine"
+          }
+        },
+        {
+          "node_id": "confluence",
+          "entity_type": "ConfluenceEntity",
+          "label": "Confluence",
+          "confidence": 35.0,
+          "metadata": {
+            "research_only": true,
+            "source": "confluence"
+          }
+        },
+        {
+          "node_id": "paperresult",
+          "entity_type": "PaperResultEntity",
+          "label": "PaperResult",
+          "confidence": 70.0,
+          "metadata": {
+            "research_only": true,
+            "source": "paper_execution"
+          }
+        },
+        {
+          "node_id": "portfolio",
+          "entity_type": "PortfolioEntity",
+          "label": "Portfolio",
+          "confidence": 81.92,
+          "metadata": {
+            "research_only": true,
+            "source": "paper_portfolio"
+          }
+        },
+        {
+          "node_id": "readiness",
+          "entity_type": "ReadinessEntity",
+          "label": "Readiness",
+          "confidence": 36.35,
+          "metadata": {
+            "research_only": true,
+            "source": "paper_control_center"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "edge_001",
+          "source_id": "signal",
+          "target_id": "opportunity",
+          "relationship_type": "influences",
+          "weight": 0.78,
+          "confidence": 78.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_002",
+          "source_id": "opportunity",
+          "target_id": "confluence",
+          "relationship_type": "confirms",
+          "weight": 0.82,
+          "confidence": 82.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_003",
+          "source_id": "confluence",
+          "target_id": "paperresult",
+          "relationship_type": "derived_from",
+          "weight": 0.74,
+          "confidence": 74.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_004",
+          "source_id": "paperresult",
+          "target_id": "portfolio",
+          "relationship_type": "improves",
+          "weight": 0.68,
+          "confidence": 68.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_005",
+          "source_id": "portfolio",
+          "target_id": "readiness",
+          "relationship_type": "influences",
+          "weight": 0.72,
+          "confidence": 72.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_006",
+          "source_id": "pattern",
+          "target_id": "signal",
+          "relationship_type": "correlates_with",
+          "weight": 0.7,
+          "confidence": 70.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_007",
+          "source_id": "regime",
+          "target_id": "pattern",
+          "relationship_type": "influences",
+          "weight": 0.66,
+          "confidence": 66.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_008",
+          "source_id": "session",
+          "target_id": "pattern",
+          "relationship_type": "linked_to",
+          "weight": 0.62,
+          "confidence": 62.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_009",
+          "source_id": "asset",
+          "target_id": "pattern",
+          "relationship_type": "linked_to",
+          "weight": 0.65,
+          "confidence": 65.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_010",
+          "source_id": "regime",
+          "target_id": "opportunity",
+          "relationship_type": "confirms",
+          "weight": 0.58,
+          "confidence": 58.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_011",
+          "source_id": "signal",
+          "target_id": "regime",
+          "relationship_type": "contradicts",
+          "weight": 0.42,
+          "confidence": 42.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_012",
+          "source_id": "paperresult",
+          "target_id": "readiness",
+          "relationship_type": "degrades",
+          "weight": 0.36,
+          "confidence": 36.0,
+          "metadata": {
+            "research_only": true
+          }
+        }
+      ],
+      "node_count": 10,
+      "edge_count": 12,
+      "strongest_relationship": "opportunity->confluence:confirms",
+      "weakest_relationship": "paperresult->readiness:degrades",
+      "relationship_density": 0.1333,
+      "knowledge_score": 57.68,
+      "metadata": {
+        "research_only": true,
+        "relationship_intelligence_only": true,
+        "local_only": true,
+        "not_execution": true,
+        "not_real_execution": true,
+        "not_order_placement": true,
+        "not_real_order_placement": true,
+        "not_broker_access": true,
+        "not_broker_api": true,
+        "not_account_login": true,
+        "not_authentication": true,
+        "not_credential_handling": true,
+        "not_browser_automation": true,
+        "not_real_money": true,
+        "not_money_handling": true,
+        "not_position_management": true,
+        "not_live_trading": true,
+        "not_external_execution_adapter": true,
+        "not_trading_automation": true,
+        "not_broker_control": true
+      },
+      "research_only": true,
+      "not_execution": true,
+      "not_broker_access": true
+    },
+    "intelligence": {
+      "recurring_relationships": {
+        "influences": 3,
+        "confirms": 2,
+        "derived_from": 1,
+        "improves": 1,
+        "correlates_with": 1,
+        "linked_to": 2,
+        "contradicts": 1,
+        "degrades": 1
+      },
+      "successful_relationship_chains": [
+        {
+          "edge_id": "edge_001",
+          "source_id": "signal",
+          "target_id": "opportunity",
+          "relationship_type": "influences",
+          "weight": 0.78,
+          "confidence": 78.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_002",
+          "source_id": "opportunity",
+          "target_id": "confluence",
+          "relationship_type": "confirms",
+          "weight": 0.82,
+          "confidence": 82.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_003",
+          "source_id": "confluence",
+          "target_id": "paperresult",
+          "relationship_type": "derived_from",
+          "weight": 0.74,
+          "confidence": 74.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_005",
+          "source_id": "portfolio",
+          "target_id": "readiness",
+          "relationship_type": "influences",
+          "weight": 0.72,
+          "confidence": 72.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_006",
+          "source_id": "pattern",
+          "target_id": "signal",
+          "relationship_type": "correlates_with",
+          "weight": 0.7,
+          "confidence": 70.0,
+          "metadata": {
+            "research_only": true
+          }
+        }
+      ],
+      "weak_relationship_chains": [
+        {
+          "edge_id": "edge_011",
+          "source_id": "signal",
+          "target_id": "regime",
+          "relationship_type": "contradicts",
+          "weight": 0.42,
+          "confidence": 42.0,
+          "metadata": {
+            "research_only": true
+          }
+        },
+        {
+          "edge_id": "edge_012",
+          "source_id": "paperresult",
+          "target_id": "readiness",
+          "relationship_type": "degrades",
+          "weight": 0.36,
+          "confidence": 36.0,
+          "metadata": {
+            "research_only": true
+          }
+        }
+      ],
+      "asset_pattern_relationships": [
+        {
+          "edge_id": "edge_009",
+          "source_id": "asset",
+          "target_id": "pattern",
+          "relationship_type": "linked_to",
+          "weight": 0.65,
+          "confidence": 65.0,
+          "metadata": {
+            "research_only": true
+          }
+        }
+      ],
+      "session_pattern_relationships": [
+        {
+          "edge_id": "edge_008",
+          "source_id": "session",
+          "target_id": "pattern",
+          "relationship_type": "linked_to",
+          "weight": 0.62,
+          "confidence": 62.0,
+          "metadata": {
+            "research_only": true
+          }
+        }
+      ],
+      "regime_pattern_relationships": [
+        {
+          "edge_id": "edge_007",
+          "source_id": "regime",
+          "target_id": "pattern",
+          "relationship_type": "influences",
+          "weight": 0.66,
+          "confidence": 66.0,
+          "metadata": {
+            "research_only": true
+          }
+        }
+      ],
+      "research_only": true
+    },
+    "analytics": {
+      "node_statistics": {
+        "SignalEntity": 1,
+        "AssetEntity": 1,
+        "SessionEntity": 1,
+        "PatternEntity": 1,
+        "RegimeEntity": 1,
+        "OpportunityEntity": 1,
+        "ConfluenceEntity": 1,
+        "PaperResultEntity": 1,
+        "PortfolioEntity": 1,
+        "ReadinessEntity": 1
+      },
+      "edge_statistics": {
+        "influences": 3,
+        "confirms": 2,
+        "derived_from": 1,
+        "improves": 1,
+        "correlates_with": 1,
+        "linked_to": 2,
+        "contradicts": 1,
+        "degrades": 1
+      },
+      "strongest_relationships": {
+        "opportunity->confluence": 82.0,
+        "signal->opportunity": 78.0,
+        "confluence->paperresult": 74.0,
+        "portfolio->readiness": 72.0,
+        "pattern->signal": 70.0
+      },
+      "weakest_relationships": {
+        "paperresult->readiness": 36.0,
+        "signal->regime": 42.0,
+        "regime->opportunity": 58.0,
+        "session->pattern": 62.0,
+        "asset->pattern": 65.0
+      },
+      "relationship_density": {
+        "density": 13.33
+      },
+      "graph_quality": {
+        "knowledge_score": 57.68,
+        "node_count": 10,
+        "edge_count": 12
+      },
+      "intelligence": {
+        "recurring_relationships": {
+          "influences": 3,
+          "confirms": 2,
+          "derived_from": 1,
+          "improves": 1,
+          "correlates_with": 1,
+          "linked_to": 2,
+          "contradicts": 1,
+          "degrades": 1
+        },
+        "successful_relationship_chains": [
+          {
+            "edge_id": "edge_001",
+            "source_id": "signal",
+            "target_id": "opportunity",
+            "relationship_type": "influences",
+            "weight": 0.78,
+            "confidence": 78.0,
+            "metadata": {
+              "research_only": true
+            }
+          },
+          {
+            "edge_id": "edge_002",
+            "source_id": "opportunity",
+            "target_id": "confluence",
+            "relationship_type": "confirms",
+            "weight": 0.82,
+            "confidence": 82.0,
+            "metadata": {
+              "research_only": true
+            }
+          },
+          {
+            "edge_id": "edge_003",
+            "source_id": "confluence",
+            "target_id": "paperresult",
+            "relationship_type": "derived_from",
+            "weight": 0.74,
+            "confidence": 74.0,
+            "metadata": {
+              "research_only": true
+            }
+          },
+          {
+            "edge_id": "edge_005",
+            "source_id": "portfolio",
+            "target_id": "readiness",
+            "relationship_type": "influences",
+            "weight": 0.72,
+            "confidence": 72.0,
+            "metadata": {
+              "research_only": true
+            }
+          },
+          {
+            "edge_id": "edge_006",
+            "source_id": "pattern",
+            "target_id": "signal",
+            "relationship_type": "correlates_with",
+            "weight": 0.7,
+            "confidence": 70.0,
+            "metadata": {
+              "research_only": true
+            }
+          }
+        ],
+        "weak_relationship_chains": [
+          {
+            "edge_id": "edge_011",
+            "source_id": "signal",
+            "target_id": "regime",
+            "relationship_type": "contradicts",
+            "weight": 0.42,
+            "confidence": 42.0,
+            "metadata": {
+              "research_only": true
+            }
+          },
+          {
+            "edge_id": "edge_012",
+            "source_id": "paperresult",
+            "target_id": "readiness",
+            "relationship_type": "degrades",
+            "weight": 0.36,
+            "confidence": 36.0,
+            "metadata": {
+              "research_only": true
+            }
+          }
+        ],
+        "asset_pattern_relationships": [
+          {
+            "edge_id": "edge_009",
+            "source_id": "asset",
+            "target_id": "pattern",
+            "relationship_type": "linked_to",
+            "weight": 0.65,
+            "confidence": 65.0,
+            "metadata": {
+              "research_only": true
+            }
+          }
+        ],
+        "session_pattern_relationships": [
+          {
+            "edge_id": "edge_008",
+            "source_id": "session",
+            "target_id": "pattern",
+            "relationship_type": "linked_to",
+            "weight": 0.62,
+            "confidence": 62.0,
+            "metadata": {
+              "research_only": true
+            }
+          }
+        ],
+        "regime_pattern_relationships": [
+          {
+            "edge_id": "edge_007",
+            "source_id": "regime",
+            "target_id": "pattern",
+            "relationship_type": "influences",
+            "weight": 0.66,
+            "confidence": 66.0,
+            "metadata": {
+              "research_only": true
+            }
+          }
+        ],
+        "research_only": true
+      },
+      "research_only": true
+    },
+    "diagnostics": [
+      {
+        "name": "علاقات منخفضة الثقة",
+        "severity": "منخفض",
+        "detail": "تحسين جودة البيانات"
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "تحسين جودة البيانات",
+        "priority": "منخفض",
+        "reason": "علاقات منخفضة الثقة"
+      }
+    ],
+    "metadata": {
+      "research_only": true,
+      "relationship_intelligence_only": true,
+      "local_only": true,
+      "not_execution": true,
+      "not_real_execution": true,
+      "not_order_placement": true,
+      "not_real_order_placement": true,
+      "not_broker_access": true,
+      "not_broker_api": true,
+      "not_account_login": true,
+      "not_authentication": true,
+      "not_credential_handling": true,
+      "not_browser_automation": true,
+      "not_real_money": true,
+      "not_money_handling": true,
+      "not_position_management": true,
+      "not_live_trading": true,
+      "not_external_execution_adapter": true,
+      "not_trading_automation": true,
+      "not_broker_control": true
+    },
+    "research_only": true,
+    "not_execution": true,
+    "not_real_execution": true,
+    "not_order_placement": true,
+    "not_broker_access": true,
+    "not_browser_automation": true,
+    "not_authentication": true,
+    "not_credential_handling": true,
+    "not_live_trading": true,
+    "not_money_handling": true,
+    "not_external_execution_adapter": true,
+    "not_trading_automation": true
+  }
+}

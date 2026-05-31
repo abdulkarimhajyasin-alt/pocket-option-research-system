@@ -29,6 +29,9 @@ from app.dashboard.service import DashboardService, load_dashboard_config
 from app.jobs.manager import JobManager
 from app.reports.repository import ReportRepository
 from app.i18n import DEFAULT_LANGUAGE, get_translations
+from app.research_api.service import UnifiedResearchAPIService
+from app.research_archive.service import ResearchArchiveService
+from app.platform_certification.service import PlatformCertificationService
 
 
 SAFETY_NOTE = (
@@ -678,6 +681,76 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/architecture-audit", response_class=HTMLResponse)
+    def architecture_audit(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/architecture_audit.html",
+            context(
+                request,
+                dashboard,
+                page="architecture_audit",
+                architecture_audit=dashboard.analytics.architecture_audit_analytics(),
+            ),
+        )
+
+    @app.get("/knowledge-graph", response_class=HTMLResponse)
+    def knowledge_graph(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/knowledge_graph.html",
+            context(
+                request,
+                dashboard,
+                page="knowledge_graph",
+                knowledge_graph=dashboard.analytics.knowledge_graph_analytics(),
+            ),
+        )
+
+    @app.get("/research-api", response_class=HTMLResponse)
+    def research_api(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/research_api.html",
+            context(
+                request,
+                dashboard,
+                page="research_api",
+                research_api=dashboard.analytics.research_api_analytics(),
+            ),
+        )
+
+    @app.get("/research-archive", response_class=HTMLResponse)
+    def research_archive(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/research_archive.html",
+            context(
+                request,
+                dashboard,
+                page="research_archive",
+                research_archive=dashboard.analytics.research_archive_analytics(),
+            ),
+        )
+
+    @app.get("/platform-certification", response_class=HTMLResponse)
+    def platform_certification(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/platform_certification.html",
+            context(
+                request,
+                dashboard,
+                page="platform_certification",
+                platform_certification=dashboard.analytics.platform_certification_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -830,6 +903,97 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/integration-safety")
     def api_integration_safety() -> dict[str, object]:
         return dashboard_context().analytics.integration_safety_analytics()
+
+    @app.get("/api/architecture-audit")
+    def api_architecture_audit() -> dict[str, object]:
+        return dashboard_context().analytics.architecture_audit_analytics()
+
+    @app.get("/api/knowledge-graph")
+    def api_knowledge_graph() -> dict[str, object]:
+        return dashboard_context().analytics.knowledge_graph_analytics()
+
+    @app.get("/api/research")
+    def api_research() -> dict[str, object]:
+        return UnifiedResearchAPIService(root).snapshot().to_dict()
+
+    @app.get("/api/research/signals")
+    def api_research_signals() -> dict[str, object]:
+        return UnifiedResearchAPIService(root).signals()
+
+    @app.get("/api/research/opportunities")
+    def api_research_opportunities() -> dict[str, object]:
+        return UnifiedResearchAPIService(root).opportunities()
+
+    @app.get("/api/research/paper")
+    def api_research_paper() -> dict[str, object]:
+        return UnifiedResearchAPIService(root).paper()
+
+    @app.get("/api/research/readiness")
+    def api_research_readiness() -> dict[str, object]:
+        return UnifiedResearchAPIService(root).readiness()
+
+    @app.get("/api/research/knowledge-graph")
+    def api_research_knowledge_graph() -> dict[str, object]:
+        return UnifiedResearchAPIService(root).knowledge_graph()
+
+    @app.get("/api/research/diagnostics")
+    def api_research_diagnostics() -> dict[str, object]:
+        return UnifiedResearchAPIService(root).diagnostics_view()
+
+    @app.get("/api/research-archive")
+    def api_research_archive() -> dict[str, object]:
+        return dashboard_context().analytics.research_archive_analytics()
+
+    @app.get("/api/research-archive/latest")
+    def api_research_archive_latest() -> dict[str, object]:
+        return ResearchArchiveService(root).get_latest_version()
+
+    @app.get("/api/research-archive/history")
+    def api_research_archive_history() -> list[dict[str, object]]:
+        return ResearchArchiveService(root).get_version_history()
+
+    @app.get("/api/research-archive/diff")
+    def api_research_archive_diff() -> dict[str, object]:
+        return ResearchArchiveService(root).compare_latest_with_previous()
+
+    @app.get("/api/research-archive/evolution")
+    def api_research_archive_evolution() -> dict[str, object]:
+        return ResearchArchiveService(root).generate_evolution_report()
+
+    @app.get("/api/research-archive/diagnostics")
+    def api_research_archive_diagnostics() -> dict[str, object]:
+        service = ResearchArchiveService(root)
+        latest = service.get_latest_version()
+        snapshot = (
+            service.storage.load_snapshot(str(latest.get("version_label", "")))
+            if latest
+            else service.build_current_snapshot().to_dict()
+        )
+        return {
+            "diagnostics": service._diagnostics_from_current(snapshot),
+            "research_only": True,
+            "local_only": True,
+        }
+
+    @app.get("/api/platform-certification")
+    def api_platform_certification() -> dict[str, object]:
+        return PlatformCertificationService(root).certify().to_dict()
+
+    @app.get("/api/platform-certification/summary")
+    def api_platform_certification_summary() -> dict[str, object]:
+        return PlatformCertificationService(root).summary()
+
+    @app.get("/api/platform-certification/domains")
+    def api_platform_certification_domains() -> list[dict[str, object]]:
+        return PlatformCertificationService(root).domains()
+
+    @app.get("/api/platform-certification/diagnostics")
+    def api_platform_certification_diagnostics() -> list[dict[str, object]]:
+        return PlatformCertificationService(root).diagnostics_view()
+
+    @app.get("/api/platform-certification/recommendations")
+    def api_platform_certification_recommendations() -> list[str]:
+        return PlatformCertificationService(root).recommendations_view()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

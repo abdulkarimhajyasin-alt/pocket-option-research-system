@@ -1,0 +1,57 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.research_archive }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث محلي فقط</p>
+    <h1>أرشيف البحث وتتبع الإصدارات</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث أرشيف البحث</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>أحدث إصدار</span>
+    <strong>{{ research_archive.summary.latest_version|default("غير متاح") }}</strong>
+    <p>أرشيف محلي يحفظ لقطات البحث ويقارن تطور الإصدارات دون أي اتصال خارجي أو تحكم حقيقي.</p>
+  </div>
+  <div class="executive-score">
+    <span>عدد الإصدارات</span>
+    <strong>{{ research_archive.summary.version_count|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>حالة الأمان</span>
+    <strong>{{ research_archive.summary.safety_status|default("بحث فقط") }}</strong>
+    <small>Checksum: {{ research_archive.summary.checksum|default("غير متاح") }}</small>
+    <small>آخر Snapshot: {{ research_archive.summary.latest_snapshot|default("غير متاح") }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد المصادر المؤرشفة</span><strong>{{ research_archive.summary.archived_source_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد المصادر المفقودة</span><strong>{{ research_archive.summary.missing_source_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>اتجاه جودة البحث</span><strong>{{ research_archive.summary.research_quality_trend|default("غير كاف للتقييم") }}</strong></article>
+  <article class="metric-card"><span>اتجاه الجاهزية</span><strong>{{ research_archive.summary.readiness_trend|default("غير كاف للتقييم") }}</strong></article>
+  <article class="metric-card"><span>اتجاه خريطة المعرفة</span><strong>{{ research_archive.summary.knowledge_trend|default("غير كاف للتقييم") }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ research_archive.summary.diagnostics_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ research_archive.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>محلي فقط</span><strong>{{ 100|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تاريخ الإصدارات</h2><span>الأرشيف</span></div><div class="chart" data-chart='{{ research_archive.history|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تغطية المصادر</h2><span>المؤرشفة والمفقودة</span></div><div class="chart" data-chart='{{ research_archive.coverage|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>اتجاه جودة البحث</h2><span>التطور</span></div><div class="chart" data-chart='{{ research_archive.trends|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>الفروقات بين الإصدارات</h2><span>المقارنة</span></div><div class="chart" data-chart='{{ research_archive.diff_chart|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ research_archive.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>البحث</span></div><div class="chart" data-chart='{{ research_archive.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>حالة الأمان</h2><span>حدود البحث فقط</span></div><div class="chart" data-chart='{{ research_archive.safety|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>آخر إصدار</h2><span>{{ research_archive.summary.latest_version|default("غير متاح") }}</span></div><pre class="code-block">{{ research_archive.latest|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}

@@ -1,0 +1,102 @@
+[
+  {
+    "domain_id": "architecture",
+    "label_ar": "المعمارية",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "safety",
+    "label_ar": "السلامة",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "research_quality",
+    "label_ar": "جودة البحث",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "knowledge_graph",
+    "label_ar": "خريطة المعرفة",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "research_api",
+    "label_ar": "واجهة البحث الموحدة",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "research_archive",
+    "label_ar": "أرشيف البحث",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "dashboard",
+    "label_ar": "لوحة التحكم",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "observation",
+    "label_ar": "المراقبة",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "paper_trading",
+    "label_ar": "الورقي",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  },
+  {
+    "domain_id": "readiness",
+    "label_ar": "الجاهزية",
+    "score": 100.0,
+    "status": "ممتاز",
+    "diagnostics": [],
+    "recommendations": [
+      "الحفاظ على استقرار المجال البحثي الحالي."
+    ]
+  }
+]

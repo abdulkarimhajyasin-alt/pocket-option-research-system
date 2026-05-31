@@ -1,0 +1,27 @@
+{
+  "latest_version": "research-v0005",
+  "version_count": 5,
+  "latest_snapshot": "snapshot-2ae22f647960",
+  "archived_source_count": 11,
+  "missing_source_count": 5,
+  "checksum": "2ae22f64796041f530fad753c4680677a6a4fdd9194f9c1f0ed569835008eabb",
+  "safety_status": {
+    "research_only": true,
+    "local_only": true,
+    "archive_only": true,
+    "no_broker_access": true,
+    "no_broker_api": true,
+    "no_account_login": true,
+    "no_credentials": true,
+    "no_browser_automation": true,
+    "no_real_trade_control": true,
+    "no_order_placement": true,
+    "no_live_trading": true,
+    "no_money_handling": true,
+    "no_external_service_calls": true
+  },
+  "diagnostics_count": 1,
+  "recommendation_count": 7,
+  "research_only": true,
+  "local_only": true
+}

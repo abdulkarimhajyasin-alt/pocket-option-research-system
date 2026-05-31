@@ -2,22 +2,22 @@
   "asset_exposure": {
     "بيانات السوق": 1,
     "مراقبة السوق": 1,
-    "استيراد اللقطات": 2,
     "جاهزية المراقبة": 2,
     "مراقبة المتصفح": 2,
-    "المراقبة الخارجية": 2,
-    "ذكاء المراقبة": 1,
-    "snapshot": 1,
     "browser_snapshot": 1,
-    "external_source": 1
+    "المراقبة الخارجية": 2,
+    "external_source": 1,
+    "ذكاء المراقبة": 1,
+    "استيراد اللقطات": 2,
+    "snapshot": 1
   },
   "session_exposure": {
     "paper": 14
   },
   "direction_exposure": {
     "NO_TRADE": 11,
-    "PUT": 2,
-    "CALL": 1
+    "CALL": 1,
+    "PUT": 2
   },
   "confidence_exposure": {
     "ثقة متوسطة": 3,

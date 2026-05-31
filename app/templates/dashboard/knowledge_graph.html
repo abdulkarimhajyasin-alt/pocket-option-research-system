@@ -1,0 +1,60 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.knowledge_graph }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>خريطة المعرفة البحثية</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث خريطة المعرفة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>خريطة المعرفة البحثية</span>
+    <strong>{{ knowledge_graph.summary.knowledge_score|default(0)|number_ar }}</strong>
+    <p>خريطة علاقات بحثية محلية تربط الإشارات والفرص والأنماط والأنظمة والنتائج الورقية دون أي تنفيذ أو تداول.</p>
+  </div>
+  <div class="executive-score">
+    <span>كثافة المعرفة</span>
+    <strong>{{ knowledge_graph.summary.relationship_density|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>العقد والعلاقات</span>
+    <strong>{{ knowledge_graph.summary.node_count|default(0)|number_ar }}</strong>
+    <small>العلاقات {{ knowledge_graph.summary.edge_count|default(0)|number_ar }}</small>
+    <small>التحذيرات {{ knowledge_graph.summary.warning_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد العقد</span><strong>{{ knowledge_graph.summary.node_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد العلاقات</span><strong>{{ knowledge_graph.summary.edge_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أقوى علاقة</span><strong>{{ knowledge_graph.summary.strongest_relationship|default("غير متاح") }}</strong></article>
+  <article class="metric-card"><span>أضعف علاقة</span><strong>{{ knowledge_graph.summary.weakest_relationship|default("غير متاح") }}</strong></article>
+  <article class="metric-card"><span>كثافة المعرفة</span><strong>{{ knowledge_graph.summary.relationship_density|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة المعرفة</span><strong>{{ knowledge_graph.summary.knowledge_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ knowledge_graph.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ knowledge_graph.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع العلاقات</h2><span>الأنواع</span></div><div class="chart" data-chart='{{ knowledge_graph.edges|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع العقد</h2><span>الكيانات</span></div><div class="chart" data-chart='{{ knowledge_graph.nodes|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أقوى العلاقات</h2><span>الثقة</span></div><div class="chart" data-chart='{{ knowledge_graph.strongest|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أضعف العلاقات</h2><span>الثقة</span></div><div class="chart" data-chart='{{ knowledge_graph.weakest|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>كثافة المعرفة</h2><span>الربط</span></div><div class="chart" data-chart='{{ knowledge_graph.density|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جودة المعرفة</h2><span>النتيجة</span></div><div class="chart" data-chart='{{ knowledge_graph.quality|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ knowledge_graph.warnings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ knowledge_graph.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>النشاط الزمني</h2><span>البناء</span></div><div class="chart" data-chart='{{ knowledge_graph.activity|tojson }}'></div></article>
+</section>
+{% endblock %}

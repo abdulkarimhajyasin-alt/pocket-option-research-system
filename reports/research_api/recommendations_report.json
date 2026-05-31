@@ -1,0 +1,17 @@
+{
+  "view_id": "recommendations",
+  "label_ar": "التوصيات الموحدة",
+  "data": {
+    "summary": {
+      "تحسين اكتمال التقارير": 3,
+      "إعادة تشغيل المسارات البحثية المحلية": 3
+    },
+    "research_only": true
+  },
+  "available": true,
+  "metadata": {
+    "research_only": true,
+    "local_only": true,
+    "stable_schema": true
+  }
+}

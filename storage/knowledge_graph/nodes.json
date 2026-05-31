@@ -1,0 +1,102 @@
+[
+  {
+    "node_id": "signal",
+    "entity_type": "SignalEntity",
+    "label": "Signal",
+    "confidence": 35.0,
+    "metadata": {
+      "research_only": true,
+      "source": "signal_intelligence"
+    }
+  },
+  {
+    "node_id": "asset",
+    "entity_type": "AssetEntity",
+    "label": "Asset",
+    "confidence": 81.92,
+    "metadata": {
+      "research_only": true,
+      "source": "paper_portfolio"
+    }
+  },
+  {
+    "node_id": "session",
+    "entity_type": "SessionEntity",
+    "label": "Session",
+    "confidence": 35.0,
+    "metadata": {
+      "research_only": true,
+      "source": "signal_intelligence"
+    }
+  },
+  {
+    "node_id": "pattern",
+    "entity_type": "PatternEntity",
+    "label": "Pattern",
+    "confidence": 70.0,
+    "metadata": {
+      "research_only": true,
+      "source": "pattern_memory"
+    }
+  },
+  {
+    "node_id": "regime",
+    "entity_type": "RegimeEntity",
+    "label": "Regime",
+    "confidence": 51.08,
+    "metadata": {
+      "research_only": true,
+      "source": "market_regime"
+    }
+  },
+  {
+    "node_id": "opportunity",
+    "entity_type": "OpportunityEntity",
+    "label": "Opportunity",
+    "confidence": 35.0,
+    "metadata": {
+      "research_only": true,
+      "source": "opportunity_engine"
+    }
+  },
+  {
+    "node_id": "confluence",
+    "entity_type": "ConfluenceEntity",
+    "label": "Confluence",
+    "confidence": 35.0,
+    "metadata": {
+      "research_only": true,
+      "source": "confluence"
+    }
+  },
+  {
+    "node_id": "paperresult",
+    "entity_type": "PaperResultEntity",
+    "label": "PaperResult",
+    "confidence": 70.0,
+    "metadata": {
+      "research_only": true,
+      "source": "paper_execution"
+    }
+  },
+  {
+    "node_id": "portfolio",
+    "entity_type": "PortfolioEntity",
+    "label": "Portfolio",
+    "confidence": 81.92,
+    "metadata": {
+      "research_only": true,
+      "source": "paper_portfolio"
+    }
+  },
+  {
+    "node_id": "readiness",
+    "entity_type": "ReadinessEntity",
+    "label": "Readiness",
+    "confidence": 36.35,
+    "metadata": {
+      "research_only": true,
+      "source": "paper_control_center"
+    }
+  }
+]

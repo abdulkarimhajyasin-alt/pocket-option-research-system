@@ -1,0 +1,31 @@
+{
+  "version_id": "research-v0005",
+  "version_label": "research-v0005",
+  "snapshot_id": "snapshot-2ae22f647960",
+  "created_at": "deterministic-local-research-archive",
+  "previous_version_id": "research-v0004",
+  "checksum": "2ae22f64796041f530fad753c4680677a6a4fdd9194f9c1f0ed569835008eabb",
+  "metadata": {
+    "schema_version": "research_archive.v1",
+    "stable_json_schema": true,
+    "research_archive_only": true,
+    "source_count": 11,
+    "missing_source_count": 5,
+    "duplicate_checksum_reused": false
+  },
+  "safety_boundary": {
+    "research_only": true,
+    "local_only": true,
+    "archive_only": true,
+    "no_broker_access": true,
+    "no_broker_api": true,
+    "no_account_login": true,
+    "no_credentials": true,
+    "no_browser_automation": true,
+    "no_real_trade_control": true,
+    "no_order_placement": true,
+    "no_live_trading": true,
+    "no_money_handling": true,
+    "no_external_service_calls": true
+  }
+}

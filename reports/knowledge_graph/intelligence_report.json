@@ -1,0 +1,133 @@
+{
+  "recurring_relationships": {
+    "influences": 3,
+    "confirms": 2,
+    "derived_from": 1,
+    "improves": 1,
+    "correlates_with": 1,
+    "linked_to": 2,
+    "contradicts": 1,
+    "degrades": 1
+  },
+  "successful_relationship_chains": [
+    {
+      "edge_id": "edge_001",
+      "source_id": "signal",
+      "target_id": "opportunity",
+      "relationship_type": "influences",
+      "weight": 0.78,
+      "confidence": 78.0,
+      "metadata": {
+        "research_only": true
+      }
+    },
+    {
+      "edge_id": "edge_002",
+      "source_id": "opportunity",
+      "target_id": "confluence",
+      "relationship_type": "confirms",
+      "weight": 0.82,
+      "confidence": 82.0,
+      "metadata": {
+        "research_only": true
+      }
+    },
+    {
+      "edge_id": "edge_003",
+      "source_id": "confluence",
+      "target_id": "paperresult",
+      "relationship_type": "derived_from",
+      "weight": 0.74,
+      "confidence": 74.0,
+      "metadata": {
+        "research_only": true
+      }
+    },
+    {
+      "edge_id": "edge_005",
+      "source_id": "portfolio",
+      "target_id": "readiness",
+      "relationship_type": "influences",
+      "weight": 0.72,
+      "confidence": 72.0,
+      "metadata": {
+        "research_only": true
+      }
+    },
+    {
+      "edge_id": "edge_006",
+      "source_id": "pattern",
+      "target_id": "signal",
+      "relationship_type": "correlates_with",
+      "weight": 0.7,
+      "confidence": 70.0,
+      "metadata": {
+        "research_only": true
+      }
+    }
+  ],
+  "weak_relationship_chains": [
+    {
+      "edge_id": "edge_011",
+      "source_id": "signal",
+      "target_id": "regime",
+      "relationship_type": "contradicts",
+      "weight": 0.42,
+      "confidence": 42.0,
+      "metadata": {
+        "research_only": true
+      }
+    },
+    {
+      "edge_id": "edge_012",
+      "source_id": "paperresult",
+      "target_id": "readiness",
+      "relationship_type": "degrades",
+      "weight": 0.36,
+      "confidence": 36.0,
+      "metadata": {
+        "research_only": true
+      }
+    }
+  ],
+  "asset_pattern_relationships": [
+    {
+      "edge_id": "edge_009",
+      "source_id": "asset",
+      "target_id": "pattern",
+      "relationship_type": "linked_to",
+      "weight": 0.65,
+      "confidence": 65.0,
+      "metadata": {
+        "research_only": true
+      }
+    }
+  ],
+  "session_pattern_relationships": [
+    {
+      "edge_id": "edge_008",
+      "source_id": "session",
+      "target_id": "pattern",
+      "relationship_type": "linked_to",
+      "weight": 0.62,
+      "confidence": 62.0,
+      "metadata": {
+        "research_only": true
+      }
+    }
+  ],
+  "regime_pattern_relationships": [
+    {
+      "edge_id": "edge_007",
+      "source_id": "regime",
+      "target_id": "pattern",
+      "relationship_type": "influences",
+      "weight": 0.66,
+      "confidence": 66.0,
+      "metadata": {
+        "research_only": true
+      }
+    }
+  ],
+  "research_only": true
+}

@@ -1,0 +1,14 @@
+{
+  "version_count": 5,
+  "readiness_trend": "مستقر",
+  "knowledge_score_trend": "مستقر",
+  "graph_density_trend": "مستقر",
+  "diagnostics_trend": "مستقر",
+  "recommendation_trend": "مستقر",
+  "source_coverage_trend": "مستقر",
+  "research_quality_trend": "مستقر",
+  "recurring_diagnostics": [
+    "missing_expected_sources"
+  ],
+  "research_only": true
+}

@@ -1,0 +1,57 @@
+{
+  "from_version": "research-v0002",
+  "to_version": "research-v0003",
+  "added_keys": [],
+  "removed_keys": [],
+  "changed_values": [
+    {
+      "key": "checksum",
+      "previous": "f15ae7e6bbe546d788745f8eeef3c409106751b96d2e45979c97fbe6f7d7335f",
+      "current": "16288478dc0bfdb33ced59234ff3b5f9a3050cb3365a6939857fbcd0a465e1b1"
+    },
+    {
+      "key": "snapshot_id",
+      "previous": "snapshot-f15ae7e6bbe5",
+      "current": "snapshot-16288478dc0b"
+    },
+    {
+      "key": "version",
+      "previous": "research-v0002",
+      "current": "research-v0003"
+    }
+  ],
+  "improved_metrics": [],
+  "degraded_metrics": [],
+  "stable_metrics": [
+    "included_sources.__len__",
+    "missing_sources.__len__",
+    "research_only",
+    "safety_status.archive_only",
+    "safety_status.local_only",
+    "safety_status.no_account_login",
+    "safety_status.no_broker_access",
+    "safety_status.no_broker_api",
+    "safety_status.no_browser_automation",
+    "safety_status.no_credentials",
+    "safety_status.no_external_service_calls",
+    "safety_status.no_live_trading",
+    "safety_status.no_money_handling",
+    "safety_status.no_order_placement",
+    "safety_status.no_real_trade_control",
+    "safety_status.research_only",
+    "source_summary.corrupted_source_count",
+    "source_summary.expected_source_count",
+    "source_summary.included_source_count",
+    "source_summary.missing_source_count",
+    "source_summary.source_coverage"
+  ],
+  "missing_comparison_areas": [],
+  "summary_ar": [
+    "المفاتيح المضافة: 0",
+    "المفاتيح المحذوفة: 0",
+    "القيم المتغيرة: 3",
+    "المقاييس المحسنة: 0",
+    "المقاييس المتراجعة: 0"
+  ],
+  "research_only": true
+}

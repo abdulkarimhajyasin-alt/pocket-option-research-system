@@ -708,6 +708,15 @@ class DashboardAnalyticsService:
         except (TypeError, ValueError):
             return 0.0
 
+    def _trend_score(self, value: Any) -> float:
+        mapping = {
+            "يتحسن": 100.0,
+            "مستقر": 60.0,
+            "يتراجع": 20.0,
+            "غير كاف للتقييم": 0.0,
+        }
+        return mapping.get(str(value), 0.0)
+
     def _status_score(self, value: Any) -> float:
         mapping = {"PASS": 100.0, "WARNING": 60.0, "FAIL": 0.0}
         return mapping.get(str(value), self._float(value))
@@ -3361,6 +3370,553 @@ class DashboardAnalyticsService:
                 *self._dict_chart_values(audit_chart),
                 label="سجل التدقيق",
                 color="blue",
+            ).to_dict(),
+        }
+
+    def architecture_audit_analytics(self) -> dict[str, Any]:
+        """Return latest architecture-audit-only hardening analytics."""
+        payload = self._latest_json_dict("architecture_audit", "architecture_summary")
+        consistency = self._latest_json_dict("architecture_audit", "consistency")
+        dependency = self._latest_json_dict("architecture_audit", "dependency")
+        performance = self._latest_json_dict("architecture_audit", "performance")
+        safety = self._latest_json_dict("architecture_audit", "safety")
+        diagnostics = self._latest_json_dict("architecture_audit", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "architecture_audit",
+            "recommendations",
+        )
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        if not summary:
+            summary = {
+                "architecture_score": 0.0,
+                "consistency_score": 0.0,
+                "dependency_score": 0.0,
+                "performance_score": 0.0,
+                "safety_score": 0.0,
+                "overall_score": 0.0,
+                "certification_state": "تحتاج مراجعة",
+                "architecture_audit_only": True,
+                "hardening_only": True,
+                "research_only": True,
+            }
+        latest_diagnostics = latest.get("diagnostics", []) if isinstance(latest, dict) else []
+        latest_recommendations = (
+            latest.get("recommendations", []) if isinstance(latest, dict) else []
+        )
+        summary = {
+            **summary,
+            "warning_count": len(latest_diagnostics),
+            "recommendation_count": len(latest_recommendations),
+            "architecture_audit_only": True,
+            "hardening_only": True,
+            "research_only": True,
+        }
+        scores = {
+            "المعمارية": self._float(summary.get("architecture_score")),
+            "الاتساق": self._float(summary.get("consistency_score")),
+            "الاعتمادية": self._float(summary.get("dependency_score")),
+            "الأداء": self._float(summary.get("performance_score")),
+            "السلامة": self._float(summary.get("safety_score")),
+        }
+        consistency_chart = {
+            "التقارير": self._float(consistency.get("report_count")),
+            "التخزين": self._float(consistency.get("storage_count")),
+            "القوالب": self._float(consistency.get("dashboard_template_count")),
+            "واجهات API": self._float(consistency.get("api_route_count")),
+        }
+        safety_chart = {
+            "السلامة": self._float(safety.get("safety_score")),
+            "بدون تنفيذ": 100.0 if safety.get("no_execution_paths") else 0.0,
+            "بدون وسيط": 100.0 if safety.get("no_broker_paths") else 0.0,
+            "بدون مصادقة": 100.0 if safety.get("no_login_auth_paths") else 0.0,
+            "بدون أتمتة": 100.0 if safety.get("no_automation_paths") else 0.0,
+        }
+        return {
+            "summary": summary,
+            "latest": latest,
+            "scores": bar_chart(
+                "درجات التدقيق",
+                *self._dict_chart_values(scores),
+                label="درجات التدقيق",
+                color="green",
+            ).to_dict(),
+            "consistency": bar_chart(
+                "اتساق التقارير",
+                *self._dict_chart_values(consistency_chart),
+                label="اتساق التقارير",
+                color="blue",
+            ).to_dict(),
+            "safety": bar_chart(
+                "السلامة",
+                *self._dict_chart_values(safety_chart),
+                label="السلامة",
+                color="green",
+            ).to_dict(),
+            "performance": bar_chart(
+                "الأداء",
+                *self._dict_chart_values(performance),
+                label="الأداء",
+                color="warning",
+            ).to_dict(),
+            "dependency": bar_chart(
+                "الاعتمادية",
+                *self._dict_chart_values(dependency),
+                label="الاعتمادية",
+                color="accent",
+            ).to_dict(),
+            "certification": bar_chart(
+                "حالة الاعتماد النهائي",
+                *self._dict_chart_values(
+                    {
+                        str(summary.get("certification_state")): summary.get(
+                            "overall_score"
+                        )
+                    }
+                ),
+                label="حالة الاعتماد النهائي",
+                color="blue",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
+    def knowledge_graph_analytics(self) -> dict[str, Any]:
+        """Return latest research-only knowledge graph analytics."""
+        payload = self._latest_json_dict("knowledge_graph", "knowledge_summary")
+        nodes = self._latest_json_dict("knowledge_graph", "node")
+        edges = self._latest_json_dict("knowledge_graph", "edge")
+        analytics = self._latest_json_dict("knowledge_graph", "analytics")
+        diagnostics = self._latest_json_dict("knowledge_graph", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "knowledge_graph",
+            "recommendations",
+        )
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        if not summary:
+            summary = {
+                "node_count": 0,
+                "edge_count": 0,
+                "strongest_relationship": "غير متاح",
+                "weakest_relationship": "غير متاح",
+                "relationship_density": 0.0,
+                "knowledge_score": 0.0,
+                "research_only": True,
+            }
+        latest_diagnostics = latest.get("diagnostics", []) if isinstance(latest, dict) else []
+        latest_recommendations = (
+            latest.get("recommendations", []) if isinstance(latest, dict) else []
+        )
+        summary = {
+            **summary,
+            "warning_count": len(latest_diagnostics),
+            "recommendation_count": len(latest_recommendations),
+            "research_only": True,
+        }
+        strongest = analytics.get("strongest_relationships", {})
+        weakest = analytics.get("weakest_relationships", {})
+        density = analytics.get("relationship_density", {})
+        quality = analytics.get("graph_quality", {})
+        activity = {
+            "العقد": self._float(summary.get("node_count")),
+            "العلاقات": self._float(summary.get("edge_count")),
+            "التحذيرات": self._float(summary.get("warning_count")),
+            "التوصيات": self._float(summary.get("recommendation_count")),
+        }
+        return {
+            "summary": summary,
+            "latest": latest,
+            "edges": bar_chart(
+                "توزيع العلاقات",
+                *self._dict_chart_values(edges),
+                label="توزيع العلاقات",
+                color="blue",
+            ).to_dict(),
+            "nodes": bar_chart(
+                "توزيع العقد",
+                *self._dict_chart_values(nodes),
+                label="توزيع العقد",
+                color="green",
+            ).to_dict(),
+            "strongest": bar_chart(
+                "أقوى العلاقات",
+                *self._dict_chart_values(strongest),
+                label="أقوى العلاقات",
+                color="green",
+            ).to_dict(),
+            "weakest": bar_chart(
+                "أضعف العلاقات",
+                *self._dict_chart_values(weakest),
+                label="أضعف العلاقات",
+                color="warning",
+            ).to_dict(),
+            "density": bar_chart(
+                "كثافة المعرفة",
+                *self._dict_chart_values(density),
+                label="كثافة المعرفة",
+                color="blue",
+            ).to_dict(),
+            "quality": bar_chart(
+                "جودة المعرفة",
+                *self._dict_chart_values(quality),
+                label="جودة المعرفة",
+                color="accent",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "activity": line_chart(
+                "النشاط الزمني",
+                *self._dict_chart_values(activity),
+                label="النشاط الزمني",
+                color="blue",
+            ).to_dict(),
+        }
+
+    def research_api_analytics(self) -> dict[str, Any]:
+        """Return latest unified research API dashboard analytics."""
+        payload = self._latest_json_dict("research_api", "research_summary")
+        diagnostics = self._latest_json_dict("research_api", "diagnostics")
+        recommendations = self._latest_json_dict("research_api", "recommendations")
+        summary_payload = payload if isinstance(payload, dict) else {}
+        metadata = summary_payload.get("metadata", {})
+        labels = summary_payload.get("labels_ar", {})
+        if not isinstance(metadata, dict):
+            metadata = {}
+        if not isinstance(labels, dict):
+            labels = {}
+        views = {
+            "الإشارات": 100.0 if summary_payload.get("signals", {}).get("available") else 0.0,
+            "الفرص": 100.0 if summary_payload.get("opportunities", {}).get("available") else 0.0,
+            "الورقي": 100.0 if summary_payload.get("paper", {}).get("available") else 0.0,
+            "الجاهزية": 100.0 if summary_payload.get("readiness", {}).get("available") else 0.0,
+            "خريطة المعرفة": (
+                100.0 if summary_payload.get("knowledge_graph", {}).get("available") else 0.0
+            ),
+        }
+        available_views = sum(1 for value in views.values() if value > 0)
+        diag_data = (
+            summary_payload.get("diagnostics", {}).get("data", {})
+            if isinstance(summary_payload.get("diagnostics"), dict)
+            else {}
+        )
+        diag_summary = diag_data.get("summary", {}) if isinstance(diag_data, dict) else {}
+        source_count = (
+            self._float(diag_summary.get("available_source_count"))
+            + self._float(diag_summary.get("missing_source_count"))
+        )
+        summary = {
+            "available_views": available_views,
+            "source_count": source_count,
+            "available_sources": self._float(diag_summary.get("available_source_count")),
+            "missing_source_count": self._float(diag_summary.get("missing_source_count")),
+            "schema_version": metadata.get("schema_version", "research_api.v1"),
+            "stable_json_schema": 100.0 if metadata.get("stable_json_schema") else 0.0,
+            "signals_available": views["الإشارات"],
+            "opportunities_available": views["الفرص"],
+            "paper_available": views["الورقي"],
+            "readiness_available": views["الجاهزية"],
+            "knowledge_graph_available": views["خريطة المعرفة"],
+            "research_only": True,
+            "local_only": True,
+        }
+        source_chart = {
+            "المتاحة": summary["available_sources"],
+            "الناقصة": summary["missing_source_count"],
+        }
+        label_chart = {str(value): 1.0 for value in labels.values()}
+        safety_chart = {
+            "بحث فقط": 100.0 if summary_payload.get("research_only") else 0.0,
+            "محلي فقط": 100.0 if summary_payload.get("local_only") else 0.0,
+            "بدون تنفيذ": 100.0 if summary_payload.get("not_execution") else 0.0,
+            "بدون وسيط": 100.0 if summary_payload.get("not_broker_access") else 0.0,
+            "بدون متصفح": (
+                100.0 if summary_payload.get("not_browser_automation") else 0.0
+            ),
+        }
+        return {
+            "summary": summary,
+            "snapshot": summary_payload,
+            "views": bar_chart(
+                "الواجهات الموحدة",
+                *self._dict_chart_values(views),
+                label="الواجهات الموحدة",
+                color="green",
+            ).to_dict(),
+            "sources": bar_chart(
+                "المصادر البحثية",
+                *self._dict_chart_values(source_chart),
+                label="المصادر البحثية",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التشخيص الموحد",
+                *self._dict_chart_values(diagnostics.get("data", diagnostics)),
+                label="التشخيص الموحد",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات الموحدة",
+                *self._dict_chart_values(recommendations.get("data", recommendations)),
+                label="التوصيات الموحدة",
+                color="green",
+            ).to_dict(),
+            "labels": bar_chart(
+                "تسميات عربية",
+                *self._dict_chart_values(label_chart),
+                label="تسميات عربية",
+                color="accent",
+            ).to_dict(),
+            "safety": bar_chart(
+                "حدود السلامة",
+                *self._dict_chart_values(safety_chart),
+                label="حدود السلامة",
+                color="green",
+            ).to_dict(),
+        }
+
+    def research_archive_analytics(self) -> dict[str, Any]:
+        """Return latest research archive and versioning analytics."""
+        summary = self._latest_json_dict("research_archive", "archive_summary")
+        latest = self._latest_json_dict("research_archive", "latest_version_report")
+        diff = self._latest_json_dict("research_archive", "diff_report")
+        evolution = self._latest_json_dict("research_archive", "evolution_report")
+        diagnostics_payload = self._latest_json_list(
+            "research_archive",
+            "diagnostics_report",
+        )
+        recommendations_payload = self._latest_json_dict(
+            "research_archive",
+            "recommendations_report",
+        )
+        history = self._latest_json_list("research_archive", "version_history")
+        recommendations = recommendations_payload.get("items", [])
+        if not isinstance(recommendations, list):
+            recommendations = []
+        safety = summary.get("safety_status", {}) if isinstance(summary, dict) else {}
+        coverage = {
+            "المؤرشفة": self._float(summary.get("archived_source_count")),
+            "المفقودة": self._float(summary.get("missing_source_count")),
+        }
+        trends = {
+            "جودة البحث": self._trend_score(evolution.get("research_quality_trend")),
+            "الجاهزية": self._trend_score(evolution.get("readiness_trend")),
+            "خريطة المعرفة": self._trend_score(evolution.get("knowledge_score_trend")),
+            "تغطية المصادر": self._trend_score(evolution.get("source_coverage_trend")),
+        }
+        diff_chart = {
+            "المضافة": self._float(len(diff.get("added_keys", []))),
+            "المحذوفة": self._float(len(diff.get("removed_keys", []))),
+            "المتغيرة": self._float(len(diff.get("changed_values", []))),
+            "المحسنة": self._float(len(diff.get("improved_metrics", []))),
+            "المتراجعة": self._float(len(diff.get("degraded_metrics", []))),
+        }
+        history_chart = {
+            str(item.get("version_label", index + 1)): index + 1.0
+            for index, item in enumerate(history)
+        }
+        diagnostics_chart = {
+            str(item.get("code", index + 1)): 1.0
+            for index, item in enumerate(diagnostics_payload)
+        }
+        recommendations_chart = {str(item): 1.0 for item in recommendations}
+        safety_chart = {
+            "بحث فقط": 100.0 if safety.get("research_only") else 0.0,
+            "محلي فقط": 100.0 if safety.get("local_only") else 0.0,
+            "بدون وسيط": 100.0 if safety.get("no_broker_access") else 0.0,
+            "بدون متصفح": 100.0 if safety.get("no_browser_automation") else 0.0,
+            "بدون أموال": 100.0 if safety.get("no_money_handling") else 0.0,
+        }
+        archive_summary = {
+            "latest_version": summary.get("latest_version", latest.get("version_label")),
+            "version_count": self._float(summary.get("version_count")),
+            "latest_snapshot": summary.get("latest_snapshot"),
+            "archived_source_count": self._float(summary.get("archived_source_count")),
+            "missing_source_count": self._float(summary.get("missing_source_count")),
+            "checksum": summary.get("checksum"),
+            "safety_status": "بحث فقط" if safety.get("research_only") else "مراجعة",
+            "research_quality_trend": evolution.get("research_quality_trend", "غير كاف للتقييم"),
+            "readiness_trend": evolution.get("readiness_trend", "غير كاف للتقييم"),
+            "knowledge_trend": evolution.get("knowledge_score_trend", "غير كاف للتقييم"),
+            "diagnostics_count": self._float(summary.get("diagnostics_count")),
+            "recommendation_count": self._float(summary.get("recommendation_count")),
+            "research_only": True,
+            "local_only": True,
+        }
+        return {
+            "summary": archive_summary,
+            "latest": latest,
+            "diff": diff,
+            "evolution": evolution,
+            "diagnostics_items": diagnostics_payload,
+            "recommendations_items": recommendations,
+            "version_history": history,
+            "history": bar_chart(
+                "تاريخ الإصدارات",
+                *self._dict_chart_values(history_chart),
+                label="الإصدارات",
+                color="blue",
+            ).to_dict(),
+            "coverage": bar_chart(
+                "تغطية المصادر",
+                *self._dict_chart_values(coverage),
+                label="المصادر",
+                color="green",
+            ).to_dict(),
+            "trends": bar_chart(
+                "اتجاه جودة البحث",
+                *self._dict_chart_values(trends),
+                label="الاتجاه",
+                color="accent",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "diff_chart": bar_chart(
+                "الفروقات بين الإصدارات",
+                *self._dict_chart_values(diff_chart),
+                label="الفروقات",
+                color="blue",
+            ).to_dict(),
+            "safety": bar_chart(
+                "حالة الأمان",
+                *self._dict_chart_values(safety_chart),
+                label="السلامة",
+                color="green",
+            ).to_dict(),
+        }
+
+    def platform_certification_analytics(self) -> dict[str, Any]:
+        """Return latest final research platform certification analytics."""
+        report = self._latest_json_dict(
+            "platform_certification",
+            "certification_report",
+        )
+        executive = self._latest_json_dict(
+            "platform_certification",
+            "executive_summary",
+        )
+        domains = self._latest_json_list("platform_certification", "domain_report")
+        diagnostics = self._latest_json_list(
+            "platform_certification",
+            "diagnostics_report",
+        )
+        recommendations = self._latest_json_list(
+            "platform_certification",
+            "recommendations_report",
+        )
+        summary = {
+            "final_platform_score": self._float(
+                executive.get("final_platform_score", report.get("final_platform_score"))
+            ),
+            "certification_state": executive.get(
+                "certification_state",
+                report.get("certification_state", "Not Certified"),
+            ),
+            "research_maturity_level": executive.get(
+                "research_maturity_level",
+                report.get("research_maturity_level", "غير متاح"),
+            ),
+            "maturity_score": self._float(
+                executive.get("maturity_score", report.get("maturity_score"))
+            ),
+            "domain_count": self._float(len(domains)),
+            "diagnostics_count": self._float(len(diagnostics)),
+            "recommendation_count": self._float(len(recommendations)),
+            "research_only": True,
+            "local_only": True,
+        }
+        domain_scores = {
+            str(item.get("label_ar", item.get("domain_id"))): self._float(item.get("score"))
+            for item in domains
+        }
+        diagnostics_chart = {
+            str(item.get("code", index + 1)): 1.0
+            for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {
+            str(item): 1.0
+            for item in recommendations
+        }
+        maturity_chart = {
+            "النضج البحثي": summary["maturity_score"],
+            "الدرجة النهائية": summary["final_platform_score"],
+        }
+        state_chart = {
+            "Not Certified": 100.0
+            if summary["certification_state"] == "Not Certified"
+            else 0.0,
+            "Conditionally Certified": 100.0
+            if summary["certification_state"] == "Conditionally Certified"
+            else 0.0,
+            "Certified For Advanced Research": 100.0
+            if summary["certification_state"] == "Certified For Advanced Research"
+            else 0.0,
+        }
+        return {
+            "summary": summary,
+            "report": report,
+            "domains": domains,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "domain_scores": bar_chart(
+                "درجات المجالات",
+                *self._dict_chart_values(domain_scores),
+                label="درجات المجالات",
+                color="green",
+            ).to_dict(),
+            "maturity": bar_chart(
+                "النضج البحثي",
+                *self._dict_chart_values(maturity_chart),
+                label="النضج",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "state": bar_chart(
+                "حالة الشهادة",
+                *self._dict_chart_values(state_chart),
+                label="الشهادة",
+                color="accent",
             ).to_dict(),
         }
 

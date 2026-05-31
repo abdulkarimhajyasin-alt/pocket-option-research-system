@@ -139,7 +139,7 @@
       "sequence": 3,
       "observation": {
         "observation_id": "snapshot_import",
-        "timestamp": "2026-05-31T16:18:41.846486",
+        "timestamp": "2026-05-31T20:59:58.695385",
         "source": "snapshot_import",
         "asset": "استيراد اللقطات",
         "session": "passive",
@@ -152,7 +152,7 @@
             "observation_id": "snapshot_import",
             "source_type": "snapshot_import",
             "source_name": "استيراد اللقطات",
-            "timestamp": "2026-05-31T16:18:41.846486",
+            "timestamp": "2026-05-31T20:59:58.695385",
             "asset_count": 1.0,
             "payout_count": 1.0,
             "session_count": 2.0,
@@ -173,7 +173,7 @@
                 "safety_score": 100.0,
                 "warning_count": 0,
                 "recommendation_count": 1,
-                "last_import": "2026-05-31T16:18:41.846486",
+                "last_import": "2026-05-31T20:59:58.695385",
                 "manual_only": true,
                 "research_only": true,
                 "observation_only": true
@@ -185,7 +185,7 @@
                 "manual_sample_snapshot.json": 100.0
               },
               "latest": {
-                "timestamp": "2026-05-31T16:18:41.846486",
+                "timestamp": "2026-05-31T20:59:58.695385",
                 "imports": [
                   {
                     "import_id": "manual_sample_snapshot",
@@ -310,7 +310,7 @@
       "sequence": 4,
       "observation": {
         "observation_id": "snapshot_import",
-        "timestamp": "2026-05-31T16:18:41.846486",
+        "timestamp": "2026-05-31T20:59:58.695385",
         "source": "snapshot_import",
         "asset": "استيراد اللقطات",
         "session": "passive",
@@ -323,7 +323,7 @@
             "observation_id": "snapshot_import",
             "source_type": "snapshot_import",
             "source_name": "استيراد اللقطات",
-            "timestamp": "2026-05-31T16:18:41.846486",
+            "timestamp": "2026-05-31T20:59:58.695385",
             "assets": 1.0,
             "payouts": 1.0,
             "sessions": 2.0,
@@ -348,7 +348,7 @@
       "sequence": 5,
       "observation": {
         "observation_id": "observation_intelligence",
-        "timestamp": "2026-05-31T16:20:06.455926",
+        "timestamp": "2026-05-31T21:01:03.170896",
         "source": "observation_intelligence",
         "asset": "ذكاء المراقبة",
         "session": "passive",
@@ -361,7 +361,7 @@
             "observation_id": "observation_intelligence",
             "source_type": "observation_intelligence",
             "source_name": "ذكاء المراقبة",
-            "timestamp": "2026-05-31T16:20:06.455926",
+            "timestamp": "2026-05-31T21:01:03.170896",
             "asset_count": 4.0,
             "payout_count": 4.0,
             "session_count": 4.0,
@@ -403,13 +403,13 @@
                 "observation_readiness": 81.16
               },
               "latest": {
-                "timestamp": "2026-05-31T16:20:06.455926",
+                "timestamp": "2026-05-31T21:01:03.170896",
                 "observations": [
                   {
                     "observation_id": "snapshot_import",
                     "source_type": "snapshot_import",
                     "source_name": "استيراد اللقطات",
-                    "timestamp": "2026-05-31T16:18:41.846486",
+                    "timestamp": "2026-05-31T20:59:58.695385",
                     "assets": 1.0,
                     "payouts": 1.0,
                     "sessions": 2.0,
@@ -425,7 +425,7 @@
                     "observation_id": "browser_observation",
                     "source_type": "browser_observation",
                     "source_name": "مراقبة المتصفح",
-                    "timestamp": "2026-05-31T16:18:23.321768",
+                    "timestamp": "2026-05-31T20:59:33.265201",
                     "assets": 3.0,
                     "payouts": 1.0,
                     "sessions": 1.0,
@@ -441,7 +441,7 @@
                     "observation_id": "external_observation",
                     "source_type": "external_observation",
                     "source_name": "المراقبة الخارجية",
-                    "timestamp": "2026-05-31T16:18:28.587601",
+                    "timestamp": "2026-05-31T20:59:39.483375",
                     "assets": 4.0,
                     "payouts": 4.0,
                     "sessions": 4.0,
@@ -457,7 +457,7 @@
                     "observation_id": "broker_readiness",
                     "source_type": "broker_readiness",
                     "source_name": "جاهزية المراقبة",
-                    "timestamp": "2026-05-31T16:18:22.945561",
+                    "timestamp": "2026-05-31T20:59:32.801629",
                     "assets": 48.0,
                     "payouts": 74.2,
                     "sessions": 60.0,
@@ -579,7 +579,7 @@
       "sequence": 6,
       "observation": {
         "observation_id": "broker_readiness",
-        "timestamp": "2026-05-31T19:50:01.138728",
+        "timestamp": "2026-05-31T21:09:35.439490",
         "source": "broker_readiness",
         "asset": "جاهزية المراقبة",
         "session": "passive",
@@ -592,7 +592,7 @@
             "observation_id": "broker_readiness",
             "source_type": "broker_readiness",
             "source_name": "جاهزية المراقبة",
-            "timestamp": "2026-05-31T19:50:01.138728",
+            "timestamp": "2026-05-31T21:09:35.439490",
             "asset_count": 48.0,
             "payout_count": 74.2,
             "session_count": 60.0,
@@ -623,16 +623,16 @@
                 "البيانات": 68.42
               },
               "readiness_timeline": {
-                "19:50": 81.73
+                "21:09": 81.73
               },
               "capability_timeline": {
-                "19:50": 67.41
+                "21:09": 67.41
               },
               "safety_timeline": {
-                "19:50": 100.0
+                "21:09": 100.0
               },
               "latest": {
-                "timestamp": "2026-05-31T19:50:01.138728",
+                "timestamp": "2026-05-31T21:09:35.439490",
                 "capability": {
                   "market_visibility": 79.05,
                   "asset_visibility": 48.0,
@@ -777,7 +777,7 @@
       "sequence": 7,
       "observation": {
         "observation_id": "broker_readiness",
-        "timestamp": "2026-05-31T19:50:01.138728",
+        "timestamp": "2026-05-31T21:09:35.439490",
         "source": "broker_readiness",
         "asset": "جاهزية المراقبة",
         "session": "passive",
@@ -790,7 +790,7 @@
             "observation_id": "broker_readiness",
             "source_type": "broker_readiness",
             "source_name": "جاهزية المراقبة",
-            "timestamp": "2026-05-31T19:50:01.138728",
+            "timestamp": "2026-05-31T21:09:35.439490",
             "assets": 48.0,
             "payouts": 74.2,
             "sessions": 60.0,
@@ -815,7 +815,7 @@
       "sequence": 8,
       "observation": {
         "observation_id": "browser_observation",
-        "timestamp": "2026-05-31T19:50:01.589106",
+        "timestamp": "2026-05-31T21:09:35.928152",
         "source": "browser_observation",
         "asset": "مراقبة المتصفح",
         "session": "passive",
@@ -828,7 +828,7 @@
             "observation_id": "browser_observation",
             "source_type": "browser_observation",
             "source_name": "مراقبة المتصفح",
-            "timestamp": "2026-05-31T19:50:01.589106",
+            "timestamp": "2026-05-31T21:09:35.928152",
             "asset_count": 3.0,
             "payout_count": 1.0,
             "session_count": 1.0,
@@ -869,13 +869,13 @@
                 "not_execution": true
               },
               "latest": {
-                "timestamp": "2026-05-31T19:50:01.589106",
+                "timestamp": "2026-05-31T21:09:35.928152",
                 "artifacts": [
                   {
                     "artifact_id": "html-summary",
                     "artifact_type": "html_snapshot",
                     "artifact_source": "reports\\observation\\observation_summary.json",
-                    "created_at": "1780143413153226300",
+                    "created_at": "1780261317998307200",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -892,7 +892,7 @@
                     "artifact_id": "dom-export-summary",
                     "artifact_type": "dom_export",
                     "artifact_source": "reports\\external_observation\\source_report.json",
-                    "created_at": "1780244308593028700",
+                    "created_at": "1780261317948411700",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -909,7 +909,7 @@
                     "artifact_id": "page-capture-summary",
                     "artifact_type": "page_capture",
                     "artifact_source": "reports\\broker_readiness\\readiness_summary.json",
-                    "created_at": "1780257001146010800",
+                    "created_at": "1780261775441956500",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -926,7 +926,7 @@
                     "artifact_id": "observation-dump",
                     "artifact_type": "observation_dump",
                     "artifact_source": "storage\\external_observation\\diagnostics.json",
-                    "created_at": "1780244308577404200",
+                    "created_at": "1780261317931908900",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -1055,7 +1055,7 @@
       "sequence": 9,
       "observation": {
         "observation_id": "browser_observation",
-        "timestamp": "2026-05-31T19:50:01.589106",
+        "timestamp": "2026-05-31T21:09:35.928152",
         "source": "browser_observation",
         "asset": "مراقبة المتصفح",
         "session": "passive",
@@ -1068,7 +1068,7 @@
             "observation_id": "browser_observation",
             "source_type": "browser_observation",
             "source_name": "مراقبة المتصفح",
-            "timestamp": "2026-05-31T19:50:01.589106",
+            "timestamp": "2026-05-31T21:09:35.928152",
             "assets": 3.0,
             "payouts": 1.0,
             "sessions": 1.0,
@@ -1093,7 +1093,7 @@
       "sequence": 10,
       "observation": {
         "observation_id": "browser_observation",
-        "timestamp": "2026-05-31T19:50:01.589106",
+        "timestamp": "2026-05-31T21:09:35.928152",
         "source": "browser_observation",
         "asset": "browser_snapshot",
         "session": "passive",
@@ -1129,7 +1129,7 @@
       "sequence": 11,
       "observation": {
         "observation_id": "external_observation",
-        "timestamp": "2026-05-31T19:50:09.556776",
+        "timestamp": "2026-05-31T21:09:41.884725",
         "source": "external_observation",
         "asset": "المراقبة الخارجية",
         "session": "passive",
@@ -1142,7 +1142,7 @@
             "observation_id": "external_observation",
             "source_type": "external_observation",
             "source_name": "المراقبة الخارجية",
-            "timestamp": "2026-05-31T19:50:09.556776",
+            "timestamp": "2026-05-31T21:09:41.884725",
             "asset_count": 4.0,
             "payout_count": 4.0,
             "session_count": 4.0,
@@ -1173,7 +1173,7 @@
                 "sandbox_feed": 1
               },
               "latest": {
-                "timestamp": "2026-05-31T19:50:09.556776",
+                "timestamp": "2026-05-31T21:09:41.884725",
                 "sources": [
                   {
                     "source_id": "simulated-research",
@@ -1306,7 +1306,7 @@
       "sequence": 12,
       "observation": {
         "observation_id": "external_observation",
-        "timestamp": "2026-05-31T19:50:09.556776",
+        "timestamp": "2026-05-31T21:09:41.884725",
         "source": "external_observation",
         "asset": "المراقبة الخارجية",
         "session": "passive",
@@ -1319,7 +1319,7 @@
             "observation_id": "external_observation",
             "source_type": "external_observation",
             "source_name": "المراقبة الخارجية",
-            "timestamp": "2026-05-31T19:50:09.556776",
+            "timestamp": "2026-05-31T21:09:41.884725",
             "assets": 4.0,
             "payouts": 4.0,
             "sessions": 4.0,
@@ -1344,7 +1344,7 @@
       "sequence": 13,
       "observation": {
         "observation_id": "external_observation",
-        "timestamp": "2026-05-31T19:50:09.556776",
+        "timestamp": "2026-05-31T21:09:41.884725",
         "source": "external_observation",
         "asset": "external_source",
         "session": "passive",
@@ -1379,7 +1379,7 @@
       "sequence": 14,
       "observation": {
         "observation_id": "snapshot_import",
-        "timestamp": "2026-05-31T19:50:26.316589",
+        "timestamp": "2026-05-31T21:10:01.685208",
         "source": "snapshot_import",
         "asset": "snapshot",
         "session": "manual",
@@ -1398,7 +1398,7 @@
             "safety_score": 100.0,
             "warning_count": 0,
             "recommendation_count": 1,
-            "last_import": "2026-05-31T19:50:26.316589",
+            "last_import": "2026-05-31T21:10:01.685208",
             "manual_only": true,
             "research_only": true,
             "observation_only": true

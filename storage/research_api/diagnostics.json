@@ -1,0 +1,34 @@
+{
+  "view_id": "diagnostics",
+  "label_ar": "التشخيص الموحد",
+  "data": {
+    "summary": {
+      "missing_source_count": 3,
+      "available_source_count": 9
+    },
+    "missing_sources": [
+      "confluence",
+      "opportunities",
+      "signals"
+    ],
+    "available_sources": [
+      "architecture_audit",
+      "knowledge_graph",
+      "market_regimes",
+      "observation_pipeline",
+      "paper_execution",
+      "paper_portfolio",
+      "pattern_memory",
+      "readiness",
+      "signal_stream"
+    ],
+    "severity": "متوسط",
+    "research_only": true
+  },
+  "available": true,
+  "metadata": {
+    "research_only": true,
+    "local_only": true,
+    "stable_schema": true
+  }
+}

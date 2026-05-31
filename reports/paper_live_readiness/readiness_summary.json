@@ -1,16 +1,16 @@
 {
   "summary": {
-    "readiness_id": "paper_live_readiness_20260531195053",
-    "generated_at": "2026-05-31T19:50:53.716540+00:00",
-    "paper_health": 81.49,
+    "readiness_id": "paper_live_readiness_20260531211100",
+    "generated_at": "2026-05-31T21:11:00.276754+00:00",
+    "paper_health": 81.92,
     "paper_stability": 60.85,
     "paper_governance": 0.0,
     "execution_readiness": 82.75,
     "observation_readiness": 81.73,
     "certification_score": 59.58,
     "safety_score": 100.0,
-    "maturity_score": 60.57,
-    "overall_score": 65.87,
+    "maturity_score": 60.66,
+    "overall_score": 65.94,
     "readiness_state": "تحتاج تحسين كبير",
     "metadata": {
       "readiness_only": true,
@@ -44,19 +44,19 @@
     "not_broker_access": true
   },
   "latest": {
-    "timestamp": "2026-05-31T19:50:53.716660+00:00",
+    "timestamp": "2026-05-31T21:11:00.276976+00:00",
     "readiness": {
-      "readiness_id": "paper_live_readiness_20260531195053",
-      "generated_at": "2026-05-31T19:50:53.716540+00:00",
-      "paper_health": 81.49,
+      "readiness_id": "paper_live_readiness_20260531211100",
+      "generated_at": "2026-05-31T21:11:00.276754+00:00",
+      "paper_health": 81.92,
       "paper_stability": 60.85,
       "paper_governance": 0.0,
       "execution_readiness": 82.75,
       "observation_readiness": 81.73,
       "certification_score": 59.58,
       "safety_score": 100.0,
-      "maturity_score": 60.57,
-      "overall_score": 65.87,
+      "maturity_score": 60.66,
+      "overall_score": 65.94,
       "readiness_state": "تحتاج تحسين كبير",
       "metadata": {
         "readiness_only": true,
@@ -94,8 +94,8 @@
         "name": "paper_performance_gate",
         "arabic_label": "بوابة الأداء الورقي",
         "status": "PASS",
-        "score": 81.49,
-        "detail": "بوابة الأداء الورقي: 81.49"
+        "score": 81.92,
+        "detail": "بوابة الأداء الورقي: 81.92"
       },
       {
         "name": "portfolio_stability_gate",
@@ -157,11 +157,11 @@
     },
     "maturity": {
       "paper_sample_maturity": 0.0,
-      "portfolio_maturity": 81.49,
+      "portfolio_maturity": 81.92,
       "readiness_maturity": 82.75,
       "certification_maturity": 59.58,
       "observation_maturity": 79.04,
-      "maturity_score": 60.57,
+      "maturity_score": 60.66,
       "readiness_only": true
     },
     "stability": {
@@ -175,7 +175,7 @@
     },
     "analytics": {
       "readiness_distribution": {
-        "paper_health": 81.49,
+        "paper_health": 81.92,
         "paper_stability": 60.85,
         "paper_governance": 0.0,
         "execution_readiness": 82.75,
@@ -198,11 +198,11 @@
       },
       "maturity": {
         "paper_sample_maturity": 0.0,
-        "portfolio_maturity": 81.49,
+        "portfolio_maturity": 81.92,
         "readiness_maturity": 82.75,
         "certification_maturity": 59.58,
         "observation_maturity": 79.04,
-        "maturity_score": 60.57,
+        "maturity_score": 60.66,
         "readiness_only": true
       },
       "safety": {
@@ -221,7 +221,7 @@
         "research_only": true
       },
       "paper": {
-        "health": 81.49,
+        "health": 81.92,
         "stability": 60.85,
         "governance": 0.0
       },

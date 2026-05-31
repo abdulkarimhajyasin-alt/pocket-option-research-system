@@ -1,0 +1,53 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.research_api }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث محلي فقط</p>
+    <h1>واجهة البحث الموحدة</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث واجهة البحث الموحدة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>واجهة البحث الموحدة</span>
+    <strong>{{ research_api.summary.available_views|default(0)|number_ar }}</strong>
+    <p>واجهة داخلية آمنة تجمع مخرجات البحث المحلية في مخطط ثابت دون تنفيذ أو وسيط أو متصفح أو مصادقة أو أموال.</p>
+  </div>
+  <div class="executive-score">
+    <span>المخطط</span>
+    <strong>{{ research_api.summary.schema_version|default("research_api.v1") }}</strong>
+  </div>
+  <div>
+    <span>التشخيص</span>
+    <strong>{{ research_api.summary.missing_source_count|default(0)|number_ar }}</strong>
+    <small>المصادر {{ research_api.summary.source_count|default(0)|number_ar }}</small>
+    <small>بحث فقط</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>الإشارات</span><strong>{{ research_api.summary.signals_available|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الفرص</span><strong>{{ research_api.summary.opportunities_available|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الورقي</span><strong>{{ research_api.summary.paper_available|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الجاهزية</span><strong>{{ research_api.summary.readiness_available|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>خريطة المعرفة</span><strong>{{ research_api.summary.knowledge_graph_available|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>المصادر المتاحة</span><strong>{{ research_api.summary.available_sources|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>المصادر الناقصة</span><strong>{{ research_api.summary.missing_source_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>المخطط مستقر</span><strong>{{ research_api.summary.stable_json_schema|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الواجهات الموحدة</h2><span>التوفر</span></div><div class="chart" data-chart='{{ research_api.views|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>المصادر البحثية</h2><span>التجميع</span></div><div class="chart" data-chart='{{ research_api.sources|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التشخيص الموحد</h2><span>السلامة</span></div><div class="chart" data-chart='{{ research_api.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات الموحدة</h2><span>البحث</span></div><div class="chart" data-chart='{{ research_api.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تسميات عربية</h2><span>لوحة التحكم</span></div><div class="chart" data-chart='{{ research_api.labels|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>حدود السلامة</h2><span>محلي فقط</span></div><div class="chart" data-chart='{{ research_api.safety|tojson }}'></div></article>
+</section>
+{% endblock %}

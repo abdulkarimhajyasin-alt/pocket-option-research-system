@@ -3,9 +3,9 @@
     "portfolio_health": 0.0,
     "execution_health": 62.27,
     "readiness_health": 82.75,
-    "governance_health": 82.03,
+    "governance_health": 82.24,
     "stability_health": 0.0,
-    "health_score": 45.41,
+    "health_score": 45.45,
     "paper_only": true
   },
   "readiness_analysis": {
@@ -30,7 +30,7 @@
     "active_paper_orders": 0,
     "completed_paper_orders": 14,
     "paper_result_count": 14,
-    "paper_portfolio_changes": 81.49,
+    "paper_portfolio_changes": 81.92,
     "drawdown_changes": 0.0,
     "governance_changes": 1,
     "readiness_changes": 82.75,

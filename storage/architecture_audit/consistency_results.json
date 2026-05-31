@@ -1,0 +1,18 @@
+{
+  "consistency_score": 96.5,
+  "report_count": 251,
+  "storage_count": 184,
+  "dashboard_template_count": 48,
+  "api_route_count": 57,
+  "route_count": 106,
+  "missing_storage_counterparts": [
+    "analytics",
+    "datasets",
+    "diagnostics",
+    "execution",
+    "observation",
+    "strategy_research",
+    "validation"
+  ],
+  "architecture_audit_only": true
+}

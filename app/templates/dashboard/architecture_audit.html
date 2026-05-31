@@ -1,0 +1,57 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.architecture_audit }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تدقيق فقط</p>
+    <h1>التدقيق النهائي للمنصة</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث تدقيق المنصة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>التدقيق النهائي للمنصة</span>
+    <strong>{{ architecture_audit.summary.overall_score|default(0)|number_ar }}</strong>
+    <p>تدقيق معماري محلي للاتساق والسلامة والأداء والتقارير والتخزين ولوحة التحكم دون إضافة أي قدرة تنفيذية.</p>
+  </div>
+  <div class="executive-score">
+    <span>حالة الاعتماد النهائي</span>
+    <strong>{{ architecture_audit.summary.certification_state|default("تحتاج مراجعة") }}</strong>
+  </div>
+  <div>
+    <span>التحذيرات والتوصيات</span>
+    <strong>{{ architecture_audit.summary.warning_count|default(0)|number_ar }}</strong>
+    <small>التوصيات {{ architecture_audit.summary.recommendation_count|default(0)|number_ar }}</small>
+    <small>السلامة {{ architecture_audit.summary.safety_score|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>درجة المعمارية</span><strong>{{ architecture_audit.summary.architecture_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الاتساق</span><strong>{{ architecture_audit.summary.consistency_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الأداء</span><strong>{{ architecture_audit.summary.performance_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة السلامة</span><strong>{{ architecture_audit.summary.safety_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الاعتمادية</span><strong>{{ architecture_audit.summary.dependency_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ architecture_audit.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ architecture_audit.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>حالة الاعتماد النهائي</span><strong>{{ architecture_audit.summary.certification_state|default("تحتاج مراجعة") }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>درجات التدقيق</h2><span>الملخص</span></div><div class="chart" data-chart='{{ architecture_audit.scores|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>اتساق التقارير</h2><span>التقارير والتخزين</span></div><div class="chart" data-chart='{{ architecture_audit.consistency|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>السلامة</h2><span>المسارات المحظورة</span></div><div class="chart" data-chart='{{ architecture_audit.safety|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>الأداء</h2><span>الحمل المحلي</span></div><div class="chart" data-chart='{{ architecture_audit.performance|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الاعتمادية</h2><span>الأنماط</span></div><div class="chart" data-chart='{{ architecture_audit.dependency|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>حالة الاعتماد النهائي</h2><span>الشهادة</span></div><div class="chart" data-chart='{{ architecture_audit.certification|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ architecture_audit.warnings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ architecture_audit.recommendations|tojson }}'></div></article>
+</section>
+{% endblock %}

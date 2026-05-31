@@ -1,0 +1,12 @@
+{
+  "SignalEntity": 1,
+  "AssetEntity": 1,
+  "SessionEntity": 1,
+  "PatternEntity": 1,
+  "RegimeEntity": 1,
+  "OpportunityEntity": 1,
+  "ConfluenceEntity": 1,
+  "PaperResultEntity": 1,
+  "PortfolioEntity": 1,
+  "ReadinessEntity": 1
+}

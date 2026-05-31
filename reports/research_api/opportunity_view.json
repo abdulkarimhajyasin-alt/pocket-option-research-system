@@ -1,0 +1,49 @@
+{
+  "view_id": "opportunities",
+  "label_ar": "الفرص الموحدة",
+  "data": {
+    "opportunities": {
+      "summary": {},
+      "latest_available": false,
+      "raw_available": false
+    },
+    "market_regimes": {
+      "summary": {
+        "regime_state": "سوق عرضي",
+        "regime_score": 48.92,
+        "volatility_score": 39.41,
+        "trend_strength": 37.85,
+        "compatibility_score": 45.17,
+        "compatibility_category": "ضعيف",
+        "stability_score": 54.39,
+        "quality_score": 51.08,
+        "research_only": true
+      },
+      "latest_available": true,
+      "raw_available": true
+    },
+    "pattern_memory": {
+      "summary": {
+        "pattern_count": 194,
+        "successful_patterns": 2,
+        "failed_patterns": 62,
+        "success_ratio": 1.03,
+        "failure_ratio": 31.96,
+        "stability_score": 75.5,
+        "reliability_score": 1.03,
+        "learning_score": 50.0,
+        "adaptation_score": 75.13,
+        "best_pattern": "EURUSD + الجلسة الآسيوية + صاعد + هيكل هابط + CISD صاعد مؤكد + FVG غير موجود + IFVG غير موجود + سحب سيولة سفلية",
+        "research_only": true
+      },
+      "latest_available": true,
+      "raw_available": true
+    }
+  },
+  "available": true,
+  "metadata": {
+    "research_only": true,
+    "local_only": true,
+    "stable_schema": true
+  }
+}

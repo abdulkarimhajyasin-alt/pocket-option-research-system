@@ -1,0 +1,11 @@
+{
+  "safety_score": 100.0,
+  "missing_safety_flags": [],
+  "risky_imports": [],
+  "no_execution_paths": true,
+  "no_broker_paths": true,
+  "no_login_auth_paths": true,
+  "no_automation_paths": true,
+  "no_trading_paths": true,
+  "architecture_audit_only": true
+}
