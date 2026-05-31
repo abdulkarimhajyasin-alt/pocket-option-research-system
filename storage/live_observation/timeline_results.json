@@ -1,0 +1,149 @@
+{
+  "score": 76.41,
+  "sequence_count": 14,
+  "coverage": 100.0,
+  "progression": {
+    "1": 7.14,
+    "2": 14.29,
+    "3": 21.43,
+    "4": 28.57,
+    "5": 35.71,
+    "6": 42.86,
+    "7": 50.0,
+    "8": 57.14,
+    "9": 64.29,
+    "10": 71.43,
+    "11": 78.57,
+    "12": 85.71,
+    "13": 92.86,
+    "14": 100.0
+  },
+  "timeline": [
+    {
+      "sequence": 1,
+      "observation_id": "market_data",
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "source": "market_data",
+      "asset": "بيانات السوق",
+      "quality": 78.22,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 2,
+      "observation_id": "observation_layer",
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "source": "observation_layer",
+      "asset": "مراقبة السوق",
+      "quality": 0.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 3,
+      "observation_id": "broker_readiness",
+      "timestamp": "2026-05-31T14:12:13.893253",
+      "source": "broker_readiness",
+      "asset": "جاهزية المراقبة",
+      "quality": 67.41,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 4,
+      "observation_id": "broker_readiness",
+      "timestamp": "2026-05-31T14:12:13.893253",
+      "source": "broker_readiness",
+      "asset": "جاهزية المراقبة",
+      "quality": 67.41,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 5,
+      "observation_id": "browser_observation",
+      "timestamp": "2026-05-31T14:12:14.300675",
+      "source": "browser_observation",
+      "asset": "مراقبة المتصفح",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 6,
+      "observation_id": "external_observation",
+      "timestamp": "2026-05-31T14:12:19.256045",
+      "source": "external_observation",
+      "asset": "المراقبة الخارجية",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 7,
+      "observation_id": "external_observation",
+      "timestamp": "2026-05-31T14:12:19.256045",
+      "source": "external_observation",
+      "asset": "المراقبة الخارجية",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 8,
+      "observation_id": "external_observation",
+      "timestamp": "2026-05-31T14:12:19.256045",
+      "source": "external_observation",
+      "asset": "external_source",
+      "quality": 100.0,
+      "readiness": 100.0
+    },
+    {
+      "sequence": 9,
+      "observation_id": "snapshot_import",
+      "timestamp": "2026-05-31T14:13:12.803781",
+      "source": "snapshot_import",
+      "asset": "استيراد اللقطات",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 10,
+      "observation_id": "snapshot_import",
+      "timestamp": "2026-05-31T14:13:12.803781",
+      "source": "snapshot_import",
+      "asset": "استيراد اللقطات",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 11,
+      "observation_id": "snapshot_import",
+      "timestamp": "2026-05-31T14:13:12.803781",
+      "source": "snapshot_import",
+      "asset": "snapshot",
+      "quality": 100.0,
+      "readiness": 100.0
+    },
+    {
+      "sequence": 12,
+      "observation_id": "observation_intelligence",
+      "timestamp": "2026-05-31T14:13:12.903255",
+      "source": "observation_intelligence",
+      "asset": "ذكاء المراقبة",
+      "quality": 79.04,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 13,
+      "observation_id": "browser_observation",
+      "timestamp": "2026-05-31T14:13:12.947863",
+      "source": "browser_observation",
+      "asset": "مراقبة المتصفح",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 14,
+      "observation_id": "browser_observation",
+      "timestamp": "2026-05-31T14:13:12.947863",
+      "source": "browser_observation",
+      "asset": "browser_snapshot",
+      "quality": 100.0,
+      "readiness": 86.67
+    }
+  ]
+}

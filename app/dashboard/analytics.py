@@ -2386,6 +2386,119 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def live_observation_analytics(self) -> dict[str, Any]:
+        """Return latest deterministic live observation replay analytics."""
+        payload = self._latest_json_dict("live_observation", "replay_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        sources = payload.get("source_distribution", {}) if payload else {}
+        timeline = self._latest_json_dict("live_observation", "timeline")
+        quality = self._latest_json_dict("live_observation", "quality")
+        readiness = self._latest_json_dict("live_observation", "readiness")
+        validation = self._latest_json_dict("live_observation", "validation")
+        diagnostics = self._latest_json_dict("live_observation", "diagnostics")
+        recommendations = self._latest_json_dict("live_observation", "recommendations")
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        replay = latest.get("replay", {}) if isinstance(latest, dict) else {}
+        timeline_payload = latest.get("timeline", {}) if isinstance(latest, dict) else {}
+        coverage = {
+            "التغطية": summary.get("coverage_score", 0),
+            "الأحداث": replay.get("event_count", 0),
+            "التسلسل": timeline_payload.get("sequence_count", 0),
+        }
+        speed = {
+            f"{summary.get('speed_multiplier', 0)}x": summary.get("replay_score", 0),
+            "مدعوم": 100.0 if summary else 0.0,
+        }
+        stability = {
+            "الاستقرار": quality.get("stability", 0),
+            "الاعتمادية": quality.get("reliability", 0),
+            "الاتساق": quality.get("consistency", 0),
+        }
+        if not summary:
+            summary = {
+                "observation_count": 0,
+                "replay_state": "غير متاح",
+                "replay_score": 0.0,
+                "quality_score": 0.0,
+                "readiness_score": 0.0,
+                "validation_score": 0.0,
+                "coverage_score": 0.0,
+                "warning_count": 0,
+                "recommendation_count": 0,
+                "research_only": True,
+                "observation_only": True,
+                "live_observation_replay": True,
+            }
+        return {
+            "summary": summary,
+            "timeline": line_chart(
+                "التسلسل الزمني",
+                *self._dict_chart_values(timeline),
+                label="التسلسل",
+                color="blue",
+            ).to_dict(),
+            "quality": bar_chart(
+                "جودة التشغيل",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="accent",
+            ).to_dict(),
+            "validation": bar_chart(
+                "التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="blue",
+            ).to_dict(),
+            "coverage": bar_chart(
+                "التغطية",
+                *self._dict_chart_values(coverage),
+                label="التغطية",
+                color="green",
+            ).to_dict(),
+            "speed": bar_chart(
+                "السرعة",
+                *self._dict_chart_values(speed),
+                label="السرعة",
+                color="warning",
+            ).to_dict(),
+            "activity": line_chart(
+                "النشاط الزمني",
+                *self._dict_chart_values(timeline),
+                label="النشاط",
+                color="accent",
+            ).to_dict(),
+            "sources": bar_chart(
+                "مصادر الملاحظات",
+                *self._dict_chart_values(sources),
+                label="المصادر",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "أسباب التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "stability": bar_chart(
+                "استقرار التشغيل",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="accent",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

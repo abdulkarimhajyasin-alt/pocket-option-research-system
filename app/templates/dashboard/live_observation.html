@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.live_observation }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.live_observation }}</h1>
+  </div>
+  <a class="button-link" href="/actions">إعادة تشغيل المراقبة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>محرك إعادة تشغيل المراقبة</span>
+    <strong>{{ live_observation.summary.replay_state|default('غير متاح') }}</strong>
+    <p>محاكاة حتمية لتدفق الملاحظات السلبية من الملفات المحلية فقط دون تنفيذ أو أوامر أو تسجيل دخول أو اتصال وسيط أو تحكم متصفح.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجاهزية</span>
+    <strong>{{ live_observation.summary.readiness_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>عدد الملاحظات</span>
+    <strong>{{ live_observation.summary.observation_count|default(0)|number_ar }}</strong>
+    <small>السرعة {{ live_observation.summary.speed_multiplier|default(0)|number_ar }}x</small>
+    <small>التحذيرات {{ live_observation.summary.warning_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد الملاحظات</span><strong>{{ live_observation.summary.observation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>حالة التشغيل</span><strong>{{ live_observation.summary.replay_state|default('غير متاح') }}</strong></article>
+  <article class="metric-card"><span>درجة الجودة</span><strong>{{ live_observation.summary.quality_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الجاهزية</span><strong>{{ live_observation.summary.readiness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التحقق</span><strong>{{ live_observation.summary.validation_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التغطية</span><strong>{{ live_observation.summary.coverage_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ live_observation.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ live_observation.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التسلسل الزمني</h2><span>التتابع</span></div><div class="chart" data-chart='{{ live_observation.timeline|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جودة التشغيل</h2><span>الجودة</span></div><div class="chart" data-chart='{{ live_observation.quality|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الجاهزية</h2><span>الاستعداد</span></div><div class="chart" data-chart='{{ live_observation.readiness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التحقق</h2><span>السلامة</span></div><div class="chart" data-chart='{{ live_observation.validation|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التغطية</h2><span>المصادر</span></div><div class="chart" data-chart='{{ live_observation.coverage|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>السرعة</h2><span>المضاعف</span></div><div class="chart" data-chart='{{ live_observation.speed|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>النشاط الزمني</h2><span>الأحداث</span></div><div class="chart" data-chart='{{ live_observation.activity|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>استقرار التشغيل</h2><span>الاستقرار</span></div><div class="chart" data-chart='{{ live_observation.stability|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أسباب التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ live_observation.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ live_observation.recommendations|tojson }}'></div></article>
+</section>
+{% endblock %}

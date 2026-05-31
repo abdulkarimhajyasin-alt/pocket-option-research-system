@@ -53,16 +53,16 @@
     "تحسين التشخيص": 1
   },
   "readiness_timeline": {
-    "11:45": 81.73
+    "14:13": 81.73
   },
   "capability_timeline": {
-    "11:45": 67.41
+    "14:13": 67.41
   },
   "safety_timeline": {
-    "11:45": 100.0
+    "14:13": 100.0
   },
   "latest": {
-    "timestamp": "2026-05-31T11:45:12.942455",
+    "timestamp": "2026-05-31T14:13:34.476173",
     "capability": {
       "market_visibility": 79.05,
       "asset_visibility": 48.0,

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-31T11:45:30.478562",
+  "timestamp": "2026-05-31T14:13:12.803781",
   "imports": [
     {
       "import_id": "manual_sample_snapshot",
       "filename": "manual_sample_snapshot.json",
       "import_type": "json_snapshot",
-      "source_path": "storage\\snapshot_import\\uploads\\manual_sample_snapshot.json",
+      "source_path": "D:\\pocket-option-research-system\\storage\\snapshot_import\\uploads\\manual_sample_snapshot.json",
       "imported_at": "1780188295293973300",
       "size_bytes": 234,
       "validation_status": "ناجح",

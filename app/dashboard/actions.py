@@ -191,8 +191,19 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
     "market_observation": ActionDefinition(
         name="market_observation",
         label="تحديث مصدر مراقبة السوق",
-        description="إنشاء مصدر مراقبة سوق موحد من المخرجات السلبية المحلية دون تنفيذ أو أوامر أو تسجيل دخول.",
+        description=(
+            "إنشاء مصدر مراقبة سوق موحد من المخرجات السلبية المحلية دون تنفيذ أو أوامر "
+            "أو تسجيل دخول."
+        ),
         command=("scripts/run_market_observation.py",),
+    ),
+    "live_observation": ActionDefinition(
+        name="live_observation",
+        label="إعادة تشغيل المراقبة",
+        description=(
+            "تشغيل محاكاة تدفق الملاحظات السلبية محليا دون تنفيذ أو وسيط أو أتمتة."
+        ),
+        command=("scripts/run_live_observation.py",),
     ),
     "research_operations": ActionDefinition(
         name="research_operations",

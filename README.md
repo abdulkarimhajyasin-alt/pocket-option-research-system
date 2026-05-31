@@ -416,6 +416,28 @@ The pipeline does not add broker access, browser automation, login, execution, o
 placement, credential handling, or trading automation. It only reads existing local
 research artifacts and produces dashboard/report data.
 
+## Phase 42 Live Observation Replay Engine
+
+Phase 42 adds a deterministic Live Observation Replay Engine for research-only
+observation flow simulation. It replays historical, imported, unified, browser,
+external, and observation-intelligence outputs as if they were arriving in sequence.
+
+Outputs are written under:
+
+- `storage/live_observation/`
+- `reports/live_observation/`
+
+Run the replay engine and diagnostics:
+
+```bash
+python scripts/run_live_observation.py
+python scripts/check_live_observation.py
+```
+
+The replay engine simulates observation timing only. It does not add broker access,
+browser automation, login, authentication, credential handling, order placement,
+execution, money management, position management, or trading automation.
+
 Dashboard pages:
 
 - Overview
