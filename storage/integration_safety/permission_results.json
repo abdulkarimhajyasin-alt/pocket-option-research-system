@@ -1,0 +1,25 @@
+{
+  "allowed_capabilities": [
+    "local file reading",
+    "local report reading",
+    "passive snapshot parsing",
+    "passive observation modeling",
+    "local replay",
+    "local paper simulation",
+    "local diagnostics",
+    "local reporting"
+  ],
+  "declared_capabilities": [
+    "local file reading",
+    "local report reading",
+    "passive snapshot parsing",
+    "passive observation modeling",
+    "local replay",
+    "local paper simulation",
+    "local diagnostics",
+    "local reporting"
+  ],
+  "unknown_capabilities": [],
+  "permission_score": 100.0,
+  "safety_boundary_only": true
+}

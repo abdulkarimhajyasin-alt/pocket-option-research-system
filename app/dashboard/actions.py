@@ -249,6 +249,15 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_paper_live_readiness.py",),
     ),
+    "integration_safety": ActionDefinition(
+        name="integration_safety",
+        label="أمان التكامل",
+        description=(
+            "توليد حدود أمان محلية للتكامل الخارجي المستقبلي دون وسيط أو "
+            "متصفح أو مصادقة أو تنفيذ أو أوامر."
+        ),
+        command=("scripts/run_integration_safety.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

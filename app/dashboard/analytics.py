@@ -3237,6 +3237,133 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def integration_safety_analytics(self) -> dict[str, Any]:
+        """Return latest safety-boundary-only integration analytics."""
+        payload = self._latest_json_dict("integration_safety", "safety_summary")
+        permissions = self._latest_json_dict("integration_safety", "permission")
+        restrictions = self._latest_json_dict("integration_safety", "restriction")
+        compliance = self._latest_json_dict("integration_safety", "compliance")
+        audit = self._latest_json_dict("integration_safety", "audit")
+        diagnostics = self._latest_json_dict("integration_safety", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "integration_safety",
+            "recommendations",
+        )
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        if not summary:
+            summary = {
+                "boundary_status": "تحتاج مراجعة",
+                "safety_score": 0.0,
+                "compliance_score": 0.0,
+                "allowed_capabilities": [],
+                "forbidden_capabilities": [],
+                "safety_boundary_only": True,
+                "readiness_only": True,
+                "research_only": True,
+            }
+        allowed = summary.get("allowed_capabilities", [])
+        forbidden = summary.get("forbidden_capabilities", [])
+        latest_diagnostics = latest.get("diagnostics", []) if isinstance(latest, dict) else []
+        latest_recommendations = (
+            latest.get("recommendations", []) if isinstance(latest, dict) else []
+        )
+        summary = {
+            **summary,
+            "restriction_score": self._float(restrictions.get("restriction_score")),
+            "permission_score": self._float(permissions.get("permission_score")),
+            "allowed_count": len(allowed) if isinstance(allowed, list) else 0,
+            "forbidden_count": len(forbidden) if isinstance(forbidden, list) else 0,
+            "warning_count": len(latest_diagnostics),
+            "recommendation_count": len(latest_recommendations),
+            "safety_boundary_only": True,
+            "readiness_only": True,
+            "research_only": True,
+        }
+        safety_chart = {
+            "درجة السلامة": self._float(summary.get("safety_score")),
+            "درجة الامتثال": self._float(summary.get("compliance_score")),
+            "درجة القيود": self._float(summary.get("restriction_score")),
+            "درجة الأذونات": self._float(summary.get("permission_score")),
+        }
+        restriction_chart = {
+            "المسموحة": self._float(summary.get("allowed_count")),
+            "المحظورة": self._float(summary.get("forbidden_count")),
+            "المخالفات": self._float(len(restrictions.get("violations", []))),
+        }
+        allowed_chart = {
+            str(value): 1.0 for value in allowed if isinstance(value, str)
+        }
+        forbidden_chart = {
+            str(value): 1.0 for value in forbidden if isinstance(value, str)
+        }
+        audit_chart = {
+            "المسموحة": self._float(len(audit.get("allowed_capabilities", []))),
+            "المحظورة": self._float(len(audit.get("forbidden_capabilities", []))),
+            "المخالفات": self._float(len(audit.get("detected_violations", []))),
+            "التحذيرات": self._float(len(audit.get("warnings", []))),
+        }
+        return {
+            "summary": summary,
+            "latest": latest,
+            "safety": bar_chart(
+                "توزيع السلامة",
+                *self._dict_chart_values(safety_chart),
+                label="توزيع السلامة",
+                color="green",
+            ).to_dict(),
+            "compliance": bar_chart(
+                "توزيع الامتثال",
+                *self._dict_chart_values(compliance),
+                label="توزيع الامتثال",
+                color="blue",
+            ).to_dict(),
+            "restrictions": bar_chart(
+                "توزيع القيود",
+                *self._dict_chart_values(restriction_chart),
+                label="توزيع القيود",
+                color="warning",
+            ).to_dict(),
+            "allowed": bar_chart(
+                "القدرات المسموحة",
+                *self._dict_chart_values(allowed_chart),
+                label="القدرات المسموحة",
+                color="green",
+            ).to_dict(),
+            "forbidden": bar_chart(
+                "القدرات المحظورة",
+                *self._dict_chart_values(forbidden_chart),
+                label="القدرات المحظورة",
+                color="warning",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "boundary": bar_chart(
+                "حالة الحدود",
+                *self._dict_chart_values(
+                    {str(summary.get("boundary_status")): summary.get("safety_score")}
+                ),
+                label="حالة الحدود",
+                color="accent",
+            ).to_dict(),
+            "audit": bar_chart(
+                "سجل التدقيق",
+                *self._dict_chart_values(audit_chart),
+                label="سجل التدقيق",
+                color="blue",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

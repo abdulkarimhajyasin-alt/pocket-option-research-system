@@ -1,0 +1,11 @@
+{
+  "research_only_compliance": true,
+  "observation_only_compliance": true,
+  "paper_only_compliance": true,
+  "no_execution_compliance": true,
+  "no_broker_compliance": true,
+  "no_browser_automation_compliance": true,
+  "missing_flags": [],
+  "compliance_score": 100.0,
+  "safety_boundary_only": true
+}

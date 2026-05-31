@@ -1,0 +1,24 @@
+{
+  "forbidden_capabilities": [
+    "broker connection",
+    "broker APIs",
+    "account login",
+    "authentication",
+    "credential storage",
+    "browser automation",
+    "button clicking",
+    "DOM control",
+    "trade placement",
+    "order placement",
+    "real execution",
+    "money handling",
+    "account changes",
+    "withdrawals",
+    "deposits",
+    "external trading actions"
+  ],
+  "detected_capabilities": [],
+  "violations": [],
+  "restriction_score": 100.0,
+  "safety_boundary_only": true
+}

@@ -1,0 +1,60 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.integration_safety }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">حدود أمان فقط</p>
+    <h1>حدود أمان التكامل الخارجي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث أمان التكامل</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حدود أمان التكامل الخارجي</span>
+    <strong>{{ integration_safety.summary.boundary_status|default("تحتاج مراجعة") }}</strong>
+    <p>سياسة محلية تحدد القدرات المسموحة والمحظورة لأي عمل تكامل مستقبلي دون وسيط أو متصفح أو مصادقة أو تنفيذ أو تداول حي.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة السلامة</span>
+    <strong>{{ integration_safety.summary.safety_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>الامتثال والقيود</span>
+    <strong>{{ integration_safety.summary.compliance_score|default(0)|number_ar }}</strong>
+    <small>القيود {{ integration_safety.summary.restriction_score|default(0)|number_ar }}</small>
+    <small>التحذيرات {{ integration_safety.summary.warning_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>حالة الحدود</span><strong>{{ integration_safety.summary.boundary_status|default("تحتاج مراجعة") }}</strong></article>
+  <article class="metric-card"><span>درجة السلامة</span><strong>{{ integration_safety.summary.safety_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الامتثال</span><strong>{{ integration_safety.summary.compliance_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة القيود</span><strong>{{ integration_safety.summary.restriction_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد القدرات المسموحة</span><strong>{{ integration_safety.summary.allowed_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد القدرات المحظورة</span><strong>{{ integration_safety.summary.forbidden_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ integration_safety.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ integration_safety.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع السلامة</h2><span>السياسة</span></div><div class="chart" data-chart='{{ integration_safety.safety|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الامتثال</h2><span>الشروط</span></div><div class="chart" data-chart='{{ integration_safety.compliance|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع القيود</h2><span>المنع</span></div><div class="chart" data-chart='{{ integration_safety.restrictions|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>القدرات المسموحة</h2><span>محلية فقط</span></div><div class="chart" data-chart='{{ integration_safety.allowed|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>القدرات المحظورة</h2><span>ممنوعة</span></div><div class="chart" data-chart='{{ integration_safety.forbidden|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>حالة الحدود</h2><span>الأمان</span></div><div class="chart" data-chart='{{ integration_safety.boundary|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ integration_safety.warnings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ integration_safety.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>سجل التدقيق</h2><span>السياسة</span></div><div class="chart" data-chart='{{ integration_safety.audit|tojson }}'></div></article>
+</section>
+{% endblock %}

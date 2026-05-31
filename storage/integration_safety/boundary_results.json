@@ -1,0 +1,9 @@
+{
+  "boundary_status": "محمية بالكامل",
+  "safety_score": 100.0,
+  "permission_score": 100.0,
+  "restriction_score": 100.0,
+  "compliance_score": 100.0,
+  "boundary_risks": [],
+  "safety_boundary_only": true
+}

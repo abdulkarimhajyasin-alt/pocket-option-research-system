@@ -9,7 +9,7 @@
     "safety_score": 100.0,
     "warning_count": 0,
     "recommendation_count": 1,
-    "last_import": "2026-05-31T16:18:41.846486",
+    "last_import": "2026-05-31T19:50:26.316589",
     "manual_only": true,
     "research_only": true,
     "observation_only": true
@@ -62,7 +62,7 @@
     "متابعة الاستيراد اليدوي": 1
   },
   "latest": {
-    "timestamp": "2026-05-31T16:18:41.846486",
+    "timestamp": "2026-05-31T19:50:26.316589",
     "imports": [
       {
         "import_id": "manual_sample_snapshot",

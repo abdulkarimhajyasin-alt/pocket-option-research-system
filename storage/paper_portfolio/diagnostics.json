@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-05-31T16:19:20.175120+00:00",
+  "timestamp": "2026-05-31T19:51:09.451600+00:00",
   "portfolio": {
     "portfolio_id": "paper_portfolio_0001",
-    "created_at": "2026-05-31T16:19:20.174931+00:00",
+    "created_at": "2026-05-31T19:51:09.451398+00:00",
     "total_orders": 14,
     "active_orders": 0,
     "wins": 2,
@@ -245,7 +245,7 @@
     "recommendation_count": 3,
     "summary": {
       "portfolio_id": "paper_portfolio_0001",
-      "created_at": "2026-05-31T16:19:20.174931+00:00",
+      "created_at": "2026-05-31T19:51:09.451398+00:00",
       "total_orders": 14,
       "active_orders": 0,
       "wins": 2,

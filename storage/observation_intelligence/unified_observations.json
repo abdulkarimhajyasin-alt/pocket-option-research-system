@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-31T16:20:06.455926",
+  "timestamp": "2026-05-31T19:50:13.750712",
   "observations": [
     {
       "observation_id": "snapshot_import",
@@ -21,7 +21,7 @@
       "observation_id": "browser_observation",
       "source_type": "browser_observation",
       "source_name": "مراقبة المتصفح",
-      "timestamp": "2026-05-31T16:18:23.321768",
+      "timestamp": "2026-05-31T19:50:01.589106",
       "assets": 3.0,
       "payouts": 1.0,
       "sessions": 1.0,
@@ -37,7 +37,7 @@
       "observation_id": "external_observation",
       "source_type": "external_observation",
       "source_name": "المراقبة الخارجية",
-      "timestamp": "2026-05-31T16:18:28.587601",
+      "timestamp": "2026-05-31T19:50:09.556776",
       "assets": 4.0,
       "payouts": 4.0,
       "sessions": 4.0,
@@ -53,7 +53,7 @@
       "observation_id": "broker_readiness",
       "source_type": "broker_readiness",
       "source_name": "جاهزية المراقبة",
-      "timestamp": "2026-05-31T16:18:22.945561",
+      "timestamp": "2026-05-31T19:50:01.138728",
       "assets": 48.0,
       "payouts": 74.2,
       "sessions": 60.0,
