@@ -1826,6 +1826,134 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def external_observation_analytics(self) -> dict[str, Any]:
+        """Return latest external observation sandbox analytics."""
+        payload = self._latest_json_dict("external_observation", "sandbox_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        sources = payload.get("source_distribution", {}) if payload else {}
+        validation = self._latest_json_dict("external_observation", "validation")
+        monitoring = self._latest_json_dict("external_observation", "monitoring")
+        health = self._latest_json_dict("external_observation", "health")
+        diagnostics = self._latest_json_dict("external_observation", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "external_observation",
+            "recommendations",
+        )
+        latest = payload.get("latest", {}) if payload else {}
+        analytics = self._latest_json_dict("external_observation", "diagnostics")
+        isolation = (
+            latest.get("isolation", {}) if isinstance(latest.get("isolation"), dict) else {}
+        )
+        isolation_chart = {
+            "لا اتصال وسيط": 100.0
+            if isolation.get("no_broker_connectivity")
+            else 0.0,
+            "لا وصول حساب": 100.0 if isolation.get("no_account_access") else 0.0,
+            "لا مسارات تنفيذ": 100.0 if isolation.get("no_execution_paths") else 0.0,
+            "لا مصادقة": 100.0
+            if isolation.get("no_authentication_flows")
+            else 0.0,
+            "لا أوامر": 100.0 if isolation.get("no_order_apis") else 0.0,
+        }
+        source_quality = latest.get("sources", []) if isinstance(latest, dict) else []
+        quality = {
+            item.get("source_name", "مصدر"): 100.0
+            if item.get("validation_status") == "ناجح"
+            else 50.0
+            for item in source_quality
+            if isinstance(item, dict)
+        }
+        stability = {
+            item.get("source_name", "مصدر"): 100.0
+            if item.get("observation_status") == "نشط"
+            else 50.0
+            for item in source_quality
+            if isinstance(item, dict)
+        }
+        coverage = {
+            item.get("source_name", "مصدر"): 100.0
+            if item.get("visibility_scope")
+            else 0.0
+            for item in source_quality
+            if isinstance(item, dict)
+        }
+        if not summary:
+            summary = {
+                "source_count": 0,
+                "sandbox_score": 0.0,
+                "sandbox_state": "غير متاح",
+                "health_score": 0.0,
+                "validation_score": 0.0,
+                "monitoring_score": 0.0,
+                "isolation_score": 0.0,
+                "warning_count": 0,
+                "recommendation_count": 0,
+            }
+        return {
+            "summary": summary,
+            "sources": bar_chart(
+                "توزيع المصادر",
+                *self._dict_chart_values(sources),
+                label="المصادر",
+                color="blue",
+            ).to_dict(),
+            "health": bar_chart(
+                "توزيع الصحة",
+                *self._dict_chart_values(health),
+                label="الصحة",
+                color="green",
+            ).to_dict(),
+            "validation": bar_chart(
+                "توزيع التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="accent",
+            ).to_dict(),
+            "monitoring": bar_chart(
+                "توزيع المراقبة",
+                *self._dict_chart_values(monitoring),
+                label="المراقبة",
+                color="blue",
+            ).to_dict(),
+            "isolation": bar_chart(
+                "توزيع العزل",
+                *self._dict_chart_values(isolation_chart),
+                label="العزل",
+                color="warning",
+            ).to_dict(),
+            "source_quality": bar_chart(
+                "جودة المصادر",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "source_stability": bar_chart(
+                "استقرار المصادر",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="blue",
+            ).to_dict(),
+            "source_coverage": bar_chart(
+                "تغطية المصادر",
+                *self._dict_chart_values(coverage),
+                label="التغطية",
+                color="accent",
+            ).to_dict(),
+            "failures": bar_chart(
+                "أسباب الإخفاق",
+                *self._dict_chart_values(diagnostics),
+                label="الإخفاق",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "analytics": analytics,
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

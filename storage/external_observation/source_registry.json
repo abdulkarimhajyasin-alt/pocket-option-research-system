@@ -1,0 +1,46 @@
+[
+  {
+    "source_id": "simulated-research",
+    "source_name": "مصدر محاكاة بحثي",
+    "source_type": "simulated",
+    "observation_status": "نشط",
+    "visibility_scope": "نتائج بحث محلية",
+    "validation_status": "ناجح",
+    "isolation_status": "معزول",
+    "research_only": true,
+    "observation_only": true
+  },
+  {
+    "source_id": "local-sample-file",
+    "source_name": "ملف عينة محلي",
+    "source_type": "local_file",
+    "observation_status": "نشط",
+    "visibility_scope": "شموع محفوظة محليا",
+    "validation_status": "ناجح",
+    "isolation_status": "معزول",
+    "research_only": true,
+    "observation_only": true
+  },
+  {
+    "source_id": "historical-dataset",
+    "source_name": "بيانات تاريخية",
+    "source_type": "historical_dataset",
+    "observation_status": "نشط",
+    "visibility_scope": "تحليلات بيانات تاريخية",
+    "validation_status": "ناجح",
+    "isolation_status": "معزول",
+    "research_only": true,
+    "observation_only": true
+  },
+  {
+    "source_id": "sandbox-feed",
+    "source_name": "تغذية صندوقية",
+    "source_type": "sandbox_feed",
+    "observation_status": "نشط",
+    "visibility_scope": "مخرجات مراقبة محلية",
+    "validation_status": "ناجح",
+    "isolation_status": "معزول",
+    "research_only": true,
+    "observation_only": true
+  }
+]

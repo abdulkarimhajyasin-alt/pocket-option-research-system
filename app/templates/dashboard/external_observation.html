@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.external_observation }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.external_observation }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث بيئة المراقبة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>بيئة المراقبة الخارجية</span>
+    <strong>{{ external_observation.summary.sandbox_state|default('غير متاح') }}</strong>
+    <p>صندوق سلبي لنمذجة مصادر المراقبة المستقبلية دون اتصال وسيط أو حساب أو مصادقة أو أوامر أو تنفيذ.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجاهزية</span>
+    <strong>{{ external_observation.summary.sandbox_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>درجة الصحة</span>
+    <strong>{{ external_observation.summary.health_score|default(0)|number_ar }}</strong>
+    <small>المصادر {{ external_observation.summary.source_count|default(0)|number_ar }}</small>
+    <small>التوصيات {{ external_observation.summary.recommendation_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد المصادر</span><strong>{{ external_observation.summary.source_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الجاهزية</span><strong>{{ external_observation.summary.sandbox_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الصحة</span><strong>{{ external_observation.summary.health_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التحقق</span><strong>{{ external_observation.summary.validation_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة المراقبة</span><strong>{{ external_observation.summary.monitoring_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة العزل</span><strong>{{ external_observation.summary.isolation_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ external_observation.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ external_observation.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع المصادر</h2><span>المصادر</span></div><div class="chart" data-chart='{{ external_observation.sources|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الصحة</h2><span>الصحة</span></div><div class="chart" data-chart='{{ external_observation.health|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع التحقق</h2><span>التحقق</span></div><div class="chart" data-chart='{{ external_observation.validation|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع المراقبة</h2><span>المراقبة</span></div><div class="chart" data-chart='{{ external_observation.monitoring|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع العزل</h2><span>العزل</span></div><div class="chart" data-chart='{{ external_observation.isolation|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جودة المصادر</h2><span>الجودة</span></div><div class="chart" data-chart='{{ external_observation.source_quality|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>استقرار المصادر</h2><span>الاستقرار</span></div><div class="chart" data-chart='{{ external_observation.source_stability|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تغطية المصادر</h2><span>التغطية</span></div><div class="chart" data-chart='{{ external_observation.source_coverage|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أسباب الإخفاق</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ external_observation.failures|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ external_observation.recommendations|tojson }}'></div></article>
+</section>
+{% endblock %}

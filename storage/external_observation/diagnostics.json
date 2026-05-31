@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "source_count": 4,
+    "sandbox_score": 100.0,
+    "sandbox_state": "جاهز للمراقبة المتقدمة",
+    "health_score": 100.0,
+    "validation_score": 100.0,
+    "monitoring_score": 100.0,
+    "isolation_score": 100.0,
+    "warning_count": 0,
+    "recommendation_count": 1,
+    "research_only": true,
+    "observation_only": true
+  },
+  "source_distribution": {
+    "simulated": 1,
+    "local_file": 1,
+    "historical_dataset": 1,
+    "sandbox_feed": 1
+  },
+  "health_distribution": {
+    "score": 100.0,
+    "state": "جاهز للمراقبة المتقدمة",
+    "explanation": "الصندوق مؤهل لمصادر مراقبة متقدمة.",
+    "validation_health": 100.0,
+    "monitoring_health": 100.0,
+    "isolation_health": 100.0,
+    "reporting_health": 100.0
+  },
+  "validation_distribution": {
+    "score": 100.0,
+    "structure": 100.0,
+    "integrity": 100.0,
+    "completeness": 100.0,
+    "consistency": 100.0,
+    "compatibility": 100.0
+  },
+  "monitoring_distribution": {
+    "score": 100.0,
+    "uptime": 100.0,
+    "quality": 100.0,
+    "consistency": 100.0,
+    "coverage": 100.0,
+    "stability": 100.0
+  },
+  "isolation_distribution": {
+    "لا اتصال وسيط": 100.0,
+    "لا وصول حساب": 100.0,
+    "لا مسارات تنفيذ": 100.0,
+    "لا مصادقة": 100.0,
+    "لا أوامر": 100.0
+  },
+  "source_quality": {
+    "مصدر محاكاة بحثي": 100.0,
+    "ملف عينة محلي": 100.0,
+    "بيانات تاريخية": 100.0,
+    "تغذية صندوقية": 100.0
+  },
+  "source_stability": {
+    "مصدر محاكاة بحثي": 100.0,
+    "ملف عينة محلي": 100.0,
+    "بيانات تاريخية": 100.0,
+    "تغذية صندوقية": 100.0
+  },
+  "source_coverage": {
+    "مصدر محاكاة بحثي": 100.0,
+    "ملف عينة محلي": 100.0,
+    "بيانات تاريخية": 100.0,
+    "تغذية صندوقية": 100.0
+  },
+  "diagnostics_distribution": {},
+  "recommendation_distribution": {
+    "متابعة المراقبة السلبية": 1
+  },
+  "latest": {
+    "timestamp": "2026-05-31T00:22:16.189379",
+    "sources": [
+      {
+        "source_id": "simulated-research",
+        "source_name": "مصدر محاكاة بحثي",
+        "source_type": "simulated",
+        "observation_status": "نشط",
+        "visibility_scope": "نتائج بحث محلية",
+        "validation_status": "ناجح",
+        "isolation_status": "معزول",
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "source_id": "local-sample-file",
+        "source_name": "ملف عينة محلي",
+        "source_type": "local_file",
+        "observation_status": "نشط",
+        "visibility_scope": "شموع محفوظة محليا",
+        "validation_status": "ناجح",
+        "isolation_status": "معزول",
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "source_id": "historical-dataset",
+        "source_name": "بيانات تاريخية",
+        "source_type": "historical_dataset",
+        "observation_status": "نشط",
+        "visibility_scope": "تحليلات بيانات تاريخية",
+        "validation_status": "ناجح",
+        "isolation_status": "معزول",
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "source_id": "sandbox-feed",
+        "source_name": "تغذية صندوقية",
+        "source_type": "sandbox_feed",
+        "observation_status": "نشط",
+        "visibility_scope": "مخرجات مراقبة محلية",
+        "validation_status": "ناجح",
+        "isolation_status": "معزول",
+        "research_only": true,
+        "observation_only": true
+      }
+    ],
+    "validation": {
+      "score": 100.0,
+      "structure": 100.0,
+      "integrity": 100.0,
+      "completeness": 100.0,
+      "consistency": 100.0,
+      "compatibility": 100.0
+    },
+    "isolation": {
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "score": 100.0,
+      "no_broker_connectivity": true,
+      "no_account_access": true,
+      "no_execution_paths": true,
+      "no_authentication_flows": true,
+      "no_order_apis": true
+    },
+    "monitoring": {
+      "score": 100.0,
+      "uptime": 100.0,
+      "quality": 100.0,
+      "consistency": 100.0,
+      "coverage": 100.0,
+      "stability": 100.0
+    },
+    "health": {
+      "score": 100.0,
+      "state": "جاهز للمراقبة المتقدمة",
+      "explanation": "الصندوق مؤهل لمصادر مراقبة متقدمة.",
+      "validation_health": 100.0,
+      "monitoring_health": 100.0,
+      "isolation_health": 100.0,
+      "reporting_health": 100.0
+    },
+    "sandbox": {
+      "score": 100.0,
+      "state": "جاهز للمراقبة المتقدمة",
+      "explanation": "الصندوق مؤهل لمصادر مراقبة متقدمة.",
+      "observation_only": true,
+      "not_execution": true
+    },
+    "diagnostics": [],
+    "recommendations": [
+      {
+        "title": "متابعة المراقبة السلبية",
+        "priority": "منخفض",
+        "reason": "الصندوق يعمل ضمن حدود البحث والمراقبة فقط."
+      }
+    ],
+    "metadata": {
+      "research_only": true,
+      "observation_only": true,
+      "not_execution": true,
+      "not_order_placement": true,
+      "not_account_login": true,
+      "not_broker_authentication": true,
+      "not_browser_automation": true,
+      "not_broker_control": true
+    },
+    "research_only": true,
+    "observation_only": true,
+    "not_execution": true,
+    "not_order_placement": true,
+    "not_account_login": true,
+    "not_broker_authentication": true,
+    "not_browser_automation": true,
+    "not_broker_control": true
+  }
+}

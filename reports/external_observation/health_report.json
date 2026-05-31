@@ -1,0 +1,9 @@
+{
+  "score": 100.0,
+  "state": "جاهز للمراقبة المتقدمة",
+  "explanation": "الصندوق مؤهل لمصادر مراقبة متقدمة.",
+  "validation_health": 100.0,
+  "monitoring_health": 100.0,
+  "isolation_health": 100.0,
+  "reporting_health": 100.0
+}

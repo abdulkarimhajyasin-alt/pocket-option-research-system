@@ -460,6 +460,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/external-observation", response_class=HTMLResponse)
+    def external_observation(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/external_observation.html",
+            context(
+                request,
+                dashboard,
+                page="external_observation",
+                external_observation=dashboard.analytics.external_observation_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -560,6 +574,10 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/broker-readiness")
     def api_broker_readiness() -> dict[str, object]:
         return dashboard_context().analytics.broker_readiness_analytics()
+
+    @app.get("/api/external-observation")
+    def api_external_observation() -> dict[str, object]:
+        return dashboard_context().analytics.external_observation_analytics()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

@@ -164,6 +164,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل جاهزية المراقبة السلبية دون تنفيذ أو تحكم وسيط.",
         command=("scripts/run_broker_readiness.py",),
     ),
+    "external_observation": ActionDefinition(
+        name="external_observation",
+        label="تحديث بيئة المراقبة الخارجية",
+        description="تشغيل صندوق مراقبة خارجي سلبي دون اتصال أو مصادقة أو تنفيذ.",
+        command=("scripts/run_external_observation.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",
