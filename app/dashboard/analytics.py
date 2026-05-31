@@ -2072,6 +2072,320 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def snapshot_import_analytics(self) -> dict[str, Any]:
+        """Return latest manual snapshot import analytics."""
+        payload = self._latest_json_dict("snapshot_import", "import_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        imports = payload.get("import_distribution", {}) if payload else {}
+        quality_timeline = payload.get("quality_timeline", {}) if payload else {}
+        validation = self._latest_json_dict("snapshot_import", "validation")
+        processing = self._latest_json_dict("snapshot_import", "processing")
+        quality = self._latest_json_dict("snapshot_import", "quality")
+        diagnostics = self._latest_json_dict("snapshot_import", "diagnostics")
+        recommendations = self._latest_json_dict("snapshot_import", "recommendations")
+        latest = payload.get("latest", {}) if payload else {}
+        safety = latest.get("safety", {}) if isinstance(latest, dict) else {}
+        safety_chart = {
+            "لا تسجيل دخول": 100.0 if safety.get("no_login") else 0.0,
+            "لا مصادقة": 100.0 if safety.get("no_authentication") else 0.0,
+            "لا أتمتة متصفح": 100.0
+            if safety.get("no_browser_automation")
+            else 0.0,
+            "لا وصول وسيط": 100.0 if safety.get("no_broker_access") else 0.0,
+            "لا تنفيذ": 100.0 if safety.get("no_execution") else 0.0,
+            "لا تفاعل حساب": 100.0
+            if safety.get("no_account_interaction")
+            else 0.0,
+        }
+        rows = latest.get("imports", []) if isinstance(latest, dict) else []
+        file_quality = {
+            item.get("filename", "ملف"): 100.0
+            if item.get("validation_status") == "ناجح"
+            else 50.0
+            for item in rows
+            if isinstance(item, dict)
+        }
+        file_completeness = {
+            item.get("filename", "ملف"): 100.0
+            if item.get("size_bytes", 0)
+            else 0.0
+            for item in rows
+            if isinstance(item, dict)
+        }
+        if not summary:
+            summary = {
+                "import_count": 0,
+                "workflow_score": 0.0,
+                "workflow_state": "غير متاح",
+                "quality_score": 0.0,
+                "validation_score": 0.0,
+                "processing_score": 0.0,
+                "safety_score": 0.0,
+                "warning_count": 0,
+                "recommendation_count": 0,
+                "last_import": "غير متاح",
+            }
+        return {
+            "summary": summary,
+            "imports": bar_chart(
+                "توزيع اللقطات",
+                *self._dict_chart_values(imports),
+                label="اللقطات",
+                color="blue",
+            ).to_dict(),
+            "quality": bar_chart(
+                "توزيع الجودة",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "validation": bar_chart(
+                "توزيع التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="accent",
+            ).to_dict(),
+            "processing": bar_chart(
+                "توزيع المعالجة",
+                *self._dict_chart_values(processing),
+                label="المعالجة",
+                color="blue",
+            ).to_dict(),
+            "safety": bar_chart(
+                "توزيع السلامة",
+                *self._dict_chart_values(safety_chart),
+                label="السلامة",
+                color="warning",
+            ).to_dict(),
+            "file_quality": bar_chart(
+                "جودة الملفات",
+                *self._dict_chart_values(file_quality),
+                label="الملفات",
+                color="green",
+            ).to_dict(),
+            "file_completeness": bar_chart(
+                "اكتمال الملفات",
+                *self._dict_chart_values(file_completeness),
+                label="الاكتمال",
+                color="accent",
+            ).to_dict(),
+            "failures": bar_chart(
+                "أسباب الرفض",
+                *self._dict_chart_values(diagnostics),
+                label="الرفض",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="blue",
+            ).to_dict(),
+            "quality_timeline": line_chart(
+                "تطور الجودة",
+                *self._dict_chart_values(quality_timeline),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+        }
+
+    def observation_intelligence_analytics(self) -> dict[str, Any]:
+        """Return latest unified observation intelligence analytics."""
+        payload = self._latest_json_dict(
+            "observation_intelligence",
+            "observation_summary",
+        )
+        summary = payload.get("summary", {}) if payload else {}
+        sources = payload.get("source_distribution", {}) if payload else {}
+        readiness = payload.get("readiness_distribution", {}) if payload else {}
+        quality = self._latest_json_dict("observation_intelligence", "quality")
+        confidence = self._latest_json_dict("observation_intelligence", "confidence")
+        coverage = self._latest_json_dict("observation_intelligence", "coverage")
+        diagnostics = self._latest_json_dict("observation_intelligence", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "observation_intelligence",
+            "recommendations",
+        )
+        latest = payload.get("latest", {}) if payload else {}
+        aggregation = latest.get("aggregation", {}) if isinstance(latest, dict) else {}
+        validation = latest.get("validation", {}) if isinstance(latest, dict) else {}
+        source_quality = {
+            item.get("source_name", "مصدر"): item.get("quality_score", 0)
+            for item in latest.get("observations", [])
+            if isinstance(item, dict)
+        } if isinstance(latest, dict) else {}
+        consistency = {
+            "الاتساق": aggregation.get("consistency", 0),
+            "التحقق": validation.get("consistency", 0),
+        }
+        conflicts = {
+            "تضارب": aggregation.get("conflicts", 0),
+            "اتساق": aggregation.get("consistency", 0),
+        }
+        if not summary:
+            summary = {
+                "observation_count": 0,
+                "quality_score": 0.0,
+                "confidence_score": 0.0,
+                "consistency_score": 0.0,
+                "coverage_score": 0.0,
+                "readiness_score": 0.0,
+                "warning_count": 0,
+                "recommendation_count": 0,
+            }
+        return {
+            "summary": summary,
+            "sources": bar_chart(
+                "توزيع المصادر",
+                *self._dict_chart_values(sources),
+                label="المصادر",
+                color="blue",
+            ).to_dict(),
+            "quality": bar_chart(
+                "توزيع الجودة",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "توزيع الثقة",
+                *self._dict_chart_values(confidence),
+                label="الثقة",
+                color="accent",
+            ).to_dict(),
+            "consistency": bar_chart(
+                "توزيع الاتساق",
+                *self._dict_chart_values(consistency),
+                label="الاتساق",
+                color="blue",
+            ).to_dict(),
+            "coverage": bar_chart(
+                "توزيع التغطية",
+                *self._dict_chart_values(coverage),
+                label="التغطية",
+                color="green",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "توزيع الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="warning",
+            ).to_dict(),
+            "conflicts": bar_chart(
+                "تضارب البيانات",
+                *self._dict_chart_values(conflicts),
+                label="التضارب",
+                color="warning",
+            ).to_dict(),
+            "source_quality": bar_chart(
+                "جودة المصادر",
+                *self._dict_chart_values(source_quality),
+                label="المصادر",
+                color="green",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "أسباب التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="blue",
+            ).to_dict(),
+        }
+
+    def market_observation_analytics(self) -> dict[str, Any]:
+        """Return latest canonical market observation analytics."""
+        payload = self._latest_json_dict("market_observation", "observation_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        latest = payload.get("latest", {}) if payload else {}
+        sources = self._latest_json_dict("market_observation", "source")
+        quality = self._latest_json_dict("market_observation", "quality")
+        confidence = self._latest_json_dict("market_observation", "confidence")
+        scores = self._latest_json_dict("market_observation", "coverage")
+        validation = self._latest_json_dict("market_observation", "validation")
+        diagnostics = self._latest_json_dict("market_observation", "diagnostics")
+        aggregate = latest.get("aggregate", {}) if isinstance(latest, dict) else {}
+        market = {
+            "الأصول": aggregate.get("asset_count", summary.get("asset_count", 0)),
+            "العوائد": aggregate.get("payout_count", summary.get("payout_count", 0)),
+            "الجلسات": aggregate.get("session_count", summary.get("session_count", 0)),
+            "الرموز": aggregate.get("symbol_count", summary.get("symbol_count", 0)),
+        }
+        validation_chart = {
+            "الاكتمال": validation.get("completeness", 0),
+            "الاتساق": validation.get("consistency", 0),
+            "السلامة": validation.get("integrity", 0),
+        }
+        if not summary:
+            summary = {
+                "observation_count": 0,
+                "canonical_score": 0.0,
+                "canonical_state": "غير متاح",
+                "coverage_score": 0.0,
+                "quality_score": 0.0,
+                "confidence_score": 0.0,
+                "visibility_score": 0.0,
+                "freshness_score": 0.0,
+                "consistency_score": 0.0,
+                "asset_count": 0,
+                "payout_count": 0,
+                "session_count": 0,
+                "symbol_count": 0,
+                "diagnostic_count": 0,
+                "research_only": True,
+                "observation_only": True,
+                "canonical_market_observation": True,
+            }
+        return {
+            "summary": summary,
+            "sources": bar_chart(
+                "توزيع المصادر",
+                *self._dict_chart_values(sources),
+                label="المصادر",
+                color="blue",
+            ).to_dict(),
+            "scores": bar_chart(
+                "درجات مصدر المراقبة",
+                *self._dict_chart_values(scores),
+                label="الدرجة",
+                color="green",
+            ).to_dict(),
+            "market": bar_chart(
+                "مكونات السوق",
+                *self._dict_chart_values(market),
+                label="المكونات",
+                color="accent",
+            ).to_dict(),
+            "source_quality": bar_chart(
+                "جودة المصادر",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "source_confidence": bar_chart(
+                "ثقة المصادر",
+                *self._dict_chart_values(confidence),
+                label="الثقة",
+                color="blue",
+            ).to_dict(),
+            "validation": bar_chart(
+                "تحقق المصدر",
+                *self._dict_chart_values(validation_chart),
+                label="التحقق",
+                color="accent",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "تشخيص المصدر",
+                *self._dict_chart_values(diagnostics),
+                label="التشخيص",
+                color="warning",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

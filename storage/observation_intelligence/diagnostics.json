@@ -1,0 +1,232 @@
+{
+  "summary": {
+    "observation_count": 4,
+    "quality_score": 79.04,
+    "confidence_score": 89.96,
+    "consistency_score": 100.0,
+    "coverage_score": 80.0,
+    "readiness_score": 81.16,
+    "intelligence_score": 71.51,
+    "intelligence_state": "تحتاج تحسين محدود",
+    "warning_count": 2,
+    "recommendation_count": 2,
+    "research_only": true,
+    "observation_only": true
+  },
+  "source_distribution": {
+    "snapshot_import": 1,
+    "browser_observation": 1,
+    "external_observation": 1,
+    "broker_readiness": 1
+  },
+  "quality_distribution": {
+    "score": 79.04,
+    "visibility": 88.52,
+    "completeness": 23.26,
+    "consistency": 100.0,
+    "freshness": 100.0,
+    "reliability": 83.44
+  },
+  "confidence_distribution": {
+    "score": 89.96,
+    "source_confidence": 80.0,
+    "data_confidence": 91.31,
+    "visibility_confidence": 88.52,
+    "consistency_confidence": 100.0
+  },
+  "consistency_distribution": {
+    "الاتساق": 100.0,
+    "التحقق": 100.0
+  },
+  "coverage_distribution": {
+    "التغطية": 80.0,
+    "الاكتمال": 23.26
+  },
+  "readiness_distribution": {
+    "score": 71.51,
+    "state": "تحتاج تحسين محدود",
+    "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
+    "observation_quality": 79.04,
+    "observation_confidence": 89.96,
+    "observation_reliability": 84.14,
+    "observation_completeness": 23.26,
+    "observation_readiness": 81.16
+  },
+  "conflict_distribution": {
+    "تضارب": 0.0,
+    "اتساق": 100.0
+  },
+  "source_quality": {
+    "استيراد اللقطات": 100.0,
+    "مراقبة المتصفح": 100.0,
+    "المراقبة الخارجية": 100.0,
+    "جاهزية المراقبة": 67.41
+  },
+  "diagnostics_distribution": {
+    "متوسط": 2
+  },
+  "recommendation_distribution": {
+    "تحسين الجودة": 1,
+    "تحسين الرؤية": 1
+  },
+  "latest": {
+    "timestamp": "2026-05-31T11:45:20.752853",
+    "observations": [
+      {
+        "observation_id": "snapshot_import",
+        "source_type": "snapshot_import",
+        "source_name": "استيراد اللقطات",
+        "timestamp": "2026-05-31T01:01:10.686559",
+        "assets": 1.0,
+        "payouts": 1.0,
+        "sessions": 2.0,
+        "symbols": 2.0,
+        "market_data": 5.0,
+        "visibility_score": 100.0,
+        "quality_score": 100.0,
+        "confidence_score": 97.19,
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "observation_id": "browser_observation",
+        "source_type": "browser_observation",
+        "source_name": "مراقبة المتصفح",
+        "timestamp": "2026-05-31T11:45:13.313806",
+        "assets": 3.0,
+        "payouts": 1.0,
+        "sessions": 1.0,
+        "symbols": 1.0,
+        "market_data": 6.0,
+        "visibility_score": 86.67,
+        "quality_score": 100.0,
+        "confidence_score": 86.34,
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "observation_id": "external_observation",
+        "source_type": "external_observation",
+        "source_name": "المراقبة الخارجية",
+        "timestamp": "2026-05-31T11:45:18.402002",
+        "assets": 4.0,
+        "payouts": 4.0,
+        "sessions": 4.0,
+        "symbols": 4.0,
+        "market_data": 100.0,
+        "visibility_score": 100.0,
+        "quality_score": 100.0,
+        "confidence_score": 100.0,
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "observation_id": "broker_readiness",
+        "source_type": "broker_readiness",
+        "source_name": "جاهزية المراقبة",
+        "timestamp": "2026-05-31T11:45:12.942455",
+        "assets": 48.0,
+        "payouts": 74.2,
+        "sessions": 60.0,
+        "symbols": 65.0,
+        "market_data": 79.05,
+        "visibility_score": 67.41,
+        "quality_score": 67.41,
+        "confidence_score": 81.73,
+        "research_only": true,
+        "observation_only": true
+      }
+    ],
+    "normalization": {
+      "score": 80.0,
+      "source_count": 5,
+      "normalized_count": 4
+    },
+    "aggregation": {
+      "score": 76.62,
+      "coverage": 80.0,
+      "consistency": 100.0,
+      "visibility": 88.52,
+      "completeness": 23.26,
+      "confidence": 91.31,
+      "conflicts": 0.0
+    },
+    "validation": {
+      "score": 79.02,
+      "normalized_structure": 100.0,
+      "source_compatibility": 80.0,
+      "completeness": 23.26,
+      "consistency": 100.0,
+      "integrity": 91.85
+    },
+    "confidence": {
+      "score": 89.96,
+      "source_confidence": 80.0,
+      "data_confidence": 91.31,
+      "visibility_confidence": 88.52,
+      "consistency_confidence": 100.0
+    },
+    "quality": {
+      "score": 79.04,
+      "visibility": 88.52,
+      "completeness": 23.26,
+      "consistency": 100.0,
+      "freshness": 100.0,
+      "reliability": 83.44
+    },
+    "intelligence": {
+      "score": 71.51,
+      "state": "تحتاج تحسين محدود",
+      "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
+      "observation_quality": 79.04,
+      "observation_confidence": 89.96,
+      "observation_reliability": 84.14,
+      "observation_completeness": 23.26,
+      "observation_readiness": 81.16
+    },
+    "diagnostics": [
+      {
+        "name": "ملاحظات غير مكتملة",
+        "severity": "متوسط",
+        "detail": "عدد الملاحظات ذات الجودة الضعيفة: 1"
+      },
+      {
+        "name": "تغطية ضعيفة",
+        "severity": "متوسط",
+        "detail": "التغطية أو الاكتمال يحتاجان تحسين."
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "تحسين الجودة",
+        "priority": "متوسط",
+        "reason": "عدد الملاحظات ذات الجودة الضعيفة: 1"
+      },
+      {
+        "title": "تحسين الرؤية",
+        "priority": "متوسط",
+        "reason": "التغطية أو الاكتمال يحتاجان تحسين."
+      }
+    ],
+    "metadata": {
+      "research_only": true,
+      "observation_only": true,
+      "not_execution": true,
+      "not_order_placement": true,
+      "not_account_login": true,
+      "not_broker_authentication": true,
+      "not_credential_handling": true,
+      "not_browser_automation": true,
+      "not_broker_control": true
+    },
+    "research_only": true,
+    "observation_only": true,
+    "not_execution": true,
+    "not_order_placement": true,
+    "not_account_login": true,
+    "not_broker_authentication": true,
+    "not_credential_handling": true,
+    "not_browser_automation": true,
+    "not_broker_control": true
+  }
+}

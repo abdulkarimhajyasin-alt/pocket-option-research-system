@@ -176,6 +176,24 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تحليل لقطات متصفح موجودة للقراءة فقط دون فتح متصفح أو مصادقة.",
         command=("scripts/run_browser_observation.py",),
     ),
+    "snapshot_import": ActionDefinition(
+        name="snapshot_import",
+        label="تحديث استيراد اللقطات",
+        description="تحليل الملفات التي تم رفعها يدويا فقط دون جلب أو اتصال خارجي.",
+        command=("scripts/run_snapshot_import.py",),
+    ),
+    "observation_intelligence": ActionDefinition(
+        name="observation_intelligence",
+        label="تحديث ذكاء المراقبة",
+        description="توحيد مخرجات المراقبة المحلية في نموذج بحثي واحد دون تنفيذ.",
+        command=("scripts/run_observation_intelligence.py",),
+    ),
+    "market_observation": ActionDefinition(
+        name="market_observation",
+        label="تحديث مصدر مراقبة السوق",
+        description="إنشاء مصدر مراقبة سوق موحد من المخرجات السلبية المحلية دون تنفيذ أو أوامر أو تسجيل دخول.",
+        command=("scripts/run_market_observation.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

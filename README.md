@@ -393,6 +393,29 @@ python scripts/check_dashboard.py
 python scripts/run_dashboard.py --check
 ```
 
+## Phase 41 Market Observation Pipeline
+
+Phase 41 adds the canonical research-only Market Observation pipeline. It normalizes
+passive local outputs from observation, market-data, browser-observation artifacts,
+external-observation artifacts, manual snapshot imports, broker-readiness reports, and
+observation-intelligence reports into one unified market observation source.
+
+Outputs are written under:
+
+- `storage/market_observation/`
+- `reports/market_observation/`
+
+Run the pipeline and diagnostics:
+
+```bash
+python scripts/run_market_observation.py
+python scripts/check_market_observation.py
+```
+
+The pipeline does not add broker access, browser automation, login, execution, order
+placement, credential handling, or trading automation. It only reads existing local
+research artifacts and produces dashboard/report data.
+
 Dashboard pages:
 
 - Overview

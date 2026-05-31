@@ -1,0 +1,22 @@
+[
+  {
+    "import_id": "manual_sample_snapshot",
+    "filename": "manual_sample_snapshot.json",
+    "import_type": "json_snapshot",
+    "source_path": "storage\\snapshot_import\\uploads\\manual_sample_snapshot.json",
+    "imported_at": "1780188295293973300",
+    "size_bytes": 234,
+    "validation_status": "ناجح",
+    "processing_status": "جاهز",
+    "metadata": {
+      "manual_upload": true,
+      "readable": true,
+      "extension": ".json",
+      "max_size_bytes": 2000000
+    },
+    "manual_only": true,
+    "research_only": true,
+    "observation_only": true,
+    "read_only": true
+  }
+]

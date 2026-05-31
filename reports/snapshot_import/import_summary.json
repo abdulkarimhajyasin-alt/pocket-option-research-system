@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "import_count": 1,
+    "workflow_score": 97.19,
+    "workflow_state": "جاهزة للتحليل",
+    "quality_score": 100.0,
+    "validation_score": 100.0,
+    "processing_score": 88.75,
+    "safety_score": 100.0,
+    "warning_count": 0,
+    "recommendation_count": 1,
+    "last_import": "2026-05-31T11:45:30.478562",
+    "manual_only": true,
+    "research_only": true,
+    "observation_only": true
+  },
+  "import_distribution": {
+    "json_snapshot": 1
+  },
+  "quality_timeline": {
+    "manual_sample_snapshot.json": 100.0
+  },
+  "latest": {
+    "timestamp": "2026-05-31T11:45:30.478562",
+    "imports": [
+      {
+        "import_id": "manual_sample_snapshot",
+        "filename": "manual_sample_snapshot.json",
+        "import_type": "json_snapshot",
+        "source_path": "storage\\snapshot_import\\uploads\\manual_sample_snapshot.json",
+        "imported_at": "1780188295293973300",
+        "size_bytes": 234,
+        "validation_status": "ناجح",
+        "processing_status": "جاهز",
+        "metadata": {
+          "manual_upload": true,
+          "readable": true,
+          "extension": ".json",
+          "max_size_bytes": 2000000
+        },
+        "manual_only": true,
+        "research_only": true,
+        "observation_only": true,
+        "read_only": true
+      }
+    ],
+    "validation": {
+      "score": 100.0,
+      "file_structure": 100.0,
+      "file_integrity": 100.0,
+      "supported_type": 100.0,
+      "file_completeness": 100.0,
+      "size_constraints": 100.0
+    },
+    "parse": {
+      "score": 55.0,
+      "assets": 1,
+      "payouts": 1,
+      "sessions": 2,
+      "timestamps": 2,
+      "market_information": 5,
+      "symbols": 2
+    },
+    "processing": {
+      "score": 88.75,
+      "parsed_data": 55.0,
+      "visibility_metrics": 100.0,
+      "completeness_metrics": 100.0,
+      "quality_metrics": 100.0
+    },
+    "quality": {
+      "score": 100.0,
+      "quality": 100.0,
+      "visibility": 100.0,
+      "completeness": 100.0,
+      "consistency": 100.0,
+      "freshness": 100.0
+    },
+    "safety": {
+      "status": "PASS",
+      "status_ar": "ناجح",
+      "score": 100.0,
+      "no_login": true,
+      "no_authentication": true,
+      "no_browser_automation": true,
+      "no_broker_access": true,
+      "no_execution": true,
+      "no_account_interaction": true
+    },
+    "workflow": {
+      "score": 97.19,
+      "state": "جاهزة للتحليل",
+      "explanation": "اللقطات جاهزة للتحليل البحثي.",
+      "manual_only": true,
+      "observation_only": true,
+      "not_execution": true
+    },
+    "diagnostics": [],
+    "recommendations": [
+      {
+        "title": "متابعة الاستيراد اليدوي",
+        "priority": "منخفض",
+        "reason": "الملفات صالحة للتحليل ضمن حدود القراءة فقط."
+      }
+    ],
+    "metadata": {
+      "manual_only": true,
+      "research_only": true,
+      "observation_only": true,
+      "read_only": true,
+      "not_execution": true,
+      "not_order_placement": true,
+      "not_account_login": true,
+      "not_broker_authentication": true,
+      "not_credential_handling": true,
+      "not_browser_automation": true,
+      "not_broker_control": true,
+      "max_size_bytes": 2000000
+    },
+    "manual_only": true,
+    "research_only": true,
+    "observation_only": true,
+    "read_only": true,
+    "not_execution": true,
+    "not_order_placement": true,
+    "not_account_login": true,
+    "not_broker_authentication": true,
+    "not_credential_handling": true,
+    "not_browser_automation": true,
+    "not_broker_control": true
+  }
+}

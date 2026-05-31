@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-31T00:36:39.361340",
+  "timestamp": "2026-05-31T11:45:13.313806",
   "artifacts": [
     {
       "artifact_id": "html-summary",
       "artifact_type": "html_snapshot",
-      "artifact_source": "D:\\pocket-option-research-system\\reports\\observation\\observation_summary.json",
+      "artifact_source": "reports\\observation\\observation_summary.json",
       "created_at": "1780143413153226300",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",
@@ -21,8 +21,8 @@
     {
       "artifact_id": "dom-export-summary",
       "artifact_type": "dom_export",
-      "artifact_source": "D:\\pocket-option-research-system\\reports\\external_observation\\source_report.json",
-      "created_at": "1780187726308221100",
+      "artifact_source": "reports\\external_observation\\source_report.json",
+      "created_at": "1780189270470117300",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",
       "monitoring_status": "مستقر",
@@ -38,8 +38,8 @@
     {
       "artifact_id": "page-capture-summary",
       "artifact_type": "page_capture",
-      "artifact_source": "D:\\pocket-option-research-system\\reports\\broker_readiness\\readiness_summary.json",
-      "created_at": "1780187726144313500",
+      "artifact_source": "reports\\broker_readiness\\readiness_summary.json",
+      "created_at": "1780227912942091700",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",
       "monitoring_status": "مستقر",
@@ -55,8 +55,8 @@
     {
       "artifact_id": "observation-dump",
       "artifact_type": "observation_dump",
-      "artifact_source": "D:\\pocket-option-research-system\\storage\\external_observation\\diagnostics.json",
-      "created_at": "1780187726304223400",
+      "artifact_source": "storage\\external_observation\\diagnostics.json",
+      "created_at": "1780189270467118400",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",
       "monitoring_status": "مستقر",
@@ -72,7 +72,7 @@
     {
       "artifact_id": "static-snapshot",
       "artifact_type": "static_snapshot",
-      "artifact_source": "D:\\pocket-option-research-system\\data\\sample_eurusd_m1.csv",
+      "artifact_source": "data\\sample_eurusd_m1.csv",
       "created_at": "1779982041662933800",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",

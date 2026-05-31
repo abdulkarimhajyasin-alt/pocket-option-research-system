@@ -1,0 +1,72 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.snapshot_import }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">استيراد يدوي</p>
+    <h1>{{ t.pages.snapshot_import }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث الاستيراد</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>مركز استيراد اللقطات</span>
+    <strong>{{ snapshot_import.summary.workflow_state|default('غير متاح') }}</strong>
+    <p>رفع يدوي وتحليل سلبي للقطات الموجودة فقط دون جلب بيانات أو فتح متصفح أو مصادقة أو تنفيذ.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجودة</span>
+    <strong>{{ snapshot_import.summary.quality_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>آخر استيراد</span>
+    <strong>{{ snapshot_import.summary.import_count|default(0)|number_ar }}</strong>
+    <small>التحذيرات {{ snapshot_import.summary.warning_count|default(0)|number_ar }}</small>
+    <small>التوصيات {{ snapshot_import.summary.recommendation_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-title"><h2>رفع ملف يدوي</h2><span>html json txt</span></div>
+  <form class="action-form" action="/snapshot-import/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="snapshot_file" accept=".html,.json,.txt">
+    <button type="submit">استيراد الملف</button>
+  </form>
+  {% if upload_message %}
+  <p>{{ upload_message }}</p>
+  {% endif %}
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد اللقطات</span><strong>{{ snapshot_import.summary.import_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الجودة</span><strong>{{ snapshot_import.summary.quality_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التحقق</span><strong>{{ snapshot_import.summary.validation_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة المعالجة</span><strong>{{ snapshot_import.summary.processing_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة السلامة</span><strong>{{ snapshot_import.summary.safety_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ snapshot_import.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ snapshot_import.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>آخر تحديث</span><strong>{{ snapshot_import.summary.last_import|default('غير متاح')|relative_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع اللقطات</h2><span>الأنواع</span></div><div class="chart" data-chart='{{ snapshot_import.imports|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الجودة</h2><span>الجودة</span></div><div class="chart" data-chart='{{ snapshot_import.quality|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع التحقق</h2><span>التحقق</span></div><div class="chart" data-chart='{{ snapshot_import.validation|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع المعالجة</h2><span>المعالجة</span></div><div class="chart" data-chart='{{ snapshot_import.processing|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع السلامة</h2><span>السلامة</span></div><div class="chart" data-chart='{{ snapshot_import.safety|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جودة الملفات</h2><span>الملفات</span></div><div class="chart" data-chart='{{ snapshot_import.file_quality|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>اكتمال الملفات</h2><span>الاكتمال</span></div><div class="chart" data-chart='{{ snapshot_import.file_completeness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أسباب الرفض</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ snapshot_import.failures|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ snapshot_import.recommendations|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تطور الجودة</h2><span>الزمن</span></div><div class="chart" data-chart='{{ snapshot_import.quality_timeline|tojson }}'></div></article>
+</section>
+{% endblock %}

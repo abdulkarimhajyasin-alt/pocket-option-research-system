@@ -488,6 +488,84 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/snapshot-import", response_class=HTMLResponse)
+    def snapshot_import(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/snapshot_import.html",
+            context(
+                request,
+                dashboard,
+                page="snapshot_import",
+                snapshot_import=dashboard.analytics.snapshot_import_analytics(),
+                upload_message=None,
+            ),
+        )
+
+    @app.post("/snapshot-import/upload", response_class=HTMLResponse)
+    async def upload_snapshot(request: Request) -> HTMLResponse:
+        from app.snapshot_import.importer import SnapshotImporter
+        from app.snapshot_import.service import SnapshotImportService
+
+        dashboard = dashboard_context()
+        form = await request.form()
+        upload = form.get("snapshot_file")
+        message = "لم يتم اختيار ملف صالح"
+        allowed_suffixes = {".html", ".json", ".txt"}
+        if upload is not None and hasattr(upload, "filename"):
+            filename = str(upload.filename or "")
+            target = SnapshotImporter(root).safe_upload_path(filename)
+            if target.suffix.lower() in allowed_suffixes:
+                content = await upload.read()
+                if len(content) <= 2_000_000:
+                    target.write_bytes(content)
+                    SnapshotImportService(root).run()
+                    message = "تم حفظ اللقطة اليدوية وتحليلها"
+                else:
+                    message = "حجم الملف أكبر من الحد المسموح"
+            else:
+                message = "نوع الملف غير مدعوم"
+        return templates.TemplateResponse(
+            request,
+            "dashboard/snapshot_import.html",
+            context(
+                request,
+                dashboard,
+                page="snapshot_import",
+                snapshot_import=dashboard.analytics.snapshot_import_analytics(),
+                upload_message=message,
+            ),
+        )
+
+    @app.get("/observation-intelligence", response_class=HTMLResponse)
+    def observation_intelligence(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/observation_intelligence.html",
+            context(
+                request,
+                dashboard,
+                page="observation_intelligence",
+                observation_intelligence=dashboard.analytics.observation_intelligence_analytics(),
+            ),
+        )
+
+    @app.get("/market-observation", response_class=HTMLResponse)
+    def market_observation(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/market_observation.html",
+            context(
+                request,
+                dashboard,
+                page="market_observation",
+                market_observation=dashboard.analytics.market_observation_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -596,6 +674,18 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/browser-observation")
     def api_browser_observation() -> dict[str, object]:
         return dashboard_context().analytics.browser_observation_analytics()
+
+    @app.get("/api/snapshot-import")
+    def api_snapshot_import() -> dict[str, object]:
+        return dashboard_context().analytics.snapshot_import_analytics()
+
+    @app.get("/api/observation-intelligence")
+    def api_observation_intelligence() -> dict[str, object]:
+        return dashboard_context().analytics.observation_intelligence_analytics()
+
+    @app.get("/api/market-observation")
+    def api_market_observation() -> dict[str, object]:
+        return dashboard_context().analytics.market_observation_analytics()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

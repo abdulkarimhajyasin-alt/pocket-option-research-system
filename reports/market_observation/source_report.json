@@ -1,0 +1,9 @@
+{
+  "market_data": 1,
+  "observation_layer": 1,
+  "observation_intelligence": 1,
+  "browser_observation": 1,
+  "external_observation": 1,
+  "snapshot_import": 1,
+  "broker_readiness": 1
+}

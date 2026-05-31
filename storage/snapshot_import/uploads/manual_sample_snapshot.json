@@ -1,0 +1,14 @@
+{
+  "asset": "EURUSD",
+  "symbol": "EURUSD",
+  "payout": 82,
+  "session": "research",
+  "timestamp": "sample",
+  "market": {
+    "open": 1.1,
+    "high": 1.2,
+    "low": 1.0,
+    "close": 1.15
+  },
+  "manual_only": true
+}
