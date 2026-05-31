@@ -1,0 +1,37 @@
+[
+  {
+    "name": "portfolio_governance",
+    "arabic_label": "حوكمة المحفظة",
+    "status": "FAIL",
+    "score": 0.0,
+    "detail": "حوكمة المحفظة: 0.0"
+  },
+  {
+    "name": "execution_governance",
+    "arabic_label": "حوكمة التنفيذ الورقي",
+    "status": "WARNING",
+    "score": 62.27,
+    "detail": "حوكمة التنفيذ الورقي: 62.27"
+  },
+  {
+    "name": "risk_governance",
+    "arabic_label": "حوكمة المخاطر",
+    "status": "PASS",
+    "score": 82.03,
+    "detail": "حوكمة المخاطر: 82.03"
+  },
+  {
+    "name": "readiness_governance",
+    "arabic_label": "حوكمة الجاهزية",
+    "status": "PASS",
+    "score": 82.75,
+    "detail": "حوكمة الجاهزية: 82.75"
+  },
+  {
+    "name": "monitoring_governance",
+    "arabic_label": "حوكمة المراقبة",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حوكمة المراقبة: 100.0"
+  }
+]

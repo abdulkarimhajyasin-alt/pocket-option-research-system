@@ -39,87 +39,6 @@
     },
     {
       "sequence": 3,
-      "observation_id": "snapshot_import",
-      "timestamp": "2026-05-31T15:31:40.320268",
-      "source": "snapshot_import",
-      "asset": "استيراد اللقطات",
-      "quality": 100.0,
-      "readiness": 0.0
-    },
-    {
-      "sequence": 4,
-      "observation_id": "broker_readiness",
-      "timestamp": "2026-05-31T15:41:00.013293",
-      "source": "broker_readiness",
-      "asset": "جاهزية المراقبة",
-      "quality": 67.41,
-      "readiness": 0.0
-    },
-    {
-      "sequence": 5,
-      "observation_id": "broker_readiness",
-      "timestamp": "2026-05-31T15:41:00.013293",
-      "source": "broker_readiness",
-      "asset": "جاهزية المراقبة",
-      "quality": 67.41,
-      "readiness": 0.0
-    },
-    {
-      "sequence": 6,
-      "observation_id": "browser_observation",
-      "timestamp": "2026-05-31T15:41:00.440918",
-      "source": "browser_observation",
-      "asset": "مراقبة المتصفح",
-      "quality": 100.0,
-      "readiness": 0.0
-    },
-    {
-      "sequence": 7,
-      "observation_id": "browser_observation",
-      "timestamp": "2026-05-31T15:41:00.440918",
-      "source": "browser_observation",
-      "asset": "مراقبة المتصفح",
-      "quality": 100.0,
-      "readiness": 0.0
-    },
-    {
-      "sequence": 8,
-      "observation_id": "browser_observation",
-      "timestamp": "2026-05-31T15:41:00.440918",
-      "source": "browser_observation",
-      "asset": "browser_snapshot",
-      "quality": 100.0,
-      "readiness": 86.67
-    },
-    {
-      "sequence": 9,
-      "observation_id": "external_observation",
-      "timestamp": "2026-05-31T15:41:06.024245",
-      "source": "external_observation",
-      "asset": "المراقبة الخارجية",
-      "quality": 100.0,
-      "readiness": 0.0
-    },
-    {
-      "sequence": 10,
-      "observation_id": "external_observation",
-      "timestamp": "2026-05-31T15:41:06.024245",
-      "source": "external_observation",
-      "asset": "المراقبة الخارجية",
-      "quality": 100.0,
-      "readiness": 0.0
-    },
-    {
-      "sequence": 11,
-      "observation_id": "external_observation",
-      "timestamp": "2026-05-31T15:41:06.024245",
-      "source": "external_observation",
-      "asset": "external_source",
-      "quality": 100.0,
-      "readiness": 100.0
-    },
-    {
-      "sequence": 12,
       "observation_id": "observation_intelligence",
       "timestamp": "2026-05-31T15:41:08.878389",
       "source": "observation_intelligence",
@@ -128,7 +47,7 @@
       "readiness": 0.0
     },
     {
-      "sequence": 13,
+      "sequence": 4,
       "observation_id": "snapshot_import",
       "timestamp": "2026-05-31T15:41:20.004094",
       "source": "snapshot_import",
@@ -137,9 +56,90 @@
       "readiness": 0.0
     },
     {
-      "sequence": 14,
+      "sequence": 5,
       "observation_id": "snapshot_import",
       "timestamp": "2026-05-31T15:41:20.004094",
+      "source": "snapshot_import",
+      "asset": "استيراد اللقطات",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 6,
+      "observation_id": "broker_readiness",
+      "timestamp": "2026-05-31T16:02:04.026395",
+      "source": "broker_readiness",
+      "asset": "جاهزية المراقبة",
+      "quality": 67.41,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 7,
+      "observation_id": "broker_readiness",
+      "timestamp": "2026-05-31T16:02:04.026395",
+      "source": "broker_readiness",
+      "asset": "جاهزية المراقبة",
+      "quality": 67.41,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 8,
+      "observation_id": "browser_observation",
+      "timestamp": "2026-05-31T16:02:04.553956",
+      "source": "browser_observation",
+      "asset": "مراقبة المتصفح",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 9,
+      "observation_id": "browser_observation",
+      "timestamp": "2026-05-31T16:02:04.553956",
+      "source": "browser_observation",
+      "asset": "مراقبة المتصفح",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 10,
+      "observation_id": "browser_observation",
+      "timestamp": "2026-05-31T16:02:04.553956",
+      "source": "browser_observation",
+      "asset": "browser_snapshot",
+      "quality": 100.0,
+      "readiness": 86.67
+    },
+    {
+      "sequence": 11,
+      "observation_id": "external_observation",
+      "timestamp": "2026-05-31T16:02:10.297049",
+      "source": "external_observation",
+      "asset": "المراقبة الخارجية",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 12,
+      "observation_id": "external_observation",
+      "timestamp": "2026-05-31T16:02:10.297049",
+      "source": "external_observation",
+      "asset": "المراقبة الخارجية",
+      "quality": 100.0,
+      "readiness": 0.0
+    },
+    {
+      "sequence": 13,
+      "observation_id": "external_observation",
+      "timestamp": "2026-05-31T16:02:10.297049",
+      "source": "external_observation",
+      "asset": "external_source",
+      "quality": 100.0,
+      "readiness": 100.0
+    },
+    {
+      "sequence": 14,
+      "observation_id": "snapshot_import",
+      "timestamp": "2026-05-31T16:02:25.027941",
       "source": "snapshot_import",
       "asset": "snapshot",
       "quality": 100.0,

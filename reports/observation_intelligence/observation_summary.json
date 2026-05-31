@@ -30,13 +30,13 @@
     "observation_readiness": 81.16
   },
   "latest": {
-    "timestamp": "2026-05-31T15:41:08.878389",
+    "timestamp": "2026-05-31T16:02:13.235456",
     "observations": [
       {
         "observation_id": "snapshot_import",
         "source_type": "snapshot_import",
         "source_name": "استيراد اللقطات",
-        "timestamp": "2026-05-31T15:31:40.320268",
+        "timestamp": "2026-05-31T15:41:20.004094",
         "assets": 1.0,
         "payouts": 1.0,
         "sessions": 2.0,
@@ -52,7 +52,7 @@
         "observation_id": "browser_observation",
         "source_type": "browser_observation",
         "source_name": "مراقبة المتصفح",
-        "timestamp": "2026-05-31T15:41:00.440918",
+        "timestamp": "2026-05-31T16:02:04.553956",
         "assets": 3.0,
         "payouts": 1.0,
         "sessions": 1.0,
@@ -68,7 +68,7 @@
         "observation_id": "external_observation",
         "source_type": "external_observation",
         "source_name": "المراقبة الخارجية",
-        "timestamp": "2026-05-31T15:41:06.024245",
+        "timestamp": "2026-05-31T16:02:10.297049",
         "assets": 4.0,
         "payouts": 4.0,
         "sessions": 4.0,
@@ -84,7 +84,7 @@
         "observation_id": "broker_readiness",
         "source_type": "broker_readiness",
         "source_name": "جاهزية المراقبة",
-        "timestamp": "2026-05-31T15:41:00.013293",
+        "timestamp": "2026-05-31T16:02:04.026395",
         "assets": 48.0,
         "payouts": 74.2,
         "sessions": 60.0,

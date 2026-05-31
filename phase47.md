@@ -1,4 +1,4 @@
-You are now implementing Phase 46 — Paper Portfolio & Risk Governance Layer.
+You are now implementing Phase 47 — Paper Trading Control Center.
 
 CRITICAL RULES
 
@@ -34,27 +34,26 @@ No real money.
 No real execution.
 
 ====================================================
-PHASE 46 — PAPER PORTFOLIO & RISK GOVERNANCE
-============================================
+PHASE 47 — PAPER TRADING CONTROL CENTER
+=======================================
 
 OBJECTIVE
 
-Build a Paper Portfolio & Risk Governance Layer that manages paper execution results as a simulated portfolio.
+Build a centralized Paper Trading Control Center that consolidates all paper-trading research layers into one executive command view.
 
-The layer must evaluate:
+The purpose is to provide a single operational dashboard for:
 
-* portfolio health
-* portfolio stability
-* paper exposure
-* paper drawdown
+* paper portfolio health
+* paper execution status
+* paper risk status
+* candidate readiness
 * paper performance
-* paper risk governance
+* governance state
+* recommendations
 
-This is NOT real money.
+This phase must not execute trades.
 
-This is NOT broker risk management.
-
-This is NOT trading automation.
+It must only monitor, evaluate, summarize, and recommend.
 
 ====================================================
 ARCHITECTURE
@@ -62,14 +61,14 @@ ARCHITECTURE
 
 Create:
 
-app/paper_portfolio/
+app/paper_control_center/
 **init**.py
 models.py
-portfolio.py
-exposure.py
-drawdown.py
+control_center.py
+monitoring.py
 governance.py
-limits.py
+health.py
+recommendations.py
 analytics.py
 diagnostics.py
 storage.py
@@ -82,121 +81,100 @@ INPUT SOURCES
 
 Consume:
 
+* Paper Portfolio
 * Paper Execution
 * Execution Readiness
 * Signal Stream
 * Trade Lifecycle
 * Confluence
+* Research Operations
 
 Do not modify previous engines.
 
 ====================================================
-PORTFOLIO MODEL
-===============
+CONTROL CENTER MODEL
+====================
 
 Create:
 
-PaperPortfolio
+PaperControlCenter
 
 Fields:
 
-* portfolio_id
-* created_at
-* total_orders
-* active_orders
-* wins
-* losses
-* breakeven
-* win_rate
-* drawdown
-* stability_score
-* health_score
-* risk_score
+* control_id
+* generated_at
+* portfolio_health
+* portfolio_stability
+* execution_status
+* readiness_status
+* governance_status
+* risk_status
+* recommendation_count
+* warning_count
+* overall_score
 * metadata
 
 ====================================================
-PORTFOLIO ENGINE
-================
+HEALTH ENGINE
+=============
 
 Create:
 
-PaperPortfolioEngine
-
-Responsibilities:
-
-* aggregate paper results
-* calculate portfolio statistics
-* calculate portfolio health
-* calculate portfolio quality
-
-Generate:
-
-Portfolio Score
-
-0-100
-
-====================================================
-EXPOSURE ENGINE
-===============
-
-Create:
-
-PaperExposureEngine
-
-Track:
-
-* exposure by asset
-* exposure by session
-* exposure by direction
-* exposure by confidence band
-
-Generate:
-
-Exposure Score
-
-0-100
-
-====================================================
-DRAWDOWN ENGINE
-===============
-
-Create:
-
-PaperDrawdownEngine
-
-Calculate:
-
-* current drawdown
-* maximum drawdown
-* drawdown trend
-* recovery factor
-
-Generate:
-
-Drawdown Score
-
-0-100
-
-====================================================
-RISK GOVERNANCE ENGINE
-======================
-
-Create:
-
-PaperRiskGovernanceEngine
+PaperHealthEngine
 
 Evaluate:
 
-* portfolio concentration
-* consecutive losses
-* confidence quality
-* readiness quality
-* candidate quality
-* portfolio stability
+* portfolio health
+* execution health
+* readiness health
+* governance health
+* stability health
 
 Generate:
 
-Governance Status
+Health Score
+
+0-100
+
+====================================================
+MONITORING ENGINE
+=================
+
+Create:
+
+PaperMonitoringEngine
+
+Track:
+
+* active paper orders
+* completed paper orders
+* paper portfolio changes
+* drawdown changes
+* governance changes
+* readiness changes
+
+Generate:
+
+Monitoring Score
+
+0-100
+
+====================================================
+GOVERNANCE ENGINE
+=================
+
+Create:
+
+PaperControlGovernanceEngine
+
+Evaluate:
+
+* portfolio governance
+* execution governance
+* risk governance
+* readiness governance
+
+Generate:
 
 PASS
 WARNING
@@ -205,28 +183,28 @@ FAIL
 Arabic labels required.
 
 ====================================================
-LIMIT ENGINE
-============
+CONTROL DECISION ENGINE
+=======================
 
 Create:
 
-PaperLimitEngine
-
-Support configurable limits:
-
-* max active paper orders
-* max exposure per asset
-* max exposure per session
-* max drawdown
-* max consecutive losses
+PaperControlDecisionEngine
 
 Generate:
 
-Limit Status
+* Continue Paper Operations
+* Review Required
+* Pause Paper Operations
 
-PASS
-WARNING
-FAIL
+Arabic labels:
+
+* متابعة التشغيل الورقي
+* مراجعة مطلوبة
+* إيقاف التشغيل الورقي
+
+This is a research recommendation only.
+
+It must not control anything.
 
 ====================================================
 ANALYTICS
@@ -234,17 +212,16 @@ ANALYTICS
 
 Create:
 
-PaperPortfolioAnalytics
+PaperControlAnalytics
 
 Generate:
 
-* win rate
-* loss rate
-* drawdown analysis
-* stability analysis
-* exposure analysis
+* health analysis
+* readiness analysis
 * governance analysis
-* risk analysis
+* execution analysis
+* portfolio analysis
+* warning analysis
 
 ====================================================
 DIAGNOSTICS
@@ -252,16 +229,16 @@ DIAGNOSTICS
 
 Create:
 
-PaperPortfolioDiagnostics
+PaperControlDiagnostics
 
 Detect:
 
+* governance failures
 * excessive drawdown
-* unstable portfolio
-* high concentration
-* weak confidence
-* weak readiness
-* governance warnings
+* unstable readiness
+* unstable execution
+* portfolio concentration
+* repeated failures
 
 Severity:
 
@@ -275,16 +252,16 @@ RECOMMENDATIONS
 
 Create:
 
-PaperPortfolioRecommendations
+PaperControlRecommendations
 
 Generate Arabic recommendations:
 
-* تقليل التعرض
-* تحسين الجودة
 * تحسين الجاهزية
-* تقليل التركز
-* تقليل السحب
 * تحسين الاستقرار
+* تقليل السحب
+* تحسين الحوكمة
+* تحسين المحفظة
+* تحسين التنفيذ الورقي
 
 ====================================================
 EXECUTIVE PANEL
@@ -292,19 +269,17 @@ EXECUTIVE PANEL
 
 Create:
 
-المحفظة الورقية
+مركز التحكم الورقي
 
 Display:
 
-* إجمالي الأوامر
-* الرابحة
-* الخاسرة
-* نسبة النجاح
-* السحب الحالي
-* أقصى سحب
-* درجة الصحة
-* درجة الاستقرار
+* الصحة العامة
+* الاستقرار
+* الجاهزية
+* الحوكمة
 * عدد التحذيرات
+* عدد التوصيات
+* القرار الحالي
 
 ====================================================
 DASHBOARD
@@ -312,17 +287,17 @@ DASHBOARD
 
 Add:
 
-/paper-portfolio
+/paper-control
 
-/api/paper-portfolio
+/api/paper-control
 
 Navigation label:
 
-المحفظة الورقية
+مركز التحكم الورقي
 
 Dashboard title:
 
-إدارة المحفظة الورقية
+مركز التحكم بالتداول الورقي
 
 ====================================================
 CHARTS
@@ -330,16 +305,16 @@ CHARTS
 
 Add Arabic charts:
 
-* الأداء الورقي
-* السحب
-* التعرض
-* توزيع الأصول
-* توزيع الجلسات
+* الصحة العامة
 * الاستقرار
-* الصحة
+* الجاهزية
 * الحوكمة
+* التنفيذ الورقي
+* أداء المحفظة
 * التحذيرات
 * التوصيات
+* النشاط الزمني
+* القرار الحالي
 
 ====================================================
 STORAGE
@@ -347,15 +322,15 @@ STORAGE
 
 Create:
 
-storage/paper_portfolio/
+storage/paper_control_center/
 
 Generate:
 
-portfolio_results.json
-exposure_results.json
-drawdown_results.json
+control_center_results.json
+health_results.json
+monitoring_results.json
 governance_results.json
-limits_results.json
+decision_results.json
 diagnostics.json
 
 ====================================================
@@ -364,13 +339,13 @@ REPORTS
 
 Create:
 
-reports/paper_portfolio/
+reports/paper_control_center/
 
-portfolio_summary.json
-exposure_report.json
-drawdown_report.json
+control_center_summary.json
+health_report.json
+monitoring_report.json
 governance_report.json
-limits_report.json
+decision_report.json
 analytics_report.json
 diagnostics_report.json
 recommendations_report.json
@@ -381,12 +356,12 @@ TESTING
 
 Create:
 
-tests/test_paper_portfolio.py
+tests/test_paper_control_center.py
 
 Create:
 
-scripts/run_paper_portfolio.py
-scripts/check_paper_portfolio.py
+scripts/run_paper_control_center.py
+scripts/check_paper_control_center.py
 
 ====================================================
 VALIDATION
@@ -400,8 +375,9 @@ python -m pytest -q
 
 python -m flake8 app
 
-python scripts/check_paper_portfolio.py
+python scripts/check_paper_control_center.py
 
+python scripts/check_paper_portfolio.py
 python scripts/check_paper_execution.py
 python scripts/check_execution_readiness.py
 python scripts/check_signal_stream.py
@@ -448,10 +424,10 @@ DELIVERABLE FORMAT
 
 Return:
 
-1. Phase 46 Implementation Summary
+1. Phase 47 Implementation Summary
 2. Changed Files
-3. Paper Portfolio Architecture
-4. Portfolio Governance Logic
+3. Paper Control Center Architecture
+4. Control Logic
 5. Dashboard Additions
 6. Reports Generated
 7. Storage Generated
@@ -462,7 +438,8 @@ Return:
 Git Commands:
 
 git add .
-git commit -m "Add paper portfolio and risk governance layer"
+git commit -m "Add paper trading control center"
+
 git push origin main
 
 Remain strictly paper-only.

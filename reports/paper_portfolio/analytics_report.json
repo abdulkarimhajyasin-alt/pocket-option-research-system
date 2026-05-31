@@ -32,11 +32,11 @@
     "asset_exposure": {
       "بيانات السوق": 1,
       "مراقبة السوق": 1,
+      "ذكاء المراقبة": 1,
+      "استيراد اللقطات": 2,
       "جاهزية المراقبة": 2,
       "مراقبة المتصفح": 2,
       "المراقبة الخارجية": 2,
-      "استيراد اللقطات": 2,
-      "ذكاء المراقبة": 1,
       "snapshot": 1,
       "browser_snapshot": 1,
       "external_source": 1
@@ -73,7 +73,7 @@
   "recommendation_count": 3,
   "summary": {
     "portfolio_id": "paper_portfolio_0001",
-    "created_at": "2026-05-31T15:41:10.624841+00:00",
+    "created_at": "2026-05-31T16:02:59.212430+00:00",
     "total_orders": 14,
     "active_orders": 0,
     "wins": 2,

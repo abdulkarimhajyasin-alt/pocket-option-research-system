@@ -231,6 +231,15 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تقييم محفظة ورقية محلية فقط دون أموال حقيقية أو وسيط أو تنفيذ.",
         command=("scripts/run_paper_portfolio.py",),
     ),
+    "paper_control": ActionDefinition(
+        name="paper_control",
+        label="مركز التحكم الورقي",
+        description=(
+            "توليد مركز تحكم ورقي محلي للمراقبة والتوصيات البحثية فقط دون تنفيذ "
+            "حقيقي أو وسيط أو أوامر."
+        ),
+        command=("scripts/run_paper_control_center.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

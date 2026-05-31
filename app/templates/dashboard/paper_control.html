@@ -1,0 +1,62 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.paper_control }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">ورقي فقط</p>
+    <h1>مركز التحكم بالتداول الورقي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث مركز التحكم الورقي</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>مركز التحكم الورقي</span>
+    <strong>{{ paper_control.summary.overall_score|default(0)|number_ar }}</strong>
+    <p>ملخص ورقي بحثي محلي للصحة والاستقرار والجاهزية والحوكمة والتنفيذ الورقي دون وسيط أو أوامر أو أموال حقيقية.</p>
+  </div>
+  <div class="executive-score">
+    <span>القرار الحالي</span>
+    <strong>{{ paper_control.summary.decision_label|default("مراجعة مطلوبة") }}</strong>
+  </div>
+  <div>
+    <span>التحذيرات والتوصيات</span>
+    <strong>{{ paper_control.summary.warning_count|default(0)|number_ar }}</strong>
+    <small>التوصيات {{ paper_control.summary.recommendation_count|default(0)|number_ar }}</small>
+    <small>الحوكمة {{ paper_control.summary.governance_status|default("WARNING") }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>الصحة العامة</span><strong>{{ paper_control.summary.portfolio_health|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الاستقرار</span><strong>{{ paper_control.summary.portfolio_stability|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الجاهزية</span><strong>{{ paper_control.summary.readiness_status|default("WARNING") }}</strong></article>
+  <article class="metric-card"><span>الحوكمة</span><strong>{{ paper_control.summary.governance_status|default("WARNING") }}</strong></article>
+  <article class="metric-card"><span>التنفيذ الورقي</span><strong>{{ paper_control.summary.execution_status|default("WARNING") }}</strong></article>
+  <article class="metric-card"><span>المخاطر</span><strong>{{ paper_control.summary.risk_status|default("WARNING") }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ paper_control.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ paper_control.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>القرار الحالي</span><strong>{{ paper_control.summary.decision_label|default("مراجعة مطلوبة") }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الصحة العامة</h2><span>مركز التحكم</span></div><div class="chart" data-chart='{{ paper_control.health|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>الاستقرار</h2><span>المحفظة</span></div><div class="chart" data-chart='{{ paper_control.stability|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الجاهزية</h2><span>التقييم</span></div><div class="chart" data-chart='{{ paper_control.readiness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>الحوكمة</h2><span>البوابات</span></div><div class="chart" data-chart='{{ paper_control.governance|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التنفيذ الورقي</h2><span>الحالة</span></div><div class="chart" data-chart='{{ paper_control.execution|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أداء المحفظة</h2><span>النتائج</span></div><div class="chart" data-chart='{{ paper_control.portfolio|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ paper_control.warnings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ paper_control.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>النشاط الزمني</h2><span>المراقبة</span></div><div class="chart" data-chart='{{ paper_control.activity|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>القرار الحالي</h2><span>توصية بحثية</span></div><div class="chart" data-chart='{{ paper_control.decision|tojson }}'></div></article>
+</section>
+{% endblock %}

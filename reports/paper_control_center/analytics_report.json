@@ -1,0 +1,45 @@
+{
+  "health_analysis": {
+    "portfolio_health": 0.0,
+    "execution_health": 62.27,
+    "readiness_health": 82.75,
+    "governance_health": 82.03,
+    "stability_health": 0.0,
+    "health_score": 45.41,
+    "paper_only": true
+  },
+  "readiness_analysis": {
+    "readiness": 82.75
+  },
+  "governance_analysis": {
+    "FAIL": 1,
+    "WARNING": 1,
+    "PASS": 3
+  },
+  "execution_analysis": {
+    "execution": 62.27
+  },
+  "portfolio_analysis": {
+    "health": 0.0,
+    "stability": 0.0
+  },
+  "warning_analysis": {
+    "فشل الحوكمة": 1
+  },
+  "monitoring_analysis": {
+    "active_paper_orders": 0,
+    "completed_paper_orders": 14,
+    "paper_result_count": 14,
+    "paper_portfolio_changes": 81.49,
+    "drawdown_changes": 0.0,
+    "governance_changes": 1,
+    "readiness_changes": 82.75,
+    "monitoring_score": 100.0,
+    "paper_only": true
+  },
+  "decision_analysis": {
+    "إيقاف التشغيل الورقي": 1
+  },
+  "paper_only": true,
+  "research_only": true
+}

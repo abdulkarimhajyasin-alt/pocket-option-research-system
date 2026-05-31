@@ -708,6 +708,10 @@ class DashboardAnalyticsService:
         except (TypeError, ValueError):
             return 0.0
 
+    def _status_score(self, value: Any) -> float:
+        mapping = {"PASS": 100.0, "WARNING": 60.0, "FAIL": 0.0}
+        return mapping.get(str(value), self._float(value))
+
     def _best_signal(self, rows: list[dict[str, Any]]) -> dict[str, Any]:
         if not rows:
             return {}
@@ -2946,6 +2950,152 @@ class DashboardAnalyticsService:
                 *self._dict_chart_values(recommendations),
                 label="التوصيات",
                 color="green",
+            ).to_dict(),
+        }
+
+    def paper_control_analytics(self) -> dict[str, Any]:
+        """Return latest paper-only control center analytics."""
+        payload = self._latest_json_dict(
+            "paper_control_center",
+            "control_center_summary",
+        )
+        health = self._latest_json_dict("paper_control_center", "health")
+        monitoring = self._latest_json_dict("paper_control_center", "monitoring")
+        governance = self._latest_json_dict("paper_control_center", "governance")
+        decision = self._latest_json_dict("paper_control_center", "decision")
+        diagnostics = self._latest_json_dict("paper_control_center", "diagnostics")
+        recommendations = self._latest_json_dict(
+            "paper_control_center",
+            "recommendations",
+        )
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        latest_decision = latest.get("decision", {}) if isinstance(latest, dict) else {}
+        if not summary:
+            summary = {
+                "portfolio_health": 0.0,
+                "portfolio_stability": 0.0,
+                "execution_status": "WARNING",
+                "readiness_status": "WARNING",
+                "governance_status": "WARNING",
+                "risk_status": "WARNING",
+                "recommendation_count": 0,
+                "warning_count": 0,
+                "overall_score": 0.0,
+                "paper_only": True,
+                "research_only": True,
+            }
+        decision_label = (
+            latest_decision.get("arabic_label")
+            or latest_decision.get("decision_label")
+            or "مراجعة مطلوبة"
+        )
+        summary = {
+            **summary,
+            "decision_label": decision_label,
+            "paper_only": True,
+            "research_only": True,
+        }
+        health_chart = {
+            "الصحة العامة": self._float(summary.get("overall_score")),
+            "صحة المحفظة": self._float(summary.get("portfolio_health")),
+            "صحة التنفيذ": self._float(health.get("execution_health")),
+            "صحة الجاهزية": self._float(health.get("readiness_health")),
+        }
+        stability_chart = {
+            "الاستقرار": self._float(summary.get("portfolio_stability")),
+            "استقرار الصحة": self._float(health.get("stability_health")),
+            "المراقبة": self._float(monitoring.get("monitoring_score")),
+        }
+        readiness_chart = {
+            "الجاهزية": self._status_score(summary.get("readiness_status")),
+            "الصحة": self._float(health.get("readiness_health")),
+            "تغير الجاهزية": self._float(monitoring.get("readiness_changes")),
+        }
+        execution_chart = {
+            "التنفيذ الورقي": self._status_score(summary.get("execution_status")),
+            "الأوامر النشطة": self._float(monitoring.get("active_paper_orders")),
+            "الأوامر المكتملة": self._float(monitoring.get("completed_paper_orders")),
+        }
+        portfolio_chart = {
+            "أداء المحفظة": self._float(summary.get("portfolio_health")),
+            "الاستقرار": self._float(summary.get("portfolio_stability")),
+            "تغيرات المحفظة": self._float(monitoring.get("portfolio_changes")),
+            "تغيرات السحب": self._float(monitoring.get("drawdown_changes")),
+        }
+        decision_chart = {
+            str(decision_label): self._float(summary.get("overall_score")),
+            "التحذيرات": self._float(summary.get("warning_count")),
+            "التوصيات": self._float(summary.get("recommendation_count")),
+        }
+        activity_chart = {
+            "الأوامر النشطة": self._float(monitoring.get("active_paper_orders")),
+            "الأوامر المكتملة": self._float(monitoring.get("completed_paper_orders")),
+            "تغيرات الحوكمة": self._float(monitoring.get("governance_changes")),
+            "تغيرات الجاهزية": self._float(monitoring.get("readiness_changes")),
+        }
+        return {
+            "summary": summary,
+            "latest": latest,
+            "health": bar_chart(
+                "الصحة العامة",
+                *self._dict_chart_values(health_chart),
+                label="الصحة العامة",
+                color="green",
+            ).to_dict(),
+            "stability": bar_chart(
+                "الاستقرار",
+                *self._dict_chart_values(stability_chart),
+                label="الاستقرار",
+                color="blue",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "الجاهزية",
+                *self._dict_chart_values(readiness_chart),
+                label="الجاهزية",
+                color="accent",
+            ).to_dict(),
+            "governance": bar_chart(
+                "الحوكمة",
+                *self._dict_chart_values(governance),
+                label="الحوكمة",
+                color="warning",
+            ).to_dict(),
+            "execution": bar_chart(
+                "التنفيذ الورقي",
+                *self._dict_chart_values(execution_chart),
+                label="التنفيذ الورقي",
+                color="blue",
+            ).to_dict(),
+            "portfolio": bar_chart(
+                "أداء المحفظة",
+                *self._dict_chart_values(portfolio_chart),
+                label="أداء المحفظة",
+                color="green",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "activity": line_chart(
+                "النشاط الزمني",
+                *self._dict_chart_values(activity_chart),
+                label="النشاط الزمني",
+                color="blue",
+            ).to_dict(),
+            "decision": bar_chart(
+                "القرار الحالي",
+                *self._dict_chart_values({**decision_chart, **decision}),
+                label="القرار الحالي",
+                color="accent",
             ).to_dict(),
         }
 
