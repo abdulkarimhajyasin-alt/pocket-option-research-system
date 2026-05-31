@@ -2499,6 +2499,123 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def signal_stream_analytics(self) -> dict[str, Any]:
+        """Return latest research-only signal stream analytics."""
+        payload = self._latest_json_dict("signal_stream", "signal_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        stream = self._latest_json_dict("signal_stream", "stream")
+        quality = self._latest_json_dict("signal_stream", "quality")
+        readiness = self._latest_json_dict("signal_stream", "readiness")
+        validation = self._latest_json_dict("signal_stream", "validation")
+        diagnostics = self._latest_json_dict("signal_stream", "diagnostics")
+        recommendations = self._latest_json_dict("signal_stream", "recommendations")
+        timeline = latest.get("timeline", {}) if isinstance(latest, dict) else {}
+        timeline_activity = timeline.get("activity", {}) if isinstance(timeline, dict) else {}
+        events = latest.get("stream", {}).get("events", []) if isinstance(latest, dict) else []
+        assets: dict[str, float] = {}
+        sessions: dict[str, float] = {}
+        confidence: dict[str, float] = {}
+        density = {
+            "الكثافة": timeline.get("density", 0) if isinstance(timeline, dict) else 0,
+            "التكرار": timeline.get("frequency", 0) if isinstance(timeline, dict) else 0,
+        }
+        for item in events[:20] if isinstance(events, list) else []:
+            if isinstance(item, dict):
+                assets[str(item.get("asset", "أصل"))] = assets.get(
+                    str(item.get("asset", "أصل")),
+                    0.0,
+                ) + 1.0
+                sessions[str(item.get("session", "جلسة"))] = sessions.get(
+                    str(item.get("session", "جلسة")),
+                    0.0,
+                ) + 1.0
+                confidence[str(item.get("signal_id", "إشارة"))] = self._float(
+                    item.get("confidence")
+                )
+        if not summary:
+            summary = {
+                "signal_count": 0,
+                "call_count": 0,
+                "put_count": 0,
+                "no_trade_count": 0,
+                "average_confidence": 0.0,
+                "quality_score": 0.0,
+                "readiness_score": 0.0,
+                "warning_count": 0,
+                "research_only": True,
+                "signal_generation_only": True,
+            }
+        return {
+            "summary": summary,
+            "distribution": bar_chart(
+                "توزيع الإشارات",
+                *self._dict_chart_values(stream),
+                label="الإشارات",
+                color="blue",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "توزيع الثقة",
+                *self._dict_chart_values(confidence),
+                label="الثقة",
+                color="accent",
+            ).to_dict(),
+            "activity": line_chart(
+                "النشاط الزمني",
+                *self._dict_chart_values(timeline_activity),
+                label="النشاط",
+                color="green",
+            ).to_dict(),
+            "quality": bar_chart(
+                "جودة الإشارات",
+                *self._dict_chart_values(quality),
+                label="الجودة",
+                color="green",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="blue",
+            ).to_dict(),
+            "assets": bar_chart(
+                "توزيع الأصول",
+                *self._dict_chart_values(assets),
+                label="الأصول",
+                color="accent",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "توزيع الجلسات",
+                *self._dict_chart_values(sessions),
+                label="الجلسات",
+                color="green",
+            ).to_dict(),
+            "density": bar_chart(
+                "كثافة الإشارات",
+                *self._dict_chart_values(density),
+                label="الكثافة",
+                color="warning",
+            ).to_dict(),
+            "validation": bar_chart(
+                "التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "أسباب التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

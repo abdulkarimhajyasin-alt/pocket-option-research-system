@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.signal_stream }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.signal_stream }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث تدفق الإشارات</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>محرك تدفق الإشارات</span>
+    <strong>{{ signal_stream.summary.state|default('غير متاح') }}</strong>
+    <p>تدفق إشارات بحثي يحول الملاحظات المعاد تشغيلها إلى تصنيفات CALL و PUT و NO_TRADE دون تنفيذ أو أوامر أو اتصال وسيط.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجاهزية</span>
+    <strong>{{ signal_stream.summary.readiness_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>عدد الإشارات</span>
+    <strong>{{ signal_stream.summary.signal_count|default(0)|number_ar }}</strong>
+    <small>CALL {{ signal_stream.summary.call_count|default(0)|number_ar }}</small>
+    <small>PUT {{ signal_stream.summary.put_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد الإشارات</span><strong>{{ signal_stream.summary.signal_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>إشارات CALL</span><strong>{{ signal_stream.summary.call_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>إشارات PUT</span><strong>{{ signal_stream.summary.put_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>إشارات NO_TRADE</span><strong>{{ signal_stream.summary.no_trade_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>متوسط الثقة</span><strong>{{ signal_stream.summary.average_confidence|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الجودة</span><strong>{{ signal_stream.summary.quality_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الجاهزية</span><strong>{{ signal_stream.summary.readiness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ signal_stream.summary.warning_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الإشارات</h2><span>CALL / PUT / NO_TRADE</span></div><div class="chart" data-chart='{{ signal_stream.distribution|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الثقة</h2><span>الثقة</span></div><div class="chart" data-chart='{{ signal_stream.confidence|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>النشاط الزمني</h2><span>التسلسل</span></div><div class="chart" data-chart='{{ signal_stream.activity|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جودة الإشارات</h2><span>الجودة</span></div><div class="chart" data-chart='{{ signal_stream.quality|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الجاهزية</h2><span>الحالة</span></div><div class="chart" data-chart='{{ signal_stream.readiness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الأصول</h2><span>الأصول</span></div><div class="chart" data-chart='{{ signal_stream.assets|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الجلسات</h2><span>الجلسات</span></div><div class="chart" data-chart='{{ signal_stream.sessions|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>كثافة الإشارات</h2><span>الكثافة</span></div><div class="chart" data-chart='{{ signal_stream.density|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>أسباب التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ signal_stream.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ signal_stream.recommendations|tojson }}'></div></article>
+</section>
+{% endblock %}

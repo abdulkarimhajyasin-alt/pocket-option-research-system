@@ -1,4 +1,4 @@
-You are now implementing Phase 42 — Live Observation Replay Engine.
+You are now implementing Phase 43 — Signal Stream Engine.
 
 CRITICAL RULES
 
@@ -12,8 +12,8 @@ DO NOT add:
 - Broker connectivity
 - Broker APIs
 - Browser automation
-- Playwright
 - Selenium
+- Playwright
 - Account login
 - Authentication
 - Credential handling
@@ -25,22 +25,22 @@ DO NOT add:
 This phase must remain STRICTLY RESEARCH ONLY.
 
 ====================================================
-PHASE 42 — LIVE OBSERVATION REPLAY ENGINE
+PHASE 43 — SIGNAL STREAM ENGINE
 ====================================================
 
 OBJECTIVE
 
-Build a deterministic Live Observation Replay Engine that replays historical and imported observations as if they were arriving in real time.
+Build a real-time style Signal Stream Engine that consumes the Live Observation Replay Engine and continuously generates research-only signal events.
 
-The goal is to prepare the architecture for future observation streams without introducing any broker interaction or execution capability.
+The engine must transform observation flow into signal flow.
 
-This engine must simulate observation flow only.
+This is NOT execution.
 
-NOT execution.
+This is NOT trading.
 
-NOT trading.
+This is NOT automation.
 
-NOT automation.
+It is only a signal-generation research layer.
 
 ====================================================
 ARCHITECTURE
@@ -48,73 +48,90 @@ ARCHITECTURE
 
 Create:
 
-app/live_observation/
+app/signal_stream/
     __init__.py
     models.py
-    replay.py
-    scheduler.py
+    stream.py
+    generator.py
+    queue.py
     timeline.py
-    state.py
-    analytics.py
-    diagnostics.py
+    scoring.py
     validation.py
+    diagnostics.py
+    analytics.py
     storage.py
     reports.py
     service.py
 
 ====================================================
-CORE MODEL
+CORE MODELS
 ====================================================
 
 Create:
 
-LiveObservation
+SignalEvent
 
 Fields:
 
-- observation_id
+- signal_id
 - timestamp
-- source
 - asset
 - session
-- market_state
+- direction
 - confidence
 - quality
-- readiness
+- source
+- observation_id
 - metadata
 
+Direction values:
+
+- CALL
+- PUT
+- NO_TRADE
+
+Research-only classification.
+
 ====================================================
-REPLAY ENGINE
+STREAM ENGINE
 ====================================================
 
 Create:
 
-ObservationReplayEngine
+SignalStreamEngine
 
-Capabilities:
+Consume:
 
-- Replay historical observations
-- Replay imported snapshots
-- Replay unified observations
-- Replay observation intelligence outputs
-- Deterministic timing simulation
-- Pause
-- Resume
-- Reset
-- Replay speed multiplier
+- Live Observation Replay
+- Market Observation
+- Observation Intelligence
 
-Supported speeds:
-
-- 1x
-- 2x
-- 5x
-- 10x
-- 25x
-- 50x
+Generate continuous signal events.
 
 Generate:
 
-Replay Score
+Stream Score
+
+0-100
+
+====================================================
+QUEUE ENGINE
+====================================================
+
+Create:
+
+SignalQueueEngine
+
+Manage:
+
+- pending signals
+- active signals
+- expired signals
+- rejected signals
+
+Generate:
+
+Queue Score
 
 0-100
 
@@ -124,14 +141,14 @@ TIMELINE ENGINE
 
 Create:
 
-ObservationTimelineEngine
+SignalTimelineEngine
 
-Generate:
+Track:
 
-- observation sequence
-- observation timeline
-- replay progression
-- replay coverage
+- signal sequence
+- signal frequency
+- signal density
+- signal activity
 
 Generate:
 
@@ -140,60 +157,23 @@ Timeline Score
 0-100
 
 ====================================================
-STATE ENGINE
+SCORING ENGINE
 ====================================================
 
 Create:
 
-ReplayStateEngine
-
-States:
-
-- جاهز
-- يعمل
-- متوقف
-- مكتمل
-- يحتاج مراجعة
-
-====================================================
-QUALITY ENGINE
-====================================================
-
-Create:
-
-ReplayQualityEngine
+SignalStreamScoringEngine
 
 Evaluate:
 
-- replay consistency
-- replay completeness
-- replay reliability
-- replay stability
+- confidence quality
+- signal quality
+- stream stability
+- signal consistency
 
 Generate:
 
-Quality Score
-
-0-100
-
-====================================================
-READINESS ENGINE
-====================================================
-
-Create:
-
-ReplayReadinessEngine
-
-Evaluate:
-
-- replay readiness
-- timeline readiness
-- observation readiness
-- infrastructure readiness
-
-Generate:
-
-Readiness Score
+Signal Score
 
 0-100
 
@@ -203,14 +183,14 @@ VALIDATION ENGINE
 
 Create:
 
-ReplayValidationEngine
+SignalStreamValidationEngine
 
 Validate:
 
-- sequence integrity
+- signal integrity
 - timeline integrity
-- observation completeness
-- replay consistency
+- confidence bounds
+- stream consistency
 
 Generate:
 
@@ -219,20 +199,43 @@ Validation Score
 0-100
 
 ====================================================
+READINESS STATES
+====================================================
+
+Generate:
+
+95-100
+ممتاز
+
+85-94
+قوي
+
+70-84
+مقبول
+
+50-69
+ضعيف
+
+0-49
+مرفوض
+
+Provide Arabic explanation.
+
+====================================================
 DIAGNOSTICS ENGINE
 ====================================================
 
 Create:
 
-ReplayDiagnosticsEngine
+SignalStreamDiagnostics
 
 Detect:
 
-- missing observations
-- invalid sequences
-- timeline gaps
-- replay conflicts
-- stale observations
+- signal conflicts
+- duplicate signals
+- unstable streams
+- low confidence signals
+- weak observations
 
 Severity:
 
@@ -246,16 +249,16 @@ RECOMMENDATIONS
 
 Create:
 
-ReplayRecommendationEngine
+SignalStreamRecommendationEngine
 
 Generate Arabic recommendations:
 
-- تحسين التسلسل
 - تحسين الجودة
+- تحسين الثقة
+- تحسين الاستقرار
 - تحسين الاتساق
 - تحسين التغطية
 - تحسين الجاهزية
-- تحسين التحقق
 
 ====================================================
 EXECUTIVE PANEL
@@ -263,18 +266,18 @@ EXECUTIVE PANEL
 
 Create:
 
-محرك إعادة تشغيل المراقبة
+محرك تدفق الإشارات
 
 Display:
 
-- عدد الملاحظات
-- حالة التشغيل
+- عدد الإشارات
+- إشارات CALL
+- إشارات PUT
+- إشارات NO_TRADE
+- متوسط الثقة
 - درجة الجودة
 - درجة الجاهزية
-- درجة التحقق
-- التغطية
 - عدد التحذيرات
-- عدد التوصيات
 
 ====================================================
 DASHBOARD
@@ -282,17 +285,17 @@ DASHBOARD
 
 Add:
 
-/live-observation
+/signal-stream
 
-/api/live-observation
+/api/signal-stream
 
 Navigation label:
 
-إعادة تشغيل المراقبة
+تدفق الإشارات
 
 Dashboard title:
 
-محرك إعادة تشغيل المراقبة
+محرك تدفق الإشارات
 
 ====================================================
 CHARTS
@@ -300,16 +303,16 @@ CHARTS
 
 Add Arabic charts:
 
-- التسلسل الزمني
-- جودة التشغيل
-- الجاهزية
-- التحقق
-- التغطية
-- السرعة
+- توزيع الإشارات
+- توزيع الثقة
 - النشاط الزمني
+- جودة الإشارات
+- الجاهزية
+- توزيع الأصول
+- توزيع الجلسات
+- كثافة الإشارات
 - أسباب التحذيرات
 - التوصيات
-- استقرار التشغيل
 
 ====================================================
 ANALYTICS
@@ -317,16 +320,17 @@ ANALYTICS
 
 Create:
 
-LiveObservationAnalytics
+SignalStreamAnalytics
 
 Generate:
 
-- replay quality
-- replay readiness
-- replay coverage
-- replay validation
-- replay stability
-- replay diagnostics
+- signal distribution
+- confidence distribution
+- quality distribution
+- readiness distribution
+- session distribution
+- asset distribution
+- diagnostics distribution
 
 ====================================================
 STORAGE
@@ -334,13 +338,13 @@ STORAGE
 
 Create:
 
-storage/live_observation/
+storage/signal_stream/
 
 Generate:
 
-replay_results.json
+signal_events.json
+signal_queue.json
 timeline_results.json
-state_results.json
 quality_results.json
 readiness_results.json
 validation_results.json
@@ -352,10 +356,10 @@ REPORTS
 
 Generate:
 
-reports/live_observation/
+reports/signal_stream/
 
-replay_summary.json
-timeline_report.json
+signal_summary.json
+stream_report.json
 quality_report.json
 readiness_report.json
 validation_report.json
@@ -368,15 +372,14 @@ INTEGRATION
 
 Consume:
 
-- Market Observation Pipeline
+- Live Observation Replay
+- Market Observation
 - Observation Intelligence
-- Snapshot Import
-- Browser Observation
-- External Observation
+- Signal Intelligence
 
 Do NOT modify previous engines.
 
-Only consume their outputs.
+Only consume outputs.
 
 ====================================================
 I18N
@@ -394,12 +397,12 @@ TESTING
 
 Create:
 
-tests/test_live_observation.py
+tests/test_signal_stream.py
 
 Create:
 
-scripts/run_live_observation.py
-scripts/check_live_observation.py
+scripts/run_signal_stream.py
+scripts/check_signal_stream.py
 
 ====================================================
 VALIDATION
@@ -413,8 +416,9 @@ python -m pytest -q
 
 python -m flake8 app
 
-python scripts/check_live_observation.py
+python scripts/check_signal_stream.py
 
+python scripts/check_live_observation.py
 python scripts/check_market_observation.py
 python scripts/check_observation_intelligence.py
 python scripts/check_snapshot_import.py
@@ -470,10 +474,10 @@ DELIVERABLE FORMAT
 
 Return:
 
-1. Phase 42 Implementation Summary
+1. Phase 43 Implementation Summary
 2. Changed Files
-3. Live Observation Replay Architecture
-4. Replay Logic
+3. Signal Stream Architecture
+4. Stream Generation Logic
 5. Dashboard Additions
 6. Reports Generated
 7. Storage Generated
@@ -484,7 +488,7 @@ Return:
 Git Commands:
 
 git add .
-git commit -m "Add live observation replay engine"
+git commit -m "Add signal stream engine"
 git push origin main
 
 Remain strictly research-only.

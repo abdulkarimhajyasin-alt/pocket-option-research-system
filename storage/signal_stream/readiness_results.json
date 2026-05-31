@@ -1,0 +1,14 @@
+{
+  "signal_count": 14,
+  "call_count": 1,
+  "put_count": 2,
+  "no_trade_count": 11,
+  "average_confidence": 84.45,
+  "quality_score": 85.15,
+  "readiness_score": 87.4,
+  "validation_score": 100.0,
+  "warning_count": 1,
+  "state": "قوي",
+  "research_only": true,
+  "signal_generation_only": true
+}

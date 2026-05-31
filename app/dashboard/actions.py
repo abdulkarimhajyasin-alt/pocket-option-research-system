@@ -205,6 +205,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_live_observation.py",),
     ),
+    "signal_stream": ActionDefinition(
+        name="signal_stream",
+        label="تدفق الإشارات",
+        description="توليد تدفق إشارات بحثي من الملاحظات المعاد تشغيلها دون تنفيذ.",
+        command=("scripts/run_signal_stream.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

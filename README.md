@@ -438,6 +438,29 @@ The replay engine simulates observation timing only. It does not add broker acce
 browser automation, login, authentication, credential handling, order placement,
 execution, money management, position management, or trading automation.
 
+## Phase 43 Signal Stream Engine
+
+Phase 43 adds a research-only Signal Stream Engine that consumes live observation
+replay outputs, market observation reports, observation intelligence reports, and
+signal intelligence reports to generate continuous signal events.
+
+Outputs are written under:
+
+- `storage/signal_stream/`
+- `reports/signal_stream/`
+
+Run the signal stream engine and diagnostics:
+
+```bash
+python scripts/run_signal_stream.py
+python scripts/check_signal_stream.py
+```
+
+Signal directions are research classifications only: `CALL`, `PUT`, and `NO_TRADE`.
+The engine does not add broker access, browser automation, login, authentication,
+credential handling, order placement, execution, money management, position
+management, or trading automation.
+
 Dashboard pages:
 
 - Overview
