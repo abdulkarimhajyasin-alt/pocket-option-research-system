@@ -1,0 +1,37 @@
+[
+  {
+    "name": "max_paper_orders",
+    "arabic_label": "حد الأوامر الورقية",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حد الأوامر الورقية: هامش ورقي 6"
+  },
+  {
+    "name": "max_consecutive_paper_losses",
+    "arabic_label": "حد الخسائر الورقية المتتالية",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حد الخسائر الورقية المتتالية: هامش ورقي 3"
+  },
+  {
+    "name": "minimum_readiness_score",
+    "arabic_label": "حد الجاهزية الورقية",
+    "status": "PASS",
+    "score": 79.7,
+    "detail": "حد الجاهزية الورقية: 79.7"
+  },
+  {
+    "name": "minimum_confidence",
+    "arabic_label": "حد الثقة الورقية",
+    "status": "PASS",
+    "score": 84.44,
+    "detail": "حد الثقة الورقية: 84.44"
+  },
+  {
+    "name": "maximum_simulated_drawdown",
+    "arabic_label": "حد التراجع الورقي",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حد التراجع الورقي: هامش ورقي 4.0"
+  }
+]

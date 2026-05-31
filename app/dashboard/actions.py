@@ -219,6 +219,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_execution_readiness.py",),
     ),
+    "paper_execution": ActionDefinition(
+        name="paper_execution",
+        label="التنفيذ الورقي",
+        description="تشغيل محاكاة تنفيذ ورقي محلية فقط دون أوامر حقيقية أو وسيط أو أموال.",
+        command=("scripts/run_paper_execution.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

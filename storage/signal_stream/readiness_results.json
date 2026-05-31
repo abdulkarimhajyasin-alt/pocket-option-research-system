@@ -1,7 +1,7 @@
 {
   "signal_count": 14,
-  "call_count": 2,
-  "put_count": 1,
+  "call_count": 1,
+  "put_count": 2,
   "no_trade_count": 11,
   "average_confidence": 84.45,
   "quality_score": 85.15,

@@ -2737,6 +2737,118 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def paper_execution_analytics(self) -> dict[str, Any]:
+        """Return latest paper-only execution analytics."""
+        payload = self._latest_json_dict("paper_execution", "paper_execution_summary")
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        orders_report = self._latest_json_dict("paper_execution", "orders")
+        results_report = self._latest_json_dict("paper_execution", "results")
+        risk_report = self._latest_json_dict("paper_execution", "risk")
+        diagnostics = self._latest_json_dict("paper_execution", "diagnostics")
+        recommendations = self._latest_json_dict("paper_execution", "recommendations")
+        orders = latest.get("orders", []) if isinstance(latest, dict) else []
+        confidence: dict[str, float] = {}
+        readiness: dict[str, float] = {}
+        rejections: dict[str, float] = {}
+        activity: dict[str, float] = {}
+        for item in orders[:20] if isinstance(orders, list) else []:
+            if not isinstance(item, dict):
+                continue
+            label = str(item.get("order_id", "أمر ورقي"))
+            confidence[label] = self._float(item.get("confidence"))
+            readiness[label] = self._float(item.get("readiness_score"))
+            day = str(item.get("created_at", ""))[:10] or "غير محدد"
+            activity[day] = activity.get(day, 0.0) + 1.0
+            if item.get("status") == "REJECTED":
+                reason = "جاهزية منخفضة"
+                if str(item.get("direction")) == "NO_TRADE":
+                    reason = "اتجاه غير قابل للورق"
+                elif self._float(item.get("confidence")) < 60:
+                    reason = "ثقة منخفضة"
+                rejections[reason] = rejections.get(reason, 0.0) + 1.0
+        if not summary:
+            summary = {
+                "total_paper_orders": 0,
+                "accepted": 0,
+                "rejected": 0,
+                "wins": 0,
+                "losses": 0,
+                "win_rate": 0.0,
+                "average_readiness": 0.0,
+                "warning_count": 0,
+                "paper_only": True,
+                "research_only": True,
+                "not_real_execution": True,
+            }
+        return {
+            "summary": summary,
+            "orders": bar_chart(
+                "توزيع الأوامر الورقية",
+                *self._dict_chart_values(orders_report),
+                label="الأوامر",
+                color="blue",
+            ).to_dict(),
+            "results": bar_chart(
+                "توزيع النتائج",
+                *self._dict_chart_values(results_report),
+                label="النتائج",
+                color="green",
+            ).to_dict(),
+            "win_rate": bar_chart(
+                "نسبة النجاح الورقية",
+                ["النجاح", "غير ناجحة"],
+                [
+                    self._float(summary.get("win_rate")) * 100,
+                    max(0.0, 100 - self._float(summary.get("win_rate")) * 100),
+                ],
+                label="النسبة",
+                color="green",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="blue",
+            ).to_dict(),
+            "confidence": bar_chart(
+                "الثقة",
+                *self._dict_chart_values(confidence),
+                label="الثقة",
+                color="accent",
+            ).to_dict(),
+            "risk": bar_chart(
+                "المخاطر الورقية",
+                *self._dict_chart_values(risk_report),
+                label="المخاطر",
+                color="warning",
+            ).to_dict(),
+            "rejections": bar_chart(
+                "أسباب الرفض",
+                *self._dict_chart_values(rejections),
+                label="الأسباب",
+                color="warning",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "activity": line_chart(
+                "النشاط الزمني",
+                *self._dict_chart_values(activity),
+                label="النشاط",
+                color="blue",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")
