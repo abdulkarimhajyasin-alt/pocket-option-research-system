@@ -1,0 +1,11 @@
+{
+  "market_visibility": 79.05,
+  "asset_visibility": 48.0,
+  "payout_visibility": 74.2,
+  "session_visibility": 60,
+  "candle_visibility": 78.22,
+  "signal_visibility": 65,
+  "score": 67.41,
+  "research_only": true,
+  "observation_only": true
+}

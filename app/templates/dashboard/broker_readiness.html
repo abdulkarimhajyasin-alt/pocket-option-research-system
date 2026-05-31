@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.broker_readiness }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">بحث فقط</p>
+    <h1>{{ t.pages.broker_readiness }}</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث جاهزية المراقبة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>جاهزية المراقبة الخارجية</span>
+    <strong>{{ broker_readiness.summary.readiness_state|default('غير متاح') }}</strong>
+    <p>تقييم سلبي لقدرة المراقبة الخارجية مع قيود تمنع التنفيذ والأوامر وإجراءات الحساب والتحكم بالوسيط.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجاهزية</span>
+    <strong>{{ broker_readiness.summary.readiness_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>حالة السلامة</span>
+    <strong>{{ broker_readiness.summary.safety_score|default(0)|number_ar }}</strong>
+    <small>التحذيرات {{ broker_readiness.summary.warning_count|default(0)|number_ar }}</small>
+    <small>التوصيات {{ broker_readiness.summary.recommendation_count|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>درجة الجاهزية</span><strong>{{ broker_readiness.summary.readiness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة القدرات</span><strong>{{ broker_readiness.summary.capability_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة السلامة</span><strong>{{ broker_readiness.summary.safety_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة التحقق</span><strong>{{ broker_readiness.summary.validation_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ broker_readiness.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التوصيات</span><strong>{{ broker_readiness.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الإخفاقات</span><strong>{{ broker_readiness.summary.failure_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>مستوى التغطية</span><strong>{{ broker_readiness.summary.coverage_level|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الجاهزية</h2><span>المراقبة</span></div><div class="chart" data-chart='{{ broker_readiness.readiness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع القدرات</h2><span>القدرات</span></div><div class="chart" data-chart='{{ broker_readiness.capability|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع السلامة</h2><span>السلامة</span></div><div class="chart" data-chart='{{ broker_readiness.safety|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع التحقق</h2><span>التحقق</span></div><div class="chart" data-chart='{{ broker_readiness.validation|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>نتائج القيود</h2><span>القيود</span></div><div class="chart" data-chart='{{ broker_readiness.restrictions|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أسباب الإخفاق</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ broker_readiness.failures|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ broker_readiness.recommendations|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تطور الجاهزية</h2><span>الزمن</span></div><div class="chart" data-chart='{{ broker_readiness.readiness_timeline|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تطور القدرات</h2><span>الزمن</span></div><div class="chart" data-chart='{{ broker_readiness.capability_timeline|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تطور السلامة</h2><span>الزمن</span></div><div class="chart" data-chart='{{ broker_readiness.safety_timeline|tojson }}'></div></article>
+</section>
+{% endblock %}

@@ -1733,6 +1733,99 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def broker_readiness_analytics(self) -> dict[str, Any]:
+        """Return latest passive broker observation readiness analytics."""
+        payload = self._latest_json_dict("broker_readiness", "readiness_summary")
+        summary = payload.get("summary", {}) if payload else {}
+        readiness = payload.get("readiness_distribution", {}) if payload else {}
+        readiness_timeline = payload.get("readiness_timeline", {}) if payload else {}
+        capability_timeline = payload.get("capability_timeline", {}) if payload else {}
+        safety_timeline = payload.get("safety_timeline", {}) if payload else {}
+        capability = self._latest_json_dict("broker_readiness", "capability")
+        validation = self._latest_json_dict("broker_readiness", "validation")
+        restrictions = self._latest_json_dict("broker_readiness", "restriction")
+        diagnostics = self._latest_json_dict("broker_readiness", "diagnostics")
+        recommendations = self._latest_json_dict("broker_readiness", "recommendations")
+        safety = {
+            "السلامة": summary.get("safety_score", 0),
+            "القيود": 100.0 if restrictions.get("ناجح") else 0.0,
+        }
+        if not summary:
+            summary = {
+                "readiness_score": 0.0,
+                "readiness_state": "غير متاح",
+                "capability_score": 0.0,
+                "safety_score": 0.0,
+                "validation_score": 0.0,
+                "warning_count": 0,
+                "failure_count": 0,
+                "recommendation_count": 0,
+                "coverage_level": 0.0,
+            }
+        return {
+            "summary": summary,
+            "readiness": bar_chart(
+                "توزيع الجاهزية",
+                *self._dict_chart_values(readiness),
+                label="الجاهزية",
+                color="green",
+            ).to_dict(),
+            "capability": bar_chart(
+                "توزيع القدرات",
+                *self._dict_chart_values(capability),
+                label="القدرات",
+                color="blue",
+            ).to_dict(),
+            "safety": bar_chart(
+                "توزيع السلامة",
+                *self._dict_chart_values(safety),
+                label="السلامة",
+                color="warning",
+            ).to_dict(),
+            "validation": bar_chart(
+                "توزيع التحقق",
+                *self._dict_chart_values(validation),
+                label="التحقق",
+                color="accent",
+            ).to_dict(),
+            "restrictions": bar_chart(
+                "نتائج القيود",
+                *self._dict_chart_values(restrictions),
+                label="القيود",
+                color="green",
+            ).to_dict(),
+            "failures": bar_chart(
+                "أسباب الإخفاق",
+                *self._dict_chart_values(diagnostics),
+                label="الإخفاق",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="blue",
+            ).to_dict(),
+            "readiness_timeline": line_chart(
+                "تطور الجاهزية",
+                *self._dict_chart_values(readiness_timeline),
+                label="الجاهزية",
+                color="green",
+            ).to_dict(),
+            "capability_timeline": line_chart(
+                "تطور القدرات",
+                *self._dict_chart_values(capability_timeline),
+                label="القدرات",
+                color="blue",
+            ).to_dict(),
+            "safety_timeline": line_chart(
+                "تطور السلامة",
+                *self._dict_chart_values(safety_timeline),
+                label="السلامة",
+                color="warning",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

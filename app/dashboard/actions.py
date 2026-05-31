@@ -158,6 +158,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل قرار الاعتماد البحثي دون نشر أو تداول أو تنفيذ.",
         command=("scripts/run_research_certification.py",),
     ),
+    "observation_readiness": ActionDefinition(
+        name="observation_readiness",
+        label="تحديث جاهزية المراقبة",
+        description="تشغيل جاهزية المراقبة السلبية دون تنفيذ أو تحكم وسيط.",
+        command=("scripts/run_broker_readiness.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",
