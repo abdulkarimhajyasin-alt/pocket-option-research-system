@@ -1,0 +1,109 @@
+{
+  "win_rate": 0.1429,
+  "loss_rate": 0.0,
+  "drawdown_analysis": {
+    "current_drawdown": 0.0,
+    "maximum_drawdown": 0.0,
+    "drawdown_trend": "مستقر",
+    "recovery_factor": 100.0,
+    "drawdown_score": 100.0,
+    "equity_curve": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      2.0
+    ],
+    "paper_only": true
+  },
+  "stability_analysis": {
+    "stability_score": 67.0
+  },
+  "exposure_analysis": {
+    "asset_exposure": {
+      "بيانات السوق": 1,
+      "مراقبة السوق": 1,
+      "جاهزية المراقبة": 2,
+      "مراقبة المتصفح": 2,
+      "المراقبة الخارجية": 2,
+      "استيراد اللقطات": 2,
+      "ذكاء المراقبة": 1,
+      "snapshot": 1,
+      "browser_snapshot": 1,
+      "external_source": 1
+    },
+    "session_exposure": {
+      "paper": 14
+    },
+    "direction_exposure": {
+      "NO_TRADE": 11,
+      "PUT": 2,
+      "CALL": 1
+    },
+    "confidence_exposure": {
+      "ثقة متوسطة": 3,
+      "ثقة منخفضة": 1,
+      "ثقة مرتفعة": 10
+    },
+    "concentration": 0.1429,
+    "exposure_score": 92.86,
+    "paper_only": true
+  },
+  "governance_analysis": {
+    "PASS": 5,
+    "WARNING": 1
+  },
+  "risk_analysis": {
+    "PASS": 4,
+    "FAIL": 1
+  },
+  "paper_only": true,
+  "research_only": true,
+  "portfolio_score": 81.49,
+  "warning_count": 3,
+  "recommendation_count": 3,
+  "summary": {
+    "portfolio_id": "paper_portfolio_0001",
+    "created_at": "2026-05-31T15:41:10.624841+00:00",
+    "total_orders": 14,
+    "active_orders": 0,
+    "wins": 2,
+    "losses": 0,
+    "breakeven": 1,
+    "win_rate": 0.1429,
+    "drawdown": 0.0,
+    "stability_score": 67.0,
+    "health_score": 60.43,
+    "risk_score": 86.62,
+    "metadata": {
+      "paper_only": true,
+      "research_only": true,
+      "portfolio_simulation_only": true,
+      "not_real_execution": true,
+      "not_real_order_placement": true,
+      "not_broker_access": true,
+      "not_broker_api": true,
+      "not_account_login": true,
+      "not_authentication": true,
+      "not_credential_handling": true,
+      "not_browser_automation": true,
+      "not_real_money": true,
+      "not_position_management": true,
+      "not_trading_automation": true,
+      "not_broker_control": true
+    },
+    "paper_only": true,
+    "research_only": true,
+    "not_real_money": true,
+    "not_real_execution": true
+  }
+}

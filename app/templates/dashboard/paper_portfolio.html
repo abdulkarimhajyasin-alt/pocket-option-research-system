@@ -1,0 +1,62 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.paper_portfolio }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">ورقي فقط</p>
+    <h1>إدارة المحفظة الورقية</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث المحفظة الورقية</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>المحفظة الورقية</span>
+    <strong>{{ paper_portfolio.summary.portfolio_score|default(0)|number_ar }}</strong>
+    <p>حوكمة محفظة ورقية محلية فقط تقيس الصحة والاستقرار والتعرض والسحب دون أموال حقيقية أو وسيط.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الصحة</span>
+    <strong>{{ paper_portfolio.summary.health_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>إجمالي الأوامر</span>
+    <strong>{{ paper_portfolio.summary.total_orders|default(0)|number_ar }}</strong>
+    <small>الرابحة {{ paper_portfolio.summary.wins|default(0)|number_ar }}</small>
+    <small>الخاسرة {{ paper_portfolio.summary.losses|default(0)|number_ar }}</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>إجمالي الأوامر</span><strong>{{ paper_portfolio.summary.total_orders|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الرابحة</span><strong>{{ paper_portfolio.summary.wins|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الخاسرة</span><strong>{{ paper_portfolio.summary.losses|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>نسبة النجاح</span><strong>{{ paper_portfolio.summary.win_rate|default(0)|percent_ar }}</strong></article>
+  <article class="metric-card"><span>السحب الحالي</span><strong>{{ paper_portfolio.summary.drawdown|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أقصى سحب</span><strong>{{ paper_portfolio.summary.maximum_drawdown|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الصحة</span><strong>{{ paper_portfolio.summary.health_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>درجة الاستقرار</span><strong>{{ paper_portfolio.summary.stability_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ paper_portfolio.summary.warning_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الأداء الورقي</h2><span>النتائج</span></div><div class="chart" data-chart='{{ paper_portfolio.performance|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>السحب</h2><span>المحاكاة</span></div><div class="chart" data-chart='{{ paper_portfolio.drawdown|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التعرض</h2><span>الاتجاهات</span></div><div class="chart" data-chart='{{ paper_portfolio.exposure|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع الأصول</h2><span>الأصول</span></div><div class="chart" data-chart='{{ paper_portfolio.assets|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الجلسات</h2><span>الجلسات</span></div><div class="chart" data-chart='{{ paper_portfolio.sessions|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>الاستقرار</h2><span>المحفظة</span></div><div class="chart" data-chart='{{ paper_portfolio.stability|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الصحة</h2><span>المخاطر والصحة</span></div><div class="chart" data-chart='{{ paper_portfolio.health|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>الحوكمة</h2><span>الحدود</span></div><div class="chart" data-chart='{{ paper_portfolio.governance|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ paper_portfolio.warnings|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الأولويات</span></div><div class="chart" data-chart='{{ paper_portfolio.recommendations|tojson }}'></div></article>
+</section>
+{% endblock %}

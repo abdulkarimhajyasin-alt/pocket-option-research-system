@@ -2849,6 +2849,106 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def paper_portfolio_analytics(self) -> dict[str, Any]:
+        """Return latest paper-only portfolio governance analytics."""
+        payload = self._latest_json_dict("paper_portfolio", "portfolio_summary")
+        summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+        latest = payload.get("latest", {}) if isinstance(payload, dict) else {}
+        portfolio = latest.get("portfolio", {}) if isinstance(latest, dict) else {}
+        exposure = self._latest_json_dict("paper_portfolio", "exposure")
+        drawdown = self._latest_json_dict("paper_portfolio", "drawdown")
+        governance = self._latest_json_dict("paper_portfolio", "governance")
+        limits = self._latest_json_dict("paper_portfolio", "limits")
+        diagnostics = self._latest_json_dict("paper_portfolio", "diagnostics")
+        recommendations = self._latest_json_dict("paper_portfolio", "recommendations")
+        if not summary:
+            summary = {
+                "portfolio_score": 0.0,
+                "warning_count": 0,
+                "recommendation_count": 0,
+                "paper_only": True,
+                "research_only": True,
+            }
+        if isinstance(portfolio, dict):
+            summary = {**portfolio, **summary}
+        exposure_assets = exposure.get("asset_exposure", {}) if isinstance(exposure, dict) else {}
+        exposure_sessions = (
+            exposure.get("session_exposure", {}) if isinstance(exposure, dict) else {}
+        )
+        performance = {
+            "الرابحة": self._float(summary.get("wins")),
+            "الخاسرة": self._float(summary.get("losses")),
+            "تعادل": self._float(summary.get("breakeven")),
+        }
+        health = {
+            "الصحة": self._float(summary.get("health_score")),
+            "المخاطر": self._float(summary.get("risk_score")),
+        }
+        stability = {"الاستقرار": self._float(summary.get("stability_score"))}
+        return {
+            "summary": summary,
+            "performance": bar_chart(
+                "الأداء الورقي",
+                *self._dict_chart_values(performance),
+                label="الأداء",
+                color="green",
+            ).to_dict(),
+            "drawdown": bar_chart(
+                "السحب",
+                *self._dict_chart_values(drawdown),
+                label="السحب",
+                color="warning",
+            ).to_dict(),
+            "exposure": bar_chart(
+                "التعرض",
+                *self._dict_chart_values(exposure.get("direction_exposure", {})),
+                label="التعرض",
+                color="blue",
+            ).to_dict() if isinstance(exposure, dict) else bar_chart("التعرض", [], []).to_dict(),
+            "assets": bar_chart(
+                "توزيع الأصول",
+                *self._dict_chart_values(exposure_assets),
+                label="الأصول",
+                color="accent",
+            ).to_dict(),
+            "sessions": bar_chart(
+                "توزيع الجلسات",
+                *self._dict_chart_values(exposure_sessions),
+                label="الجلسات",
+                color="green",
+            ).to_dict(),
+            "stability": bar_chart(
+                "الاستقرار",
+                *self._dict_chart_values(stability),
+                label="الاستقرار",
+                color="blue",
+            ).to_dict(),
+            "health": bar_chart(
+                "الصحة",
+                *self._dict_chart_values(health),
+                label="الصحة",
+                color="green",
+            ).to_dict(),
+            "governance": bar_chart(
+                "الحوكمة",
+                *self._dict_chart_values({**governance, **limits}),
+                label="الحوكمة",
+                color="warning",
+            ).to_dict(),
+            "warnings": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendations),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

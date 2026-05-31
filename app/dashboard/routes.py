@@ -622,6 +622,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/paper-portfolio", response_class=HTMLResponse)
+    def paper_portfolio(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/paper_portfolio.html",
+            context(
+                request,
+                dashboard,
+                page="paper_portfolio",
+                paper_portfolio=dashboard.analytics.paper_portfolio_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -758,6 +772,10 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/paper-execution")
     def api_paper_execution() -> dict[str, object]:
         return dashboard_context().analytics.paper_execution_analytics()
+
+    @app.get("/api/paper-portfolio")
+    def api_paper_portfolio() -> dict[str, object]:
+        return dashboard_context().analytics.paper_portfolio_analytics()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

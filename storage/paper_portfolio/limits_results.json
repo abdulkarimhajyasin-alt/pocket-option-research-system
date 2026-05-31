@@ -1,0 +1,37 @@
+[
+  {
+    "name": "max_active_paper_orders",
+    "arabic_label": "حد الأوامر الورقية النشطة",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حد الأوامر الورقية النشطة: هامش ورقي 5"
+  },
+  {
+    "name": "max_exposure_per_asset",
+    "arabic_label": "حد التعرض لكل أصل",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حد التعرض لكل أصل: هامش ورقي 45.71"
+  },
+  {
+    "name": "max_exposure_per_session",
+    "arabic_label": "حد التعرض لكل جلسة",
+    "status": "FAIL",
+    "score": 25.0,
+    "detail": "حد التعرض لكل جلسة: هامش ورقي -20.0"
+  },
+  {
+    "name": "max_drawdown",
+    "arabic_label": "حد السحب الورقي",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حد السحب الورقي: هامش ورقي 4.0"
+  },
+  {
+    "name": "max_consecutive_losses",
+    "arabic_label": "حد الخسائر المتتالية",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "حد الخسائر المتتالية: هامش ورقي 3"
+  }
+]

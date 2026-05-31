@@ -70,13 +70,13 @@
     "تحسين الرؤية": 1
   },
   "latest": {
-    "timestamp": "2026-05-31T15:31:29.655296",
+    "timestamp": "2026-05-31T15:41:08.878389",
     "observations": [
       {
         "observation_id": "snapshot_import",
         "source_type": "snapshot_import",
         "source_name": "استيراد اللقطات",
-        "timestamp": "2026-05-31T15:28:27.637991",
+        "timestamp": "2026-05-31T15:31:40.320268",
         "assets": 1.0,
         "payouts": 1.0,
         "sessions": 2.0,
@@ -92,7 +92,7 @@
         "observation_id": "browser_observation",
         "source_type": "browser_observation",
         "source_name": "مراقبة المتصفح",
-        "timestamp": "2026-05-31T15:31:21.405198",
+        "timestamp": "2026-05-31T15:41:00.440918",
         "assets": 3.0,
         "payouts": 1.0,
         "sessions": 1.0,
@@ -108,7 +108,7 @@
         "observation_id": "external_observation",
         "source_type": "external_observation",
         "source_name": "المراقبة الخارجية",
-        "timestamp": "2026-05-31T15:31:26.843860",
+        "timestamp": "2026-05-31T15:41:06.024245",
         "assets": 4.0,
         "payouts": 4.0,
         "sessions": 4.0,
@@ -124,7 +124,7 @@
         "observation_id": "broker_readiness",
         "source_type": "broker_readiness",
         "source_name": "جاهزية المراقبة",
-        "timestamp": "2026-05-31T15:31:21.022199",
+        "timestamp": "2026-05-31T15:41:00.013293",
         "assets": 48.0,
         "payouts": 74.2,
         "sessions": 60.0,

@@ -225,6 +225,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="تشغيل محاكاة تنفيذ ورقي محلية فقط دون أوامر حقيقية أو وسيط أو أموال.",
         command=("scripts/run_paper_execution.py",),
     ),
+    "paper_portfolio": ActionDefinition(
+        name="paper_portfolio",
+        label="المحفظة الورقية",
+        description="تقييم محفظة ورقية محلية فقط دون أموال حقيقية أو وسيط أو تنفيذ.",
+        command=("scripts/run_paper_portfolio.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

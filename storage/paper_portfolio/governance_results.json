@@ -1,0 +1,44 @@
+[
+  {
+    "name": "portfolio_concentration",
+    "arabic_label": "تركيز المحفظة",
+    "status": "PASS",
+    "score": 85.71,
+    "detail": "تركيز المحفظة: 85.71"
+  },
+  {
+    "name": "consecutive_losses",
+    "arabic_label": "الخسائر المتتالية",
+    "status": "PASS",
+    "score": 100.0,
+    "detail": "الخسائر المتتالية: 100.0"
+  },
+  {
+    "name": "confidence_quality",
+    "arabic_label": "جودة الثقة",
+    "status": "PASS",
+    "score": 84.45,
+    "detail": "جودة الثقة: 84.45"
+  },
+  {
+    "name": "readiness_quality",
+    "arabic_label": "جودة الجاهزية",
+    "status": "PASS",
+    "score": 79.7,
+    "detail": "جودة الجاهزية: 79.7"
+  },
+  {
+    "name": "candidate_quality",
+    "arabic_label": "جودة المرشحين",
+    "status": "WARNING",
+    "score": 60.43,
+    "detail": "جودة المرشحين: 60.43"
+  },
+  {
+    "name": "portfolio_stability",
+    "arabic_label": "استقرار المحفظة",
+    "status": "PASS",
+    "score": 67.0,
+    "detail": "استقرار المحفظة: 67.0"
+  }
+]
