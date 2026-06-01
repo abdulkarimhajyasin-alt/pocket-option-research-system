@@ -1,6 +1,6 @@
 {
-  "policy_id": "integration_safety_20260601165325",
-  "generated_at": "2026-06-01T16:53:25.663448+00:00",
+  "policy_id": "integration_safety_20260601194714",
+  "generated_at": "2026-06-01T19:47:14.756269+00:00",
   "allowed_capabilities": [
     "local file reading",
     "local report reading",

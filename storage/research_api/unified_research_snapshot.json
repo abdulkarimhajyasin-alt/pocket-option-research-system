@@ -199,7 +199,7 @@
           "recommendation_count": 3,
           "summary": {
             "portfolio_id": "paper_portfolio_0001",
-            "created_at": "2026-06-01T16:51:26.453599+00:00",
+            "created_at": "2026-06-01T19:44:47.989747+00:00",
             "total_orders": 14,
             "active_orders": 0,
             "wins": 3,
@@ -250,8 +250,8 @@
     "data": {
       "readiness": {
         "summary": {
-          "readiness_id": "paper_live_readiness_20260601165125",
-          "generated_at": "2026-06-01T16:51:25.771994+00:00",
+          "readiness_id": "paper_live_readiness_20260601194447",
+          "generated_at": "2026-06-01T19:44:47.296515+00:00",
           "paper_health": 81.49,
           "paper_stability": 60.85,
           "paper_governance": 0.0,
@@ -298,14 +298,14 @@
       },
       "architecture_audit": {
         "summary": {
-          "certification_id": "architecture_audit_20260601165106",
-          "generated_at": "2026-06-01T16:51:06.601929+00:00",
+          "certification_id": "architecture_audit_20260601194425",
+          "generated_at": "2026-06-01T19:44:25.758400+00:00",
           "architecture_score": 100.0,
           "consistency_score": 96.5,
           "dependency_score": 76.0,
-          "performance_score": 81.46,
+          "performance_score": 77.15,
           "safety_score": 100.0,
-          "overall_score": 90.79,
+          "overall_score": 89.93,
           "certification_state": "جاهزة بشروط",
           "metadata": {
             "architecture_audit_only": true,
@@ -377,8 +377,8 @@
     "data": {
       "knowledge_graph": {
         "summary": {
-          "graph_id": "knowledge_graph_20260601165117",
-          "generated_at": "2026-06-01T16:51:17.573173+00:00",
+          "graph_id": "knowledge_graph_20260601194438",
+          "generated_at": "2026-06-01T19:44:38.833825+00:00",
           "nodes": [
             {
               "node_id": "signal",

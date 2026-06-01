@@ -1,7 +1,7 @@
 {
   "summary": {
-    "policy_id": "integration_safety_20260601165325",
-    "generated_at": "2026-06-01T16:53:25.663448+00:00",
+    "policy_id": "integration_safety_20260601194714",
+    "generated_at": "2026-06-01T19:47:14.756269+00:00",
     "allowed_capabilities": [
       "local file reading",
       "local report reading",
@@ -69,10 +69,10 @@
     "not_external_execution_adapter": true
   },
   "latest": {
-    "timestamp": "2026-06-01T16:53:25.663600+00:00",
+    "timestamp": "2026-06-01T19:47:14.756376+00:00",
     "policy": {
-      "policy_id": "integration_safety_20260601165325",
-      "generated_at": "2026-06-01T16:53:25.663448+00:00",
+      "policy_id": "integration_safety_20260601194714",
+      "generated_at": "2026-06-01T19:47:14.756269+00:00",
       "allowed_capabilities": [
         "local file reading",
         "local report reading",
@@ -209,8 +209,8 @@
       "safety_boundary_only": true
     },
     "audit": {
-      "audit_id": "integration_safety_audit_20260601165325",
-      "generated_at": "2026-06-01T16:53:25.663566+00:00",
+      "audit_id": "integration_safety_audit_20260601194714",
+      "generated_at": "2026-06-01T19:47:14.756354+00:00",
       "allowed_capabilities": [
         "local file reading",
         "local report reading",

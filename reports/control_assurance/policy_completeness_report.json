@@ -1,0 +1,252 @@
+{
+  "schema_version": "control_assurance.v1",
+  "assurance_only": true,
+  "review_readiness_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-01",
+      "source_area": "safety policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-02",
+      "source_area": "risk policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-03",
+      "source_area": "release policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-04",
+      "source_area": "incident policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-05",
+      "source_area": "monitoring policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-06",
+      "source_area": "audit policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-07",
+      "source_area": "change policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-POLICY-08",
+      "source_area": "compliance policy",
+      "assessment_type": "policy",
+      "score": 88,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "policy evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Compliance Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    }
+  ]
+}

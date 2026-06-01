@@ -618,5 +618,67 @@
       "no_money_handling": true,
       "no_external_service_calls": true
     }
+  },
+  {
+    "version_id": "research-v0021",
+    "version_label": "research-v0021",
+    "snapshot_id": "snapshot-601f6fbb986b",
+    "created_at": "deterministic-local-research-archive",
+    "previous_version_id": "research-v0020",
+    "checksum": "601f6fbb986b6ccc9d57c2d3a024365f56d389dfde803cfe473c1805441fbc41",
+    "metadata": {
+      "schema_version": "research_archive.v1",
+      "stable_json_schema": true,
+      "research_archive_only": true,
+      "source_count": 11,
+      "missing_source_count": 5,
+      "duplicate_checksum_reused": false
+    },
+    "safety_boundary": {
+      "research_only": true,
+      "local_only": true,
+      "archive_only": true,
+      "no_broker_access": true,
+      "no_broker_api": true,
+      "no_account_login": true,
+      "no_credentials": true,
+      "no_browser_automation": true,
+      "no_real_trade_control": true,
+      "no_order_placement": true,
+      "no_live_trading": true,
+      "no_money_handling": true,
+      "no_external_service_calls": true
+    }
+  },
+  {
+    "version_id": "research-v0022",
+    "version_label": "research-v0022",
+    "snapshot_id": "snapshot-cd3ac1fc3ec6",
+    "created_at": "deterministic-local-research-archive",
+    "previous_version_id": "research-v0021",
+    "checksum": "cd3ac1fc3ec6cba236966dac9d6cab976c0949d777a7fc09deb235700bbda65c",
+    "metadata": {
+      "schema_version": "research_archive.v1",
+      "stable_json_schema": true,
+      "research_archive_only": true,
+      "source_count": 11,
+      "missing_source_count": 5,
+      "duplicate_checksum_reused": false
+    },
+    "safety_boundary": {
+      "research_only": true,
+      "local_only": true,
+      "archive_only": true,
+      "no_broker_access": true,
+      "no_broker_api": true,
+      "no_account_login": true,
+      "no_credentials": true,
+      "no_browser_automation": true,
+      "no_real_trade_control": true,
+      "no_order_placement": true,
+      "no_live_trading": true,
+      "no_money_handling": true,
+      "no_external_service_calls": true
+    }
   }
 ]

@@ -1,10 +1,10 @@
 {
-  "latest_version": "research-v0020",
-  "version_count": 20,
-  "latest_snapshot": "snapshot-3eb8922a885f",
+  "latest_version": "research-v0022",
+  "version_count": 22,
+  "latest_snapshot": "snapshot-cd3ac1fc3ec6",
   "archived_source_count": 11,
   "missing_source_count": 5,
-  "checksum": "3eb8922a885f98dbcdedcfafdfea70fd52b32df57da935b8187b80b72eabea82",
+  "checksum": "cd3ac1fc3ec6cba236966dac9d6cab976c0949d777a7fc09deb235700bbda65c",
   "safety_status": {
     "research_only": true,
     "local_only": true,

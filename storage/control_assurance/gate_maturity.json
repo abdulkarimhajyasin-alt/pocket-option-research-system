@@ -1,0 +1,192 @@
+{
+  "schema_version": "control_assurance.v1",
+  "assurance_only": true,
+  "review_readiness_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-GATE-01",
+      "source_area": "clear criteria",
+      "assessment_type": "gate",
+      "score": 82,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "gate evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Approval Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-GATE-02",
+      "source_area": "evidence requirements",
+      "assessment_type": "gate",
+      "score": 82,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "gate evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Approval Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-GATE-03",
+      "source_area": "gate owner",
+      "assessment_type": "gate",
+      "score": 82,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "gate evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Approval Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-GATE-04",
+      "source_area": "review process",
+      "assessment_type": "gate",
+      "score": 82,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "gate evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Approval Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-GATE-05",
+      "source_area": "blocker logic",
+      "assessment_type": "gate",
+      "score": 82,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "gate evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Approval Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-GATE-06",
+      "source_area": "forbidden approval state prevention",
+      "assessment_type": "gate",
+      "score": 82,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "gate evidence",
+        "review evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Approval Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    }
+  ]
+}

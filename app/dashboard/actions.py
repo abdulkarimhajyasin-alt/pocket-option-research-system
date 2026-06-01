@@ -344,6 +344,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="توليد خرائط تتبع وربط ضوابط محلية فقط دون تنفيذ أو تحكم تشغيلي.",
         command=("scripts/run_governance_traceability.py",),
     ),
+    "control_assurance": ActionDefinition(
+        name="control_assurance",
+        label="تأكيد الضوابط",
+        description="توليد تقييم تأكيد وجاهزية مراجعة محلي فقط دون تحكم تشغيلي حقيقي.",
+        command=("scripts/run_control_assurance.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

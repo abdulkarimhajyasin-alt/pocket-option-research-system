@@ -1,13 +1,13 @@
 {
   "summary": {
-    "certification_id": "architecture_audit_20260601165318",
-    "generated_at": "2026-06-01T16:53:18.730648+00:00",
+    "certification_id": "architecture_audit_20260601194706",
+    "generated_at": "2026-06-01T19:47:06.691136+00:00",
     "architecture_score": 100.0,
     "consistency_score": 96.5,
     "dependency_score": 76.0,
-    "performance_score": 81.45,
+    "performance_score": 77.16,
     "safety_score": 100.0,
-    "overall_score": 90.79,
+    "overall_score": 89.93,
     "certification_state": "جاهزة بشروط",
     "metadata": {
       "architecture_audit_only": true,
@@ -40,16 +40,16 @@
     "not_browser_automation": true
   },
   "latest": {
-    "timestamp": "2026-06-01T16:53:18.731574+00:00",
+    "timestamp": "2026-06-01T19:47:06.692052+00:00",
     "certification": {
-      "certification_id": "architecture_audit_20260601165318",
-      "generated_at": "2026-06-01T16:53:18.730648+00:00",
+      "certification_id": "architecture_audit_20260601194706",
+      "generated_at": "2026-06-01T19:47:06.691136+00:00",
       "architecture_score": 100.0,
       "consistency_score": 96.5,
       "dependency_score": 76.0,
-      "performance_score": 81.45,
+      "performance_score": 77.16,
       "safety_score": 100.0,
-      "overall_score": 90.79,
+      "overall_score": 89.93,
       "certification_state": "جاهزة بشروط",
       "metadata": {
         "architecture_audit_only": true,
@@ -94,16 +94,16 @@
         "paper_portfolio"
       ],
       "missing_packages": [],
-      "package_count": 69,
+      "package_count": 70,
       "architecture_audit_only": true
     },
     "consistency": {
       "consistency_score": 96.5,
-      "report_count": 338,
-      "storage_count": 270,
-      "dashboard_template_count": 55,
-      "api_route_count": 135,
-      "route_count": 191,
+      "report_count": 351,
+      "storage_count": 283,
+      "dashboard_template_count": 56,
+      "api_route_count": 147,
+      "route_count": 204,
       "missing_storage_counterparts": [
         "analytics",
         "datasets",
@@ -122,19 +122,19 @@
         "datetime.utcnow"
       ],
       "stale_module_count": 0,
-      "service_count": 44,
-      "duplicated_logic_indicator": 81,
+      "service_count": 45,
+      "duplicated_logic_indicator": 83,
       "orphan_module_count": 0,
       "architecture_audit_only": true
     },
     "performance": {
-      "performance_score": 81.45,
-      "report_count": 338,
-      "storage_count": 270,
-      "report_bytes": 4065541,
-      "storage_bytes": 10508950,
-      "dashboard_analytics_methods": 46,
-      "service_orchestration_count": 44,
+      "performance_score": 77.16,
+      "report_count": 351,
+      "storage_count": 283,
+      "report_bytes": 7999244,
+      "storage_bytes": 14442904,
+      "dashboard_analytics_methods": 47,
+      "service_orchestration_count": 45,
       "architecture_audit_only": true
     },
     "safety": {
@@ -153,7 +153,7 @@
         "architecture": 100.0,
         "consistency": 96.5,
         "dependency": 76.0,
-        "performance": 81.45,
+        "performance": 77.16,
         "safety": 100.0
       },
       "architecture": {
@@ -169,16 +169,16 @@
           "paper_portfolio"
         ],
         "missing_packages": [],
-        "package_count": 69,
+        "package_count": 70,
         "architecture_audit_only": true
       },
       "consistency": {
         "consistency_score": 96.5,
-        "report_count": 338,
-        "storage_count": 270,
-        "dashboard_template_count": 55,
-        "api_route_count": 135,
-        "route_count": 191,
+        "report_count": 351,
+        "storage_count": 283,
+        "dashboard_template_count": 56,
+        "api_route_count": 147,
+        "route_count": 204,
         "missing_storage_counterparts": [
           "analytics",
           "datasets",
@@ -197,19 +197,19 @@
           "datetime.utcnow"
         ],
         "stale_module_count": 0,
-        "service_count": 44,
-        "duplicated_logic_indicator": 81,
+        "service_count": 45,
+        "duplicated_logic_indicator": 83,
         "orphan_module_count": 0,
         "architecture_audit_only": true
       },
       "performance": {
-        "performance_score": 81.45,
-        "report_count": 338,
-        "storage_count": 270,
-        "report_bytes": 4065541,
-        "storage_bytes": 10508950,
-        "dashboard_analytics_methods": 46,
-        "service_orchestration_count": 44,
+        "performance_score": 77.16,
+        "report_count": 351,
+        "storage_count": 283,
+        "report_bytes": 7999244,
+        "storage_bytes": 14442904,
+        "dashboard_analytics_methods": 47,
+        "service_orchestration_count": 45,
         "architecture_audit_only": true
       },
       "safety": {
@@ -234,7 +234,7 @@
         "تحسين الأداء": 1
       },
       "certification": {
-        "جاهزة بشروط": 90.79
+        "جاهزة بشروط": 89.93
       },
       "architecture_audit_only": true
     },

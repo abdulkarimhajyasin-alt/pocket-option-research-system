@@ -4,8 +4,8 @@
   "data": {
     "knowledge_graph": {
       "summary": {
-        "graph_id": "knowledge_graph_20260601165117",
-        "generated_at": "2026-06-01T16:51:17.573173+00:00",
+        "graph_id": "knowledge_graph_20260601194438",
+        "generated_at": "2026-06-01T19:44:38.833825+00:00",
         "nodes": [
           {
             "node_id": "signal",

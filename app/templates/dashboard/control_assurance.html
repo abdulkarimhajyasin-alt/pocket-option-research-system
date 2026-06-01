@@ -1,0 +1,57 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.control_assurance }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تأكيد فقط</p>
+    <h1>تأكيد الضوابط وجاهزية المراجعة</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث التأكيد</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة التأكيد</span>
+    <strong>{{ control_assurance.summary.assurance_status|default("غير جاهز") }}</strong>
+    <p>هذه الصفحة تأكيد ومراجعة حوكمة فقط ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط أو صلاحيات تشغيل حقيقية.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة التأكيد العامة</span>
+    <strong>{{ control_assurance.summary.overall_assurance_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>جاهزية مراجعة الحوكمة</span>
+    <strong>{{ control_assurance.summary.review_readiness_state|default("Review Blocked") }}</strong>
+    <small>assurance-only / review-readiness-only / local-only</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>حالة التأكيد</span><strong>{{ control_assurance.summary.assurance_status|default("غير جاهز") }}</strong></article>
+  <article class="metric-card"><span>درجة التأكيد العامة</span><strong>{{ control_assurance.summary.overall_assurance_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>جودة الضوابط</span><strong>{{ control_assurance.summary.control_quality_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>كفاية الأدلة</span><strong>{{ control_assurance.summary.evidence_sufficiency_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>وضوح المالكين</span><strong>{{ control_assurance.summary.owner_clarity_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>اكتمال السياسات</span><strong>{{ control_assurance.summary.policy_completeness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>نضج البوابات</span><strong>{{ control_assurance.summary.gate_maturity_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>جاهزية التدقيق</span><strong>{{ control_assurance.summary.audit_readiness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>جاهزية مراجعة الحوكمة</span><strong>{{ control_assurance.summary.review_readiness_state|default("Review Blocked") }}</strong></article>
+  <article class="metric-card"><span>نقاط الضعف</span><strong>{{ control_assurance.summary.weakness_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>العوائق</span><strong>{{ control_assurance.summary.blocker_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التحذيرات</span><strong>{{ control_assurance.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ control_assurance.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>درجات التأكيد</h2><span>الScorecard</span></div><div class="chart" data-chart='{{ control_assurance.assurance_scores|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جودة الضوابط</h2><span>حالة التقييم</span></div><div class="chart" data-chart='{{ control_assurance.assessment_status|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>نقاط الضعف</h2><span>مراجعة مطلوبة</span></div><div class="chart" data-chart='{{ control_assurance.weaknesses|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>سلامة الحدود</span></div><div class="chart" data-chart='{{ control_assurance.diagnostics|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>تحسين التأكيد</span></div><div class="chart" data-chart='{{ control_assurance.recommendations|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ملخص التأكيد</h2><span>محلي فقط</span></div><pre class="code-block">{{ control_assurance.summary|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}

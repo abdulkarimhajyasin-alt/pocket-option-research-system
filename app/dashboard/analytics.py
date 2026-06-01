@@ -5115,6 +5115,200 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def control_assurance_analytics(self) -> dict[str, Any]:
+        """Return latest control assurance analytics."""
+        summary_payload = self._latest_json_dict(
+            "control_assurance",
+            "control_assurance_summary",
+        )
+        scorecard = self._latest_json_dict("control_assurance", "scorecard_report")
+        documents = {
+            "control_quality": self._latest_json_dict(
+                "control_assurance",
+                "control_quality_report",
+            ),
+            "evidence_sufficiency": self._latest_json_dict(
+                "control_assurance",
+                "evidence_sufficiency_report",
+            ),
+            "owner_clarity": self._latest_json_dict(
+                "control_assurance",
+                "owner_clarity_report",
+            ),
+            "policy_completeness": self._latest_json_dict(
+                "control_assurance",
+                "policy_completeness_report",
+            ),
+            "gate_maturity": self._latest_json_dict(
+                "control_assurance",
+                "gate_maturity_report",
+            ),
+            "weakness_assessment": self._latest_json_dict(
+                "control_assurance",
+                "weakness_assessment_report",
+            ),
+        }
+        diagnostics = self._latest_json_list("control_assurance", "diagnostics_report")
+        reports = self.loader.list_reports()
+        recommendations_report = self.loader.latest(
+            [item for item in reports if item.report_type == "json"],
+            "control_assurance",
+            "recommendations_report",
+        )
+        recommendations_content = (
+            self.loader.get_report(recommendations_report.report_id)
+            if recommendations_report
+            else None
+        )
+        recommendation_payload = (
+            recommendations_content.json_data if recommendations_content else []
+        )
+        recommendations = (
+            [str(item) for item in recommendation_payload]
+            if isinstance(recommendation_payload, list)
+            else []
+        )
+        summary = {
+            "assurance_status": summary_payload.get(
+                "assurance_status",
+                scorecard.get("score_status", "غير جاهز"),
+            ),
+            "review_readiness_state": summary_payload.get(
+                "review_readiness_state",
+                "Review Blocked",
+            ),
+            "overall_assurance_score": self._float(
+                summary_payload.get(
+                    "overall_assurance_score",
+                    scorecard.get("overall_assurance_score", 0),
+                )
+            ),
+            "control_quality_score": self._float(
+                summary_payload.get(
+                    "control_quality_score",
+                    scorecard.get("control_quality_score", 0),
+                )
+            ),
+            "evidence_sufficiency_score": self._float(
+                summary_payload.get(
+                    "evidence_sufficiency_score",
+                    scorecard.get("evidence_sufficiency_score", 0),
+                )
+            ),
+            "owner_clarity_score": self._float(
+                summary_payload.get(
+                    "owner_clarity_score",
+                    scorecard.get("owner_clarity_score", 0),
+                )
+            ),
+            "policy_completeness_score": self._float(
+                summary_payload.get(
+                    "policy_completeness_score",
+                    scorecard.get("policy_completeness_score", 0),
+                )
+            ),
+            "gate_maturity_score": self._float(
+                summary_payload.get("gate_maturity_score", scorecard.get("gate_maturity_score", 0))
+            ),
+            "audit_readiness_score": self._float(
+                summary_payload.get(
+                    "audit_readiness_score",
+                    scorecard.get("audit_readiness_score", 0),
+                )
+            ),
+            "governance_review_readiness_score": self._float(
+                summary_payload.get(
+                    "governance_review_readiness_score",
+                    scorecard.get("governance_review_readiness_score", 0),
+                )
+            ),
+            "weakness_count": self._float(
+                summary_payload.get(
+                    "weakness_count",
+                    len(documents["weakness_assessment"].get("items", [])),
+                )
+            ),
+            "blocker_count": self._float(summary_payload.get("blocker_count", 0)),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "assurance_only": True,
+            "review_readiness_only": True,
+            "governance_only": True,
+            "design_only": True,
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        score_chart = {
+            "control": summary["control_quality_score"],
+            "evidence": summary["evidence_sufficiency_score"],
+            "owner": summary["owner_clarity_score"],
+            "policy": summary["policy_completeness_score"],
+            "gate": summary["gate_maturity_score"],
+            "audit": summary["audit_readiness_score"],
+            "review": summary["governance_review_readiness_score"],
+        }
+        status_counts: dict[str, float] = {}
+        for key in (
+            "control_quality",
+            "evidence_sufficiency",
+            "owner_clarity",
+            "policy_completeness",
+            "gate_maturity",
+        ):
+            for item in documents[key].get("items", []):
+                status = str(item.get("status", "مقبول"))
+                status_counts[status] = status_counts.get(status, 0.0) + 1.0
+        weakness_chart = {
+            str(item.get("source_area", index + 1)): 1.0
+            for index, item in enumerate(documents["weakness_assessment"].get("items", []))
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {item: 1.0 for item in recommendations}
+        return {
+            "summary": summary,
+            "scorecard": scorecard,
+            "documents": documents,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "assurance_scores": bar_chart(
+                "درجات التأكيد",
+                *self._dict_chart_values(score_chart),
+                label="الدرجات",
+                color="blue",
+            ).to_dict(),
+            "assessment_status": bar_chart(
+                "جودة الضوابط",
+                *self._dict_chart_values(status_counts),
+                label="الحالة",
+                color="green",
+            ).to_dict(),
+            "weaknesses": bar_chart(
+                "نقاط الضعف",
+                *self._dict_chart_values(weakness_chart),
+                label="نقاط الضعف",
+                color="warning",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

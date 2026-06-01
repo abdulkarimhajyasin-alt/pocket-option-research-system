@@ -1,0 +1,260 @@
+{
+  "schema_version": "control_assurance.v1",
+  "assurance_only": true,
+  "review_readiness_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-01",
+      "source_area": "control clarity",
+      "assessment_type": "control_quality",
+      "score": 87,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-02",
+      "source_area": "owner assignment",
+      "assessment_type": "control_quality",
+      "score": 87,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-03",
+      "source_area": "evidence requirement",
+      "assessment_type": "control_quality",
+      "score": 87,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-04",
+      "source_area": "verification method",
+      "assessment_type": "control_quality",
+      "score": 87,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-05",
+      "source_area": "review board linkage",
+      "assessment_type": "control_quality",
+      "score": 87,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-06",
+      "source_area": "readiness gate linkage",
+      "assessment_type": "control_quality",
+      "score": 87,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-07",
+      "source_area": "safety notes",
+      "assessment_type": "control_quality",
+      "score": 81,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-CONTROL_QUALITY-08",
+      "source_area": "implementation boundary clarity",
+      "assessment_type": "control_quality",
+      "score": 81,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "design evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Governance Review Board",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    }
+  ]
+}

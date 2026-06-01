@@ -1,0 +1,192 @@
+{
+  "schema_version": "control_assurance.v1",
+  "assurance_only": true,
+  "review_readiness_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-EVIDENCE-01",
+      "source_area": "evidence type coverage",
+      "assessment_type": "evidence",
+      "score": 84,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "evidence matrix",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-EVIDENCE-02",
+      "source_area": "evidence strength",
+      "assessment_type": "evidence",
+      "score": 84,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "evidence matrix",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-EVIDENCE-03",
+      "source_area": "audit evidence readiness",
+      "assessment_type": "evidence",
+      "score": 84,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "evidence matrix",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-EVIDENCE-04",
+      "source_area": "rollback evidence readiness",
+      "assessment_type": "evidence",
+      "score": 84,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "evidence matrix",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-EVIDENCE-05",
+      "source_area": "incident evidence readiness",
+      "assessment_type": "evidence",
+      "score": 78,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "evidence matrix",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-EVIDENCE-06",
+      "source_area": "monitoring evidence readiness",
+      "assessment_type": "evidence",
+      "score": 78,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "evidence matrix",
+        "audit evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    }
+  ]
+}

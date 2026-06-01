@@ -1,0 +1,162 @@
+{
+  "schema_version": "control_assurance.v1",
+  "assurance_only": true,
+  "review_readiness_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-OWNER-01",
+      "source_area": "clear owner",
+      "assessment_type": "owner",
+      "score": 86,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "owner evidence",
+        "decision authority evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Operations Lead",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-OWNER-02",
+      "source_area": "accountable role",
+      "assessment_type": "owner",
+      "score": 86,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "owner evidence",
+        "decision authority evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Operations Lead",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-OWNER-03",
+      "source_area": "reviewer role",
+      "assessment_type": "owner",
+      "score": 86,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "owner evidence",
+        "decision authority evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Operations Lead",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-OWNER-04",
+      "source_area": "escalation path",
+      "assessment_type": "owner",
+      "score": 86,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "owner evidence",
+        "decision authority evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Operations Lead",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-OWNER-05",
+      "source_area": "decision authority",
+      "assessment_type": "owner",
+      "score": 86,
+      "status": "قوي",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [],
+      "required_evidence": [
+        "owner evidence",
+        "decision authority evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Operations Lead",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    }
+  ]
+}

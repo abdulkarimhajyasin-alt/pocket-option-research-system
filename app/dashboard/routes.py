@@ -39,6 +39,7 @@ from app.trading_requirements.service import TradingRequirementsService
 from app.production_system_design.service import ProductionSystemDesignService
 from app.operational_governance.service import OperationalGovernanceService
 from app.governance_traceability.service import GovernanceTraceabilityService
+from app.control_assurance.service import ControlAssuranceService
 
 SAFETY_NOTE = (
     "This is a local research dashboard. It does not execute live trades, connect to "
@@ -859,6 +860,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/control-assurance", response_class=HTMLResponse)
+    def control_assurance(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/control_assurance.html",
+            context(
+                request,
+                dashboard,
+                page="control_assurance",
+                control_assurance=dashboard.analytics.control_assurance_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1414,6 +1429,54 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/governance-traceability/recommendations")
     def api_governance_traceability_recommendations() -> list[str]:
         return GovernanceTraceabilityService(root).generate_recommendations()
+
+    @app.get("/api/control-assurance")
+    def api_control_assurance() -> dict[str, object]:
+        return dashboard_context().analytics.control_assurance_analytics()
+
+    @app.get("/api/control-assurance/control-quality")
+    def api_control_assurance_control_quality() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_control_quality()
+
+    @app.get("/api/control-assurance/evidence")
+    def api_control_assurance_evidence() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_evidence_sufficiency()
+
+    @app.get("/api/control-assurance/owners")
+    def api_control_assurance_owners() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_owner_clarity()
+
+    @app.get("/api/control-assurance/policies")
+    def api_control_assurance_policies() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_policy_completeness()
+
+    @app.get("/api/control-assurance/gates")
+    def api_control_assurance_gates() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_gate_maturity()
+
+    @app.get("/api/control-assurance/weaknesses")
+    def api_control_assurance_weaknesses() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_weaknesses()
+
+    @app.get("/api/control-assurance/audit-readiness")
+    def api_control_assurance_audit_readiness() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_audit_readiness()
+
+    @app.get("/api/control-assurance/review-readiness")
+    def api_control_assurance_review_readiness() -> dict[str, object]:
+        return ControlAssuranceService(root).assess_governance_review_readiness()
+
+    @app.get("/api/control-assurance/scorecard")
+    def api_control_assurance_scorecard() -> dict[str, object]:
+        return ControlAssuranceService(root).build_scorecard()
+
+    @app.get("/api/control-assurance/diagnostics")
+    def api_control_assurance_diagnostics() -> list[dict[str, object]]:
+        return ControlAssuranceService(root).generate_diagnostics()
+
+    @app.get("/api/control-assurance/recommendations")
+    def api_control_assurance_recommendations() -> list[str]:
+        return ControlAssuranceService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

@@ -1,0 +1,204 @@
+{
+  "schema_version": "control_assurance.v1",
+  "assurance_only": true,
+  "review_readiness_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-WEAKNESS-01",
+      "source_area": "weak mapping review",
+      "assessment_type": "weakness",
+      "score": 75,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [
+        "Requires formal governance review"
+      ],
+      "required_evidence": [
+        "weakness register",
+        "mitigation evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-WEAKNESS-02",
+      "source_area": "missing evidence review",
+      "assessment_type": "weakness",
+      "score": 75,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [
+        "Requires formal governance review"
+      ],
+      "required_evidence": [
+        "weakness register",
+        "mitigation evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-WEAKNESS-03",
+      "source_area": "missing owner review",
+      "assessment_type": "weakness",
+      "score": 75,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [
+        "Requires formal governance review"
+      ],
+      "required_evidence": [
+        "weakness register",
+        "mitigation evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-WEAKNESS-04",
+      "source_area": "missing policy review",
+      "assessment_type": "weakness",
+      "score": 75,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [
+        "Requires formal governance review"
+      ],
+      "required_evidence": [
+        "weakness register",
+        "mitigation evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-WEAKNESS-05",
+      "source_area": "missing gate review",
+      "assessment_type": "weakness",
+      "score": 75,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [
+        "Requires formal governance review"
+      ],
+      "required_evidence": [
+        "weakness register",
+        "mitigation evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    },
+    {
+      "schema_version": "control_assurance.v1",
+      "assurance_only": true,
+      "review_readiness_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "ASSURE-WEAKNESS-06",
+      "source_area": "unsafe wording review",
+      "assessment_type": "weakness",
+      "score": 75,
+      "status": "مقبول",
+      "strengths": [
+        "Documented local governance artifact"
+      ],
+      "weaknesses": [
+        "Requires formal governance review"
+      ],
+      "required_evidence": [
+        "weakness register",
+        "mitigation evidence"
+      ],
+      "missing_evidence": [],
+      "owner": "Audit Reviewer",
+      "safety_notes": [
+        "Assurance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "assurance review"
+    }
+  ]
+}
