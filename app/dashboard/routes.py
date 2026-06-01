@@ -37,6 +37,7 @@ from app.post_research_architecture.service import PostResearchArchitectureServi
 from app.trading_architecture_program.service import TradingArchitectureProgramService
 from app.trading_requirements.service import TradingRequirementsService
 from app.production_system_design.service import ProductionSystemDesignService
+from app.operational_governance.service import OperationalGovernanceService
 
 SAFETY_NOTE = (
     "This is a local research dashboard. It does not execute live trades, connect to "
@@ -829,6 +830,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/operational-governance", response_class=HTMLResponse)
+    def operational_governance(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/operational_governance.html",
+            context(
+                request,
+                dashboard,
+                page="operational_governance",
+                operational_governance=dashboard.analytics.operational_governance_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1268,6 +1283,70 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/production-system-design/recommendations")
     def api_production_system_design_recommendations() -> list[str]:
         return ProductionSystemDesignService(root).generate_recommendations()
+
+    @app.get("/api/operational-governance")
+    def api_operational_governance() -> dict[str, object]:
+        return dashboard_context().analytics.operational_governance_analytics()
+
+    @app.get("/api/operational-governance/authority")
+    def api_operational_governance_authority() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_authority_model()
+
+    @app.get("/api/operational-governance/approval-workflows")
+    def api_operational_governance_approval_workflows() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_approval_workflows()
+
+    @app.get("/api/operational-governance/change-management")
+    def api_operational_governance_change_management() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_change_management()
+
+    @app.get("/api/operational-governance/release-governance")
+    def api_operational_governance_release_governance() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_release_governance()
+
+    @app.get("/api/operational-governance/incidents")
+    def api_operational_governance_incidents() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_incident_escalation()
+
+    @app.get("/api/operational-governance/kill-switch")
+    def api_operational_governance_kill_switch() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_kill_switch_governance()
+
+    @app.get("/api/operational-governance/audit-controls")
+    def api_operational_governance_audit_controls() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_audit_controls()
+
+    @app.get("/api/operational-governance/operators")
+    def api_operational_governance_operators() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_operator_responsibility()
+
+    @app.get("/api/operational-governance/review-boards")
+    def api_operational_governance_review_boards() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_review_boards()
+
+    @app.get("/api/operational-governance/decision-matrix")
+    def api_operational_governance_decision_matrix() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_decision_matrix()
+
+    @app.get("/api/operational-governance/control-evidence")
+    def api_operational_governance_control_evidence() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_control_evidence()
+
+    @app.get("/api/operational-governance/policies")
+    def api_operational_governance_policies() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_policy_registry()
+
+    @app.get("/api/operational-governance/readiness-gates")
+    def api_operational_governance_readiness_gates() -> dict[str, object]:
+        return OperationalGovernanceService(root).build_readiness_gates()
+
+    @app.get("/api/operational-governance/diagnostics")
+    def api_operational_governance_diagnostics() -> list[dict[str, object]]:
+        return OperationalGovernanceService(root).generate_diagnostics()
+
+    @app.get("/api/operational-governance/recommendations")
+    def api_operational_governance_recommendations() -> list[str]:
+        return OperationalGovernanceService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

@@ -4,7 +4,7 @@
   "active": [
     {
       "signal_id": "signal_stream_0005",
-      "timestamp": "2026-06-01T16:07:26.382055",
+      "timestamp": "2026-06-01T16:29:14.182699",
       "asset": "browser_snapshot",
       "session": "passive",
       "direction": "CALL",
@@ -24,7 +24,7 @@
     },
     {
       "signal_id": "signal_stream_0008",
-      "timestamp": "2026-06-01T16:07:32.696447",
+      "timestamp": "2026-06-01T16:29:22.981158",
       "asset": "external_source",
       "session": "passive",
       "direction": "PUT",
@@ -44,7 +44,7 @@
     },
     {
       "signal_id": "signal_stream_0011",
-      "timestamp": "2026-06-01T16:08:09.088218",
+      "timestamp": "2026-06-01T16:30:17.955596",
       "asset": "snapshot",
       "session": "manual",
       "direction": "CALL",
@@ -128,7 +128,7 @@
     },
     {
       "signal_id": "signal_stream_0003",
-      "timestamp": "2026-06-01T16:07:26.382055",
+      "timestamp": "2026-06-01T16:29:14.182699",
       "asset": "مراقبة المتصفح",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -148,7 +148,7 @@
     },
     {
       "signal_id": "signal_stream_0004",
-      "timestamp": "2026-06-01T16:07:26.382055",
+      "timestamp": "2026-06-01T16:29:14.182699",
       "asset": "مراقبة المتصفح",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -168,7 +168,7 @@
     },
     {
       "signal_id": "signal_stream_0006",
-      "timestamp": "2026-06-01T16:07:32.696447",
+      "timestamp": "2026-06-01T16:29:22.981158",
       "asset": "المراقبة الخارجية",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -188,7 +188,7 @@
     },
     {
       "signal_id": "signal_stream_0007",
-      "timestamp": "2026-06-01T16:07:32.696447",
+      "timestamp": "2026-06-01T16:29:22.981158",
       "asset": "المراقبة الخارجية",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -208,7 +208,7 @@
     },
     {
       "signal_id": "signal_stream_0009",
-      "timestamp": "2026-06-01T16:08:09.088218",
+      "timestamp": "2026-06-01T16:30:17.955596",
       "asset": "استيراد اللقطات",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -228,7 +228,7 @@
     },
     {
       "signal_id": "signal_stream_0010",
-      "timestamp": "2026-06-01T16:08:09.088218",
+      "timestamp": "2026-06-01T16:30:17.955596",
       "asset": "استيراد اللقطات",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -248,7 +248,7 @@
     },
     {
       "signal_id": "signal_stream_0012",
-      "timestamp": "2026-06-01T16:09:35.655980",
+      "timestamp": "2026-06-01T16:32:16.020036",
       "asset": "جاهزية المراقبة",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -268,7 +268,7 @@
     },
     {
       "signal_id": "signal_stream_0013",
-      "timestamp": "2026-06-01T16:09:35.655980",
+      "timestamp": "2026-06-01T16:32:16.020036",
       "asset": "جاهزية المراقبة",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -288,7 +288,7 @@
     },
     {
       "signal_id": "signal_stream_0014",
-      "timestamp": "2026-06-01T16:09:40.017542",
+      "timestamp": "2026-06-01T16:32:21.950701",
       "asset": "ذكاء المراقبة",
       "session": "passive",
       "direction": "NO_TRADE",

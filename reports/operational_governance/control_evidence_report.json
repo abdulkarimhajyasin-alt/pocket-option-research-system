@@ -1,0 +1,160 @@
+{
+  "schema_version": "operational_governance.v1",
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "control_evidence",
+  "title": "Control Evidence Requirements",
+  "status": "موثق",
+  "items": [
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CONTROL_EVIDENCE-01",
+      "title": "Approval decision evidence",
+      "description": "Governance-only framework item for approval decision evidence.",
+      "category": "control_evidence",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CONTROL_EVIDENCE-02",
+      "title": "Release decision evidence",
+      "description": "Governance-only framework item for release decision evidence.",
+      "category": "control_evidence",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CONTROL_EVIDENCE-03",
+      "title": "Incident decision evidence",
+      "description": "Governance-only framework item for incident decision evidence.",
+      "category": "control_evidence",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CONTROL_EVIDENCE-04",
+      "title": "Rollback decision evidence",
+      "description": "Governance-only framework item for rollback decision evidence.",
+      "category": "control_evidence",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CONTROL_EVIDENCE-05",
+      "title": "Risk decision evidence",
+      "description": "Governance-only framework item for risk decision evidence.",
+      "category": "control_evidence",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CONTROL_EVIDENCE-06",
+      "title": "Compliance decision evidence",
+      "description": "Governance-only framework item for compliance decision evidence.",
+      "category": "control_evidence",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CONTROL_EVIDENCE-07",
+      "title": "Monitoring readiness evidence",
+      "description": "Governance-only framework item for monitoring readiness evidence.",
+      "category": "control_evidence",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    }
+  ]
+}

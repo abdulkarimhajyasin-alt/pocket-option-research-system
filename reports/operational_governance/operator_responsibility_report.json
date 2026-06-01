@@ -1,0 +1,160 @@
+{
+  "schema_version": "operational_governance.v1",
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "operator_responsibility",
+  "title": "Operator Responsibility Model",
+  "status": "موثق",
+  "items": [
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "OPERATOR_RESPONSIBILITY-01",
+      "title": "Operator responsibilities",
+      "description": "Governance-only framework item for operator responsibilities.",
+      "category": "operator_responsibility",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "OPERATOR_RESPONSIBILITY-02",
+      "title": "Prohibited operator actions",
+      "description": "Governance-only framework item for prohibited operator actions.",
+      "category": "operator_responsibility",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "OPERATOR_RESPONSIBILITY-03",
+      "title": "Required reviews",
+      "description": "Governance-only framework item for required reviews.",
+      "category": "operator_responsibility",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "OPERATOR_RESPONSIBILITY-04",
+      "title": "Shift handoff concept",
+      "description": "Governance-only framework item for shift handoff concept.",
+      "category": "operator_responsibility",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "OPERATOR_RESPONSIBILITY-05",
+      "title": "Incident duties",
+      "description": "Governance-only framework item for incident duties.",
+      "category": "operator_responsibility",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "OPERATOR_RESPONSIBILITY-06",
+      "title": "Escalation duties",
+      "description": "Governance-only framework item for escalation duties.",
+      "category": "operator_responsibility",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "OPERATOR_RESPONSIBILITY-07",
+      "title": "Documentation duties",
+      "description": "Governance-only framework item for documentation duties.",
+      "category": "operator_responsibility",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    }
+  ]
+}

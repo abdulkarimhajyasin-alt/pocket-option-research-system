@@ -1,0 +1,160 @@
+{
+  "schema_version": "operational_governance.v1",
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "change_management",
+  "title": "Change Management Controls",
+  "status": "موثق",
+  "items": [
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CHANGE_MANAGEMENT-01",
+      "title": "Change request model",
+      "description": "Governance-only framework item for change request model.",
+      "category": "change_management",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CHANGE_MANAGEMENT-02",
+      "title": "Impact assessment",
+      "description": "Governance-only framework item for impact assessment.",
+      "category": "change_management",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CHANGE_MANAGEMENT-03",
+      "title": "Risk assessment",
+      "description": "Governance-only framework item for risk assessment.",
+      "category": "change_management",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CHANGE_MANAGEMENT-04",
+      "title": "Approval requirements",
+      "description": "Governance-only framework item for approval requirements.",
+      "category": "change_management",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CHANGE_MANAGEMENT-05",
+      "title": "Rollback plan requirement",
+      "description": "Governance-only framework item for rollback plan requirement.",
+      "category": "change_management",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CHANGE_MANAGEMENT-06",
+      "title": "Evidence requirement",
+      "description": "Governance-only framework item for evidence requirement.",
+      "category": "change_management",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "CHANGE_MANAGEMENT-07",
+      "title": "Post-change review",
+      "description": "Governance-only framework item for post-change review.",
+      "category": "change_management",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    }
+  ]
+}

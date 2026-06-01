@@ -1,0 +1,181 @@
+{
+  "schema_version": "operational_governance.v1",
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "decision_matrix",
+  "title": "Decision Authority Matrix",
+  "status": "موثق",
+  "items": [
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-01",
+      "title": "Architecture change authority",
+      "description": "Governance-only framework item for architecture change authority.",
+      "category": "decision_matrix",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-02",
+      "title": "Risk change authority",
+      "description": "Governance-only framework item for risk change authority.",
+      "category": "decision_matrix",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-03",
+      "title": "Monitoring change authority",
+      "description": "Governance-only framework item for monitoring change authority.",
+      "category": "decision_matrix",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-04",
+      "title": "Production design change authority",
+      "description": "Governance-only framework item for production design change authority.",
+      "category": "decision_matrix",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-05",
+      "title": "Release movement authority",
+      "description": "Governance-only framework item for release movement authority.",
+      "category": "decision_matrix",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-06",
+      "title": "Incident closure authority",
+      "description": "Governance-only framework item for incident closure authority.",
+      "category": "decision_matrix",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-07",
+      "title": "Emergency recovery authority",
+      "description": "Governance-only framework item for emergency recovery authority.",
+      "category": "decision_matrix",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "DECISION_MATRIX-08",
+      "title": "External feasibility study authority",
+      "description": "Governance-only framework item for external feasibility study authority.",
+      "category": "decision_matrix",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "operational_governance.v1",
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "kill_switch_governance",
+  "title": "Emergency Stop Governance",
+  "status": "موثق",
+  "items": [
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "KILL_SWITCH_GOVERNANCE-01",
+      "title": "Emergency stop ownership",
+      "description": "Governance-only framework item for emergency stop ownership.",
+      "category": "kill_switch_governance",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "KILL_SWITCH_GOVERNANCE-02",
+      "title": "Activation criteria",
+      "description": "Governance-only framework item for activation criteria.",
+      "category": "kill_switch_governance",
+      "priority": "مرتفع",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "KILL_SWITCH_GOVERNANCE-03",
+      "title": "Activation authority",
+      "description": "Governance-only framework item for activation authority.",
+      "category": "kill_switch_governance",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "KILL_SWITCH_GOVERNANCE-04",
+      "title": "Manual approval requirements",
+      "description": "Governance-only framework item for manual approval requirements.",
+      "category": "kill_switch_governance",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "KILL_SWITCH_GOVERNANCE-05",
+      "title": "Emergency stop procedure",
+      "description": "Governance-only framework item for emergency stop procedure.",
+      "category": "kill_switch_governance",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "KILL_SWITCH_GOVERNANCE-06",
+      "title": "Evidence requirements",
+      "description": "Governance-only framework item for evidence requirements.",
+      "category": "kill_switch_governance",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    },
+    {
+      "schema_version": "operational_governance.v1",
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "KILL_SWITCH_GOVERNANCE-07",
+      "title": "Recovery procedure",
+      "description": "Governance-only framework item for recovery procedure.",
+      "category": "kill_switch_governance",
+      "priority": "متوسط",
+      "status": "موثق",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Governance artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "governance review"
+    }
+  ]
+}

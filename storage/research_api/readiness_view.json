@@ -4,17 +4,17 @@
   "data": {
     "readiness": {
       "summary": {
-        "readiness_id": "paper_live_readiness_20260601160740",
-        "generated_at": "2026-06-01T16:07:40.754642+00:00",
-        "paper_health": 81.49,
-        "paper_stability": 60.85,
+        "readiness_id": "paper_live_readiness_20260601162935",
+        "generated_at": "2026-06-01T16:29:35.675513+00:00",
+        "paper_health": 81.92,
+        "paper_stability": 60.88,
         "paper_governance": 0.0,
         "execution_readiness": 82.75,
         "observation_readiness": 81.73,
         "certification_score": 59.58,
         "safety_score": 100.0,
-        "maturity_score": 60.57,
-        "overall_score": 65.87,
+        "maturity_score": 60.66,
+        "overall_score": 65.94,
         "readiness_state": "تحتاج تحسين كبير",
         "metadata": {
           "readiness_only": true,
@@ -52,14 +52,14 @@
     },
     "architecture_audit": {
       "summary": {
-        "certification_id": "architecture_audit_20260601160725",
-        "generated_at": "2026-06-01T16:07:25.056468+00:00",
+        "certification_id": "architecture_audit_20260601162911",
+        "generated_at": "2026-06-01T16:29:11.717227+00:00",
         "architecture_score": 100.0,
         "consistency_score": 96.5,
         "dependency_score": 76.0,
-        "performance_score": 83.71,
+        "performance_score": 83.2,
         "safety_score": 100.0,
-        "overall_score": 91.24,
+        "overall_score": 91.14,
         "certification_state": "جاهزة بشروط",
         "metadata": {
           "architecture_audit_only": true,

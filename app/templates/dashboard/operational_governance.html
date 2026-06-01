@@ -1,0 +1,65 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.operational_governance }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">حوكمة فقط</p>
+    <h1>إطار الحوكمة والتحكم التشغيلي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث الحوكمة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة الحوكمة</span>
+    <strong>{{ operational_governance.summary.governance_status|default("Governance Incomplete") }}</strong>
+    <p>هذه الصفحة حوكمة تشغيلية مستقبلية فقط ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط أو صلاحيات تشغيل حقيقية.</p>
+  </div>
+  <div class="executive-score">
+    <span>بوابات الجاهزية</span>
+    <strong>{{ operational_governance.summary.readiness_state|default("Not Ready") }}</strong>
+  </div>
+  <div>
+    <span>الأدوار / الموافقات</span>
+    <strong>{{ operational_governance.summary.authority_role_count|default(0)|number_ar }} / {{ operational_governance.summary.approval_workflow_count|default(0)|number_ar }}</strong>
+    <small>governance-only / design-only / local-only</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>حالة الحوكمة</span><strong>{{ operational_governance.summary.governance_status|default("Governance Incomplete") }}</strong></article>
+  <article class="metric-card"><span>عدد الأدوار</span><strong>{{ operational_governance.summary.authority_role_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد مسارات الموافقة</span><strong>{{ operational_governance.summary.approval_workflow_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد ضوابط التغيير</span><strong>{{ operational_governance.summary.change_control_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>حوكمة الإصدارات</span><strong>{{ operational_governance.summary.release_governance_status|default("Governance only") }}</strong></article>
+  <article class="metric-card"><span>حالة التصعيد</span><strong>{{ operational_governance.summary.incident_escalation_status|default("Governance only") }}</strong></article>
+  <article class="metric-card"><span>حوكمة الإيقاف الطارئ</span><strong>{{ operational_governance.summary.kill_switch_governance_status|default("Governance only") }}</strong></article>
+  <article class="metric-card"><span>عدد ضوابط التدقيق</span><strong>{{ operational_governance.summary.audit_control_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد مجالس المراجعة</span><strong>{{ operational_governance.summary.review_board_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد قواعد القرار</span><strong>{{ operational_governance.summary.decision_rule_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد السياسات</span><strong>{{ operational_governance.summary.policy_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التشخيص</span><strong>{{ operational_governance.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ operational_governance.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>مجالات الحوكمة</h2><span>وثائق</span></div><div class="chart" data-chart='{{ operational_governance.governance_domains|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>بوابات الجاهزية</h2><span>لا تعتمد التشغيل الحقيقي</span></div><div class="chart" data-chart='{{ operational_governance.readiness_gates|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الأولوية</h2><span>عناصر الحوكمة</span></div><div class="chart" data-chart='{{ operational_governance.priorities|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ضوابط التدقيق</h2><span>أدلة وتحكم</span></div><div class="chart" data-chart='{{ operational_governance.audit_controls|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>مسارات الموافقة</h2><span>بشرية مستقبلية</span></div><div class="chart" data-chart='{{ operational_governance.approval_workflows|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>السياسات</h2><span>سجل السياسات</span></div><div class="chart" data-chart='{{ operational_governance.policies|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>سلامة الحدود</span></div><div class="chart" data-chart='{{ operational_governance.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>مراجعة الحوكمة</span></div><div class="chart" data-chart='{{ operational_governance.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>ملخص الحوكمة</h2><span>محلي فقط</span></div><pre class="code-block">{{ operational_governance.summary|tojson(indent=2) }}</pre></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات النصية</h2><span>تصميم فقط</span></div><pre class="code-block">{{ operational_governance.recommendations_items|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}

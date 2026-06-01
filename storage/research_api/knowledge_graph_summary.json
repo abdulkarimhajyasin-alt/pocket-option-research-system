@@ -4,8 +4,8 @@
   "data": {
     "knowledge_graph": {
       "summary": {
-        "graph_id": "knowledge_graph_20260601160733",
-        "generated_at": "2026-06-01T16:07:33.941055+00:00",
+        "graph_id": "knowledge_graph_20260601162924",
+        "generated_at": "2026-06-01T16:29:24.726814+00:00",
         "nodes": [
           {
             "node_id": "signal",
@@ -21,7 +21,7 @@
             "node_id": "asset",
             "entity_type": "AssetEntity",
             "label": "Asset",
-            "confidence": 81.49,
+            "confidence": 81.92,
             "metadata": {
               "research_only": true,
               "source": "paper_portfolio"
@@ -91,7 +91,7 @@
             "node_id": "portfolio",
             "entity_type": "PortfolioEntity",
             "label": "Portfolio",
-            "confidence": 81.49,
+            "confidence": 81.92,
             "metadata": {
               "research_only": true,
               "source": "paper_portfolio"
@@ -101,7 +101,7 @@
             "node_id": "readiness",
             "entity_type": "ReadinessEntity",
             "label": "Readiness",
-            "confidence": 36.35,
+            "confidence": 36.48,
             "metadata": {
               "research_only": true,
               "source": "paper_control_center"
@@ -247,7 +247,7 @@
         "strongest_relationship": "opportunity->confluence:confirms",
         "weakest_relationship": "paperresult->readiness:degrades",
         "relationship_density": 0.1333,
-        "knowledge_score": 57.65,
+        "knowledge_score": 57.69,
         "metadata": {
           "research_only": true,
           "relationship_intelligence_only": true,

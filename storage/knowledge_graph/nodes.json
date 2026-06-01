@@ -93,7 +93,7 @@
     "node_id": "readiness",
     "entity_type": "ReadinessEntity",
     "label": "Readiness",
-    "confidence": 36.35,
+    "confidence": 36.48,
     "metadata": {
       "research_only": true,
       "source": "paper_control_center"

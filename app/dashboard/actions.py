@@ -332,6 +332,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="توليد مخطط تصميم إنتاجي مستقبلي فقط دون وسيط أو تنفيذ أو اتصال خارجي.",
         command=("scripts/run_production_system_design.py",),
     ),
+    "operational_governance": ActionDefinition(
+        name="operational_governance",
+        label="الحوكمة التشغيلية",
+        description="توليد إطار حوكمة وتحكم تشغيلي مستقبلي فقط دون صلاحيات تشغيل حقيقية.",
+        command=("scripts/run_operational_governance.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

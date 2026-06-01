@@ -77,13 +77,13 @@
     "متابعة المراقبة للقراءة فقط": 1
   },
   "latest": {
-    "timestamp": "2026-06-01T16:09:48.785404",
+    "timestamp": "2026-06-01T16:32:34.130788",
     "artifacts": [
       {
         "artifact_id": "html-summary",
         "artifact_type": "html_snapshot",
         "artifact_source": "D:\\pocket-option-research-system\\reports\\observation\\observation_summary.json",
-        "created_at": "1780330177865727700",
+        "created_at": "1780331539016906100",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -100,7 +100,7 @@
         "artifact_id": "dom-export-summary",
         "artifact_type": "dom_export",
         "artifact_source": "D:\\pocket-option-research-system\\reports\\external_observation\\source_report.json",
-        "created_at": "1780330186610926400",
+        "created_at": "1780331551136462300",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -117,7 +117,7 @@
         "artifact_id": "page-capture-summary",
         "artifact_type": "page_capture",
         "artifact_source": "D:\\pocket-option-research-system\\reports\\broker_readiness\\readiness_summary.json",
-        "created_at": "1780330175657138800",
+        "created_at": "1780331536027049200",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -134,7 +134,7 @@
         "artifact_id": "observation-dump",
         "artifact_type": "observation_dump",
         "artifact_source": "D:\\pocket-option-research-system\\storage\\external_observation\\diagnostics.json",
-        "created_at": "1780330186610926400",
+        "created_at": "1780331551134463500",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",

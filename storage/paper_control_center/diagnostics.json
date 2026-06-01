@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-06-01T16:09:57.584109+00:00",
+  "timestamp": "2026-06-01T16:32:46.205457+00:00",
   "control": {
     "control_id": "paper_control_center_0001",
-    "generated_at": "2026-06-01T16:09:57.584061+00:00",
+    "generated_at": "2026-06-01T16:32:46.205410+00:00",
     "portfolio_health": 0.0,
     "portfolio_stability": 0.0,
     "execution_status": "WARNING",
@@ -11,7 +11,7 @@
     "risk_status": "PASS",
     "recommendation_count": 1,
     "warning_count": 1,
-    "overall_score": 36.48,
+    "overall_score": 36.35,
     "metadata": {
       "paper_only": true,
       "research_only": true,
@@ -41,18 +41,18 @@
   },
   "health": {
     "portfolio_health": 0.0,
-    "execution_health": 64.65,
+    "execution_health": 62.27,
     "readiness_health": 82.75,
-    "governance_health": 82.24,
+    "governance_health": 82.03,
     "stability_health": 0.0,
-    "health_score": 45.93,
+    "health_score": 45.41,
     "paper_only": true
   },
   "monitoring": {
     "active_paper_orders": 0,
     "completed_paper_orders": 14,
     "paper_result_count": 14,
-    "paper_portfolio_changes": 81.92,
+    "paper_portfolio_changes": 81.49,
     "drawdown_changes": 0.0,
     "governance_changes": 1,
     "readiness_changes": 82.75,
@@ -71,15 +71,15 @@
       "name": "execution_governance",
       "arabic_label": "حوكمة التنفيذ الورقي",
       "status": "WARNING",
-      "score": 64.65,
-      "detail": "حوكمة التنفيذ الورقي: 64.65"
+      "score": 62.27,
+      "detail": "حوكمة التنفيذ الورقي: 62.27"
     },
     {
       "name": "risk_governance",
       "arabic_label": "حوكمة المخاطر",
       "status": "PASS",
-      "score": 82.24,
-      "detail": "حوكمة المخاطر: 82.24"
+      "score": 82.03,
+      "detail": "حوكمة المخاطر: 82.03"
     },
     {
       "name": "readiness_governance",
@@ -101,7 +101,7 @@
     "arabic_label": "إيقاف التشغيل الورقي",
     "failure_count": 1,
     "warning_count": 1,
-    "health_score": 45.93,
+    "health_score": 45.41,
     "research_recommendation_only": true,
     "paper_only": true,
     "not_control_action": true
@@ -109,11 +109,11 @@
   "analytics": {
     "health_analysis": {
       "portfolio_health": 0.0,
-      "execution_health": 64.65,
+      "execution_health": 62.27,
       "readiness_health": 82.75,
-      "governance_health": 82.24,
+      "governance_health": 82.03,
       "stability_health": 0.0,
-      "health_score": 45.93,
+      "health_score": 45.41,
       "paper_only": true
     },
     "readiness_analysis": {
@@ -125,7 +125,7 @@
       "PASS": 3
     },
     "execution_analysis": {
-      "execution": 64.65
+      "execution": 62.27
     },
     "portfolio_analysis": {
       "health": 0.0,
@@ -138,7 +138,7 @@
       "active_paper_orders": 0,
       "completed_paper_orders": 14,
       "paper_result_count": 14,
-      "paper_portfolio_changes": 81.92,
+      "paper_portfolio_changes": 81.49,
       "drawdown_changes": 0.0,
       "governance_changes": 1,
       "readiness_changes": 82.75,

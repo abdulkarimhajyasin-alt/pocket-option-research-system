@@ -9,7 +9,7 @@
     "safety_score": 100.0,
     "warning_count": 0,
     "recommendation_count": 1,
-    "last_import": "2026-06-01T16:08:09.088218",
+    "last_import": "2026-06-01T16:30:17.955596",
     "manual_only": true,
     "research_only": true,
     "observation_only": true
@@ -21,7 +21,7 @@
     "manual_sample_snapshot.json": 100.0
   },
   "latest": {
-    "timestamp": "2026-06-01T16:08:09.088218",
+    "timestamp": "2026-06-01T16:30:17.955596",
     "imports": [
       {
         "import_id": "manual_sample_snapshot",

@@ -10,15 +10,15 @@
     "name": "execution_governance",
     "arabic_label": "حوكمة التنفيذ الورقي",
     "status": "WARNING",
-    "score": 64.65,
-    "detail": "حوكمة التنفيذ الورقي: 64.65"
+    "score": 62.27,
+    "detail": "حوكمة التنفيذ الورقي: 62.27"
   },
   {
     "name": "risk_governance",
     "arabic_label": "حوكمة المخاطر",
     "status": "PASS",
-    "score": 82.24,
-    "detail": "حوكمة المخاطر: 82.24"
+    "score": 82.03,
+    "detail": "حوكمة المخاطر: 82.03"
   },
   {
     "name": "readiness_governance",

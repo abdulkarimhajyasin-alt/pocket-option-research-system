@@ -4665,6 +4665,254 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def operational_governance_analytics(self) -> dict[str, Any]:
+        """Return latest operational governance analytics."""
+        summary_payload = self._latest_json_dict(
+            "operational_governance",
+            "operational_governance_summary",
+        )
+        documents = {
+            "authority_model": self._latest_json_dict(
+                "operational_governance",
+                "authority_model_report",
+            ),
+            "approval_workflows": self._latest_json_dict(
+                "operational_governance",
+                "approval_workflows_report",
+            ),
+            "change_management": self._latest_json_dict(
+                "operational_governance",
+                "change_management_report",
+            ),
+            "release_governance": self._latest_json_dict(
+                "operational_governance",
+                "release_governance_report",
+            ),
+            "incident_escalation": self._latest_json_dict(
+                "operational_governance",
+                "incident_escalation_report",
+            ),
+            "kill_switch_governance": self._latest_json_dict(
+                "operational_governance",
+                "kill_switch_governance_report",
+            ),
+            "audit_controls": self._latest_json_dict(
+                "operational_governance",
+                "audit_controls_report",
+            ),
+            "operator_responsibility": self._latest_json_dict(
+                "operational_governance",
+                "operator_responsibility_report",
+            ),
+            "review_boards": self._latest_json_dict(
+                "operational_governance",
+                "review_boards_report",
+            ),
+            "decision_matrix": self._latest_json_dict(
+                "operational_governance",
+                "decision_matrix_report",
+            ),
+            "control_evidence": self._latest_json_dict(
+                "operational_governance",
+                "control_evidence_report",
+            ),
+            "policy_registry": self._latest_json_dict(
+                "operational_governance",
+                "policy_registry_report",
+            ),
+            "readiness_gates": self._latest_json_dict(
+                "operational_governance",
+                "readiness_gates_report",
+            ),
+        }
+        diagnostics = self._latest_json_list(
+            "operational_governance",
+            "diagnostics_report",
+        )
+        reports = self.loader.list_reports()
+        recommendations_report = self.loader.latest(
+            [item for item in reports if item.report_type == "json"],
+            "operational_governance",
+            "recommendations_report",
+        )
+        recommendations_content = (
+            self.loader.get_report(recommendations_report.report_id)
+            if recommendations_report
+            else None
+        )
+        recommendation_payload = (
+            recommendations_content.json_data if recommendations_content else []
+        )
+        recommendations = (
+            [str(item) for item in recommendation_payload]
+            if isinstance(recommendation_payload, list)
+            else []
+        )
+        readiness = documents["readiness_gates"]
+        gates = readiness.get("gates", []) if isinstance(readiness, dict) else []
+        summary = {
+            "governance_status": summary_payload.get(
+                "governance_status",
+                "Governance Incomplete",
+            ),
+            "governance_domain_count": self._float(
+                summary_payload.get("governance_domain_count", 12)
+            ),
+            "authority_role_count": self._float(
+                summary_payload.get(
+                    "authority_role_count",
+                    len(documents["authority_model"].get("items", [])),
+                )
+            ),
+            "approval_workflow_count": self._float(
+                summary_payload.get(
+                    "approval_workflow_count",
+                    len(documents["approval_workflows"].get("items", [])),
+                )
+            ),
+            "change_control_count": self._float(
+                summary_payload.get(
+                    "change_control_count",
+                    len(documents["change_management"].get("items", [])),
+                )
+            ),
+            "release_governance_status": summary_payload.get(
+                "release_governance_status",
+                "Governance only",
+            ),
+            "incident_escalation_status": summary_payload.get(
+                "incident_escalation_status",
+                "Governance only",
+            ),
+            "kill_switch_governance_status": summary_payload.get(
+                "kill_switch_governance_status",
+                "Governance only",
+            ),
+            "audit_control_count": self._float(
+                summary_payload.get(
+                    "audit_control_count",
+                    len(documents["audit_controls"].get("items", [])),
+                )
+            ),
+            "review_board_count": self._float(
+                summary_payload.get(
+                    "review_board_count",
+                    len(documents["review_boards"].get("items", [])),
+                )
+            ),
+            "decision_rule_count": self._float(
+                summary_payload.get(
+                    "decision_rule_count",
+                    len(documents["decision_matrix"].get("items", [])),
+                )
+            ),
+            "policy_count": self._float(
+                summary_payload.get(
+                    "policy_count",
+                    len(documents["policy_registry"].get("items", [])),
+                )
+            ),
+            "readiness_state": summary_payload.get(
+                "readiness_state",
+                readiness.get("readiness_state", "Not Ready"),
+            ),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "governance_only": True,
+            "design_only": True,
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        domain_distribution = {
+            label: self._float(len(doc.get("items", [])))
+            for label, doc in documents.items()
+            if label != "readiness_gates"
+        }
+        priorities: dict[str, float] = {}
+        for doc in documents.values():
+            for item in doc.get("items", []):
+                priority = str(item.get("priority", "متوسط"))
+                priorities[priority] = priorities.get(priority, 0.0) + 1.0
+        gate_chart: dict[str, float] = {}
+        for gate in gates:
+            status = str(gate.get("current_status", "missing"))
+            gate_chart[status] = gate_chart.get(status, 0.0) + 1.0
+        audit_chart = {
+            str(item.get("title", index + 1)): 1.0
+            for index, item in enumerate(documents["audit_controls"].get("items", []))
+        }
+        workflow_chart = {
+            str(item.get("title", index + 1)): 1.0
+            for index, item in enumerate(documents["approval_workflows"].get("items", []))
+        }
+        policy_chart = {
+            str(item.get("title", index + 1)): 1.0
+            for index, item in enumerate(documents["policy_registry"].get("items", []))
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {item: 1.0 for item in recommendations}
+        return {
+            "summary": summary,
+            "documents": documents,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "governance_domains": bar_chart(
+                "توزيع مجالات الحوكمة",
+                *self._dict_chart_values(domain_distribution),
+                label="مجالات الحوكمة",
+                color="blue",
+            ).to_dict(),
+            "readiness_gates": bar_chart(
+                "حالة بوابات الجاهزية",
+                *self._dict_chart_values(gate_chart),
+                label="البوابات",
+                color="warning",
+            ).to_dict(),
+            "priorities": bar_chart(
+                "مستويات الأولوية",
+                *self._dict_chart_values(priorities),
+                label="الأولوية",
+                color="green",
+            ).to_dict(),
+            "audit_controls": bar_chart(
+                "ضوابط التدقيق",
+                *self._dict_chart_values(audit_chart),
+                label="التدقيق",
+                color="accent",
+            ).to_dict(),
+            "approval_workflows": bar_chart(
+                "مسارات الموافقة",
+                *self._dict_chart_values(workflow_chart),
+                label="الموافقات",
+                color="blue",
+            ).to_dict(),
+            "policies": bar_chart(
+                "السياسات",
+                *self._dict_chart_values(policy_chart),
+                label="السياسات",
+                color="green",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

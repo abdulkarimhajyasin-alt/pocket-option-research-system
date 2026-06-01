@@ -1,7 +1,7 @@
 {
   "summary": {
-    "graph_id": "knowledge_graph_20260601160918",
-    "generated_at": "2026-06-01T16:09:18.125990+00:00",
+    "graph_id": "knowledge_graph_20260601163151",
+    "generated_at": "2026-06-01T16:31:51.344835+00:00",
     "nodes": [
       {
         "node_id": "signal",
@@ -97,7 +97,7 @@
         "node_id": "readiness",
         "entity_type": "ReadinessEntity",
         "label": "Readiness",
-        "confidence": 36.35,
+        "confidence": 36.48,
         "metadata": {
           "research_only": true,
           "source": "paper_control_center"
@@ -243,7 +243,7 @@
     "strongest_relationship": "opportunity->confluence:confirms",
     "weakest_relationship": "paperresult->readiness:degrades",
     "relationship_density": 0.1333,
-    "knowledge_score": 57.68,
+    "knowledge_score": 57.69,
     "metadata": {
       "research_only": true,
       "relationship_intelligence_only": true,
@@ -271,10 +271,10 @@
     "not_broker_access": true
   },
   "latest": {
-    "timestamp": "2026-06-01T16:09:18.126292+00:00",
+    "timestamp": "2026-06-01T16:31:51.345098+00:00",
     "graph": {
-      "graph_id": "knowledge_graph_20260601160918",
-      "generated_at": "2026-06-01T16:09:18.125990+00:00",
+      "graph_id": "knowledge_graph_20260601163151",
+      "generated_at": "2026-06-01T16:31:51.344835+00:00",
       "nodes": [
         {
           "node_id": "signal",
@@ -370,7 +370,7 @@
           "node_id": "readiness",
           "entity_type": "ReadinessEntity",
           "label": "Readiness",
-          "confidence": 36.35,
+          "confidence": 36.48,
           "metadata": {
             "research_only": true,
             "source": "paper_control_center"
@@ -516,7 +516,7 @@
       "strongest_relationship": "opportunity->confluence:confirms",
       "weakest_relationship": "paperresult->readiness:degrades",
       "relationship_density": 0.1333,
-      "knowledge_score": 57.68,
+      "knowledge_score": 57.69,
       "metadata": {
         "research_only": true,
         "relationship_intelligence_only": true,
@@ -717,7 +717,7 @@
         "density": 13.33
       },
       "graph_quality": {
-        "knowledge_score": 57.68,
+        "knowledge_score": 57.69,
         "node_count": 10,
         "edge_count": 12
       },
