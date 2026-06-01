@@ -1,0 +1,386 @@
+{
+  "schema_version": "governance_traceability.v1",
+  "traceability_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-01",
+      "source_area": "authority model",
+      "target_control": "design evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "design evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-02",
+      "source_area": "approval workflows",
+      "target_control": "review evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-03",
+      "source_area": "change management",
+      "target_control": "approval evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "approval evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-04",
+      "source_area": "release governance",
+      "target_control": "test evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "test evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-05",
+      "source_area": "incident escalation",
+      "target_control": "audit evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-06",
+      "source_area": "emergency stop governance",
+      "target_control": "incident evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "incident evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-07",
+      "source_area": "audit controls",
+      "target_control": "rollback evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "rollback evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-08",
+      "source_area": "operator responsibility",
+      "target_control": "monitoring evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "monitoring evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-09",
+      "source_area": "review boards",
+      "target_control": "design evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "design evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-10",
+      "source_area": "decision matrix",
+      "target_control": "review evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-11",
+      "source_area": "control evidence",
+      "target_control": "approval evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "approval evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-12",
+      "source_area": "policy registry",
+      "target_control": "test evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "test evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-13",
+      "source_area": "authority model",
+      "target_control": "audit evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-14",
+      "source_area": "approval workflows",
+      "target_control": "incident evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "incident evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-EVIDENCE-15",
+      "source_area": "change management",
+      "target_control": "rollback evidence",
+      "mapping_type": "evidence",
+      "strength": "قوي",
+      "owner": "Governance Review Board",
+      "evidence_required": [
+        "rollback evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    }
+  ]
+}

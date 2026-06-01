@@ -4913,6 +4913,208 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def governance_traceability_analytics(self) -> dict[str, Any]:
+        """Return latest governance traceability analytics."""
+        summary_payload = self._latest_json_dict(
+            "governance_traceability",
+            "governance_traceability_summary",
+        )
+        coverage = self._latest_json_dict(
+            "governance_traceability",
+            "coverage_summary_report",
+        )
+        documents = {
+            "control_mappings": self._latest_json_dict(
+                "governance_traceability",
+                "control_mappings_report",
+            ),
+            "control_matrix": self._latest_json_dict(
+                "governance_traceability",
+                "control_matrix_report",
+            ),
+            "evidence_matrix": self._latest_json_dict(
+                "governance_traceability",
+                "evidence_matrix_report",
+            ),
+            "readiness_mapping": self._latest_json_dict(
+                "governance_traceability",
+                "readiness_mapping_report",
+            ),
+            "policy_mapping": self._latest_json_dict(
+                "governance_traceability",
+                "policy_mapping_report",
+            ),
+        }
+        diagnostics = self._latest_json_list(
+            "governance_traceability",
+            "diagnostics_report",
+        )
+        reports = self.loader.list_reports()
+        recommendations_report = self.loader.latest(
+            [item for item in reports if item.report_type == "json"],
+            "governance_traceability",
+            "recommendations_report",
+        )
+        recommendations_content = (
+            self.loader.get_report(recommendations_report.report_id)
+            if recommendations_report
+            else None
+        )
+        recommendation_payload = (
+            recommendations_content.json_data if recommendations_content else []
+        )
+        recommendations = (
+            [str(item) for item in recommendation_payload]
+            if isinstance(recommendation_payload, list)
+            else []
+        )
+        summary = {
+            "traceability_status": summary_payload.get(
+                "traceability_status",
+                "Traceability Incomplete",
+            ),
+            "overall_traceability_score": self._float(
+                summary_payload.get(
+                    "overall_traceability_score",
+                    coverage.get("overall_traceability_score", 0),
+                )
+            ),
+            "control_coverage_score": self._float(
+                summary_payload.get(
+                    "control_coverage_score",
+                    coverage.get("control_coverage_score", 0),
+                )
+            ),
+            "evidence_coverage_score": self._float(
+                summary_payload.get(
+                    "evidence_coverage_score",
+                    coverage.get("evidence_coverage_score", 0),
+                )
+            ),
+            "readiness_traceability_score": self._float(
+                summary_payload.get(
+                    "readiness_traceability_score",
+                    coverage.get("readiness_traceability_score", 0),
+                )
+            ),
+            "policy_coverage_score": self._float(
+                summary_payload.get(
+                    "policy_coverage_score",
+                    coverage.get("policy_coverage_score", 0),
+                )
+            ),
+            "mapping_count": self._float(
+                summary_payload.get(
+                    "mapping_count",
+                    len(documents["control_mappings"].get("items", [])),
+                )
+            ),
+            "strong_mapping_count": self._float(
+                summary_payload.get(
+                    "strong_mapping_count",
+                    coverage.get("strong_mappings", 0),
+                )
+            ),
+            "weak_mapping_count": self._float(
+                summary_payload.get("weak_mapping_count", coverage.get("weak_mappings", 0))
+            ),
+            "missing_mapping_count": self._float(
+                summary_payload.get(
+                    "missing_mapping_count",
+                    coverage.get("unmapped_design_areas", 0),
+                )
+            ),
+            "uncovered_control_count": self._float(
+                summary_payload.get(
+                    "uncovered_control_count",
+                    coverage.get("missing_controls", 0),
+                )
+            ),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "traceability_only": True,
+            "governance_only": True,
+            "design_only": True,
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        mapping_distribution: dict[str, float] = {}
+        strength_distribution: dict[str, float] = {}
+        for item in documents["control_mappings"].get("items", []):
+            mapping_type = str(item.get("mapping_type", "control"))
+            strength = str(item.get("strength", "متوسط"))
+            mapping_distribution[mapping_type] = mapping_distribution.get(mapping_type, 0.0) + 1.0
+            strength_distribution[strength] = strength_distribution.get(strength, 0.0) + 1.0
+        score_chart = {
+            "control": summary["control_coverage_score"],
+            "evidence": summary["evidence_coverage_score"],
+            "readiness": summary["readiness_traceability_score"],
+            "policy": summary["policy_coverage_score"],
+        }
+        policy_chart = {
+            str(item.get("source_area", index + 1)): 1.0
+            for index, item in enumerate(documents["policy_mapping"].get("items", []))
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {item: 1.0 for item in recommendations}
+        return {
+            "summary": summary,
+            "coverage": coverage,
+            "documents": documents,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "mapping_distribution": bar_chart(
+                "توزيع الخرائط",
+                *self._dict_chart_values(mapping_distribution),
+                label="الخرائط",
+                color="blue",
+            ).to_dict(),
+            "mapping_strength": bar_chart(
+                "قوة الخرائط",
+                *self._dict_chart_values(strength_distribution),
+                label="القوة",
+                color="green",
+            ).to_dict(),
+            "coverage_scores": bar_chart(
+                "تغطية الضوابط والأدلة",
+                *self._dict_chart_values(score_chart),
+                label="التغطية",
+                color="accent",
+            ).to_dict(),
+            "readiness_traceability": bar_chart(
+                "تتبع الجاهزية",
+                ["traceability"],
+                [summary["readiness_traceability_score"]],
+                label="الجاهزية",
+                color="warning",
+            ).to_dict(),
+            "policies": bar_chart(
+                "السياسات",
+                *self._dict_chart_values(policy_chart),
+                label="السياسات",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

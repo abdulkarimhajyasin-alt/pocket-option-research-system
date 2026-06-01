@@ -338,6 +338,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="توليد إطار حوكمة وتحكم تشغيلي مستقبلي فقط دون صلاحيات تشغيل حقيقية.",
         command=("scripts/run_operational_governance.py",),
     ),
+    "governance_traceability": ActionDefinition(
+        name="governance_traceability",
+        label="تتبع الحوكمة",
+        description="توليد خرائط تتبع وربط ضوابط محلية فقط دون تنفيذ أو تحكم تشغيلي.",
+        command=("scripts/run_governance_traceability.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

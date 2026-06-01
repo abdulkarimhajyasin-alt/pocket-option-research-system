@@ -1,0 +1,227 @@
+{
+  "schema_version": "governance_traceability.v1",
+  "traceability_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-01",
+      "source_area": "safety policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-02",
+      "source_area": "risk policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-03",
+      "source_area": "release policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-04",
+      "source_area": "incident policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-05",
+      "source_area": "monitoring policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-06",
+      "source_area": "audit policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-07",
+      "source_area": "change policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-POLICY-08",
+      "source_area": "compliance policy",
+      "target_control": "production design area and governance gate",
+      "mapping_type": "policy",
+      "strength": "قوي",
+      "owner": "Compliance Reviewer",
+      "evidence_required": [
+        "policy evidence",
+        "control evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    }
+  ]
+}

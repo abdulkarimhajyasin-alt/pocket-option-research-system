@@ -38,6 +38,7 @@ from app.trading_architecture_program.service import TradingArchitectureProgramS
 from app.trading_requirements.service import TradingRequirementsService
 from app.production_system_design.service import ProductionSystemDesignService
 from app.operational_governance.service import OperationalGovernanceService
+from app.governance_traceability.service import GovernanceTraceabilityService
 
 SAFETY_NOTE = (
     "This is a local research dashboard. It does not execute live trades, connect to "
@@ -844,6 +845,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/governance-traceability", response_class=HTMLResponse)
+    def governance_traceability(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/governance_traceability.html",
+            context(
+                request,
+                dashboard,
+                page="governance_traceability",
+                governance_traceability=dashboard.analytics.governance_traceability_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1347,6 +1362,58 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/operational-governance/recommendations")
     def api_operational_governance_recommendations() -> list[str]:
         return OperationalGovernanceService(root).generate_recommendations()
+
+    @app.get("/api/governance-traceability")
+    def api_governance_traceability() -> dict[str, object]:
+        return dashboard_context().analytics.governance_traceability_analytics()
+
+    @app.get("/api/governance-traceability/mappings")
+    def api_governance_traceability_mappings() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_control_mappings()
+
+    @app.get("/api/governance-traceability/control-matrix")
+    def api_governance_traceability_control_matrix() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_control_matrix()
+
+    @app.get("/api/governance-traceability/evidence-matrix")
+    def api_governance_traceability_evidence_matrix() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_evidence_matrix()
+
+    @app.get("/api/governance-traceability/readiness")
+    def api_governance_traceability_readiness() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_readiness_mapping()
+
+    @app.get("/api/governance-traceability/risks")
+    def api_governance_traceability_risks() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_risk_mapping()
+
+    @app.get("/api/governance-traceability/incidents")
+    def api_governance_traceability_incidents() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_incident_mapping()
+
+    @app.get("/api/governance-traceability/releases")
+    def api_governance_traceability_releases() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_release_mapping()
+
+    @app.get("/api/governance-traceability/monitoring")
+    def api_governance_traceability_monitoring() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_monitoring_mapping()
+
+    @app.get("/api/governance-traceability/policies")
+    def api_governance_traceability_policies() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_policy_mapping()
+
+    @app.get("/api/governance-traceability/coverage")
+    def api_governance_traceability_coverage() -> dict[str, object]:
+        return GovernanceTraceabilityService(root).build_coverage_summary()
+
+    @app.get("/api/governance-traceability/diagnostics")
+    def api_governance_traceability_diagnostics() -> list[dict[str, object]]:
+        return GovernanceTraceabilityService(root).generate_diagnostics()
+
+    @app.get("/api/governance-traceability/recommendations")
+    def api_governance_traceability_recommendations() -> list[str]:
+        return GovernanceTraceabilityService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

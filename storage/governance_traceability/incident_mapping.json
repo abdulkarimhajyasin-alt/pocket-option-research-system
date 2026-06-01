@@ -1,0 +1,173 @@
+{
+  "schema_version": "governance_traceability.v1",
+  "traceability_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-INCIDENT-01",
+      "source_area": "incident severity",
+      "target_control": "incident escalation control",
+      "mapping_type": "incident",
+      "strength": "قوي",
+      "owner": "Incident Commander",
+      "evidence_required": [
+        "incident evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-INCIDENT-02",
+      "source_area": "escalation path",
+      "target_control": "incident escalation control",
+      "mapping_type": "incident",
+      "strength": "قوي",
+      "owner": "Incident Commander",
+      "evidence_required": [
+        "incident evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-INCIDENT-03",
+      "source_area": "incident commander",
+      "target_control": "incident escalation control",
+      "mapping_type": "incident",
+      "strength": "قوي",
+      "owner": "Incident Commander",
+      "evidence_required": [
+        "incident evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-INCIDENT-04",
+      "source_area": "communication requirements",
+      "target_control": "incident escalation control",
+      "mapping_type": "incident",
+      "strength": "قوي",
+      "owner": "Incident Commander",
+      "evidence_required": [
+        "incident evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-INCIDENT-05",
+      "source_area": "evidence preservation",
+      "target_control": "incident escalation control",
+      "mapping_type": "incident",
+      "strength": "قوي",
+      "owner": "Incident Commander",
+      "evidence_required": [
+        "incident evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-INCIDENT-06",
+      "source_area": "post-incident review",
+      "target_control": "incident escalation control",
+      "mapping_type": "incident",
+      "strength": "قوي",
+      "owner": "Incident Commander",
+      "evidence_required": [
+        "incident evidence",
+        "review evidence",
+        "audit evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schema_version": "governance_traceability.v1",
+  "traceability_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RELEASE-01",
+      "source_area": "release candidate review",
+      "target_control": "release governance control",
+      "mapping_type": "release",
+      "strength": "قوي",
+      "owner": "Release Review Board",
+      "evidence_required": [
+        "approval evidence",
+        "rollback evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RELEASE-02",
+      "source_area": "release gate checklist",
+      "target_control": "release governance control",
+      "mapping_type": "release",
+      "strength": "قوي",
+      "owner": "Release Review Board",
+      "evidence_required": [
+        "approval evidence",
+        "rollback evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RELEASE-03",
+      "source_area": "rollback approval",
+      "target_control": "release governance control",
+      "mapping_type": "release",
+      "strength": "قوي",
+      "owner": "Release Review Board",
+      "evidence_required": [
+        "approval evidence",
+        "rollback evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RELEASE-04",
+      "source_area": "rollback evidence",
+      "target_control": "release governance control",
+      "mapping_type": "release",
+      "strength": "قوي",
+      "owner": "Release Review Board",
+      "evidence_required": [
+        "approval evidence",
+        "rollback evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RELEASE-05",
+      "source_area": "release freeze",
+      "target_control": "release governance control",
+      "mapping_type": "release",
+      "strength": "قوي",
+      "owner": "Release Review Board",
+      "evidence_required": [
+        "approval evidence",
+        "rollback evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RELEASE-06",
+      "source_area": "post-release review",
+      "target_control": "release governance control",
+      "mapping_type": "release",
+      "strength": "قوي",
+      "owner": "Release Review Board",
+      "evidence_required": [
+        "approval evidence",
+        "rollback evidence",
+        "review evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    }
+  ]
+}

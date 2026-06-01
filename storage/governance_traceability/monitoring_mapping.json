@@ -1,0 +1,173 @@
+{
+  "schema_version": "governance_traceability.v1",
+  "traceability_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-MONITORING-01",
+      "source_area": "service health monitoring",
+      "target_control": "operator monitoring control",
+      "mapping_type": "monitoring",
+      "strength": "قوي",
+      "owner": "Operations Lead",
+      "evidence_required": [
+        "monitoring evidence",
+        "audit evidence",
+        "escalation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-MONITORING-02",
+      "source_area": "risk health monitoring",
+      "target_control": "operator monitoring control",
+      "mapping_type": "monitoring",
+      "strength": "قوي",
+      "owner": "Operations Lead",
+      "evidence_required": [
+        "monitoring evidence",
+        "audit evidence",
+        "escalation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-MONITORING-03",
+      "source_area": "data freshness monitoring",
+      "target_control": "operator monitoring control",
+      "mapping_type": "monitoring",
+      "strength": "قوي",
+      "owner": "Operations Lead",
+      "evidence_required": [
+        "monitoring evidence",
+        "audit evidence",
+        "escalation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-MONITORING-04",
+      "source_area": "alert acknowledgement",
+      "target_control": "operator monitoring control",
+      "mapping_type": "monitoring",
+      "strength": "قوي",
+      "owner": "Operations Lead",
+      "evidence_required": [
+        "monitoring evidence",
+        "audit evidence",
+        "escalation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-MONITORING-05",
+      "source_area": "operator escalation",
+      "target_control": "operator monitoring control",
+      "mapping_type": "monitoring",
+      "strength": "قوي",
+      "owner": "Operations Lead",
+      "evidence_required": [
+        "monitoring evidence",
+        "audit evidence",
+        "escalation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-MONITORING-06",
+      "source_area": "monitoring audit trail",
+      "target_control": "operator monitoring control",
+      "mapping_type": "monitoring",
+      "strength": "قوي",
+      "owner": "Operations Lead",
+      "evidence_required": [
+        "monitoring evidence",
+        "audit evidence",
+        "escalation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    }
+  ]
+}

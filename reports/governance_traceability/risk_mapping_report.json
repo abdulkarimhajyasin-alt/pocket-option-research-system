@@ -1,0 +1,200 @@
+{
+  "schema_version": "governance_traceability.v1",
+  "traceability_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "items": [
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RISK-01",
+      "source_area": "risk policy changes",
+      "target_control": "risk governance control",
+      "mapping_type": "risk",
+      "strength": "قوي",
+      "owner": "Risk Owner",
+      "evidence_required": [
+        "risk evidence",
+        "audit evidence",
+        "mitigation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RISK-02",
+      "source_area": "secrets strategy",
+      "target_control": "risk governance control",
+      "mapping_type": "risk",
+      "strength": "قوي",
+      "owner": "Risk Owner",
+      "evidence_required": [
+        "risk evidence",
+        "audit evidence",
+        "mitigation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RISK-03",
+      "source_area": "configuration strategy",
+      "target_control": "risk governance control",
+      "mapping_type": "risk",
+      "strength": "قوي",
+      "owner": "Risk Owner",
+      "evidence_required": [
+        "risk evidence",
+        "audit evidence",
+        "mitigation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RISK-04",
+      "source_area": "execution safety boundary",
+      "target_control": "risk governance control",
+      "mapping_type": "risk",
+      "strength": "قوي",
+      "owner": "Risk Owner",
+      "evidence_required": [
+        "risk evidence",
+        "audit evidence",
+        "mitigation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RISK-05",
+      "source_area": "broker isolation boundary",
+      "target_control": "risk governance control",
+      "mapping_type": "risk",
+      "strength": "قوي",
+      "owner": "Risk Owner",
+      "evidence_required": [
+        "risk evidence",
+        "audit evidence",
+        "mitigation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RISK-06",
+      "source_area": "monitoring failure",
+      "target_control": "risk governance control",
+      "mapping_type": "risk",
+      "strength": "قوي",
+      "owner": "Risk Owner",
+      "evidence_required": [
+        "risk evidence",
+        "audit evidence",
+        "mitigation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    },
+    {
+      "schema_version": "governance_traceability.v1",
+      "traceability_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "mapping_id": "TRACE-RISK-07",
+      "source_area": "release rollback risk",
+      "target_control": "risk governance control",
+      "mapping_type": "risk",
+      "strength": "قوي",
+      "owner": "Risk Owner",
+      "evidence_required": [
+        "risk evidence",
+        "audit evidence",
+        "mitigation evidence"
+      ],
+      "status": "موثق",
+      "gaps": [],
+      "safety_notes": [
+        "Traceability artifact only.",
+        "No runtime control or external connectivity is allowed."
+      ],
+      "verification_method": "traceability review"
+    }
+  ]
+}

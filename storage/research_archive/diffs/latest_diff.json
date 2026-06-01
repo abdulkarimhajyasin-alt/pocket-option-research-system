@@ -1,23 +1,23 @@
 {
-  "from_version": "research-v0017",
-  "to_version": "research-v0018",
+  "from_version": "research-v0019",
+  "to_version": "research-v0020",
   "added_keys": [],
   "removed_keys": [],
   "changed_values": [
     {
       "key": "checksum",
-      "previous": "1d3373fbe35e58352647094ff4df9dc6a1a59525591e3fe472ac615bfff5098e",
-      "current": "fae5029ecfb785d05c864818c2f50bf3dc980161dd8203e4906f455761ee2f1d"
+      "previous": "e9e4deb0d3bb7da702731463681150af7447de5596be6aa1d40282e0f2c1a889",
+      "current": "3eb8922a885f98dbcdedcfafdfea70fd52b32df57da935b8187b80b72eabea82"
     },
     {
       "key": "snapshot_id",
-      "previous": "snapshot-1d3373fbe35e",
-      "current": "snapshot-fae5029ecfb7"
+      "previous": "snapshot-e9e4deb0d3bb",
+      "current": "snapshot-3eb8922a885f"
     },
     {
       "key": "version",
-      "previous": "research-v0017",
-      "current": "research-v0018"
+      "previous": "research-v0019",
+      "current": "research-v0020"
     }
   ],
   "improved_metrics": [],

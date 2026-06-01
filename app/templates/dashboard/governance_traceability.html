@@ -1,0 +1,60 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.governance_traceability }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تتبع فقط</p>
+    <h1>تتبع الحوكمة وربط الضوابط</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث التتبع</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة التتبع</span>
+    <strong>{{ governance_traceability.summary.traceability_status|default("Traceability Incomplete") }}</strong>
+    <p>هذه الصفحة تتبع وربط حوكمي فقط ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط أو صلاحيات تشغيل حقيقية.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة التغطية العامة</span>
+    <strong>{{ governance_traceability.summary.overall_traceability_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>الخرائط القوية / الضعيفة</span>
+    <strong>{{ governance_traceability.summary.strong_mapping_count|default(0)|number_ar }} / {{ governance_traceability.summary.weak_mapping_count|default(0)|number_ar }}</strong>
+    <small>traceability-only / governance-only / local-only</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>حالة التتبع</span><strong>{{ governance_traceability.summary.traceability_status|default("Traceability Incomplete") }}</strong></article>
+  <article class="metric-card"><span>درجة التغطية العامة</span><strong>{{ governance_traceability.summary.overall_traceability_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>تغطية الضوابط</span><strong>{{ governance_traceability.summary.control_coverage_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>تغطية الأدلة</span><strong>{{ governance_traceability.summary.evidence_coverage_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>تتبع الجاهزية</span><strong>{{ governance_traceability.summary.readiness_traceability_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الخرائط</span><strong>{{ governance_traceability.summary.mapping_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الخرائط القوية</span><strong>{{ governance_traceability.summary.strong_mapping_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الخرائط الضعيفة</span><strong>{{ governance_traceability.summary.weak_mapping_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الخرائط المفقودة</span><strong>{{ governance_traceability.summary.missing_mapping_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>الضوابط غير المغطاة</span><strong>{{ governance_traceability.summary.uncovered_control_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التحذيرات</span><strong>{{ governance_traceability.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ governance_traceability.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الخرائط</h2><span>أنواع الربط</span></div><div class="chart" data-chart='{{ governance_traceability.mapping_distribution|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>قوة الخرائط</h2><span>قوي / متوسط / ضعيف</span></div><div class="chart" data-chart='{{ governance_traceability.mapping_strength|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تغطية الضوابط والأدلة</h2><span>درجات</span></div><div class="chart" data-chart='{{ governance_traceability.coverage_scores|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تتبع الجاهزية</h2><span>بوابات</span></div><div class="chart" data-chart='{{ governance_traceability.readiness_traceability|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>السياسات</h2><span>تغطية السياسات</span></div><div class="chart" data-chart='{{ governance_traceability.policies|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>سلامة الحدود</span></div><div class="chart" data-chart='{{ governance_traceability.diagnostics|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>تحسين التتبع</span></div><div class="chart" data-chart='{{ governance_traceability.recommendations|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ملخص التتبع</h2><span>محلي فقط</span></div><pre class="code-block">{{ governance_traceability.summary|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}
