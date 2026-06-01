@@ -4212,6 +4212,123 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def trading_architecture_program_analytics(self) -> dict[str, Any]:
+        """Return latest trading architecture program analytics."""
+        summary_payload = self._latest_json_dict(
+            "trading_architecture_program",
+            "program_summary",
+        )
+        domains = self._latest_json_list(
+            "trading_architecture_program",
+            "domain_report",
+        )
+        gates = self._latest_json_list("trading_architecture_program", "gate_report")
+        workstreams = self._latest_json_list(
+            "trading_architecture_program",
+            "workstream_report",
+        )
+        diagnostics = self._latest_json_list(
+            "trading_architecture_program",
+            "diagnostics_report",
+        )
+        recommendations = self._latest_json_list(
+            "trading_architecture_program",
+            "recommendations_report",
+        )
+        summary = {
+            "program_name": summary_payload.get(
+                "program_name",
+                "Trading System Architecture Program",
+            ),
+            "program_status": summary_payload.get(
+                "program_status",
+                "Architecture Program Foundation Only",
+            ),
+            "domain_count": self._float(summary_payload.get("domain_count", len(domains))),
+            "workstream_count": self._float(
+                summary_payload.get("workstream_count", len(workstreams))
+            ),
+            "gate_count": self._float(summary_payload.get("gate_count", len(gates))),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "architecture_only": True,
+            "no_execution_capability": True,
+            "no_broker_capability": True,
+            "no_trading_capability": True,
+        }
+        domain_chart = {
+            str(item.get("name", item.get("domain_id", index + 1))): 1.0
+            for index, item in enumerate(domains)
+        }
+        gate_chart = {
+            str(item.get("name", item.get("gate_id", index + 1))): 1.0
+            for index, item in enumerate(gates)
+        }
+        workstream_chart = {
+            str(item.get("name", item.get("workstream_id", index + 1))): 1.0
+            for index, item in enumerate(workstreams)
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0
+            for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {str(item): 1.0 for item in recommendations}
+        safety_chart = {
+            "لا تنفيذ": 100.0,
+            "لا وسيط": 100.0,
+            "لا تداول": 100.0,
+            "لا بيانات اعتماد": 100.0,
+            "لا اتصال خارجي": 100.0,
+        }
+        return {
+            "summary": summary,
+            "domains_items": domains,
+            "gates_items": gates,
+            "workstreams_items": workstreams,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "domains": bar_chart(
+                "المجالات المعمارية",
+                *self._dict_chart_values(domain_chart),
+                label="المجالات",
+                color="blue",
+            ).to_dict(),
+            "gates": bar_chart(
+                "بوابات القرار",
+                *self._dict_chart_values(gate_chart),
+                label="البوابات",
+                color="green",
+            ).to_dict(),
+            "workstreams": bar_chart(
+                "مسارات العمل",
+                *self._dict_chart_values(workstream_chart),
+                label="المسارات",
+                color="accent",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التشخيصات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التشخيصات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "safety": bar_chart(
+                "حدود السلامة",
+                *self._dict_chart_values(safety_chart),
+                label="السلامة",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

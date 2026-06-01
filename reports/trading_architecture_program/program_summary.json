@@ -1,0 +1,39 @@
+{
+  "program_name": "Trading System Architecture Program",
+  "program_status": "Architecture Program Foundation Only",
+  "domain_count": 8,
+  "workstream_count": 8,
+  "gate_count": 7,
+  "diagnostic_count": 0,
+  "recommendation_count": 8,
+  "governance": {
+    "approval_model": "human-review-required",
+    "change_control": "separate-program-change-control",
+    "release_control": "architecture-artifacts-only",
+    "live_trading_approval": false,
+    "required_reviews": [
+      "architecture review",
+      "risk review",
+      "governance review",
+      "compliance review"
+    ],
+    "architecture_only": true,
+    "research_only": true
+  },
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "not_implemented": true,
+  "no_execution_capability": true,
+  "no_broker_capability": true,
+  "no_trading_capability": true,
+  "no_broker_api": true,
+  "no_broker_adapter": true,
+  "no_pocket_option_login": true,
+  "no_credentials": true,
+  "no_browser_automation": true,
+  "no_order_placement": true,
+  "no_live_trading": true,
+  "no_money_handling": true,
+  "no_external_connectivity": true
+}

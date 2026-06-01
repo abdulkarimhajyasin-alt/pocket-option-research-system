@@ -1,0 +1,162 @@
+[
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "execution-architecture",
+    "name": "Execution Architecture",
+    "purpose": "Define Execution Architecture documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "broker-architecture",
+    "name": "Broker Architecture",
+    "purpose": "Define Broker Architecture documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "risk-governance",
+    "name": "Risk Governance",
+    "purpose": "Define Risk Governance documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "monitoring-observability",
+    "name": "Monitoring & Observability",
+    "purpose": "Define Monitoring & Observability documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "infrastructure",
+    "name": "Infrastructure",
+    "purpose": "Define Infrastructure documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "compliance-legal",
+    "name": "Compliance & Legal",
+    "purpose": "Define Compliance & Legal documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "operations",
+    "name": "Operations",
+    "purpose": "Define Operations documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "workstream_id": "audit-controls",
+    "name": "Audit & Controls",
+    "purpose": "Define Audit & Controls documents, controls, and review gates.",
+    "deliverables": [
+      "architecture brief",
+      "risk and safety notes",
+      "review checklist"
+    ],
+    "forbidden_outputs": [
+      "executable broker code",
+      "order placement logic",
+      "credential handling",
+      "external connectivity"
+    ]
+  }
+]

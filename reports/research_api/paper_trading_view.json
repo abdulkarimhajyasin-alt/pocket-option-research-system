@@ -9,22 +9,22 @@
         "rejected": 0,
         "active": 0,
         "expired": 11,
-        "wins": 2,
+        "wins": 3,
         "losses": 0,
-        "breakeven": 1,
+        "breakeven": 0,
         "unresolved": 11,
-        "win_rate": 0.1429,
+        "win_rate": 0.2143,
         "average_confidence": 84.44,
         "average_readiness": 79.7,
         "paper_drawdown": 0.0,
         "paper_streaks": {
-          "max_paper_win_streak": 1,
+          "max_paper_win_streak": 2,
           "max_paper_loss_streak": 0
         },
         "paper_only": true,
         "research_only": true,
         "not_real_execution": true,
-        "paper_execution_score": 62.27,
+        "paper_execution_score": 64.65,
         "warning_count": 3,
         "recommendation_count": 3
       },
@@ -33,7 +33,7 @@
     },
     "paper_portfolio": {
       "summary": {
-        "win_rate": 0.1429,
+        "win_rate": 0.2143,
         "loss_rate": 0.0,
         "drawdown_analysis": {
           "current_drawdown": 0.0,
@@ -51,11 +51,11 @@
             0.0,
             0.0,
             0.0,
-            0.0,
             1.0,
             1.0,
             1.0,
-            2.0
+            2.0,
+            3.0
           ],
           "paper_only": true
         },
@@ -68,11 +68,11 @@
             "مراقبة السوق": 1,
             "جاهزية المراقبة": 2,
             "مراقبة المتصفح": 2,
-            "browser_snapshot": 1,
             "المراقبة الخارجية": 2,
             "استيراد اللقطات": 2,
             "snapshot": 1,
             "ذكاء المراقبة": 1,
+            "browser_snapshot": 1,
             "external_source": 1
           },
           "session_exposure": {
@@ -102,21 +102,21 @@
         },
         "paper_only": true,
         "research_only": true,
-        "portfolio_score": 81.49,
+        "portfolio_score": 81.92,
         "warning_count": 3,
         "recommendation_count": 3,
         "summary": {
           "portfolio_id": "paper_portfolio_0001",
-          "created_at": "2026-06-01T14:46:19.092312+00:00",
+          "created_at": "2026-06-01T15:07:02.055403+00:00",
           "total_orders": 14,
           "active_orders": 0,
-          "wins": 2,
+          "wins": 3,
           "losses": 0,
-          "breakeven": 1,
-          "win_rate": 0.1429,
+          "breakeven": 0,
+          "win_rate": 0.2143,
           "drawdown": 0.0,
           "stability_score": 67.0,
-          "health_score": 60.43,
+          "health_score": 62.81,
           "risk_score": 86.62,
           "metadata": {
             "paper_only": true,

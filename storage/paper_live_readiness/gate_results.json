@@ -3,15 +3,15 @@
     "name": "paper_performance_gate",
     "arabic_label": "بوابة الأداء الورقي",
     "status": "PASS",
-    "score": 81.49,
-    "detail": "بوابة الأداء الورقي: 81.49"
+    "score": 81.92,
+    "detail": "بوابة الأداء الورقي: 81.92"
   },
   {
     "name": "portfolio_stability_gate",
     "arabic_label": "بوابة استقرار المحفظة",
     "status": "WARNING",
-    "score": 60.85,
-    "detail": "بوابة استقرار المحفظة: 60.85"
+    "score": 60.88,
+    "detail": "بوابة استقرار المحفظة: 60.88"
   },
   {
     "name": "governance_gate",

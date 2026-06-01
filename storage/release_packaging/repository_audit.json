@@ -63,6 +63,7 @@
     "streaming",
     "templates",
     "trade_lifecycle",
+    "trading_architecture_program",
     "validation"
   ],
   "dashboard_route_inventory": [
@@ -115,6 +116,7 @@
     "/strategy-benchmark",
     "/strategy-readiness",
     "/trade-lifecycle",
+    "/trading-architecture-program",
     "/validation",
     "/validation/{report_id}"
   ],
@@ -188,6 +190,11 @@
     "/api/strategy-benchmark",
     "/api/strategy-readiness",
     "/api/trade-lifecycle",
+    "/api/trading-architecture-program",
+    "/api/trading-architecture-program/diagnostics",
+    "/api/trading-architecture-program/domains",
+    "/api/trading-architecture-program/gates",
+    "/api/trading-architecture-program/workstreams",
     "/api/validation"
   ],
   "script_inventory": [
@@ -241,6 +248,7 @@
     "check_strategy_readiness.py",
     "check_streaming.py",
     "check_trade_lifecycle.py",
+    "check_trading_architecture_program.py",
     "check_visualization_layer.py",
     "generate_synthetic_dataset.py",
     "run_architecture_audit.py",
@@ -288,6 +296,7 @@
     "run_strategy_readiness.py",
     "run_strategy_research.py",
     "run_trade_lifecycle.py",
+    "run_trading_architecture_program.py",
     "run_validation.py",
     "run_walk_forward.py",
     "verify_dataset_integrity.py"
@@ -351,7 +360,8 @@
     "test_strategy_research.py",
     "test_strategy_validation.py",
     "test_streaming.py",
-    "test_trade_lifecycle.py"
+    "test_trade_lifecycle.py",
+    "test_trading_architecture_program.py"
   ],
   "report_directory_inventory": [
     "analytics",
@@ -395,6 +405,7 @@
     "strategy_readiness",
     "strategy_research",
     "trade_lifecycle",
+    "trading_architecture_program",
     "validation"
   ],
   "storage_directory_inventory": [
@@ -433,7 +444,8 @@
     "snapshot_import",
     "strategy_benchmark",
     "strategy_readiness",
-    "trade_lifecycle"
+    "trade_lifecycle",
+    "trading_architecture_program"
   ],
   "validation_script_inventory": [
     "check_arabic_dashboard.py",
@@ -486,6 +498,7 @@
     "check_strategy_readiness.py",
     "check_streaming.py",
     "check_trade_lifecycle.py",
+    "check_trading_architecture_program.py",
     "check_visualization_layer.py"
   ],
   "generated_artifact_inventory": [
@@ -759,6 +772,12 @@
     "reports\\trade_lifecycle\\quality_analysis.json",
     "reports\\trade_lifecycle\\session_analysis.json",
     "reports\\trade_lifecycle\\success_analysis.json",
+    "reports\\trading_architecture_program\\diagnostics_report.json",
+    "reports\\trading_architecture_program\\domain_report.json",
+    "reports\\trading_architecture_program\\gate_report.json",
+    "reports\\trading_architecture_program\\program_summary.json",
+    "reports\\trading_architecture_program\\recommendations_report.json",
+    "reports\\trading_architecture_program\\workstream_report.json",
     "reports\\validation\\research_cisd_fvg_strategy_report.json",
     "storage\\architecture_audit\\audit_results.json",
     "storage\\architecture_audit\\consistency_results.json",
@@ -919,6 +938,8 @@
     "storage\\research_archive\\diffs\\diff_research-v0006_to_research-v0007.json",
     "storage\\research_archive\\diffs\\diff_research-v0007_to_research-v0008.json",
     "storage\\research_archive\\diffs\\diff_research-v0008_to_research-v0009.json",
+    "storage\\research_archive\\diffs\\diff_research-v0009_to_research-v0010.json",
+    "storage\\research_archive\\diffs\\diff_research-v0010_to_research-v0011.json",
     "storage\\research_archive\\diffs\\latest_diff.json",
     "storage\\research_archive\\evolution\\evolution_report.json",
     "storage\\research_archive\\latest_snapshot.json",
@@ -958,6 +979,14 @@
     "storage\\research_archive\\snapshots\\research-v0009\\safety_manifest.json",
     "storage\\research_archive\\snapshots\\research-v0009\\snapshot.json",
     "storage\\research_archive\\snapshots\\research-v0009\\source_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0010\\diagnostics.json",
+    "storage\\research_archive\\snapshots\\research-v0010\\safety_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0010\\snapshot.json",
+    "storage\\research_archive\\snapshots\\research-v0010\\source_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0011\\diagnostics.json",
+    "storage\\research_archive\\snapshots\\research-v0011\\safety_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0011\\snapshot.json",
+    "storage\\research_archive\\snapshots\\research-v0011\\source_manifest.json",
     "storage\\research_archive\\versions.json",
     "storage\\research_certification\\certification_results.json",
     "storage\\research_certification\\diagnostics.json",
@@ -1007,7 +1036,13 @@
     "storage\\trade_lifecycle\\lifecycle_metrics.json",
     "storage\\trade_lifecycle\\lifecycle_records.json",
     "storage\\trade_lifecycle\\quality_scores.json",
-    "storage\\trade_lifecycle\\success_analysis.json"
+    "storage\\trade_lifecycle\\success_analysis.json",
+    "storage\\trading_architecture_program\\diagnostics.json",
+    "storage\\trading_architecture_program\\domains.json",
+    "storage\\trading_architecture_program\\gates.json",
+    "storage\\trading_architecture_program\\program_registry.json",
+    "storage\\trading_architecture_program\\recommendations.json",
+    "storage\\trading_architecture_program\\workstreams.json"
   ],
   "safety_boundary_indicators": {
     "research_only": true,

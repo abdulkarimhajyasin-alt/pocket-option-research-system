@@ -318,6 +318,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="توليد تخطيط معماري فقط لما بعد إصدار البحث دون تنفيذ أو وسيط.",
         command=("scripts/run_post_research_architecture.py",),
     ),
+    "trading_architecture_program": ActionDefinition(
+        name="trading_architecture_program",
+        label="برنامج هندسة نظام التداول",
+        description="توليد أساس برنامج معماري فقط دون تداول أو تنفيذ أو اتصال خارجي.",
+        command=("scripts/run_trading_architecture_program.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

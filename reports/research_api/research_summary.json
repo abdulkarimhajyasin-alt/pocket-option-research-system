@@ -101,22 +101,22 @@
           "rejected": 0,
           "active": 0,
           "expired": 11,
-          "wins": 2,
+          "wins": 3,
           "losses": 0,
-          "breakeven": 1,
+          "breakeven": 0,
           "unresolved": 11,
-          "win_rate": 0.1429,
+          "win_rate": 0.2143,
           "average_confidence": 84.44,
           "average_readiness": 79.7,
           "paper_drawdown": 0.0,
           "paper_streaks": {
-            "max_paper_win_streak": 1,
+            "max_paper_win_streak": 2,
             "max_paper_loss_streak": 0
           },
           "paper_only": true,
           "research_only": true,
           "not_real_execution": true,
-          "paper_execution_score": 62.27,
+          "paper_execution_score": 64.65,
           "warning_count": 3,
           "recommendation_count": 3
         },
@@ -125,7 +125,7 @@
       },
       "paper_portfolio": {
         "summary": {
-          "win_rate": 0.1429,
+          "win_rate": 0.2143,
           "loss_rate": 0.0,
           "drawdown_analysis": {
             "current_drawdown": 0.0,
@@ -143,11 +143,11 @@
               0.0,
               0.0,
               0.0,
-              0.0,
               1.0,
               1.0,
               1.0,
-              2.0
+              2.0,
+              3.0
             ],
             "paper_only": true
           },
@@ -160,11 +160,11 @@
               "مراقبة السوق": 1,
               "جاهزية المراقبة": 2,
               "مراقبة المتصفح": 2,
-              "browser_snapshot": 1,
               "المراقبة الخارجية": 2,
               "استيراد اللقطات": 2,
               "snapshot": 1,
               "ذكاء المراقبة": 1,
+              "browser_snapshot": 1,
               "external_source": 1
             },
             "session_exposure": {
@@ -194,21 +194,21 @@
           },
           "paper_only": true,
           "research_only": true,
-          "portfolio_score": 81.49,
+          "portfolio_score": 81.92,
           "warning_count": 3,
           "recommendation_count": 3,
           "summary": {
             "portfolio_id": "paper_portfolio_0001",
-            "created_at": "2026-06-01T14:46:19.092312+00:00",
+            "created_at": "2026-06-01T15:07:02.055403+00:00",
             "total_orders": 14,
             "active_orders": 0,
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
-            "breakeven": 1,
-            "win_rate": 0.1429,
+            "breakeven": 0,
+            "win_rate": 0.2143,
             "drawdown": 0.0,
             "stability_score": 67.0,
-            "health_score": 60.43,
+            "health_score": 62.81,
             "risk_score": 86.62,
             "metadata": {
               "paper_only": true,
@@ -250,17 +250,17 @@
     "data": {
       "readiness": {
         "summary": {
-          "readiness_id": "paper_live_readiness_20260601144618",
-          "generated_at": "2026-06-01T14:46:18.526407+00:00",
-          "paper_health": 81.49,
-          "paper_stability": 60.85,
+          "readiness_id": "paper_live_readiness_20260601150700",
+          "generated_at": "2026-06-01T15:07:00.390441+00:00",
+          "paper_health": 81.92,
+          "paper_stability": 60.88,
           "paper_governance": 0.0,
           "execution_readiness": 82.75,
           "observation_readiness": 81.73,
           "certification_score": 59.58,
           "safety_score": 100.0,
-          "maturity_score": 60.57,
-          "overall_score": 65.87,
+          "maturity_score": 60.66,
+          "overall_score": 65.94,
           "readiness_state": "تحتاج تحسين كبير",
           "metadata": {
             "readiness_only": true,
@@ -298,14 +298,14 @@
       },
       "architecture_audit": {
         "summary": {
-          "certification_id": "architecture_audit_20260601144603",
-          "generated_at": "2026-06-01T14:46:03.691608+00:00",
+          "certification_id": "architecture_audit_20260601150532",
+          "generated_at": "2026-06-01T15:05:32.732300+00:00",
           "architecture_score": 100.0,
           "consistency_score": 96.5,
           "dependency_score": 76.0,
-          "performance_score": 84.94,
+          "performance_score": 84.7,
           "safety_score": 100.0,
-          "overall_score": 91.49,
+          "overall_score": 91.44,
           "certification_state": "جاهزة بشروط",
           "metadata": {
             "architecture_audit_only": true,
@@ -377,8 +377,8 @@
     "data": {
       "knowledge_graph": {
         "summary": {
-          "graph_id": "knowledge_graph_20260601144612",
-          "generated_at": "2026-06-01T14:46:12.224691+00:00",
+          "graph_id": "knowledge_graph_20260601150639",
+          "generated_at": "2026-06-01T15:06:39.735484+00:00",
           "nodes": [
             {
               "node_id": "signal",
@@ -394,7 +394,7 @@
               "node_id": "asset",
               "entity_type": "AssetEntity",
               "label": "Asset",
-              "confidence": 81.49,
+              "confidence": 81.92,
               "metadata": {
                 "research_only": true,
                 "source": "paper_portfolio"
@@ -464,7 +464,7 @@
               "node_id": "portfolio",
               "entity_type": "PortfolioEntity",
               "label": "Portfolio",
-              "confidence": 81.49,
+              "confidence": 81.92,
               "metadata": {
                 "research_only": true,
                 "source": "paper_portfolio"
@@ -620,7 +620,7 @@
           "strongest_relationship": "opportunity->confluence:confirms",
           "weakest_relationship": "paperresult->readiness:degrades",
           "relationship_density": 0.1333,
-          "knowledge_score": 57.65,
+          "knowledge_score": 57.68,
           "metadata": {
             "research_only": true,
             "relationship_intelligence_only": true,

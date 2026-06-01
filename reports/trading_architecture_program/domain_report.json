@@ -1,0 +1,146 @@
+[
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "execution",
+    "name": "Execution Domain",
+    "purpose": "Future execution architecture boundaries.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "broker",
+    "name": "Broker Domain",
+    "purpose": "Future broker isolation architecture.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "risk",
+    "name": "Risk Domain",
+    "purpose": "Future risk governance architecture.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "monitoring",
+    "name": "Monitoring Domain",
+    "purpose": "Future monitoring and observability architecture.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "governance",
+    "name": "Governance Domain",
+    "purpose": "Future approval and control architecture.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "compliance",
+    "name": "Compliance Domain",
+    "purpose": "Future legal and regulatory review architecture.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "infrastructure",
+    "name": "Infrastructure Domain",
+    "purpose": "Future platform infrastructure architecture.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "domain_id": "operations",
+    "name": "Operations Domain",
+    "purpose": "Future operational readiness architecture.",
+    "status": "Architecture only",
+    "prohibited_capabilities": [
+      "real trade execution",
+      "broker connectivity",
+      "credential handling",
+      "order placement",
+      "live trading",
+      "money handling"
+    ]
+  }
+]

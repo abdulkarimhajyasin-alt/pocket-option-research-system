@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-01T14:46:04.973138",
+  "timestamp": "2026-06-01T15:05:41.095845",
   "artifacts": [
     {
       "artifact_id": "html-summary",
@@ -22,7 +22,7 @@
       "artifact_id": "dom-export-summary",
       "artifact_type": "dom_export",
       "artifact_source": "reports\\external_observation\\source_report.json",
-      "created_at": "1780325099939238300",
+      "created_at": "1780325979887583700",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",
       "monitoring_status": "مستقر",
@@ -39,7 +39,7 @@
       "artifact_id": "page-capture-summary",
       "artifact_type": "page_capture",
       "artifact_source": "reports\\broker_readiness\\readiness_summary.json",
-      "created_at": "1780325164452463400",
+      "created_at": "1780326337859807100",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",
       "monitoring_status": "مستقر",
@@ -56,7 +56,7 @@
       "artifact_id": "observation-dump",
       "artifact_type": "observation_dump",
       "artifact_source": "storage\\external_observation\\diagnostics.json",
-      "created_at": "1780325099937042800",
+      "created_at": "1780325979884583900",
       "validation_status": "ناجح",
       "visibility_status": "مرئي",
       "monitoring_status": "مستقر",

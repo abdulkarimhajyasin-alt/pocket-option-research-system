@@ -1,0 +1,453 @@
+{
+  "schema_version": "trading_architecture_program.v1",
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "program_name": "Trading System Architecture Program",
+  "program_status": "Architecture Program Foundation Only",
+  "architecture_domains": [
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "execution",
+      "name": "Execution Domain",
+      "purpose": "Future execution architecture boundaries.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "broker",
+      "name": "Broker Domain",
+      "purpose": "Future broker isolation architecture.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "risk",
+      "name": "Risk Domain",
+      "purpose": "Future risk governance architecture.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "monitoring",
+      "name": "Monitoring Domain",
+      "purpose": "Future monitoring and observability architecture.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "governance",
+      "name": "Governance Domain",
+      "purpose": "Future approval and control architecture.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "compliance",
+      "name": "Compliance Domain",
+      "purpose": "Future legal and regulatory review architecture.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "infrastructure",
+      "name": "Infrastructure Domain",
+      "purpose": "Future platform infrastructure architecture.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "domain_id": "operations",
+      "name": "Operations Domain",
+      "purpose": "Future operational readiness architecture.",
+      "status": "Architecture only",
+      "prohibited_capabilities": [
+        "real trade execution",
+        "broker connectivity",
+        "credential handling",
+        "order placement",
+        "live trading",
+        "money handling"
+      ]
+    }
+  ],
+  "workstreams": [
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "execution-architecture",
+      "name": "Execution Architecture",
+      "purpose": "Define Execution Architecture documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "broker-architecture",
+      "name": "Broker Architecture",
+      "purpose": "Define Broker Architecture documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "risk-governance",
+      "name": "Risk Governance",
+      "purpose": "Define Risk Governance documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "monitoring-observability",
+      "name": "Monitoring & Observability",
+      "purpose": "Define Monitoring & Observability documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "infrastructure",
+      "name": "Infrastructure",
+      "purpose": "Define Infrastructure documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "compliance-legal",
+      "name": "Compliance & Legal",
+      "purpose": "Define Compliance & Legal documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "operations",
+      "name": "Operations",
+      "purpose": "Define Operations documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "workstream_id": "audit-controls",
+      "name": "Audit & Controls",
+      "purpose": "Define Audit & Controls documents, controls, and review gates.",
+      "deliverables": [
+        "architecture brief",
+        "risk and safety notes",
+        "review checklist"
+      ],
+      "forbidden_outputs": [
+        "executable broker code",
+        "order placement logic",
+        "credential handling",
+        "external connectivity"
+      ]
+    }
+  ],
+  "decision_gates": [
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "gate_id": "gate-1",
+      "name": "Research Platform Frozen",
+      "approval_scope": "Confirm v1.0 research freeze.",
+      "required_evidence": [
+        "architecture document",
+        "safety boundary review",
+        "human approval record"
+      ],
+      "may_approve_live_trading": false
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "gate_id": "gate-2",
+      "name": "Documentation Complete",
+      "approval_scope": "Confirm final architecture documentation.",
+      "required_evidence": [
+        "architecture document",
+        "safety boundary review",
+        "human approval record"
+      ],
+      "may_approve_live_trading": false
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "gate_id": "gate-3",
+      "name": "Architecture Separation Approved",
+      "approval_scope": "Confirm future program separation.",
+      "required_evidence": [
+        "architecture document",
+        "safety boundary review",
+        "human approval record"
+      ],
+      "may_approve_live_trading": false
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "gate_id": "gate-4",
+      "name": "Risk Architecture Approved",
+      "approval_scope": "Approve risk architecture documents.",
+      "required_evidence": [
+        "architecture document",
+        "safety boundary review",
+        "human approval record"
+      ],
+      "may_approve_live_trading": false
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "gate_id": "gate-5",
+      "name": "Governance Approved",
+      "approval_scope": "Approve governance and review model.",
+      "required_evidence": [
+        "architecture document",
+        "safety boundary review",
+        "human approval record"
+      ],
+      "may_approve_live_trading": false
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "gate_id": "gate-6",
+      "name": "External Integration Review Approved",
+      "approval_scope": "Approve feasibility review only.",
+      "required_evidence": [
+        "architecture document",
+        "safety boundary review",
+        "human approval record"
+      ],
+      "may_approve_live_trading": false
+    },
+    {
+      "schema_version": "trading_architecture_program.v1",
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "gate_id": "gate-7",
+      "name": "Future Program Approval",
+      "approval_scope": "Approve future architecture program scope.",
+      "required_evidence": [
+        "architecture document",
+        "safety boundary review",
+        "human approval record"
+      ],
+      "may_approve_live_trading": false
+    }
+  ],
+  "prerequisites": [
+    "Research Platform v1.0 frozen",
+    "Documentation complete",
+    "Architecture separation approved",
+    "Risk and governance documents drafted"
+  ],
+  "blocked_items": [
+    "broker API implementation",
+    "execution implementation",
+    "credential handling",
+    "external connectivity",
+    "live trading readiness claims"
+  ],
+  "forbidden_items": [
+    "Broker APIs",
+    "Broker adapters",
+    "Pocket Option login",
+    "Credential handling",
+    "Browser automation",
+    "Selenium",
+    "Playwright",
+    "Order placement",
+    "Execution engines",
+    "Live trading",
+    "Money handling",
+    "Account monitoring",
+    "Deposits",
+    "Withdrawals",
+    "External connectivity"
+  ]
+}

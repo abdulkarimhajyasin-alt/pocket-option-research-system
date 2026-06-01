@@ -1,0 +1,107 @@
+[
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "gate_id": "gate-1",
+    "name": "Research Platform Frozen",
+    "approval_scope": "Confirm v1.0 research freeze.",
+    "required_evidence": [
+      "architecture document",
+      "safety boundary review",
+      "human approval record"
+    ],
+    "may_approve_live_trading": false
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "gate_id": "gate-2",
+    "name": "Documentation Complete",
+    "approval_scope": "Confirm final architecture documentation.",
+    "required_evidence": [
+      "architecture document",
+      "safety boundary review",
+      "human approval record"
+    ],
+    "may_approve_live_trading": false
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "gate_id": "gate-3",
+    "name": "Architecture Separation Approved",
+    "approval_scope": "Confirm future program separation.",
+    "required_evidence": [
+      "architecture document",
+      "safety boundary review",
+      "human approval record"
+    ],
+    "may_approve_live_trading": false
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "gate_id": "gate-4",
+    "name": "Risk Architecture Approved",
+    "approval_scope": "Approve risk architecture documents.",
+    "required_evidence": [
+      "architecture document",
+      "safety boundary review",
+      "human approval record"
+    ],
+    "may_approve_live_trading": false
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "gate_id": "gate-5",
+    "name": "Governance Approved",
+    "approval_scope": "Approve governance and review model.",
+    "required_evidence": [
+      "architecture document",
+      "safety boundary review",
+      "human approval record"
+    ],
+    "may_approve_live_trading": false
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "gate_id": "gate-6",
+    "name": "External Integration Review Approved",
+    "approval_scope": "Approve feasibility review only.",
+    "required_evidence": [
+      "architecture document",
+      "safety boundary review",
+      "human approval record"
+    ],
+    "may_approve_live_trading": false
+  },
+  {
+    "schema_version": "trading_architecture_program.v1",
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "gate_id": "gate-7",
+    "name": "Future Program Approval",
+    "approval_scope": "Approve future architecture program scope.",
+    "required_evidence": [
+      "architecture document",
+      "safety boundary review",
+      "human approval record"
+    ],
+    "may_approve_live_trading": false
+  }
+]

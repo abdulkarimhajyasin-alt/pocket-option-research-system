@@ -116,6 +116,7 @@
     "/strategy-benchmark",
     "/strategy-readiness",
     "/trade-lifecycle",
+    "/trading-architecture-program",
     "/validation",
     "/validation/{report_id}"
   ],
@@ -189,6 +190,11 @@
     "/api/strategy-benchmark",
     "/api/strategy-readiness",
     "/api/trade-lifecycle",
+    "/api/trading-architecture-program",
+    "/api/trading-architecture-program/diagnostics",
+    "/api/trading-architecture-program/domains",
+    "/api/trading-architecture-program/gates",
+    "/api/trading-architecture-program/workstreams",
     "/api/validation"
   ],
   "scripts": [
@@ -242,6 +248,7 @@
     "check_strategy_readiness.py",
     "check_streaming.py",
     "check_trade_lifecycle.py",
+    "check_trading_architecture_program.py",
     "check_visualization_layer.py",
     "generate_synthetic_dataset.py",
     "run_architecture_audit.py",
@@ -289,6 +296,7 @@
     "run_strategy_readiness.py",
     "run_strategy_research.py",
     "run_trade_lifecycle.py",
+    "run_trading_architecture_program.py",
     "run_validation.py",
     "run_walk_forward.py",
     "verify_dataset_integrity.py"
@@ -352,7 +360,8 @@
     "test_strategy_research.py",
     "test_strategy_validation.py",
     "test_streaming.py",
-    "test_trade_lifecycle.py"
+    "test_trade_lifecycle.py",
+    "test_trading_architecture_program.py"
   ],
   "reports": [
     "analytics",
@@ -396,6 +405,7 @@
     "strategy_readiness",
     "strategy_research",
     "trade_lifecycle",
+    "trading_architecture_program",
     "validation"
   ],
   "storage_outputs": [
@@ -434,7 +444,8 @@
     "snapshot_import",
     "strategy_benchmark",
     "strategy_readiness",
-    "trade_lifecycle"
+    "trade_lifecycle",
+    "trading_architecture_program"
   ],
   "safety_boundary": {
     "research_only": true,

@@ -1,0 +1,50 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.trading_architecture_program }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">برنامج معماري فقط</p>
+    <h1>برنامج هندسة نظام التداول المستقبلي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث البرنامج المعماري</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>program status</span>
+    <strong>{{ trading_architecture_program.summary.program_status|default("Architecture Program Foundation Only") }}</strong>
+    <p>هذا البرنامج معماري فقط ولا ينفذ أي تداول حقيقي.</p>
+  </div>
+  <div class="executive-score">
+    <span>domains</span>
+    <strong>{{ trading_architecture_program.summary.domain_count|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>workstreams / gates</span>
+    <strong>{{ trading_architecture_program.summary.workstream_count|default(0)|number_ar }} / {{ trading_architecture_program.summary.gate_count|default(0)|number_ar }}</strong>
+    <small>لا تنفيذ، لا وسيط، لا تداول حي</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>program status</span><strong>{{ trading_architecture_program.summary.program_status|default("Architecture Program Foundation Only") }}</strong></article>
+  <article class="metric-card"><span>domains</span><strong>{{ trading_architecture_program.summary.domain_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>workstreams</span><strong>{{ trading_architecture_program.summary.workstream_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>gates</span><strong>{{ trading_architecture_program.summary.gate_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>diagnostics</span><strong>{{ trading_architecture_program.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>recommendations</span><strong>{{ trading_architecture_program.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>المجالات المعمارية</h2><span>architecture only</span></div><div class="chart" data-chart='{{ trading_architecture_program.domains|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>بوابات القرار</h2><span>لا تعتمد التداول الحي</span></div><div class="chart" data-chart='{{ trading_architecture_program.gates|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>مسارات العمل</h2><span>مستقبلية</span></div><div class="chart" data-chart='{{ trading_architecture_program.workstreams|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>حدود السلامة</h2><span>محلية فقط</span></div><div class="chart" data-chart='{{ trading_architecture_program.safety|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التشخيصات</h2><span>البرنامج</span></div><div class="chart" data-chart='{{ trading_architecture_program.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الحوكمة</span></div><div class="chart" data-chart='{{ trading_architecture_program.recommendations|tojson }}'></div></article>
+</section>
+{% endblock %}

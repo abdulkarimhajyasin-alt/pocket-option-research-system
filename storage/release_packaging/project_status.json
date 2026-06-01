@@ -68,6 +68,7 @@
     "streaming",
     "templates",
     "trade_lifecycle",
+    "trading_architecture_program",
     "validation"
   ],
   "dashboard_pages": [
@@ -120,6 +121,7 @@
     "/strategy-benchmark",
     "/strategy-readiness",
     "/trade-lifecycle",
+    "/trading-architecture-program",
     "/validation",
     "/validation/{report_id}"
   ],
@@ -193,6 +195,11 @@
     "/api/strategy-benchmark",
     "/api/strategy-readiness",
     "/api/trade-lifecycle",
+    "/api/trading-architecture-program",
+    "/api/trading-architecture-program/diagnostics",
+    "/api/trading-architecture-program/domains",
+    "/api/trading-architecture-program/gates",
+    "/api/trading-architecture-program/workstreams",
     "/api/validation"
   ],
   "reports_generated": [
@@ -237,6 +244,7 @@
     "strategy_readiness",
     "strategy_research",
     "trade_lifecycle",
+    "trading_architecture_program",
     "validation"
   ],
   "storage_artifacts_generated": [
@@ -275,7 +283,8 @@
     "snapshot_import",
     "strategy_benchmark",
     "strategy_readiness",
-    "trade_lifecycle"
+    "trade_lifecycle",
+    "trading_architecture_program"
   ],
   "safety_status": {
     "research_only": true,

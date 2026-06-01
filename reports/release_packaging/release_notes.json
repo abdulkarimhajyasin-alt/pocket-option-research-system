@@ -116,6 +116,7 @@
     "/strategy-benchmark",
     "/strategy-readiness",
     "/trade-lifecycle",
+    "/trading-architecture-program",
     "/validation",
     "/validation/{report_id}"
   ],
@@ -189,6 +190,11 @@
     "/api/strategy-benchmark",
     "/api/strategy-readiness",
     "/api/trade-lifecycle",
+    "/api/trading-architecture-program",
+    "/api/trading-architecture-program/diagnostics",
+    "/api/trading-architecture-program/domains",
+    "/api/trading-architecture-program/gates",
+    "/api/trading-architecture-program/workstreams",
     "/api/validation"
   ],
   "archive_versioning_capabilities": [

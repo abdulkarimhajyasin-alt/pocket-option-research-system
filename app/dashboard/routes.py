@@ -34,6 +34,7 @@ from app.research_archive.service import ResearchArchiveService
 from app.platform_certification.service import PlatformCertificationService
 from app.release_packaging.service import ReleasePackagingService
 from app.post_research_architecture.service import PostResearchArchitectureService
+from app.trading_architecture_program.service import TradingArchitectureProgramService
 
 
 SAFETY_NOTE = (
@@ -783,6 +784,22 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/trading-architecture-program", response_class=HTMLResponse)
+    def trading_architecture_program(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/trading_architecture_program.html",
+            context(
+                request,
+                dashboard,
+                page="trading_architecture_program",
+                trading_architecture_program=(
+                    dashboard.analytics.trading_architecture_program_analytics()
+                ),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1078,6 +1095,26 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/post-research-architecture/recommendations")
     def api_post_research_architecture_recommendations() -> list[str]:
         return PostResearchArchitectureService(root).generate_recommendations()
+
+    @app.get("/api/trading-architecture-program")
+    def api_trading_architecture_program() -> dict[str, object]:
+        return dashboard_context().analytics.trading_architecture_program_analytics()
+
+    @app.get("/api/trading-architecture-program/gates")
+    def api_trading_architecture_program_gates() -> list[dict[str, object]]:
+        return TradingArchitectureProgramService(root).gates()
+
+    @app.get("/api/trading-architecture-program/workstreams")
+    def api_trading_architecture_program_workstreams() -> list[dict[str, object]]:
+        return TradingArchitectureProgramService(root).workstreams()
+
+    @app.get("/api/trading-architecture-program/domains")
+    def api_trading_architecture_program_domains() -> list[dict[str, object]]:
+        return TradingArchitectureProgramService(root).domains()
+
+    @app.get("/api/trading-architecture-program/diagnostics")
+    def api_trading_architecture_program_diagnostics() -> list[dict[str, object]]:
+        return TradingArchitectureProgramService(root).generate_diagnostics()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:
