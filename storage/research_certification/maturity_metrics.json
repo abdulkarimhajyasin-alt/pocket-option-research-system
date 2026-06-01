@@ -60,13 +60,13 @@
   },
   "failure_distribution": {},
   "certification_timeline": {
-    "15:35": 59.58
+    "16:08": 59.58
   },
   "maturity_timeline": {
-    "15:35": 68.95
+    "16:08": 68.95
   },
   "latest": {
-    "timestamp": "2026-06-01T15:35:02.986099",
+    "timestamp": "2026-06-01T16:08:00.479863",
     "certification": {
       "score": 59.58,
       "state": "تحتاج تحسين كبير",

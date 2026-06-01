@@ -12,7 +12,6 @@ from app.dashboard.models import ActionDefinition, ActionResult
 from app.jobs.models import JobResult
 from app.jobs.registry import JobRegistry
 
-
 ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
     "strategy_research": ActionDefinition(
         name="strategy_research",
@@ -200,9 +199,7 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
     "live_observation": ActionDefinition(
         name="live_observation",
         label="إعادة تشغيل المراقبة",
-        description=(
-            "تشغيل محاكاة تدفق الملاحظات السلبية محليا دون تنفيذ أو وسيط أو أتمتة."
-        ),
+        description=("تشغيل محاكاة تدفق الملاحظات السلبية محليا دون تنفيذ أو وسيط أو أتمتة."),
         command=("scripts/run_live_observation.py",),
     ),
     "signal_stream": ActionDefinition(
@@ -298,8 +295,7 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         name="platform_certification",
         label="شهادة المنصة",
         description=(
-            "إصدار شهادة نضج بحثية محلية للمنصة دون اعتماد تداول حي أو "
-            "تنفيذ أو اتصال بوسيط."
+            "إصدار شهادة نضج بحثية محلية للمنصة دون اعتماد تداول حي أو " "تنفيذ أو اتصال بوسيط."
         ),
         command=("scripts/run_platform_certification.py",),
     ),
@@ -329,6 +325,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         label="متطلبات نظام التداول",
         description="توليد مواصفات متطلبات وقيود فقط دون تنفيذ أو وسيط أو اتصال خارجي.",
         command=("scripts/run_trading_requirements.py",),
+    ),
+    "production_system_design": ActionDefinition(
+        name="production_system_design",
+        label="تصميم النظام الإنتاجي",
+        description="توليد مخطط تصميم إنتاجي مستقبلي فقط دون وسيط أو تنفيذ أو اتصال خارجي.",
+        command=("scripts/run_production_system_design.py",),
     ),
     "research_operations": ActionDefinition(
         name="research_operations",

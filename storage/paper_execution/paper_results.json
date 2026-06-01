@@ -6,7 +6,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989262+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181873+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -18,7 +18,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989358+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181885+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -30,7 +30,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989391+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181892+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -42,7 +42,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989411+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181898+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -54,7 +54,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989424+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181904+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -66,7 +66,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989437+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181910+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -78,7 +78,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989449+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181915+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -90,7 +90,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989461+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181920+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -102,7 +102,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989473+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181926+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -111,11 +111,11 @@
     "order_id": "paper_order_0010",
     "candidate_id": "execution_candidate_0010",
     "signal_id": "signal_stream_0010",
-    "outcome": "UNRESOLVED",
-    "outcome_label": "غير محسوم",
-    "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989485+00:00",
-    "reason": "paper order rejected",
+    "outcome": "WIN",
+    "outcome_label": "رابح",
+    "simulated_return": 1.0,
+    "evaluated_at": "2026-06-01T16:09:53.181935+00:00",
+    "reason": "local paper score won",
     "paper_only": true,
     "research_only": true
   },
@@ -126,7 +126,7 @@
     "outcome": "UNRESOLVED",
     "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989497+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181940+00:00",
     "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
@@ -135,11 +135,11 @@
     "order_id": "paper_order_0012",
     "candidate_id": "execution_candidate_0012",
     "signal_id": "signal_stream_0012",
-    "outcome": "BREAKEVEN",
-    "outcome_label": "تعادل",
+    "outcome": "UNRESOLVED",
+    "outcome_label": "غير محسوم",
     "simulated_return": 0.0,
-    "evaluated_at": "2026-06-01T15:39:29.989518+00:00",
-    "reason": "local paper score flat",
+    "evaluated_at": "2026-06-01T16:09:53.181946+00:00",
+    "reason": "paper order rejected",
     "paper_only": true,
     "research_only": true
   },
@@ -150,7 +150,7 @@
     "outcome": "WIN",
     "outcome_label": "رابح",
     "simulated_return": 1.0,
-    "evaluated_at": "2026-06-01T15:39:29.989536+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181955+00:00",
     "reason": "local paper score won",
     "paper_only": true,
     "research_only": true
@@ -162,7 +162,7 @@
     "outcome": "WIN",
     "outcome_label": "رابح",
     "simulated_return": 1.0,
-    "evaluated_at": "2026-06-01T15:39:29.989551+00:00",
+    "evaluated_at": "2026-06-01T16:09:53.181961+00:00",
     "reason": "local paper score won",
     "paper_only": true,
     "research_only": true

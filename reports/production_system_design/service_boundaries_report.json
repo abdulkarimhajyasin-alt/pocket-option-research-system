@@ -1,0 +1,172 @@
+{
+  "schema_version": "production_system_design.v1",
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "service_boundaries",
+  "title": "Service Boundaries",
+  "status": "تصميم فقط",
+  "items": [
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-01",
+      "title": "Signal service boundary",
+      "description": "Design-only blueprint for signal service boundary.",
+      "category": "service_boundaries",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-02",
+      "title": "Decision review boundary",
+      "description": "Design-only blueprint for decision review boundary.",
+      "category": "service_boundaries",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-03",
+      "title": "Risk governance boundary",
+      "description": "Design-only blueprint for risk governance boundary.",
+      "category": "service_boundaries",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-04",
+      "title": "Execution gateway boundary",
+      "description": "Design-only blueprint for execution gateway boundary.",
+      "category": "service_boundaries",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-05",
+      "title": "Broker isolation boundary",
+      "description": "Design-only blueprint for broker isolation boundary.",
+      "category": "service_boundaries",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-06",
+      "title": "Monitoring boundary",
+      "description": "Design-only blueprint for monitoring boundary.",
+      "category": "service_boundaries",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-07",
+      "title": "Audit trail boundary",
+      "description": "Design-only blueprint for audit trail boundary.",
+      "category": "service_boundaries",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "SERVICE_BOUNDARIES-08",
+      "title": "Operations boundary",
+      "description": "Design-only blueprint for operations boundary.",
+      "category": "service_boundaries",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": "production_system_design.v1",
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "event_queue_strategy",
+  "title": "Event / Queue Strategy",
+  "status": "تصميم فقط",
+  "items": [
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "EVENT_QUEUE_STRATEGY-01",
+      "title": "Command queue concept",
+      "description": "Design-only blueprint for command queue concept.",
+      "category": "event_queue_strategy",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "EVENT_QUEUE_STRATEGY-02",
+      "title": "Event bus concept",
+      "description": "Design-only blueprint for event bus concept.",
+      "category": "event_queue_strategy",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "EVENT_QUEUE_STRATEGY-03",
+      "title": "Audit event flow",
+      "description": "Design-only blueprint for audit event flow.",
+      "category": "event_queue_strategy",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "EVENT_QUEUE_STRATEGY-04",
+      "title": "Risk event flow",
+      "description": "Design-only blueprint for risk event flow.",
+      "category": "event_queue_strategy",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "EVENT_QUEUE_STRATEGY-05",
+      "title": "Monitoring event flow",
+      "description": "Design-only blueprint for monitoring event flow.",
+      "category": "event_queue_strategy",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "EVENT_QUEUE_STRATEGY-06",
+      "title": "Dead letter concept",
+      "description": "Design-only blueprint for dead letter concept.",
+      "category": "event_queue_strategy",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "EVENT_QUEUE_STRATEGY-07",
+      "title": "Retry policy concept",
+      "description": "Design-only blueprint for retry policy concept.",
+      "category": "event_queue_strategy",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    }
+  ]
+}

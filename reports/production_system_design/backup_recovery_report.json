@@ -1,0 +1,152 @@
+{
+  "schema_version": "production_system_design.v1",
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "backup_recovery",
+  "title": "Backup and Recovery Design",
+  "status": "تصميم فقط",
+  "items": [
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "BACKUP_RECOVERY-01",
+      "title": "Backup scope",
+      "description": "Design-only blueprint for backup scope.",
+      "category": "backup_recovery",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "BACKUP_RECOVERY-02",
+      "title": "Restore tests",
+      "description": "Design-only blueprint for restore tests.",
+      "category": "backup_recovery",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "BACKUP_RECOVERY-03",
+      "title": "Disaster recovery objectives",
+      "description": "Design-only blueprint for disaster recovery objectives.",
+      "category": "backup_recovery",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "BACKUP_RECOVERY-04",
+      "title": "RPO/RTO targets",
+      "description": "Design-only blueprint for rpo/rto targets.",
+      "category": "backup_recovery",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "BACKUP_RECOVERY-05",
+      "title": "Artifact preservation",
+      "description": "Design-only blueprint for artifact preservation.",
+      "category": "backup_recovery",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "BACKUP_RECOVERY-06",
+      "title": "Configuration recovery",
+      "description": "Design-only blueprint for configuration recovery.",
+      "category": "backup_recovery",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "BACKUP_RECOVERY-07",
+      "title": "Audit recovery",
+      "description": "Design-only blueprint for audit recovery.",
+      "category": "backup_recovery",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    }
+  ]
+}

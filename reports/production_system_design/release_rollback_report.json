@@ -1,0 +1,152 @@
+{
+  "schema_version": "production_system_design.v1",
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "release_rollback",
+  "title": "Release and Rollback Design",
+  "status": "تصميم فقط",
+  "items": [
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "RELEASE_ROLLBACK-01",
+      "title": "Release gates",
+      "description": "Design-only blueprint for release gates.",
+      "category": "release_rollback",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "RELEASE_ROLLBACK-02",
+      "title": "Deployment approval",
+      "description": "Design-only blueprint for deployment approval.",
+      "category": "release_rollback",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "RELEASE_ROLLBACK-03",
+      "title": "Canary concept",
+      "description": "Design-only blueprint for canary concept.",
+      "category": "release_rollback",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "RELEASE_ROLLBACK-04",
+      "title": "Rollback triggers",
+      "description": "Design-only blueprint for rollback triggers.",
+      "category": "release_rollback",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "RELEASE_ROLLBACK-05",
+      "title": "Version freeze",
+      "description": "Design-only blueprint for version freeze.",
+      "category": "release_rollback",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "RELEASE_ROLLBACK-06",
+      "title": "Post-release monitoring",
+      "description": "Design-only blueprint for post-release monitoring.",
+      "category": "release_rollback",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "RELEASE_ROLLBACK-07",
+      "title": "Emergency rollback",
+      "description": "Design-only blueprint for emergency rollback.",
+      "category": "release_rollback",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    }
+  ]
+}

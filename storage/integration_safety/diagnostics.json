@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-06-01T15:38:35.160379+00:00",
+  "timestamp": "2026-06-01T16:09:27.211022+00:00",
   "policy": {
-    "policy_id": "integration_safety_20260601153835",
-    "generated_at": "2026-06-01T15:38:35.160202+00:00",
+    "policy_id": "integration_safety_20260601160927",
+    "generated_at": "2026-06-01T16:09:27.210912+00:00",
     "allowed_capabilities": [
       "local file reading",
       "local report reading",
@@ -139,8 +139,8 @@
     "safety_boundary_only": true
   },
   "audit": {
-    "audit_id": "integration_safety_audit_20260601153835",
-    "generated_at": "2026-06-01T15:38:35.160341+00:00",
+    "audit_id": "integration_safety_audit_20260601160927",
+    "generated_at": "2026-06-01T16:09:27.210999+00:00",
     "allowed_capabilities": [
       "local file reading",
       "local report reading",

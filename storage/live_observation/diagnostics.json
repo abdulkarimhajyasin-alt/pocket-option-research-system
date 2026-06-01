@@ -49,27 +49,27 @@
   "source_distribution": {
     "market_data": 1,
     "observation_layer": 1,
-    "snapshot_import": 3,
-    "broker_readiness": 2,
     "browser_observation": 3,
     "external_observation": 3,
+    "snapshot_import": 3,
+    "broker_readiness": 2,
     "observation_intelligence": 1
   },
   "timeline_activity": {
     "1": 78.22,
     "2": 0.0,
     "3": 100.0,
-    "4": 67.41,
+    "4": 100.0,
     "5": 100.0,
     "6": 100.0,
     "7": 100.0,
     "8": 100.0,
     "9": 100.0,
     "10": 100.0,
-    "11": 79.04,
-    "12": 100.0,
-    "13": 100.0,
-    "14": 67.41
+    "11": 100.0,
+    "12": 67.41,
+    "13": 67.41,
+    "14": 79.04
   },
   "speed_distribution": {
     "10x": 72.52,
@@ -82,7 +82,7 @@
     "تحسين التحقق": 1
   },
   "latest": {
-    "timestamp": "2026-06-01T15:39:08.261003+00:00",
+    "timestamp": "2026-06-01T16:09:44.367798+00:00",
     "observations": [
       {
         "observation_id": "market_data",
@@ -201,72 +201,8 @@
         "observation_only": true
       },
       {
-        "observation_id": "snapshot_import",
-        "timestamp": "2026-06-01T15:08:04.623598",
-        "source": "snapshot_import",
-        "asset": "استيراد اللقطات",
-        "session": "passive",
-        "market_state": "observed",
-        "confidence": 97.19,
-        "quality": 100.0,
-        "readiness": 0.0,
-        "metadata": {
-          "source_payload": {
-            "observation_id": "snapshot_import",
-            "source_type": "snapshot_import",
-            "source_name": "استيراد اللقطات",
-            "timestamp": "2026-06-01T15:08:04.623598",
-            "assets": 1.0,
-            "payouts": 1.0,
-            "sessions": 2.0,
-            "symbols": 2.0,
-            "market_data": 5.0,
-            "visibility_score": 100.0,
-            "quality_score": 100.0,
-            "confidence_score": 97.19,
-            "research_only": true,
-            "observation_only": true
-          },
-          "research_only": true
-        },
-        "research_only": true,
-        "observation_only": true
-      },
-      {
-        "observation_id": "broker_readiness",
-        "timestamp": "2026-06-01T15:34:21.406394",
-        "source": "broker_readiness",
-        "asset": "جاهزية المراقبة",
-        "session": "passive",
-        "market_state": "observed",
-        "confidence": 81.73,
-        "quality": 67.41,
-        "readiness": 0.0,
-        "metadata": {
-          "source_payload": {
-            "observation_id": "broker_readiness",
-            "source_type": "broker_readiness",
-            "source_name": "جاهزية المراقبة",
-            "timestamp": "2026-06-01T15:34:21.406394",
-            "assets": 48.0,
-            "payouts": 74.2,
-            "sessions": 60.0,
-            "symbols": 65.0,
-            "market_data": 79.05,
-            "visibility_score": 67.41,
-            "quality_score": 67.41,
-            "confidence_score": 81.73,
-            "research_only": true,
-            "observation_only": true
-          },
-          "research_only": true
-        },
-        "research_only": true,
-        "observation_only": true
-      },
-      {
         "observation_id": "browser_observation",
-        "timestamp": "2026-06-01T15:34:22.084228",
+        "timestamp": "2026-06-01T16:07:26.382055",
         "source": "browser_observation",
         "asset": "مراقبة المتصفح",
         "session": "passive",
@@ -279,7 +215,7 @@
             "observation_id": "browser_observation",
             "source_type": "browser_observation",
             "source_name": "مراقبة المتصفح",
-            "timestamp": "2026-06-01T15:34:22.084228",
+            "timestamp": "2026-06-01T16:07:26.382055",
             "asset_count": 3.0,
             "payout_count": 1.0,
             "session_count": 1.0,
@@ -320,13 +256,13 @@
                 "not_execution": true
               },
               "latest": {
-                "timestamp": "2026-06-01T15:34:22.084228",
+                "timestamp": "2026-06-01T16:07:26.382055",
                 "artifacts": [
                   {
                     "artifact_id": "html-summary",
                     "artifact_type": "html_snapshot",
                     "artifact_source": "reports\\observation\\observation_summary.json",
-                    "created_at": "1780325099982995800",
+                    "created_at": "1780328348077575600",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -343,7 +279,7 @@
                     "artifact_id": "dom-export-summary",
                     "artifact_type": "dom_export",
                     "artifact_source": "reports\\external_observation\\source_report.json",
-                    "created_at": "1780326391510769700",
+                    "created_at": "1780328369698432900",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -360,7 +296,7 @@
                     "artifact_id": "page-capture-summary",
                     "artifact_type": "page_capture",
                     "artifact_source": "reports\\broker_readiness\\readiness_summary.json",
-                    "created_at": "1780328061412084600",
+                    "created_at": "1780330045806418700",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -377,7 +313,7 @@
                     "artifact_id": "observation-dump",
                     "artifact_type": "observation_dump",
                     "artifact_source": "storage\\external_observation\\diagnostics.json",
-                    "created_at": "1780326391474785000",
+                    "created_at": "1780328369698432900",
                     "validation_status": "ناجح",
                     "visibility_status": "مرئي",
                     "monitoring_status": "مستقر",
@@ -500,7 +436,7 @@
       },
       {
         "observation_id": "browser_observation",
-        "timestamp": "2026-06-01T15:34:22.084228",
+        "timestamp": "2026-06-01T16:07:26.382055",
         "source": "browser_observation",
         "asset": "مراقبة المتصفح",
         "session": "passive",
@@ -513,7 +449,7 @@
             "observation_id": "browser_observation",
             "source_type": "browser_observation",
             "source_name": "مراقبة المتصفح",
-            "timestamp": "2026-06-01T15:34:22.084228",
+            "timestamp": "2026-06-01T16:07:26.382055",
             "assets": 3.0,
             "payouts": 1.0,
             "sessions": 1.0,
@@ -532,7 +468,7 @@
       },
       {
         "observation_id": "browser_observation",
-        "timestamp": "2026-06-01T15:34:22.084228",
+        "timestamp": "2026-06-01T16:07:26.382055",
         "source": "browser_observation",
         "asset": "browser_snapshot",
         "session": "passive",
@@ -562,7 +498,7 @@
       },
       {
         "observation_id": "external_observation",
-        "timestamp": "2026-06-01T15:34:29.912327",
+        "timestamp": "2026-06-01T16:07:32.696447",
         "source": "external_observation",
         "asset": "المراقبة الخارجية",
         "session": "passive",
@@ -575,7 +511,7 @@
             "observation_id": "external_observation",
             "source_type": "external_observation",
             "source_name": "المراقبة الخارجية",
-            "timestamp": "2026-06-01T15:34:29.912327",
+            "timestamp": "2026-06-01T16:07:32.696447",
             "asset_count": 4.0,
             "payout_count": 4.0,
             "session_count": 4.0,
@@ -606,7 +542,7 @@
                 "sandbox_feed": 1
               },
               "latest": {
-                "timestamp": "2026-06-01T15:34:29.912327",
+                "timestamp": "2026-06-01T16:07:32.696447",
                 "sources": [
                   {
                     "source_id": "simulated-research",
@@ -733,7 +669,7 @@
       },
       {
         "observation_id": "external_observation",
-        "timestamp": "2026-06-01T15:34:29.912327",
+        "timestamp": "2026-06-01T16:07:32.696447",
         "source": "external_observation",
         "asset": "المراقبة الخارجية",
         "session": "passive",
@@ -746,7 +682,7 @@
             "observation_id": "external_observation",
             "source_type": "external_observation",
             "source_name": "المراقبة الخارجية",
-            "timestamp": "2026-06-01T15:34:29.912327",
+            "timestamp": "2026-06-01T16:07:32.696447",
             "assets": 4.0,
             "payouts": 4.0,
             "sessions": 4.0,
@@ -765,7 +701,7 @@
       },
       {
         "observation_id": "external_observation",
-        "timestamp": "2026-06-01T15:34:29.912327",
+        "timestamp": "2026-06-01T16:07:32.696447",
         "source": "external_observation",
         "asset": "external_source",
         "session": "passive",
@@ -793,233 +729,8 @@
         "observation_only": true
       },
       {
-        "observation_id": "observation_intelligence",
-        "timestamp": "2026-06-01T15:34:36.148842",
-        "source": "observation_intelligence",
-        "asset": "ذكاء المراقبة",
-        "session": "passive",
-        "market_state": "observed",
-        "confidence": 89.96,
-        "quality": 79.04,
-        "readiness": 0.0,
-        "metadata": {
-          "source_payload": {
-            "observation_id": "observation_intelligence",
-            "source_type": "observation_intelligence",
-            "source_name": "ذكاء المراقبة",
-            "timestamp": "2026-06-01T15:34:36.148842",
-            "asset_count": 4.0,
-            "payout_count": 4.0,
-            "session_count": 4.0,
-            "symbol_count": 4.0,
-            "market_data_score": 76.62,
-            "visibility_score": 88.52,
-            "quality_score": 79.04,
-            "confidence_score": 89.96,
-            "freshness_score": 100.0,
-            "payload": {
-              "summary": {
-                "observation_count": 4,
-                "quality_score": 79.04,
-                "confidence_score": 89.96,
-                "consistency_score": 100.0,
-                "coverage_score": 80.0,
-                "readiness_score": 81.16,
-                "intelligence_score": 71.51,
-                "intelligence_state": "تحتاج تحسين محدود",
-                "warning_count": 2,
-                "recommendation_count": 2,
-                "research_only": true,
-                "observation_only": true
-              },
-              "source_distribution": {
-                "snapshot_import": 1,
-                "browser_observation": 1,
-                "external_observation": 1,
-                "broker_readiness": 1
-              },
-              "readiness_distribution": {
-                "score": 71.51,
-                "state": "تحتاج تحسين محدود",
-                "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
-                "observation_quality": 79.04,
-                "observation_confidence": 89.96,
-                "observation_reliability": 84.14,
-                "observation_completeness": 23.26,
-                "observation_readiness": 81.16
-              },
-              "latest": {
-                "timestamp": "2026-06-01T15:34:36.148842",
-                "observations": [
-                  {
-                    "observation_id": "snapshot_import",
-                    "source_type": "snapshot_import",
-                    "source_name": "استيراد اللقطات",
-                    "timestamp": "2026-06-01T15:08:04.623598",
-                    "assets": 1.0,
-                    "payouts": 1.0,
-                    "sessions": 2.0,
-                    "symbols": 2.0,
-                    "market_data": 5.0,
-                    "visibility_score": 100.0,
-                    "quality_score": 100.0,
-                    "confidence_score": 97.19,
-                    "research_only": true,
-                    "observation_only": true
-                  },
-                  {
-                    "observation_id": "browser_observation",
-                    "source_type": "browser_observation",
-                    "source_name": "مراقبة المتصفح",
-                    "timestamp": "2026-06-01T15:34:22.084228",
-                    "assets": 3.0,
-                    "payouts": 1.0,
-                    "sessions": 1.0,
-                    "symbols": 1.0,
-                    "market_data": 6.0,
-                    "visibility_score": 86.67,
-                    "quality_score": 100.0,
-                    "confidence_score": 86.34,
-                    "research_only": true,
-                    "observation_only": true
-                  },
-                  {
-                    "observation_id": "external_observation",
-                    "source_type": "external_observation",
-                    "source_name": "المراقبة الخارجية",
-                    "timestamp": "2026-06-01T15:34:29.912327",
-                    "assets": 4.0,
-                    "payouts": 4.0,
-                    "sessions": 4.0,
-                    "symbols": 4.0,
-                    "market_data": 100.0,
-                    "visibility_score": 100.0,
-                    "quality_score": 100.0,
-                    "confidence_score": 100.0,
-                    "research_only": true,
-                    "observation_only": true
-                  },
-                  {
-                    "observation_id": "broker_readiness",
-                    "source_type": "broker_readiness",
-                    "source_name": "جاهزية المراقبة",
-                    "timestamp": "2026-06-01T15:34:21.406394",
-                    "assets": 48.0,
-                    "payouts": 74.2,
-                    "sessions": 60.0,
-                    "symbols": 65.0,
-                    "market_data": 79.05,
-                    "visibility_score": 67.41,
-                    "quality_score": 67.41,
-                    "confidence_score": 81.73,
-                    "research_only": true,
-                    "observation_only": true
-                  }
-                ],
-                "normalization": {
-                  "score": 80.0,
-                  "source_count": 5,
-                  "normalized_count": 4
-                },
-                "aggregation": {
-                  "score": 76.62,
-                  "coverage": 80.0,
-                  "consistency": 100.0,
-                  "visibility": 88.52,
-                  "completeness": 23.26,
-                  "confidence": 91.31,
-                  "conflicts": 0.0
-                },
-                "validation": {
-                  "score": 79.02,
-                  "normalized_structure": 100.0,
-                  "source_compatibility": 80.0,
-                  "completeness": 23.26,
-                  "consistency": 100.0,
-                  "integrity": 91.85
-                },
-                "confidence": {
-                  "score": 89.96,
-                  "source_confidence": 80.0,
-                  "data_confidence": 91.31,
-                  "visibility_confidence": 88.52,
-                  "consistency_confidence": 100.0
-                },
-                "quality": {
-                  "score": 79.04,
-                  "visibility": 88.52,
-                  "completeness": 23.26,
-                  "consistency": 100.0,
-                  "freshness": 100.0,
-                  "reliability": 83.44
-                },
-                "intelligence": {
-                  "score": 71.51,
-                  "state": "تحتاج تحسين محدود",
-                  "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
-                  "observation_quality": 79.04,
-                  "observation_confidence": 89.96,
-                  "observation_reliability": 84.14,
-                  "observation_completeness": 23.26,
-                  "observation_readiness": 81.16
-                },
-                "diagnostics": [
-                  {
-                    "name": "ملاحظات غير مكتملة",
-                    "severity": "متوسط",
-                    "detail": "عدد الملاحظات ذات الجودة الضعيفة: 1"
-                  },
-                  {
-                    "name": "تغطية ضعيفة",
-                    "severity": "متوسط",
-                    "detail": "التغطية أو الاكتمال يحتاجان تحسين."
-                  }
-                ],
-                "recommendations": [
-                  {
-                    "title": "تحسين الجودة",
-                    "priority": "متوسط",
-                    "reason": "عدد الملاحظات ذات الجودة الضعيفة: 1"
-                  },
-                  {
-                    "title": "تحسين الرؤية",
-                    "priority": "متوسط",
-                    "reason": "التغطية أو الاكتمال يحتاجان تحسين."
-                  }
-                ],
-                "metadata": {
-                  "research_only": true,
-                  "observation_only": true,
-                  "not_execution": true,
-                  "not_order_placement": true,
-                  "not_account_login": true,
-                  "not_broker_authentication": true,
-                  "not_credential_handling": true,
-                  "not_browser_automation": true,
-                  "not_broker_control": true
-                },
-                "research_only": true,
-                "observation_only": true,
-                "not_execution": true,
-                "not_order_placement": true,
-                "not_account_login": true,
-                "not_broker_authentication": true,
-                "not_credential_handling": true,
-                "not_browser_automation": true,
-                "not_broker_control": true
-              }
-            },
-            "research_only": true,
-            "observation_only": true
-          },
-          "research_only": true
-        },
-        "research_only": true,
-        "observation_only": true
-      },
-      {
         "observation_id": "snapshot_import",
-        "timestamp": "2026-06-01T15:35:13.253001",
+        "timestamp": "2026-06-01T16:08:09.088218",
         "source": "snapshot_import",
         "asset": "استيراد اللقطات",
         "session": "passive",
@@ -1032,7 +743,7 @@
             "observation_id": "snapshot_import",
             "source_type": "snapshot_import",
             "source_name": "استيراد اللقطات",
-            "timestamp": "2026-06-01T15:35:13.253001",
+            "timestamp": "2026-06-01T16:08:09.088218",
             "asset_count": 1.0,
             "payout_count": 1.0,
             "session_count": 2.0,
@@ -1053,7 +764,7 @@
                 "safety_score": 100.0,
                 "warning_count": 0,
                 "recommendation_count": 1,
-                "last_import": "2026-06-01T15:35:13.253001",
+                "last_import": "2026-06-01T16:08:09.088218",
                 "manual_only": true,
                 "research_only": true,
                 "observation_only": true
@@ -1065,7 +776,7 @@
                 "manual_sample_snapshot.json": 100.0
               },
               "latest": {
-                "timestamp": "2026-06-01T15:35:13.253001",
+                "timestamp": "2026-06-01T16:08:09.088218",
                 "imports": [
                   {
                     "import_id": "manual_sample_snapshot",
@@ -1184,7 +895,39 @@
       },
       {
         "observation_id": "snapshot_import",
-        "timestamp": "2026-06-01T15:35:13.253001",
+        "timestamp": "2026-06-01T16:08:09.088218",
+        "source": "snapshot_import",
+        "asset": "استيراد اللقطات",
+        "session": "passive",
+        "market_state": "observed",
+        "confidence": 97.19,
+        "quality": 100.0,
+        "readiness": 0.0,
+        "metadata": {
+          "source_payload": {
+            "observation_id": "snapshot_import",
+            "source_type": "snapshot_import",
+            "source_name": "استيراد اللقطات",
+            "timestamp": "2026-06-01T16:08:09.088218",
+            "assets": 1.0,
+            "payouts": 1.0,
+            "sessions": 2.0,
+            "symbols": 2.0,
+            "market_data": 5.0,
+            "visibility_score": 100.0,
+            "quality_score": 100.0,
+            "confidence_score": 97.19,
+            "research_only": true,
+            "observation_only": true
+          },
+          "research_only": true
+        },
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "observation_id": "snapshot_import",
+        "timestamp": "2026-06-01T16:08:09.088218",
         "source": "snapshot_import",
         "asset": "snapshot",
         "session": "manual",
@@ -1203,7 +946,7 @@
             "safety_score": 100.0,
             "warning_count": 0,
             "recommendation_count": 1,
-            "last_import": "2026-06-01T15:35:13.253001",
+            "last_import": "2026-06-01T16:08:09.088218",
             "manual_only": true,
             "research_only": true,
             "observation_only": true
@@ -1215,7 +958,7 @@
       },
       {
         "observation_id": "broker_readiness",
-        "timestamp": "2026-06-01T15:38:35.361943",
+        "timestamp": "2026-06-01T16:09:35.655980",
         "source": "broker_readiness",
         "asset": "جاهزية المراقبة",
         "session": "passive",
@@ -1228,7 +971,7 @@
             "observation_id": "broker_readiness",
             "source_type": "broker_readiness",
             "source_name": "جاهزية المراقبة",
-            "timestamp": "2026-06-01T15:38:35.361943",
+            "timestamp": "2026-06-01T16:09:35.655980",
             "asset_count": 48.0,
             "payout_count": 74.2,
             "session_count": 60.0,
@@ -1259,16 +1002,16 @@
                 "البيانات": 68.42
               },
               "readiness_timeline": {
-                "15:38": 81.73
+                "16:09": 81.73
               },
               "capability_timeline": {
-                "15:38": 67.41
+                "16:09": 67.41
               },
               "safety_timeline": {
-                "15:38": 100.0
+                "16:09": 100.0
               },
               "latest": {
-                "timestamp": "2026-06-01T15:38:35.361943",
+                "timestamp": "2026-06-01T16:09:35.655980",
                 "capability": {
                   "market_visibility": 79.05,
                   "asset_visibility": 48.0,
@@ -1394,6 +1137,263 @@
                 "not_order_placement": true,
                 "not_account_action": true,
                 "not_automation": true,
+                "not_broker_control": true
+              }
+            },
+            "research_only": true,
+            "observation_only": true
+          },
+          "research_only": true
+        },
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "observation_id": "broker_readiness",
+        "timestamp": "2026-06-01T16:09:35.655980",
+        "source": "broker_readiness",
+        "asset": "جاهزية المراقبة",
+        "session": "passive",
+        "market_state": "observed",
+        "confidence": 81.73,
+        "quality": 67.41,
+        "readiness": 0.0,
+        "metadata": {
+          "source_payload": {
+            "observation_id": "broker_readiness",
+            "source_type": "broker_readiness",
+            "source_name": "جاهزية المراقبة",
+            "timestamp": "2026-06-01T16:09:35.655980",
+            "assets": 48.0,
+            "payouts": 74.2,
+            "sessions": 60.0,
+            "symbols": 65.0,
+            "market_data": 79.05,
+            "visibility_score": 67.41,
+            "quality_score": 67.41,
+            "confidence_score": 81.73,
+            "research_only": true,
+            "observation_only": true
+          },
+          "research_only": true
+        },
+        "research_only": true,
+        "observation_only": true
+      },
+      {
+        "observation_id": "observation_intelligence",
+        "timestamp": "2026-06-01T16:09:40.017542",
+        "source": "observation_intelligence",
+        "asset": "ذكاء المراقبة",
+        "session": "passive",
+        "market_state": "observed",
+        "confidence": 89.96,
+        "quality": 79.04,
+        "readiness": 0.0,
+        "metadata": {
+          "source_payload": {
+            "observation_id": "observation_intelligence",
+            "source_type": "observation_intelligence",
+            "source_name": "ذكاء المراقبة",
+            "timestamp": "2026-06-01T16:09:40.017542",
+            "asset_count": 4.0,
+            "payout_count": 4.0,
+            "session_count": 4.0,
+            "symbol_count": 4.0,
+            "market_data_score": 76.62,
+            "visibility_score": 88.52,
+            "quality_score": 79.04,
+            "confidence_score": 89.96,
+            "freshness_score": 100.0,
+            "payload": {
+              "summary": {
+                "observation_count": 4,
+                "quality_score": 79.04,
+                "confidence_score": 89.96,
+                "consistency_score": 100.0,
+                "coverage_score": 80.0,
+                "readiness_score": 81.16,
+                "intelligence_score": 71.51,
+                "intelligence_state": "تحتاج تحسين محدود",
+                "warning_count": 2,
+                "recommendation_count": 2,
+                "research_only": true,
+                "observation_only": true
+              },
+              "source_distribution": {
+                "snapshot_import": 1,
+                "browser_observation": 1,
+                "external_observation": 1,
+                "broker_readiness": 1
+              },
+              "readiness_distribution": {
+                "score": 71.51,
+                "state": "تحتاج تحسين محدود",
+                "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
+                "observation_quality": 79.04,
+                "observation_confidence": 89.96,
+                "observation_reliability": 84.14,
+                "observation_completeness": 23.26,
+                "observation_readiness": 81.16
+              },
+              "latest": {
+                "timestamp": "2026-06-01T16:09:40.017542",
+                "observations": [
+                  {
+                    "observation_id": "snapshot_import",
+                    "source_type": "snapshot_import",
+                    "source_name": "استيراد اللقطات",
+                    "timestamp": "2026-06-01T16:08:09.088218",
+                    "assets": 1.0,
+                    "payouts": 1.0,
+                    "sessions": 2.0,
+                    "symbols": 2.0,
+                    "market_data": 5.0,
+                    "visibility_score": 100.0,
+                    "quality_score": 100.0,
+                    "confidence_score": 97.19,
+                    "research_only": true,
+                    "observation_only": true
+                  },
+                  {
+                    "observation_id": "browser_observation",
+                    "source_type": "browser_observation",
+                    "source_name": "مراقبة المتصفح",
+                    "timestamp": "2026-06-01T16:07:26.382055",
+                    "assets": 3.0,
+                    "payouts": 1.0,
+                    "sessions": 1.0,
+                    "symbols": 1.0,
+                    "market_data": 6.0,
+                    "visibility_score": 86.67,
+                    "quality_score": 100.0,
+                    "confidence_score": 86.34,
+                    "research_only": true,
+                    "observation_only": true
+                  },
+                  {
+                    "observation_id": "external_observation",
+                    "source_type": "external_observation",
+                    "source_name": "المراقبة الخارجية",
+                    "timestamp": "2026-06-01T16:07:32.696447",
+                    "assets": 4.0,
+                    "payouts": 4.0,
+                    "sessions": 4.0,
+                    "symbols": 4.0,
+                    "market_data": 100.0,
+                    "visibility_score": 100.0,
+                    "quality_score": 100.0,
+                    "confidence_score": 100.0,
+                    "research_only": true,
+                    "observation_only": true
+                  },
+                  {
+                    "observation_id": "broker_readiness",
+                    "source_type": "broker_readiness",
+                    "source_name": "جاهزية المراقبة",
+                    "timestamp": "2026-06-01T16:09:35.655980",
+                    "assets": 48.0,
+                    "payouts": 74.2,
+                    "sessions": 60.0,
+                    "symbols": 65.0,
+                    "market_data": 79.05,
+                    "visibility_score": 67.41,
+                    "quality_score": 67.41,
+                    "confidence_score": 81.73,
+                    "research_only": true,
+                    "observation_only": true
+                  }
+                ],
+                "normalization": {
+                  "score": 80.0,
+                  "source_count": 5,
+                  "normalized_count": 4
+                },
+                "aggregation": {
+                  "score": 76.62,
+                  "coverage": 80.0,
+                  "consistency": 100.0,
+                  "visibility": 88.52,
+                  "completeness": 23.26,
+                  "confidence": 91.31,
+                  "conflicts": 0.0
+                },
+                "validation": {
+                  "score": 79.02,
+                  "normalized_structure": 100.0,
+                  "source_compatibility": 80.0,
+                  "completeness": 23.26,
+                  "consistency": 100.0,
+                  "integrity": 91.85
+                },
+                "confidence": {
+                  "score": 89.96,
+                  "source_confidence": 80.0,
+                  "data_confidence": 91.31,
+                  "visibility_confidence": 88.52,
+                  "consistency_confidence": 100.0
+                },
+                "quality": {
+                  "score": 79.04,
+                  "visibility": 88.52,
+                  "completeness": 23.26,
+                  "consistency": 100.0,
+                  "freshness": 100.0,
+                  "reliability": 83.44
+                },
+                "intelligence": {
+                  "score": 71.51,
+                  "state": "تحتاج تحسين محدود",
+                  "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
+                  "observation_quality": 79.04,
+                  "observation_confidence": 89.96,
+                  "observation_reliability": 84.14,
+                  "observation_completeness": 23.26,
+                  "observation_readiness": 81.16
+                },
+                "diagnostics": [
+                  {
+                    "name": "ملاحظات غير مكتملة",
+                    "severity": "متوسط",
+                    "detail": "عدد الملاحظات ذات الجودة الضعيفة: 1"
+                  },
+                  {
+                    "name": "تغطية ضعيفة",
+                    "severity": "متوسط",
+                    "detail": "التغطية أو الاكتمال يحتاجان تحسين."
+                  }
+                ],
+                "recommendations": [
+                  {
+                    "title": "تحسين الجودة",
+                    "priority": "متوسط",
+                    "reason": "عدد الملاحظات ذات الجودة الضعيفة: 1"
+                  },
+                  {
+                    "title": "تحسين الرؤية",
+                    "priority": "متوسط",
+                    "reason": "التغطية أو الاكتمال يحتاجان تحسين."
+                  }
+                ],
+                "metadata": {
+                  "research_only": true,
+                  "observation_only": true,
+                  "not_execution": true,
+                  "not_order_placement": true,
+                  "not_account_login": true,
+                  "not_broker_authentication": true,
+                  "not_credential_handling": true,
+                  "not_browser_automation": true,
+                  "not_broker_control": true
+                },
+                "research_only": true,
+                "observation_only": true,
+                "not_execution": true,
+                "not_order_placement": true,
+                "not_account_login": true,
+                "not_broker_authentication": true,
+                "not_credential_handling": true,
+                "not_browser_automation": true,
                 "not_broker_control": true
               }
             },
@@ -1546,84 +1546,8 @@
         {
           "sequence": 3,
           "observation": {
-            "observation_id": "snapshot_import",
-            "timestamp": "2026-06-01T15:08:04.623598",
-            "source": "snapshot_import",
-            "asset": "استيراد اللقطات",
-            "session": "passive",
-            "market_state": "observed",
-            "confidence": 97.19,
-            "quality": 100.0,
-            "readiness": 0.0,
-            "metadata": {
-              "source_payload": {
-                "observation_id": "snapshot_import",
-                "source_type": "snapshot_import",
-                "source_name": "استيراد اللقطات",
-                "timestamp": "2026-06-01T15:08:04.623598",
-                "assets": 1.0,
-                "payouts": 1.0,
-                "sessions": 2.0,
-                "symbols": 2.0,
-                "market_data": 5.0,
-                "visibility_score": 100.0,
-                "quality_score": 100.0,
-                "confidence_score": 97.19,
-                "research_only": true,
-                "observation_only": true
-              },
-              "research_only": true
-            },
-            "research_only": true,
-            "observation_only": true
-          },
-          "simulated_offset_seconds": 12.0,
-          "speed_multiplier": 10,
-          "state": "مكتمل"
-        },
-        {
-          "sequence": 4,
-          "observation": {
-            "observation_id": "broker_readiness",
-            "timestamp": "2026-06-01T15:34:21.406394",
-            "source": "broker_readiness",
-            "asset": "جاهزية المراقبة",
-            "session": "passive",
-            "market_state": "observed",
-            "confidence": 81.73,
-            "quality": 67.41,
-            "readiness": 0.0,
-            "metadata": {
-              "source_payload": {
-                "observation_id": "broker_readiness",
-                "source_type": "broker_readiness",
-                "source_name": "جاهزية المراقبة",
-                "timestamp": "2026-06-01T15:34:21.406394",
-                "assets": 48.0,
-                "payouts": 74.2,
-                "sessions": 60.0,
-                "symbols": 65.0,
-                "market_data": 79.05,
-                "visibility_score": 67.41,
-                "quality_score": 67.41,
-                "confidence_score": 81.73,
-                "research_only": true,
-                "observation_only": true
-              },
-              "research_only": true
-            },
-            "research_only": true,
-            "observation_only": true
-          },
-          "simulated_offset_seconds": 18.0,
-          "speed_multiplier": 10,
-          "state": "مكتمل"
-        },
-        {
-          "sequence": 5,
-          "observation": {
             "observation_id": "browser_observation",
-            "timestamp": "2026-06-01T15:34:22.084228",
+            "timestamp": "2026-06-01T16:07:26.382055",
             "source": "browser_observation",
             "asset": "مراقبة المتصفح",
             "session": "passive",
@@ -1636,7 +1560,7 @@
                 "observation_id": "browser_observation",
                 "source_type": "browser_observation",
                 "source_name": "مراقبة المتصفح",
-                "timestamp": "2026-06-01T15:34:22.084228",
+                "timestamp": "2026-06-01T16:07:26.382055",
                 "asset_count": 3.0,
                 "payout_count": 1.0,
                 "session_count": 1.0,
@@ -1677,13 +1601,13 @@
                     "not_execution": true
                   },
                   "latest": {
-                    "timestamp": "2026-06-01T15:34:22.084228",
+                    "timestamp": "2026-06-01T16:07:26.382055",
                     "artifacts": [
                       {
                         "artifact_id": "html-summary",
                         "artifact_type": "html_snapshot",
                         "artifact_source": "reports\\observation\\observation_summary.json",
-                        "created_at": "1780325099982995800",
+                        "created_at": "1780328348077575600",
                         "validation_status": "ناجح",
                         "visibility_status": "مرئي",
                         "monitoring_status": "مستقر",
@@ -1700,7 +1624,7 @@
                         "artifact_id": "dom-export-summary",
                         "artifact_type": "dom_export",
                         "artifact_source": "reports\\external_observation\\source_report.json",
-                        "created_at": "1780326391510769700",
+                        "created_at": "1780328369698432900",
                         "validation_status": "ناجح",
                         "visibility_status": "مرئي",
                         "monitoring_status": "مستقر",
@@ -1717,7 +1641,7 @@
                         "artifact_id": "page-capture-summary",
                         "artifact_type": "page_capture",
                         "artifact_source": "reports\\broker_readiness\\readiness_summary.json",
-                        "created_at": "1780328061412084600",
+                        "created_at": "1780330045806418700",
                         "validation_status": "ناجح",
                         "visibility_status": "مرئي",
                         "monitoring_status": "مستقر",
@@ -1734,7 +1658,7 @@
                         "artifact_id": "observation-dump",
                         "artifact_type": "observation_dump",
                         "artifact_source": "storage\\external_observation\\diagnostics.json",
-                        "created_at": "1780326391474785000",
+                        "created_at": "1780328369698432900",
                         "validation_status": "ناجح",
                         "visibility_status": "مرئي",
                         "monitoring_status": "مستقر",
@@ -1855,15 +1779,15 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 24.0,
+          "simulated_offset_seconds": 12.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 6,
+          "sequence": 4,
           "observation": {
             "observation_id": "browser_observation",
-            "timestamp": "2026-06-01T15:34:22.084228",
+            "timestamp": "2026-06-01T16:07:26.382055",
             "source": "browser_observation",
             "asset": "مراقبة المتصفح",
             "session": "passive",
@@ -1876,7 +1800,7 @@
                 "observation_id": "browser_observation",
                 "source_type": "browser_observation",
                 "source_name": "مراقبة المتصفح",
-                "timestamp": "2026-06-01T15:34:22.084228",
+                "timestamp": "2026-06-01T16:07:26.382055",
                 "assets": 3.0,
                 "payouts": 1.0,
                 "sessions": 1.0,
@@ -1893,15 +1817,15 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 30.0,
+          "simulated_offset_seconds": 18.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 7,
+          "sequence": 5,
           "observation": {
             "observation_id": "browser_observation",
-            "timestamp": "2026-06-01T15:34:22.084228",
+            "timestamp": "2026-06-01T16:07:26.382055",
             "source": "browser_observation",
             "asset": "browser_snapshot",
             "session": "passive",
@@ -1929,15 +1853,15 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 36.0,
+          "simulated_offset_seconds": 24.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 8,
+          "sequence": 6,
           "observation": {
             "observation_id": "external_observation",
-            "timestamp": "2026-06-01T15:34:29.912327",
+            "timestamp": "2026-06-01T16:07:32.696447",
             "source": "external_observation",
             "asset": "المراقبة الخارجية",
             "session": "passive",
@@ -1950,7 +1874,7 @@
                 "observation_id": "external_observation",
                 "source_type": "external_observation",
                 "source_name": "المراقبة الخارجية",
-                "timestamp": "2026-06-01T15:34:29.912327",
+                "timestamp": "2026-06-01T16:07:32.696447",
                 "asset_count": 4.0,
                 "payout_count": 4.0,
                 "session_count": 4.0,
@@ -1981,7 +1905,7 @@
                     "sandbox_feed": 1
                   },
                   "latest": {
-                    "timestamp": "2026-06-01T15:34:29.912327",
+                    "timestamp": "2026-06-01T16:07:32.696447",
                     "sources": [
                       {
                         "source_id": "simulated-research",
@@ -2106,15 +2030,15 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 42.0,
+          "simulated_offset_seconds": 30.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 9,
+          "sequence": 7,
           "observation": {
             "observation_id": "external_observation",
-            "timestamp": "2026-06-01T15:34:29.912327",
+            "timestamp": "2026-06-01T16:07:32.696447",
             "source": "external_observation",
             "asset": "المراقبة الخارجية",
             "session": "passive",
@@ -2127,7 +2051,7 @@
                 "observation_id": "external_observation",
                 "source_type": "external_observation",
                 "source_name": "المراقبة الخارجية",
-                "timestamp": "2026-06-01T15:34:29.912327",
+                "timestamp": "2026-06-01T16:07:32.696447",
                 "assets": 4.0,
                 "payouts": 4.0,
                 "sessions": 4.0,
@@ -2144,15 +2068,15 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 48.0,
+          "simulated_offset_seconds": 36.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 10,
+          "sequence": 8,
           "observation": {
             "observation_id": "external_observation",
-            "timestamp": "2026-06-01T15:34:29.912327",
+            "timestamp": "2026-06-01T16:07:32.696447",
             "source": "external_observation",
             "asset": "external_source",
             "session": "passive",
@@ -2179,246 +2103,15 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 54.0,
+          "simulated_offset_seconds": 42.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 11,
-          "observation": {
-            "observation_id": "observation_intelligence",
-            "timestamp": "2026-06-01T15:34:36.148842",
-            "source": "observation_intelligence",
-            "asset": "ذكاء المراقبة",
-            "session": "passive",
-            "market_state": "observed",
-            "confidence": 89.96,
-            "quality": 79.04,
-            "readiness": 0.0,
-            "metadata": {
-              "source_payload": {
-                "observation_id": "observation_intelligence",
-                "source_type": "observation_intelligence",
-                "source_name": "ذكاء المراقبة",
-                "timestamp": "2026-06-01T15:34:36.148842",
-                "asset_count": 4.0,
-                "payout_count": 4.0,
-                "session_count": 4.0,
-                "symbol_count": 4.0,
-                "market_data_score": 76.62,
-                "visibility_score": 88.52,
-                "quality_score": 79.04,
-                "confidence_score": 89.96,
-                "freshness_score": 100.0,
-                "payload": {
-                  "summary": {
-                    "observation_count": 4,
-                    "quality_score": 79.04,
-                    "confidence_score": 89.96,
-                    "consistency_score": 100.0,
-                    "coverage_score": 80.0,
-                    "readiness_score": 81.16,
-                    "intelligence_score": 71.51,
-                    "intelligence_state": "تحتاج تحسين محدود",
-                    "warning_count": 2,
-                    "recommendation_count": 2,
-                    "research_only": true,
-                    "observation_only": true
-                  },
-                  "source_distribution": {
-                    "snapshot_import": 1,
-                    "browser_observation": 1,
-                    "external_observation": 1,
-                    "broker_readiness": 1
-                  },
-                  "readiness_distribution": {
-                    "score": 71.51,
-                    "state": "تحتاج تحسين محدود",
-                    "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
-                    "observation_quality": 79.04,
-                    "observation_confidence": 89.96,
-                    "observation_reliability": 84.14,
-                    "observation_completeness": 23.26,
-                    "observation_readiness": 81.16
-                  },
-                  "latest": {
-                    "timestamp": "2026-06-01T15:34:36.148842",
-                    "observations": [
-                      {
-                        "observation_id": "snapshot_import",
-                        "source_type": "snapshot_import",
-                        "source_name": "استيراد اللقطات",
-                        "timestamp": "2026-06-01T15:08:04.623598",
-                        "assets": 1.0,
-                        "payouts": 1.0,
-                        "sessions": 2.0,
-                        "symbols": 2.0,
-                        "market_data": 5.0,
-                        "visibility_score": 100.0,
-                        "quality_score": 100.0,
-                        "confidence_score": 97.19,
-                        "research_only": true,
-                        "observation_only": true
-                      },
-                      {
-                        "observation_id": "browser_observation",
-                        "source_type": "browser_observation",
-                        "source_name": "مراقبة المتصفح",
-                        "timestamp": "2026-06-01T15:34:22.084228",
-                        "assets": 3.0,
-                        "payouts": 1.0,
-                        "sessions": 1.0,
-                        "symbols": 1.0,
-                        "market_data": 6.0,
-                        "visibility_score": 86.67,
-                        "quality_score": 100.0,
-                        "confidence_score": 86.34,
-                        "research_only": true,
-                        "observation_only": true
-                      },
-                      {
-                        "observation_id": "external_observation",
-                        "source_type": "external_observation",
-                        "source_name": "المراقبة الخارجية",
-                        "timestamp": "2026-06-01T15:34:29.912327",
-                        "assets": 4.0,
-                        "payouts": 4.0,
-                        "sessions": 4.0,
-                        "symbols": 4.0,
-                        "market_data": 100.0,
-                        "visibility_score": 100.0,
-                        "quality_score": 100.0,
-                        "confidence_score": 100.0,
-                        "research_only": true,
-                        "observation_only": true
-                      },
-                      {
-                        "observation_id": "broker_readiness",
-                        "source_type": "broker_readiness",
-                        "source_name": "جاهزية المراقبة",
-                        "timestamp": "2026-06-01T15:34:21.406394",
-                        "assets": 48.0,
-                        "payouts": 74.2,
-                        "sessions": 60.0,
-                        "symbols": 65.0,
-                        "market_data": 79.05,
-                        "visibility_score": 67.41,
-                        "quality_score": 67.41,
-                        "confidence_score": 81.73,
-                        "research_only": true,
-                        "observation_only": true
-                      }
-                    ],
-                    "normalization": {
-                      "score": 80.0,
-                      "source_count": 5,
-                      "normalized_count": 4
-                    },
-                    "aggregation": {
-                      "score": 76.62,
-                      "coverage": 80.0,
-                      "consistency": 100.0,
-                      "visibility": 88.52,
-                      "completeness": 23.26,
-                      "confidence": 91.31,
-                      "conflicts": 0.0
-                    },
-                    "validation": {
-                      "score": 79.02,
-                      "normalized_structure": 100.0,
-                      "source_compatibility": 80.0,
-                      "completeness": 23.26,
-                      "consistency": 100.0,
-                      "integrity": 91.85
-                    },
-                    "confidence": {
-                      "score": 89.96,
-                      "source_confidence": 80.0,
-                      "data_confidence": 91.31,
-                      "visibility_confidence": 88.52,
-                      "consistency_confidence": 100.0
-                    },
-                    "quality": {
-                      "score": 79.04,
-                      "visibility": 88.52,
-                      "completeness": 23.26,
-                      "consistency": 100.0,
-                      "freshness": 100.0,
-                      "reliability": 83.44
-                    },
-                    "intelligence": {
-                      "score": 71.51,
-                      "state": "تحتاج تحسين محدود",
-                      "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
-                      "observation_quality": 79.04,
-                      "observation_confidence": 89.96,
-                      "observation_reliability": 84.14,
-                      "observation_completeness": 23.26,
-                      "observation_readiness": 81.16
-                    },
-                    "diagnostics": [
-                      {
-                        "name": "ملاحظات غير مكتملة",
-                        "severity": "متوسط",
-                        "detail": "عدد الملاحظات ذات الجودة الضعيفة: 1"
-                      },
-                      {
-                        "name": "تغطية ضعيفة",
-                        "severity": "متوسط",
-                        "detail": "التغطية أو الاكتمال يحتاجان تحسين."
-                      }
-                    ],
-                    "recommendations": [
-                      {
-                        "title": "تحسين الجودة",
-                        "priority": "متوسط",
-                        "reason": "عدد الملاحظات ذات الجودة الضعيفة: 1"
-                      },
-                      {
-                        "title": "تحسين الرؤية",
-                        "priority": "متوسط",
-                        "reason": "التغطية أو الاكتمال يحتاجان تحسين."
-                      }
-                    ],
-                    "metadata": {
-                      "research_only": true,
-                      "observation_only": true,
-                      "not_execution": true,
-                      "not_order_placement": true,
-                      "not_account_login": true,
-                      "not_broker_authentication": true,
-                      "not_credential_handling": true,
-                      "not_browser_automation": true,
-                      "not_broker_control": true
-                    },
-                    "research_only": true,
-                    "observation_only": true,
-                    "not_execution": true,
-                    "not_order_placement": true,
-                    "not_account_login": true,
-                    "not_broker_authentication": true,
-                    "not_credential_handling": true,
-                    "not_browser_automation": true,
-                    "not_broker_control": true
-                  }
-                },
-                "research_only": true,
-                "observation_only": true
-              },
-              "research_only": true
-            },
-            "research_only": true,
-            "observation_only": true
-          },
-          "simulated_offset_seconds": 60.0,
-          "speed_multiplier": 10,
-          "state": "مكتمل"
-        },
-        {
-          "sequence": 12,
+          "sequence": 9,
           "observation": {
             "observation_id": "snapshot_import",
-            "timestamp": "2026-06-01T15:35:13.253001",
+            "timestamp": "2026-06-01T16:08:09.088218",
             "source": "snapshot_import",
             "asset": "استيراد اللقطات",
             "session": "passive",
@@ -2431,7 +2124,7 @@
                 "observation_id": "snapshot_import",
                 "source_type": "snapshot_import",
                 "source_name": "استيراد اللقطات",
-                "timestamp": "2026-06-01T15:35:13.253001",
+                "timestamp": "2026-06-01T16:08:09.088218",
                 "asset_count": 1.0,
                 "payout_count": 1.0,
                 "session_count": 2.0,
@@ -2452,7 +2145,7 @@
                     "safety_score": 100.0,
                     "warning_count": 0,
                     "recommendation_count": 1,
-                    "last_import": "2026-06-01T15:35:13.253001",
+                    "last_import": "2026-06-01T16:08:09.088218",
                     "manual_only": true,
                     "research_only": true,
                     "observation_only": true
@@ -2464,7 +2157,7 @@
                     "manual_sample_snapshot.json": 100.0
                   },
                   "latest": {
-                    "timestamp": "2026-06-01T15:35:13.253001",
+                    "timestamp": "2026-06-01T16:08:09.088218",
                     "imports": [
                       {
                         "import_id": "manual_sample_snapshot",
@@ -2581,15 +2274,53 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 66.0,
+          "simulated_offset_seconds": 48.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 13,
+          "sequence": 10,
           "observation": {
             "observation_id": "snapshot_import",
-            "timestamp": "2026-06-01T15:35:13.253001",
+            "timestamp": "2026-06-01T16:08:09.088218",
+            "source": "snapshot_import",
+            "asset": "استيراد اللقطات",
+            "session": "passive",
+            "market_state": "observed",
+            "confidence": 97.19,
+            "quality": 100.0,
+            "readiness": 0.0,
+            "metadata": {
+              "source_payload": {
+                "observation_id": "snapshot_import",
+                "source_type": "snapshot_import",
+                "source_name": "استيراد اللقطات",
+                "timestamp": "2026-06-01T16:08:09.088218",
+                "assets": 1.0,
+                "payouts": 1.0,
+                "sessions": 2.0,
+                "symbols": 2.0,
+                "market_data": 5.0,
+                "visibility_score": 100.0,
+                "quality_score": 100.0,
+                "confidence_score": 97.19,
+                "research_only": true,
+                "observation_only": true
+              },
+              "research_only": true
+            },
+            "research_only": true,
+            "observation_only": true
+          },
+          "simulated_offset_seconds": 54.0,
+          "speed_multiplier": 10,
+          "state": "مكتمل"
+        },
+        {
+          "sequence": 11,
+          "observation": {
+            "observation_id": "snapshot_import",
+            "timestamp": "2026-06-01T16:08:09.088218",
             "source": "snapshot_import",
             "asset": "snapshot",
             "session": "manual",
@@ -2608,7 +2339,7 @@
                 "safety_score": 100.0,
                 "warning_count": 0,
                 "recommendation_count": 1,
-                "last_import": "2026-06-01T15:35:13.253001",
+                "last_import": "2026-06-01T16:08:09.088218",
                 "manual_only": true,
                 "research_only": true,
                 "observation_only": true
@@ -2618,15 +2349,15 @@
             "research_only": true,
             "observation_only": true
           },
-          "simulated_offset_seconds": 72.0,
+          "simulated_offset_seconds": 60.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
         },
         {
-          "sequence": 14,
+          "sequence": 12,
           "observation": {
             "observation_id": "broker_readiness",
-            "timestamp": "2026-06-01T15:38:35.361943",
+            "timestamp": "2026-06-01T16:09:35.655980",
             "source": "broker_readiness",
             "asset": "جاهزية المراقبة",
             "session": "passive",
@@ -2639,7 +2370,7 @@
                 "observation_id": "broker_readiness",
                 "source_type": "broker_readiness",
                 "source_name": "جاهزية المراقبة",
-                "timestamp": "2026-06-01T15:38:35.361943",
+                "timestamp": "2026-06-01T16:09:35.655980",
                 "asset_count": 48.0,
                 "payout_count": 74.2,
                 "session_count": 60.0,
@@ -2670,16 +2401,16 @@
                     "البيانات": 68.42
                   },
                   "readiness_timeline": {
-                    "15:38": 81.73
+                    "16:09": 81.73
                   },
                   "capability_timeline": {
-                    "15:38": 67.41
+                    "16:09": 67.41
                   },
                   "safety_timeline": {
-                    "15:38": 100.0
+                    "16:09": 100.0
                   },
                   "latest": {
-                    "timestamp": "2026-06-01T15:38:35.361943",
+                    "timestamp": "2026-06-01T16:09:35.655980",
                     "capability": {
                       "market_visibility": 79.05,
                       "asset_visibility": 48.0,
@@ -2816,6 +2547,275 @@
             "research_only": true,
             "observation_only": true
           },
+          "simulated_offset_seconds": 66.0,
+          "speed_multiplier": 10,
+          "state": "مكتمل"
+        },
+        {
+          "sequence": 13,
+          "observation": {
+            "observation_id": "broker_readiness",
+            "timestamp": "2026-06-01T16:09:35.655980",
+            "source": "broker_readiness",
+            "asset": "جاهزية المراقبة",
+            "session": "passive",
+            "market_state": "observed",
+            "confidence": 81.73,
+            "quality": 67.41,
+            "readiness": 0.0,
+            "metadata": {
+              "source_payload": {
+                "observation_id": "broker_readiness",
+                "source_type": "broker_readiness",
+                "source_name": "جاهزية المراقبة",
+                "timestamp": "2026-06-01T16:09:35.655980",
+                "assets": 48.0,
+                "payouts": 74.2,
+                "sessions": 60.0,
+                "symbols": 65.0,
+                "market_data": 79.05,
+                "visibility_score": 67.41,
+                "quality_score": 67.41,
+                "confidence_score": 81.73,
+                "research_only": true,
+                "observation_only": true
+              },
+              "research_only": true
+            },
+            "research_only": true,
+            "observation_only": true
+          },
+          "simulated_offset_seconds": 72.0,
+          "speed_multiplier": 10,
+          "state": "مكتمل"
+        },
+        {
+          "sequence": 14,
+          "observation": {
+            "observation_id": "observation_intelligence",
+            "timestamp": "2026-06-01T16:09:40.017542",
+            "source": "observation_intelligence",
+            "asset": "ذكاء المراقبة",
+            "session": "passive",
+            "market_state": "observed",
+            "confidence": 89.96,
+            "quality": 79.04,
+            "readiness": 0.0,
+            "metadata": {
+              "source_payload": {
+                "observation_id": "observation_intelligence",
+                "source_type": "observation_intelligence",
+                "source_name": "ذكاء المراقبة",
+                "timestamp": "2026-06-01T16:09:40.017542",
+                "asset_count": 4.0,
+                "payout_count": 4.0,
+                "session_count": 4.0,
+                "symbol_count": 4.0,
+                "market_data_score": 76.62,
+                "visibility_score": 88.52,
+                "quality_score": 79.04,
+                "confidence_score": 89.96,
+                "freshness_score": 100.0,
+                "payload": {
+                  "summary": {
+                    "observation_count": 4,
+                    "quality_score": 79.04,
+                    "confidence_score": 89.96,
+                    "consistency_score": 100.0,
+                    "coverage_score": 80.0,
+                    "readiness_score": 81.16,
+                    "intelligence_score": 71.51,
+                    "intelligence_state": "تحتاج تحسين محدود",
+                    "warning_count": 2,
+                    "recommendation_count": 2,
+                    "research_only": true,
+                    "observation_only": true
+                  },
+                  "source_distribution": {
+                    "snapshot_import": 1,
+                    "browser_observation": 1,
+                    "external_observation": 1,
+                    "broker_readiness": 1
+                  },
+                  "readiness_distribution": {
+                    "score": 71.51,
+                    "state": "تحتاج تحسين محدود",
+                    "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
+                    "observation_quality": 79.04,
+                    "observation_confidence": 89.96,
+                    "observation_reliability": 84.14,
+                    "observation_completeness": 23.26,
+                    "observation_readiness": 81.16
+                  },
+                  "latest": {
+                    "timestamp": "2026-06-01T16:09:40.017542",
+                    "observations": [
+                      {
+                        "observation_id": "snapshot_import",
+                        "source_type": "snapshot_import",
+                        "source_name": "استيراد اللقطات",
+                        "timestamp": "2026-06-01T16:08:09.088218",
+                        "assets": 1.0,
+                        "payouts": 1.0,
+                        "sessions": 2.0,
+                        "symbols": 2.0,
+                        "market_data": 5.0,
+                        "visibility_score": 100.0,
+                        "quality_score": 100.0,
+                        "confidence_score": 97.19,
+                        "research_only": true,
+                        "observation_only": true
+                      },
+                      {
+                        "observation_id": "browser_observation",
+                        "source_type": "browser_observation",
+                        "source_name": "مراقبة المتصفح",
+                        "timestamp": "2026-06-01T16:07:26.382055",
+                        "assets": 3.0,
+                        "payouts": 1.0,
+                        "sessions": 1.0,
+                        "symbols": 1.0,
+                        "market_data": 6.0,
+                        "visibility_score": 86.67,
+                        "quality_score": 100.0,
+                        "confidence_score": 86.34,
+                        "research_only": true,
+                        "observation_only": true
+                      },
+                      {
+                        "observation_id": "external_observation",
+                        "source_type": "external_observation",
+                        "source_name": "المراقبة الخارجية",
+                        "timestamp": "2026-06-01T16:07:32.696447",
+                        "assets": 4.0,
+                        "payouts": 4.0,
+                        "sessions": 4.0,
+                        "symbols": 4.0,
+                        "market_data": 100.0,
+                        "visibility_score": 100.0,
+                        "quality_score": 100.0,
+                        "confidence_score": 100.0,
+                        "research_only": true,
+                        "observation_only": true
+                      },
+                      {
+                        "observation_id": "broker_readiness",
+                        "source_type": "broker_readiness",
+                        "source_name": "جاهزية المراقبة",
+                        "timestamp": "2026-06-01T16:09:35.655980",
+                        "assets": 48.0,
+                        "payouts": 74.2,
+                        "sessions": 60.0,
+                        "symbols": 65.0,
+                        "market_data": 79.05,
+                        "visibility_score": 67.41,
+                        "quality_score": 67.41,
+                        "confidence_score": 81.73,
+                        "research_only": true,
+                        "observation_only": true
+                      }
+                    ],
+                    "normalization": {
+                      "score": 80.0,
+                      "source_count": 5,
+                      "normalized_count": 4
+                    },
+                    "aggregation": {
+                      "score": 76.62,
+                      "coverage": 80.0,
+                      "consistency": 100.0,
+                      "visibility": 88.52,
+                      "completeness": 23.26,
+                      "confidence": 91.31,
+                      "conflicts": 0.0
+                    },
+                    "validation": {
+                      "score": 79.02,
+                      "normalized_structure": 100.0,
+                      "source_compatibility": 80.0,
+                      "completeness": 23.26,
+                      "consistency": 100.0,
+                      "integrity": 91.85
+                    },
+                    "confidence": {
+                      "score": 89.96,
+                      "source_confidence": 80.0,
+                      "data_confidence": 91.31,
+                      "visibility_confidence": 88.52,
+                      "consistency_confidence": 100.0
+                    },
+                    "quality": {
+                      "score": 79.04,
+                      "visibility": 88.52,
+                      "completeness": 23.26,
+                      "consistency": 100.0,
+                      "freshness": 100.0,
+                      "reliability": 83.44
+                    },
+                    "intelligence": {
+                      "score": 71.51,
+                      "state": "تحتاج تحسين محدود",
+                      "explanation": "الملاحظات قابلة للتحليل مع فجوات محدودة.",
+                      "observation_quality": 79.04,
+                      "observation_confidence": 89.96,
+                      "observation_reliability": 84.14,
+                      "observation_completeness": 23.26,
+                      "observation_readiness": 81.16
+                    },
+                    "diagnostics": [
+                      {
+                        "name": "ملاحظات غير مكتملة",
+                        "severity": "متوسط",
+                        "detail": "عدد الملاحظات ذات الجودة الضعيفة: 1"
+                      },
+                      {
+                        "name": "تغطية ضعيفة",
+                        "severity": "متوسط",
+                        "detail": "التغطية أو الاكتمال يحتاجان تحسين."
+                      }
+                    ],
+                    "recommendations": [
+                      {
+                        "title": "تحسين الجودة",
+                        "priority": "متوسط",
+                        "reason": "عدد الملاحظات ذات الجودة الضعيفة: 1"
+                      },
+                      {
+                        "title": "تحسين الرؤية",
+                        "priority": "متوسط",
+                        "reason": "التغطية أو الاكتمال يحتاجان تحسين."
+                      }
+                    ],
+                    "metadata": {
+                      "research_only": true,
+                      "observation_only": true,
+                      "not_execution": true,
+                      "not_order_placement": true,
+                      "not_account_login": true,
+                      "not_broker_authentication": true,
+                      "not_credential_handling": true,
+                      "not_browser_automation": true,
+                      "not_broker_control": true
+                    },
+                    "research_only": true,
+                    "observation_only": true,
+                    "not_execution": true,
+                    "not_order_placement": true,
+                    "not_account_login": true,
+                    "not_broker_authentication": true,
+                    "not_credential_handling": true,
+                    "not_browser_automation": true,
+                    "not_broker_control": true
+                  }
+                },
+                "research_only": true,
+                "observation_only": true
+              },
+              "research_only": true
+            },
+            "research_only": true,
+            "observation_only": true
+          },
           "simulated_offset_seconds": 78.0,
           "speed_multiplier": 10,
           "state": "مكتمل"
@@ -2863,110 +2863,110 @@
         },
         {
           "sequence": 3,
-          "observation_id": "snapshot_import",
-          "timestamp": "2026-06-01T15:08:04.623598",
-          "source": "snapshot_import",
-          "asset": "استيراد اللقطات",
+          "observation_id": "browser_observation",
+          "timestamp": "2026-06-01T16:07:26.382055",
+          "source": "browser_observation",
+          "asset": "مراقبة المتصفح",
           "quality": 100.0,
           "readiness": 0.0
         },
         {
           "sequence": 4,
-          "observation_id": "broker_readiness",
-          "timestamp": "2026-06-01T15:34:21.406394",
-          "source": "broker_readiness",
-          "asset": "جاهزية المراقبة",
-          "quality": 67.41,
+          "observation_id": "browser_observation",
+          "timestamp": "2026-06-01T16:07:26.382055",
+          "source": "browser_observation",
+          "asset": "مراقبة المتصفح",
+          "quality": 100.0,
           "readiness": 0.0
         },
         {
           "sequence": 5,
           "observation_id": "browser_observation",
-          "timestamp": "2026-06-01T15:34:22.084228",
-          "source": "browser_observation",
-          "asset": "مراقبة المتصفح",
-          "quality": 100.0,
-          "readiness": 0.0
-        },
-        {
-          "sequence": 6,
-          "observation_id": "browser_observation",
-          "timestamp": "2026-06-01T15:34:22.084228",
-          "source": "browser_observation",
-          "asset": "مراقبة المتصفح",
-          "quality": 100.0,
-          "readiness": 0.0
-        },
-        {
-          "sequence": 7,
-          "observation_id": "browser_observation",
-          "timestamp": "2026-06-01T15:34:22.084228",
+          "timestamp": "2026-06-01T16:07:26.382055",
           "source": "browser_observation",
           "asset": "browser_snapshot",
           "quality": 100.0,
           "readiness": 86.67
         },
         {
+          "sequence": 6,
+          "observation_id": "external_observation",
+          "timestamp": "2026-06-01T16:07:32.696447",
+          "source": "external_observation",
+          "asset": "المراقبة الخارجية",
+          "quality": 100.0,
+          "readiness": 0.0
+        },
+        {
+          "sequence": 7,
+          "observation_id": "external_observation",
+          "timestamp": "2026-06-01T16:07:32.696447",
+          "source": "external_observation",
+          "asset": "المراقبة الخارجية",
+          "quality": 100.0,
+          "readiness": 0.0
+        },
+        {
           "sequence": 8,
           "observation_id": "external_observation",
-          "timestamp": "2026-06-01T15:34:29.912327",
-          "source": "external_observation",
-          "asset": "المراقبة الخارجية",
-          "quality": 100.0,
-          "readiness": 0.0
-        },
-        {
-          "sequence": 9,
-          "observation_id": "external_observation",
-          "timestamp": "2026-06-01T15:34:29.912327",
-          "source": "external_observation",
-          "asset": "المراقبة الخارجية",
-          "quality": 100.0,
-          "readiness": 0.0
-        },
-        {
-          "sequence": 10,
-          "observation_id": "external_observation",
-          "timestamp": "2026-06-01T15:34:29.912327",
+          "timestamp": "2026-06-01T16:07:32.696447",
           "source": "external_observation",
           "asset": "external_source",
           "quality": 100.0,
           "readiness": 100.0
         },
         {
-          "sequence": 11,
-          "observation_id": "observation_intelligence",
-          "timestamp": "2026-06-01T15:34:36.148842",
-          "source": "observation_intelligence",
-          "asset": "ذكاء المراقبة",
-          "quality": 79.04,
-          "readiness": 0.0
-        },
-        {
-          "sequence": 12,
+          "sequence": 9,
           "observation_id": "snapshot_import",
-          "timestamp": "2026-06-01T15:35:13.253001",
+          "timestamp": "2026-06-01T16:08:09.088218",
           "source": "snapshot_import",
           "asset": "استيراد اللقطات",
           "quality": 100.0,
           "readiness": 0.0
         },
         {
-          "sequence": 13,
+          "sequence": 10,
           "observation_id": "snapshot_import",
-          "timestamp": "2026-06-01T15:35:13.253001",
+          "timestamp": "2026-06-01T16:08:09.088218",
+          "source": "snapshot_import",
+          "asset": "استيراد اللقطات",
+          "quality": 100.0,
+          "readiness": 0.0
+        },
+        {
+          "sequence": 11,
+          "observation_id": "snapshot_import",
+          "timestamp": "2026-06-01T16:08:09.088218",
           "source": "snapshot_import",
           "asset": "snapshot",
           "quality": 100.0,
           "readiness": 100.0
         },
         {
-          "sequence": 14,
+          "sequence": 12,
           "observation_id": "broker_readiness",
-          "timestamp": "2026-06-01T15:38:35.361943",
+          "timestamp": "2026-06-01T16:09:35.655980",
           "source": "broker_readiness",
           "asset": "جاهزية المراقبة",
           "quality": 67.41,
+          "readiness": 0.0
+        },
+        {
+          "sequence": 13,
+          "observation_id": "broker_readiness",
+          "timestamp": "2026-06-01T16:09:35.655980",
+          "source": "broker_readiness",
+          "asset": "جاهزية المراقبة",
+          "quality": 67.41,
+          "readiness": 0.0
+        },
+        {
+          "sequence": 14,
+          "observation_id": "observation_intelligence",
+          "timestamp": "2026-06-01T16:09:40.017542",
+          "source": "observation_intelligence",
+          "asset": "ذكاء المراقبة",
+          "quality": 79.04,
           "readiness": 0.0
         }
       ]

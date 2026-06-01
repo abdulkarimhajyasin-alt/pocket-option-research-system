@@ -377,12 +377,8 @@ class DashboardAnalyticsService:
         summary = {**summary, "severity": severity}
         activity = activity_payload.get("activity", {}) if activity_payload else {}
         frequency = activity_payload.get("frequency", {}) if activity_payload else {}
-        session_activity = (
-            activity_payload.get("session_activity", {}) if activity_payload else {}
-        )
-        health_timeline = (
-            activity_payload.get("health_timeline", {}) if activity_payload else {}
-        )
+        session_activity = activity_payload.get("session_activity", {}) if activity_payload else {}
+        health_timeline = activity_payload.get("health_timeline", {}) if activity_payload else {}
         latency_labels = [self._short_time(row.get("timestamp")) for row in latency_rows]
         latency_values = [self._float(row.get("latency_ms")) for row in latency_rows]
         activity_labels, activity_values = self._dict_chart_values(activity)
@@ -448,28 +444,20 @@ class DashboardAnalyticsService:
                 "readiness_score": 0.0,
                 "readiness_label": "غير جاهز",
             }
-        severity = (
-            "healthy"
-            if self._float(summary.get("readiness_score")) >= 70
-            else "warning"
-        )
+        severity = "healthy" if self._float(summary.get("readiness_score")) >= 70 else "warning"
         summary = {**summary, "severity": severity}
         asset_quality = quality_payload.get("asset_quality", {}) if quality_payload else {}
         feed_quality = quality_payload.get("feed_quality", {}) if quality_payload else {}
         market_status = quality_payload.get("market_status", {}) if quality_payload else {}
-        session_activity = (
-            quality_payload.get("session_activity", {}) if quality_payload else {}
-        )
+        session_activity = quality_payload.get("session_activity", {}) if quality_payload else {}
         time_activity = quality_payload.get("time_activity", {}) if quality_payload else {}
         if not asset_quality:
             asset_quality = {
-                row.get("asset", ""): self._float(row.get("quality_score"))
-                for row in assets_rows
+                row.get("asset", ""): self._float(row.get("quality_score")) for row in assets_rows
             }
         if not session_activity:
             session_activity = {
-                row.get("name", ""): self._float(row.get("activity_score"))
-                for row in sessions_rows
+                row.get("name", ""): self._float(row.get("activity_score")) for row in sessions_rows
             }
         asset_labels, asset_values = self._dict_chart_values(asset_quality)
         session_labels, session_values = self._dict_chart_values(session_activity)
@@ -608,9 +596,7 @@ class DashboardAnalyticsService:
             elif isinstance(value, dict):
                 labels, values = self._dict_chart_values(value)
                 if values:
-                    charts.append(
-                        bar_chart(str(key), labels, values, label=str(key)).to_dict()
-                    )
+                    charts.append(bar_chart(str(key), labels, values, label=str(key)).to_dict())
         return {"cards": cards[:8], "charts": charts[:4]}
 
     def build_insights(
@@ -642,9 +628,7 @@ class DashboardAnalyticsService:
                 Insight("healthy", "جودة البيانات مستقرة", "درجة الجودة الحالية مرتفعة.")
             )
         elif dataset_quality_score is not None:
-            insights.append(
-                Insight("warning", "جودة البيانات منخفضة", "راجع الفجوات والتكرارات.")
-            )
+            insights.append(Insight("warning", "جودة البيانات منخفضة", "راجع الفجوات والتكرارات."))
         if warning_count > 0:
             insights.append(
                 Insight("warning", "توجد تحذيرات", f"عدد التحذيرات الحالي {warning_count}.")
@@ -922,9 +906,7 @@ class DashboardAnalyticsService:
                 "alignment_summary",
             )
         summary = alignment_payload.get("summary", {}) if alignment_payload else {}
-        alignment = (
-            alignment_payload.get("distribution", {}) if alignment_payload else {}
-        )
+        alignment = alignment_payload.get("distribution", {}) if alignment_payload else {}
         confirmation = self._latest_json_dict("multi_timeframe", "confirmation")
         if isinstance(confirmation.get("distribution"), dict):
             confirmation = confirmation["distribution"]
@@ -943,11 +925,7 @@ class DashboardAnalyticsService:
                 "highest_alignment": 0.0,
                 "lowest_alignment": 0.0,
             }
-        best = (
-            alignment_payload.get("best_confirmation", {})
-            if alignment_payload
-            else {}
-        )
+        best = alignment_payload.get("best_confirmation", {}) if alignment_payload else {}
         if not best:
             best = self._best_confirmation(latest)
         states = self._state_map(best)
@@ -1020,9 +998,7 @@ class DashboardAnalyticsService:
         """Return latest confluence research analytics."""
         summary_payload = self._latest_json_dict("confluence", "summary")
         summary = summary_payload.get("summary", {}) if summary_payload else {}
-        distribution = (
-            summary_payload.get("distribution", {}) if summary_payload else {}
-        )
+        distribution = summary_payload.get("distribution", {}) if summary_payload else {}
         quality = summary_payload.get("quality", {}) if summary_payload else {}
         timeline = summary_payload.get("timeline", {}) if summary_payload else {}
         best = summary_payload.get("best_decision", {}) if summary_payload else {}
@@ -1259,11 +1235,7 @@ class DashboardAnalyticsService:
         """Return latest strategy readiness analytics."""
         summary_payload = self._latest_json_dict("strategy_readiness", "summary")
         summary = summary_payload.get("summary", {}) if summary_payload else {}
-        readiness = (
-            summary_payload.get("readiness_distribution", {})
-            if summary_payload
-            else {}
-        )
+        readiness = summary_payload.get("readiness_distribution", {}) if summary_payload else {}
         strengths = summary_payload.get("strengths", {}) if summary_payload else {}
         weaknesses = summary_payload.get("weaknesses", {}) if summary_payload else {}
         timeline = summary_payload.get("timeline", {}) if summary_payload else {}
@@ -1292,9 +1264,7 @@ class DashboardAnalyticsService:
         strength_labels, strength_values = self._dict_chart_values(strengths)
         weakness_labels, weakness_values = self._dict_chart_values(weaknesses)
         failure_labels, failure_values = self._dict_chart_values(failures)
-        recommendation_labels, recommendation_values = self._dict_chart_values(
-            recommendations
-        )
+        recommendation_labels, recommendation_values = self._dict_chart_values(recommendations)
         diagnostic_labels, diagnostic_values = self._dict_chart_values(diagnostics)
         timeline_labels, timeline_values = self._dict_chart_values(timeline)
         return {
@@ -1370,18 +1340,10 @@ class DashboardAnalyticsService:
         summary_payload = self._latest_json_dict("strategy_benchmark", "summary")
         summary = summary_payload.get("summary", {}) if summary_payload else {}
         best = summary_payload.get("best_profile", {}) if summary_payload else {}
-        benchmark = (
-            summary_payload.get("benchmark_distribution", {}) if summary_payload else {}
-        )
-        readiness = (
-            summary_payload.get("readiness_distribution", {}) if summary_payload else {}
-        )
-        stability = (
-            summary_payload.get("stability_distribution", {}) if summary_payload else {}
-        )
-        quality = (
-            summary_payload.get("quality_distribution", {}) if summary_payload else {}
-        )
+        benchmark = summary_payload.get("benchmark_distribution", {}) if summary_payload else {}
+        readiness = summary_payload.get("readiness_distribution", {}) if summary_payload else {}
+        stability = summary_payload.get("stability_distribution", {}) if summary_payload else {}
+        quality = summary_payload.get("quality_distribution", {}) if summary_payload else {}
         timeline = summary_payload.get("timeline", {}) if summary_payload else {}
         strengths = summary_payload.get("strengths", {}) if summary_payload else {}
         weaknesses = summary_payload.get("weaknesses", {}) if summary_payload else {}
@@ -1392,11 +1354,11 @@ class DashboardAnalyticsService:
             "strategy_benchmark",
             "recommendations",
         )
-        degradations = {
-            key: value
-            for key, value in improvements.items()
-            if self._float(value) < 0
-        } if isinstance(improvements, dict) else {}
+        degradations = (
+            {key: value for key, value in improvements.items() if self._float(value) < 0}
+            if isinstance(improvements, dict)
+            else {}
+        )
         if not summary:
             summary = {
                 "profile_count": 0,
@@ -1479,22 +1441,14 @@ class DashboardAnalyticsService:
         summary_payload = self._latest_json_dict("pattern_memory", "summary")
         summary = summary_payload.get("summary", {}) if summary_payload else {}
         best = summary_payload.get("best_pattern", {}) if summary_payload else {}
-        pattern_rankings = (
-            summary_payload.get("pattern_rankings", {}) if summary_payload else {}
-        )
-        session_rankings = (
-            summary_payload.get("session_rankings", {}) if summary_payload else {}
-        )
-        asset_rankings = (
-            summary_payload.get("asset_rankings", {}) if summary_payload else {}
-        )
+        pattern_rankings = summary_payload.get("pattern_rankings", {}) if summary_payload else {}
+        session_rankings = summary_payload.get("session_rankings", {}) if summary_payload else {}
+        asset_rankings = summary_payload.get("asset_rankings", {}) if summary_payload else {}
         structure_rankings = (
             summary_payload.get("structure_rankings", {}) if summary_payload else {}
         )
         fvg_rankings = summary_payload.get("fvg_rankings", {}) if summary_payload else {}
-        cisd_rankings = (
-            summary_payload.get("cisd_rankings", {}) if summary_payload else {}
-        )
+        cisd_rankings = summary_payload.get("cisd_rankings", {}) if summary_payload else {}
         reliability_timeline = (
             summary_payload.get("reliability_timeline", {}) if summary_payload else {}
         )
@@ -1582,14 +1536,8 @@ class DashboardAnalyticsService:
         """Return latest market regime analytics."""
         summary_payload = self._latest_json_dict("market_regime", "regime_summary")
         summary = summary_payload.get("summary", {}) if summary_payload else {}
-        regime = (
-            summary_payload.get("regime_distribution", {}) if summary_payload else {}
-        )
-        historical = (
-            summary_payload.get("historical_performance", {})
-            if summary_payload
-            else {}
-        )
+        regime = summary_payload.get("regime_distribution", {}) if summary_payload else {}
+        historical = summary_payload.get("historical_performance", {}) if summary_payload else {}
         volatility = self._latest_json_dict("market_regime", "volatility")
         trend = self._latest_json_dict("market_regime", "trend")
         transition = self._latest_json_dict("market_regime", "transition")
@@ -1860,39 +1808,31 @@ class DashboardAnalyticsService:
         )
         latest = payload.get("latest", {}) if payload else {}
         analytics = self._latest_json_dict("external_observation", "diagnostics")
-        isolation = (
-            latest.get("isolation", {}) if isinstance(latest.get("isolation"), dict) else {}
-        )
+        isolation = latest.get("isolation", {}) if isinstance(latest.get("isolation"), dict) else {}
         isolation_chart = {
-            "لا اتصال وسيط": 100.0
-            if isolation.get("no_broker_connectivity")
-            else 0.0,
+            "لا اتصال وسيط": 100.0 if isolation.get("no_broker_connectivity") else 0.0,
             "لا وصول حساب": 100.0 if isolation.get("no_account_access") else 0.0,
             "لا مسارات تنفيذ": 100.0 if isolation.get("no_execution_paths") else 0.0,
-            "لا مصادقة": 100.0
-            if isolation.get("no_authentication_flows")
-            else 0.0,
+            "لا مصادقة": 100.0 if isolation.get("no_authentication_flows") else 0.0,
             "لا أوامر": 100.0 if isolation.get("no_order_apis") else 0.0,
         }
         source_quality = latest.get("sources", []) if isinstance(latest, dict) else []
         quality = {
-            item.get("source_name", "مصدر"): 100.0
-            if item.get("validation_status") == "ناجح"
-            else 50.0
+            item.get("source_name", "مصدر"): (
+                100.0 if item.get("validation_status") == "ناجح" else 50.0
+            )
             for item in source_quality
             if isinstance(item, dict)
         }
         stability = {
-            item.get("source_name", "مصدر"): 100.0
-            if item.get("observation_status") == "نشط"
-            else 50.0
+            item.get("source_name", "مصدر"): (
+                100.0 if item.get("observation_status") == "نشط" else 50.0
+            )
             for item in source_quality
             if isinstance(item, dict)
         }
         coverage = {
-            item.get("source_name", "مصدر"): 100.0
-            if item.get("visibility_scope")
-            else 0.0
+            item.get("source_name", "مصدر"): 100.0 if item.get("visibility_scope") else 0.0
             for item in source_quality
             if isinstance(item, dict)
         }
@@ -1992,9 +1932,7 @@ class DashboardAnalyticsService:
         safety_chart = {
             "لا تسجيل دخول": 100.0 if safety.get("no_login") else 0.0,
             "لا مصادقة": 100.0 if safety.get("no_authentication") else 0.0,
-            "لا تحكم متصفح": 100.0
-            if safety.get("no_browser_control")
-            else 0.0,
+            "لا تحكم متصفح": 100.0 if safety.get("no_browser_control") else 0.0,
             "لا تنفيذ": 100.0 if safety.get("no_execution") else 0.0,
             "لا أوامر": 100.0 if safety.get("no_order_apis") else 0.0,
             "لا وصول حساب": 100.0 if safety.get("no_account_access") else 0.0,
@@ -2002,16 +1940,16 @@ class DashboardAnalyticsService:
         }
         artifact_rows = latest.get("artifacts", []) if isinstance(latest, dict) else []
         quality = {
-            item.get("artifact_id", "لقطة"): 100.0
-            if item.get("validation_status") == "ناجح"
-            else 50.0
+            item.get("artifact_id", "لقطة"): (
+                100.0 if item.get("validation_status") == "ناجح" else 50.0
+            )
             for item in artifact_rows
             if isinstance(item, dict)
         }
         stability = {
-            item.get("artifact_id", "لقطة"): 100.0
-            if item.get("monitoring_status") == "مستقر"
-            else 50.0
+            item.get("artifact_id", "لقطة"): (
+                100.0 if item.get("monitoring_status") == "مستقر" else 50.0
+            )
             for item in artifact_rows
             if isinstance(item, dict)
         }
@@ -2107,27 +2045,19 @@ class DashboardAnalyticsService:
         safety_chart = {
             "لا تسجيل دخول": 100.0 if safety.get("no_login") else 0.0,
             "لا مصادقة": 100.0 if safety.get("no_authentication") else 0.0,
-            "لا أتمتة متصفح": 100.0
-            if safety.get("no_browser_automation")
-            else 0.0,
+            "لا أتمتة متصفح": 100.0 if safety.get("no_browser_automation") else 0.0,
             "لا وصول وسيط": 100.0 if safety.get("no_broker_access") else 0.0,
             "لا تنفيذ": 100.0 if safety.get("no_execution") else 0.0,
-            "لا تفاعل حساب": 100.0
-            if safety.get("no_account_interaction")
-            else 0.0,
+            "لا تفاعل حساب": 100.0 if safety.get("no_account_interaction") else 0.0,
         }
         rows = latest.get("imports", []) if isinstance(latest, dict) else []
         file_quality = {
-            item.get("filename", "ملف"): 100.0
-            if item.get("validation_status") == "ناجح"
-            else 50.0
+            item.get("filename", "ملف"): 100.0 if item.get("validation_status") == "ناجح" else 50.0
             for item in rows
             if isinstance(item, dict)
         }
         file_completeness = {
-            item.get("filename", "ملف"): 100.0
-            if item.get("size_bytes", 0)
-            else 0.0
+            item.get("filename", "ملف"): 100.0 if item.get("size_bytes", 0) else 0.0
             for item in rows
             if isinstance(item, dict)
         }
@@ -2228,11 +2158,15 @@ class DashboardAnalyticsService:
         latest = payload.get("latest", {}) if payload else {}
         aggregation = latest.get("aggregation", {}) if isinstance(latest, dict) else {}
         validation = latest.get("validation", {}) if isinstance(latest, dict) else {}
-        source_quality = {
-            item.get("source_name", "مصدر"): item.get("quality_score", 0)
-            for item in latest.get("observations", [])
-            if isinstance(item, dict)
-        } if isinstance(latest, dict) else {}
+        source_quality = (
+            {
+                item.get("source_name", "مصدر"): item.get("quality_score", 0)
+                for item in latest.get("observations", [])
+                if isinstance(item, dict)
+            }
+            if isinstance(latest, dict)
+            else {}
+        )
         consistency = {
             "الاتساق": aggregation.get("consistency", 0),
             "التحقق": validation.get("consistency", 0),
@@ -2541,14 +2475,20 @@ class DashboardAnalyticsService:
         }
         for item in events[:20] if isinstance(events, list) else []:
             if isinstance(item, dict):
-                assets[str(item.get("asset", "أصل"))] = assets.get(
-                    str(item.get("asset", "أصل")),
-                    0.0,
-                ) + 1.0
-                sessions[str(item.get("session", "جلسة"))] = sessions.get(
-                    str(item.get("session", "جلسة")),
-                    0.0,
-                ) + 1.0
+                assets[str(item.get("asset", "أصل"))] = (
+                    assets.get(
+                        str(item.get("asset", "أصل")),
+                        0.0,
+                    )
+                    + 1.0
+                )
+                sessions[str(item.get("session", "جلسة"))] = (
+                    sessions.get(
+                        str(item.get("session", "جلسة")),
+                        0.0,
+                    )
+                    + 1.0
+                )
                 confidence[str(item.get("signal_id", "إشارة"))] = self._float(
                     item.get("confidence")
                 )
@@ -2918,12 +2858,16 @@ class DashboardAnalyticsService:
                 label="السحب",
                 color="warning",
             ).to_dict(),
-            "exposure": bar_chart(
-                "التعرض",
-                *self._dict_chart_values(exposure.get("direction_exposure", {})),
-                label="التعرض",
-                color="blue",
-            ).to_dict() if isinstance(exposure, dict) else bar_chart("التعرض", [], []).to_dict(),
+            "exposure": (
+                bar_chart(
+                    "التعرض",
+                    *self._dict_chart_values(exposure.get("direction_exposure", {})),
+                    label="التعرض",
+                    color="blue",
+                ).to_dict()
+                if isinstance(exposure, dict)
+                else bar_chart("التعرض", [], []).to_dict()
+            ),
             "assets": bar_chart(
                 "توزيع الأصول",
                 *self._dict_chart_values(exposure_assets),
@@ -3306,12 +3250,8 @@ class DashboardAnalyticsService:
             "المحظورة": self._float(summary.get("forbidden_count")),
             "المخالفات": self._float(len(restrictions.get("violations", []))),
         }
-        allowed_chart = {
-            str(value): 1.0 for value in allowed if isinstance(value, str)
-        }
-        forbidden_chart = {
-            str(value): 1.0 for value in forbidden if isinstance(value, str)
-        }
+        allowed_chart = {str(value): 1.0 for value in allowed if isinstance(value, str)}
+        forbidden_chart = {str(value): 1.0 for value in forbidden if isinstance(value, str)}
         audit_chart = {
             "المسموحة": self._float(len(audit.get("allowed_capabilities", []))),
             "المحظورة": self._float(len(audit.get("forbidden_capabilities", []))),
@@ -3474,11 +3414,7 @@ class DashboardAnalyticsService:
             "certification": bar_chart(
                 "حالة الاعتماد النهائي",
                 *self._dict_chart_values(
-                    {
-                        str(summary.get("certification_state")): summary.get(
-                            "overall_score"
-                        )
-                    }
+                    {str(summary.get("certification_state")): summary.get("overall_score")}
                 ),
                 label="حالة الاعتماد النهائي",
                 color="blue",
@@ -3627,9 +3563,8 @@ class DashboardAnalyticsService:
             else {}
         )
         diag_summary = diag_data.get("summary", {}) if isinstance(diag_data, dict) else {}
-        source_count = (
-            self._float(diag_summary.get("available_source_count"))
-            + self._float(diag_summary.get("missing_source_count"))
+        source_count = self._float(diag_summary.get("available_source_count")) + self._float(
+            diag_summary.get("missing_source_count")
         )
         summary = {
             "available_views": available_views,
@@ -3656,9 +3591,7 @@ class DashboardAnalyticsService:
             "محلي فقط": 100.0 if summary_payload.get("local_only") else 0.0,
             "بدون تنفيذ": 100.0 if summary_payload.get("not_execution") else 0.0,
             "بدون وسيط": 100.0 if summary_payload.get("not_broker_access") else 0.0,
-            "بدون متصفح": (
-                100.0 if summary_payload.get("not_browser_automation") else 0.0
-            ),
+            "بدون متصفح": (100.0 if summary_payload.get("not_browser_automation") else 0.0),
         }
         return {
             "summary": summary,
@@ -3742,8 +3675,7 @@ class DashboardAnalyticsService:
             for index, item in enumerate(history)
         }
         diagnostics_chart = {
-            str(item.get("code", index + 1)): 1.0
-            for index, item in enumerate(diagnostics_payload)
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics_payload)
         }
         recommendations_chart = {str(item): 1.0 for item in recommendations}
         safety_chart = {
@@ -3866,27 +3798,23 @@ class DashboardAnalyticsService:
             for item in domains
         }
         diagnostics_chart = {
-            str(item.get("code", index + 1)): 1.0
-            for index, item in enumerate(diagnostics)
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
         }
-        recommendation_chart = {
-            str(item): 1.0
-            for item in recommendations
-        }
+        recommendation_chart = {str(item): 1.0 for item in recommendations}
         maturity_chart = {
             "النضج البحثي": summary["maturity_score"],
             "الدرجة النهائية": summary["final_platform_score"],
         }
         state_chart = {
-            "Not Certified": 100.0
-            if summary["certification_state"] == "Not Certified"
-            else 0.0,
-            "Conditionally Certified": 100.0
-            if summary["certification_state"] == "Conditionally Certified"
-            else 0.0,
-            "Certified For Advanced Research": 100.0
-            if summary["certification_state"] == "Certified For Advanced Research"
-            else 0.0,
+            "Not Certified": 100.0 if summary["certification_state"] == "Not Certified" else 0.0,
+            "Conditionally Certified": (
+                100.0 if summary["certification_state"] == "Conditionally Certified" else 0.0
+            ),
+            "Certified For Advanced Research": (
+                100.0
+                if summary["certification_state"] == "Certified For Advanced Research"
+                else 0.0
+            ),
         }
         return {
             "summary": summary,
@@ -3996,17 +3924,14 @@ class DashboardAnalyticsService:
             for key, value in manifest.get("safety_boundary", {}).items()
         }
         diagnostic_chart = {
-            str(item.get("code", index + 1)): 1.0
-            for index, item in enumerate(diagnostics)
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
         }
         recommendation_chart = {str(item): 1.0 for item in recommendations}
         readiness = {
-            "Ready For Research Release": 100.0
-            if release_status == "Ready For Research Release"
-            else 0.0,
-            "Ready With Warnings": 100.0
-            if release_status == "Ready With Warnings"
-            else 0.0,
+            "Ready For Research Release": (
+                100.0 if release_status == "Ready For Research Release" else 0.0
+            ),
+            "Ready With Warnings": 100.0 if release_status == "Ready With Warnings" else 0.0,
             "Not Ready": 100.0 if release_status == "Not Ready" else 0.0,
         }
         return {
@@ -4122,9 +4047,7 @@ class DashboardAnalyticsService:
                 "governance_status",
                 "Human approval gates required",
             ),
-            "warning_count": self._float(
-                summary_payload.get("warning_count", len(diagnostics))
-            ),
+            "warning_count": self._float(summary_payload.get("warning_count", len(diagnostics))),
             "recommendation_count": self._float(
                 summary_payload.get("recommendation_count", len(recommendations))
             ),
@@ -4153,8 +4076,7 @@ class DashboardAnalyticsService:
             for index, stage in enumerate(roadmap.get("roadmap_stages", []))
         }
         diagnostics_chart = {
-            str(item.get("code", index + 1)): 1.0
-            for index, item in enumerate(diagnostics)
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
         }
         recommendation_chart = {str(item): 1.0 for item in recommendations}
         transition_chart = {
@@ -4273,8 +4195,7 @@ class DashboardAnalyticsService:
             for index, item in enumerate(workstreams)
         }
         diagnostic_chart = {
-            str(item.get("code", index + 1)): 1.0
-            for index, item in enumerate(diagnostics)
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
         }
         recommendation_chart = {str(item): 1.0 for item in recommendations}
         safety_chart = {
@@ -4398,9 +4319,7 @@ class DashboardAnalyticsService:
                 "go_no_go_state",
                 go_no_go.get("decision_state", "Not Ready"),
             ),
-            "safety_requirement_count": self._float(
-                coverage.get("safety_requirement_count", 0)
-            ),
+            "safety_requirement_count": self._float(coverage.get("safety_requirement_count", 0)),
             "risk_requirement_count": self._float(coverage.get("risk_requirement_count", 0)),
             "compliance_constraint_count": self._float(
                 coverage.get("compliance_constraint_count", 0)
@@ -4408,9 +4327,7 @@ class DashboardAnalyticsService:
             "execution_constraint_count": self._float(
                 coverage.get("execution_constraint_count", 0)
             ),
-            "broker_constraint_count": self._float(
-                coverage.get("broker_constraint_count", 0)
-            ),
+            "broker_constraint_count": self._float(coverage.get("broker_constraint_count", 0)),
             "diagnostic_count": self._float(
                 summary_payload.get("diagnostic_count", len(diagnostics))
             ),
@@ -4439,16 +4356,15 @@ class DashboardAnalyticsService:
                 priorities[priority] = priorities.get(priority, 0.0) + 1.0
         decision = {
             "Not Ready": 100.0 if summary["go_no_go_state"] == "Not Ready" else 0.0,
-            "Requirements Incomplete": 100.0
-            if summary["go_no_go_state"] == "Requirements Incomplete"
-            else 0.0,
-            "Ready For Architecture Review": 100.0
-            if summary["go_no_go_state"] == "Ready For Architecture Review"
-            else 0.0,
+            "Requirements Incomplete": (
+                100.0 if summary["go_no_go_state"] == "Requirements Incomplete" else 0.0
+            ),
+            "Ready For Architecture Review": (
+                100.0 if summary["go_no_go_state"] == "Ready For Architecture Review" else 0.0
+            ),
         }
         diagnostic_chart = {
-            str(item.get("code", index + 1)): 1.0
-            for index, item in enumerate(diagnostics)
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
         }
         recommendation_chart = {str(item): 1.0 for item in recommendations}
         return {
@@ -4502,30 +4418,267 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def production_system_design_analytics(self) -> dict[str, Any]:
+        """Return latest production system design analytics."""
+        summary_payload = self._latest_json_dict(
+            "production_system_design",
+            "production_design_summary",
+        )
+        documents = {
+            "topology": self._latest_json_dict(
+                "production_system_design",
+                "topology_report",
+            ),
+            "service_boundaries": self._latest_json_dict(
+                "production_system_design",
+                "service_boundaries_report",
+            ),
+            "runtime_architecture": self._latest_json_dict(
+                "production_system_design",
+                "runtime_architecture_report",
+            ),
+            "environment_strategy": self._latest_json_dict(
+                "production_system_design",
+                "environment_strategy_report",
+            ),
+            "configuration_strategy": self._latest_json_dict(
+                "production_system_design",
+                "configuration_strategy_report",
+            ),
+            "secrets_strategy": self._latest_json_dict(
+                "production_system_design",
+                "secrets_strategy_report",
+            ),
+            "database_strategy": self._latest_json_dict(
+                "production_system_design",
+                "database_strategy_report",
+            ),
+            "event_queue_strategy": self._latest_json_dict(
+                "production_system_design",
+                "event_queue_strategy_report",
+            ),
+            "logging_strategy": self._latest_json_dict(
+                "production_system_design",
+                "logging_strategy_report",
+            ),
+            "monitoring_strategy": self._latest_json_dict(
+                "production_system_design",
+                "monitoring_strategy_report",
+            ),
+            "alerting_strategy": self._latest_json_dict(
+                "production_system_design",
+                "alerting_strategy_report",
+            ),
+            "incident_response": self._latest_json_dict(
+                "production_system_design",
+                "incident_response_report",
+            ),
+            "backup_recovery": self._latest_json_dict(
+                "production_system_design",
+                "backup_recovery_report",
+            ),
+            "release_rollback": self._latest_json_dict(
+                "production_system_design",
+                "release_rollback_report",
+            ),
+            "readiness_gates": self._latest_json_dict(
+                "production_system_design",
+                "readiness_gates_report",
+            ),
+        }
+        diagnostics = self._latest_json_list(
+            "production_system_design",
+            "diagnostics_report",
+        )
+        reports = self.loader.list_reports()
+        recommendations_report = self.loader.latest(
+            [item for item in reports if item.report_type == "json"],
+            "production_system_design",
+            "recommendations_report",
+        )
+        recommendations_content = (
+            self.loader.get_report(recommendations_report.report_id)
+            if recommendations_report
+            else None
+        )
+        recommendations_payload = (
+            recommendations_content.json_data if recommendations_content else []
+        )
+        recommendations = (
+            [str(item) for item in recommendations_payload]
+            if isinstance(recommendations_payload, list)
+            else []
+        )
+        readiness = documents["readiness_gates"]
+        gates = readiness.get("gates", []) if isinstance(readiness, dict) else []
+        summary = {
+            "design_status": summary_payload.get("design_status", "Design Incomplete"),
+            "design_domain_count": self._float(summary_payload.get("design_domain_count", 14)),
+            "service_boundary_count": self._float(
+                summary_payload.get(
+                    "service_boundary_count",
+                    len(documents["service_boundaries"].get("items", [])),
+                )
+            ),
+            "environment_strategy_status": summary_payload.get(
+                "environment_strategy_status",
+                "Design only",
+            ),
+            "configuration_strategy_status": summary_payload.get(
+                "configuration_strategy_status",
+                "Design only",
+            ),
+            "secrets_strategy_status": summary_payload.get(
+                "secrets_strategy_status",
+                "Design only",
+            ),
+            "database_strategy_status": summary_payload.get(
+                "database_strategy_status",
+                "Design only",
+            ),
+            "event_queue_strategy_status": summary_payload.get(
+                "event_queue_strategy_status",
+                "Design only",
+            ),
+            "monitoring_status": summary_payload.get("monitoring_status", "Design only"),
+            "alerting_status": summary_payload.get("alerting_status", "Design only"),
+            "incident_response_status": summary_payload.get(
+                "incident_response_status",
+                "Design only",
+            ),
+            "backup_recovery_status": summary_payload.get(
+                "backup_recovery_status",
+                "Design only",
+            ),
+            "release_rollback_status": summary_payload.get(
+                "release_rollback_status",
+                "Design only",
+            ),
+            "readiness_state": summary_payload.get(
+                "readiness_state",
+                readiness.get("readiness_state", "Not Ready"),
+            ),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "design_only": True,
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        domain_distribution = {
+            label: self._float(len(doc.get("items", [])))
+            for label, doc in documents.items()
+            if label != "readiness_gates"
+        }
+        boundary_status = {
+            str(item.get("status", "Design only")): 0.0
+            for item in documents["service_boundaries"].get("items", [])
+        }
+        for item in documents["service_boundaries"].get("items", []):
+            status = str(item.get("status", "Design only"))
+            boundary_status[status] = boundary_status.get(status, 0.0) + 1.0
+        priorities: dict[str, float] = {}
+        for doc in documents.values():
+            for item in doc.get("items", []):
+                priority = str(item.get("priority", "متوسط"))
+                priorities[priority] = priorities.get(priority, 0.0) + 1.0
+        readiness_chart = {
+            "Not Ready": 100.0 if summary["readiness_state"] == "Not Ready" else 0.0,
+            "Design Incomplete": (
+                100.0 if summary["readiness_state"] == "Design Incomplete" else 0.0
+            ),
+            "Ready For Design Review": (
+                100.0 if summary["readiness_state"] == "Ready For Design Review" else 0.0
+            ),
+        }
+        gate_chart: dict[str, float] = {}
+        for gate in gates:
+            status = str(gate.get("current_status", "missing"))
+            gate_chart[status] = gate_chart.get(status, 0.0) + 1.0
+        operational_status = {
+            "monitoring": 1.0 if summary["monitoring_status"] == "Design only" else 0.0,
+            "alerting": 1.0 if summary["alerting_status"] == "Design only" else 0.0,
+            "incidents": 1.0 if summary["incident_response_status"] == "Design only" else 0.0,
+            "backup": 1.0 if summary["backup_recovery_status"] == "Design only" else 0.0,
+            "release": 1.0 if summary["release_rollback_status"] == "Design only" else 0.0,
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {item: 1.0 for item in recommendations}
+        return {
+            "summary": summary,
+            "documents": documents,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "design_domains": bar_chart(
+                "توزيع مجالات التصميم",
+                *self._dict_chart_values(domain_distribution),
+                label="مجالات التصميم",
+                color="blue",
+            ).to_dict(),
+            "service_boundaries": bar_chart(
+                "حالة حدود الخدمات",
+                *self._dict_chart_values(boundary_status),
+                label="حدود الخدمات",
+                color="accent",
+            ).to_dict(),
+            "readiness": bar_chart(
+                "حالة الجاهزية",
+                *self._dict_chart_values(readiness_chart),
+                label="الجاهزية",
+                color="warning",
+            ).to_dict(),
+            "readiness_gates": bar_chart(
+                "بوابات الجاهزية",
+                *self._dict_chart_values(gate_chart),
+                label="البوابات",
+                color="warning",
+            ).to_dict(),
+            "priorities": bar_chart(
+                "مستويات الأولوية",
+                *self._dict_chart_values(priorities),
+                label="الأولوية",
+                color="green",
+            ).to_dict(),
+            "operations_status": bar_chart(
+                "تصميم التشغيل والمراقبة",
+                *self._dict_chart_values(operational_status),
+                label="الحالة",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التشخيص",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التشخيص",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")
         summary = summary_payload.get("summary", {}) if summary_payload else {}
         latest = summary_payload.get("latest", {}) if summary_payload else {}
         health = summary_payload.get("health_trends", {}) if summary_payload else {}
-        readiness = (
-            summary_payload.get("readiness_trends", {}) if summary_payload else {}
-        )
-        confluence = (
-            summary_payload.get("confluence_trends", {}) if summary_payload else {}
-        )
-        performance = (
-            summary_payload.get("performance_trends", {}) if summary_payload else {}
-        )
+        readiness = summary_payload.get("readiness_trends", {}) if summary_payload else {}
+        confluence = summary_payload.get("confluence_trends", {}) if summary_payload else {}
+        performance = summary_payload.get("performance_trends", {}) if summary_payload else {}
         opportunity = (
-            summary_payload.get("opportunity_quality_trends", {})
-            if summary_payload
-            else {}
+            summary_payload.get("opportunity_quality_trends", {}) if summary_payload else {}
         )
         quality = summary_payload.get("quality_trends", {}) if summary_payload else {}
-        stability = (
-            summary_payload.get("stability_trends", {}) if summary_payload else {}
-        )
+        stability = summary_payload.get("stability_trends", {}) if summary_payload else {}
         alerts = self._latest_json_dict("research_ops", "alerts")
         recommendations = self._latest_json_dict("research_ops", "recommendations")
         risks = self._latest_json_dict("research_ops", "risk")
@@ -4622,11 +4775,7 @@ class DashboardAnalyticsService:
         for row in rows:
             label = self._short_time(row.get("timestamp"))
             values.setdefault(label, []).append(self._float(row.get("confirmation_score")))
-        return {
-            key: round(sum(items) / len(items), 2)
-            for key, items in values.items()
-            if items
-        }
+        return {key: round(sum(items) / len(items), 2) for key, items in values.items() if items}
 
     def _fvg_from_opportunities(self, rows: list[dict[str, Any]]) -> dict[str, float]:
         values: dict[str, list[float]] = {}
@@ -4636,19 +4785,11 @@ class DashboardAnalyticsService:
             if isinstance(factors, list):
                 label = next((str(item) for item in factors if "FVG" in str(item)), label)
             values.setdefault(label, []).append(self._float(row.get("fvg_score")))
-        return {
-            key: round(sum(items) / len(items), 2)
-            for key, items in values.items()
-            if items
-        }
+        return {key: round(sum(items) / len(items), 2) for key, items in values.items() if items}
 
     def _timeline_from_opportunities(self, rows: list[dict[str, Any]]) -> dict[str, float]:
         values: dict[str, list[float]] = {}
         for row in rows:
             label = self._short_time(row.get("timestamp"))
             values.setdefault(label, []).append(self._float(row.get("qualification_score")))
-        return {
-            key: round(sum(items) / len(items), 2)
-            for key, items in values.items()
-            if items
-        }
+        return {key: round(sum(items) / len(items), 2) for key, items in values.items() if items}

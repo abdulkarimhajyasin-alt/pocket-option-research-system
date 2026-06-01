@@ -1,0 +1,152 @@
+{
+  "schema_version": "production_system_design.v1",
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "incident_response",
+  "title": "Incident Response Design",
+  "status": "تصميم فقط",
+  "items": [
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "INCIDENT_RESPONSE-01",
+      "title": "Incident categories",
+      "description": "Design-only blueprint for incident categories.",
+      "category": "incident_response",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "INCIDENT_RESPONSE-02",
+      "title": "Stop conditions",
+      "description": "Design-only blueprint for stop conditions.",
+      "category": "incident_response",
+      "priority": "مرتفع",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "INCIDENT_RESPONSE-03",
+      "title": "Operator actions",
+      "description": "Design-only blueprint for operator actions.",
+      "category": "incident_response",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "INCIDENT_RESPONSE-04",
+      "title": "Escalation",
+      "description": "Design-only blueprint for escalation.",
+      "category": "incident_response",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "INCIDENT_RESPONSE-05",
+      "title": "Rollback",
+      "description": "Design-only blueprint for rollback.",
+      "category": "incident_response",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "INCIDENT_RESPONSE-06",
+      "title": "Post-incident review",
+      "description": "Design-only blueprint for post-incident review.",
+      "category": "incident_response",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    },
+    {
+      "schema_version": "production_system_design.v1",
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "item_id": "INCIDENT_RESPONSE-07",
+      "title": "Evidence preservation",
+      "description": "Design-only blueprint for evidence preservation.",
+      "category": "incident_response",
+      "priority": "متوسط",
+      "status": "تصميم فقط",
+      "implementation_allowed_now": false,
+      "future_program_required": true,
+      "safety_notes": [
+        "Design artifact only.",
+        "No current implementation or external connectivity is allowed."
+      ],
+      "verification_method": "design review"
+    }
+  ]
+}

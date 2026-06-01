@@ -36,7 +36,7 @@ from app.release_packaging.service import ReleasePackagingService
 from app.post_research_architecture.service import PostResearchArchitectureService
 from app.trading_architecture_program.service import TradingArchitectureProgramService
 from app.trading_requirements.service import TradingRequirementsService
-
+from app.production_system_design.service import ProductionSystemDesignService
 
 SAFETY_NOTE = (
     "This is a local research dashboard. It does not execute live trades, connect to "
@@ -815,6 +815,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/production-system-design", response_class=HTMLResponse)
+    def production_system_design(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/production_system_design.html",
+            context(
+                request,
+                dashboard,
+                page="production_system_design",
+                production_system_design=dashboard.analytics.production_system_design_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1182,6 +1196,78 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/trading-requirements/recommendations")
     def api_trading_requirements_recommendations() -> list[str]:
         return TradingRequirementsService(root).generate_recommendations()
+
+    @app.get("/api/production-system-design")
+    def api_production_system_design() -> dict[str, object]:
+        return dashboard_context().analytics.production_system_design_analytics()
+
+    @app.get("/api/production-system-design/topology")
+    def api_production_system_design_topology() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_topology()
+
+    @app.get("/api/production-system-design/service-boundaries")
+    def api_production_system_design_service_boundaries() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_service_boundaries()
+
+    @app.get("/api/production-system-design/runtime")
+    def api_production_system_design_runtime() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_runtime_architecture()
+
+    @app.get("/api/production-system-design/environments")
+    def api_production_system_design_environments() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_environment_strategy()
+
+    @app.get("/api/production-system-design/configuration")
+    def api_production_system_design_configuration() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_configuration_strategy()
+
+    @app.get("/api/production-system-design/secrets")
+    def api_production_system_design_secrets() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_secrets_strategy()
+
+    @app.get("/api/production-system-design/database")
+    def api_production_system_design_database() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_database_strategy()
+
+    @app.get("/api/production-system-design/events")
+    def api_production_system_design_events() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_event_queue_strategy()
+
+    @app.get("/api/production-system-design/logging")
+    def api_production_system_design_logging() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_logging_strategy()
+
+    @app.get("/api/production-system-design/monitoring")
+    def api_production_system_design_monitoring() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_monitoring_strategy()
+
+    @app.get("/api/production-system-design/alerting")
+    def api_production_system_design_alerting() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_alerting_strategy()
+
+    @app.get("/api/production-system-design/incidents")
+    def api_production_system_design_incidents() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_incident_response()
+
+    @app.get("/api/production-system-design/backup-recovery")
+    def api_production_system_design_backup_recovery() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_backup_recovery()
+
+    @app.get("/api/production-system-design/release-rollback")
+    def api_production_system_design_release_rollback() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_release_rollback()
+
+    @app.get("/api/production-system-design/readiness-gates")
+    def api_production_system_design_readiness_gates() -> dict[str, object]:
+        return ProductionSystemDesignService(root).build_readiness_gates()
+
+    @app.get("/api/production-system-design/diagnostics")
+    def api_production_system_design_diagnostics() -> list[dict[str, object]]:
+        return ProductionSystemDesignService(root).generate_diagnostics()
+
+    @app.get("/api/production-system-design/recommendations")
+    def api_production_system_design_recommendations() -> list[str]:
+        return ProductionSystemDesignService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

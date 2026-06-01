@@ -152,5 +152,27 @@
     "file_count": 4,
     "archive_status": "stored",
     "diagnostics_count": 1
+  },
+  {
+    "archive_id": "archive-research-v0015",
+    "version_id": "research-v0015",
+    "snapshot_id": "snapshot-1b28e2ffbd48",
+    "archive_path": "storage\\research_archive\\snapshots\\research-v0015",
+    "report_path": "reports\\research_archive",
+    "source_count": 11,
+    "file_count": 4,
+    "archive_status": "stored",
+    "diagnostics_count": 1
+  },
+  {
+    "archive_id": "archive-research-v0016",
+    "version_id": "research-v0016",
+    "snapshot_id": "snapshot-c0258f7f871e",
+    "archive_path": "D:\\pocket-option-research-system\\storage\\research_archive\\snapshots\\research-v0016",
+    "report_path": "reports\\research_archive",
+    "source_count": 11,
+    "file_count": 4,
+    "archive_status": "stored",
+    "diagnostics_count": 1
   }
 ]

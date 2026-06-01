@@ -1,0 +1,66 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.production_system_design }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تصميم معماري فقط</p>
+    <h1>مخطط تصميم النظام الإنتاجي المستقبلي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث التصميم</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة التصميم</span>
+    <strong>{{ production_system_design.summary.design_status|default("Design Incomplete") }}</strong>
+    <p>هذه الصفحة تصميم إنتاجي مستقبلي فقط ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط أو بنية تشغيل خارجية.</p>
+  </div>
+  <div class="executive-score">
+    <span>حالة الجاهزية</span>
+    <strong>{{ production_system_design.summary.readiness_state|default("Not Ready") }}</strong>
+  </div>
+  <div>
+    <span>مجالات التصميم / حدود الخدمات</span>
+    <strong>{{ production_system_design.summary.design_domain_count|default(0)|number_ar }} / {{ production_system_design.summary.service_boundary_count|default(0)|number_ar }}</strong>
+    <small>design-only / architecture-only / local-only</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>مجالات التصميم</span><strong>{{ production_system_design.summary.design_domain_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>حدود الخدمات</span><strong>{{ production_system_design.summary.service_boundary_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>البيئات</span><strong>{{ production_system_design.summary.environment_strategy_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>الإعدادات</span><strong>{{ production_system_design.summary.configuration_strategy_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>الأسرار</span><strong>{{ production_system_design.summary.secrets_strategy_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>قاعدة البيانات</span><strong>{{ production_system_design.summary.database_strategy_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>الأحداث والصفوف</span><strong>{{ production_system_design.summary.event_queue_strategy_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>المراقبة</span><strong>{{ production_system_design.summary.monitoring_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>التنبيهات</span><strong>{{ production_system_design.summary.alerting_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>الحوادث</span><strong>{{ production_system_design.summary.incident_response_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>النسخ والاستعادة</span><strong>{{ production_system_design.summary.backup_recovery_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>الإصدار والتراجع</span><strong>{{ production_system_design.summary.release_rollback_status|default("Design only") }}</strong></article>
+  <article class="metric-card"><span>التشخيص</span><strong>{{ production_system_design.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ production_system_design.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>مجالات التصميم</h2><span>الوثائق</span></div><div class="chart" data-chart='{{ production_system_design.design_domains|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>حدود الخدمات</h2><span>تصميم فقط</span></div><div class="chart" data-chart='{{ production_system_design.service_boundaries|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>حالة الجاهزية</h2><span>لا يعتمد التشغيل الحقيقي</span></div><div class="chart" data-chart='{{ production_system_design.readiness|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>بوابات الجاهزية</h2><span>مراجعة مطلوبة</span></div><div class="chart" data-chart='{{ production_system_design.readiness_gates|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>الأولوية</h2><span>مجالات التصميم</span></div><div class="chart" data-chart='{{ production_system_design.priorities|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التشغيل والمراقبة</h2><span>حالة التصميم</span></div><div class="chart" data-chart='{{ production_system_design.operations_status|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التشخيص</h2><span>سلامة الحدود</span></div><div class="chart" data-chart='{{ production_system_design.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>الخطوة الاستراتيجية</span></div><div class="chart" data-chart='{{ production_system_design.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>ملخص التصميم</h2><span>محلي فقط</span></div><pre class="code-block">{{ production_system_design.summary|tojson(indent=2) }}</pre></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات النصية</h2><span>مراجعة التصميم</span></div><pre class="code-block">{{ production_system_design.recommendations_items|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}
