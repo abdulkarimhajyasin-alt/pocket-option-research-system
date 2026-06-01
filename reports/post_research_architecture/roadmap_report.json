@@ -1,0 +1,49 @@
+{
+  "schema_version": "post_research_architecture.v1",
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "roadmap_id": "post-research-roadmap",
+  "created_at": "deterministic-post-research-architecture",
+  "current_platform_state": "Research Platform v1.0",
+  "next_program_name": "Trading System Architecture Program",
+  "roadmap_stages": [
+    "Research Platform Freeze",
+    "Documentation & Metadata Reconciliation",
+    "Architecture Separation Decision",
+    "Future Trading System Requirements",
+    "Risk Governance Design",
+    "Execution Safety Design",
+    "Broker Isolation Design",
+    "Monitoring & Incident Response Design",
+    "Legal/Compliance Review",
+    "Paper-to-External Simulation Boundary Review",
+    "External Integration Feasibility Study",
+    "Go/No-Go Decision"
+  ],
+  "forbidden_shortcuts": [
+    "Do not add real trading into the research repository.",
+    "Do not add broker connectivity before a separate architecture program.",
+    "Do not add credential handling to this platform.",
+    "Do not convert paper-only outputs into operational instructions."
+  ],
+  "recommended_sequence": [
+    "Research Platform Freeze",
+    "Documentation & Metadata Reconciliation",
+    "Architecture Separation Decision",
+    "Future Trading System Requirements",
+    "Risk Governance Design",
+    "Execution Safety Design",
+    "Broker Isolation Design",
+    "Monitoring & Incident Response Design",
+    "Legal/Compliance Review",
+    "Paper-to-External Simulation Boundary Review",
+    "External Integration Feasibility Study",
+    "Go/No-Go Decision"
+  ],
+  "safety_notes": [
+    "The current platform remains research-only.",
+    "All future implementation decisions require separate approval.",
+    "No roadmap stage grants approval for real-world trading operations."
+  ]
+}

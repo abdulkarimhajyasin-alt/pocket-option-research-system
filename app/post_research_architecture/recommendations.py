@@ -1,0 +1,21 @@
+"""Arabic recommendations for post-research strategic architecture."""
+
+from __future__ import annotations
+
+
+class PostResearchRecommendationBuilder:
+    """Build deterministic Arabic recommendations."""
+
+    def build(self) -> list[str]:
+        return [
+            "تجميد منصة البحث كإصدار v1.0",
+            "تحديث التوثيق النهائي",
+            "فصل مسار التداول المستقبلي عن المنصة الحالية",
+            "عدم إضافة تنفيذ حقيقي داخل المستودع الحالي",
+            "بناء برنامج معماري منفصل قبل أي تنفيذ",
+            "مراجعة المخاطر",
+            "مراجعة الجوانب القانونية والتنظيمية",
+            "وضع بوابات موافقة بشرية",
+            "وضع Kill Switch قبل أي نقاش تنفيذي مستقبلي",
+            "الحفاظ على حدود البحث فقط",
+        ]

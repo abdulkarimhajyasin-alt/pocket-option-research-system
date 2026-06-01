@@ -33,6 +33,7 @@ from app.research_api.service import UnifiedResearchAPIService
 from app.research_archive.service import ResearchArchiveService
 from app.platform_certification.service import PlatformCertificationService
 from app.release_packaging.service import ReleasePackagingService
+from app.post_research_architecture.service import PostResearchArchitectureService
 
 
 SAFETY_NOTE = (
@@ -766,6 +767,22 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/post-research-architecture", response_class=HTMLResponse)
+    def post_research_architecture(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/post_research_architecture.html",
+            context(
+                request,
+                dashboard,
+                page="post_research_architecture",
+                post_research_architecture=(
+                    dashboard.analytics.post_research_architecture_analytics()
+                ),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1033,6 +1050,34 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/release-packaging/recommendations")
     def api_release_packaging_recommendations() -> list[str]:
         return ReleasePackagingService(root).generate_recommendations()
+
+    @app.get("/api/post-research-architecture")
+    def api_post_research_architecture() -> dict[str, object]:
+        return dashboard_context().analytics.post_research_architecture_analytics()
+
+    @app.get("/api/post-research-architecture/roadmap")
+    def api_post_research_architecture_roadmap() -> dict[str, object]:
+        return PostResearchArchitectureService(root).roadmap()
+
+    @app.get("/api/post-research-architecture/gaps")
+    def api_post_research_architecture_gaps() -> dict[str, object]:
+        return PostResearchArchitectureService(root).gaps()
+
+    @app.get("/api/post-research-architecture/blueprints")
+    def api_post_research_architecture_blueprints() -> dict[str, object]:
+        return PostResearchArchitectureService(root).blueprints()
+
+    @app.get("/api/post-research-architecture/transition")
+    def api_post_research_architecture_transition() -> dict[str, object]:
+        return PostResearchArchitectureService(root).transition()
+
+    @app.get("/api/post-research-architecture/diagnostics")
+    def api_post_research_architecture_diagnostics() -> list[dict[str, object]]:
+        return PostResearchArchitectureService(root).generate_diagnostics()
+
+    @app.get("/api/post-research-architecture/recommendations")
+    def api_post_research_architecture_recommendations() -> list[str]:
+        return PostResearchArchitectureService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

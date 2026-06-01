@@ -14,7 +14,7 @@
     "not_execution": true
   },
   "latest": {
-    "timestamp": "2026-05-31T21:38:27.172417+00:00",
+    "timestamp": "2026-06-01T14:46:09.526416+00:00",
     "candidates": [
       {
         "candidate_id": "execution_candidate_0001",
@@ -90,7 +90,7 @@
         "confluence": 74.83,
         "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.439490",
+        "timestamp": "2026-06-01T14:42:04.433805",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -115,14 +115,14 @@
       {
         "candidate_id": "execution_candidate_0004",
         "signal_id": "signal_stream_0004",
-        "asset": "جاهزية المراقبة",
+        "asset": "مراقبة المتصفح",
         "direction": "NO_TRADE",
-        "confidence": 81.73,
-        "quality": 67.41,
-        "confluence": 74.83,
-        "readiness": 74.79,
+        "confidence": 86.34,
+        "quality": 100.0,
+        "confluence": 82.27,
+        "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.439490",
+        "timestamp": "2026-06-01T14:42:04.984740",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -137,7 +137,7 @@
           "not_credential_handling": true,
           "not_browser_automation": true,
           "not_broker_control": true,
-          "source": "broker_readiness"
+          "source": "browser_observation"
         },
         "research_only": true,
         "readiness_only": true,
@@ -154,7 +154,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.928152",
+        "timestamp": "2026-06-01T14:42:04.984740",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -179,14 +179,14 @@
       {
         "candidate_id": "execution_candidate_0006",
         "signal_id": "signal_stream_0006",
-        "asset": "مراقبة المتصفح",
-        "direction": "NO_TRADE",
+        "asset": "browser_snapshot",
+        "direction": "PUT",
         "confidence": 86.34,
         "quality": 100.0,
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.928152",
+        "timestamp": "2026-06-01T14:42:04.984740",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -218,7 +218,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:09:41.884725",
+        "timestamp": "2026-06-01T14:42:11.400909",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -250,7 +250,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:09:41.884725",
+        "timestamp": "2026-06-01T14:42:11.400909",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -282,7 +282,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:10:01.685208",
+        "timestamp": "2026-06-01T14:42:44.057547",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -314,7 +314,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:10:01.685208",
+        "timestamp": "2026-06-01T14:42:44.057547",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -346,7 +346,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:10:01.685208",
+        "timestamp": "2026-06-01T14:42:44.057547",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -378,7 +378,7 @@
         "confluence": 78.8,
         "readiness": 79.56,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:10:59.492871",
+        "timestamp": "2026-06-01T14:44:30.031651",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -403,14 +403,14 @@
       {
         "candidate_id": "execution_candidate_0013",
         "signal_id": "signal_stream_0013",
-        "asset": "browser_snapshot",
-        "direction": "CALL",
-        "confidence": 86.34,
-        "quality": 100.0,
-        "confluence": 82.27,
-        "readiness": 83.72,
+        "asset": "جاهزية المراقبة",
+        "direction": "NO_TRADE",
+        "confidence": 81.73,
+        "quality": 67.41,
+        "confluence": 74.83,
+        "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:36:46.870865",
+        "timestamp": "2026-06-01T14:44:30.175058",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -425,7 +425,7 @@
           "not_credential_handling": true,
           "not_browser_automation": true,
           "not_broker_control": true,
-          "source": "browser_observation"
+          "source": "broker_readiness"
         },
         "research_only": true,
         "readiness_only": true,
@@ -442,7 +442,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:36:53.097036",
+        "timestamp": "2026-06-01T14:44:59.930700",
         "metadata": {
           "research_only": true,
           "readiness_only": true,

@@ -312,6 +312,12 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_release_packaging.py",),
     ),
+    "post_research_architecture": ActionDefinition(
+        name="post_research_architecture",
+        label="هندسة ما بعد البحث",
+        description="توليد تخطيط معماري فقط لما بعد إصدار البحث دون تنفيذ أو وسيط.",
+        command=("scripts/run_post_research_architecture.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

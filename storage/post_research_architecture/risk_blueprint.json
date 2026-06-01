@@ -1,0 +1,56 @@
+{
+  "schema_version": "post_research_architecture.v1",
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "blueprint_id": "future-risk-architecture-blueprint",
+  "risk_domains": [
+    "Capital exposure",
+    "Daily loss",
+    "Drawdown",
+    "Instrument concentration",
+    "Operational dependency failure",
+    "Human override governance"
+  ],
+  "hard_limits": [
+    "Global disable threshold",
+    "Per-strategy exposure ceiling",
+    "Per-session stop condition",
+    "Maximum command rate"
+  ],
+  "kill_switch_requirements": [
+    "Independent from strategy code",
+    "Manual and automated disable modes",
+    "Audited activation reason",
+    "Fail-closed default"
+  ],
+  "max_loss_rules": [
+    "Daily loss threshold",
+    "Rolling-period loss threshold",
+    "Consecutive-loss stop condition"
+  ],
+  "drawdown_rules": [
+    "Peak-to-trough limit",
+    "Recovery confirmation requirement",
+    "Escalation after repeated drawdown events"
+  ],
+  "exposure_rules": [
+    "Single-asset cap",
+    "Correlated-asset cap",
+    "Strategy-level cap",
+    "Time-window cap"
+  ],
+  "incident_response": [
+    "Immediate disable",
+    "Evidence preservation",
+    "Human review",
+    "Post-incident corrective action"
+  ],
+  "audit_requirements": [
+    "Risk decision log",
+    "Limit-change history",
+    "Override approval trail",
+    "Incident timeline"
+  ],
+  "not_implemented": true
+}

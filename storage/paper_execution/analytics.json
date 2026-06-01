@@ -4,22 +4,22 @@
   "rejected": 0,
   "active": 0,
   "expired": 11,
-  "wins": 3,
+  "wins": 2,
   "losses": 0,
-  "breakeven": 0,
+  "breakeven": 1,
   "unresolved": 11,
-  "win_rate": 0.2143,
+  "win_rate": 0.1429,
   "average_confidence": 84.44,
   "average_readiness": 79.7,
   "paper_drawdown": 0.0,
   "paper_streaks": {
-    "max_paper_win_streak": 2,
+    "max_paper_win_streak": 1,
     "max_paper_loss_streak": 0
   },
   "paper_only": true,
   "research_only": true,
   "not_real_execution": true,
-  "paper_execution_score": 64.65,
+  "paper_execution_score": 62.27,
   "warning_count": 3,
   "recommendation_count": 3
 }

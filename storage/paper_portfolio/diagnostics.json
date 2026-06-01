@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-31T21:38:52.061700+00:00",
+  "timestamp": "2026-06-01T14:46:19.092468+00:00",
   "portfolio": {
     "portfolio_id": "paper_portfolio_0001",
-    "created_at": "2026-05-31T21:38:52.061332+00:00",
+    "created_at": "2026-06-01T14:46:19.092312+00:00",
     "total_orders": 14,
     "active_orders": 0,
-    "wins": 3,
+    "wins": 2,
     "losses": 0,
-    "breakeven": 0,
-    "win_rate": 0.2143,
+    "breakeven": 1,
+    "win_rate": 0.1429,
     "drawdown": 0.0,
     "stability_score": 67.0,
-    "health_score": 62.81,
+    "health_score": 60.43,
     "risk_score": 86.62,
     "metadata": {
       "paper_only": true,
@@ -41,11 +41,11 @@
       "مراقبة السوق": 1,
       "جاهزية المراقبة": 2,
       "مراقبة المتصفح": 2,
+      "browser_snapshot": 1,
       "المراقبة الخارجية": 2,
       "استيراد اللقطات": 2,
       "snapshot": 1,
       "ذكاء المراقبة": 1,
-      "browser_snapshot": 1,
       "external_source": 1
     },
     "session_exposure": {
@@ -53,8 +53,8 @@
     },
     "direction_exposure": {
       "NO_TRADE": 11,
-      "CALL": 2,
-      "PUT": 1
+      "PUT": 2,
+      "CALL": 1
     },
     "confidence_exposure": {
       "ثقة متوسطة": 3,
@@ -84,8 +84,8 @@
       0.0,
       1.0,
       1.0,
-      2.0,
-      3.0
+      1.0,
+      2.0
     ],
     "paper_only": true
   },
@@ -122,8 +122,8 @@
       "name": "candidate_quality",
       "arabic_label": "جودة المرشحين",
       "status": "WARNING",
-      "score": 62.81,
-      "detail": "جودة المرشحين: 62.81"
+      "score": 60.43,
+      "detail": "جودة المرشحين: 60.43"
     },
     {
       "name": "portfolio_stability",
@@ -171,7 +171,7 @@
     }
   ],
   "analytics": {
-    "win_rate": 0.2143,
+    "win_rate": 0.1429,
     "loss_rate": 0.0,
     "drawdown_analysis": {
       "current_drawdown": 0.0,
@@ -192,8 +192,8 @@
         0.0,
         1.0,
         1.0,
-        2.0,
-        3.0
+        1.0,
+        2.0
       ],
       "paper_only": true
     },
@@ -206,11 +206,11 @@
         "مراقبة السوق": 1,
         "جاهزية المراقبة": 2,
         "مراقبة المتصفح": 2,
+        "browser_snapshot": 1,
         "المراقبة الخارجية": 2,
         "استيراد اللقطات": 2,
         "snapshot": 1,
         "ذكاء المراقبة": 1,
-        "browser_snapshot": 1,
         "external_source": 1
       },
       "session_exposure": {
@@ -218,8 +218,8 @@
       },
       "direction_exposure": {
         "NO_TRADE": 11,
-        "CALL": 2,
-        "PUT": 1
+        "PUT": 2,
+        "CALL": 1
       },
       "confidence_exposure": {
         "ثقة متوسطة": 3,
@@ -240,21 +240,21 @@
     },
     "paper_only": true,
     "research_only": true,
-    "portfolio_score": 81.92,
+    "portfolio_score": 81.49,
     "warning_count": 3,
     "recommendation_count": 3,
     "summary": {
       "portfolio_id": "paper_portfolio_0001",
-      "created_at": "2026-05-31T21:38:52.061332+00:00",
+      "created_at": "2026-06-01T14:46:19.092312+00:00",
       "total_orders": 14,
       "active_orders": 0,
-      "wins": 3,
+      "wins": 2,
       "losses": 0,
-      "breakeven": 0,
-      "win_rate": 0.2143,
+      "breakeven": 1,
+      "win_rate": 0.1429,
       "drawdown": 0.0,
       "stability_score": 67.0,
-      "health_score": 62.81,
+      "health_score": 60.43,
       "risk_score": 86.62,
       "metadata": {
         "paper_only": true,
@@ -313,7 +313,7 @@
       "reason": "تقليل التعرض"
     }
   ],
-  "score": 81.92,
+  "score": 81.49,
   "metadata": {
     "paper_only": true,
     "research_only": true,

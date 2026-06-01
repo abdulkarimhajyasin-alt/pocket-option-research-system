@@ -215,5 +215,98 @@
       "no_money_handling": true,
       "no_external_service_calls": true
     }
+  },
+  {
+    "version_id": "research-v0008",
+    "version_label": "research-v0008",
+    "snapshot_id": "snapshot-734fb2e32b79",
+    "created_at": "deterministic-local-research-archive",
+    "previous_version_id": "research-v0007",
+    "checksum": "734fb2e32b79f808a8087f147c04876a9d300a64c99c1bd855f75bf829e86d09",
+    "metadata": {
+      "schema_version": "research_archive.v1",
+      "stable_json_schema": true,
+      "research_archive_only": true,
+      "source_count": 11,
+      "missing_source_count": 5,
+      "duplicate_checksum_reused": false
+    },
+    "safety_boundary": {
+      "research_only": true,
+      "local_only": true,
+      "archive_only": true,
+      "no_broker_access": true,
+      "no_broker_api": true,
+      "no_account_login": true,
+      "no_credentials": true,
+      "no_browser_automation": true,
+      "no_real_trade_control": true,
+      "no_order_placement": true,
+      "no_live_trading": true,
+      "no_money_handling": true,
+      "no_external_service_calls": true
+    }
+  },
+  {
+    "version_id": "research-v0009",
+    "version_label": "research-v0009",
+    "snapshot_id": "snapshot-fe8df764f1dd",
+    "created_at": "deterministic-local-research-archive",
+    "previous_version_id": "research-v0008",
+    "checksum": "fe8df764f1dde0b978a762ea6b218861b254f6c489945e67a7c1dcb3da1fb06e",
+    "metadata": {
+      "schema_version": "research_archive.v1",
+      "stable_json_schema": true,
+      "research_archive_only": true,
+      "source_count": 11,
+      "missing_source_count": 5,
+      "duplicate_checksum_reused": false
+    },
+    "safety_boundary": {
+      "research_only": true,
+      "local_only": true,
+      "archive_only": true,
+      "no_broker_access": true,
+      "no_broker_api": true,
+      "no_account_login": true,
+      "no_credentials": true,
+      "no_browser_automation": true,
+      "no_real_trade_control": true,
+      "no_order_placement": true,
+      "no_live_trading": true,
+      "no_money_handling": true,
+      "no_external_service_calls": true
+    }
+  },
+  {
+    "version_id": "research-v0010",
+    "version_label": "research-v0010",
+    "snapshot_id": "snapshot-9d9b0b199838",
+    "created_at": "deterministic-local-research-archive",
+    "previous_version_id": "research-v0009",
+    "checksum": "9d9b0b1998386a044aef5e050f8550a3b8eb08ef514b5c58a08fa45faee9481b",
+    "metadata": {
+      "schema_version": "research_archive.v1",
+      "stable_json_schema": true,
+      "research_archive_only": true,
+      "source_count": 11,
+      "missing_source_count": 5,
+      "duplicate_checksum_reused": false
+    },
+    "safety_boundary": {
+      "research_only": true,
+      "local_only": true,
+      "archive_only": true,
+      "no_broker_access": true,
+      "no_broker_api": true,
+      "no_account_login": true,
+      "no_credentials": true,
+      "no_browser_automation": true,
+      "no_real_trade_control": true,
+      "no_order_placement": true,
+      "no_live_trading": true,
+      "no_money_handling": true,
+      "no_external_service_calls": true
+    }
   }
 ]

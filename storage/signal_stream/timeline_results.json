@@ -29,7 +29,7 @@
     {
       "sequence": 3,
       "signal_id": "signal_stream_0003",
-      "timestamp": "2026-05-31T21:36:46.402150",
+      "timestamp": "2026-06-01T14:42:04.433805",
       "asset": "جاهزية المراقبة",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -38,16 +38,16 @@
     {
       "sequence": 4,
       "signal_id": "signal_stream_0004",
-      "timestamp": "2026-05-31T21:36:46.402150",
-      "asset": "جاهزية المراقبة",
+      "timestamp": "2026-06-01T14:42:04.984740",
+      "asset": "مراقبة المتصفح",
       "session": "passive",
       "direction": "NO_TRADE",
-      "confidence": 81.73
+      "confidence": 86.34
     },
     {
       "sequence": 5,
       "signal_id": "signal_stream_0005",
-      "timestamp": "2026-05-31T21:36:46.870865",
+      "timestamp": "2026-06-01T14:42:04.984740",
       "asset": "مراقبة المتصفح",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -56,52 +56,52 @@
     {
       "sequence": 6,
       "signal_id": "signal_stream_0006",
-      "timestamp": "2026-05-31T21:36:46.870865",
-      "asset": "مراقبة المتصفح",
+      "timestamp": "2026-06-01T14:42:11.400909",
+      "asset": "المراقبة الخارجية",
       "session": "passive",
       "direction": "NO_TRADE",
-      "confidence": 86.34
+      "confidence": 100.0
     },
     {
       "sequence": 7,
       "signal_id": "signal_stream_0007",
-      "timestamp": "2026-05-31T21:36:46.870865",
-      "asset": "browser_snapshot",
+      "timestamp": "2026-06-01T14:42:11.400909",
+      "asset": "المراقبة الخارجية",
       "session": "passive",
-      "direction": "CALL",
-      "confidence": 86.34
+      "direction": "NO_TRADE",
+      "confidence": 100.0
     },
     {
       "sequence": 8,
       "signal_id": "signal_stream_0008",
-      "timestamp": "2026-05-31T21:36:53.097036",
-      "asset": "المراقبة الخارجية",
+      "timestamp": "2026-06-01T14:42:44.057547",
+      "asset": "استيراد اللقطات",
       "session": "passive",
       "direction": "NO_TRADE",
-      "confidence": 100.0
+      "confidence": 97.19
     },
     {
       "sequence": 9,
       "signal_id": "signal_stream_0009",
-      "timestamp": "2026-05-31T21:36:53.097036",
-      "asset": "المراقبة الخارجية",
+      "timestamp": "2026-06-01T14:42:44.057547",
+      "asset": "استيراد اللقطات",
       "session": "passive",
       "direction": "NO_TRADE",
-      "confidence": 100.0
+      "confidence": 97.19
     },
     {
       "sequence": 10,
       "signal_id": "signal_stream_0010",
-      "timestamp": "2026-05-31T21:36:53.097036",
-      "asset": "external_source",
-      "session": "passive",
+      "timestamp": "2026-06-01T14:42:44.057547",
+      "asset": "snapshot",
+      "session": "manual",
       "direction": "PUT",
-      "confidence": 100.0
+      "confidence": 97.19
     },
     {
       "sequence": 11,
       "signal_id": "signal_stream_0011",
-      "timestamp": "2026-05-31T21:36:57.670092",
+      "timestamp": "2026-06-01T14:44:30.031651",
       "asset": "ذكاء المراقبة",
       "session": "passive",
       "direction": "NO_TRADE",
@@ -110,29 +110,29 @@
     {
       "sequence": 12,
       "signal_id": "signal_stream_0012",
-      "timestamp": "2026-05-31T21:37:22.578958",
-      "asset": "استيراد اللقطات",
+      "timestamp": "2026-06-01T14:44:30.175058",
+      "asset": "جاهزية المراقبة",
       "session": "passive",
       "direction": "NO_TRADE",
-      "confidence": 97.19
+      "confidence": 81.73
     },
     {
       "sequence": 13,
       "signal_id": "signal_stream_0013",
-      "timestamp": "2026-05-31T21:37:22.578958",
-      "asset": "استيراد اللقطات",
+      "timestamp": "2026-06-01T14:46:04.973138",
+      "asset": "browser_snapshot",
       "session": "passive",
-      "direction": "NO_TRADE",
-      "confidence": 97.19
+      "direction": "CALL",
+      "confidence": 86.34
     },
     {
       "sequence": 14,
       "signal_id": "signal_stream_0014",
-      "timestamp": "2026-05-31T21:37:22.578958",
-      "asset": "snapshot",
-      "session": "manual",
+      "timestamp": "2026-06-01T14:46:11.114026",
+      "asset": "external_source",
+      "session": "passive",
       "direction": "PUT",
-      "confidence": 97.19
+      "confidence": 100.0
     }
   ]
 }

@@ -1,0 +1,182 @@
+{
+  "schema_version": "post_research_architecture.v1",
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "gap_id": "strategic-gap-analysis",
+  "current_capabilities": [
+    "Research reports",
+    "Local dashboard and APIs",
+    "Validation and certification",
+    "Paper-only simulation",
+    "Research archive and knowledge graph",
+    "Release packaging"
+  ],
+  "missing_capabilities": [
+    "Production governance",
+    "Compliance approval",
+    "Operational monitoring",
+    "Isolated future-system design",
+    "Human approval workflows",
+    "Incident response process"
+  ],
+  "technical_gaps": [
+    {
+      "category": "Data readiness",
+      "current_state": "Strong local research datasets, normalization, quality checks, and reports.",
+      "missing_requirements": [
+        "Production feed contracts",
+        "Data licensing review",
+        "Data retention policy"
+      ],
+      "gap_level": "متوسط",
+      "risk_level": "مرتفع",
+      "recommendation": "Create production-grade data governance before external use."
+    },
+    {
+      "category": "Signal readiness",
+      "current_state": "Research classifications and explainable analytics exist.",
+      "missing_requirements": [
+        "Independent validation",
+        "Human approval gates",
+        "Forward-test governance"
+      ],
+      "gap_level": "مرتفع",
+      "risk_level": "مرتفع",
+      "recommendation": "Keep signal outputs as research until independently governed."
+    },
+    {
+      "category": "Observation readiness",
+      "current_state": "Passive local observation and replay pipelines exist.",
+      "missing_requirements": [
+        "Operational source contracts",
+        "Monitoring SLAs",
+        "Incident review"
+      ],
+      "gap_level": "متوسط",
+      "risk_level": "مرتفع",
+      "recommendation": "Separate observation operations from research artifacts."
+    },
+    {
+      "category": "Paper readiness",
+      "current_state": "Paper-only execution and portfolio governance exist.",
+      "missing_requirements": [
+        "External sandbox boundary",
+        "Human review",
+        "Independent risk signoff"
+      ],
+      "gap_level": "متوسط",
+      "risk_level": "مرتفع",
+      "recommendation": "Use paper outputs only as evidence for future design."
+    },
+    {
+      "category": "Risk readiness",
+      "current_state": "Research and paper risk checks exist.",
+      "missing_requirements": [
+        "Real-world hard limits",
+        "Independent kill switch",
+        "Incident playbooks"
+      ],
+      "gap_level": "حرج",
+      "risk_level": "مرتفع",
+      "recommendation": "Design risk governance before any implementation discussion."
+    },
+    {
+      "category": "Execution readiness",
+      "current_state": "Offline and paper simulation exist only.",
+      "missing_requirements": [
+        "Isolated gateway design",
+        "Audit trail",
+        "Failure containment"
+      ],
+      "gap_level": "حرج",
+      "risk_level": "مرتفع",
+      "recommendation": "Do not implement execution in the current repository."
+    },
+    {
+      "category": "Broker readiness",
+      "current_state": "Broker-readiness research exists with forbidden live access.",
+      "missing_requirements": [
+        "Broker isolation",
+        "Credential vault design",
+        "Legal review"
+      ],
+      "gap_level": "حرج",
+      "risk_level": "مرتفع",
+      "recommendation": "Keep broker work in a separate future architecture program."
+    },
+    {
+      "category": "Monitoring readiness",
+      "current_state": "Local diagnostics and reports exist.",
+      "missing_requirements": [
+        "Operational observability",
+        "Alerting",
+        "On-call response"
+      ],
+      "gap_level": "مرتفع",
+      "risk_level": "مرتفع",
+      "recommendation": "Define monitoring architecture before external systems are considered."
+    },
+    {
+      "category": "Governance readiness",
+      "current_state": "Certification and release packaging exist.",
+      "missing_requirements": [
+        "Approval gates",
+        "Change control",
+        "Rollback governance"
+      ],
+      "gap_level": "مرتفع",
+      "risk_level": "مرتفع",
+      "recommendation": "Create human governance before any future build plan."
+    },
+    {
+      "category": "Compliance readiness",
+      "current_state": "No compliance approval exists in the repository.",
+      "missing_requirements": [
+        "Legal review",
+        "Jurisdiction review",
+        "User/account policy"
+      ],
+      "gap_level": "حرج",
+      "risk_level": "مرتفع",
+      "recommendation": "Require legal and regulatory review outside this repository."
+    },
+    {
+      "category": "Production readiness",
+      "current_state": "The platform is local research software.",
+      "missing_requirements": [
+        "Deployment design",
+        "Access control",
+        "Backup and recovery"
+      ],
+      "gap_level": "حرج",
+      "risk_level": "مرتفع",
+      "recommendation": "Do not treat the research release as production software."
+    }
+  ],
+  "operational_gaps": [
+    "No production runbook",
+    "No on-call model",
+    "No incident response ownership"
+  ],
+  "safety_gaps": [
+    "Future risk controls are not designed for real-world operations.",
+    "Future account and credential policies are intentionally absent."
+  ],
+  "production_gaps": [
+    "No production deployment model",
+    "No production database architecture",
+    "No multi-user access model"
+  ],
+  "compliance_gaps": [
+    "No legal review",
+    "No jurisdictional assessment",
+    "No broker terms review"
+  ],
+  "severity": "حرج",
+  "recommendations": [
+    "Freeze Research Platform v1.0 before any separate program.",
+    "Resolve documentation and metadata drift.",
+    "Open a separate architecture program only after governance approval."
+  ]
+}

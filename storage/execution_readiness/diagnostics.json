@@ -17,7 +17,7 @@
     "execution_candidate_0001": 76.55,
     "execution_candidate_0002": 39.0,
     "execution_candidate_0003": 74.79,
-    "execution_candidate_0004": 74.79,
+    "execution_candidate_0004": 83.72,
     "execution_candidate_0005": 83.72,
     "execution_candidate_0006": 83.72,
     "execution_candidate_0007": 87.0,
@@ -26,7 +26,7 @@
     "execution_candidate_0010": 86.33,
     "execution_candidate_0011": 86.33,
     "execution_candidate_0012": 79.56,
-    "execution_candidate_0013": 83.72,
+    "execution_candidate_0013": 74.79,
     "execution_candidate_0014": 87.0
   },
   "qualification_distribution": {
@@ -38,7 +38,7 @@
     "execution_candidate_0001": 78.22,
     "execution_candidate_0002": 0.0,
     "execution_candidate_0003": 81.73,
-    "execution_candidate_0004": 81.73,
+    "execution_candidate_0004": 86.34,
     "execution_candidate_0005": 86.34,
     "execution_candidate_0006": 86.34,
     "execution_candidate_0007": 100.0,
@@ -47,14 +47,14 @@
     "execution_candidate_0010": 97.19,
     "execution_candidate_0011": 97.19,
     "execution_candidate_0012": 89.96,
-    "execution_candidate_0013": 86.34,
+    "execution_candidate_0013": 81.73,
     "execution_candidate_0014": 100.0
   },
   "quality_distribution": {
     "execution_candidate_0001": 78.22,
     "execution_candidate_0002": 0.0,
     "execution_candidate_0003": 67.41,
-    "execution_candidate_0004": 67.41,
+    "execution_candidate_0004": 100.0,
     "execution_candidate_0005": 100.0,
     "execution_candidate_0006": 100.0,
     "execution_candidate_0007": 100.0,
@@ -63,14 +63,14 @@
     "execution_candidate_0010": 100.0,
     "execution_candidate_0011": 100.0,
     "execution_candidate_0012": 79.04,
-    "execution_candidate_0013": 100.0,
+    "execution_candidate_0013": 67.41,
     "execution_candidate_0014": 100.0
   },
   "confluence_distribution": {
     "execution_candidate_0001": 76.29,
     "execution_candidate_0002": 45.0,
     "execution_candidate_0003": 74.83,
-    "execution_candidate_0004": 74.83,
+    "execution_candidate_0004": 82.27,
     "execution_candidate_0005": 82.27,
     "execution_candidate_0006": 82.27,
     "execution_candidate_0007": 85.0,
@@ -79,7 +79,7 @@
     "execution_candidate_0010": 84.44,
     "execution_candidate_0011": 84.44,
     "execution_candidate_0012": 78.8,
-    "execution_candidate_0013": 82.27,
+    "execution_candidate_0013": 74.83,
     "execution_candidate_0014": 85.0
   },
   "gate_distribution": {
@@ -96,10 +96,10 @@
   },
   "time_activity": {
     "2026-01-01": 2,
-    "2026-05-31": 12
+    "2026-06-01": 12
   },
   "latest": {
-    "timestamp": "2026-05-31T21:38:27.172417+00:00",
+    "timestamp": "2026-06-01T14:46:09.526416+00:00",
     "candidates": [
       {
         "candidate_id": "execution_candidate_0001",
@@ -175,7 +175,7 @@
         "confluence": 74.83,
         "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.439490",
+        "timestamp": "2026-06-01T14:42:04.433805",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -200,14 +200,14 @@
       {
         "candidate_id": "execution_candidate_0004",
         "signal_id": "signal_stream_0004",
-        "asset": "جاهزية المراقبة",
+        "asset": "مراقبة المتصفح",
         "direction": "NO_TRADE",
-        "confidence": 81.73,
-        "quality": 67.41,
-        "confluence": 74.83,
-        "readiness": 74.79,
+        "confidence": 86.34,
+        "quality": 100.0,
+        "confluence": 82.27,
+        "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.439490",
+        "timestamp": "2026-06-01T14:42:04.984740",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -222,7 +222,7 @@
           "not_credential_handling": true,
           "not_browser_automation": true,
           "not_broker_control": true,
-          "source": "broker_readiness"
+          "source": "browser_observation"
         },
         "research_only": true,
         "readiness_only": true,
@@ -239,7 +239,7 @@
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.928152",
+        "timestamp": "2026-06-01T14:42:04.984740",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -264,14 +264,14 @@
       {
         "candidate_id": "execution_candidate_0006",
         "signal_id": "signal_stream_0006",
-        "asset": "مراقبة المتصفح",
-        "direction": "NO_TRADE",
+        "asset": "browser_snapshot",
+        "direction": "PUT",
         "confidence": 86.34,
         "quality": 100.0,
         "confluence": 82.27,
         "readiness": 83.72,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:09:35.928152",
+        "timestamp": "2026-06-01T14:42:04.984740",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -303,7 +303,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:09:41.884725",
+        "timestamp": "2026-06-01T14:42:11.400909",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -335,7 +335,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:09:41.884725",
+        "timestamp": "2026-06-01T14:42:11.400909",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -367,7 +367,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:10:01.685208",
+        "timestamp": "2026-06-01T14:42:44.057547",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -399,7 +399,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:10:01.685208",
+        "timestamp": "2026-06-01T14:42:44.057547",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -431,7 +431,7 @@
         "confluence": 84.44,
         "readiness": 86.33,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:10:01.685208",
+        "timestamp": "2026-06-01T14:42:44.057547",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -463,7 +463,7 @@
         "confluence": 78.8,
         "readiness": 79.56,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:10:59.492871",
+        "timestamp": "2026-06-01T14:44:30.031651",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -488,14 +488,14 @@
       {
         "candidate_id": "execution_candidate_0013",
         "signal_id": "signal_stream_0013",
-        "asset": "browser_snapshot",
-        "direction": "CALL",
-        "confidence": 86.34,
-        "quality": 100.0,
-        "confluence": 82.27,
-        "readiness": 83.72,
+        "asset": "جاهزية المراقبة",
+        "direction": "NO_TRADE",
+        "confidence": 81.73,
+        "quality": 67.41,
+        "confluence": 74.83,
+        "readiness": 74.79,
         "qualification": "مؤهل بشروط",
-        "timestamp": "2026-05-31T21:36:46.870865",
+        "timestamp": "2026-06-01T14:44:30.175058",
         "metadata": {
           "research_only": true,
           "readiness_only": true,
@@ -510,7 +510,7 @@
           "not_credential_handling": true,
           "not_browser_automation": true,
           "not_broker_control": true,
-          "source": "browser_observation"
+          "source": "broker_readiness"
         },
         "research_only": true,
         "readiness_only": true,
@@ -527,7 +527,7 @@
         "confluence": 85.0,
         "readiness": 87.0,
         "qualification": "مؤهل",
-        "timestamp": "2026-05-31T21:36:53.097036",
+        "timestamp": "2026-06-01T14:44:59.930700",
         "metadata": {
           "research_only": true,
           "readiness_only": true,

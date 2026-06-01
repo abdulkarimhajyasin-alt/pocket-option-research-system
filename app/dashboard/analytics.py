@@ -308,6 +308,12 @@ class DashboardAnalyticsService:
                     "severity": "warning",
                 },
             }
+        if not isinstance(summary.get("assessment"), dict):
+            summary["assessment"] = {
+                "activity": "نشاط غير متاح",
+                "readiness": "بيانات غير كافية",
+                "severity": "warning",
+            }
         if not asset_activity:
             asset_activity = summary.get("asset_activity", {})
         if not payout_distribution:
@@ -4051,6 +4057,158 @@ class DashboardAnalyticsService:
                 *self._dict_chart_values(readiness),
                 label="الإصدار",
                 color="blue",
+            ).to_dict(),
+        }
+
+    def post_research_architecture_analytics(self) -> dict[str, Any]:
+        """Return latest post-research strategic architecture analytics."""
+        summary_payload = self._latest_json_dict(
+            "post_research_architecture",
+            "post_research_summary",
+        )
+        roadmap = self._latest_json_dict(
+            "post_research_architecture",
+            "roadmap_report",
+        )
+        gaps = self._latest_json_dict(
+            "post_research_architecture",
+            "gap_analysis_report",
+        )
+        transition = self._latest_json_dict(
+            "post_research_architecture",
+            "transition_plan_report",
+        )
+        diagnostics = self._latest_json_list(
+            "post_research_architecture",
+            "diagnostics_report",
+        )
+        recommendations = self._latest_json_list(
+            "post_research_architecture",
+            "recommendations_report",
+        )
+        technical_gaps = gaps.get("technical_gaps", []) if isinstance(gaps, dict) else []
+        summary = {
+            "current_platform_state": summary_payload.get(
+                "current_platform_state",
+                "Research Platform v1.0",
+            ),
+            "recommended_future_program": summary_payload.get(
+                "recommended_future_program",
+                "Trading System Architecture Program",
+            ),
+            "architecture_separation_decision": summary_payload.get(
+                "architecture_separation_decision",
+                "Separate future program required",
+            ),
+            "gap_count": self._float(summary_payload.get("gap_count", len(technical_gaps))),
+            "highest_gap_level": summary_payload.get("highest_gap_level", "حرج"),
+            "future_execution_status": summary_payload.get(
+                "future_execution_status",
+                "Blueprint only; not implemented",
+            ),
+            "future_broker_status": summary_payload.get(
+                "future_broker_status",
+                "Blueprint only; not implemented",
+            ),
+            "risk_status": summary_payload.get(
+                "risk_status",
+                "Future governance design required",
+            ),
+            "monitoring_status": summary_payload.get(
+                "monitoring_status",
+                "Future monitoring design required",
+            ),
+            "governance_status": summary_payload.get(
+                "governance_status",
+                "Human approval gates required",
+            ),
+            "warning_count": self._float(
+                summary_payload.get("warning_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "first_safe_next_step": summary_payload.get(
+                "first_safe_next_step",
+                transition.get("first_safe_next_step", "غير متاح"),
+            ),
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        gap_distribution: dict[str, float] = {}
+        risk_distribution: dict[str, float] = {}
+        domain_readiness: dict[str, float] = {}
+        for item in technical_gaps:
+            if not isinstance(item, dict):
+                continue
+            gap_level = str(item.get("gap_level", "غير متاح"))
+            risk_level = str(item.get("risk_level", "غير متاح"))
+            category = str(item.get("category", "غير متاح"))
+            gap_distribution[gap_level] = gap_distribution.get(gap_level, 0.0) + 1.0
+            risk_distribution[risk_level] = risk_distribution.get(risk_level, 0.0) + 1.0
+            domain_readiness[category] = 100.0 if gap_level == "منخفض" else 25.0
+        roadmap_stages = {
+            str(stage): float(index + 1)
+            for index, stage in enumerate(roadmap.get("roadmap_stages", []))
+        }
+        diagnostics_chart = {
+            str(item.get("code", index + 1)): 1.0
+            for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {str(item): 1.0 for item in recommendations}
+        transition_chart = {
+            str(stage): float(index + 1)
+            for index, stage in enumerate(transition.get("safe_transition_sequence", []))
+        }
+        return {
+            "summary": summary,
+            "roadmap": roadmap,
+            "gap_analysis": gaps,
+            "transition": transition,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "gap_distribution": bar_chart(
+                "توزيع الفجوات",
+                *self._dict_chart_values(gap_distribution),
+                label="الفجوات",
+                color="warning",
+            ).to_dict(),
+            "risk_levels": bar_chart(
+                "مستويات المخاطر",
+                *self._dict_chart_values(risk_distribution),
+                label="المخاطر",
+                color="warning",
+            ).to_dict(),
+            "roadmap_stages": bar_chart(
+                "مراحل خارطة الطريق",
+                *self._dict_chart_values(roadmap_stages),
+                label="المراحل",
+                color="blue",
+            ).to_dict(),
+            "domain_readiness": bar_chart(
+                "جاهزية المجالات",
+                *self._dict_chart_values(domain_readiness),
+                label="الجاهزية",
+                color="green",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostics_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "safe_transition": bar_chart(
+                "تسلسل الانتقال الآمن",
+                *self._dict_chart_values(transition_chart),
+                label="الانتقال",
+                color="accent",
             ).to_dict(),
         }
 

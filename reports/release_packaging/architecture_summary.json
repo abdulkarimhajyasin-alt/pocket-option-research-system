@@ -1,8 +1,8 @@
 {
-  "module_count": 63,
-  "dashboard_route_count": 50,
-  "api_endpoint_count": 63,
-  "script_count": 98,
-  "test_count": 58,
+  "module_count": 64,
+  "dashboard_route_count": 51,
+  "api_endpoint_count": 70,
+  "script_count": 100,
+  "test_count": 59,
   "research_only": true
 }

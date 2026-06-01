@@ -1,0 +1,58 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.post_research_architecture }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">تخطيط معماري فقط</p>
+    <h1>الهندسة الاستراتيجية لما بعد منصة البحث</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث التخطيط المعماري</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة منصة البحث الحالية</span>
+    <strong>{{ post_research_architecture.summary.current_platform_state|default("Research Platform v1.0") }}</strong>
+    <p>هذه الصفحة تخطيط معماري فقط ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط.</p>
+  </div>
+  <div class="executive-score">
+    <span>البرنامج المستقبلي المقترح</span>
+    <strong>{{ post_research_architecture.summary.recommended_future_program|default("Trading System Architecture Program") }}</strong>
+  </div>
+  <div>
+    <span>قرار الفصل المعماري</span>
+    <strong>{{ post_research_architecture.summary.architecture_separation_decision|default("Separate future program required") }}</strong>
+    <small>Architecture-only / Research-only</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد الفجوات</span><strong>{{ post_research_architecture.summary.gap_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أعلى مستوى فجوة</span><strong>{{ post_research_architecture.summary.highest_gap_level|default("غير متاح") }}</strong></article>
+  <article class="metric-card"><span>حالة التنفيذ المستقبلية</span><strong>{{ post_research_architecture.summary.future_execution_status|default("Blueprint only") }}</strong></article>
+  <article class="metric-card"><span>حالة الوسيط المستقبلية</span><strong>{{ post_research_architecture.summary.future_broker_status|default("Blueprint only") }}</strong></article>
+  <article class="metric-card"><span>حالة المخاطر</span><strong>{{ post_research_architecture.summary.risk_status|default("غير متاح") }}</strong></article>
+  <article class="metric-card"><span>حالة المراقبة</span><strong>{{ post_research_architecture.summary.monitoring_status|default("غير متاح") }}</strong></article>
+  <article class="metric-card"><span>حالة الحوكمة</span><strong>{{ post_research_architecture.summary.governance_status|default("غير متاح") }}</strong></article>
+  <article class="metric-card"><span>التحذيرات</span><strong>{{ post_research_architecture.summary.warning_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ post_research_architecture.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أول خطوة آمنة تالية</span><strong>{{ post_research_architecture.summary.first_safe_next_step|default("غير متاح") }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع الفجوات</h2><span>تحليل استراتيجي</span></div><div class="chart" data-chart='{{ post_research_architecture.gap_distribution|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>مستويات المخاطر</h2><span>مستقبلي فقط</span></div><div class="chart" data-chart='{{ post_research_architecture.risk_levels|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>مراحل خارطة الطريق</h2><span>لا تنفيذ حي</span></div><div class="chart" data-chart='{{ post_research_architecture.roadmap_stages|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>جاهزية المجالات</h2><span>فجوات مستقبلية</span></div><div class="chart" data-chart='{{ post_research_architecture.domain_readiness|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ post_research_architecture.diagnostics|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>حوكمة</span></div><div class="chart" data-chart='{{ post_research_architecture.recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تسلسل الانتقال الآمن</h2><span>منفصل</span></div><div class="chart" data-chart='{{ post_research_architecture.safe_transition|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ملخص معماري</h2><span>محلي</span></div><pre class="code-block">{{ post_research_architecture.summary|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}
