@@ -13,7 +13,7 @@
     "node_id": "asset",
     "entity_type": "AssetEntity",
     "label": "Asset",
-    "confidence": 81.92,
+    "confidence": 81.49,
     "metadata": {
       "research_only": true,
       "source": "paper_portfolio"
@@ -83,7 +83,7 @@
     "node_id": "portfolio",
     "entity_type": "PortfolioEntity",
     "label": "Portfolio",
-    "confidence": 81.92,
+    "confidence": 81.49,
     "metadata": {
       "research_only": true,
       "source": "paper_portfolio"
@@ -93,7 +93,7 @@
     "node_id": "readiness",
     "entity_type": "ReadinessEntity",
     "label": "Readiness",
-    "confidence": 36.35,
+    "confidence": 36.48,
     "metadata": {
       "research_only": true,
       "source": "paper_control_center"

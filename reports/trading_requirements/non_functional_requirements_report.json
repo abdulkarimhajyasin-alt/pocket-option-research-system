@@ -1,0 +1,171 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "non_functional",
+  "title": "Non-Functional Requirements",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-01",
+      "title": "Reliability requirements",
+      "description": "Specify reliability requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-02",
+      "title": "Performance requirements",
+      "description": "Specify performance requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-03",
+      "title": "Determinism requirements",
+      "description": "Specify determinism requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-04",
+      "title": "Maintainability requirements",
+      "description": "Specify maintainability requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-05",
+      "title": "Observability requirements",
+      "description": "Specify observability requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-06",
+      "title": "Testability requirements",
+      "description": "Specify testability requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-07",
+      "title": "Recoverability requirements",
+      "description": "Specify recoverability requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "NFR-08",
+      "title": "Scalability requirements",
+      "description": "Specify scalability requirements for future architecture review.",
+      "category": "non_functional",
+      "priority": "متوسط",
+      "status": "مطلوب",
+      "rationale": "Non-functional constraints must be known before implementation planning.",
+      "verification_method": "quality attribute review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No runtime capability is added by this requirement."
+      ]
+    }
+  ]
+}

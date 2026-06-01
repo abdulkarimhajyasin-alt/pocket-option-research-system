@@ -35,6 +35,7 @@ from app.platform_certification.service import PlatformCertificationService
 from app.release_packaging.service import ReleasePackagingService
 from app.post_research_architecture.service import PostResearchArchitectureService
 from app.trading_architecture_program.service import TradingArchitectureProgramService
+from app.trading_requirements.service import TradingRequirementsService
 
 
 SAFETY_NOTE = (
@@ -800,6 +801,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/trading-requirements", response_class=HTMLResponse)
+    def trading_requirements(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/trading_requirements.html",
+            context(
+                request,
+                dashboard,
+                page="trading_requirements",
+                trading_requirements=dashboard.analytics.trading_requirements_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1115,6 +1130,58 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/trading-architecture-program/diagnostics")
     def api_trading_architecture_program_diagnostics() -> list[dict[str, object]]:
         return TradingArchitectureProgramService(root).generate_diagnostics()
+
+    @app.get("/api/trading-requirements")
+    def api_trading_requirements() -> dict[str, object]:
+        return dashboard_context().analytics.trading_requirements_analytics()
+
+    @app.get("/api/trading-requirements/functional")
+    def api_trading_requirements_functional() -> dict[str, object]:
+        return TradingRequirementsService(root).build_functional_requirements()
+
+    @app.get("/api/trading-requirements/non-functional")
+    def api_trading_requirements_non_functional() -> dict[str, object]:
+        return TradingRequirementsService(root).build_non_functional_requirements()
+
+    @app.get("/api/trading-requirements/safety")
+    def api_trading_requirements_safety() -> dict[str, object]:
+        return TradingRequirementsService(root).build_safety_requirements()
+
+    @app.get("/api/trading-requirements/risk")
+    def api_trading_requirements_risk() -> dict[str, object]:
+        return TradingRequirementsService(root).build_risk_requirements()
+
+    @app.get("/api/trading-requirements/compliance")
+    def api_trading_requirements_compliance() -> dict[str, object]:
+        return TradingRequirementsService(root).build_compliance_constraints()
+
+    @app.get("/api/trading-requirements/broker")
+    def api_trading_requirements_broker() -> dict[str, object]:
+        return TradingRequirementsService(root).build_broker_constraints()
+
+    @app.get("/api/trading-requirements/execution")
+    def api_trading_requirements_execution() -> dict[str, object]:
+        return TradingRequirementsService(root).build_execution_constraints()
+
+    @app.get("/api/trading-requirements/monitoring")
+    def api_trading_requirements_monitoring() -> dict[str, object]:
+        return TradingRequirementsService(root).build_monitoring_constraints()
+
+    @app.get("/api/trading-requirements/data")
+    def api_trading_requirements_data() -> dict[str, object]:
+        return TradingRequirementsService(root).build_data_constraints()
+
+    @app.get("/api/trading-requirements/go-no-go")
+    def api_trading_requirements_go_no_go() -> dict[str, object]:
+        return TradingRequirementsService(root).build_go_no_go_criteria()
+
+    @app.get("/api/trading-requirements/diagnostics")
+    def api_trading_requirements_diagnostics() -> list[dict[str, object]]:
+        return TradingRequirementsService(root).generate_diagnostics()
+
+    @app.get("/api/trading-requirements/recommendations")
+    def api_trading_requirements_recommendations() -> list[str]:
+        return TradingRequirementsService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

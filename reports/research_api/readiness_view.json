@@ -4,8 +4,8 @@
   "data": {
     "readiness": {
       "summary": {
-        "readiness_id": "paper_live_readiness_20260601150700",
-        "generated_at": "2026-06-01T15:07:00.390441+00:00",
+        "readiness_id": "paper_live_readiness_20260601153442",
+        "generated_at": "2026-06-01T15:34:42.775911+00:00",
         "paper_health": 81.92,
         "paper_stability": 60.88,
         "paper_governance": 0.0,
@@ -52,14 +52,14 @@
     },
     "architecture_audit": {
       "summary": {
-        "certification_id": "architecture_audit_20260601150532",
-        "generated_at": "2026-06-01T15:05:32.732300+00:00",
+        "certification_id": "architecture_audit_20260601153420",
+        "generated_at": "2026-06-01T15:34:20.537060+00:00",
         "architecture_score": 100.0,
         "consistency_score": 96.5,
         "dependency_score": 76.0,
-        "performance_score": 84.7,
+        "performance_score": 84.26,
         "safety_score": 100.0,
-        "overall_score": 91.44,
+        "overall_score": 91.35,
         "certification_state": "جاهزة بشروط",
         "metadata": {
           "architecture_audit_only": true,

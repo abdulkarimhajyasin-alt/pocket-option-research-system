@@ -64,6 +64,7 @@
     "templates",
     "trade_lifecycle",
     "trading_architecture_program",
+    "trading_requirements",
     "validation"
   ],
   "dashboard_route_inventory": [
@@ -117,6 +118,7 @@
     "/strategy-readiness",
     "/trade-lifecycle",
     "/trading-architecture-program",
+    "/trading-requirements",
     "/validation",
     "/validation/{report_id}"
   ],
@@ -195,6 +197,19 @@
     "/api/trading-architecture-program/domains",
     "/api/trading-architecture-program/gates",
     "/api/trading-architecture-program/workstreams",
+    "/api/trading-requirements",
+    "/api/trading-requirements/broker",
+    "/api/trading-requirements/compliance",
+    "/api/trading-requirements/data",
+    "/api/trading-requirements/diagnostics",
+    "/api/trading-requirements/execution",
+    "/api/trading-requirements/functional",
+    "/api/trading-requirements/go-no-go",
+    "/api/trading-requirements/monitoring",
+    "/api/trading-requirements/non-functional",
+    "/api/trading-requirements/recommendations",
+    "/api/trading-requirements/risk",
+    "/api/trading-requirements/safety",
     "/api/validation"
   ],
   "script_inventory": [
@@ -249,6 +264,7 @@
     "check_streaming.py",
     "check_trade_lifecycle.py",
     "check_trading_architecture_program.py",
+    "check_trading_requirements.py",
     "check_visualization_layer.py",
     "generate_synthetic_dataset.py",
     "run_architecture_audit.py",
@@ -297,6 +313,7 @@
     "run_strategy_research.py",
     "run_trade_lifecycle.py",
     "run_trading_architecture_program.py",
+    "run_trading_requirements.py",
     "run_validation.py",
     "run_walk_forward.py",
     "verify_dataset_integrity.py"
@@ -361,7 +378,8 @@
     "test_strategy_validation.py",
     "test_streaming.py",
     "test_trade_lifecycle.py",
-    "test_trading_architecture_program.py"
+    "test_trading_architecture_program.py",
+    "test_trading_requirements.py"
   ],
   "report_directory_inventory": [
     "analytics",
@@ -406,6 +424,7 @@
     "strategy_research",
     "trade_lifecycle",
     "trading_architecture_program",
+    "trading_requirements",
     "validation"
   ],
   "storage_directory_inventory": [
@@ -445,7 +464,8 @@
     "strategy_benchmark",
     "strategy_readiness",
     "trade_lifecycle",
-    "trading_architecture_program"
+    "trading_architecture_program",
+    "trading_requirements"
   ],
   "validation_script_inventory": [
     "check_arabic_dashboard.py",
@@ -499,6 +519,7 @@
     "check_streaming.py",
     "check_trade_lifecycle.py",
     "check_trading_architecture_program.py",
+    "check_trading_requirements.py",
     "check_visualization_layer.py"
   ],
   "generated_artifact_inventory": [
@@ -778,6 +799,20 @@
     "reports\\trading_architecture_program\\program_summary.json",
     "reports\\trading_architecture_program\\recommendations_report.json",
     "reports\\trading_architecture_program\\workstream_report.json",
+    "reports\\trading_requirements\\broker_constraints_report.json",
+    "reports\\trading_requirements\\compliance_constraints_report.json",
+    "reports\\trading_requirements\\data_constraints_report.json",
+    "reports\\trading_requirements\\diagnostics_report.json",
+    "reports\\trading_requirements\\execution_constraints_report.json",
+    "reports\\trading_requirements\\functional_requirements_report.json",
+    "reports\\trading_requirements\\go_no_go_report.json",
+    "reports\\trading_requirements\\monitoring_constraints_report.json",
+    "reports\\trading_requirements\\non_functional_requirements_report.json",
+    "reports\\trading_requirements\\operational_constraints_report.json",
+    "reports\\trading_requirements\\recommendations_report.json",
+    "reports\\trading_requirements\\requirements_summary.json",
+    "reports\\trading_requirements\\risk_requirements_report.json",
+    "reports\\trading_requirements\\safety_requirements_report.json",
     "reports\\validation\\research_cisd_fvg_strategy_report.json",
     "storage\\architecture_audit\\audit_results.json",
     "storage\\architecture_audit\\consistency_results.json",
@@ -940,6 +975,8 @@
     "storage\\research_archive\\diffs\\diff_research-v0008_to_research-v0009.json",
     "storage\\research_archive\\diffs\\diff_research-v0009_to_research-v0010.json",
     "storage\\research_archive\\diffs\\diff_research-v0010_to_research-v0011.json",
+    "storage\\research_archive\\diffs\\diff_research-v0011_to_research-v0012.json",
+    "storage\\research_archive\\diffs\\diff_research-v0012_to_research-v0013.json",
     "storage\\research_archive\\diffs\\latest_diff.json",
     "storage\\research_archive\\evolution\\evolution_report.json",
     "storage\\research_archive\\latest_snapshot.json",
@@ -987,6 +1024,14 @@
     "storage\\research_archive\\snapshots\\research-v0011\\safety_manifest.json",
     "storage\\research_archive\\snapshots\\research-v0011\\snapshot.json",
     "storage\\research_archive\\snapshots\\research-v0011\\source_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0012\\diagnostics.json",
+    "storage\\research_archive\\snapshots\\research-v0012\\safety_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0012\\snapshot.json",
+    "storage\\research_archive\\snapshots\\research-v0012\\source_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0013\\diagnostics.json",
+    "storage\\research_archive\\snapshots\\research-v0013\\safety_manifest.json",
+    "storage\\research_archive\\snapshots\\research-v0013\\snapshot.json",
+    "storage\\research_archive\\snapshots\\research-v0013\\source_manifest.json",
     "storage\\research_archive\\versions.json",
     "storage\\research_certification\\certification_results.json",
     "storage\\research_certification\\diagnostics.json",
@@ -1042,7 +1087,22 @@
     "storage\\trading_architecture_program\\gates.json",
     "storage\\trading_architecture_program\\program_registry.json",
     "storage\\trading_architecture_program\\recommendations.json",
-    "storage\\trading_architecture_program\\workstreams.json"
+    "storage\\trading_architecture_program\\workstreams.json",
+    "storage\\trading_requirements\\broker_constraints.json",
+    "storage\\trading_requirements\\compliance_constraints.json",
+    "storage\\trading_requirements\\coverage_summary.json",
+    "storage\\trading_requirements\\data_constraints.json",
+    "storage\\trading_requirements\\diagnostics.json",
+    "storage\\trading_requirements\\execution_constraints.json",
+    "storage\\trading_requirements\\functional_requirements.json",
+    "storage\\trading_requirements\\go_no_go_criteria.json",
+    "storage\\trading_requirements\\monitoring_constraints.json",
+    "storage\\trading_requirements\\non_functional_requirements.json",
+    "storage\\trading_requirements\\operational_constraints.json",
+    "storage\\trading_requirements\\recommendations.json",
+    "storage\\trading_requirements\\risk_requirements.json",
+    "storage\\trading_requirements\\safety_requirements.json",
+    "storage\\trading_requirements\\summary.json"
   ],
   "safety_boundary_indicators": {
     "research_only": true,

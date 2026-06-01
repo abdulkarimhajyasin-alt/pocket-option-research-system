@@ -1,0 +1,119 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "data",
+  "title": "Data Constraints",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "DATA-01",
+      "title": "Data quality requirements",
+      "description": "Define data quality requirements for future data architecture.",
+      "category": "data",
+      "constraint_type": "hard",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Local research data remains separate from future external systems."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "DATA-02",
+      "title": "Timestamp consistency requirements",
+      "description": "Define timestamp consistency requirements for future data architecture.",
+      "category": "data",
+      "constraint_type": "hard",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Local research data remains separate from future external systems."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "DATA-03",
+      "title": "Dataset versioning requirements",
+      "description": "Define dataset versioning requirements for future data architecture.",
+      "category": "data",
+      "constraint_type": "hard",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Local research data remains separate from future external systems."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "DATA-04",
+      "title": "Audit trail requirements",
+      "description": "Define audit trail requirements for future data architecture.",
+      "category": "data",
+      "constraint_type": "hard",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Local research data remains separate from future external systems."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "DATA-05",
+      "title": "Snapshot retention requirements",
+      "description": "Define snapshot retention requirements for future data architecture.",
+      "category": "data",
+      "constraint_type": "hard",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Local research data remains separate from future external systems."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "DATA-06",
+      "title": "Source validation requirements",
+      "description": "Define source validation requirements for future data architecture.",
+      "category": "data",
+      "constraint_type": "hard",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Local research data remains separate from future external systems."
+      ]
+    }
+  ]
+}

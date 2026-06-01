@@ -4329,6 +4329,179 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def trading_requirements_analytics(self) -> dict[str, Any]:
+        """Return latest trading requirements analytics."""
+        summary_payload = self._latest_json_dict("trading_requirements", "requirements_summary")
+        coverage = self._latest_json_dict("trading_requirements", "coverage_summary")
+        go_no_go = self._latest_json_dict("trading_requirements", "go_no_go")
+        diagnostics = self._latest_json_list("trading_requirements", "diagnostics_report")
+        recommendations = self._latest_json_list(
+            "trading_requirements",
+            "recommendations_report",
+        )
+        documents = {
+            "functional": self._latest_json_dict(
+                "trading_requirements",
+                "functional_requirements_report",
+            ),
+            "non_functional": self._latest_json_dict(
+                "trading_requirements",
+                "non_functional_requirements_report",
+            ),
+            "safety": self._latest_json_dict(
+                "trading_requirements",
+                "safety_requirements_report",
+            ),
+            "risk": self._latest_json_dict(
+                "trading_requirements",
+                "risk_requirements_report",
+            ),
+            "compliance": self._latest_json_dict(
+                "trading_requirements",
+                "compliance_constraints_report",
+            ),
+            "broker": self._latest_json_dict(
+                "trading_requirements",
+                "broker_constraints_report",
+            ),
+            "execution": self._latest_json_dict(
+                "trading_requirements",
+                "execution_constraints_report",
+            ),
+            "monitoring": self._latest_json_dict(
+                "trading_requirements",
+                "monitoring_constraints_report",
+            ),
+            "data": self._latest_json_dict(
+                "trading_requirements",
+                "data_constraints_report",
+            ),
+        }
+        requirement_count = self._float(
+            summary_payload.get("requirement_count", coverage.get("requirement_count"))
+        )
+        constraint_count = self._float(
+            summary_payload.get("constraint_count", coverage.get("constraint_count"))
+        )
+        summary = {
+            "requirements_status": summary_payload.get(
+                "requirements_status",
+                "Requirements Incomplete",
+            ),
+            "requirement_count": requirement_count,
+            "constraint_count": constraint_count,
+            "highest_priority": summary_payload.get(
+                "highest_priority",
+                coverage.get("highest_priority", "مرتفع"),
+            ),
+            "go_no_go_state": summary_payload.get(
+                "go_no_go_state",
+                go_no_go.get("decision_state", "Not Ready"),
+            ),
+            "safety_requirement_count": self._float(
+                coverage.get("safety_requirement_count", 0)
+            ),
+            "risk_requirement_count": self._float(coverage.get("risk_requirement_count", 0)),
+            "compliance_constraint_count": self._float(
+                coverage.get("compliance_constraint_count", 0)
+            ),
+            "execution_constraint_count": self._float(
+                coverage.get("execution_constraint_count", 0)
+            ),
+            "broker_constraint_count": self._float(
+                coverage.get("broker_constraint_count", 0)
+            ),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "requirements_only": True,
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        requirement_distribution = {
+            label: self._float(len(doc.get("items", [])))
+            for label, doc in documents.items()
+            if label in {"functional", "non_functional", "safety", "risk"}
+        }
+        constraint_distribution = {
+            label: self._float(len(doc.get("items", [])))
+            for label, doc in documents.items()
+            if label not in {"functional", "non_functional", "safety", "risk"}
+        }
+        priorities: dict[str, float] = {}
+        for doc in documents.values():
+            for item in doc.get("items", []):
+                priority = str(item.get("priority", "متوسط"))
+                priorities[priority] = priorities.get(priority, 0.0) + 1.0
+        decision = {
+            "Not Ready": 100.0 if summary["go_no_go_state"] == "Not Ready" else 0.0,
+            "Requirements Incomplete": 100.0
+            if summary["go_no_go_state"] == "Requirements Incomplete"
+            else 0.0,
+            "Ready For Architecture Review": 100.0
+            if summary["go_no_go_state"] == "Ready For Architecture Review"
+            else 0.0,
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0
+            for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {str(item): 1.0 for item in recommendations}
+        return {
+            "summary": summary,
+            "coverage": coverage,
+            "go_no_go": go_no_go,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "requirements_distribution": bar_chart(
+                "توزيع المتطلبات",
+                *self._dict_chart_values(requirement_distribution),
+                label="المتطلبات",
+                color="blue",
+            ).to_dict(),
+            "constraints_distribution": bar_chart(
+                "توزيع القيود",
+                *self._dict_chart_values(constraint_distribution),
+                label="القيود",
+                color="warning",
+            ).to_dict(),
+            "priorities": bar_chart(
+                "مستويات الأولوية",
+                *self._dict_chart_values(priorities),
+                label="الأولوية",
+                color="accent",
+            ).to_dict(),
+            "coverage_chart": bar_chart(
+                "تغطية المتطلبات",
+                ["المتطلبات", "القيود"],
+                [requirement_count, constraint_count],
+                label="التغطية",
+                color="green",
+            ).to_dict(),
+            "go_no_go_chart": bar_chart(
+                "حالة Go/No-Go",
+                *self._dict_chart_values(decision),
+                label="القرار",
+                color="blue",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

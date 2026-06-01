@@ -1,0 +1,17 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "requirement_count": 28,
+  "constraint_count": 38,
+  "category_count": 10,
+  "highest_priority": "مرتفع",
+  "go_no_go_state": "Not Ready",
+  "safety_requirement_count": 7,
+  "risk_requirement_count": 7,
+  "compliance_constraint_count": 7,
+  "execution_constraint_count": 6,
+  "broker_constraint_count": 6
+}

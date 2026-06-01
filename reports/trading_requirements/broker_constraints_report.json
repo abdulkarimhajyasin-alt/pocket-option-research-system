@@ -1,0 +1,119 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "broker",
+  "title": "Broker Constraints",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "BROKER-01",
+      "title": "Broker isolation requirement",
+      "description": "Define broker isolation requirement as a constraint; do not implement broker access.",
+      "category": "broker",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Broker access remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "BROKER-02",
+      "title": "No direct broker coupling",
+      "description": "Define no direct broker coupling as a constraint; do not implement broker access.",
+      "category": "broker",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Broker access remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "BROKER-03",
+      "title": "Credential vault requirement for any hypothetical future system",
+      "description": "Define credential vault requirement for any hypothetical future system as a constraint; do not implement broker access.",
+      "category": "broker",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Broker access remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "BROKER-04",
+      "title": "Session management requirement",
+      "description": "Define session management requirement as a constraint; do not implement broker access.",
+      "category": "broker",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Broker access remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "BROKER-05",
+      "title": "Broker terms review requirement",
+      "description": "Define broker terms review requirement as a constraint; do not implement broker access.",
+      "category": "broker",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Broker access remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "BROKER-06",
+      "title": "External integration approval requirement",
+      "description": "Define external integration approval requirement as a constraint; do not implement broker access.",
+      "category": "broker",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Broker access remains forbidden in the current repository."
+      ]
+    }
+  ]
+}

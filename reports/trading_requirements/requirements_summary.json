@@ -1,0 +1,36 @@
+{
+  "requirements_status": "Requirements Incomplete",
+  "requirement_count": 28,
+  "constraint_count": 38,
+  "highest_priority": "مرتفع",
+  "go_no_go_state": "Not Ready",
+  "diagnostic_count": 0,
+  "recommendation_count": 10,
+  "constraint_summary": {
+    "total_constraints": 38,
+    "by_type": {
+      "hard": 13,
+      "future-only": 13,
+      "forbidden-now": 12
+    },
+    "hard_constraints": 13,
+    "soft_constraints": 0,
+    "future_only_constraints": 13,
+    "forbidden_now_constraints": 12
+  },
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "not_implemented": true,
+  "no_broker_access": true,
+  "no_execution_capability": true,
+  "no_trading_capability": true,
+  "no_authentication": true,
+  "no_credentials": true,
+  "no_browser_automation": true,
+  "no_order_placement": true,
+  "no_live_trading": true,
+  "no_money_handling": true,
+  "no_external_connectivity": true
+}

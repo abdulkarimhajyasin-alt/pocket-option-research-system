@@ -1,0 +1,151 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "safety",
+  "title": "Safety Requirements",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "SAFE-01",
+      "title": "Safety boundary requirements",
+      "description": "Document safety boundary requirements before any future program can progress.",
+      "category": "safety",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Safety controls are mandatory prerequisites.",
+      "verification_method": "safety review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Current repository remains research-only and local-only."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "SAFE-02",
+      "title": "Kill switch requirements",
+      "description": "Document kill switch requirements before any future program can progress.",
+      "category": "safety",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Safety controls are mandatory prerequisites.",
+      "verification_method": "safety review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Current repository remains research-only and local-only."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "SAFE-03",
+      "title": "Manual approval requirements",
+      "description": "Document manual approval requirements before any future program can progress.",
+      "category": "safety",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Safety controls are mandatory prerequisites.",
+      "verification_method": "safety review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Current repository remains research-only and local-only."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "SAFE-04",
+      "title": "Stop condition requirements",
+      "description": "Document stop condition requirements before any future program can progress.",
+      "category": "safety",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Safety controls are mandatory prerequisites.",
+      "verification_method": "safety review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Current repository remains research-only and local-only."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "SAFE-05",
+      "title": "Fail-safe behavior requirements",
+      "description": "Document fail-safe behavior requirements before any future program can progress.",
+      "category": "safety",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Safety controls are mandatory prerequisites.",
+      "verification_method": "safety review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Current repository remains research-only and local-only."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "SAFE-06",
+      "title": "No-autonomous-live-action requirements",
+      "description": "Document no-autonomous-live-action requirements before any future program can progress.",
+      "category": "safety",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Safety controls are mandatory prerequisites.",
+      "verification_method": "safety review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Current repository remains research-only and local-only."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "SAFE-07",
+      "title": "Incident escalation requirements",
+      "description": "Document incident escalation requirements before any future program can progress.",
+      "category": "safety",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Safety controls are mandatory prerequisites.",
+      "verification_method": "safety review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Current repository remains research-only and local-only."
+      ]
+    }
+  ]
+}

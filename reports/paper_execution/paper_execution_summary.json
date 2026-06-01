@@ -5,11 +5,11 @@
     "rejected": 0,
     "active": 0,
     "expired": 11,
-    "wins": 3,
+    "wins": 2,
     "losses": 0,
-    "breakeven": 0,
+    "breakeven": 1,
     "unresolved": 11,
-    "win_rate": 0.2143,
+    "win_rate": 0.1429,
     "average_confidence": 84.44,
     "average_readiness": 79.7,
     "paper_drawdown": 0.0,
@@ -20,12 +20,12 @@
     "paper_only": true,
     "research_only": true,
     "not_real_execution": true,
-    "paper_execution_score": 64.65,
+    "paper_execution_score": 62.27,
     "warning_count": 3,
     "recommendation_count": 3
   },
   "latest": {
-    "timestamp": "2026-06-01T15:06:58.946524+00:00",
+    "timestamp": "2026-06-01T15:39:29.991096+00:00",
     "orders": [
       {
         "order_id": "paper_order_0001",
@@ -101,13 +101,13 @@
         "order_id": "paper_order_0003",
         "candidate_id": "execution_candidate_0003",
         "signal_id": "signal_stream_0003",
-        "asset": "جاهزية المراقبة",
+        "asset": "استيراد اللقطات",
         "direction": "NO_TRADE",
-        "confidence": 81.73,
-        "readiness_score": 74.79,
-        "qualification_state": "مؤهل بشروط",
-        "created_at": "2026-06-01T14:42:04.433805",
-        "expiry": "2026-06-01T14:43:04.433805",
+        "confidence": 97.19,
+        "readiness_score": 86.33,
+        "qualification_state": "مؤهل",
+        "created_at": "2026-06-01T14:46:44.723441",
+        "expiry": "2026-06-01T14:47:44.723441",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -136,13 +136,13 @@
         "order_id": "paper_order_0004",
         "candidate_id": "execution_candidate_0004",
         "signal_id": "signal_stream_0004",
-        "asset": "مراقبة المتصفح",
+        "asset": "استيراد اللقطات",
         "direction": "NO_TRADE",
-        "confidence": 86.34,
-        "readiness_score": 83.72,
-        "qualification_state": "مؤهل بشروط",
-        "created_at": "2026-06-01T14:42:04.984740",
-        "expiry": "2026-06-01T14:43:04.984740",
+        "confidence": 97.19,
+        "readiness_score": 86.33,
+        "qualification_state": "مؤهل",
+        "created_at": "2026-06-01T14:46:44.723441",
+        "expiry": "2026-06-01T14:47:44.723441",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -171,13 +171,13 @@
         "order_id": "paper_order_0005",
         "candidate_id": "execution_candidate_0005",
         "signal_id": "signal_stream_0005",
-        "asset": "مراقبة المتصفح",
+        "asset": "ذكاء المراقبة",
         "direction": "NO_TRADE",
-        "confidence": 86.34,
-        "readiness_score": 83.72,
+        "confidence": 89.96,
+        "readiness_score": 79.56,
         "qualification_state": "مؤهل بشروط",
-        "created_at": "2026-06-01T14:42:04.984740",
-        "expiry": "2026-06-01T14:43:04.984740",
+        "created_at": "2026-06-01T14:59:52.162994",
+        "expiry": "2026-06-01T15:00:52.162994",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -206,13 +206,13 @@
         "order_id": "paper_order_0006",
         "candidate_id": "execution_candidate_0006",
         "signal_id": "signal_stream_0006",
-        "asset": "المراقبة الخارجية",
+        "asset": "جاهزية المراقبة",
         "direction": "NO_TRADE",
-        "confidence": 100.0,
-        "readiness_score": 87.0,
-        "qualification_state": "مؤهل",
-        "created_at": "2026-06-01T14:42:11.400909",
-        "expiry": "2026-06-01T14:43:11.400909",
+        "confidence": 81.73,
+        "readiness_score": 74.79,
+        "qualification_state": "مؤهل بشروط",
+        "created_at": "2026-06-01T15:05:37.827427",
+        "expiry": "2026-06-01T15:06:37.827427",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -241,13 +241,13 @@
         "order_id": "paper_order_0007",
         "candidate_id": "execution_candidate_0007",
         "signal_id": "signal_stream_0007",
-        "asset": "المراقبة الخارجية",
+        "asset": "جاهزية المراقبة",
         "direction": "NO_TRADE",
-        "confidence": 100.0,
-        "readiness_score": 87.0,
-        "qualification_state": "مؤهل",
-        "created_at": "2026-06-01T14:42:11.400909",
-        "expiry": "2026-06-01T14:43:11.400909",
+        "confidence": 81.73,
+        "readiness_score": 74.79,
+        "qualification_state": "مؤهل بشروط",
+        "created_at": "2026-06-01T15:05:37.827427",
+        "expiry": "2026-06-01T15:06:37.827427",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -276,13 +276,13 @@
         "order_id": "paper_order_0008",
         "candidate_id": "execution_candidate_0008",
         "signal_id": "signal_stream_0008",
-        "asset": "استيراد اللقطات",
+        "asset": "مراقبة المتصفح",
         "direction": "NO_TRADE",
-        "confidence": 97.19,
-        "readiness_score": 86.33,
-        "qualification_state": "مؤهل",
-        "created_at": "2026-06-01T14:42:44.057547",
-        "expiry": "2026-06-01T14:43:44.057547",
+        "confidence": 86.34,
+        "readiness_score": 83.72,
+        "qualification_state": "مؤهل بشروط",
+        "created_at": "2026-06-01T15:05:41.095845",
+        "expiry": "2026-06-01T15:06:41.095845",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -311,13 +311,13 @@
         "order_id": "paper_order_0009",
         "candidate_id": "execution_candidate_0009",
         "signal_id": "signal_stream_0009",
-        "asset": "استيراد اللقطات",
+        "asset": "مراقبة المتصفح",
         "direction": "NO_TRADE",
-        "confidence": 97.19,
-        "readiness_score": 86.33,
-        "qualification_state": "مؤهل",
-        "created_at": "2026-06-01T14:42:44.057547",
-        "expiry": "2026-06-01T14:43:44.057547",
+        "confidence": 86.34,
+        "readiness_score": 83.72,
+        "qualification_state": "مؤهل بشروط",
+        "created_at": "2026-06-01T15:05:41.095845",
+        "expiry": "2026-06-01T15:06:41.095845",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -346,15 +346,15 @@
         "order_id": "paper_order_0010",
         "candidate_id": "execution_candidate_0010",
         "signal_id": "signal_stream_0010",
-        "asset": "snapshot",
-        "direction": "PUT",
-        "confidence": 97.19,
-        "readiness_score": 86.33,
+        "asset": "المراقبة الخارجية",
+        "direction": "NO_TRADE",
+        "confidence": 100.0,
+        "readiness_score": 87.0,
         "qualification_state": "مؤهل",
-        "created_at": "2026-06-01T14:42:44.057547",
-        "expiry": "2026-06-01T14:43:44.057547",
-        "status": "WIN",
-        "status_label": "رابح",
+        "created_at": "2026-06-01T15:06:31.408222",
+        "expiry": "2026-06-01T15:07:31.408222",
+        "status": "EXPIRED",
+        "status_label": "منتهي",
         "metadata": {
           "paper_only": true,
           "research_only": true,
@@ -381,13 +381,13 @@
         "order_id": "paper_order_0011",
         "candidate_id": "execution_candidate_0011",
         "signal_id": "signal_stream_0011",
-        "asset": "ذكاء المراقبة",
+        "asset": "المراقبة الخارجية",
         "direction": "NO_TRADE",
-        "confidence": 89.96,
-        "readiness_score": 79.56,
-        "qualification_state": "مؤهل بشروط",
-        "created_at": "2026-06-01T14:44:30.031651",
-        "expiry": "2026-06-01T14:45:30.031651",
+        "confidence": 100.0,
+        "readiness_score": 87.0,
+        "qualification_state": "مؤهل",
+        "created_at": "2026-06-01T15:06:31.408222",
+        "expiry": "2026-06-01T15:07:31.408222",
         "status": "EXPIRED",
         "status_label": "منتهي",
         "metadata": {
@@ -416,15 +416,15 @@
         "order_id": "paper_order_0012",
         "candidate_id": "execution_candidate_0012",
         "signal_id": "signal_stream_0012",
-        "asset": "جاهزية المراقبة",
-        "direction": "NO_TRADE",
-        "confidence": 81.73,
-        "readiness_score": 74.79,
-        "qualification_state": "مؤهل بشروط",
-        "created_at": "2026-06-01T14:44:30.175058",
-        "expiry": "2026-06-01T14:45:30.175058",
-        "status": "EXPIRED",
-        "status_label": "منتهي",
+        "asset": "snapshot",
+        "direction": "PUT",
+        "confidence": 97.19,
+        "readiness_score": 86.33,
+        "qualification_state": "مؤهل",
+        "created_at": "2026-06-01T15:08:04.623598",
+        "expiry": "2026-06-01T15:09:04.623598",
+        "status": "BREAKEVEN",
+        "status_label": "تعادل",
         "metadata": {
           "paper_only": true,
           "research_only": true,
@@ -456,8 +456,8 @@
         "confidence": 86.34,
         "readiness_score": 83.72,
         "qualification_state": "مؤهل بشروط",
-        "created_at": "2026-06-01T14:46:04.973138",
-        "expiry": "2026-06-01T14:47:04.973138",
+        "created_at": "2026-06-01T15:34:22.084228",
+        "expiry": "2026-06-01T15:35:22.084228",
         "status": "WIN",
         "status_label": "رابح",
         "metadata": {
@@ -491,8 +491,8 @@
         "confidence": 100.0,
         "readiness_score": 87.0,
         "qualification_state": "مؤهل",
-        "created_at": "2026-06-01T14:46:11.114026",
-        "expiry": "2026-06-01T14:47:11.114026",
+        "created_at": "2026-06-01T15:34:29.912327",
+        "expiry": "2026-06-01T15:35:29.912327",
         "status": "WIN",
         "status_label": "رابح",
         "metadata": {
@@ -525,7 +525,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944241+00:00",
+        "timestamp": "2026-06-01T15:39:29.988410+00:00",
         "reason": "paper order created"
       },
       {
@@ -534,7 +534,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944295+00:00",
+        "timestamp": "2026-06-01T15:39:29.988500+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -543,7 +543,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944311+00:00",
+        "timestamp": "2026-06-01T15:39:29.988522+00:00",
         "reason": "paper order created"
       },
       {
@@ -552,7 +552,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944341+00:00",
+        "timestamp": "2026-06-01T15:39:29.988562+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -561,7 +561,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944354+00:00",
+        "timestamp": "2026-06-01T15:39:29.988577+00:00",
         "reason": "paper order created"
       },
       {
@@ -570,7 +570,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944380+00:00",
+        "timestamp": "2026-06-01T15:39:29.988607+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -579,7 +579,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944393+00:00",
+        "timestamp": "2026-06-01T15:39:29.988621+00:00",
         "reason": "paper order created"
       },
       {
@@ -588,7 +588,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944419+00:00",
+        "timestamp": "2026-06-01T15:39:29.988650+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -597,7 +597,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944432+00:00",
+        "timestamp": "2026-06-01T15:39:29.988663+00:00",
         "reason": "paper order created"
       },
       {
@@ -606,7 +606,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944458+00:00",
+        "timestamp": "2026-06-01T15:39:29.988691+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -615,7 +615,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944469+00:00",
+        "timestamp": "2026-06-01T15:39:29.988704+00:00",
         "reason": "paper order created"
       },
       {
@@ -624,7 +624,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944496+00:00",
+        "timestamp": "2026-06-01T15:39:29.988733+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -633,7 +633,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944508+00:00",
+        "timestamp": "2026-06-01T15:39:29.988745+00:00",
         "reason": "paper order created"
       },
       {
@@ -642,7 +642,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944535+00:00",
+        "timestamp": "2026-06-01T15:39:29.988773+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -651,7 +651,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944547+00:00",
+        "timestamp": "2026-06-01T15:39:29.988785+00:00",
         "reason": "paper order created"
       },
       {
@@ -660,7 +660,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944574+00:00",
+        "timestamp": "2026-06-01T15:39:29.988815+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -669,7 +669,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944585+00:00",
+        "timestamp": "2026-06-01T15:39:29.988828+00:00",
         "reason": "paper order created"
       },
       {
@@ -678,7 +678,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944612+00:00",
+        "timestamp": "2026-06-01T15:39:29.988863+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -687,26 +687,17 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944624+00:00",
+        "timestamp": "2026-06-01T15:39:29.988876+00:00",
         "reason": "paper order created"
       },
       {
         "order_id": "paper_order_0010",
         "candidate_id": "execution_candidate_0010",
         "from_status": "CREATED",
-        "to_status": "ACCEPTED",
-        "to_status_label": "مقبول",
-        "timestamp": "2026-06-01T15:06:58.944653+00:00",
-        "reason": "paper order accepted"
-      },
-      {
-        "order_id": "paper_order_0010",
-        "candidate_id": "execution_candidate_0010",
-        "from_status": "ACCEPTED",
-        "to_status": "ACTIVE",
-        "to_status_label": "نشط",
-        "timestamp": "2026-06-01T15:06:58.944679+00:00",
-        "reason": "paper order active"
+        "to_status": "REJECTED",
+        "to_status_label": "مرفوض",
+        "timestamp": "2026-06-01T15:39:29.988904+00:00",
+        "reason": "paper risk rejected"
       },
       {
         "order_id": "paper_order_0011",
@@ -714,7 +705,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944691+00:00",
+        "timestamp": "2026-06-01T15:39:29.988916+00:00",
         "reason": "paper order created"
       },
       {
@@ -723,7 +714,7 @@
         "from_status": "CREATED",
         "to_status": "REJECTED",
         "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944716+00:00",
+        "timestamp": "2026-06-01T15:39:29.988941+00:00",
         "reason": "paper risk rejected"
       },
       {
@@ -732,17 +723,26 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944727+00:00",
+        "timestamp": "2026-06-01T15:39:29.989008+00:00",
         "reason": "paper order created"
       },
       {
         "order_id": "paper_order_0012",
         "candidate_id": "execution_candidate_0012",
         "from_status": "CREATED",
-        "to_status": "REJECTED",
-        "to_status_label": "مرفوض",
-        "timestamp": "2026-06-01T15:06:58.944771+00:00",
-        "reason": "paper risk rejected"
+        "to_status": "ACCEPTED",
+        "to_status_label": "مقبول",
+        "timestamp": "2026-06-01T15:39:29.989045+00:00",
+        "reason": "paper order accepted"
+      },
+      {
+        "order_id": "paper_order_0012",
+        "candidate_id": "execution_candidate_0012",
+        "from_status": "ACCEPTED",
+        "to_status": "ACTIVE",
+        "to_status_label": "نشط",
+        "timestamp": "2026-06-01T15:39:29.989074+00:00",
+        "reason": "paper order active"
       },
       {
         "order_id": "paper_order_0013",
@@ -750,7 +750,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944802+00:00",
+        "timestamp": "2026-06-01T15:39:29.989088+00:00",
         "reason": "paper order created"
       },
       {
@@ -759,7 +759,7 @@
         "from_status": "CREATED",
         "to_status": "ACCEPTED",
         "to_status_label": "مقبول",
-        "timestamp": "2026-06-01T15:06:58.944839+00:00",
+        "timestamp": "2026-06-01T15:39:29.989122+00:00",
         "reason": "paper order accepted"
       },
       {
@@ -768,7 +768,7 @@
         "from_status": "ACCEPTED",
         "to_status": "ACTIVE",
         "to_status_label": "نشط",
-        "timestamp": "2026-06-01T15:06:58.944864+00:00",
+        "timestamp": "2026-06-01T15:39:29.989152+00:00",
         "reason": "paper order active"
       },
       {
@@ -777,7 +777,7 @@
         "from_status": "",
         "to_status": "CREATED",
         "to_status_label": "تم الإنشاء",
-        "timestamp": "2026-06-01T15:06:58.944875+00:00",
+        "timestamp": "2026-06-01T15:39:29.989166+00:00",
         "reason": "paper order created"
       },
       {
@@ -786,7 +786,7 @@
         "from_status": "CREATED",
         "to_status": "ACCEPTED",
         "to_status_label": "مقبول",
-        "timestamp": "2026-06-01T15:06:58.944900+00:00",
+        "timestamp": "2026-06-01T15:39:29.989197+00:00",
         "reason": "paper order accepted"
       },
       {
@@ -795,7 +795,7 @@
         "from_status": "ACCEPTED",
         "to_status": "ACTIVE",
         "to_status_label": "نشط",
-        "timestamp": "2026-06-01T15:06:58.944927+00:00",
+        "timestamp": "2026-06-01T15:39:29.989225+00:00",
         "reason": "paper order active"
       },
       {
@@ -804,7 +804,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945336+00:00",
+        "timestamp": "2026-06-01T15:39:29.989605+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -813,7 +813,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945366+00:00",
+        "timestamp": "2026-06-01T15:39:29.989641+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -822,7 +822,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945396+00:00",
+        "timestamp": "2026-06-01T15:39:29.989671+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -831,7 +831,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945425+00:00",
+        "timestamp": "2026-06-01T15:39:29.989699+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -840,7 +840,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945456+00:00",
+        "timestamp": "2026-06-01T15:39:29.989727+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -849,7 +849,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945490+00:00",
+        "timestamp": "2026-06-01T15:39:29.989756+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -858,7 +858,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945548+00:00",
+        "timestamp": "2026-06-01T15:39:29.989783+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -867,7 +867,7 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945584+00:00",
+        "timestamp": "2026-06-01T15:39:29.989811+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -876,16 +876,16 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945624+00:00",
+        "timestamp": "2026-06-01T15:39:29.989839+00:00",
         "reason": "paper outcome evaluated"
       },
       {
         "order_id": "paper_order_0010",
         "candidate_id": "execution_candidate_0010",
-        "from_status": "ACTIVE",
-        "to_status": "WIN",
-        "to_status_label": "رابح",
-        "timestamp": "2026-06-01T15:06:58.945677+00:00",
+        "from_status": "REJECTED",
+        "to_status": "EXPIRED",
+        "to_status_label": "منتهي",
+        "timestamp": "2026-06-01T15:39:29.989869+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -894,16 +894,16 @@
         "from_status": "REJECTED",
         "to_status": "EXPIRED",
         "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945750+00:00",
+        "timestamp": "2026-06-01T15:39:29.989896+00:00",
         "reason": "paper outcome evaluated"
       },
       {
         "order_id": "paper_order_0012",
         "candidate_id": "execution_candidate_0012",
-        "from_status": "REJECTED",
-        "to_status": "EXPIRED",
-        "to_status_label": "منتهي",
-        "timestamp": "2026-06-01T15:06:58.945798+00:00",
+        "from_status": "ACTIVE",
+        "to_status": "BREAKEVEN",
+        "to_status_label": "تعادل",
+        "timestamp": "2026-06-01T15:39:29.989922+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -912,7 +912,7 @@
         "from_status": "ACTIVE",
         "to_status": "WIN",
         "to_status_label": "رابح",
-        "timestamp": "2026-06-01T15:06:58.945825+00:00",
+        "timestamp": "2026-06-01T15:39:29.989949+00:00",
         "reason": "paper outcome evaluated"
       },
       {
@@ -921,7 +921,7 @@
         "from_status": "ACTIVE",
         "to_status": "WIN",
         "to_status_label": "رابح",
-        "timestamp": "2026-06-01T15:06:58.945854+00:00",
+        "timestamp": "2026-06-01T15:39:29.989975+00:00",
         "reason": "paper outcome evaluated"
       }
     ],
@@ -933,7 +933,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.944953+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989262+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -945,7 +945,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.944969+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989358+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -957,7 +957,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.944981+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989391+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -969,7 +969,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.944992+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989411+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -981,7 +981,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.945004+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989424+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -993,7 +993,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.945015+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989437+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -1005,7 +1005,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.945031+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989449+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -1017,7 +1017,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.945044+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989461+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -1029,7 +1029,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.945072+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989473+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -1038,11 +1038,11 @@
         "order_id": "paper_order_0010",
         "candidate_id": "execution_candidate_0010",
         "signal_id": "signal_stream_0010",
-        "outcome": "WIN",
-        "outcome_label": "رابح",
-        "simulated_return": 1.0,
-        "evaluated_at": "2026-06-01T15:06:58.945145+00:00",
-        "reason": "local paper score won",
+        "outcome": "UNRESOLVED",
+        "outcome_label": "غير محسوم",
+        "simulated_return": 0.0,
+        "evaluated_at": "2026-06-01T15:39:29.989485+00:00",
+        "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
       },
@@ -1053,7 +1053,7 @@
         "outcome": "UNRESOLVED",
         "outcome_label": "غير محسوم",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.945173+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989497+00:00",
         "reason": "paper order rejected",
         "paper_only": true,
         "research_only": true
@@ -1062,11 +1062,11 @@
         "order_id": "paper_order_0012",
         "candidate_id": "execution_candidate_0012",
         "signal_id": "signal_stream_0012",
-        "outcome": "UNRESOLVED",
-        "outcome_label": "غير محسوم",
+        "outcome": "BREAKEVEN",
+        "outcome_label": "تعادل",
         "simulated_return": 0.0,
-        "evaluated_at": "2026-06-01T15:06:58.945193+00:00",
-        "reason": "paper order rejected",
+        "evaluated_at": "2026-06-01T15:39:29.989518+00:00",
+        "reason": "local paper score flat",
         "paper_only": true,
         "research_only": true
       },
@@ -1077,7 +1077,7 @@
         "outcome": "WIN",
         "outcome_label": "رابح",
         "simulated_return": 1.0,
-        "evaluated_at": "2026-06-01T15:06:58.945211+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989536+00:00",
         "reason": "local paper score won",
         "paper_only": true,
         "research_only": true
@@ -1089,7 +1089,7 @@
         "outcome": "WIN",
         "outcome_label": "رابح",
         "simulated_return": 1.0,
-        "evaluated_at": "2026-06-01T15:06:58.945243+00:00",
+        "evaluated_at": "2026-06-01T15:39:29.989551+00:00",
         "reason": "local paper score won",
         "paper_only": true,
         "research_only": true
@@ -1138,11 +1138,11 @@
       "rejected": 0,
       "active": 0,
       "expired": 11,
-      "wins": 3,
+      "wins": 2,
       "losses": 0,
-      "breakeven": 0,
+      "breakeven": 1,
       "unresolved": 11,
-      "win_rate": 0.2143,
+      "win_rate": 0.1429,
       "average_confidence": 84.44,
       "average_readiness": 79.7,
       "paper_drawdown": 0.0,
@@ -1153,7 +1153,7 @@
       "paper_only": true,
       "research_only": true,
       "not_real_execution": true,
-      "paper_execution_score": 64.65,
+      "paper_execution_score": 62.27,
       "warning_count": 3,
       "recommendation_count": 3
     },
@@ -1191,7 +1191,7 @@
         "reason": "تحسين الاستقرار"
       }
     ],
-    "score": 64.65,
+    "score": 62.27,
     "metadata": {
       "paper_only": true,
       "research_only": true,

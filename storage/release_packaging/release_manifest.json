@@ -117,6 +117,7 @@
     "/strategy-readiness",
     "/trade-lifecycle",
     "/trading-architecture-program",
+    "/trading-requirements",
     "/validation",
     "/validation/{report_id}"
   ],
@@ -195,6 +196,19 @@
     "/api/trading-architecture-program/domains",
     "/api/trading-architecture-program/gates",
     "/api/trading-architecture-program/workstreams",
+    "/api/trading-requirements",
+    "/api/trading-requirements/broker",
+    "/api/trading-requirements/compliance",
+    "/api/trading-requirements/data",
+    "/api/trading-requirements/diagnostics",
+    "/api/trading-requirements/execution",
+    "/api/trading-requirements/functional",
+    "/api/trading-requirements/go-no-go",
+    "/api/trading-requirements/monitoring",
+    "/api/trading-requirements/non-functional",
+    "/api/trading-requirements/recommendations",
+    "/api/trading-requirements/risk",
+    "/api/trading-requirements/safety",
     "/api/validation"
   ],
   "scripts": [
@@ -249,6 +263,7 @@
     "check_streaming.py",
     "check_trade_lifecycle.py",
     "check_trading_architecture_program.py",
+    "check_trading_requirements.py",
     "check_visualization_layer.py",
     "generate_synthetic_dataset.py",
     "run_architecture_audit.py",
@@ -297,6 +312,7 @@
     "run_strategy_research.py",
     "run_trade_lifecycle.py",
     "run_trading_architecture_program.py",
+    "run_trading_requirements.py",
     "run_validation.py",
     "run_walk_forward.py",
     "verify_dataset_integrity.py"
@@ -361,7 +377,8 @@
     "test_strategy_validation.py",
     "test_streaming.py",
     "test_trade_lifecycle.py",
-    "test_trading_architecture_program.py"
+    "test_trading_architecture_program.py",
+    "test_trading_requirements.py"
   ],
   "reports": [
     "analytics",
@@ -406,6 +423,7 @@
     "strategy_research",
     "trade_lifecycle",
     "trading_architecture_program",
+    "trading_requirements",
     "validation"
   ],
   "storage_outputs": [
@@ -445,7 +463,8 @@
     "strategy_benchmark",
     "strategy_readiness",
     "trade_lifecycle",
-    "trading_architecture_program"
+    "trading_architecture_program",
+    "trading_requirements"
   ],
   "safety_boundary": {
     "research_only": true,

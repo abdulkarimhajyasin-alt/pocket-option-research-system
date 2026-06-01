@@ -1,0 +1,137 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "operational",
+  "title": "Operational Constraints",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "OPS-01",
+      "title": "Deployment constraints",
+      "description": "Document deployment constraints for future operational architecture.",
+      "category": "operational",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Future-only planning constraint."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "OPS-02",
+      "title": "Runtime constraints",
+      "description": "Document runtime constraints for future operational architecture.",
+      "category": "operational",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Future-only planning constraint."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "OPS-03",
+      "title": "Incident response constraints",
+      "description": "Document incident response constraints for future operational architecture.",
+      "category": "operational",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Future-only planning constraint."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "OPS-04",
+      "title": "Logging constraints",
+      "description": "Document logging constraints for future operational architecture.",
+      "category": "operational",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Future-only planning constraint."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "OPS-05",
+      "title": "Change management constraints",
+      "description": "Document change management constraints for future operational architecture.",
+      "category": "operational",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Future-only planning constraint."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "OPS-06",
+      "title": "Rollback constraints",
+      "description": "Document rollback constraints for future operational architecture.",
+      "category": "operational",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Future-only planning constraint."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "OPS-07",
+      "title": "Maintenance constraints",
+      "description": "Document maintenance constraints for future operational architecture.",
+      "category": "operational",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Future-only planning constraint."
+      ]
+    }
+  ]
+}

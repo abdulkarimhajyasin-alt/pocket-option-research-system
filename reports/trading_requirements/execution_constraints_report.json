@@ -1,0 +1,119 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "execution",
+  "title": "Execution Constraints",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "EXEC-01",
+      "title": "Execution gateway requirements",
+      "description": "Specify execution gateway requirements for future review; do not implement execution.",
+      "category": "execution",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Execution remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "EXEC-02",
+      "title": "Command validation requirements",
+      "description": "Specify command validation requirements for future review; do not implement execution.",
+      "category": "execution",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Execution remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "EXEC-03",
+      "title": "Pre-execution checks",
+      "description": "Specify pre-execution checks for future review; do not implement execution.",
+      "category": "execution",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Execution remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "EXEC-04",
+      "title": "Approval gates",
+      "description": "Specify approval gates for future review; do not implement execution.",
+      "category": "execution",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Execution remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "EXEC-05",
+      "title": "Order audit requirements",
+      "description": "Specify order audit requirements for future review; do not implement execution.",
+      "category": "execution",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Execution remains forbidden in the current repository."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "EXEC-06",
+      "title": "Emergency stop requirements",
+      "description": "Specify emergency stop requirements for future review; do not implement execution.",
+      "category": "execution",
+      "constraint_type": "forbidden-now",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Execution remains forbidden in the current repository."
+      ]
+    }
+  ]
+}

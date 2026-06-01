@@ -1,0 +1,137 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "compliance",
+  "title": "Compliance Constraints",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "COMP-01",
+      "title": "Legal review requirement",
+      "description": "Constrain future architecture through legal review requirement.",
+      "category": "compliance",
+      "constraint_type": "hard",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No compliance approval is granted by this document."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "COMP-02",
+      "title": "Regulatory review requirement",
+      "description": "Constrain future architecture through regulatory review requirement.",
+      "category": "compliance",
+      "constraint_type": "hard",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No compliance approval is granted by this document."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "COMP-03",
+      "title": "Broker terms review requirement",
+      "description": "Constrain future architecture through broker terms review requirement.",
+      "category": "compliance",
+      "constraint_type": "hard",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No compliance approval is granted by this document."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "COMP-04",
+      "title": "Jurisdiction review requirement",
+      "description": "Constrain future architecture through jurisdiction review requirement.",
+      "category": "compliance",
+      "constraint_type": "hard",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No compliance approval is granted by this document."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "COMP-05",
+      "title": "User responsibility notices",
+      "description": "Constrain future architecture through user responsibility notices.",
+      "category": "compliance",
+      "constraint_type": "hard",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No compliance approval is granted by this document."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "COMP-06",
+      "title": "Documentation requirements",
+      "description": "Constrain future architecture through documentation requirements.",
+      "category": "compliance",
+      "constraint_type": "hard",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No compliance approval is granted by this document."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "COMP-07",
+      "title": "Compliance gate requirements",
+      "description": "Constrain future architecture through compliance gate requirements.",
+      "category": "compliance",
+      "constraint_type": "hard",
+      "priority": "مرتفع",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "No compliance approval is granted by this document."
+      ]
+    }
+  ]
+}

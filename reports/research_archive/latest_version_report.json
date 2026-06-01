@@ -1,10 +1,10 @@
 {
-  "version_id": "research-v0012",
-  "version_label": "research-v0012",
-  "snapshot_id": "snapshot-51b2769c5012",
+  "version_id": "research-v0014",
+  "version_label": "research-v0014",
+  "snapshot_id": "snapshot-a6eadca05944",
   "created_at": "deterministic-local-research-archive",
-  "previous_version_id": "research-v0011",
-  "checksum": "51b2769c5012c169afac6583f32df6e8f6652cd10b48769848e0691805c60fce",
+  "previous_version_id": "research-v0013",
+  "checksum": "a6eadca059447e9722ec2214f84e3a8620e3f640609a2d1384373a4f8e6f4876",
   "metadata": {
     "schema_version": "research_archive.v1",
     "stable_json_schema": true,

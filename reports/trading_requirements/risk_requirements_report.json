@@ -1,0 +1,151 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "risk",
+  "title": "Risk Requirements",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "RISK-01",
+      "title": "Max loss policy requirements",
+      "description": "Define max loss policy requirements as a future governance prerequisite.",
+      "category": "risk",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Risk governance must exist before any future implementation.",
+      "verification_method": "risk governance review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no account or money handling is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "RISK-02",
+      "title": "Exposure policy requirements",
+      "description": "Define exposure policy requirements as a future governance prerequisite.",
+      "category": "risk",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Risk governance must exist before any future implementation.",
+      "verification_method": "risk governance review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no account or money handling is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "RISK-03",
+      "title": "Drawdown policy requirements",
+      "description": "Define drawdown policy requirements as a future governance prerequisite.",
+      "category": "risk",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Risk governance must exist before any future implementation.",
+      "verification_method": "risk governance review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no account or money handling is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "RISK-04",
+      "title": "Account protection requirements",
+      "description": "Define account protection requirements as a future governance prerequisite.",
+      "category": "risk",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Risk governance must exist before any future implementation.",
+      "verification_method": "risk governance review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no account or money handling is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "RISK-05",
+      "title": "Risk approval requirements",
+      "description": "Define risk approval requirements as a future governance prerequisite.",
+      "category": "risk",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Risk governance must exist before any future implementation.",
+      "verification_method": "risk governance review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no account or money handling is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "RISK-06",
+      "title": "Simulation-before-action requirements",
+      "description": "Define simulation-before-action requirements as a future governance prerequisite.",
+      "category": "risk",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Risk governance must exist before any future implementation.",
+      "verification_method": "risk governance review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no account or money handling is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "RISK-07",
+      "title": "Risk audit requirements",
+      "description": "Define risk audit requirements as a future governance prerequisite.",
+      "category": "risk",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Risk governance must exist before any future implementation.",
+      "verification_method": "risk governance review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no account or money handling is added."
+      ]
+    }
+  ]
+}

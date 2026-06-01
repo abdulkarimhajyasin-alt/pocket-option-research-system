@@ -69,6 +69,7 @@
     "templates",
     "trade_lifecycle",
     "trading_architecture_program",
+    "trading_requirements",
     "validation"
   ],
   "dashboard_pages": [
@@ -122,6 +123,7 @@
     "/strategy-readiness",
     "/trade-lifecycle",
     "/trading-architecture-program",
+    "/trading-requirements",
     "/validation",
     "/validation/{report_id}"
   ],
@@ -200,6 +202,19 @@
     "/api/trading-architecture-program/domains",
     "/api/trading-architecture-program/gates",
     "/api/trading-architecture-program/workstreams",
+    "/api/trading-requirements",
+    "/api/trading-requirements/broker",
+    "/api/trading-requirements/compliance",
+    "/api/trading-requirements/data",
+    "/api/trading-requirements/diagnostics",
+    "/api/trading-requirements/execution",
+    "/api/trading-requirements/functional",
+    "/api/trading-requirements/go-no-go",
+    "/api/trading-requirements/monitoring",
+    "/api/trading-requirements/non-functional",
+    "/api/trading-requirements/recommendations",
+    "/api/trading-requirements/risk",
+    "/api/trading-requirements/safety",
     "/api/validation"
   ],
   "reports_generated": [
@@ -245,6 +260,7 @@
     "strategy_research",
     "trade_lifecycle",
     "trading_architecture_program",
+    "trading_requirements",
     "validation"
   ],
   "storage_artifacts_generated": [
@@ -284,7 +300,8 @@
     "strategy_benchmark",
     "strategy_readiness",
     "trade_lifecycle",
-    "trading_architecture_program"
+    "trading_architecture_program",
+    "trading_requirements"
   ],
   "safety_status": {
     "research_only": true,

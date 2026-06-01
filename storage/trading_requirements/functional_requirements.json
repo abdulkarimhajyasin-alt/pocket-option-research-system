@@ -1,0 +1,131 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "functional",
+  "title": "Functional Requirements",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "FR-signal-consumption",
+      "title": "Signal consumption requirements",
+      "description": "Define signal consumption requirements for a future program without implementation.",
+      "category": "functional",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Future system behavior must be documented before design can progress.",
+      "verification_method": "architecture requirements review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no current implementation is allowed."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "FR-decision-review",
+      "title": "Human decision review requirements",
+      "description": "Define human decision review requirements for a future program without implementation.",
+      "category": "functional",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Future system behavior must be documented before design can progress.",
+      "verification_method": "architecture requirements review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no current implementation is allowed."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "FR-paper-boundary",
+      "title": "Paper-to-external boundary requirements",
+      "description": "Define paper-to-external boundary requirements for a future program without implementation.",
+      "category": "functional",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Future system behavior must be documented before design can progress.",
+      "verification_method": "architecture requirements review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no current implementation is allowed."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "FR-audit-events",
+      "title": "Audit event requirements",
+      "description": "Define audit event requirements for a future program without implementation.",
+      "category": "functional",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Future system behavior must be documented before design can progress.",
+      "verification_method": "architecture requirements review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no current implementation is allowed."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "FR-approval",
+      "title": "Human approval requirements",
+      "description": "Define human approval requirements for a future program without implementation.",
+      "category": "functional",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Future system behavior must be documented before design can progress.",
+      "verification_method": "architecture requirements review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no current implementation is allowed."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "requirement_id": "FR-configuration-review",
+      "title": "Configuration review requirements",
+      "description": "Define configuration review requirements for a future program without implementation.",
+      "category": "functional",
+      "priority": "مرتفع",
+      "status": "مطلوب",
+      "rationale": "Future system behavior must be documented before design can progress.",
+      "verification_method": "architecture requirements review",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Requirement only; no current implementation is allowed."
+      ]
+    }
+  ]
+}

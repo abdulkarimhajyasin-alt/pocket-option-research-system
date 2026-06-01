@@ -1,0 +1,119 @@
+{
+  "schema_version": "trading_requirements.v1",
+  "requirements_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "category_id": "monitoring",
+  "title": "Monitoring Constraints",
+  "items": [
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "MON-01",
+      "title": "Health check requirements",
+      "description": "Document health check requirements before future operational design.",
+      "category": "monitoring",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Monitoring design only; no external connectivity is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "MON-02",
+      "title": "Alerting requirements",
+      "description": "Document alerting requirements before future operational design.",
+      "category": "monitoring",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Monitoring design only; no external connectivity is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "MON-03",
+      "title": "Metrics requirements",
+      "description": "Document metrics requirements before future operational design.",
+      "category": "monitoring",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Monitoring design only; no external connectivity is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "MON-04",
+      "title": "Dashboard requirements",
+      "description": "Document dashboard requirements before future operational design.",
+      "category": "monitoring",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Monitoring design only; no external connectivity is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "MON-05",
+      "title": "Failure detection requirements",
+      "description": "Document failure detection requirements before future operational design.",
+      "category": "monitoring",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Monitoring design only; no external connectivity is added."
+      ]
+    },
+    {
+      "schema_version": "trading_requirements.v1",
+      "requirements_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "constraint_id": "MON-06",
+      "title": "Incident reporting requirements",
+      "description": "Document incident reporting requirements before future operational design.",
+      "category": "monitoring",
+      "constraint_type": "future-only",
+      "priority": "متوسط",
+      "implementation_allowed_now": false,
+      "requires_future_program": true,
+      "safety_notes": [
+        "Monitoring design only; no external connectivity is added."
+      ]
+    }
+  ]
+}

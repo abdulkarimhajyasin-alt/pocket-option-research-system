@@ -1,0 +1,59 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.trading_requirements }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">متطلبات فقط</p>
+    <h1>مواصفات متطلبات نظام التداول المستقبلي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث المتطلبات</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة المتطلبات</span>
+    <strong>{{ trading_requirements.summary.requirements_status|default("Requirements Incomplete") }}</strong>
+    <p>هذه الصفحة توثيق متطلبات فقط ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط.</p>
+  </div>
+  <div class="executive-score">
+    <span>حالة Go/No-Go</span>
+    <strong>{{ trading_requirements.summary.go_no_go_state|default("Not Ready") }}</strong>
+  </div>
+  <div>
+    <span>عدد المتطلبات / القيود</span>
+    <strong>{{ trading_requirements.summary.requirement_count|default(0)|number_ar }} / {{ trading_requirements.summary.constraint_count|default(0)|number_ar }}</strong>
+    <small>requirements-only / architecture-only</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>عدد المتطلبات</span><strong>{{ trading_requirements.summary.requirement_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد القيود</span><strong>{{ trading_requirements.summary.constraint_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>أعلى أولوية</span><strong>{{ trading_requirements.summary.highest_priority|default("مرتفع") }}</strong></article>
+  <article class="metric-card"><span>حالة Go/No-Go</span><strong>{{ trading_requirements.summary.go_no_go_state|default("Not Ready") }}</strong></article>
+  <article class="metric-card"><span>عدد المتطلبات الأمنية</span><strong>{{ trading_requirements.summary.safety_requirement_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد متطلبات المخاطر</span><strong>{{ trading_requirements.summary.risk_requirement_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد قيود الامتثال</span><strong>{{ trading_requirements.summary.compliance_constraint_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد قيود التنفيذ</span><strong>{{ trading_requirements.summary.execution_constraint_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد قيود الوسيط</span><strong>{{ trading_requirements.summary.broker_constraint_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التحذيرات</span><strong>{{ trading_requirements.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ trading_requirements.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع المتطلبات</h2><span>وثائق</span></div><div class="chart" data-chart='{{ trading_requirements.requirements_distribution|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توزيع القيود</h2><span>قيود</span></div><div class="chart" data-chart='{{ trading_requirements.constraints_distribution|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>مستويات الأولوية</h2><span>متطلبات وقيود</span></div><div class="chart" data-chart='{{ trading_requirements.priorities|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تغطية المتطلبات</h2><span>تغطية</span></div><div class="chart" data-chart='{{ trading_requirements.coverage_chart|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>حالة Go/No-Go</h2><span>لا يعتمد التداول</span></div><div class="chart" data-chart='{{ trading_requirements.go_no_go_chart|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>التشخيص</span></div><div class="chart" data-chart='{{ trading_requirements.diagnostics|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>حوكمة</span></div><div class="chart" data-chart='{{ trading_requirements.recommendations|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ملخص المتطلبات</h2><span>محلي فقط</span></div><pre class="code-block">{{ trading_requirements.summary|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}
