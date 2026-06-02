@@ -368,6 +368,15 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_repository_hygiene.py",),
     ),
+    "release_baseline": ActionDefinition(
+        name="release_baseline",
+        label="خط أساس الإصدار",
+        description=(
+            "توليد مصالحة خط أساس الإصدار وخطة تنظيف يدوية محلية فقط دون حذف "
+            "أو تعديل تلقائي."
+        ),
+        command=("scripts/run_release_baseline.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

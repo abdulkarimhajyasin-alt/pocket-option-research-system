@@ -66,12 +66,12 @@
           "asset_exposure": {
             "بيانات السوق": 1,
             "مراقبة السوق": 1,
+            "استيراد اللقطات": 2,
+            "جاهزية المراقبة": 2,
             "مراقبة المتصفح": 2,
             "المراقبة الخارجية": 2,
-            "استيراد اللقطات": 2,
-            "snapshot": 1,
-            "جاهزية المراقبة": 2,
             "ذكاء المراقبة": 1,
+            "snapshot": 1,
             "browser_snapshot": 1,
             "external_source": 1
           },
@@ -80,8 +80,8 @@
           },
           "direction_exposure": {
             "NO_TRADE": 11,
-            "CALL": 2,
-            "PUT": 1
+            "PUT": 2,
+            "CALL": 1
           },
           "confidence_exposure": {
             "ثقة متوسطة": 3,
@@ -107,7 +107,7 @@
         "recommendation_count": 3,
         "summary": {
           "portfolio_id": "paper_portfolio_0001",
-          "created_at": "2026-06-02T15:35:26.892923+00:00",
+          "created_at": "2026-06-02T16:19:35.261980+00:00",
           "total_orders": 14,
           "active_orders": 0,
           "wins": 2,

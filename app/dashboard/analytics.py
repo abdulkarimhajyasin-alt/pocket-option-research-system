@@ -5701,6 +5701,184 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def release_baseline_analytics(self) -> dict[str, Any]:
+        """Return latest release baseline analytics."""
+        summary_payload = self._latest_json_dict(
+            "release_baseline",
+            "release_baseline_summary",
+        )
+        inventory = self._latest_json_dict("release_baseline", "baseline_inventory_report")
+        commit = self._latest_json_dict(
+            "release_baseline",
+            "commit_classification_report",
+        )
+        checklist = self._latest_json_dict(
+            "release_baseline",
+            "cleanup_checklist_report",
+        )
+        churn = self._latest_json_dict("release_baseline", "validation_churn_report")
+        archive = self._latest_json_dict(
+            "release_baseline",
+            "archive_reconciliation_report",
+        )
+        evidence = self._latest_json_dict("release_baseline", "evidence_selection_report")
+        scorecard = self._latest_json_dict("release_baseline", "scorecard_report")
+        diagnostics = self._latest_json_list("release_baseline", "diagnostics_report")
+        reports = self.loader.list_reports()
+        recommendations_report = self.loader.latest(
+            [item for item in reports if item.report_type == "json"],
+            "release_baseline",
+            "recommendations_report",
+        )
+        recommendations_content = (
+            self.loader.get_report(recommendations_report.report_id)
+            if recommendations_report
+            else None
+        )
+        recommendation_payload = (
+            recommendations_content.json_data if recommendations_content else []
+        )
+        recommendations = (
+            [str(item) for item in recommendation_payload]
+            if isinstance(recommendation_payload, list)
+            else []
+        )
+        inventory_counts = inventory.get("category_counts", {})
+        commit_counts = commit.get("classification_counts", {})
+        checklist_counts = checklist.get("action_counts", {})
+        churn_counts = churn.get("churn_counts", {})
+        archive_counts = archive.get("archive_counts", {})
+        evidence_counts = evidence.get("evidence_counts", {})
+        score_values = {
+            "clarity": self._float(scorecard.get("baseline_clarity_score")),
+            "commit": self._float(scorecard.get("commit_readiness_score")),
+            "artifacts": self._float(scorecard.get("artifact_reconciliation_score")),
+            "cleanup": self._float(scorecard.get("manual_cleanup_readiness_score")),
+            "evidence": self._float(scorecard.get("evidence_selection_score")),
+            "ignore": self._float(scorecard.get("ignore_review_score")),
+            "overall": self._float(scorecard.get("overall_baseline_readiness_score")),
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {item: 1.0 for item in recommendations}
+        summary = {
+            "baseline_state": summary_payload.get(
+                "baseline_state",
+                scorecard.get("baseline_state", "Needs Manual Review"),
+            ),
+            "overall_baseline_readiness_score": self._float(
+                summary_payload.get(
+                    "overall_baseline_readiness_score",
+                    scorecard.get("overall_baseline_readiness_score", 0),
+                )
+            ),
+            "inventory_count": self._float(
+                summary_payload.get("inventory_count", len(inventory.get("items", [])))
+            ),
+            "commit_candidate_count": self._float(
+                summary_payload.get("commit_candidate_count", 0)
+            ),
+            "manual_review_count": self._float(
+                summary_payload.get("manual_review_count", 0)
+            ),
+            "manual_cleanup_count": self._float(
+                summary_payload.get("manual_cleanup_count", 0)
+            ),
+            "release_evidence_count": self._float(
+                summary_payload.get("release_evidence_count", len(evidence.get("items", [])))
+            ),
+            "ignore_recommendation_count": self._float(
+                summary_payload.get("ignore_recommendation_count", 0)
+            ),
+            "validation_churn_count": self._float(
+                summary_payload.get("validation_churn_count", len(churn.get("items", [])))
+            ),
+            "archive_reconciliation_count": self._float(
+                summary_payload.get(
+                    "archive_reconciliation_count",
+                    len(archive.get("items", [])),
+                )
+            ),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "baseline_reconciliation_only": True,
+            "manual_cleanup_planning_only": True,
+            "non_destructive": True,
+            "local_only": True,
+            "research_only": True,
+        }
+        return {
+            "summary": summary,
+            "inventory_payload": inventory,
+            "commit_payload": commit,
+            "cleanup_payload": checklist,
+            "churn_payload": churn,
+            "archive_payload": archive,
+            "evidence_payload": evidence,
+            "scorecard": scorecard,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "inventory": bar_chart(
+                "تصنيف خط الأساس",
+                *self._dict_chart_values(inventory_counts),
+                label="الجرد",
+                color="blue",
+            ).to_dict(),
+            "commit_classification": bar_chart(
+                "تصنيف الإيداع",
+                *self._dict_chart_values(commit_counts),
+                label="الإيداع",
+                color="green",
+            ).to_dict(),
+            "manual_review": bar_chart(
+                "عناصر المراجعة اليدوية",
+                *self._dict_chart_values(checklist_counts),
+                label="المراجعة",
+                color="warning",
+            ).to_dict(),
+            "validation_churn": bar_chart(
+                "تغييرات التحقق",
+                *self._dict_chart_values(churn_counts),
+                label="التغييرات",
+                color="accent",
+            ).to_dict(),
+            "archive_reconciliation": bar_chart(
+                "مصالحة الأرشيف",
+                *self._dict_chart_values(archive_counts),
+                label="الأرشيف",
+                color="blue",
+            ).to_dict(),
+            "evidence": bar_chart(
+                "أدلة الإصدار",
+                *self._dict_chart_values(evidence_counts),
+                label="الأدلة",
+                color="green",
+            ).to_dict(),
+            "scores": bar_chart(
+                "درجات الجاهزية",
+                *self._dict_chart_values(score_values),
+                label="الدرجات",
+                color="green",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

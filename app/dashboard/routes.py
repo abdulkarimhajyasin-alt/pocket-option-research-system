@@ -42,6 +42,7 @@ from app.governance_traceability.service import GovernanceTraceabilityService
 from app.control_assurance.service import ControlAssuranceService
 from app.review_board_simulation.service import ReviewBoardSimulationService
 from app.repository_hygiene.service import RepositoryHygieneService
+from app.release_baseline.service import ReleaseBaselineService
 
 SAFETY_NOTE = (
     "This is a local research dashboard. It does not execute live trades, connect to "
@@ -904,6 +905,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/release-baseline", response_class=HTMLResponse)
+    def release_baseline(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/release_baseline.html",
+            context(
+                request,
+                dashboard,
+                page="release_baseline",
+                release_baseline=dashboard.analytics.release_baseline_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1610,6 +1625,62 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/repository-hygiene/recommendations")
     def api_repository_hygiene_recommendations() -> list[str]:
         return RepositoryHygieneService(root).generate_recommendations()
+
+    @app.get("/api/release-baseline")
+    def api_release_baseline() -> dict[str, object]:
+        return dashboard_context().analytics.release_baseline_analytics()
+
+    @app.get("/api/release-baseline/inventory")
+    def api_release_baseline_inventory() -> dict[str, object]:
+        return ReleaseBaselineService(root).build_baseline_inventory()
+
+    @app.get("/api/release-baseline/commit-classification")
+    def api_release_baseline_commit_classification() -> dict[str, object]:
+        return ReleaseBaselineService(root).classify_commit_candidates()
+
+    @app.get("/api/release-baseline/artifact-reconciliation")
+    def api_release_baseline_artifact_reconciliation() -> dict[str, object]:
+        return ReleaseBaselineService(root).reconcile_artifacts()
+
+    @app.get("/api/release-baseline/evidence")
+    def api_release_baseline_evidence() -> dict[str, object]:
+        return ReleaseBaselineService(root).select_release_evidence()
+
+    @app.get("/api/release-baseline/cleanup-checklist")
+    def api_release_baseline_cleanup_checklist() -> dict[str, object]:
+        return ReleaseBaselineService(root).build_cleanup_checklist()
+
+    @app.get("/api/release-baseline/ignore-review")
+    def api_release_baseline_ignore_review() -> dict[str, object]:
+        return ReleaseBaselineService(root).build_ignore_review()
+
+    @app.get("/api/release-baseline/prompt-policy")
+    def api_release_baseline_prompt_policy() -> dict[str, object]:
+        return ReleaseBaselineService(root).build_prompt_file_policy()
+
+    @app.get("/api/release-baseline/validation-churn")
+    def api_release_baseline_validation_churn() -> dict[str, object]:
+        return ReleaseBaselineService(root).analyze_validation_churn()
+
+    @app.get("/api/release-baseline/archive-reconciliation")
+    def api_release_baseline_archive_reconciliation() -> dict[str, object]:
+        return ReleaseBaselineService(root).reconcile_archives()
+
+    @app.get("/api/release-baseline/decision-matrix")
+    def api_release_baseline_decision_matrix() -> dict[str, object]:
+        return ReleaseBaselineService(root).build_decision_matrix()
+
+    @app.get("/api/release-baseline/scorecard")
+    def api_release_baseline_scorecard() -> dict[str, object]:
+        return ReleaseBaselineService(root).build_scorecard()
+
+    @app.get("/api/release-baseline/diagnostics")
+    def api_release_baseline_diagnostics() -> list[dict[str, object]]:
+        return ReleaseBaselineService(root).generate_diagnostics()
+
+    @app.get("/api/release-baseline/recommendations")
+    def api_release_baseline_recommendations() -> list[str]:
+        return ReleaseBaselineService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

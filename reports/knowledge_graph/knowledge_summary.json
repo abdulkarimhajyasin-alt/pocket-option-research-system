@@ -1,7 +1,7 @@
 {
   "summary": {
-    "graph_id": "knowledge_graph_20260602153338",
-    "generated_at": "2026-06-02T15:33:38.061104+00:00",
+    "graph_id": "knowledge_graph_20260602161750",
+    "generated_at": "2026-06-02T16:17:50.416243+00:00",
     "nodes": [
       {
         "node_id": "signal",
@@ -271,10 +271,10 @@
     "not_broker_access": true
   },
   "latest": {
-    "timestamp": "2026-06-02T15:33:38.061582+00:00",
+    "timestamp": "2026-06-02T16:17:50.416659+00:00",
     "graph": {
-      "graph_id": "knowledge_graph_20260602153338",
-      "generated_at": "2026-06-02T15:33:38.061104+00:00",
+      "graph_id": "knowledge_graph_20260602161750",
+      "generated_at": "2026-06-02T16:17:50.416243+00:00",
       "nodes": [
         {
           "node_id": "signal",

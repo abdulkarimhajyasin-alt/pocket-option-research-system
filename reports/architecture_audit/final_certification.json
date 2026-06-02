@@ -1,12 +1,12 @@
 {
-  "certification_id": "architecture_audit_20260602153340",
-  "generated_at": "2026-06-02T15:33:40.005298+00:00",
+  "certification_id": "architecture_audit_20260602161815",
+  "generated_at": "2026-06-02T16:18:15.637406+00:00",
   "architecture_score": 100.0,
   "consistency_score": 96.5,
   "dependency_score": 76.0,
-  "performance_score": 67.68,
+  "performance_score": 67.28,
   "safety_score": 100.0,
-  "overall_score": 88.04,
+  "overall_score": 87.96,
   "certification_state": "جاهزة بشروط",
   "metadata": {
     "architecture_audit_only": true,

@@ -158,12 +158,12 @@
             "asset_exposure": {
               "بيانات السوق": 1,
               "مراقبة السوق": 1,
+              "استيراد اللقطات": 2,
+              "جاهزية المراقبة": 2,
               "مراقبة المتصفح": 2,
               "المراقبة الخارجية": 2,
-              "استيراد اللقطات": 2,
-              "snapshot": 1,
-              "جاهزية المراقبة": 2,
               "ذكاء المراقبة": 1,
+              "snapshot": 1,
               "browser_snapshot": 1,
               "external_source": 1
             },
@@ -172,8 +172,8 @@
             },
             "direction_exposure": {
               "NO_TRADE": 11,
-              "CALL": 2,
-              "PUT": 1
+              "PUT": 2,
+              "CALL": 1
             },
             "confidence_exposure": {
               "ثقة متوسطة": 3,
@@ -199,7 +199,7 @@
           "recommendation_count": 3,
           "summary": {
             "portfolio_id": "paper_portfolio_0001",
-            "created_at": "2026-06-02T15:35:26.892923+00:00",
+            "created_at": "2026-06-02T16:19:35.261980+00:00",
             "total_orders": 14,
             "active_orders": 0,
             "wins": 2,
@@ -250,8 +250,8 @@
     "data": {
       "readiness": {
         "summary": {
-          "readiness_id": "paper_live_readiness_20260602153525",
-          "generated_at": "2026-06-02T15:35:25.714701+00:00",
+          "readiness_id": "paper_live_readiness_20260602161854",
+          "generated_at": "2026-06-02T16:18:54.171747+00:00",
           "paper_health": 81.92,
           "paper_stability": 60.85,
           "paper_governance": 0.0,
@@ -298,14 +298,14 @@
       },
       "architecture_audit": {
         "summary": {
-          "certification_id": "architecture_audit_20260602153340",
-          "generated_at": "2026-06-02T15:33:40.005298+00:00",
+          "certification_id": "architecture_audit_20260602161815",
+          "generated_at": "2026-06-02T16:18:15.637406+00:00",
           "architecture_score": 100.0,
           "consistency_score": 96.5,
           "dependency_score": 76.0,
-          "performance_score": 67.68,
+          "performance_score": 67.28,
           "safety_score": 100.0,
-          "overall_score": 88.04,
+          "overall_score": 87.96,
           "certification_state": "جاهزة بشروط",
           "metadata": {
             "architecture_audit_only": true,
@@ -377,8 +377,8 @@
     "data": {
       "knowledge_graph": {
         "summary": {
-          "graph_id": "knowledge_graph_20260602153338",
-          "generated_at": "2026-06-02T15:33:38.061104+00:00",
+          "graph_id": "knowledge_graph_20260602161750",
+          "generated_at": "2026-06-02T16:17:50.416243+00:00",
           "nodes": [
             {
               "node_id": "signal",

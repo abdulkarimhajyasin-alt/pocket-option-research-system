@@ -915,7 +915,7 @@
       "artifact_family": "report artifact",
       "file_name": "source_inventory_report.json",
       "suffix": ".json",
-      "size_bytes": 3884930,
+      "size_bytes": 3895815,
       "version_number": null
     },
     {
@@ -1187,7 +1187,7 @@
       "artifact_family": "report artifact",
       "file_name": "execution_summary.json",
       "suffix": ".json",
-      "size_bytes": 20203,
+      "size_bytes": 20202,
       "version_number": null
     },
     {
@@ -1408,7 +1408,7 @@
       "artifact_family": "report artifact",
       "file_name": "control_mappings_report.json",
       "suffix": ".json",
-      "size_bytes": 647420,
+      "size_bytes": 643605,
       "version_number": null
     },
     {
@@ -1629,7 +1629,7 @@
       "artifact_family": "report artifact",
       "file_name": "source_inventory_report.json",
       "suffix": ".json",
-      "size_bytes": 634910,
+      "size_bytes": 631095,
       "version_number": null
     },
     {
@@ -3295,7 +3295,7 @@
       "artifact_family": "report artifact",
       "file_name": "lifecycle_report.json",
       "suffix": ".json",
-      "size_bytes": 12957,
+      "size_bytes": 12949,
       "version_number": null
     },
     {
@@ -3312,7 +3312,7 @@
       "artifact_family": "report artifact",
       "file_name": "orders_report.json",
       "suffix": ".json",
-      "size_bytes": 53,
+      "size_bytes": 34,
       "version_number": null
     },
     {
@@ -3329,7 +3329,7 @@
       "artifact_family": "report artifact",
       "file_name": "paper_execution_summary.json",
       "suffix": ".json",
-      "size_bytes": 43398,
+      "size_bytes": 43372,
       "version_number": null
     },
     {
@@ -3363,7 +3363,7 @@
       "artifact_family": "report artifact",
       "file_name": "results_report.json",
       "suffix": ".json",
-      "size_bytes": 56,
+      "size_bytes": 37,
       "version_number": null
     },
     {
@@ -4362,6 +4362,261 @@
       "research_only": true,
       "local_only": true,
       "non_destructive": true,
+      "path": "reports/release_baseline/archive_reconciliation_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "archive_reconciliation_report.json",
+      "suffix": ".json",
+      "size_bytes": 70012,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/artifact_reconciliation_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "artifact_reconciliation_report.json",
+      "suffix": ".json",
+      "size_bytes": 471610,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/baseline_inventory_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "baseline_inventory_report.json",
+      "suffix": ".json",
+      "size_bytes": 1612140,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/cleanup_checklist_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "cleanup_checklist_report.json",
+      "suffix": ".json",
+      "size_bytes": 2307684,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/commit_classification_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "commit_classification_report.json",
+      "suffix": ".json",
+      "size_bytes": 1703178,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/decision_matrix_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "decision_matrix_report.json",
+      "suffix": ".json",
+      "size_bytes": 3943,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/diagnostics_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "diagnostics_report.json",
+      "suffix": ".json",
+      "size_bytes": 14422,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/evidence_selection_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "evidence_selection_report.json",
+      "suffix": ".json",
+      "size_bytes": 361113,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/ignore_review_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "ignore_review_report.json",
+      "suffix": ".json",
+      "size_bytes": 1779,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/prompt_file_policy_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "prompt_file_policy_report.json",
+      "suffix": ".json",
+      "size_bytes": 3680,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/recommendations_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "recommendations_report.json",
+      "suffix": ".json",
+      "size_bytes": 723,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/release_baseline_summary.json",
+      "artifact_family": "report artifact",
+      "file_name": "release_baseline_summary.json",
+      "suffix": ".json",
+      "size_bytes": 1146,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/scorecard_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "scorecard_report.json",
+      "suffix": ".json",
+      "size_bytes": 1090,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/source_inventory_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "source_inventory_report.json",
+      "suffix": ".json",
+      "size_bytes": 36431339,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "reports/release_baseline/validation_churn_report.json",
+      "artifact_family": "report artifact",
+      "file_name": "validation_churn_report.json",
+      "suffix": ".json",
+      "size_bytes": 50191,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
       "path": "reports/release_packaging/architecture_summary.json",
       "artifact_family": "report artifact",
       "file_name": "architecture_summary.json",
@@ -4400,7 +4655,7 @@
       "artifact_family": "report artifact",
       "file_name": "project_status_report.json",
       "suffix": ".json",
-      "size_bytes": 14078,
+      "size_bytes": 14804,
       "version_number": null
     },
     {
@@ -4434,7 +4689,7 @@
       "artifact_family": "report artifact",
       "file_name": "release_manifest_report.json",
       "suffix": ".json",
-      "size_bytes": 19373,
+      "size_bytes": 20173,
       "version_number": null
     },
     {
@@ -4451,7 +4706,7 @@
       "artifact_family": "report artifact",
       "file_name": "release_notes.json",
       "suffix": ".json",
-      "size_bytes": 11065,
+      "size_bytes": 11716,
       "version_number": null
     },
     {
@@ -4485,7 +4740,7 @@
       "artifact_family": "report artifact",
       "file_name": "repository_audit_report.json",
       "suffix": ".json",
-      "size_bytes": 74380,
+      "size_bytes": 77062,
       "version_number": null
     },
     {
@@ -4519,7 +4774,7 @@
       "artifact_family": "report artifact",
       "file_name": "artifact_classification_report.json",
       "suffix": ".json",
-      "size_bytes": 458023,
+      "size_bytes": 474603,
       "version_number": null
     },
     {
@@ -4536,7 +4791,7 @@
       "artifact_family": "report artifact",
       "file_name": "artifact_inventory_report.json",
       "suffix": ".json",
-      "size_bytes": 481469,
+      "size_bytes": 499159,
       "version_number": null
     },
     {
@@ -4553,7 +4808,7 @@
       "artifact_family": "report artifact",
       "file_name": "cleanup_plan_report.json",
       "suffix": ".json",
-      "size_bytes": 642083,
+      "size_bytes": 664792,
       "version_number": null
     },
     {
@@ -4570,7 +4825,7 @@
       "artifact_family": "report artifact",
       "file_name": "diagnostics_report.json",
       "suffix": ".json",
-      "size_bytes": 14083,
+      "size_bytes": 15744,
       "version_number": null
     },
     {
@@ -4587,7 +4842,7 @@
       "artifact_family": "report artifact",
       "file_name": "duplicate_artifacts_report.json",
       "suffix": ".json",
-      "size_bytes": 58555,
+      "size_bytes": 60244,
       "version_number": null
     },
     {
@@ -4604,7 +4859,7 @@
       "artifact_family": "report artifact",
       "file_name": "git_status_inventory_report.json",
       "suffix": ".json",
-      "size_bytes": 56638,
+      "size_bytes": 62488,
       "version_number": null
     },
     {
@@ -4655,7 +4910,7 @@
       "artifact_family": "report artifact",
       "file_name": "repository_hygiene_summary.json",
       "suffix": ".json",
-      "size_bytes": 968,
+      "size_bytes": 970,
       "version_number": null
     },
     {
@@ -4961,7 +5216,7 @@
       "artifact_family": "report artifact",
       "file_name": "version_history.json",
       "suffix": ".json",
-      "size_bytes": 24903,
+      "size_bytes": 25941,
       "version_number": null
     },
     {
@@ -5403,7 +5658,7 @@
       "artifact_family": "report artifact",
       "file_name": "source_inventory_report.json",
       "suffix": ".json",
-      "size_bytes": 13338873,
+      "size_bytes": 13333168,
       "version_number": null
     },
     {
@@ -7273,7 +7528,7 @@
       "artifact_family": "storage artifact",
       "file_name": "source_inventory.json",
       "suffix": ".json",
-      "size_bytes": 3884930,
+      "size_bytes": 3895815,
       "version_number": null
     },
     {
@@ -7324,7 +7579,7 @@
       "artifact_family": "storage artifact",
       "file_name": "diagnostics.json",
       "suffix": ".json",
-      "size_bytes": 23056,
+      "size_bytes": 23054,
       "version_number": null
     },
     {
@@ -7341,7 +7596,7 @@
       "artifact_family": "storage artifact",
       "file_name": "execution_candidates.json",
       "suffix": ".json",
-      "size_bytes": 14352,
+      "size_bytes": 14351,
       "version_number": null
     },
     {
@@ -7545,7 +7800,7 @@
       "artifact_family": "storage artifact",
       "file_name": "control_mappings.json",
       "suffix": ".json",
-      "size_bytes": 647420,
+      "size_bytes": 643605,
       "version_number": null
     },
     {
@@ -7749,7 +8004,7 @@
       "artifact_family": "storage artifact",
       "file_name": "source_inventory.json",
       "suffix": ".json",
-      "size_bytes": 634910,
+      "size_bytes": 631095,
       "version_number": null
     },
     {
@@ -9143,7 +9398,7 @@
       "artifact_family": "storage artifact",
       "file_name": "diagnostics.json",
       "suffix": ".json",
-      "size_bytes": 40386,
+      "size_bytes": 40360,
       "version_number": null
     },
     {
@@ -9160,7 +9415,7 @@
       "artifact_family": "storage artifact",
       "file_name": "paper_lifecycle.json",
       "suffix": ".json",
-      "size_bytes": 12957,
+      "size_bytes": 12949,
       "version_number": null
     },
     {
@@ -9177,7 +9432,7 @@
       "artifact_family": "storage artifact",
       "file_name": "paper_orders.json",
       "suffix": ".json",
-      "size_bytes": 16229,
+      "size_bytes": 16220,
       "version_number": null
     },
     {
@@ -9194,7 +9449,7 @@
       "artifact_family": "storage artifact",
       "file_name": "paper_results.json",
       "suffix": ".json",
-      "size_bytes": 5399,
+      "size_bytes": 5390,
       "version_number": null
     },
     {
@@ -10091,6 +10346,261 @@
       "research_only": true,
       "local_only": true,
       "non_destructive": true,
+      "path": "storage/release_baseline/archive_reconciliation.json",
+      "artifact_family": "storage artifact",
+      "file_name": "archive_reconciliation.json",
+      "suffix": ".json",
+      "size_bytes": 70012,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/artifact_reconciliation.json",
+      "artifact_family": "storage artifact",
+      "file_name": "artifact_reconciliation.json",
+      "suffix": ".json",
+      "size_bytes": 471610,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/baseline_inventory.json",
+      "artifact_family": "storage artifact",
+      "file_name": "baseline_inventory.json",
+      "suffix": ".json",
+      "size_bytes": 1612140,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/cleanup_checklist.json",
+      "artifact_family": "storage artifact",
+      "file_name": "cleanup_checklist.json",
+      "suffix": ".json",
+      "size_bytes": 2307684,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/commit_classification.json",
+      "artifact_family": "storage artifact",
+      "file_name": "commit_classification.json",
+      "suffix": ".json",
+      "size_bytes": 1703178,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/decision_matrix.json",
+      "artifact_family": "storage artifact",
+      "file_name": "decision_matrix.json",
+      "suffix": ".json",
+      "size_bytes": 3943,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/diagnostics.json",
+      "artifact_family": "storage artifact",
+      "file_name": "diagnostics.json",
+      "suffix": ".json",
+      "size_bytes": 14422,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/evidence_selection.json",
+      "artifact_family": "storage artifact",
+      "file_name": "evidence_selection.json",
+      "suffix": ".json",
+      "size_bytes": 361113,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/ignore_review.json",
+      "artifact_family": "storage artifact",
+      "file_name": "ignore_review.json",
+      "suffix": ".json",
+      "size_bytes": 1779,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/prompt_file_policy.json",
+      "artifact_family": "storage artifact",
+      "file_name": "prompt_file_policy.json",
+      "suffix": ".json",
+      "size_bytes": 3680,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/recommendations.json",
+      "artifact_family": "storage artifact",
+      "file_name": "recommendations.json",
+      "suffix": ".json",
+      "size_bytes": 723,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/scorecard.json",
+      "artifact_family": "storage artifact",
+      "file_name": "scorecard.json",
+      "suffix": ".json",
+      "size_bytes": 1090,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/source_inventory.json",
+      "artifact_family": "storage artifact",
+      "file_name": "source_inventory.json",
+      "suffix": ".json",
+      "size_bytes": 36431339,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/summary.json",
+      "artifact_family": "storage artifact",
+      "file_name": "summary.json",
+      "suffix": ".json",
+      "size_bytes": 1146,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "storage/release_baseline/validation_churn.json",
+      "artifact_family": "storage artifact",
+      "file_name": "validation_churn.json",
+      "suffix": ".json",
+      "size_bytes": 50191,
+      "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
       "path": "storage/release_packaging/diagnostics.json",
       "artifact_family": "storage artifact",
       "file_name": "diagnostics.json",
@@ -10112,7 +10622,7 @@
       "artifact_family": "storage artifact",
       "file_name": "project_status.json",
       "suffix": ".json",
-      "size_bytes": 14078,
+      "size_bytes": 14804,
       "version_number": null
     },
     {
@@ -10146,7 +10656,7 @@
       "artifact_family": "storage artifact",
       "file_name": "release_manifest.json",
       "suffix": ".json",
-      "size_bytes": 19373,
+      "size_bytes": 20173,
       "version_number": null
     },
     {
@@ -10180,7 +10690,7 @@
       "artifact_family": "storage artifact",
       "file_name": "repository_audit.json",
       "suffix": ".json",
-      "size_bytes": 74380,
+      "size_bytes": 77062,
       "version_number": null
     },
     {
@@ -10214,7 +10724,7 @@
       "artifact_family": "storage artifact",
       "file_name": "artifact_classification.json",
       "suffix": ".json",
-      "size_bytes": 458023,
+      "size_bytes": 474603,
       "version_number": null
     },
     {
@@ -10231,7 +10741,7 @@
       "artifact_family": "storage artifact",
       "file_name": "artifact_inventory.json",
       "suffix": ".json",
-      "size_bytes": 481469,
+      "size_bytes": 499159,
       "version_number": null
     },
     {
@@ -10248,7 +10758,7 @@
       "artifact_family": "storage artifact",
       "file_name": "cleanup_plan.json",
       "suffix": ".json",
-      "size_bytes": 642083,
+      "size_bytes": 664792,
       "version_number": null
     },
     {
@@ -10265,7 +10775,7 @@
       "artifact_family": "storage artifact",
       "file_name": "diagnostics.json",
       "suffix": ".json",
-      "size_bytes": 14083,
+      "size_bytes": 15744,
       "version_number": null
     },
     {
@@ -10282,7 +10792,7 @@
       "artifact_family": "storage artifact",
       "file_name": "duplicate_artifacts.json",
       "suffix": ".json",
-      "size_bytes": 58555,
+      "size_bytes": 60244,
       "version_number": null
     },
     {
@@ -10299,7 +10809,7 @@
       "artifact_family": "storage artifact",
       "file_name": "git_status_inventory.json",
       "suffix": ".json",
-      "size_bytes": 56638,
+      "size_bytes": 62488,
       "version_number": null
     },
     {
@@ -10401,7 +10911,7 @@
       "artifact_family": "storage artifact",
       "file_name": "summary.json",
       "suffix": ".json",
-      "size_bytes": 968,
+      "size_bytes": 970,
       "version_number": null
     },
     {
@@ -10571,7 +11081,7 @@
       "artifact_family": "storage artifact",
       "file_name": "archive_index.json",
       "suffix": ".json",
-      "size_bytes": 9316,
+      "size_bytes": 9688,
       "version_number": null
     },
     {
@@ -11047,7 +11557,7 @@
       "artifact_family": "storage artifact",
       "file_name": "latest_snapshot.json",
       "suffix": ".json",
-      "size_bytes": 654173,
+      "size_bytes": 654169,
       "version_number": null
     },
     {
@@ -12730,7 +13240,7 @@
       "artifact_family": "archive snapshot",
       "file_name": "snapshot.json",
       "suffix": ".json",
-      "size_bytes": 654194,
+      "size_bytes": 654169,
       "version_number": 25
     },
     {
@@ -12747,7 +13257,7 @@
       "artifact_family": "archive snapshot",
       "file_name": "source_manifest.json",
       "suffix": ".json",
-      "size_bytes": 623164,
+      "size_bytes": 623139,
       "version_number": 25
     },
     {
@@ -12832,7 +13342,7 @@
       "artifact_family": "storage artifact",
       "file_name": "versions.json",
       "suffix": ".json",
-      "size_bytes": 24903,
+      "size_bytes": 25941,
       "version_number": null
     },
     {
@@ -13206,7 +13716,7 @@
       "artifact_family": "storage artifact",
       "file_name": "source_inventory.json",
       "suffix": ".json",
-      "size_bytes": 13338873,
+      "size_bytes": 13333168,
       "version_number": null
     },
     {
@@ -14243,7 +14753,7 @@
       "artifact_family": "storage artifact",
       "file_name": "trading_system.db",
       "suffix": ".db",
-      "size_bytes": 34230272,
+      "size_bytes": 34541568,
       "version_number": null
     },
     {
@@ -14330,14 +14840,31 @@
       "suffix": ".md",
       "size_bytes": 18614,
       "version_number": null
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "path": "phase65.md",
+      "artifact_family": "prompt artifact",
+      "file_name": "phase65.md",
+      "suffix": ".md",
+      "size_bytes": 21515,
+      "version_number": null
     }
   ],
   "summary": {
-    "report artifact": 395,
-    "storage artifact": 313,
+    "report artifact": 410,
+    "storage artifact": 328,
     "diff artifact": 26,
     "archive snapshot": 104,
-    "prompt artifact": 5
+    "prompt artifact": 6
   },
   "repository_hygiene_only": true,
   "artifact_policy_only": true,

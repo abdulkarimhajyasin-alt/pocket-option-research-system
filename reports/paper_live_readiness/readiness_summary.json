@@ -1,7 +1,7 @@
 {
   "summary": {
-    "readiness_id": "paper_live_readiness_20260602153525",
-    "generated_at": "2026-06-02T15:35:25.714701+00:00",
+    "readiness_id": "paper_live_readiness_20260602161854",
+    "generated_at": "2026-06-02T16:18:54.171747+00:00",
     "paper_health": 81.92,
     "paper_stability": 60.85,
     "paper_governance": 0.0,
@@ -44,10 +44,10 @@
     "not_broker_access": true
   },
   "latest": {
-    "timestamp": "2026-06-02T15:35:25.714912+00:00",
+    "timestamp": "2026-06-02T16:18:54.171971+00:00",
     "readiness": {
-      "readiness_id": "paper_live_readiness_20260602153525",
-      "generated_at": "2026-06-02T15:35:25.714701+00:00",
+      "readiness_id": "paper_live_readiness_20260602161854",
+      "generated_at": "2026-06-02T16:18:54.171747+00:00",
       "paper_health": 81.92,
       "paper_stability": 60.85,
       "paper_governance": 0.0,

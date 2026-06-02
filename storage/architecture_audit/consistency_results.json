@@ -1,10 +1,10 @@
 {
   "consistency_score": 96.5,
-  "report_count": 376,
-  "storage_count": 308,
-  "dashboard_template_count": 58,
-  "api_route_count": 170,
-  "route_count": 229,
+  "report_count": 391,
+  "storage_count": 323,
+  "dashboard_template_count": 59,
+  "api_route_count": 184,
+  "route_count": 244,
   "missing_storage_counterparts": [
     "analytics",
     "datasets",

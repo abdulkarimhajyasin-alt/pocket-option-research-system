@@ -1,0 +1,64 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.release_baseline }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">مراجعة يدوية فقط</p>
+    <h1>مصالحة خط أساس الإصدار وخطة التنظيف اليدوي</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث المصالحة</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة خط الأساس</span>
+    <strong>{{ release_baseline.summary.baseline_state|default("Needs Manual Review") }}</strong>
+    <p>هذه الصفحة مصالحة خط أساس وخطة تنظيف يدوية فقط ولا تحذف الملفات تلقائياً ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة الجاهزية العامة</span>
+    <strong>{{ release_baseline.summary.overall_baseline_readiness_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>حدود السلامة</span>
+    <strong>غير تدميري</strong>
+    <small>محلي / تخطيط فقط / بحثي</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>حالة خط الأساس</span><strong>{{ release_baseline.summary.baseline_state|default("Needs Manual Review") }}</strong></article>
+  <article class="metric-card"><span>درجة الجاهزية العامة</span><strong>{{ release_baseline.summary.overall_baseline_readiness_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد عناصر الجرد</span><strong>{{ release_baseline.summary.inventory_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد مرشحات commit</span><strong>{{ release_baseline.summary.commit_candidate_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد عناصر المراجعة اليدوية</span><strong>{{ release_baseline.summary.manual_review_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد عناصر cleanup اليدوي</span><strong>{{ release_baseline.summary.manual_cleanup_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد أدلة الإصدار</span><strong>{{ release_baseline.summary.release_evidence_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد توصيات .gitignore</span><strong>{{ release_baseline.summary.ignore_recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد عناصر validation churn</span><strong>{{ release_baseline.summary.validation_churn_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد عناصر archive reconciliation</span><strong>{{ release_baseline.summary.archive_reconciliation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التحذيرات</span><strong>{{ release_baseline.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ release_baseline.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>تصنيف خط الأساس</h2><span>جرد محلي</span></div><div class="chart" data-chart='{{ release_baseline.inventory|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تصنيف الإيداع</h2><span>قرار بشري</span></div><div class="chart" data-chart='{{ release_baseline.commit_classification|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>عناصر المراجعة اليدوية</h2><span>قائمة مراجعة</span></div><div class="chart" data-chart='{{ release_baseline.manual_review|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تغييرات التحقق</h2><span>مصالحة</span></div><div class="chart" data-chart='{{ release_baseline.validation_churn|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>مصالحة الأرشيف</h2><span>أرشيف</span></div><div class="chart" data-chart='{{ release_baseline.archive_reconciliation|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>أدلة الإصدار</h2><span>أدلة</span></div><div class="chart" data-chart='{{ release_baseline.evidence|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>درجات الجاهزية</h2><span>بطاقة الدرجات</span></div><div class="chart" data-chart='{{ release_baseline.scores|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>تشخيص السلامة</span></div><div class="chart" data-chart='{{ release_baseline.diagnostics|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>توصيات عربية</span></div><div class="chart" data-chart='{{ release_baseline.recommendations|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ملخص خط الأساس</h2><span>محلي فقط</span></div><pre class="code-block">{{ release_baseline.summary|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}

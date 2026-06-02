@@ -37,12 +37,32 @@
   {
     "code": "generated-report-change",
     "severity": "متوسط",
+    "message": "reports/control_assurance/source_inventory_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
     "message": "reports/execution_readiness/execution_summary.json"
   },
   {
     "code": "generated-report-change",
     "severity": "متوسط",
+    "message": "reports/execution_readiness/readiness_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
     "message": "reports/external_observation/sandbox_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/governance_traceability/control_mappings_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/governance_traceability/source_inventory_report.json"
   },
   {
     "code": "generated-report-change",
@@ -53,6 +73,11 @@
     "code": "generated-report-change",
     "severity": "متوسط",
     "message": "reports/integration_safety/safety_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/knowledge_graph/analytics_report.json"
   },
   {
     "code": "generated-report-change",
@@ -112,12 +137,27 @@
   {
     "code": "generated-report-change",
     "severity": "متوسط",
+    "message": "reports/paper_execution/analytics_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
     "message": "reports/paper_execution/lifecycle_report.json"
   },
   {
     "code": "generated-report-change",
     "severity": "متوسط",
+    "message": "reports/paper_execution/orders_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
     "message": "reports/paper_execution/paper_execution_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/paper_execution/results_report.json"
   },
   {
     "code": "generated-report-change",
@@ -133,6 +173,16 @@
     "code": "generated-report-change",
     "severity": "متوسط",
     "message": "reports/paper_portfolio/analytics_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/paper_portfolio/drawdown_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/paper_portfolio/exposure_report.json"
   },
   {
     "code": "generated-report-change",
@@ -172,6 +222,41 @@
   {
     "code": "generated-report-change",
     "severity": "متوسط",
+    "message": "reports/repository_hygiene/artifact_classification_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/repository_hygiene/artifact_inventory_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/repository_hygiene/cleanup_plan_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/repository_hygiene/diagnostics_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/repository_hygiene/duplicate_artifacts_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/repository_hygiene/git_status_inventory_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
+    "message": "reports/repository_hygiene/repository_hygiene_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "متوسط",
     "message": "reports/research_api/knowledge_graph_summary.json"
   },
   {
@@ -188,11 +273,6 @@
     "code": "generated-report-change",
     "severity": "متوسط",
     "message": "reports/research_api/research_summary.json"
-  },
-  {
-    "code": "generated-report-change",
-    "severity": "متوسط",
-    "message": "reports/research_api/signal_intelligence_view.json"
   },
   {
     "code": "generated-report-change",
@@ -253,11 +333,6 @@
     "code": "generated-report-change",
     "severity": "متوسط",
     "message": "reports/signal_stream/signal_summary.json"
-  },
-  {
-    "code": "generated-report-change",
-    "severity": "متوسط",
-    "message": "reports/signal_stream/stream_report.json"
   },
   {
     "code": "generated-report-change",
@@ -327,6 +402,11 @@
   {
     "code": "generated-storage-change",
     "severity": "متوسط",
+    "message": "storage/control_assurance/source_inventory.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
     "message": "storage/execution_readiness/diagnostics.json"
   },
   {
@@ -347,6 +427,16 @@
   {
     "code": "generated-storage-change",
     "severity": "متوسط",
+    "message": "storage/governance_traceability/control_mappings.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/governance_traceability/source_inventory.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
     "message": "storage/integration_safety/audit_records.json"
   },
   {
@@ -362,12 +452,22 @@
   {
     "code": "generated-storage-change",
     "severity": "متوسط",
+    "message": "storage/knowledge_graph/analytics_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
     "message": "storage/knowledge_graph/diagnostics.json"
   },
   {
     "code": "generated-storage-change",
     "severity": "متوسط",
     "message": "storage/knowledge_graph/graph_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/knowledge_graph/nodes.json"
   },
   {
     "code": "generated-storage-change",
@@ -457,6 +557,11 @@
   {
     "code": "generated-storage-change",
     "severity": "متوسط",
+    "message": "storage/paper_execution/analytics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
     "message": "storage/paper_execution/diagnostics.json"
   },
   {
@@ -502,6 +607,21 @@
   {
     "code": "generated-storage-change",
     "severity": "متوسط",
+    "message": "storage/paper_portfolio/drawdown_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/paper_portfolio/exposure_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/paper_portfolio/governance_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
     "message": "storage/paper_portfolio/portfolio_results.json"
   },
   {
@@ -532,6 +652,41 @@
   {
     "code": "generated-storage-change",
     "severity": "متوسط",
+    "message": "storage/repository_hygiene/artifact_classification.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/repository_hygiene/artifact_inventory.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/repository_hygiene/cleanup_plan.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/repository_hygiene/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/repository_hygiene/duplicate_artifacts.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/repository_hygiene/git_status_inventory.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
+    "message": "storage/repository_hygiene/summary.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "متوسط",
     "message": "storage/research_api/knowledge_graph_summary.json"
   },
   {
@@ -543,11 +698,6 @@
     "code": "generated-storage-change",
     "severity": "متوسط",
     "message": "storage/research_api/readiness_view.json"
-  },
-  {
-    "code": "generated-storage-change",
-    "severity": "متوسط",
-    "message": "storage/research_api/signal_intelligence_view.json"
   },
   {
     "code": "generated-storage-change",
@@ -593,11 +743,6 @@
     "code": "generated-storage-change",
     "severity": "متوسط",
     "message": "storage/signal_stream/diagnostics.json"
-  },
-  {
-    "code": "generated-storage-change",
-    "severity": "متوسط",
-    "message": "storage/signal_stream/readiness_results.json"
   },
   {
     "code": "generated-storage-change",

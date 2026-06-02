@@ -1,5 +1,5 @@
 {
-  "snapshot_id": "snapshot-675db9cb400f",
+  "snapshot_id": "snapshot-477ee3a20e32",
   "version": "research-v0026",
   "created_at": "deterministic-local-research-archive",
   "source_summary": {
@@ -139,11 +139,11 @@
                 "rejected": 0,
                 "active": 0,
                 "expired": 11,
-                "wins": 2,
+                "wins": 3,
                 "losses": 0,
-                "breakeven": 1,
+                "breakeven": 0,
                 "unresolved": 11,
-                "win_rate": 0.1429,
+                "win_rate": 0.2143,
                 "average_confidence": 84.44,
                 "average_readiness": 79.7,
                 "paper_drawdown": 0.0,
@@ -154,7 +154,7 @@
                 "paper_only": true,
                 "research_only": true,
                 "not_real_execution": true,
-                "paper_execution_score": 62.27,
+                "paper_execution_score": 64.65,
                 "warning_count": 3,
                 "recommendation_count": 3
               },
@@ -163,7 +163,7 @@
             },
             "paper_portfolio": {
               "summary": {
-                "win_rate": 0.1429,
+                "win_rate": 0.2143,
                 "loss_rate": 0.0,
                 "drawdown_analysis": {
                   "current_drawdown": 0.0,
@@ -181,11 +181,11 @@
                     0.0,
                     0.0,
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     1.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    2.0,
+                    3.0
                   ],
                   "paper_only": true
                 },
@@ -200,10 +200,10 @@
                     "ذكاء المراقبة": 1,
                     "جاهزية المراقبة": 2,
                     "مراقبة المتصفح": 2,
-                    "المراقبة الخارجية": 2,
-                    "snapshot": 1,
                     "browser_snapshot": 1,
-                    "external_source": 1
+                    "المراقبة الخارجية": 2,
+                    "external_source": 1,
+                    "snapshot": 1
                   },
                   "session_exposure": {
                     "paper": 14
@@ -232,21 +232,21 @@
                 },
                 "paper_only": true,
                 "research_only": true,
-                "portfolio_score": 81.49,
+                "portfolio_score": 81.92,
                 "warning_count": 3,
                 "recommendation_count": 3,
                 "summary": {
                   "portfolio_id": "paper_portfolio_0001",
-                  "created_at": "2026-06-02T14:57:39.313212+00:00",
+                  "created_at": "2026-06-02T16:13:04.893543+00:00",
                   "total_orders": 14,
                   "active_orders": 0,
-                  "wins": 2,
+                  "wins": 3,
                   "losses": 0,
-                  "breakeven": 1,
-                  "win_rate": 0.1429,
+                  "breakeven": 0,
+                  "win_rate": 0.2143,
                   "drawdown": 0.0,
                   "stability_score": 67.0,
-                  "health_score": 60.43,
+                  "health_score": 62.81,
                   "risk_score": 86.62,
                   "metadata": {
                     "paper_only": true,
@@ -288,8 +288,8 @@
           "data": {
             "readiness": {
               "summary": {
-                "readiness_id": "paper_live_readiness_20260602145738",
-                "generated_at": "2026-06-02T14:57:38.341501+00:00",
+                "readiness_id": "paper_live_readiness_20260602161304",
+                "generated_at": "2026-06-02T16:13:04.018652+00:00",
                 "paper_health": 81.49,
                 "paper_stability": 60.85,
                 "paper_governance": 0.0,
@@ -336,14 +336,14 @@
             },
             "architecture_audit": {
               "summary": {
-                "certification_id": "architecture_audit_20260602145709",
-                "generated_at": "2026-06-02T14:57:09.162937+00:00",
+                "certification_id": "architecture_audit_20260602161237",
+                "generated_at": "2026-06-02T16:12:37.833605+00:00",
                 "architecture_score": 100.0,
                 "consistency_score": 96.5,
                 "dependency_score": 76.0,
-                "performance_score": 68.04,
+                "performance_score": 67.28,
                 "safety_score": 100.0,
-                "overall_score": 88.11,
+                "overall_score": 87.96,
                 "certification_state": "جاهزة بشروط",
                 "metadata": {
                   "architecture_audit_only": true,
@@ -415,8 +415,8 @@
           "data": {
             "knowledge_graph": {
               "summary": {
-                "graph_id": "knowledge_graph_20260602145726",
-                "generated_at": "2026-06-02T14:57:26.326991+00:00",
+                "graph_id": "knowledge_graph_20260602161648",
+                "generated_at": "2026-06-02T16:16:48.968459+00:00",
                 "nodes": [
                   {
                     "node_id": "signal",
@@ -432,7 +432,7 @@
                     "node_id": "asset",
                     "entity_type": "AssetEntity",
                     "label": "Asset",
-                    "confidence": 81.49,
+                    "confidence": 81.92,
                     "metadata": {
                       "research_only": true,
                       "source": "paper_portfolio"
@@ -502,7 +502,7 @@
                     "node_id": "portfolio",
                     "entity_type": "PortfolioEntity",
                     "label": "Portfolio",
-                    "confidence": 81.49,
+                    "confidence": 81.92,
                     "metadata": {
                       "research_only": true,
                       "source": "paper_portfolio"
@@ -512,7 +512,7 @@
                     "node_id": "readiness",
                     "entity_type": "ReadinessEntity",
                     "label": "Readiness",
-                    "confidence": 36.48,
+                    "confidence": 36.35,
                     "metadata": {
                       "research_only": true,
                       "source": "paper_control_center"
@@ -658,7 +658,7 @@
                 "strongest_relationship": "opportunity->confluence:confirms",
                 "weakest_relationship": "paperresult->readiness:degrades",
                 "relationship_density": 0.1333,
-                "knowledge_score": 57.65,
+                "knowledge_score": 57.68,
                 "metadata": {
                   "research_only": true,
                   "relationship_intelligence_only": true,
@@ -944,11 +944,11 @@
                 "rejected": 0,
                 "active": 0,
                 "expired": 11,
-                "wins": 2,
+                "wins": 3,
                 "losses": 0,
-                "breakeven": 1,
+                "breakeven": 0,
                 "unresolved": 11,
-                "win_rate": 0.1429,
+                "win_rate": 0.2143,
                 "average_confidence": 84.44,
                 "average_readiness": 79.7,
                 "paper_drawdown": 0.0,
@@ -959,7 +959,7 @@
                 "paper_only": true,
                 "research_only": true,
                 "not_real_execution": true,
-                "paper_execution_score": 62.27,
+                "paper_execution_score": 64.65,
                 "warning_count": 3,
                 "recommendation_count": 3
               },
@@ -968,7 +968,7 @@
             },
             "paper_portfolio": {
               "summary": {
-                "win_rate": 0.1429,
+                "win_rate": 0.2143,
                 "loss_rate": 0.0,
                 "drawdown_analysis": {
                   "current_drawdown": 0.0,
@@ -986,11 +986,11 @@
                     0.0,
                     0.0,
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     1.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    2.0,
+                    3.0
                   ],
                   "paper_only": true
                 },
@@ -1005,10 +1005,10 @@
                     "ذكاء المراقبة": 1,
                     "جاهزية المراقبة": 2,
                     "مراقبة المتصفح": 2,
-                    "المراقبة الخارجية": 2,
-                    "snapshot": 1,
                     "browser_snapshot": 1,
-                    "external_source": 1
+                    "المراقبة الخارجية": 2,
+                    "external_source": 1,
+                    "snapshot": 1
                   },
                   "session_exposure": {
                     "paper": 14
@@ -1037,21 +1037,21 @@
                 },
                 "paper_only": true,
                 "research_only": true,
-                "portfolio_score": 81.49,
+                "portfolio_score": 81.92,
                 "warning_count": 3,
                 "recommendation_count": 3,
                 "summary": {
                   "portfolio_id": "paper_portfolio_0001",
-                  "created_at": "2026-06-02T14:57:39.313212+00:00",
+                  "created_at": "2026-06-02T16:13:04.893543+00:00",
                   "total_orders": 14,
                   "active_orders": 0,
-                  "wins": 2,
+                  "wins": 3,
                   "losses": 0,
-                  "breakeven": 1,
-                  "win_rate": 0.1429,
+                  "breakeven": 0,
+                  "win_rate": 0.2143,
                   "drawdown": 0.0,
                   "stability_score": 67.0,
-                  "health_score": 60.43,
+                  "health_score": 62.81,
                   "risk_score": 86.62,
                   "metadata": {
                     "paper_only": true,
@@ -1093,8 +1093,8 @@
           "data": {
             "readiness": {
               "summary": {
-                "readiness_id": "paper_live_readiness_20260602145738",
-                "generated_at": "2026-06-02T14:57:38.341501+00:00",
+                "readiness_id": "paper_live_readiness_20260602161304",
+                "generated_at": "2026-06-02T16:13:04.018652+00:00",
                 "paper_health": 81.49,
                 "paper_stability": 60.85,
                 "paper_governance": 0.0,
@@ -1141,14 +1141,14 @@
             },
             "architecture_audit": {
               "summary": {
-                "certification_id": "architecture_audit_20260602145709",
-                "generated_at": "2026-06-02T14:57:09.162937+00:00",
+                "certification_id": "architecture_audit_20260602161237",
+                "generated_at": "2026-06-02T16:12:37.833605+00:00",
                 "architecture_score": 100.0,
                 "consistency_score": 96.5,
                 "dependency_score": 76.0,
-                "performance_score": 68.04,
+                "performance_score": 67.28,
                 "safety_score": 100.0,
-                "overall_score": 88.11,
+                "overall_score": 87.96,
                 "certification_state": "جاهزة بشروط",
                 "metadata": {
                   "architecture_audit_only": true,
@@ -1220,8 +1220,8 @@
           "data": {
             "knowledge_graph": {
               "summary": {
-                "graph_id": "knowledge_graph_20260602145726",
-                "generated_at": "2026-06-02T14:57:26.326991+00:00",
+                "graph_id": "knowledge_graph_20260602161648",
+                "generated_at": "2026-06-02T16:16:48.968459+00:00",
                 "nodes": [
                   {
                     "node_id": "signal",
@@ -1237,7 +1237,7 @@
                     "node_id": "asset",
                     "entity_type": "AssetEntity",
                     "label": "Asset",
-                    "confidence": 81.49,
+                    "confidence": 81.92,
                     "metadata": {
                       "research_only": true,
                       "source": "paper_portfolio"
@@ -1307,7 +1307,7 @@
                     "node_id": "portfolio",
                     "entity_type": "PortfolioEntity",
                     "label": "Portfolio",
-                    "confidence": 81.49,
+                    "confidence": 81.92,
                     "metadata": {
                       "research_only": true,
                       "source": "paper_portfolio"
@@ -1317,7 +1317,7 @@
                     "node_id": "readiness",
                     "entity_type": "ReadinessEntity",
                     "label": "Readiness",
-                    "confidence": 36.48,
+                    "confidence": 36.35,
                     "metadata": {
                       "research_only": true,
                       "source": "paper_control_center"
@@ -1463,7 +1463,7 @@
                 "strongest_relationship": "opportunity->confluence:confirms",
                 "weakest_relationship": "paperresult->readiness:degrades",
                 "relationship_density": 0.1333,
-                "knowledge_score": 57.65,
+                "knowledge_score": 57.68,
                 "metadata": {
                   "research_only": true,
                   "relationship_intelligence_only": true,
@@ -1634,8 +1634,8 @@
       },
       "payload": {
         "summary": {
-          "graph_id": "knowledge_graph_20260602150151",
-          "generated_at": "2026-06-02T15:01:51.595035+00:00",
+          "graph_id": "knowledge_graph_20260602161648",
+          "generated_at": "2026-06-02T16:16:48.968459+00:00",
           "nodes": [
             {
               "node_id": "signal",
@@ -1651,7 +1651,7 @@
               "node_id": "asset",
               "entity_type": "AssetEntity",
               "label": "Asset",
-              "confidence": 81.49,
+              "confidence": 81.92,
               "metadata": {
                 "research_only": true,
                 "source": "paper_portfolio"
@@ -1721,7 +1721,7 @@
               "node_id": "portfolio",
               "entity_type": "PortfolioEntity",
               "label": "Portfolio",
-              "confidence": 81.49,
+              "confidence": 81.92,
               "metadata": {
                 "research_only": true,
                 "source": "paper_portfolio"
@@ -1877,7 +1877,7 @@
           "strongest_relationship": "opportunity->confluence:confirms",
           "weakest_relationship": "paperresult->readiness:degrades",
           "relationship_density": 0.1333,
-          "knowledge_score": 57.65,
+          "knowledge_score": 57.68,
           "metadata": {
             "research_only": true,
             "relationship_intelligence_only": true,
@@ -1905,10 +1905,10 @@
           "not_broker_access": true
         },
         "latest": {
-          "timestamp": "2026-06-02T15:01:51.595480+00:00",
+          "timestamp": "2026-06-02T16:16:48.968880+00:00",
           "graph": {
-            "graph_id": "knowledge_graph_20260602150151",
-            "generated_at": "2026-06-02T15:01:51.595035+00:00",
+            "graph_id": "knowledge_graph_20260602161648",
+            "generated_at": "2026-06-02T16:16:48.968459+00:00",
             "nodes": [
               {
                 "node_id": "signal",
@@ -1924,7 +1924,7 @@
                 "node_id": "asset",
                 "entity_type": "AssetEntity",
                 "label": "Asset",
-                "confidence": 81.49,
+                "confidence": 81.92,
                 "metadata": {
                   "research_only": true,
                   "source": "paper_portfolio"
@@ -1994,7 +1994,7 @@
                 "node_id": "portfolio",
                 "entity_type": "PortfolioEntity",
                 "label": "Portfolio",
-                "confidence": 81.49,
+                "confidence": 81.92,
                 "metadata": {
                   "research_only": true,
                   "source": "paper_portfolio"
@@ -2150,7 +2150,7 @@
             "strongest_relationship": "opportunity->confluence:confirms",
             "weakest_relationship": "paperresult->readiness:degrades",
             "relationship_density": 0.1333,
-            "knowledge_score": 57.65,
+            "knowledge_score": 57.68,
             "metadata": {
               "research_only": true,
               "relationship_intelligence_only": true,
@@ -2351,7 +2351,7 @@
               "density": 13.33
             },
             "graph_quality": {
-              "knowledge_score": 57.65,
+              "knowledge_score": 57.68,
               "node_count": 10,
               "edge_count": 12
             },
@@ -2555,14 +2555,14 @@
       },
       "payload": {
         "summary": {
-          "certification_id": "architecture_audit_20260602145709",
-          "generated_at": "2026-06-02T14:57:09.162937+00:00",
+          "certification_id": "architecture_audit_20260602161237",
+          "generated_at": "2026-06-02T16:12:37.833605+00:00",
           "architecture_score": 100.0,
           "consistency_score": 96.5,
           "dependency_score": 76.0,
-          "performance_score": 68.04,
+          "performance_score": 67.28,
           "safety_score": 100.0,
-          "overall_score": 88.11,
+          "overall_score": 87.96,
           "certification_state": "جاهزة بشروط",
           "metadata": {
             "architecture_audit_only": true,
@@ -2595,16 +2595,16 @@
           "not_browser_automation": true
         },
         "latest": {
-          "timestamp": "2026-06-02T14:57:09.163690+00:00",
+          "timestamp": "2026-06-02T16:12:37.834426+00:00",
           "certification": {
-            "certification_id": "architecture_audit_20260602145709",
-            "generated_at": "2026-06-02T14:57:09.162937+00:00",
+            "certification_id": "architecture_audit_20260602161237",
+            "generated_at": "2026-06-02T16:12:37.833605+00:00",
             "architecture_score": 100.0,
             "consistency_score": 96.5,
             "dependency_score": 76.0,
-            "performance_score": 68.04,
+            "performance_score": 67.28,
             "safety_score": 100.0,
-            "overall_score": 88.11,
+            "overall_score": 87.96,
             "certification_state": "جاهزة بشروط",
             "metadata": {
               "architecture_audit_only": true,
@@ -2649,16 +2649,16 @@
               "paper_portfolio"
             ],
             "missing_packages": [],
-            "package_count": 71,
+            "package_count": 73,
             "architecture_audit_only": true
           },
           "consistency": {
             "consistency_score": 96.5,
-            "report_count": 363,
-            "storage_count": 295,
-            "dashboard_template_count": 57,
-            "api_route_count": 158,
-            "route_count": 216,
+            "report_count": 391,
+            "storage_count": 323,
+            "dashboard_template_count": 59,
+            "api_route_count": 184,
+            "route_count": 244,
             "missing_storage_counterparts": [
               "analytics",
               "datasets",
@@ -2677,19 +2677,19 @@
               "datetime.utcnow"
             ],
             "stale_module_count": 0,
-            "service_count": 46,
-            "duplicated_logic_indicator": 85,
+            "service_count": 48,
+            "duplicated_logic_indicator": 89,
             "orphan_module_count": 0,
             "architecture_audit_only": true
           },
           "performance": {
-            "performance_score": 68.04,
-            "report_count": 363,
-            "storage_count": 295,
-            "report_bytes": 21373526,
-            "storage_bytes": 27817422,
-            "dashboard_analytics_methods": 48,
-            "service_orchestration_count": 46,
+            "performance_score": 67.28,
+            "report_count": 391,
+            "storage_count": 323,
+            "report_bytes": 66018518,
+            "storage_bytes": 72461868,
+            "dashboard_analytics_methods": 50,
+            "service_orchestration_count": 48,
             "architecture_audit_only": true
           },
           "safety": {
@@ -2708,7 +2708,7 @@
               "architecture": 100.0,
               "consistency": 96.5,
               "dependency": 76.0,
-              "performance": 68.04,
+              "performance": 67.28,
               "safety": 100.0
             },
             "architecture": {
@@ -2724,16 +2724,16 @@
                 "paper_portfolio"
               ],
               "missing_packages": [],
-              "package_count": 71,
+              "package_count": 73,
               "architecture_audit_only": true
             },
             "consistency": {
               "consistency_score": 96.5,
-              "report_count": 363,
-              "storage_count": 295,
-              "dashboard_template_count": 57,
-              "api_route_count": 158,
-              "route_count": 216,
+              "report_count": 391,
+              "storage_count": 323,
+              "dashboard_template_count": 59,
+              "api_route_count": 184,
+              "route_count": 244,
               "missing_storage_counterparts": [
                 "analytics",
                 "datasets",
@@ -2752,19 +2752,19 @@
                 "datetime.utcnow"
               ],
               "stale_module_count": 0,
-              "service_count": 46,
-              "duplicated_logic_indicator": 85,
+              "service_count": 48,
+              "duplicated_logic_indicator": 89,
               "orphan_module_count": 0,
               "architecture_audit_only": true
             },
             "performance": {
-              "performance_score": 68.04,
-              "report_count": 363,
-              "storage_count": 295,
-              "report_bytes": 21373526,
-              "storage_bytes": 27817422,
-              "dashboard_analytics_methods": 48,
-              "service_orchestration_count": 46,
+              "performance_score": 67.28,
+              "report_count": 391,
+              "storage_count": 323,
+              "report_bytes": 66018518,
+              "storage_bytes": 72461868,
+              "dashboard_analytics_methods": 50,
+              "service_orchestration_count": 48,
               "architecture_audit_only": true
             },
             "safety": {
@@ -2789,7 +2789,7 @@
               "تحسين الأداء": 1
             },
             "certification": {
-              "جاهزة بشروط": 88.11
+              "جاهزة بشروط": 87.96
             },
             "architecture_audit_only": true
           },
@@ -2901,7 +2901,7 @@
           "الجودة": 51.08
         },
         "latest": {
-          "timestamp": "2026-06-02T14:57:30.210708",
+          "timestamp": "2026-06-02T16:12:57.446771",
           "regime": {
             "regime_state": "سوق عرضي",
             "regime_score": 48.92,
@@ -3266,7 +3266,7 @@
           "194": 1.03
         },
         "latest": {
-          "timestamp": "2026-06-02T14:57:40.543080",
+          "timestamp": "2026-06-02T16:13:05.984974",
           "records": [
             {
               "pattern_id": "pattern-memory-0001",
@@ -10704,7 +10704,7 @@
           "canonical_market_observation": true
         },
         "latest": {
-          "timestamp": "2026-06-02T14:57:29.254747+00:00",
+          "timestamp": "2026-06-02T16:12:56.687455+00:00",
           "observations": [
             {
               "observation_id": "market_data",
@@ -10794,7 +10794,7 @@
               "observation_id": "observation_intelligence",
               "source_type": "observation_intelligence",
               "source_name": "ذكاء المراقبة",
-              "timestamp": "2026-06-02T14:54:34.743837",
+              "timestamp": "2026-06-02T15:30:17.240897",
               "asset_count": 4.0,
               "payout_count": 4.0,
               "session_count": 4.0,
@@ -10836,13 +10836,13 @@
                   "observation_readiness": 81.16
                 },
                 "latest": {
-                  "timestamp": "2026-06-02T14:54:34.743837",
+                  "timestamp": "2026-06-02T15:30:17.240897",
                   "observations": [
                     {
                       "observation_id": "snapshot_import",
                       "source_type": "snapshot_import",
                       "source_name": "استيراد اللقطات",
-                      "timestamp": "2026-06-02T14:53:44.896688",
+                      "timestamp": "2026-06-01T19:45:23.749246",
                       "assets": 1.0,
                       "payouts": 1.0,
                       "sessions": 2.0,
@@ -10858,7 +10858,7 @@
                       "observation_id": "browser_observation",
                       "source_type": "browser_observation",
                       "source_name": "مراقبة المتصفح",
-                      "timestamp": "2026-06-02T14:54:14.015320",
+                      "timestamp": "2026-06-02T15:29:59.255859",
                       "assets": 3.0,
                       "payouts": 1.0,
                       "sessions": 1.0,
@@ -10874,7 +10874,7 @@
                       "observation_id": "external_observation",
                       "source_type": "external_observation",
                       "source_name": "المراقبة الخارجية",
-                      "timestamp": "2026-06-02T14:54:25.958845",
+                      "timestamp": "2026-06-02T15:30:09.284285",
                       "assets": 4.0,
                       "payouts": 4.0,
                       "sessions": 4.0,
@@ -10890,7 +10890,7 @@
                       "observation_id": "broker_readiness",
                       "source_type": "broker_readiness",
                       "source_name": "جاهزية المراقبة",
-                      "timestamp": "2026-06-02T14:54:13.190820",
+                      "timestamp": "2026-06-02T15:29:58.569073",
                       "assets": 48.0,
                       "payouts": 74.2,
                       "sessions": 60.0,
@@ -11003,7 +11003,7 @@
               "observation_id": "browser_observation",
               "source_type": "browser_observation",
               "source_name": "مراقبة المتصفح",
-              "timestamp": "2026-06-02T14:57:11.126927",
+              "timestamp": "2026-06-02T16:12:39.531099",
               "asset_count": 3.0,
               "payout_count": 1.0,
               "session_count": 1.0,
@@ -11044,13 +11044,13 @@
                   "not_execution": true
                 },
                 "latest": {
-                  "timestamp": "2026-06-02T14:57:11.126927",
+                  "timestamp": "2026-06-02T16:12:39.531099",
                   "artifacts": [
                     {
                       "artifact_id": "html-summary",
                       "artifact_type": "html_snapshot",
                       "artifact_source": "reports\\observation\\observation_summary.json",
-                      "created_at": "1780343251354578800",
+                      "created_at": "1780414491088528300",
                       "validation_status": "ناجح",
                       "visibility_status": "مرئي",
                       "monitoring_status": "مستقر",
@@ -11067,7 +11067,7 @@
                       "artifact_id": "dom-export-summary",
                       "artifact_type": "dom_export",
                       "artifact_source": "reports\\external_observation\\source_report.json",
-                      "created_at": "1780412065963349700",
+                      "created_at": "1780414491139558700",
                       "validation_status": "ناجح",
                       "visibility_status": "مرئي",
                       "monitoring_status": "مستقر",
@@ -11084,7 +11084,7 @@
                       "artifact_id": "page-capture-summary",
                       "artifact_type": "page_capture",
                       "artifact_source": "reports\\broker_readiness\\readiness_summary.json",
-                      "created_at": "1780412230418938700",
+                      "created_at": "1780416758808594600",
                       "validation_status": "ناجح",
                       "visibility_status": "مرئي",
                       "monitoring_status": "مستقر",
@@ -11101,7 +11101,7 @@
                       "artifact_id": "observation-dump",
                       "artifact_type": "observation_dump",
                       "artifact_source": "storage\\external_observation\\diagnostics.json",
-                      "created_at": "1780412065963349700",
+                      "created_at": "1780414491123934500",
                       "validation_status": "ناجح",
                       "visibility_status": "مرئي",
                       "monitoring_status": "مستقر",
@@ -11221,7 +11221,7 @@
               "observation_id": "external_observation",
               "source_type": "external_observation",
               "source_name": "المراقبة الخارجية",
-              "timestamp": "2026-06-02T14:57:22.448276",
+              "timestamp": "2026-06-02T16:12:51.334653",
               "asset_count": 4.0,
               "payout_count": 4.0,
               "session_count": 4.0,
@@ -11252,7 +11252,7 @@
                   "sandbox_feed": 1
                 },
                 "latest": {
-                  "timestamp": "2026-06-02T14:57:22.448276",
+                  "timestamp": "2026-06-02T16:12:51.334653",
                   "sources": [
                     {
                       "source_id": "simulated-research",
@@ -11376,7 +11376,7 @@
               "observation_id": "snapshot_import",
               "source_type": "snapshot_import",
               "source_name": "استيراد اللقطات",
-              "timestamp": "2026-06-02T14:55:40.255514",
+              "timestamp": "2026-06-02T15:31:17.119062",
               "asset_count": 1.0,
               "payout_count": 1.0,
               "session_count": 2.0,
@@ -11397,7 +11397,7 @@
                   "safety_score": 100.0,
                   "warning_count": 0,
                   "recommendation_count": 1,
-                  "last_import": "2026-06-02T14:55:40.255514",
+                  "last_import": "2026-06-02T15:31:17.119062",
                   "manual_only": true,
                   "research_only": true,
                   "observation_only": true
@@ -11409,7 +11409,7 @@
                   "manual_sample_snapshot.json": 100.0
                 },
                 "latest": {
-                  "timestamp": "2026-06-02T14:55:40.255514",
+                  "timestamp": "2026-06-02T15:31:17.119062",
                   "imports": [
                     {
                       "import_id": "manual_sample_snapshot",
@@ -11525,7 +11525,7 @@
               "observation_id": "broker_readiness",
               "source_type": "broker_readiness",
               "source_name": "جاهزية المراقبة",
-              "timestamp": "2026-06-02T14:57:10.411352",
+              "timestamp": "2026-06-02T16:12:38.814555",
               "asset_count": 48.0,
               "payout_count": 74.2,
               "session_count": 60.0,
@@ -11556,16 +11556,16 @@
                   "البيانات": 68.42
                 },
                 "readiness_timeline": {
-                  "14:57": 81.73
+                  "16:12": 81.73
                 },
                 "capability_timeline": {
-                  "14:57": 67.41
+                  "16:12": 67.41
                 },
                 "safety_timeline": {
-                  "14:57": 100.0
+                  "16:12": 100.0
                 },
                 "latest": {
-                  "timestamp": "2026-06-02T14:57:10.411352",
+                  "timestamp": "2026-06-02T16:12:38.814555",
                   "capability": {
                     "market_visibility": 79.05,
                     "asset_visibility": 48.0,
@@ -11790,7 +11790,7 @@
           "signal_generation_only": true
         },
         "latest": {
-          "timestamp": "2026-06-02T14:58:40.278334+00:00",
+          "timestamp": "2026-06-02T16:14:30.280371+00:00",
           "stream": {
             "score": 89.87,
             "event_count": 14,
@@ -11837,14 +11837,14 @@
               },
               {
                 "signal_id": "signal_stream_0003",
-                "timestamp": "2026-06-02T14:52:40.867105",
-                "asset": "ذكاء المراقبة",
+                "timestamp": "2026-06-01T19:45:23.749246",
+                "asset": "استيراد اللقطات",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 89.96,
-                "quality": 79.04,
-                "source": "observation_intelligence",
-                "observation_id": "observation_intelligence",
+                "confidence": 97.19,
+                "quality": 100.0,
+                "source": "snapshot_import",
+                "observation_id": "snapshot_import",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11857,14 +11857,14 @@
               },
               {
                 "signal_id": "signal_stream_0004",
-                "timestamp": "2026-06-02T14:53:44.896688",
-                "asset": "استيراد اللقطات",
+                "timestamp": "2026-06-02T15:29:58.569073",
+                "asset": "جاهزية المراقبة",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 97.19,
-                "quality": 100.0,
-                "source": "snapshot_import",
-                "observation_id": "snapshot_import",
+                "confidence": 81.73,
+                "quality": 67.41,
+                "source": "broker_readiness",
+                "observation_id": "broker_readiness",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11877,14 +11877,14 @@
               },
               {
                 "signal_id": "signal_stream_0005",
-                "timestamp": "2026-06-02T14:53:44.896688",
-                "asset": "استيراد اللقطات",
+                "timestamp": "2026-06-02T15:29:58.569073",
+                "asset": "جاهزية المراقبة",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 97.19,
-                "quality": 100.0,
-                "source": "snapshot_import",
-                "observation_id": "snapshot_import",
+                "confidence": 81.73,
+                "quality": 67.41,
+                "source": "broker_readiness",
+                "observation_id": "broker_readiness",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11897,14 +11897,14 @@
               },
               {
                 "signal_id": "signal_stream_0006",
-                "timestamp": "2026-06-02T14:54:13.190820",
-                "asset": "جاهزية المراقبة",
+                "timestamp": "2026-06-02T15:29:59.255859",
+                "asset": "مراقبة المتصفح",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 81.73,
-                "quality": 67.41,
-                "source": "broker_readiness",
-                "observation_id": "broker_readiness",
+                "confidence": 86.34,
+                "quality": 100.0,
+                "source": "browser_observation",
+                "observation_id": "browser_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11917,14 +11917,14 @@
               },
               {
                 "signal_id": "signal_stream_0007",
-                "timestamp": "2026-06-02T14:54:13.190820",
-                "asset": "جاهزية المراقبة",
+                "timestamp": "2026-06-02T15:29:59.255859",
+                "asset": "مراقبة المتصفح",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 81.73,
-                "quality": 67.41,
-                "source": "broker_readiness",
-                "observation_id": "broker_readiness",
+                "confidence": 86.34,
+                "quality": 100.0,
+                "source": "browser_observation",
+                "observation_id": "browser_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11937,14 +11937,14 @@
               },
               {
                 "signal_id": "signal_stream_0008",
-                "timestamp": "2026-06-02T14:54:14.015320",
-                "asset": "مراقبة المتصفح",
+                "timestamp": "2026-06-02T15:30:09.284285",
+                "asset": "المراقبة الخارجية",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 86.34,
+                "confidence": 100.0,
                 "quality": 100.0,
-                "source": "browser_observation",
-                "observation_id": "browser_observation",
+                "source": "external_observation",
+                "observation_id": "external_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11957,14 +11957,14 @@
               },
               {
                 "signal_id": "signal_stream_0009",
-                "timestamp": "2026-06-02T14:54:14.015320",
-                "asset": "مراقبة المتصفح",
+                "timestamp": "2026-06-02T15:30:09.284285",
+                "asset": "المراقبة الخارجية",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 86.34,
+                "confidence": 100.0,
                 "quality": 100.0,
-                "source": "browser_observation",
-                "observation_id": "browser_observation",
+                "source": "external_observation",
+                "observation_id": "external_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11977,14 +11977,14 @@
               },
               {
                 "signal_id": "signal_stream_0010",
-                "timestamp": "2026-06-02T14:54:25.958845",
-                "asset": "المراقبة الخارجية",
+                "timestamp": "2026-06-02T15:30:17.240897",
+                "asset": "ذكاء المراقبة",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 100.0,
-                "quality": 100.0,
-                "source": "external_observation",
-                "observation_id": "external_observation",
+                "confidence": 89.96,
+                "quality": 79.04,
+                "source": "observation_intelligence",
+                "observation_id": "observation_intelligence",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -11997,14 +11997,14 @@
               },
               {
                 "signal_id": "signal_stream_0011",
-                "timestamp": "2026-06-02T14:54:25.958845",
-                "asset": "المراقبة الخارجية",
+                "timestamp": "2026-06-02T15:31:17.119062",
+                "asset": "استيراد اللقطات",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 100.0,
+                "confidence": 97.19,
                 "quality": 100.0,
-                "source": "external_observation",
-                "observation_id": "external_observation",
+                "source": "snapshot_import",
+                "observation_id": "snapshot_import",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12017,7 +12017,7 @@
               },
               {
                 "signal_id": "signal_stream_0012",
-                "timestamp": "2026-06-02T14:55:40.255514",
+                "timestamp": "2026-06-02T15:31:17.119062",
                 "asset": "snapshot",
                 "session": "manual",
                 "direction": "PUT",
@@ -12037,7 +12037,7 @@
               },
               {
                 "signal_id": "signal_stream_0013",
-                "timestamp": "2026-06-02T14:57:11.126927",
+                "timestamp": "2026-06-02T16:12:39.531099",
                 "asset": "browser_snapshot",
                 "session": "passive",
                 "direction": "CALL",
@@ -12057,7 +12057,7 @@
               },
               {
                 "signal_id": "signal_stream_0014",
-                "timestamp": "2026-06-02T14:57:22.448276",
+                "timestamp": "2026-06-02T16:12:51.334653",
                 "asset": "external_source",
                 "session": "passive",
                 "direction": "PUT",
@@ -12083,7 +12083,7 @@
             "active": [
               {
                 "signal_id": "signal_stream_0012",
-                "timestamp": "2026-06-02T14:55:40.255514",
+                "timestamp": "2026-06-02T15:31:17.119062",
                 "asset": "snapshot",
                 "session": "manual",
                 "direction": "PUT",
@@ -12103,7 +12103,7 @@
               },
               {
                 "signal_id": "signal_stream_0013",
-                "timestamp": "2026-06-02T14:57:11.126927",
+                "timestamp": "2026-06-02T16:12:39.531099",
                 "asset": "browser_snapshot",
                 "session": "passive",
                 "direction": "CALL",
@@ -12123,7 +12123,7 @@
               },
               {
                 "signal_id": "signal_stream_0014",
-                "timestamp": "2026-06-02T14:57:22.448276",
+                "timestamp": "2026-06-02T16:12:51.334653",
                 "asset": "external_source",
                 "session": "passive",
                 "direction": "PUT",
@@ -12207,14 +12207,14 @@
               },
               {
                 "signal_id": "signal_stream_0003",
-                "timestamp": "2026-06-02T14:52:40.867105",
-                "asset": "ذكاء المراقبة",
+                "timestamp": "2026-06-01T19:45:23.749246",
+                "asset": "استيراد اللقطات",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 89.96,
-                "quality": 79.04,
-                "source": "observation_intelligence",
-                "observation_id": "observation_intelligence",
+                "confidence": 97.19,
+                "quality": 100.0,
+                "source": "snapshot_import",
+                "observation_id": "snapshot_import",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12227,14 +12227,14 @@
               },
               {
                 "signal_id": "signal_stream_0004",
-                "timestamp": "2026-06-02T14:53:44.896688",
-                "asset": "استيراد اللقطات",
+                "timestamp": "2026-06-02T15:29:58.569073",
+                "asset": "جاهزية المراقبة",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 97.19,
-                "quality": 100.0,
-                "source": "snapshot_import",
-                "observation_id": "snapshot_import",
+                "confidence": 81.73,
+                "quality": 67.41,
+                "source": "broker_readiness",
+                "observation_id": "broker_readiness",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12247,14 +12247,14 @@
               },
               {
                 "signal_id": "signal_stream_0005",
-                "timestamp": "2026-06-02T14:53:44.896688",
-                "asset": "استيراد اللقطات",
+                "timestamp": "2026-06-02T15:29:58.569073",
+                "asset": "جاهزية المراقبة",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 97.19,
-                "quality": 100.0,
-                "source": "snapshot_import",
-                "observation_id": "snapshot_import",
+                "confidence": 81.73,
+                "quality": 67.41,
+                "source": "broker_readiness",
+                "observation_id": "broker_readiness",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12267,14 +12267,14 @@
               },
               {
                 "signal_id": "signal_stream_0006",
-                "timestamp": "2026-06-02T14:54:13.190820",
-                "asset": "جاهزية المراقبة",
+                "timestamp": "2026-06-02T15:29:59.255859",
+                "asset": "مراقبة المتصفح",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 81.73,
-                "quality": 67.41,
-                "source": "broker_readiness",
-                "observation_id": "broker_readiness",
+                "confidence": 86.34,
+                "quality": 100.0,
+                "source": "browser_observation",
+                "observation_id": "browser_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12287,14 +12287,14 @@
               },
               {
                 "signal_id": "signal_stream_0007",
-                "timestamp": "2026-06-02T14:54:13.190820",
-                "asset": "جاهزية المراقبة",
+                "timestamp": "2026-06-02T15:29:59.255859",
+                "asset": "مراقبة المتصفح",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 81.73,
-                "quality": 67.41,
-                "source": "broker_readiness",
-                "observation_id": "broker_readiness",
+                "confidence": 86.34,
+                "quality": 100.0,
+                "source": "browser_observation",
+                "observation_id": "browser_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12307,14 +12307,14 @@
               },
               {
                 "signal_id": "signal_stream_0008",
-                "timestamp": "2026-06-02T14:54:14.015320",
-                "asset": "مراقبة المتصفح",
+                "timestamp": "2026-06-02T15:30:09.284285",
+                "asset": "المراقبة الخارجية",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 86.34,
+                "confidence": 100.0,
                 "quality": 100.0,
-                "source": "browser_observation",
-                "observation_id": "browser_observation",
+                "source": "external_observation",
+                "observation_id": "external_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12327,14 +12327,14 @@
               },
               {
                 "signal_id": "signal_stream_0009",
-                "timestamp": "2026-06-02T14:54:14.015320",
-                "asset": "مراقبة المتصفح",
+                "timestamp": "2026-06-02T15:30:09.284285",
+                "asset": "المراقبة الخارجية",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 86.34,
+                "confidence": 100.0,
                 "quality": 100.0,
-                "source": "browser_observation",
-                "observation_id": "browser_observation",
+                "source": "external_observation",
+                "observation_id": "external_observation",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12347,14 +12347,14 @@
               },
               {
                 "signal_id": "signal_stream_0010",
-                "timestamp": "2026-06-02T14:54:25.958845",
-                "asset": "المراقبة الخارجية",
+                "timestamp": "2026-06-02T15:30:17.240897",
+                "asset": "ذكاء المراقبة",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 100.0,
-                "quality": 100.0,
-                "source": "external_observation",
-                "observation_id": "external_observation",
+                "confidence": 89.96,
+                "quality": 79.04,
+                "source": "observation_intelligence",
+                "observation_id": "observation_intelligence",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12367,14 +12367,14 @@
               },
               {
                 "signal_id": "signal_stream_0011",
-                "timestamp": "2026-06-02T14:54:25.958845",
-                "asset": "المراقبة الخارجية",
+                "timestamp": "2026-06-02T15:31:17.119062",
+                "asset": "استيراد اللقطات",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 100.0,
+                "confidence": 97.19,
                 "quality": 100.0,
-                "source": "external_observation",
-                "observation_id": "external_observation",
+                "source": "snapshot_import",
+                "observation_id": "snapshot_import",
                 "metadata": {
                   "research_only": true,
                   "signal_generation_only": true,
@@ -12422,88 +12422,88 @@
               {
                 "sequence": 3,
                 "signal_id": "signal_stream_0003",
-                "timestamp": "2026-06-02T14:52:40.867105",
+                "timestamp": "2026-06-01T19:45:23.749246",
+                "asset": "استيراد اللقطات",
+                "session": "passive",
+                "direction": "NO_TRADE",
+                "confidence": 97.19
+              },
+              {
+                "sequence": 4,
+                "signal_id": "signal_stream_0004",
+                "timestamp": "2026-06-02T15:29:58.569073",
+                "asset": "جاهزية المراقبة",
+                "session": "passive",
+                "direction": "NO_TRADE",
+                "confidence": 81.73
+              },
+              {
+                "sequence": 5,
+                "signal_id": "signal_stream_0005",
+                "timestamp": "2026-06-02T15:29:58.569073",
+                "asset": "جاهزية المراقبة",
+                "session": "passive",
+                "direction": "NO_TRADE",
+                "confidence": 81.73
+              },
+              {
+                "sequence": 6,
+                "signal_id": "signal_stream_0006",
+                "timestamp": "2026-06-02T15:29:59.255859",
+                "asset": "مراقبة المتصفح",
+                "session": "passive",
+                "direction": "NO_TRADE",
+                "confidence": 86.34
+              },
+              {
+                "sequence": 7,
+                "signal_id": "signal_stream_0007",
+                "timestamp": "2026-06-02T15:29:59.255859",
+                "asset": "مراقبة المتصفح",
+                "session": "passive",
+                "direction": "NO_TRADE",
+                "confidence": 86.34
+              },
+              {
+                "sequence": 8,
+                "signal_id": "signal_stream_0008",
+                "timestamp": "2026-06-02T15:30:09.284285",
+                "asset": "المراقبة الخارجية",
+                "session": "passive",
+                "direction": "NO_TRADE",
+                "confidence": 100.0
+              },
+              {
+                "sequence": 9,
+                "signal_id": "signal_stream_0009",
+                "timestamp": "2026-06-02T15:30:09.284285",
+                "asset": "المراقبة الخارجية",
+                "session": "passive",
+                "direction": "NO_TRADE",
+                "confidence": 100.0
+              },
+              {
+                "sequence": 10,
+                "signal_id": "signal_stream_0010",
+                "timestamp": "2026-06-02T15:30:17.240897",
                 "asset": "ذكاء المراقبة",
                 "session": "passive",
                 "direction": "NO_TRADE",
                 "confidence": 89.96
               },
               {
-                "sequence": 4,
-                "signal_id": "signal_stream_0004",
-                "timestamp": "2026-06-02T14:53:44.896688",
-                "asset": "استيراد اللقطات",
-                "session": "passive",
-                "direction": "NO_TRADE",
-                "confidence": 97.19
-              },
-              {
-                "sequence": 5,
-                "signal_id": "signal_stream_0005",
-                "timestamp": "2026-06-02T14:53:44.896688",
-                "asset": "استيراد اللقطات",
-                "session": "passive",
-                "direction": "NO_TRADE",
-                "confidence": 97.19
-              },
-              {
-                "sequence": 6,
-                "signal_id": "signal_stream_0006",
-                "timestamp": "2026-06-02T14:54:13.190820",
-                "asset": "جاهزية المراقبة",
-                "session": "passive",
-                "direction": "NO_TRADE",
-                "confidence": 81.73
-              },
-              {
-                "sequence": 7,
-                "signal_id": "signal_stream_0007",
-                "timestamp": "2026-06-02T14:54:13.190820",
-                "asset": "جاهزية المراقبة",
-                "session": "passive",
-                "direction": "NO_TRADE",
-                "confidence": 81.73
-              },
-              {
-                "sequence": 8,
-                "signal_id": "signal_stream_0008",
-                "timestamp": "2026-06-02T14:54:14.015320",
-                "asset": "مراقبة المتصفح",
-                "session": "passive",
-                "direction": "NO_TRADE",
-                "confidence": 86.34
-              },
-              {
-                "sequence": 9,
-                "signal_id": "signal_stream_0009",
-                "timestamp": "2026-06-02T14:54:14.015320",
-                "asset": "مراقبة المتصفح",
-                "session": "passive",
-                "direction": "NO_TRADE",
-                "confidence": 86.34
-              },
-              {
-                "sequence": 10,
-                "signal_id": "signal_stream_0010",
-                "timestamp": "2026-06-02T14:54:25.958845",
-                "asset": "المراقبة الخارجية",
-                "session": "passive",
-                "direction": "NO_TRADE",
-                "confidence": 100.0
-              },
-              {
                 "sequence": 11,
                 "signal_id": "signal_stream_0011",
-                "timestamp": "2026-06-02T14:54:25.958845",
-                "asset": "المراقبة الخارجية",
+                "timestamp": "2026-06-02T15:31:17.119062",
+                "asset": "استيراد اللقطات",
                 "session": "passive",
                 "direction": "NO_TRADE",
-                "confidence": 100.0
+                "confidence": 97.19
               },
               {
                 "sequence": 12,
                 "signal_id": "signal_stream_0012",
-                "timestamp": "2026-06-02T14:55:40.255514",
+                "timestamp": "2026-06-02T15:31:17.119062",
                 "asset": "snapshot",
                 "session": "manual",
                 "direction": "PUT",
@@ -12512,7 +12512,7 @@
               {
                 "sequence": 13,
                 "signal_id": "signal_stream_0013",
-                "timestamp": "2026-06-02T14:57:11.126927",
+                "timestamp": "2026-06-02T16:12:39.531099",
                 "asset": "browser_snapshot",
                 "session": "passive",
                 "direction": "CALL",
@@ -12521,7 +12521,7 @@
               {
                 "sequence": 14,
                 "signal_id": "signal_stream_0014",
-                "timestamp": "2026-06-02T14:57:22.448276",
+                "timestamp": "2026-06-02T16:12:51.334653",
                 "asset": "external_source",
                 "session": "passive",
                 "direction": "PUT",
@@ -12601,11 +12601,11 @@
           "rejected": 0,
           "active": 0,
           "expired": 11,
-          "wins": 2,
+          "wins": 3,
           "losses": 0,
-          "breakeven": 1,
+          "breakeven": 0,
           "unresolved": 11,
-          "win_rate": 0.1429,
+          "win_rate": 0.2143,
           "average_confidence": 84.44,
           "average_readiness": 79.7,
           "paper_drawdown": 0.0,
@@ -12616,12 +12616,12 @@
           "paper_only": true,
           "research_only": true,
           "not_real_execution": true,
-          "paper_execution_score": 62.27,
+          "paper_execution_score": 64.65,
           "warning_count": 3,
           "recommendation_count": 3
         },
         "latest": {
-          "timestamp": "2026-06-02T14:57:37.454519+00:00",
+          "timestamp": "2026-06-02T16:13:03.270549+00:00",
           "orders": [
             {
               "order_id": "paper_order_0001",
@@ -12807,8 +12807,8 @@
               "confidence": 81.73,
               "readiness_score": 74.79,
               "qualification_state": "مؤهل بشروط",
-              "created_at": "2026-06-02T14:52:18.902235",
-              "expiry": "2026-06-02T14:53:18.902235",
+              "created_at": "2026-06-02T15:29:58.569073",
+              "expiry": "2026-06-02T15:30:58.569073",
               "status": "EXPIRED",
               "status_label": "منتهي",
               "metadata": {
@@ -12842,8 +12842,8 @@
               "confidence": 81.73,
               "readiness_score": 74.79,
               "qualification_state": "مؤهل بشروط",
-              "created_at": "2026-06-02T14:52:18.902235",
-              "expiry": "2026-06-02T14:53:18.902235",
+              "created_at": "2026-06-02T15:29:58.569073",
+              "expiry": "2026-06-02T15:30:58.569073",
               "status": "EXPIRED",
               "status_label": "منتهي",
               "metadata": {
@@ -12877,8 +12877,8 @@
               "confidence": 86.34,
               "readiness_score": 83.72,
               "qualification_state": "مؤهل بشروط",
-              "created_at": "2026-06-02T14:52:19.651418",
-              "expiry": "2026-06-02T14:53:19.651418",
+              "created_at": "2026-06-02T15:29:59.255859",
+              "expiry": "2026-06-02T15:30:59.255859",
               "status": "EXPIRED",
               "status_label": "منتهي",
               "metadata": {
@@ -12912,8 +12912,8 @@
               "confidence": 86.34,
               "readiness_score": 83.72,
               "qualification_state": "مؤهل بشروط",
-              "created_at": "2026-06-02T14:52:19.651418",
-              "expiry": "2026-06-02T14:53:19.651418",
+              "created_at": "2026-06-02T15:29:59.255859",
+              "expiry": "2026-06-02T15:30:59.255859",
               "status": "EXPIRED",
               "status_label": "منتهي",
               "metadata": {
@@ -12942,15 +12942,15 @@
               "order_id": "paper_order_0010",
               "candidate_id": "execution_candidate_0010",
               "signal_id": "signal_stream_0010",
-              "asset": "المراقبة الخارجية",
-              "direction": "NO_TRADE",
-              "confidence": 100.0,
-              "readiness_score": 87.0,
-              "qualification_state": "مؤهل",
-              "created_at": "2026-06-02T14:52:30.658738",
-              "expiry": "2026-06-02T14:53:30.658738",
-              "status": "EXPIRED",
-              "status_label": "منتهي",
+              "asset": "browser_snapshot",
+              "direction": "PUT",
+              "confidence": 86.34,
+              "readiness_score": 83.72,
+              "qualification_state": "مؤهل بشروط",
+              "created_at": "2026-06-02T15:29:59.255859",
+              "expiry": "2026-06-02T15:30:59.255859",
+              "status": "WIN",
+              "status_label": "رابح",
               "metadata": {
                 "paper_only": true,
                 "research_only": true,
@@ -12982,8 +12982,8 @@
               "confidence": 100.0,
               "readiness_score": 87.0,
               "qualification_state": "مؤهل",
-              "created_at": "2026-06-02T14:52:30.658738",
-              "expiry": "2026-06-02T14:53:30.658738",
+              "created_at": "2026-06-02T15:30:09.284285",
+              "expiry": "2026-06-02T15:31:09.284285",
               "status": "EXPIRED",
               "status_label": "منتهي",
               "metadata": {
@@ -13012,15 +13012,15 @@
               "order_id": "paper_order_0012",
               "candidate_id": "execution_candidate_0012",
               "signal_id": "signal_stream_0012",
-              "asset": "snapshot",
-              "direction": "PUT",
-              "confidence": 97.19,
-              "readiness_score": 86.33,
+              "asset": "المراقبة الخارجية",
+              "direction": "NO_TRADE",
+              "confidence": 100.0,
+              "readiness_score": 87.0,
               "qualification_state": "مؤهل",
-              "created_at": "2026-06-02T14:53:44.896688",
-              "expiry": "2026-06-02T14:54:44.896688",
-              "status": "BREAKEVEN",
-              "status_label": "تعادل",
+              "created_at": "2026-06-02T15:30:09.284285",
+              "expiry": "2026-06-02T15:31:09.284285",
+              "status": "EXPIRED",
+              "status_label": "منتهي",
               "metadata": {
                 "paper_only": true,
                 "research_only": true,
@@ -13047,13 +13047,13 @@
               "order_id": "paper_order_0013",
               "candidate_id": "execution_candidate_0013",
               "signal_id": "signal_stream_0013",
-              "asset": "browser_snapshot",
+              "asset": "external_source",
               "direction": "CALL",
-              "confidence": 86.34,
-              "readiness_score": 83.72,
-              "qualification_state": "مؤهل بشروط",
-              "created_at": "2026-06-02T14:54:14.015320",
-              "expiry": "2026-06-02T14:55:14.015320",
+              "confidence": 100.0,
+              "readiness_score": 87.0,
+              "qualification_state": "مؤهل",
+              "created_at": "2026-06-02T15:30:09.284285",
+              "expiry": "2026-06-02T15:31:09.284285",
               "status": "WIN",
               "status_label": "رابح",
               "metadata": {
@@ -13082,13 +13082,13 @@
               "order_id": "paper_order_0014",
               "candidate_id": "execution_candidate_0014",
               "signal_id": "signal_stream_0014",
-              "asset": "external_source",
+              "asset": "snapshot",
               "direction": "PUT",
-              "confidence": 100.0,
-              "readiness_score": 87.0,
+              "confidence": 97.19,
+              "readiness_score": 86.33,
               "qualification_state": "مؤهل",
-              "created_at": "2026-06-02T14:54:25.958845",
-              "expiry": "2026-06-02T14:55:25.958845",
+              "created_at": "2026-06-02T15:31:17.119062",
+              "expiry": "2026-06-02T15:32:17.119062",
               "status": "WIN",
               "status_label": "رابح",
               "metadata": {
@@ -13121,7 +13121,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453162+00:00",
+              "timestamp": "2026-06-02T16:13:03.269649+00:00",
               "reason": "paper order created"
             },
             {
@@ -13130,7 +13130,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453204+00:00",
+              "timestamp": "2026-06-02T16:13:03.269678+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13139,7 +13139,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453213+00:00",
+              "timestamp": "2026-06-02T16:13:03.269685+00:00",
               "reason": "paper order created"
             },
             {
@@ -13148,7 +13148,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453241+00:00",
+              "timestamp": "2026-06-02T16:13:03.269700+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13157,7 +13157,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453249+00:00",
+              "timestamp": "2026-06-02T16:13:03.269706+00:00",
               "reason": "paper order created"
             },
             {
@@ -13166,7 +13166,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453263+00:00",
+              "timestamp": "2026-06-02T16:13:03.269720+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13175,7 +13175,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453280+00:00",
+              "timestamp": "2026-06-02T16:13:03.269725+00:00",
               "reason": "paper order created"
             },
             {
@@ -13184,7 +13184,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453297+00:00",
+              "timestamp": "2026-06-02T16:13:03.269738+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13193,7 +13193,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453303+00:00",
+              "timestamp": "2026-06-02T16:13:03.269744+00:00",
               "reason": "paper order created"
             },
             {
@@ -13202,7 +13202,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453317+00:00",
+              "timestamp": "2026-06-02T16:13:03.269757+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13211,7 +13211,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453335+00:00",
+              "timestamp": "2026-06-02T16:13:03.269762+00:00",
               "reason": "paper order created"
             },
             {
@@ -13220,7 +13220,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453350+00:00",
+              "timestamp": "2026-06-02T16:13:03.269774+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13229,7 +13229,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453356+00:00",
+              "timestamp": "2026-06-02T16:13:03.269780+00:00",
               "reason": "paper order created"
             },
             {
@@ -13238,7 +13238,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453369+00:00",
+              "timestamp": "2026-06-02T16:13:03.269792+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13247,7 +13247,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453375+00:00",
+              "timestamp": "2026-06-02T16:13:03.269797+00:00",
               "reason": "paper order created"
             },
             {
@@ -13256,7 +13256,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453388+00:00",
+              "timestamp": "2026-06-02T16:13:03.269809+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13265,7 +13265,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453395+00:00",
+              "timestamp": "2026-06-02T16:13:03.269814+00:00",
               "reason": "paper order created"
             },
             {
@@ -13274,7 +13274,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453408+00:00",
+              "timestamp": "2026-06-02T16:13:03.269827+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13283,17 +13283,26 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453426+00:00",
+              "timestamp": "2026-06-02T16:13:03.269832+00:00",
               "reason": "paper order created"
             },
             {
               "order_id": "paper_order_0010",
               "candidate_id": "execution_candidate_0010",
               "from_status": "CREATED",
-              "to_status": "REJECTED",
-              "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453442+00:00",
-              "reason": "paper risk rejected"
+              "to_status": "ACCEPTED",
+              "to_status_label": "مقبول",
+              "timestamp": "2026-06-02T16:13:03.269846+00:00",
+              "reason": "paper order accepted"
+            },
+            {
+              "order_id": "paper_order_0010",
+              "candidate_id": "execution_candidate_0010",
+              "from_status": "ACCEPTED",
+              "to_status": "ACTIVE",
+              "to_status_label": "نشط",
+              "timestamp": "2026-06-02T16:13:03.269858+00:00",
+              "reason": "paper order active"
             },
             {
               "order_id": "paper_order_0011",
@@ -13301,7 +13310,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453448+00:00",
+              "timestamp": "2026-06-02T16:13:03.269864+00:00",
               "reason": "paper order created"
             },
             {
@@ -13310,7 +13319,7 @@
               "from_status": "CREATED",
               "to_status": "REJECTED",
               "to_status_label": "مرفوض",
-              "timestamp": "2026-06-02T14:57:37.453472+00:00",
+              "timestamp": "2026-06-02T16:13:03.269876+00:00",
               "reason": "paper risk rejected"
             },
             {
@@ -13319,26 +13328,17 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453479+00:00",
+              "timestamp": "2026-06-02T16:13:03.269881+00:00",
               "reason": "paper order created"
             },
             {
               "order_id": "paper_order_0012",
               "candidate_id": "execution_candidate_0012",
               "from_status": "CREATED",
-              "to_status": "ACCEPTED",
-              "to_status_label": "مقبول",
-              "timestamp": "2026-06-02T14:57:37.453494+00:00",
-              "reason": "paper order accepted"
-            },
-            {
-              "order_id": "paper_order_0012",
-              "candidate_id": "execution_candidate_0012",
-              "from_status": "ACCEPTED",
-              "to_status": "ACTIVE",
-              "to_status_label": "نشط",
-              "timestamp": "2026-06-02T14:57:37.453508+00:00",
-              "reason": "paper order active"
+              "to_status": "REJECTED",
+              "to_status_label": "مرفوض",
+              "timestamp": "2026-06-02T16:13:03.269893+00:00",
+              "reason": "paper risk rejected"
             },
             {
               "order_id": "paper_order_0013",
@@ -13346,7 +13346,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453527+00:00",
+              "timestamp": "2026-06-02T16:13:03.269899+00:00",
               "reason": "paper order created"
             },
             {
@@ -13355,7 +13355,7 @@
               "from_status": "CREATED",
               "to_status": "ACCEPTED",
               "to_status_label": "مقبول",
-              "timestamp": "2026-06-02T14:57:37.453542+00:00",
+              "timestamp": "2026-06-02T16:13:03.269912+00:00",
               "reason": "paper order accepted"
             },
             {
@@ -13364,7 +13364,7 @@
               "from_status": "ACCEPTED",
               "to_status": "ACTIVE",
               "to_status_label": "نشط",
-              "timestamp": "2026-06-02T14:57:37.453555+00:00",
+              "timestamp": "2026-06-02T16:13:03.269924+00:00",
               "reason": "paper order active"
             },
             {
@@ -13373,7 +13373,7 @@
               "from_status": "",
               "to_status": "CREATED",
               "to_status_label": "تم الإنشاء",
-              "timestamp": "2026-06-02T14:57:37.453574+00:00",
+              "timestamp": "2026-06-02T16:13:03.269929+00:00",
               "reason": "paper order created"
             },
             {
@@ -13382,7 +13382,7 @@
               "from_status": "CREATED",
               "to_status": "ACCEPTED",
               "to_status_label": "مقبول",
-              "timestamp": "2026-06-02T14:57:37.453591+00:00",
+              "timestamp": "2026-06-02T16:13:03.269942+00:00",
               "reason": "paper order accepted"
             },
             {
@@ -13391,7 +13391,7 @@
               "from_status": "ACCEPTED",
               "to_status": "ACTIVE",
               "to_status_label": "نشط",
-              "timestamp": "2026-06-02T14:57:37.453604+00:00",
+              "timestamp": "2026-06-02T16:13:03.269954+00:00",
               "reason": "paper order active"
             },
             {
@@ -13400,7 +13400,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453771+00:00",
+              "timestamp": "2026-06-02T16:13:03.270060+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13409,7 +13409,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453791+00:00",
+              "timestamp": "2026-06-02T16:13:03.270073+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13418,7 +13418,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453818+00:00",
+              "timestamp": "2026-06-02T16:13:03.270085+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13427,7 +13427,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453833+00:00",
+              "timestamp": "2026-06-02T16:13:03.270098+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13436,7 +13436,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453847+00:00",
+              "timestamp": "2026-06-02T16:13:03.270110+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13445,7 +13445,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453873+00:00",
+              "timestamp": "2026-06-02T16:13:03.270122+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13454,7 +13454,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453888+00:00",
+              "timestamp": "2026-06-02T16:13:03.270135+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13463,7 +13463,7 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453914+00:00",
+              "timestamp": "2026-06-02T16:13:03.270147+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13472,16 +13472,16 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453930+00:00",
+              "timestamp": "2026-06-02T16:13:03.270159+00:00",
               "reason": "paper outcome evaluated"
             },
             {
               "order_id": "paper_order_0010",
               "candidate_id": "execution_candidate_0010",
-              "from_status": "REJECTED",
-              "to_status": "EXPIRED",
-              "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453944+00:00",
+              "from_status": "ACTIVE",
+              "to_status": "WIN",
+              "to_status_label": "رابح",
+              "timestamp": "2026-06-02T16:13:03.270172+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13490,16 +13490,16 @@
               "from_status": "REJECTED",
               "to_status": "EXPIRED",
               "to_status_label": "منتهي",
-              "timestamp": "2026-06-02T14:57:37.453969+00:00",
+              "timestamp": "2026-06-02T16:13:03.270184+00:00",
               "reason": "paper outcome evaluated"
             },
             {
               "order_id": "paper_order_0012",
               "candidate_id": "execution_candidate_0012",
-              "from_status": "ACTIVE",
-              "to_status": "BREAKEVEN",
-              "to_status_label": "تعادل",
-              "timestamp": "2026-06-02T14:57:37.453984+00:00",
+              "from_status": "REJECTED",
+              "to_status": "EXPIRED",
+              "to_status_label": "منتهي",
+              "timestamp": "2026-06-02T16:13:03.270197+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13508,7 +13508,7 @@
               "from_status": "ACTIVE",
               "to_status": "WIN",
               "to_status_label": "رابح",
-              "timestamp": "2026-06-02T14:57:37.453997+00:00",
+              "timestamp": "2026-06-02T16:13:03.270209+00:00",
               "reason": "paper outcome evaluated"
             },
             {
@@ -13517,7 +13517,7 @@
               "from_status": "ACTIVE",
               "to_status": "WIN",
               "to_status_label": "رابح",
-              "timestamp": "2026-06-02T14:57:37.454025+00:00",
+              "timestamp": "2026-06-02T16:13:03.270221+00:00",
               "reason": "paper outcome evaluated"
             }
           ],
@@ -13529,7 +13529,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453629+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.269965+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13541,7 +13541,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453639+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.269973+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13553,7 +13553,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453645+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.269979+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13565,7 +13565,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453651+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.269984+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13577,7 +13577,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453667+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.269989+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13589,7 +13589,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453675+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.269995+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13601,7 +13601,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453681+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.270001+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13613,7 +13613,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453686+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.270006+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13625,7 +13625,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453692+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.270011+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13634,11 +13634,11 @@
               "order_id": "paper_order_0010",
               "candidate_id": "execution_candidate_0010",
               "signal_id": "signal_stream_0010",
-              "outcome": "UNRESOLVED",
-              "outcome_label": "غير محسوم",
-              "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453697+00:00",
-              "reason": "paper order rejected",
+              "outcome": "WIN",
+              "outcome_label": "رابح",
+              "simulated_return": 1.0,
+              "evaluated_at": "2026-06-02T16:13:03.270019+00:00",
+              "reason": "local paper score won",
               "paper_only": true,
               "research_only": true
             },
@@ -13649,7 +13649,7 @@
               "outcome": "UNRESOLVED",
               "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453703+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.270024+00:00",
               "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
@@ -13658,11 +13658,11 @@
               "order_id": "paper_order_0012",
               "candidate_id": "execution_candidate_0012",
               "signal_id": "signal_stream_0012",
-              "outcome": "BREAKEVEN",
-              "outcome_label": "تعادل",
+              "outcome": "UNRESOLVED",
+              "outcome_label": "غير محسوم",
               "simulated_return": 0.0,
-              "evaluated_at": "2026-06-02T14:57:37.453725+00:00",
-              "reason": "local paper score flat",
+              "evaluated_at": "2026-06-02T16:13:03.270030+00:00",
+              "reason": "paper order rejected",
               "paper_only": true,
               "research_only": true
             },
@@ -13673,7 +13673,7 @@
               "outcome": "WIN",
               "outcome_label": "رابح",
               "simulated_return": 1.0,
-              "evaluated_at": "2026-06-02T14:57:37.453732+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.270036+00:00",
               "reason": "local paper score won",
               "paper_only": true,
               "research_only": true
@@ -13685,7 +13685,7 @@
               "outcome": "WIN",
               "outcome_label": "رابح",
               "simulated_return": 1.0,
-              "evaluated_at": "2026-06-02T14:57:37.453738+00:00",
+              "evaluated_at": "2026-06-02T16:13:03.270041+00:00",
               "reason": "local paper score won",
               "paper_only": true,
               "research_only": true
@@ -13734,11 +13734,11 @@
             "rejected": 0,
             "active": 0,
             "expired": 11,
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
-            "breakeven": 1,
+            "breakeven": 0,
             "unresolved": 11,
-            "win_rate": 0.1429,
+            "win_rate": 0.2143,
             "average_confidence": 84.44,
             "average_readiness": 79.7,
             "paper_drawdown": 0.0,
@@ -13749,7 +13749,7 @@
             "paper_only": true,
             "research_only": true,
             "not_real_execution": true,
-            "paper_execution_score": 62.27,
+            "paper_execution_score": 64.65,
             "warning_count": 3,
             "recommendation_count": 3
           },
@@ -13787,7 +13787,7 @@
               "reason": "تحسين الاستقرار"
             }
           ],
-          "score": 62.27,
+          "score": 64.65,
           "metadata": {
             "paper_only": true,
             "research_only": true,
@@ -13830,7 +13830,7 @@
       },
       "payload": {
         "summary": {
-          "win_rate": 0.1429,
+          "win_rate": 0.2143,
           "loss_rate": 0.0,
           "drawdown_analysis": {
             "current_drawdown": 0.0,
@@ -13848,11 +13848,11 @@
               0.0,
               0.0,
               0.0,
-              0.0,
-              0.0,
-              0.0,
               1.0,
-              2.0
+              1.0,
+              1.0,
+              2.0,
+              3.0
             ],
             "paper_only": true
           },
@@ -13867,10 +13867,10 @@
               "ذكاء المراقبة": 1,
               "جاهزية المراقبة": 2,
               "مراقبة المتصفح": 2,
-              "المراقبة الخارجية": 2,
-              "snapshot": 1,
               "browser_snapshot": 1,
-              "external_source": 1
+              "المراقبة الخارجية": 2,
+              "external_source": 1,
+              "snapshot": 1
             },
             "session_exposure": {
               "paper": 14
@@ -13899,21 +13899,21 @@
           },
           "paper_only": true,
           "research_only": true,
-          "portfolio_score": 81.49,
+          "portfolio_score": 81.92,
           "warning_count": 3,
           "recommendation_count": 3,
           "summary": {
             "portfolio_id": "paper_portfolio_0001",
-            "created_at": "2026-06-02T14:57:39.313212+00:00",
+            "created_at": "2026-06-02T16:13:04.893543+00:00",
             "total_orders": 14,
             "active_orders": 0,
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
-            "breakeven": 1,
-            "win_rate": 0.1429,
+            "breakeven": 0,
+            "win_rate": 0.2143,
             "drawdown": 0.0,
             "stability_score": 67.0,
-            "health_score": 60.43,
+            "health_score": 62.81,
             "risk_score": 86.62,
             "metadata": {
               "paper_only": true,
@@ -13939,19 +13939,19 @@
           }
         },
         "latest": {
-          "timestamp": "2026-06-02T14:57:39.313461+00:00",
+          "timestamp": "2026-06-02T16:13:04.893707+00:00",
           "portfolio": {
             "portfolio_id": "paper_portfolio_0001",
-            "created_at": "2026-06-02T14:57:39.313212+00:00",
+            "created_at": "2026-06-02T16:13:04.893543+00:00",
             "total_orders": 14,
             "active_orders": 0,
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
-            "breakeven": 1,
-            "win_rate": 0.1429,
+            "breakeven": 0,
+            "win_rate": 0.2143,
             "drawdown": 0.0,
             "stability_score": 67.0,
-            "health_score": 60.43,
+            "health_score": 62.81,
             "risk_score": 86.62,
             "metadata": {
               "paper_only": true,
@@ -13983,10 +13983,10 @@
               "ذكاء المراقبة": 1,
               "جاهزية المراقبة": 2,
               "مراقبة المتصفح": 2,
-              "المراقبة الخارجية": 2,
-              "snapshot": 1,
               "browser_snapshot": 1,
-              "external_source": 1
+              "المراقبة الخارجية": 2,
+              "external_source": 1,
+              "snapshot": 1
             },
             "session_exposure": {
               "paper": 14
@@ -14021,11 +14021,11 @@
               0.0,
               0.0,
               0.0,
-              0.0,
-              0.0,
-              0.0,
               1.0,
-              2.0
+              1.0,
+              1.0,
+              2.0,
+              3.0
             ],
             "paper_only": true
           },
@@ -14062,8 +14062,8 @@
               "name": "candidate_quality",
               "arabic_label": "جودة المرشحين",
               "status": "WARNING",
-              "score": 60.43,
-              "detail": "جودة المرشحين: 60.43"
+              "score": 62.81,
+              "detail": "جودة المرشحين: 62.81"
             },
             {
               "name": "portfolio_stability",
@@ -14111,7 +14111,7 @@
             }
           ],
           "analytics": {
-            "win_rate": 0.1429,
+            "win_rate": 0.2143,
             "loss_rate": 0.0,
             "drawdown_analysis": {
               "current_drawdown": 0.0,
@@ -14129,11 +14129,11 @@
                 0.0,
                 0.0,
                 0.0,
-                0.0,
-                0.0,
-                0.0,
                 1.0,
-                2.0
+                1.0,
+                1.0,
+                2.0,
+                3.0
               ],
               "paper_only": true
             },
@@ -14148,10 +14148,10 @@
                 "ذكاء المراقبة": 1,
                 "جاهزية المراقبة": 2,
                 "مراقبة المتصفح": 2,
-                "المراقبة الخارجية": 2,
-                "snapshot": 1,
                 "browser_snapshot": 1,
-                "external_source": 1
+                "المراقبة الخارجية": 2,
+                "external_source": 1,
+                "snapshot": 1
               },
               "session_exposure": {
                 "paper": 14
@@ -14180,21 +14180,21 @@
             },
             "paper_only": true,
             "research_only": true,
-            "portfolio_score": 81.49,
+            "portfolio_score": 81.92,
             "warning_count": 3,
             "recommendation_count": 3,
             "summary": {
               "portfolio_id": "paper_portfolio_0001",
-              "created_at": "2026-06-02T14:57:39.313212+00:00",
+              "created_at": "2026-06-02T16:13:04.893543+00:00",
               "total_orders": 14,
               "active_orders": 0,
-              "wins": 2,
+              "wins": 3,
               "losses": 0,
-              "breakeven": 1,
-              "win_rate": 0.1429,
+              "breakeven": 0,
+              "win_rate": 0.2143,
               "drawdown": 0.0,
               "stability_score": 67.0,
-              "health_score": 60.43,
+              "health_score": 62.81,
               "risk_score": 86.62,
               "metadata": {
                 "paper_only": true,
@@ -14253,7 +14253,7 @@
               "reason": "تقليل التعرض"
             }
           ],
-          "score": 81.49,
+          "score": 81.92,
           "metadata": {
             "paper_only": true,
             "research_only": true,
@@ -14294,8 +14294,8 @@
       },
       "payload": {
         "summary": {
-          "readiness_id": "paper_live_readiness_20260602145738",
-          "generated_at": "2026-06-02T14:57:38.341501+00:00",
+          "readiness_id": "paper_live_readiness_20260602161304",
+          "generated_at": "2026-06-02T16:13:04.018652+00:00",
           "paper_health": 81.49,
           "paper_stability": 60.85,
           "paper_governance": 0.0,
@@ -14338,10 +14338,10 @@
           "not_broker_access": true
         },
         "latest": {
-          "timestamp": "2026-06-02T14:57:38.341600+00:00",
+          "timestamp": "2026-06-02T16:13:04.018741+00:00",
           "readiness": {
-            "readiness_id": "paper_live_readiness_20260602145738",
-            "generated_at": "2026-06-02T14:57:38.341501+00:00",
+            "readiness_id": "paper_live_readiness_20260602161304",
+            "generated_at": "2026-06-02T16:13:04.018652+00:00",
             "paper_health": 81.49,
             "paper_stability": 60.85,
             "paper_governance": 0.0,
@@ -14643,7 +14643,7 @@
       "path": "reports\\confluence\\summary.json"
     }
   ],
-  "checksum": "675db9cb400f2923e72e1a517db70bbff44fb6d3f3a7e226729ebd5c75afa2e9",
+  "checksum": "477ee3a20e32507afd1eaaa4619db15d6ef5266ed4af23f4146314be7a50dc7e",
   "safety_status": {
     "research_only": true,
     "local_only": true,

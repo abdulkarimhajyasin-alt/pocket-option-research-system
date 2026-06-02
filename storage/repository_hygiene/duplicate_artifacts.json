@@ -193,6 +193,42 @@
       "research_only": true,
       "local_only": true,
       "non_destructive": true,
+      "file_name": "decision_matrix.json",
+      "paths": [
+        "storage/operational_governance/decision_matrix.json",
+        "storage/release_baseline/decision_matrix.json"
+      ],
+      "count": 2,
+      "action": "review manually"
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
+      "file_name": "decision_matrix_report.json",
+      "paths": [
+        "reports/operational_governance/decision_matrix_report.json",
+        "reports/release_baseline/decision_matrix_report.json"
+      ],
+      "count": 2,
+      "action": "review manually"
+    },
+    {
+      "schema_version": "repository_hygiene.v1",
+      "repository_hygiene_only": true,
+      "artifact_policy_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "non_destructive": true,
       "file_name": "diagnostics.json",
       "paths": [
         "storage/architecture_audit/diagnostics.json",
@@ -215,6 +251,7 @@
         "storage/platform_certification/diagnostics.json",
         "storage/post_research_architecture/diagnostics.json",
         "storage/production_system_design/diagnostics.json",
+        "storage/release_baseline/diagnostics.json",
         "storage/release_packaging/diagnostics.json",
         "storage/repository_hygiene/diagnostics.json",
         "storage/research_api/diagnostics.json",
@@ -252,7 +289,7 @@
         "storage/trading_architecture_program/diagnostics.json",
         "storage/trading_requirements/diagnostics.json"
       ],
-      "count": 56,
+      "count": 57,
       "action": "review manually"
     },
     {
@@ -287,6 +324,7 @@
         "reports/platform_certification/diagnostics_report.json",
         "reports/post_research_architecture/diagnostics_report.json",
         "reports/production_system_design/diagnostics_report.json",
+        "reports/release_baseline/diagnostics_report.json",
         "reports/release_packaging/diagnostics_report.json",
         "reports/repository_hygiene/diagnostics_report.json",
         "reports/research_api/diagnostics_report.json",
@@ -299,7 +337,7 @@
         "reports/trading_architecture_program/diagnostics_report.json",
         "reports/trading_requirements/diagnostics_report.json"
       ],
-      "count": 31,
+      "count": 32,
       "action": "review manually"
     },
     {
@@ -917,6 +955,7 @@
         "storage/platform_certification/recommendations.json",
         "storage/post_research_architecture/recommendations.json",
         "storage/production_system_design/recommendations.json",
+        "storage/release_baseline/recommendations.json",
         "storage/release_packaging/recommendations.json",
         "storage/repository_hygiene/recommendations.json",
         "storage/research_api/recommendations.json",
@@ -928,7 +967,7 @@
         "storage/trading_architecture_program/recommendations.json",
         "storage/trading_requirements/recommendations.json"
       ],
-      "count": 16,
+      "count": 17,
       "action": "review manually"
     },
     {
@@ -962,6 +1001,7 @@
         "reports/platform_certification/recommendations_report.json",
         "reports/post_research_architecture/recommendations_report.json",
         "reports/production_system_design/recommendations_report.json",
+        "reports/release_baseline/recommendations_report.json",
         "reports/release_packaging/recommendations_report.json",
         "reports/repository_hygiene/recommendations_report.json",
         "reports/research_api/recommendations_report.json",
@@ -976,7 +1016,7 @@
         "reports/trading_architecture_program/recommendations_report.json",
         "reports/trading_requirements/recommendations_report.json"
       ],
-      "count": 32,
+      "count": 33,
       "action": "review manually"
     },
     {
@@ -1143,9 +1183,10 @@
       "file_name": "scorecard.json",
       "paths": [
         "storage/control_assurance/scorecard.json",
+        "storage/release_baseline/scorecard.json",
         "storage/repository_hygiene/scorecard.json"
       ],
-      "count": 2,
+      "count": 3,
       "action": "review manually"
     },
     {
@@ -1161,9 +1202,10 @@
       "file_name": "scorecard_report.json",
       "paths": [
         "reports/control_assurance/scorecard_report.json",
+        "reports/release_baseline/scorecard_report.json",
         "reports/repository_hygiene/scorecard_report.json"
       ],
-      "count": 2,
+      "count": 3,
       "action": "review manually"
     },
     {
@@ -1294,9 +1336,10 @@
       "paths": [
         "storage/control_assurance/source_inventory.json",
         "storage/governance_traceability/source_inventory.json",
+        "storage/release_baseline/source_inventory.json",
         "storage/review_board_simulation/source_inventory.json"
       ],
-      "count": 3,
+      "count": 4,
       "action": "review manually"
     },
     {
@@ -1313,9 +1356,10 @@
       "paths": [
         "reports/control_assurance/source_inventory_report.json",
         "reports/governance_traceability/source_inventory_report.json",
+        "reports/release_baseline/source_inventory_report.json",
         "reports/review_board_simulation/source_inventory_report.json"
       ],
-      "count": 3,
+      "count": 4,
       "action": "review manually"
     },
     {
@@ -1452,11 +1496,12 @@
         "storage/operational_governance/summary.json",
         "storage/post_research_architecture/summary.json",
         "storage/production_system_design/summary.json",
+        "storage/release_baseline/summary.json",
         "storage/repository_hygiene/summary.json",
         "storage/review_board_simulation/summary.json",
         "storage/trading_requirements/summary.json"
       ],
-      "count": 8,
+      "count": 9,
       "action": "review manually"
     },
     {

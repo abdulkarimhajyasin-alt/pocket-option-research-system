@@ -1,0 +1,692 @@
+[
+  {
+    "code": "excessive-manual-review-count",
+    "severity": "متوسط",
+    "message": "2969"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/architecture_audit/architecture_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/architecture_audit/consistency_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/architecture_audit/dependency_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/architecture_audit/final_certification.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/architecture_audit/performance_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/broker_readiness/readiness_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/browser_observation/observation_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/execution_readiness/execution_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/execution_readiness/readiness_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/external_observation/sandbox_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/integration_safety/audit_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/integration_safety/safety_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/knowledge_graph/knowledge_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/live_observation/replay_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/live_observation/timeline_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/market_observation/observation_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/market_regime/regime_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/observation_intelligence/observation_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_control_center/analytics_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_control_center/control_center_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_control_center/decision_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_control_center/health_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_control_center/monitoring_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_execution/lifecycle_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_execution/paper_execution_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_live_readiness/readiness_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_portfolio/analytics_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_portfolio/exposure_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/paper_portfolio/portfolio_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/pattern_memory/pattern_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/release_packaging/architecture_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/release_packaging/project_status_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/release_packaging/release_manifest_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/release_packaging/release_notes.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/release_packaging/repository_audit_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/repository_hygiene/artifact_classification_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/repository_hygiene/artifact_inventory_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/repository_hygiene/cleanup_plan_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/repository_hygiene/diagnostics_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/repository_hygiene/duplicate_artifacts_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/repository_hygiene/git_status_inventory_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/repository_hygiene/repository_hygiene_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_api/knowledge_graph_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_api/paper_trading_view.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_api/readiness_view.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_api/research_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_archive/archive_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_archive/diff_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_archive/evolution_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_archive/latest_version_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_archive/version_history.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_certification/certification_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_ops/executive_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_ops/health_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/research_ops/operations_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/signal_stream/quality_report.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/signal_stream/signal_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/snapshot_import/import_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/strategy_benchmark/benchmark_summary.json"
+  },
+  {
+    "code": "generated-report-change",
+    "severity": "منخفض",
+    "message": "reports/strategy_readiness/readiness_summary.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/architecture_audit/audit_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/architecture_audit/consistency_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/architecture_audit/dependency_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/architecture_audit/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/architecture_audit/performance_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/broker_readiness/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/broker_readiness/readiness_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/browser_observation/adapter_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/browser_observation/artifact_registry.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/browser_observation/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/execution_readiness/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/execution_readiness/execution_candidates.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/external_observation/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/external_observation/sandbox_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/integration_safety/audit_records.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/integration_safety/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/integration_safety/safety_policy.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/knowledge_graph/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/knowledge_graph/graph_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/live_observation/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/live_observation/replay_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/live_observation/timeline_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/market_observation/canonical_market_observation.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/market_observation/observation_metrics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/market_observation/observation_registry.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/market_regime/market_regime.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/market_regime/regime_statistics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/observation_intelligence/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/observation_intelligence/observation_registry.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/observation_intelligence/unified_observations.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_control_center/control_center_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_control_center/decision_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_control_center/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_control_center/governance_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_control_center/health_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_control_center/monitoring_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_execution/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_execution/paper_lifecycle.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_execution/paper_orders.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_execution/paper_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_live_readiness/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_live_readiness/readiness_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_portfolio/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_portfolio/exposure_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/paper_portfolio/portfolio_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/pattern_memory/learning_metrics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/pattern_memory/pattern_memory.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/release_packaging/project_status.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/release_packaging/release_manifest.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/release_packaging/repository_audit.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/repository_hygiene/artifact_classification.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/repository_hygiene/artifact_inventory.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/repository_hygiene/cleanup_plan.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/repository_hygiene/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/repository_hygiene/duplicate_artifacts.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/repository_hygiene/git_status_inventory.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/repository_hygiene/summary.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_api/knowledge_graph_summary.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_api/paper_trading_view.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_api/readiness_view.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_api/unified_research_snapshot.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_archive/archive_index.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_archive/evolution/evolution_report.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_archive/latest_snapshot.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_archive/versions.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_certification/certification_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/research_certification/maturity_metrics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/signal_stream/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/signal_stream/signal_events.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/signal_stream/signal_queue.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/signal_stream/timeline_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/snapshot_import/diagnostics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/snapshot_import/import_history.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/strategy_benchmark/benchmark_metrics.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/strategy_benchmark/benchmark_results.json"
+  },
+  {
+    "code": "generated-storage-change",
+    "severity": "منخفض",
+    "message": "storage/strategy_readiness/readiness_results.json"
+  },
+  {
+    "code": "untracked-archive-artifact",
+    "severity": "متوسط",
+    "message": "storage/research_archive/snapshots/research-v0027/"
+  }
+]

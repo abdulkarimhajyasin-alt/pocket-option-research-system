@@ -8,32 +8,32 @@
     "risk_count": 1,
     "recommendation_count": 2,
     "best_opportunity": "EURUSD",
-    "last_update": "2026-06-02T15:31:08.699125",
+    "last_update": "2026-06-02T16:14:22.251755",
     "research_only": true
   },
   "health_trends": {
-    "15:31": 60.98
+    "16:14": 60.98
   },
   "readiness_trends": {
-    "15:31": 64.06
+    "16:14": 64.06
   },
   "confluence_trends": {
-    "15:31": 69.08
+    "16:14": 69.08
   },
   "performance_trends": {
-    "15:31": 85.0
+    "16:14": 85.0
   },
   "opportunity_quality_trends": {
-    "15:31": 64.06
+    "16:14": 64.06
   },
   "quality_trends": {
-    "15:31": 61.2
+    "16:14": 61.2
   },
   "stability_trends": {
-    "15:31": 85.0
+    "16:14": 85.0
   },
   "latest": {
-    "timestamp": "2026-06-02T15:31:08.699125",
+    "timestamp": "2026-06-02T16:14:22.251755",
     "executive_summary": {
       "best_opportunity": "EURUSD",
       "readiness_status": "تحتاج تحسين كبير",

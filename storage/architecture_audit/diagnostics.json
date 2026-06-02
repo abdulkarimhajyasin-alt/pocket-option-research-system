@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-06-02T15:33:40.007000+00:00",
+  "timestamp": "2026-06-02T16:18:15.639557+00:00",
   "certification": {
-    "certification_id": "architecture_audit_20260602153340",
-    "generated_at": "2026-06-02T15:33:40.005298+00:00",
+    "certification_id": "architecture_audit_20260602161815",
+    "generated_at": "2026-06-02T16:18:15.637406+00:00",
     "architecture_score": 100.0,
     "consistency_score": 96.5,
     "dependency_score": 76.0,
-    "performance_score": 67.68,
+    "performance_score": 67.28,
     "safety_score": 100.0,
-    "overall_score": 88.04,
+    "overall_score": 87.96,
     "certification_state": "جاهزة بشروط",
     "metadata": {
       "architecture_audit_only": true,
@@ -53,16 +53,16 @@
       "paper_portfolio"
     ],
     "missing_packages": [],
-    "package_count": 72,
+    "package_count": 73,
     "architecture_audit_only": true
   },
   "consistency": {
     "consistency_score": 96.5,
-    "report_count": 376,
-    "storage_count": 308,
-    "dashboard_template_count": 58,
-    "api_route_count": 170,
-    "route_count": 229,
+    "report_count": 391,
+    "storage_count": 323,
+    "dashboard_template_count": 59,
+    "api_route_count": 184,
+    "route_count": 244,
     "missing_storage_counterparts": [
       "analytics",
       "datasets",
@@ -81,19 +81,19 @@
       "datetime.utcnow"
     ],
     "stale_module_count": 0,
-    "service_count": 47,
-    "duplicated_logic_indicator": 87,
+    "service_count": 48,
+    "duplicated_logic_indicator": 89,
     "orphan_module_count": 0,
     "architecture_audit_only": true
   },
   "performance": {
-    "performance_score": 67.68,
-    "report_count": 376,
-    "storage_count": 308,
-    "report_bytes": 23203541,
-    "storage_bytes": 29646486,
-    "dashboard_analytics_methods": 49,
-    "service_orchestration_count": 47,
+    "performance_score": 67.28,
+    "report_count": 391,
+    "storage_count": 323,
+    "report_bytes": 66350965,
+    "storage_bytes": 72794864,
+    "dashboard_analytics_methods": 50,
+    "service_orchestration_count": 48,
     "architecture_audit_only": true
   },
   "safety": {
@@ -112,7 +112,7 @@
       "architecture": 100.0,
       "consistency": 96.5,
       "dependency": 76.0,
-      "performance": 67.68,
+      "performance": 67.28,
       "safety": 100.0
     },
     "architecture": {
@@ -128,16 +128,16 @@
         "paper_portfolio"
       ],
       "missing_packages": [],
-      "package_count": 72,
+      "package_count": 73,
       "architecture_audit_only": true
     },
     "consistency": {
       "consistency_score": 96.5,
-      "report_count": 376,
-      "storage_count": 308,
-      "dashboard_template_count": 58,
-      "api_route_count": 170,
-      "route_count": 229,
+      "report_count": 391,
+      "storage_count": 323,
+      "dashboard_template_count": 59,
+      "api_route_count": 184,
+      "route_count": 244,
       "missing_storage_counterparts": [
         "analytics",
         "datasets",
@@ -156,19 +156,19 @@
         "datetime.utcnow"
       ],
       "stale_module_count": 0,
-      "service_count": 47,
-      "duplicated_logic_indicator": 87,
+      "service_count": 48,
+      "duplicated_logic_indicator": 89,
       "orphan_module_count": 0,
       "architecture_audit_only": true
     },
     "performance": {
-      "performance_score": 67.68,
-      "report_count": 376,
-      "storage_count": 308,
-      "report_bytes": 23203541,
-      "storage_bytes": 29646486,
-      "dashboard_analytics_methods": 49,
-      "service_orchestration_count": 47,
+      "performance_score": 67.28,
+      "report_count": 391,
+      "storage_count": 323,
+      "report_bytes": 66350965,
+      "storage_bytes": 72794864,
+      "dashboard_analytics_methods": 50,
+      "service_orchestration_count": 48,
       "architecture_audit_only": true
     },
     "safety": {
@@ -193,7 +193,7 @@
       "تحسين الأداء": 1
     },
     "certification": {
-      "جاهزة بشروط": 88.04
+      "جاهزة بشروط": 87.96
     },
     "architecture_audit_only": true
   },
