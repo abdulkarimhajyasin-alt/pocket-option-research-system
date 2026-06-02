@@ -41,6 +41,7 @@ from app.operational_governance.service import OperationalGovernanceService
 from app.governance_traceability.service import GovernanceTraceabilityService
 from app.control_assurance.service import ControlAssuranceService
 from app.review_board_simulation.service import ReviewBoardSimulationService
+from app.repository_hygiene.service import RepositoryHygieneService
 
 SAFETY_NOTE = (
     "This is a local research dashboard. It does not execute live trades, connect to "
@@ -889,6 +890,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/repository-hygiene", response_class=HTMLResponse)
+    def repository_hygiene(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/repository_hygiene.html",
+            context(
+                request,
+                dashboard,
+                page="repository_hygiene",
+                repository_hygiene=dashboard.analytics.repository_hygiene_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1547,6 +1562,54 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/review-board-simulation/recommendations")
     def api_review_board_simulation_recommendations() -> list[str]:
         return ReviewBoardSimulationService(root).generate_recommendations()
+
+    @app.get("/api/repository-hygiene")
+    def api_repository_hygiene() -> dict[str, object]:
+        return dashboard_context().analytics.repository_hygiene_analytics()
+
+    @app.get("/api/repository-hygiene/git-status")
+    def api_repository_hygiene_git_status() -> dict[str, object]:
+        return RepositoryHygieneService(root).parse_git_status()
+
+    @app.get("/api/repository-hygiene/artifacts")
+    def api_repository_hygiene_artifacts() -> dict[str, object]:
+        return RepositoryHygieneService(root).build_artifact_inventory()
+
+    @app.get("/api/repository-hygiene/retention-policy")
+    def api_repository_hygiene_retention_policy() -> dict[str, object]:
+        return RepositoryHygieneService(root).build_retention_policy()
+
+    @app.get("/api/repository-hygiene/cleanup-plan")
+    def api_repository_hygiene_cleanup_plan() -> dict[str, object]:
+        return RepositoryHygieneService(root).build_cleanup_plan()
+
+    @app.get("/api/repository-hygiene/ignore-recommendations")
+    def api_repository_hygiene_ignore_recommendations() -> dict[str, object]:
+        return RepositoryHygieneService(root).build_ignore_recommendations()
+
+    @app.get("/api/repository-hygiene/duplicates")
+    def api_repository_hygiene_duplicates() -> dict[str, object]:
+        return RepositoryHygieneService(root).detect_duplicates()
+
+    @app.get("/api/repository-hygiene/stale")
+    def api_repository_hygiene_stale() -> dict[str, object]:
+        return RepositoryHygieneService(root).detect_stale_artifacts()
+
+    @app.get("/api/repository-hygiene/archive-policy")
+    def api_repository_hygiene_archive_policy() -> dict[str, object]:
+        return RepositoryHygieneService(root).build_archive_policy()
+
+    @app.get("/api/repository-hygiene/scorecard")
+    def api_repository_hygiene_scorecard() -> dict[str, object]:
+        return RepositoryHygieneService(root).build_scorecard()
+
+    @app.get("/api/repository-hygiene/diagnostics")
+    def api_repository_hygiene_diagnostics() -> list[dict[str, object]]:
+        return RepositoryHygieneService(root).generate_diagnostics()
+
+    @app.get("/api/repository-hygiene/recommendations")
+    def api_repository_hygiene_recommendations() -> list[str]:
+        return RepositoryHygieneService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

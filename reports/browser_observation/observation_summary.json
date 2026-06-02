@@ -29,13 +29,13 @@
     "not_execution": true
   },
   "latest": {
-    "timestamp": "2026-06-01T19:47:47.720145",
+    "timestamp": "2026-06-02T15:29:59.255859",
     "artifacts": [
       {
         "artifact_id": "html-summary",
         "artifact_type": "html_snapshot",
-        "artifact_source": "D:\\pocket-option-research-system\\reports\\observation\\observation_summary.json",
-        "created_at": "1780343251354578800",
+        "artifact_source": "reports\\observation\\observation_summary.json",
+        "created_at": "1780412602736490500",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -51,8 +51,8 @@
       {
         "artifact_id": "dom-export-summary",
         "artifact_type": "dom_export",
-        "artifact_source": "D:\\pocket-option-research-system\\reports\\external_observation\\source_report.json",
-        "created_at": "1780343264552565600",
+        "artifact_source": "reports\\external_observation\\source_report.json",
+        "created_at": "1780412601788105100",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -68,8 +68,8 @@
       {
         "artifact_id": "page-capture-summary",
         "artifact_type": "page_capture",
-        "artifact_source": "D:\\pocket-option-research-system\\reports\\broker_readiness\\readiness_summary.json",
-        "created_at": "1780343247874455500",
+        "artifact_source": "reports\\broker_readiness\\readiness_summary.json",
+        "created_at": "1780414198560730800",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -85,8 +85,8 @@
       {
         "artifact_id": "observation-dump",
         "artifact_type": "observation_dump",
-        "artifact_source": "D:\\pocket-option-research-system\\storage\\external_observation\\diagnostics.json",
-        "created_at": "1780343264549567800",
+        "artifact_source": "storage\\external_observation\\diagnostics.json",
+        "created_at": "1780412684664728300",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",
         "monitoring_status": "مستقر",
@@ -102,7 +102,7 @@
       {
         "artifact_id": "static-snapshot",
         "artifact_type": "static_snapshot",
-        "artifact_source": "D:\\pocket-option-research-system\\data\\sample_eurusd_m1.csv",
+        "artifact_source": "data\\sample_eurusd_m1.csv",
         "created_at": "1779982041662933800",
         "validation_status": "ناجح",
         "visibility_status": "مرئي",

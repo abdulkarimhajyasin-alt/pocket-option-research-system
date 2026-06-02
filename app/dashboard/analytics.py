@@ -5500,6 +5500,207 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def repository_hygiene_analytics(self) -> dict[str, Any]:
+        """Return latest repository hygiene analytics."""
+        summary_payload = self._latest_json_dict(
+            "repository_hygiene",
+            "repository_hygiene_summary",
+        )
+        git_status = self._latest_json_dict(
+            "repository_hygiene",
+            "git_status_inventory_report",
+        )
+        classification = self._latest_json_dict(
+            "repository_hygiene",
+            "artifact_classification_report",
+        )
+        cleanup_plan = self._latest_json_dict(
+            "repository_hygiene",
+            "cleanup_plan_report",
+        )
+        ignore_recommendations = self._latest_json_dict(
+            "repository_hygiene",
+            "ignore_recommendations_report",
+        )
+        duplicates = self._latest_json_dict(
+            "repository_hygiene",
+            "duplicate_artifacts_report",
+        )
+        stale = self._latest_json_dict(
+            "repository_hygiene",
+            "stale_artifacts_report",
+        )
+        scorecard = self._latest_json_dict("repository_hygiene", "scorecard_report")
+        diagnostics = self._latest_json_list("repository_hygiene", "diagnostics_report")
+        reports = self.loader.list_reports()
+        recommendations_report = self.loader.latest(
+            [item for item in reports if item.report_type == "json"],
+            "repository_hygiene",
+            "recommendations_report",
+        )
+        recommendations_content = (
+            self.loader.get_report(recommendations_report.report_id)
+            if recommendations_report
+            else None
+        )
+        recommendation_payload = (
+            recommendations_content.json_data if recommendations_content else []
+        )
+        recommendations = (
+            [str(item) for item in recommendation_payload]
+            if isinstance(recommendation_payload, list)
+            else []
+        )
+        git_summary = git_status.get("summary", {})
+        classification_counts = classification.get("classification_counts", {})
+        cleanup_counts: dict[str, float] = {}
+        for item in cleanup_plan.get("items", []):
+            action = str(item.get("recommended_action", "review manually"))
+            cleanup_counts[action] = cleanup_counts.get(action, 0.0) + 1.0
+        ignore_counts = {
+            str(item.get("pattern", index + 1)): 1.0
+            for index, item in enumerate(ignore_recommendations.get("items", []))
+        }
+        duplicate_counts = {
+            str(item.get("file_name", index + 1)): self._float(item.get("count"))
+            for index, item in enumerate(duplicates.get("items", []))
+        }
+        stale_counts = {
+            str(item.get("version_number", index + 1)): 1.0
+            for index, item in enumerate(stale.get("items", []))
+        }
+        score_values = {
+            "git": self._float(scorecard.get("git_status_cleanliness_score")),
+            "classification": self._float(
+                scorecard.get("artifact_classification_score")
+            ),
+            "retention": self._float(scorecard.get("retention_policy_coverage_score")),
+            "cleanup": self._float(scorecard.get("cleanup_plan_completeness_score")),
+            "ignore": self._float(scorecard.get("ignore_recommendation_score")),
+            "overall": self._float(scorecard.get("overall_repository_hygiene_score")),
+        }
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {item: 1.0 for item in recommendations}
+        summary = {
+            "hygiene_status": summary_payload.get(
+                "hygiene_status",
+                scorecard.get("score_status", "يحتاج مراجعة"),
+            ),
+            "overall_repository_hygiene_score": self._float(
+                summary_payload.get(
+                    "overall_repository_hygiene_score",
+                    scorecard.get("overall_repository_hygiene_score", 0),
+                )
+            ),
+            "untracked_file_count": self._float(
+                summary_payload.get("untracked_file_count", git_summary.get("untracked", 0))
+            ),
+            "modified_file_count": self._float(
+                summary_payload.get("modified_file_count", git_summary.get("modified", 0))
+            ),
+            "deleted_file_count": self._float(
+                summary_payload.get("deleted_file_count", git_summary.get("deleted", 0))
+            ),
+            "classified_artifact_count": self._float(
+                summary_payload.get(
+                    "classified_artifact_count",
+                    len(classification.get("items", [])),
+                )
+            ),
+            "cleanup_plan_count": self._float(
+                summary_payload.get("cleanup_plan_count", len(cleanup_plan.get("items", [])))
+            ),
+            "ignore_recommendation_count": self._float(
+                summary_payload.get(
+                    "ignore_recommendation_count",
+                    len(ignore_recommendations.get("items", [])),
+                )
+            ),
+            "manual_review_count": self._float(summary_payload.get("manual_review_count", 0)),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "repository_hygiene_only": True,
+            "artifact_policy_only": True,
+            "non_destructive": True,
+            "governance_only": True,
+            "design_only": True,
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        return {
+            "summary": summary,
+            "git_status_payload": git_status,
+            "classification_payload": classification,
+            "cleanup_plan_payload": cleanup_plan,
+            "ignore_recommendations_payload": ignore_recommendations,
+            "duplicates_payload": duplicates,
+            "stale_payload": stale,
+            "scorecard": scorecard,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "git_status": bar_chart(
+                "توزيع حالة Git",
+                *self._dict_chart_values(git_summary),
+                label="الحالة",
+                color="blue",
+            ).to_dict(),
+            "classification": bar_chart(
+                "تصنيف artifacts",
+                *self._dict_chart_values(classification_counts),
+                label="التصنيف",
+                color="green",
+            ).to_dict(),
+            "cleanup_plan": bar_chart(
+                "خطة التنظيف",
+                *self._dict_chart_values(cleanup_counts),
+                label="الخطة",
+                color="warning",
+            ).to_dict(),
+            "ignore_recommendations": bar_chart(
+                "توصيات التجاهل",
+                *self._dict_chart_values(ignore_counts),
+                label="التوصيات",
+                color="accent",
+            ).to_dict(),
+            "duplicates": bar_chart(
+                "العناصر المتكررة",
+                *self._dict_chart_values(duplicate_counts),
+                label="التكرار",
+                color="warning",
+            ).to_dict(),
+            "stale": bar_chart(
+                "العناصر القديمة",
+                *self._dict_chart_values(stale_counts),
+                label="القديم",
+                color="blue",
+            ).to_dict(),
+            "scores": bar_chart(
+                "درجات النظافة",
+                *self._dict_chart_values(score_values),
+                label="الدرجات",
+                color="green",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

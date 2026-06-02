@@ -1,7 +1,7 @@
 {
   "summary": {
     "control_id": "paper_control_center_0001",
-    "generated_at": "2026-06-01T19:48:14.242160+00:00",
+    "generated_at": "2026-06-02T15:35:26.492443+00:00",
     "portfolio_health": 0.0,
     "portfolio_stability": 0.0,
     "execution_status": "WARNING",
@@ -10,7 +10,7 @@
     "risk_status": "PASS",
     "recommendation_count": 1,
     "warning_count": 1,
-    "overall_score": 36.35,
+    "overall_score": 36.36,
     "metadata": {
       "paper_only": true,
       "research_only": true,
@@ -39,10 +39,10 @@
     "not_broker_access": true
   },
   "latest": {
-    "timestamp": "2026-06-01T19:48:14.242208+00:00",
+    "timestamp": "2026-06-02T15:35:26.492517+00:00",
     "control": {
       "control_id": "paper_control_center_0001",
-      "generated_at": "2026-06-01T19:48:14.242160+00:00",
+      "generated_at": "2026-06-02T15:35:26.492443+00:00",
       "portfolio_health": 0.0,
       "portfolio_stability": 0.0,
       "execution_status": "WARNING",
@@ -51,7 +51,7 @@
       "risk_status": "PASS",
       "recommendation_count": 1,
       "warning_count": 1,
-      "overall_score": 36.35,
+      "overall_score": 36.36,
       "metadata": {
         "paper_only": true,
         "research_only": true,
@@ -83,16 +83,16 @@
       "portfolio_health": 0.0,
       "execution_health": 62.27,
       "readiness_health": 82.75,
-      "governance_health": 82.03,
+      "governance_health": 82.24,
       "stability_health": 0.0,
-      "health_score": 45.41,
+      "health_score": 45.45,
       "paper_only": true
     },
     "monitoring": {
       "active_paper_orders": 0,
       "completed_paper_orders": 14,
       "paper_result_count": 14,
-      "paper_portfolio_changes": 81.49,
+      "paper_portfolio_changes": 81.92,
       "drawdown_changes": 0.0,
       "governance_changes": 1,
       "readiness_changes": 82.75,
@@ -118,8 +118,8 @@
         "name": "risk_governance",
         "arabic_label": "حوكمة المخاطر",
         "status": "PASS",
-        "score": 82.03,
-        "detail": "حوكمة المخاطر: 82.03"
+        "score": 82.24,
+        "detail": "حوكمة المخاطر: 82.24"
       },
       {
         "name": "readiness_governance",
@@ -141,7 +141,7 @@
       "arabic_label": "إيقاف التشغيل الورقي",
       "failure_count": 1,
       "warning_count": 1,
-      "health_score": 45.41,
+      "health_score": 45.45,
       "research_recommendation_only": true,
       "paper_only": true,
       "not_control_action": true
@@ -151,9 +151,9 @@
         "portfolio_health": 0.0,
         "execution_health": 62.27,
         "readiness_health": 82.75,
-        "governance_health": 82.03,
+        "governance_health": 82.24,
         "stability_health": 0.0,
-        "health_score": 45.41,
+        "health_score": 45.45,
         "paper_only": true
       },
       "readiness_analysis": {
@@ -178,7 +178,7 @@
         "active_paper_orders": 0,
         "completed_paper_orders": 14,
         "paper_result_count": 14,
-        "paper_portfolio_changes": 81.49,
+        "paper_portfolio_changes": 81.92,
         "drawdown_changes": 0.0,
         "governance_changes": 1,
         "readiness_changes": 82.75,

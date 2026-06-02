@@ -6,13 +6,13 @@
   "changed_values": [
     {
       "key": "checksum",
-      "previous": "820bb5323ecdb616d029f95c9541e390010508ed7d4c01529c5340077105c52b",
-      "current": "7b9109da92fc39632ca7de456a59bb9b557e514062c3e3a9ad3d41ff395c4af3"
+      "previous": "89ea62708afbbde63d5ab7b43cf3a27174407edb173ebd9b593f836e53b5b19a",
+      "current": "437e1ce545978583af9fd1d82a830350d535377431e1b2f08de09fb697c2bec0"
     },
     {
       "key": "snapshot_id",
-      "previous": "snapshot-820bb5323ecd",
-      "current": "snapshot-7b9109da92fc"
+      "previous": "snapshot-89ea62708afb",
+      "current": "snapshot-437e1ce54597"
     },
     {
       "key": "version",

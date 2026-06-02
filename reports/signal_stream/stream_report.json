@@ -1,5 +1,5 @@
 {
   "NO_TRADE": 11,
-  "CALL": 2,
-  "PUT": 1
+  "PUT": 2,
+  "CALL": 1
 }

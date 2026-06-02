@@ -359,6 +359,15 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         ),
         command=("scripts/run_review_board_simulation.py",),
     ),
+    "repository_hygiene": ActionDefinition(
+        name="repository_hygiene",
+        label="نظافة المستودع",
+        description=(
+            "توليد فحص نظافة مستودع وسياسة احتفاظ بالملفات محلي وغير تدميري "
+            "مع توصيات فقط دون حذف تلقائي."
+        ),
+        command=("scripts/run_repository_hygiene.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",

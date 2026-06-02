@@ -1,0 +1,63 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ t.pages.repository_hygiene }} - {{ t.app.title }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">فحص غير تدميري</p>
+    <h1>نظافة المستودع وسياسة الاحتفاظ بالملفات</h1>
+  </div>
+  <a class="button-link" href="/actions">تحديث الفحص</a>
+</section>
+
+<section class="executive-panel">
+  <div>
+    <span>حالة النظافة</span>
+    <strong>{{ repository_hygiene.summary.hygiene_status|default("يحتاج مراجعة") }}</strong>
+    <p>هذه الصفحة فحص وتنظيم مستودع فقط ولا تحذف الملفات تلقائياً ولا تضيف تداولاً حقيقياً أو اتصالاً بوسيط.</p>
+  </div>
+  <div class="executive-score">
+    <span>درجة النظافة العامة</span>
+    <strong>{{ repository_hygiene.summary.overall_repository_hygiene_score|default(0)|number_ar }}</strong>
+  </div>
+  <div>
+    <span>حدود السلامة</span>
+    <strong>سياسة فقط</strong>
+    <small>محلي / غير تدميري / بحثي</small>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>حالة النظافة</span><strong>{{ repository_hygiene.summary.hygiene_status|default("يحتاج مراجعة") }}</strong></article>
+  <article class="metric-card"><span>درجة النظافة العامة</span><strong>{{ repository_hygiene.summary.overall_repository_hygiene_score|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الملفات غير المتتبعة</span><strong>{{ repository_hygiene.summary.untracked_file_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الملفات المعدلة</span><strong>{{ repository_hygiene.summary.modified_file_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد الملفات المحذوفة</span><strong>{{ repository_hygiene.summary.deleted_file_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد artifacts المصنفة</span><strong>{{ repository_hygiene.summary.classified_artifact_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد عناصر خطة التنظيف</span><strong>{{ repository_hygiene.summary.cleanup_plan_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد توصيات .gitignore</span><strong>{{ repository_hygiene.summary.ignore_recommendation_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد العناصر التي تحتاج مراجعة يدوية</span><strong>{{ repository_hygiene.summary.manual_review_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>عدد التحذيرات</span><strong>{{ repository_hygiene.summary.diagnostic_count|default(0)|number_ar }}</strong></article>
+  <article class="metric-card"><span>التوصيات</span><strong>{{ repository_hygiene.summary.recommendation_count|default(0)|number_ar }}</strong></article>
+</section>
+
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>توزيع حالة Git</h2><span>حالة محلية</span></div><div class="chart" data-chart='{{ repository_hygiene.git_status|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>تصنيف artifacts</h2><span>تصنيف السياسة</span></div><div class="chart" data-chart='{{ repository_hygiene.classification|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>خطة التنظيف</h2><span>توصيات فقط</span></div><div class="chart" data-chart='{{ repository_hygiene.cleanup_plan|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>توصيات التجاهل</h2><span>لا تعديل تلقائي</span></div><div class="chart" data-chart='{{ repository_hygiene.ignore_recommendations|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>العناصر المتكررة</h2><span>مراجعة يدوية</span></div><div class="chart" data-chart='{{ repository_hygiene.duplicates|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>العناصر القديمة</h2><span>سياسة أرشيف</span></div><div class="chart" data-chart='{{ repository_hygiene.stale|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>درجات النظافة</h2><span>بطاقة الدرجات</span></div><div class="chart" data-chart='{{ repository_hygiene.scores|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>التحذيرات</h2><span>تشخيص السلامة</span></div><div class="chart" data-chart='{{ repository_hygiene.diagnostics|tojson }}'></div></article>
+</section>
+<section class="two-col">
+  <article class="panel"><div class="panel-title"><h2>التوصيات</h2><span>توصيات عربية</span></div><div class="chart" data-chart='{{ repository_hygiene.recommendations|tojson }}'></div></article>
+  <article class="panel"><div class="panel-title"><h2>ملخص النظافة</h2><span>محلي فقط</span></div><pre class="code-block">{{ repository_hygiene.summary|tojson(indent=2) }}</pre></article>
+</section>
+{% endblock %}

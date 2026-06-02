@@ -1,10 +1,10 @@
 {
-  "performance_score": 77.16,
-  "report_count": 351,
-  "storage_count": 283,
-  "report_bytes": 7999244,
-  "storage_bytes": 14442904,
-  "dashboard_analytics_methods": 47,
-  "service_orchestration_count": 45,
+  "performance_score": 67.68,
+  "report_count": 376,
+  "storage_count": 308,
+  "report_bytes": 23203541,
+  "storage_bytes": 29646486,
+  "dashboard_analytics_methods": 49,
+  "service_orchestration_count": 47,
   "architecture_audit_only": true
 }

@@ -1,0 +1,41 @@
+{
+  "rule": {
+    "schema_version": "repository_hygiene.v1",
+    "repository_hygiene_only": true,
+    "artifact_policy_only": true,
+    "governance_only": true,
+    "design_only": true,
+    "architecture_only": true,
+    "research_only": true,
+    "local_only": true,
+    "non_destructive": true,
+    "snapshot_pattern": "research-vNNNN",
+    "retain_latest_count": 5,
+    "preserve_release_evidence": true,
+    "cleanup_mode": "manual review only"
+  },
+  "notes": [
+    "Preserve release evidence snapshots.",
+    "Review older snapshots manually before any cleanup.",
+    "Do not delete archive files automatically."
+  ],
+  "repository_hygiene_only": true,
+  "artifact_policy_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "non_destructive": true,
+  "no_automatic_file_deletion": true,
+  "no_destructive_git_commands": true,
+  "no_broker_access": true,
+  "no_execution_capability": true,
+  "no_trading_capability": true,
+  "no_authentication": true,
+  "no_credentials": true,
+  "no_browser_automation": true,
+  "no_money_handling": true,
+  "no_external_connectivity": true,
+  "no_real_operational_control": true
+}
