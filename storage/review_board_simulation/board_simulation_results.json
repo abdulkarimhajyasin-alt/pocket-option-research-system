@@ -1,0 +1,702 @@
+{
+  "items": [
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_name": "Architecture Review Board",
+      "criteria_results": [
+        {
+          "criterion_id": "RBC-1-1",
+          "name": "Architecture separation",
+          "score": 100.0,
+          "available_sources": [
+            "production_system_design",
+            "trading_architecture_program"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-1-2",
+          "name": "Design boundaries",
+          "score": 100.0,
+          "available_sources": [
+            "production_system_design",
+            "trading_architecture_program"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-1-3",
+          "name": "Future extensibility",
+          "score": 100.0,
+          "available_sources": [
+            "production_system_design",
+            "trading_architecture_program"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        }
+      ],
+      "simulated_decisions": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-architecture-architecture-separation-approved",
+          "board_name": "Architecture Review Board",
+          "gate_name": "Architecture Separation Approved",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-architecture-production-design-review",
+          "board_name": "Architecture Review Board",
+          "gate_name": "Production Design Review",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        }
+      ],
+      "blockers": [],
+      "readiness_score": 100.0,
+      "readiness_status": "ممتاز"
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_name": "Risk Review Board",
+      "criteria_results": [
+        {
+          "criterion_id": "RBC-2-1",
+          "name": "Risk controls",
+          "score": 100.0,
+          "available_sources": [
+            "trading_requirements",
+            "control_assurance"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-2-2",
+          "name": "Limits design",
+          "score": 100.0,
+          "available_sources": [
+            "trading_requirements",
+            "control_assurance"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-2-3",
+          "name": "Blocker handling",
+          "score": 100.0,
+          "available_sources": [
+            "trading_requirements",
+            "control_assurance"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        }
+      ],
+      "simulated_decisions": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-risk-risk-architecture-approved",
+          "board_name": "Risk Review Board",
+          "gate_name": "Risk Architecture Approved",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-risk-requirements-approved",
+          "board_name": "Risk Review Board",
+          "gate_name": "Requirements Approved",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        }
+      ],
+      "blockers": [],
+      "readiness_score": 100.0,
+      "readiness_status": "ممتاز"
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_name": "Compliance Review Board",
+      "criteria_results": [
+        {
+          "criterion_id": "RBC-3-1",
+          "name": "Policy mapping",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-3-2",
+          "name": "Evidence traceability",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-3-3",
+          "name": "Review records",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        }
+      ],
+      "simulated_decisions": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-compliance-governance-approved",
+          "board_name": "Compliance Review Board",
+          "gate_name": "Governance Approved",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-compliance-governance-review",
+          "board_name": "Compliance Review Board",
+          "gate_name": "Governance Review",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        }
+      ],
+      "blockers": [],
+      "readiness_score": 100.0,
+      "readiness_status": "ممتاز"
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_name": "Operations Review Board",
+      "criteria_results": [
+        {
+          "criterion_id": "RBC-4-1",
+          "name": "Runbook design",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "production_system_design"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-4-2",
+          "name": "Incident handling",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "production_system_design"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-4-3",
+          "name": "Monitoring expectations",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "production_system_design"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        }
+      ],
+      "simulated_decisions": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-operations-control-assurance-review",
+          "board_name": "Operations Review Board",
+          "gate_name": "Control Assurance Review",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-operations-documentation-complete",
+          "board_name": "Operations Review Board",
+          "gate_name": "Documentation Complete",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        }
+      ],
+      "blockers": [],
+      "readiness_score": 100.0,
+      "readiness_status": "ممتاز"
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_name": "Release Review Board",
+      "criteria_results": [
+        {
+          "criterion_id": "RBC-5-1",
+          "name": "Gate maturity",
+          "score": 100.0,
+          "available_sources": [
+            "control_assurance",
+            "trading_architecture_program"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-5-2",
+          "name": "Release criteria",
+          "score": 100.0,
+          "available_sources": [
+            "control_assurance",
+            "trading_architecture_program"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-5-3",
+          "name": "Readiness evidence",
+          "score": 100.0,
+          "available_sources": [
+            "control_assurance",
+            "trading_architecture_program"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        }
+      ],
+      "simulated_decisions": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-release-research-platform-frozen",
+          "board_name": "Release Review Board",
+          "gate_name": "Research Platform Frozen",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-release-future-program-approval",
+          "board_name": "Release Review Board",
+          "gate_name": "Future Program Approval",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        }
+      ],
+      "blockers": [],
+      "readiness_score": 100.0,
+      "readiness_status": "ممتاز"
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_name": "Incident Review Board",
+      "criteria_results": [
+        {
+          "criterion_id": "RBC-6-1",
+          "name": "Incident escalation",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-6-2",
+          "name": "Post-incident evidence",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        },
+        {
+          "criterion_id": "RBC-6-3",
+          "name": "Human review",
+          "score": 100.0,
+          "available_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "missing_sources": [],
+          "status": "ممتاز"
+        }
+      ],
+      "simulated_decisions": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "decision_id": "SIM-incident-external-integration-review-approved",
+          "board_name": "Incident Review Board",
+          "gate_name": "External Integration Review Approved",
+          "simulated_state": "Simulated Pass",
+          "rationale": "Dry-run result based on local JSON evidence coverage only.",
+          "evidence_reviewed": [
+            "control_assurance",
+            "governance_traceability",
+            "operational_governance",
+            "production_system_design",
+            "trading_architecture_program",
+            "trading_requirements"
+          ],
+          "blockers": [],
+          "conditions": [],
+          "required_human_review": false,
+          "safety_notes": [
+            "Simulation artifact only.",
+            "Review-board dry run only.",
+            "No real-world approval, operational control, or account interaction is permitted."
+          ],
+          "forbidden_real_world_use": true
+        }
+      ],
+      "blockers": [],
+      "readiness_score": 100.0,
+      "readiness_status": "ممتاز"
+    }
+  ],
+  "simulation_only": true,
+  "review_only": true,
+  "dry_run_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "not_implemented": true,
+  "no_broker_access": true,
+  "no_execution_capability": true,
+  "no_trading_capability": true,
+  "no_authentication": true,
+  "no_credentials": true,
+  "no_browser_automation": true,
+  "no_order_placement": true,
+  "no_live_trading": true,
+  "no_money_handling": true,
+  "no_external_connectivity": true,
+  "no_real_approvals": true,
+  "no_real_users": true,
+  "no_real_permissions": true,
+  "no_real_operational_control": true
+}

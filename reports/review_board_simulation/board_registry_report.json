@@ -1,0 +1,621 @@
+{
+  "boards": [
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_id": "architecture",
+      "board_name": "Architecture Review Board",
+      "responsibilities": [
+        "Architecture separation",
+        "Design boundaries",
+        "Future extensibility"
+      ],
+      "criteria": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-1-1",
+          "name": "Architecture separation",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "production_system_design",
+            "trading_architecture_program"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-1-2",
+          "name": "Design boundaries",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "production_system_design",
+            "trading_architecture_program"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-1-3",
+          "name": "Future extensibility",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "production_system_design",
+            "trading_architecture_program"
+          ],
+          "weight": 1.0
+        }
+      ],
+      "forbidden_approvals": [
+        "Any real trading approval is forbidden.",
+        "Any execution readiness approval is forbidden.",
+        "Any broker or account readiness approval is forbidden."
+      ],
+      "safety_notes": [
+        "Simulation artifact only.",
+        "Review-board dry run only.",
+        "No real-world approval, operational control, or account interaction is permitted."
+      ]
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_id": "risk",
+      "board_name": "Risk Review Board",
+      "responsibilities": [
+        "Risk controls",
+        "Limits design",
+        "Blocker handling"
+      ],
+      "criteria": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-2-1",
+          "name": "Risk controls",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "trading_requirements",
+            "control_assurance"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-2-2",
+          "name": "Limits design",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "trading_requirements",
+            "control_assurance"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-2-3",
+          "name": "Blocker handling",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "trading_requirements",
+            "control_assurance"
+          ],
+          "weight": 1.0
+        }
+      ],
+      "forbidden_approvals": [
+        "Any real trading approval is forbidden.",
+        "Any execution readiness approval is forbidden.",
+        "Any broker or account readiness approval is forbidden."
+      ],
+      "safety_notes": [
+        "Simulation artifact only.",
+        "Review-board dry run only.",
+        "No real-world approval, operational control, or account interaction is permitted."
+      ]
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_id": "compliance",
+      "board_name": "Compliance Review Board",
+      "responsibilities": [
+        "Policy mapping",
+        "Evidence traceability",
+        "Review records"
+      ],
+      "criteria": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-3-1",
+          "name": "Policy mapping",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-3-2",
+          "name": "Evidence traceability",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-3-3",
+          "name": "Review records",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "weight": 1.0
+        }
+      ],
+      "forbidden_approvals": [
+        "Any real trading approval is forbidden.",
+        "Any execution readiness approval is forbidden.",
+        "Any broker or account readiness approval is forbidden."
+      ],
+      "safety_notes": [
+        "Simulation artifact only.",
+        "Review-board dry run only.",
+        "No real-world approval, operational control, or account interaction is permitted."
+      ]
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_id": "operations",
+      "board_name": "Operations Review Board",
+      "responsibilities": [
+        "Runbook design",
+        "Incident handling",
+        "Monitoring expectations"
+      ],
+      "criteria": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-4-1",
+          "name": "Runbook design",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "production_system_design"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-4-2",
+          "name": "Incident handling",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "production_system_design"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-4-3",
+          "name": "Monitoring expectations",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "production_system_design"
+          ],
+          "weight": 1.0
+        }
+      ],
+      "forbidden_approvals": [
+        "Any real trading approval is forbidden.",
+        "Any execution readiness approval is forbidden.",
+        "Any broker or account readiness approval is forbidden."
+      ],
+      "safety_notes": [
+        "Simulation artifact only.",
+        "Review-board dry run only.",
+        "No real-world approval, operational control, or account interaction is permitted."
+      ]
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_id": "release",
+      "board_name": "Release Review Board",
+      "responsibilities": [
+        "Gate maturity",
+        "Release criteria",
+        "Readiness evidence"
+      ],
+      "criteria": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-5-1",
+          "name": "Gate maturity",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "control_assurance",
+            "trading_architecture_program"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-5-2",
+          "name": "Release criteria",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "control_assurance",
+            "trading_architecture_program"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-5-3",
+          "name": "Readiness evidence",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "control_assurance",
+            "trading_architecture_program"
+          ],
+          "weight": 1.0
+        }
+      ],
+      "forbidden_approvals": [
+        "Any real trading approval is forbidden.",
+        "Any execution readiness approval is forbidden.",
+        "Any broker or account readiness approval is forbidden."
+      ],
+      "safety_notes": [
+        "Simulation artifact only.",
+        "Review-board dry run only.",
+        "No real-world approval, operational control, or account interaction is permitted."
+      ]
+    },
+    {
+      "schema_version": "review_board_simulation.v1",
+      "simulation_only": true,
+      "review_only": true,
+      "dry_run_only": true,
+      "governance_only": true,
+      "design_only": true,
+      "architecture_only": true,
+      "research_only": true,
+      "local_only": true,
+      "board_id": "incident",
+      "board_name": "Incident Review Board",
+      "responsibilities": [
+        "Incident escalation",
+        "Post-incident evidence",
+        "Human review"
+      ],
+      "criteria": [
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-6-1",
+          "name": "Incident escalation",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-6-2",
+          "name": "Post-incident evidence",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "weight": 1.0
+        },
+        {
+          "schema_version": "review_board_simulation.v1",
+          "simulation_only": true,
+          "review_only": true,
+          "dry_run_only": true,
+          "governance_only": true,
+          "design_only": true,
+          "architecture_only": true,
+          "research_only": true,
+          "local_only": true,
+          "criterion_id": "RBC-6-3",
+          "name": "Human review",
+          "evidence_expectations": [
+            "Local JSON source artifact",
+            "Traceable review rationale",
+            "Explicit simulation-only safety note"
+          ],
+          "required_sources": [
+            "operational_governance",
+            "governance_traceability"
+          ],
+          "weight": 1.0
+        }
+      ],
+      "forbidden_approvals": [
+        "Any real trading approval is forbidden.",
+        "Any execution readiness approval is forbidden.",
+        "Any broker or account readiness approval is forbidden."
+      ],
+      "safety_notes": [
+        "Simulation artifact only.",
+        "Review-board dry run only.",
+        "No real-world approval, operational control, or account interaction is permitted."
+      ]
+    }
+  ],
+  "simulation_only": true,
+  "review_only": true,
+  "dry_run_only": true,
+  "governance_only": true,
+  "design_only": true,
+  "architecture_only": true,
+  "research_only": true,
+  "local_only": true,
+  "not_implemented": true,
+  "no_broker_access": true,
+  "no_execution_capability": true,
+  "no_trading_capability": true,
+  "no_authentication": true,
+  "no_credentials": true,
+  "no_browser_automation": true,
+  "no_order_placement": true,
+  "no_live_trading": true,
+  "no_money_handling": true,
+  "no_external_connectivity": true,
+  "no_real_approvals": true,
+  "no_real_users": true,
+  "no_real_permissions": true,
+  "no_real_operational_control": true
+}

@@ -40,6 +40,7 @@ from app.production_system_design.service import ProductionSystemDesignService
 from app.operational_governance.service import OperationalGovernanceService
 from app.governance_traceability.service import GovernanceTraceabilityService
 from app.control_assurance.service import ControlAssuranceService
+from app.review_board_simulation.service import ReviewBoardSimulationService
 
 SAFETY_NOTE = (
     "This is a local research dashboard. It does not execute live trades, connect to "
@@ -874,6 +875,20 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
             ),
         )
 
+    @app.get("/review-board-simulation", response_class=HTMLResponse)
+    def review_board_simulation(request: Request) -> HTMLResponse:
+        dashboard = dashboard_context()
+        return templates.TemplateResponse(
+            request,
+            "dashboard/review_board_simulation.html",
+            context(
+                request,
+                dashboard,
+                page="review_board_simulation",
+                review_board_simulation=dashboard.analytics.review_board_simulation_analytics(),
+            ),
+        )
+
     @app.get("/research-operations", response_class=HTMLResponse)
     def research_operations(request: Request) -> HTMLResponse:
         dashboard = dashboard_context()
@@ -1477,6 +1492,61 @@ def create_dashboard_app(project_root: Path | str = ".") -> FastAPI:
     @app.get("/api/control-assurance/recommendations")
     def api_control_assurance_recommendations() -> list[str]:
         return ControlAssuranceService(root).generate_recommendations()
+
+    @app.get("/api/review-board-simulation")
+    def api_review_board_simulation() -> dict[str, object]:
+        return dashboard_context().analytics.review_board_simulation_analytics()
+
+    @app.get("/api/review-board-simulation/boards")
+    def api_review_board_simulation_boards() -> dict[str, object]:
+        return ReviewBoardSimulationService(root).build_board_registry()
+
+    @app.get("/api/review-board-simulation/decisions")
+    def api_review_board_simulation_decisions() -> dict[str, object]:
+        boards = ReviewBoardSimulationService(root).simulate_board_reviews()
+        return {
+            "items": [
+                decision
+                for board in boards.get("items", [])
+                for decision in board.get("simulated_decisions", [])
+            ],
+            "simulation_only": True,
+            "review_only": True,
+            "dry_run_only": True,
+            "local_only": True,
+        }
+
+    @app.get("/api/review-board-simulation/gates")
+    def api_review_board_simulation_gates() -> dict[str, object]:
+        return ReviewBoardSimulationService(root).run_gate_dry_run()
+
+    @app.get("/api/review-board-simulation/evidence")
+    def api_review_board_simulation_evidence() -> dict[str, object]:
+        return ReviewBoardSimulationService(root).review_evidence()
+
+    @app.get("/api/review-board-simulation/blockers")
+    def api_review_board_simulation_blockers() -> dict[str, object]:
+        return ReviewBoardSimulationService(root).analyze_blockers()
+
+    @app.get("/api/review-board-simulation/scores")
+    def api_review_board_simulation_scores() -> dict[str, object]:
+        return ReviewBoardSimulationService(root).build_decision_scores()
+
+    @app.get("/api/review-board-simulation/findings")
+    def api_review_board_simulation_findings() -> dict[str, object]:
+        return ReviewBoardSimulationService(root).build_findings()
+
+    @app.get("/api/review-board-simulation/readiness")
+    def api_review_board_simulation_readiness() -> dict[str, object]:
+        return ReviewBoardSimulationService(root).build_readiness_summary()
+
+    @app.get("/api/review-board-simulation/diagnostics")
+    def api_review_board_simulation_diagnostics() -> list[dict[str, object]]:
+        return ReviewBoardSimulationService(root).generate_diagnostics()
+
+    @app.get("/api/review-board-simulation/recommendations")
+    def api_review_board_simulation_recommendations() -> list[str]:
+        return ReviewBoardSimulationService(root).generate_recommendations()
 
     @app.get("/api/research-operations")
     def api_research_operations() -> dict[str, object]:

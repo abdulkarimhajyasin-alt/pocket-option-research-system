@@ -5309,6 +5309,197 @@ class DashboardAnalyticsService:
             ).to_dict(),
         }
 
+    def review_board_simulation_analytics(self) -> dict[str, Any]:
+        """Return latest review board simulation analytics."""
+        summary_payload = self._latest_json_dict(
+            "review_board_simulation",
+            "review_board_simulation_summary",
+        )
+        scores = self._latest_json_dict("review_board_simulation", "decision_scores_report")
+        board_results = self._latest_json_dict(
+            "review_board_simulation",
+            "board_simulation_report",
+        )
+        gate_results = self._latest_json_dict(
+            "review_board_simulation",
+            "gate_dry_run_report",
+        )
+        evidence = self._latest_json_dict(
+            "review_board_simulation",
+            "evidence_review_report",
+        )
+        blocker_analysis = self._latest_json_dict(
+            "review_board_simulation",
+            "blocker_analysis_report",
+        )
+        diagnostics = self._latest_json_list(
+            "review_board_simulation",
+            "diagnostics_report",
+        )
+        reports = self.loader.list_reports()
+        recommendations_report = self.loader.latest(
+            [item for item in reports if item.report_type == "json"],
+            "review_board_simulation",
+            "recommendations_report",
+        )
+        recommendations_content = (
+            self.loader.get_report(recommendations_report.report_id)
+            if recommendations_report
+            else None
+        )
+        recommendation_payload = (
+            recommendations_content.json_data if recommendations_content else []
+        )
+        recommendations = (
+            [str(item) for item in recommendation_payload]
+            if isinstance(recommendation_payload, list)
+            else []
+        )
+        board_scores = {
+            str(item.get("board_name", index + 1)): self._float(item.get("score"))
+            for index, item in enumerate(scores.get("board_scores", []))
+        }
+        gate_scores = {
+            str(item.get("gate_name", index + 1)): self._float(item.get("score"))
+            for index, item in enumerate(scores.get("gate_scores", []))
+        }
+        evidence_scores = {
+            str(item.get("source_group", index + 1)): self._float(item.get("linkage_score"))
+            for index, item in enumerate(evidence.get("items", []))
+        }
+        blockers = {
+            str(item.get("scope", index + 1)): 1.0
+            for index, item in enumerate(blocker_analysis.get("items", []))
+        }
+        condition_counts: dict[str, float] = {}
+        human_review_counts: dict[str, float] = {}
+        state_counts: dict[str, float] = {}
+        for item in gate_results.get("items", []):
+            gate = str(item.get("gate_name", "gate"))
+            condition_counts[gate] = self._float(len(item.get("conditions", [])))
+            human_review_counts[gate] = 1.0 if item.get("required_human_review") else 0.0
+            state = str(item.get("simulated_state", "Requires Human Review"))
+            state_counts[state] = state_counts.get(state, 0.0) + 1.0
+        for board in board_results.get("items", []):
+            for decision in board.get("simulated_decisions", []):
+                state = str(decision.get("simulated_state", "Requires Human Review"))
+                state_counts[state] = state_counts.get(state, 0.0) + 1.0
+        diagnostic_chart = {
+            str(item.get("code", index + 1)): 1.0 for index, item in enumerate(diagnostics)
+        }
+        recommendation_chart = {item: 1.0 for item in recommendations}
+        summary = {
+            "simulation_status": summary_payload.get(
+                "simulation_status",
+                scores.get("score_status", "Requires Human Review"),
+            ),
+            "overall_review_readiness_score": self._float(
+                summary_payload.get(
+                    "overall_review_readiness_score",
+                    scores.get("overall_review_readiness_score", 0),
+                )
+            ),
+            "board_readiness_score": self._float(summary_payload.get("board_readiness_score", 0)),
+            "evidence_readiness_score": self._float(
+                summary_payload.get(
+                    "evidence_readiness_score",
+                    scores.get("evidence_readiness_score", 0),
+                )
+            ),
+            "gate_readiness_score": self._float(
+                summary_payload.get(
+                    "gate_readiness_score",
+                    scores.get("gate_readiness_score", 0),
+                )
+            ),
+            "simulated_decision_count": self._float(
+                summary_payload.get("simulated_decision_count", 0)
+            ),
+            "blocker_count": self._float(summary_payload.get("blocker_count", 0)),
+            "condition_count": self._float(summary_payload.get("condition_count", 0)),
+            "required_human_review_count": self._float(
+                summary_payload.get("required_human_review_count", 0)
+            ),
+            "diagnostic_count": self._float(
+                summary_payload.get("diagnostic_count", len(diagnostics))
+            ),
+            "recommendation_count": self._float(
+                summary_payload.get("recommendation_count", len(recommendations))
+            ),
+            "simulation_only": True,
+            "review_only": True,
+            "dry_run_only": True,
+            "governance_only": True,
+            "design_only": True,
+            "architecture_only": True,
+            "research_only": True,
+            "local_only": True,
+        }
+        return {
+            "summary": summary,
+            "scores": scores,
+            "board_results": board_results,
+            "gate_results_payload": gate_results,
+            "evidence_payload": evidence,
+            "blocker_analysis": blocker_analysis,
+            "diagnostics_items": diagnostics,
+            "recommendations_items": recommendations,
+            "board_scores": bar_chart(
+                "درجات مجالس المراجعة",
+                *self._dict_chart_values(board_scores),
+                label="الدرجات",
+                color="blue",
+            ).to_dict(),
+            "gate_results": bar_chart(
+                "نتائج البوابات",
+                *self._dict_chart_values(gate_scores),
+                label="البوابات",
+                color="green",
+            ).to_dict(),
+            "evidence": bar_chart(
+                "جاهزية الأدلة",
+                *self._dict_chart_values(evidence_scores),
+                label="الأدلة",
+                color="accent",
+            ).to_dict(),
+            "blockers": bar_chart(
+                "العوائق",
+                *self._dict_chart_values(blockers),
+                label="العوائق",
+                color="warning",
+            ).to_dict(),
+            "conditions": bar_chart(
+                "الشروط",
+                *self._dict_chart_values(condition_counts),
+                label="الشروط",
+                color="blue",
+            ).to_dict(),
+            "human_reviews": bar_chart(
+                "المراجعات البشرية المطلوبة",
+                *self._dict_chart_values(human_review_counts),
+                label="المراجعة",
+                color="warning",
+            ).to_dict(),
+            "diagnostics": bar_chart(
+                "التحذيرات",
+                *self._dict_chart_values(diagnostic_chart),
+                label="التحذيرات",
+                color="warning",
+            ).to_dict(),
+            "recommendations": bar_chart(
+                "التوصيات",
+                *self._dict_chart_values(recommendation_chart),
+                label="التوصيات",
+                color="green",
+            ).to_dict(),
+            "decision_states": bar_chart(
+                "حالات القرارات المحاكاة",
+                *self._dict_chart_values(state_counts),
+                label="الحالات",
+                color="accent",
+            ).to_dict(),
+        }
+
     def research_operations_analytics(self) -> dict[str, Any]:
         """Return latest research operations analytics."""
         summary_payload = self._latest_json_dict("research_ops", "operations")

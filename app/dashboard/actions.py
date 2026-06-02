@@ -350,6 +350,15 @@ ACTION_DEFINITIONS: dict[str, ActionDefinition] = {
         description="توليد تقييم تأكيد وجاهزية مراجعة محلي فقط دون تحكم تشغيلي حقيقي.",
         command=("scripts/run_control_assurance.py",),
     ),
+    "review_board_simulation": ActionDefinition(
+        name="review_board_simulation",
+        label="محاكاة مجالس المراجعة",
+        description=(
+            "توليد محاكاة مجالس مراجعة وتجربة بوابات قرار محلية وجافة فقط دون "
+            "موافقات أو تحكم تشغيلي حقيقي."
+        ),
+        command=("scripts/run_review_board_simulation.py",),
+    ),
     "research_operations": ActionDefinition(
         name="research_operations",
         label="تحديث مركز العمليات البحثية",
